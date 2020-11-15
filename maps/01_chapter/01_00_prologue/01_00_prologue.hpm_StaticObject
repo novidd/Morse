@@ -1,6 +1,6 @@
 <HPLMapTrack_StaticObject ID="90E0301C3CDE4BAFC680DBE72BA0073B8F13F3FB" MajorVersion="1" MinorVersion="1">
     <Section Name="12450711482325857532">
-        <FileIndex_StaticObjects NumOfFiles="34">
+        <FileIndex_StaticObjects NumOfFiles="37">
             <File Id="0" Path="mods/Morse/assets/static_objects/outside/grass/grass01.DAE" />
             <File Id="1" Path="static_objects/dream/apartment/ds3_broken_apartment/apartment_window_glass.dae" />
             <File Id="2" Path="mods/Morse/assets/static_objects/outside/grass/daisies.dae" />
@@ -35,6 +35,9 @@
             <File Id="31" Path="static_objects/darkworld/organic/roots/dark_world_hanging_moss/dark_world_hanging_moss02.dae" />
             <File Id="32" Path="static_objects/archaeology/scaffolding/scaffolding_part_plank.dae" />
             <File Id="33" Path="static_objects/archaeology/scaffolding/scaffolding_part_beam_short.dae" />
+            <File Id="34" Path="entities/archaeology/tools/archaeology_ladder/archaeology_ladder_bottom.DAE" />
+            <File Id="35" Path="entities/archaeology/tools/archaeology_ladder/archaeology_ladder_middle.DAE" />
+            <File Id="36" Path="entities/archaeology/tools/archaeology_ladder/archaeology_ladder_top.DAE" />
         </FileIndex_StaticObjects>
         <Objects>
             <StaticObject ID="268436005" Name="technical_block_out_tools_player_standing_size_1" CreStamp="1605028762" ModStamp="1605091671" WorldPos="8.06349 20.7018 31.5477" Rotation="0 1.17562 0" Scale="1 1 1" FileIndex="13" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 72 268436005" />
