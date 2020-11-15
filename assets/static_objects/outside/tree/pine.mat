@@ -1,0 +1,11 @@
+<Material>
+    <Main BlendMode="Add" DepthTest="true" HeightMapBias="0.000000" HeightMapScale="0.100000" PhysicsMaterial="Wood_Heavy" Type="soliddiffuse" UseAlpha="false" />
+    <TextureUnits>
+        <Diffuse AnimFrameTime="0.000000" AnimMode="None" Compress="true" File="C:/Skolarbeten och diverse projekt/3d/projekt/Frictional Games/SVN/redist/static_objects/mansionbase/special/pine.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+        <Alpha AnimFrameTime="0.000000" AnimMode="None" Compress="false" File="C:/Skolarbeten och diverse projekt/3d/projekt/Frictional Games/SVN/redist/static_objects/mansionbase/special/pine.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+    </TextureUnits>
+    <SpecificVariables>
+        <Var Name="HeightMapScale" Value="0.1" />
+        <Var Name="HeightMapBias" Value="0" />
+    </SpecificVariables>
+</Material>

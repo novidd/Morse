@@ -1,0 +1,102 @@
+<HPLMapTrack_Area ID="90E0301C3CDE4BAFC680DBE72BA0073B8F13F3FB" MajorVersion="1" MinorVersion="1">
+    <Section Name="12450711482325857532">
+        <Objects>
+            <Area ID="268435456" Name="PlayerStartArea_1" CreStamp="1605011576" ModStamp="1605128531" WorldPos="4.58637 21.6577 29.258" Rotation="0 -1.56721 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 58 268435456" AreaType="PlayerStart">
+                <UserVariables>
+                    <Var ObjectId="268435456" Name="Note" Value="" />
+                    <Var ObjectId="268435456" Name="Crouching" Value="false" />
+                </UserVariables>
+            </Area>
+            <Area ID="268435457" Name="Liquid_1" CreStamp="1605029697" ModStamp="1605121293" WorldPos="-13.75 19 15.5" Rotation="0 0 0" Scale="84 2 82.5" Active="true" Mesh="" UID="16 71 268435457" AreaType="Liquid">
+                <UserVariables>
+                    <Var ObjectId="268435457" Name="Note" Value="" />
+                    <Var ObjectId="268435457" Name="BlocksLineOfSight" Value="false" />
+                    <Var ObjectId="268435457" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268435457" Name="UserVar" Value="" />
+                    <Var ObjectId="268435457" Name="Static" Value="false" />
+                    <Var ObjectId="268435457" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268435457" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268435457" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268435457" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268435457" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268435457" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268435457" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268435457" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="268435457" Name="Density" Value="100" />
+                    <Var ObjectId="268435457" Name="LinearViscosity" Value="1" />
+                    <Var ObjectId="268435457" Name="AngularViscosity" Value="1" />
+                    <Var ObjectId="268435457" Name="PhysicsMaterial" Value="water" />
+                    <Var ObjectId="268435457" Name="PlayerSpeedMul" Value="0.8" />
+                    <Var ObjectId="268435457" Name="BuoyancyOnPlayerOnly" Value="false" />
+                    <Var ObjectId="268435457" Name="HasWaves" Value="true" />
+                    <Var ObjectId="268435457" Name="WaveAmp" Value="0.04" />
+                    <Var ObjectId="268435457" Name="WaveFreq" Value="3" />
+                    <Var ObjectId="268435457" Name="MaxWaveDistance" Value="25" />
+                    <Var ObjectId="268435457" Name="UpperMaterial" Value="C:/Program Files (x86)/Steam/steamapps/common/Amnesia Rebirth/textures/liquid/water/waterplane_cistern_reflect.mat" />
+                    <Var ObjectId="268435457" Name="LowerMaterial" Value="C:/Program Files (x86)/Steam/steamapps/common/Amnesia Rebirth/textures/liquid/water/waterplane_cistern_reflect.mat" />
+                    <Var ObjectId="268435457" Name="GridSize" Value="0" />
+                    <Var ObjectId="268435457" Name="TextureTileSize" Value="6" />
+                    <Var ObjectId="268435457" Name="StaticMesh" Value="true" />
+                    <Var ObjectId="268435457" Name="EnvParticlesToClip" Value="" />
+                    <Var ObjectId="268435457" Name="ReflectionColor" Value="1 1 1 1" />
+                    <Var ObjectId="268435457" Name="ReflectionBrightness" Value="1" />
+                    <Var ObjectId="268435457" Name="UseFog" Value="true" />
+                    <Var ObjectId="268435457" Name="FogColor" Value="0.134765625 0.1244735419750213623 0.10581207275390625 1" />
+                    <Var ObjectId="268435457" Name="FogStart" Value="0" />
+                    <Var ObjectId="268435457" Name="FogEnd" Value="6" />
+                    <Var ObjectId="268435457" Name="FogFalloffExp" Value="1" />
+                    <Var ObjectId="268435457" Name="FogBrightness" Value="0.5" />
+                    <Var ObjectId="268435457" Name="FogExponential" Value="true" />
+                    <Var ObjectId="268435457" Name="FogDensity" Value="11" />
+                    <Var ObjectId="268435457" Name="FogHeightBased" Value="false" />
+                    <Var ObjectId="268435457" Name="FogHeightDensity" Value="0.25" />
+                    <Var ObjectId="268435457" Name="FogHeightHorizon" Value="1" />
+                    <Var ObjectId="268435457" Name="FogUnderwater" Value="true" />
+                    <Var ObjectId="268435457" Name="FogSkybox" Value="false" />
+                    <Var ObjectId="268435457" Name="EffectOnExit" Value="true" />
+                    <Var ObjectId="268435457" Name="CameraCollideCallback" Value="" />
+                    <Var ObjectId="268435457" Name="CameraEnterEffectPreset" Value="" />
+                    <Var ObjectId="268435457" Name="CameraExitEffectPreset" Value="" />
+                    <Var ObjectId="268435457" Name="UnderwaterLightColor" Value="0.17810821533203125 0.19781427085399627686 0.314453125 1" />
+                </UserVariables>
+            </Area>
+            <Area ID="268435458" Name="InteractAux_1" CreStamp="1605185741" ModStamp="1605187154" WorldPos="2.66118 22.5106 32.3661" Rotation="0 0 0" Scale="0.518364 0.175703 0.166561" Active="true" Mesh="" UID="16 545 268435458" AreaType="InteractAux">
+                <UserVariables>
+                    <Var ObjectId="268435458" Name="Note" Value="" />
+                    <Var ObjectId="268435458" Name="InteractParent" Value="ShedDoor_Lock_1" />
+                    <Var ObjectId="268435458" Name="UseParentMainBody" Value="true" />
+                    <Var ObjectId="268435458" Name="OverrideParentMainBody" Value="false" />
+                    <Var ObjectId="268435458" Name="MaxFocusDistance" Value="-1" />
+                    <Var ObjectId="268435458" Name="CustomInteractIcon" Value="Default" />
+                    <Var ObjectId="268435458" Name="DeactivateOnInteract" Value="false" />
+                </UserVariables>
+            </Area>
+            <Area ID="268435459" Name="InteractAux_2" CreStamp="1605185741" ModStamp="1605189269" WorldPos="-0.284372 22.5106 26.3837" Rotation="-0 3.14159 -0" Scale="0.518364 0.175703 0.166561" Active="true" Mesh="" UID="16 558 268435459" AreaType="InteractAux">
+                <UserVariables>
+                    <Var ObjectId="268435459" Name="Note" Value="" />
+                    <Var ObjectId="268435459" Name="InteractParent" Value="ShedDoor_Lock_2" />
+                    <Var ObjectId="268435459" Name="UseParentMainBody" Value="true" />
+                    <Var ObjectId="268435459" Name="OverrideParentMainBody" Value="false" />
+                    <Var ObjectId="268435459" Name="MaxFocusDistance" Value="-1" />
+                    <Var ObjectId="268435459" Name="CustomInteractIcon" Value="Default" />
+                    <Var ObjectId="268435459" Name="DeactivateOnInteract" Value="false" />
+                </UserVariables>
+            </Area>
+            <Area ID="268436332" Name="Ladder_1" CreStamp="1605402610" ModStamp="1605402857" WorldPos="5.87209 19.9559 34.4434" Rotation="-0 3.14159 -0" Scale="1 1.734 0.5" Active="true" Mesh="" UID="16 764 268436332" AreaType="Ladder">
+                <UserVariables>
+                    <Var ObjectId="268436332" Name="Note" Value="" />
+                    <Var ObjectId="268436332" Name="Material" Value="wood" />
+                    <Var ObjectId="268436332" Name="Exit_Top" Value="" />
+                    <Var ObjectId="268436332" Name="Exit_TopCrouching" Value="False" />
+                    <Var ObjectId="268436332" Name="Exit_Bottom" Value="" />
+                    <Var ObjectId="268436332" Name="Exit_BottomCrouching" Value="False" />
+                    <Var ObjectId="268436332" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268436332" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268436332" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268436332" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268436332" Name="ExitCallback" Value="" />
+                </UserVariables>
+            </Area>
+        </Objects>
+    </Section>
+</HPLMapTrack_Area>
