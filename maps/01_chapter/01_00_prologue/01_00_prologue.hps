@@ -122,7 +122,8 @@ class cScrMap : iScrMap
 	{
 		PlayerBody_SetActive(true);
 		Player_SetVertigoActive(false);
-		Player_SetNightVisionEnabled(false);
+		
+		//Player_SetNightVisionEnabled(false);
 		// Put display name entry in english.lang / Levels
 		GetBase().SetDisplayNameEntry("01-00-prologue");
 		

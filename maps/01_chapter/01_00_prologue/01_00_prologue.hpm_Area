@@ -82,33 +82,18 @@
                     <Var ObjectId="268435459" Name="DeactivateOnInteract" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435460" Name="Ladder_1" CreStamp="1605402610" ModStamp="1605402857" WorldPos="5.87209 19.9559 34.4434" Rotation="-0 3.14159 -0" Scale="1 1.734 0.5" Active="true" Mesh="" UID="16 764 268435460" AreaType="Ladder">
+            <Area ID="268435461" Name="FearThreat_1" CreStamp="1605557182" ModStamp="1605557220" WorldPos="-0.664134 20.6847 26.0655" Rotation="0 -0.584418 0" Scale="0.312326 0.0559521 0.130346" Active="true" Mesh="" UID="16 1073 268435461" AreaType="FearThreat">
                 <UserVariables>
-                    <Var ObjectId="268435460" Name="Note" Value="" />
-                    <Var ObjectId="268435460" Name="Material" Value="wood" />
-                    <Var ObjectId="268435460" Name="Exit_Top" Value="" />
-                    <Var ObjectId="268435460" Name="Exit_TopCrouching" Value="False" />
-                    <Var ObjectId="268435460" Name="Exit_Bottom" Value="" />
-                    <Var ObjectId="268435460" Name="Exit_BottomCrouching" Value="False" />
-                    <Var ObjectId="268435460" Name="ParentAttachEntity" Value="" />
-                    <Var ObjectId="268435460" Name="ParentAttachUseRotation" Value="true" />
-                    <Var ObjectId="268435460" Name="ParentAttachBody" Value="" />
-                    <Var ObjectId="268435460" Name="PlayerInteractCallback" Value="" />
-                    <Var ObjectId="268435460" Name="ExitCallback" Value="" />
-                </UserVariables>
-            </Area>
-            <Area ID="268436500" Name="FearThreat_1" CreStamp="1605557182" ModStamp="1605557220" WorldPos="-0.664134 20.6847 26.0655" Rotation="0 -0.584418 0" Scale="0.312326 0.0559521 0.130346" Active="true" Mesh="" UID="16 1073 268436500" AreaType="FearThreat">
-                <UserVariables>
-                    <Var ObjectId="268436500" Name="Threat_BaseFearRate" Value="0.1" />
-                    <Var ObjectId="268436500" Name="Threat_SurpriseFactor" Value="-1.0" />
-                    <Var ObjectId="268436500" Name="Threat_LookAtFactor" Value="-1.0" />
-                    <Var ObjectId="268436500" Name="Threat_ActivationDelay" Value="0.2" />
-                    <Var ObjectId="268436500" Name="Threat_ActivationLightLevel" Value="0.1" />
-                    <Var ObjectId="268436500" Name="Threat_MaxFearDistance" Value="2.0" />
-                    <Var ObjectId="268436500" Name="Threat_MinFearDistance" Value="6.0" />
-                    <Var ObjectId="268436500" Name="Threat_ActivationCallback" Value="" />
-                    <Var ObjectId="268436500" Name="LookAtDetectWholeArea" Value="false" />
-                    <Var ObjectId="268436500" Name="AdditionalActivationTriggers" Value="" />
+                    <Var ObjectId="268435461" Name="Threat_BaseFearRate" Value="0.1" />
+                    <Var ObjectId="268435461" Name="Threat_SurpriseFactor" Value="-1.0" />
+                    <Var ObjectId="268435461" Name="Threat_LookAtFactor" Value="-1.0" />
+                    <Var ObjectId="268435461" Name="Threat_ActivationDelay" Value="0.2" />
+                    <Var ObjectId="268435461" Name="Threat_ActivationLightLevel" Value="0.1" />
+                    <Var ObjectId="268435461" Name="Threat_MaxFearDistance" Value="2.0" />
+                    <Var ObjectId="268435461" Name="Threat_MinFearDistance" Value="6.0" />
+                    <Var ObjectId="268435461" Name="Threat_ActivationCallback" Value="" />
+                    <Var ObjectId="268435461" Name="LookAtDetectWholeArea" Value="false" />
+                    <Var ObjectId="268435461" Name="AdditionalActivationTriggers" Value="" />
                 </UserVariables>
             </Area>
         </Objects>
