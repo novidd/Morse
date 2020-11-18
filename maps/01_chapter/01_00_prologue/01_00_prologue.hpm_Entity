@@ -1305,7 +1305,7 @@
                     <Var ObjectId="268435483" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435484" Name="campfire_caves_noflame_1" CreStamp="1605037451" ModStamp="1605553833" WorldPos="93.0478 21.7321 85.954" Rotation="-0.0218238 0.00108143 0.0495047" Scale="1 1 1" FileIndex="99" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 207 268435484">
+            <Entity ID="268435484" Name="campfire_caves_noflame_1" CreStamp="1605037451" ModStamp="1605731074" WorldPos="61.6983 20.573 102.409" Rotation="-0.0218238 0.00108143 0.0495047" Scale="1 1 1" FileIndex="99" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 207 268435484">
                 <UserVariables>
                     <Var ObjectId="268435484" Name="Note" Value="" />
                     <Var ObjectId="268435484" Name="EventInstanceTag" Value="" />
@@ -21402,7 +21402,7 @@
                     <Var ObjectId="268435835" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435836" Name="french_tent_sway_1" CreStamp="1605126351" ModStamp="1605721075" WorldPos="96.7001 21.6211 88.2694" Rotation="3.79494e-05 -1.5708 0" Scale="1 1 1" FileIndex="285" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 481 268435836">
+            <Entity ID="268435836" Name="french_tent_sway_1" CreStamp="1605126351" ModStamp="1605731161" WorldPos="57.5633 20.508 106.439" Rotation="-2.31296e-08 2.20999 -0.0332654" Scale="1 1 1" FileIndex="285" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 481 268435836">
                 <UserVariables>
                     <Var ObjectId="268435836" Name="Note" Value="" />
                     <Var ObjectId="268435836" Name="EventInstanceTag" Value="" />
