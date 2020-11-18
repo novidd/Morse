@@ -7,7 +7,7 @@
                     <Var ObjectId="268435456" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435457" Name="Liquid_1" CreStamp="1605029697" ModStamp="1605121293" WorldPos="-13.75 19 15.5" Rotation="0 0 0" Scale="84 2 82.5" Active="true" Mesh="" UID="16 71 268435457" AreaType="Liquid">
+            <Area ID="268435457" Name="Liquid_1" CreStamp="1605029697" ModStamp="1605718624" WorldPos="-13.75 19 15.5" Rotation="0 0 0" Scale="84 2 82.5" Active="true" Mesh="" UID="16 71 268435457" AreaType="Liquid">
                 <UserVariables>
                     <Var ObjectId="268435457" Name="Note" Value="" />
                     <Var ObjectId="268435457" Name="BlocksLineOfSight" Value="false" />
@@ -44,8 +44,8 @@
                     <Var ObjectId="268435457" Name="FogColor" Value="0.134765625 0.1244735419750213623 0.10581207275390625 1" />
                     <Var ObjectId="268435457" Name="FogStart" Value="0" />
                     <Var ObjectId="268435457" Name="FogEnd" Value="6" />
-                    <Var ObjectId="268435457" Name="FogFalloffExp" Value="1" />
-                    <Var ObjectId="268435457" Name="FogBrightness" Value="0.5" />
+                    <Var ObjectId="268435457" Name="FogFalloffExp" Value="0.1" />
+                    <Var ObjectId="268435457" Name="FogBrightness" Value="0.1" />
                     <Var ObjectId="268435457" Name="FogExponential" Value="true" />
                     <Var ObjectId="268435457" Name="FogDensity" Value="11" />
                     <Var ObjectId="268435457" Name="FogHeightBased" Value="false" />
@@ -82,18 +82,18 @@
                     <Var ObjectId="268435459" Name="DeactivateOnInteract" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435461" Name="FearThreat_1" CreStamp="1605557182" ModStamp="1605557220" WorldPos="-0.664134 20.6847 26.0655" Rotation="0 -0.584418 0" Scale="0.312326 0.0559521 0.130346" Active="true" Mesh="" UID="16 1073 268435461" AreaType="FearThreat">
+            <Area ID="268435460" Name="FearThreat_1" CreStamp="1605557182" ModStamp="1605557220" WorldPos="-0.664134 20.6847 26.0655" Rotation="0 -0.584418 0" Scale="0.312326 0.0559521 0.130346" Active="true" Mesh="" UID="16 1073 268435460" AreaType="FearThreat">
                 <UserVariables>
-                    <Var ObjectId="268435461" Name="Threat_BaseFearRate" Value="0.1" />
-                    <Var ObjectId="268435461" Name="Threat_SurpriseFactor" Value="-1.0" />
-                    <Var ObjectId="268435461" Name="Threat_LookAtFactor" Value="-1.0" />
-                    <Var ObjectId="268435461" Name="Threat_ActivationDelay" Value="0.2" />
-                    <Var ObjectId="268435461" Name="Threat_ActivationLightLevel" Value="0.1" />
-                    <Var ObjectId="268435461" Name="Threat_MaxFearDistance" Value="2.0" />
-                    <Var ObjectId="268435461" Name="Threat_MinFearDistance" Value="6.0" />
-                    <Var ObjectId="268435461" Name="Threat_ActivationCallback" Value="" />
-                    <Var ObjectId="268435461" Name="LookAtDetectWholeArea" Value="false" />
-                    <Var ObjectId="268435461" Name="AdditionalActivationTriggers" Value="" />
+                    <Var ObjectId="268435460" Name="Threat_BaseFearRate" Value="0.1" />
+                    <Var ObjectId="268435460" Name="Threat_SurpriseFactor" Value="-1.0" />
+                    <Var ObjectId="268435460" Name="Threat_LookAtFactor" Value="-1.0" />
+                    <Var ObjectId="268435460" Name="Threat_ActivationDelay" Value="0.2" />
+                    <Var ObjectId="268435460" Name="Threat_ActivationLightLevel" Value="0.1" />
+                    <Var ObjectId="268435460" Name="Threat_MaxFearDistance" Value="2.0" />
+                    <Var ObjectId="268435460" Name="Threat_MinFearDistance" Value="6.0" />
+                    <Var ObjectId="268435460" Name="Threat_ActivationCallback" Value="" />
+                    <Var ObjectId="268435460" Name="LookAtDetectWholeArea" Value="false" />
+                    <Var ObjectId="268435460" Name="AdditionalActivationTriggers" Value="" />
                 </UserVariables>
             </Area>
         </Objects>
