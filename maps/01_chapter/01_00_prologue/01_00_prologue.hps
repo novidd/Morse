@@ -169,6 +169,12 @@ class cScrMap : iScrMap
 				Entity_SetActive("ShedDoor_Lock_2", false);
 			}
 		}
+		
+		//Sound for radio in shed
+		/*
+		 * "level_entity_shared/radio/radio_static"
+		 * 
+		*/
 	}
 
 	//-------------------------------------------------------

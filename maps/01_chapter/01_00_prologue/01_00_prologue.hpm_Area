@@ -96,6 +96,87 @@
                     <Var ObjectId="268435460" Name="AdditionalActivationTriggers" Value="" />
                 </UserVariables>
             </Area>
+            <Area ID="268436769" Name="Lake_Soundscape" CreStamp="1605725446" ModStamp="1605726278" WorldPos="-13.75 21.25 15.5" Rotation="0 0 0" Scale="100.25 47.5 99.75" Active="true" Mesh="" UID="16 1355 268436769" AreaType="Soundscape">
+                <UserVariables>
+                    <Var ObjectId="268436769" Name="Note" Value="" />
+                    <Var ObjectId="268436769" Name="UseReverb" Value="true" />
+                    <Var ObjectId="268436769" Name="ReverbType" Value="Off" />
+                    <Var ObjectId="268436769" Name="ReverbPrio" Value="0" />
+                    <Var ObjectId="268436769" Name="ReverbAmount" Value="1" />
+                    <Var ObjectId="268436769" Name="ReverbFadeTime" Value="1" />
+                    <Var ObjectId="268436769" Name="Prio" Value="0" />
+                    <Var ObjectId="268436769" Name="Level" Value="1: Area" />
+                    <Var ObjectId="268436769" Name="BG_Sound" Value="level_amb_shared/amb/background/02_05_cistern/flow_connection" />
+                    <Var ObjectId="268436769" Name="BG_Volume" Value="0.3" />
+                    <Var ObjectId="268436769" Name="BG_FadeInTime" Value="1.5" />
+                    <Var ObjectId="268436769" Name="BG_FadeOutTime" Value="1.5" />
+                    <Var ObjectId="268436769" Name="BG_FadeTransitionSpeed" Value="1" />
+                    <Var ObjectId="268436769" Name="BG_ParentVolMul" Value="1" />
+                    <Var ObjectId="268436769" Name="SoundEnt_InNames" Value="" />
+                    <Var ObjectId="268436769" Name="SoundEnt_OutNames" Value="" />
+                    <Var ObjectId="268436769" Name="SoundEnt_FadeInTime" Value="1" />
+                    <Var ObjectId="268436769" Name="SoundEnt_FadeOutTime" Value="1" />
+                    <Var ObjectId="268436769" Name="SoundPrefixPrio" Value="0" />
+                    <Var ObjectId="268436769" Name="SoundPrefix" Value="[None]" />
+                    <Var ObjectId="268436769" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268436769" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268436769" Name="ParentAttachBody" Value="" />
+                </UserVariables>
+            </Area>
+            <Area ID="268436770" Name="Outdoor_Soundscape" CreStamp="1605726214" ModStamp="1605726557" WorldPos="35.25 61.5 78.5" Rotation="0 0 0" Scale="376.5 131.25 343" Active="true" Mesh="" UID="16 1304 268436770" AreaType="Soundscape">
+                <UserVariables>
+                    <Var ObjectId="268436770" Name="Note" Value="" />
+                    <Var ObjectId="268436770" Name="UseReverb" Value="true" />
+                    <Var ObjectId="268436770" Name="ReverbType" Value="Forest" />
+                    <Var ObjectId="268436770" Name="ReverbPrio" Value="100" />
+                    <Var ObjectId="268436770" Name="ReverbAmount" Value="1" />
+                    <Var ObjectId="268436770" Name="ReverbFadeTime" Value="1" />
+                    <Var ObjectId="268436770" Name="Prio" Value="1" />
+                    <Var ObjectId="268436770" Name="Level" Value="0: Global" />
+                    <Var ObjectId="268436770" Name="BG_Sound" Value="level_amb_shared/amb/background/level_dreams/park_birds" />
+                    <Var ObjectId="268436770" Name="BG_Volume" Value="0.2" />
+                    <Var ObjectId="268436770" Name="BG_FadeInTime" Value="1" />
+                    <Var ObjectId="268436770" Name="BG_FadeOutTime" Value="1" />
+                    <Var ObjectId="268436770" Name="BG_FadeTransitionSpeed" Value="1" />
+                    <Var ObjectId="268436770" Name="BG_ParentVolMul" Value="1" />
+                    <Var ObjectId="268436770" Name="SoundEnt_InNames" Value="" />
+                    <Var ObjectId="268436770" Name="SoundEnt_OutNames" Value="" />
+                    <Var ObjectId="268436770" Name="SoundEnt_FadeInTime" Value="1" />
+                    <Var ObjectId="268436770" Name="SoundEnt_FadeOutTime" Value="1" />
+                    <Var ObjectId="268436770" Name="SoundPrefixPrio" Value="0" />
+                    <Var ObjectId="268436770" Name="SoundPrefix" Value="[None]" />
+                    <Var ObjectId="268436770" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268436770" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268436770" Name="ParentAttachBody" Value="" />
+                </UserVariables>
+            </Area>
+            <Area ID="268436771" Name="Shed_Soundscape" CreStamp="1605726626" ModStamp="1605727010" WorldPos="2.75 22.0513 29.375" Rotation="0 0 0" Scale="7.49136 3.32103 6.18991" Active="true" Mesh="" UID="16 1340 268436771" AreaType="Soundscape">
+                <UserVariables>
+                    <Var ObjectId="268436771" Name="Note" Value="" />
+                    <Var ObjectId="268436771" Name="UseReverb" Value="true" />
+                    <Var ObjectId="268436771" Name="ReverbType" Value="Off" />
+                    <Var ObjectId="268436771" Name="ReverbPrio" Value="0" />
+                    <Var ObjectId="268436771" Name="ReverbAmount" Value="1" />
+                    <Var ObjectId="268436771" Name="ReverbFadeTime" Value="1" />
+                    <Var ObjectId="268436771" Name="Prio" Value="0" />
+                    <Var ObjectId="268436771" Name="Level" Value="2: Room" />
+                    <Var ObjectId="268436771" Name="BG_Sound" Value="level_amb_shared/amb/background/02_04_living_quarters/cellar" />
+                    <Var ObjectId="268436771" Name="BG_Volume" Value="0.4" />
+                    <Var ObjectId="268436771" Name="BG_FadeInTime" Value="1" />
+                    <Var ObjectId="268436771" Name="BG_FadeOutTime" Value="1" />
+                    <Var ObjectId="268436771" Name="BG_FadeTransitionSpeed" Value="1" />
+                    <Var ObjectId="268436771" Name="BG_ParentVolMul" Value="1" />
+                    <Var ObjectId="268436771" Name="SoundEnt_InNames" Value="" />
+                    <Var ObjectId="268436771" Name="SoundEnt_OutNames" Value="" />
+                    <Var ObjectId="268436771" Name="SoundEnt_FadeInTime" Value="1" />
+                    <Var ObjectId="268436771" Name="SoundEnt_FadeOutTime" Value="1" />
+                    <Var ObjectId="268436771" Name="SoundPrefixPrio" Value="0" />
+                    <Var ObjectId="268436771" Name="SoundPrefix" Value="[None]" />
+                    <Var ObjectId="268436771" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268436771" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268436771" Name="ParentAttachBody" Value="" />
+                </UserVariables>
+            </Area>
         </Objects>
     </Section>
 </HPLMapTrack_Area>
