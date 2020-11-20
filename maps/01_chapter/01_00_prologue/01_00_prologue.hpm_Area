@@ -7,7 +7,7 @@
                     <Var ObjectId="268435456" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435457" Name="Liquid_1" CreStamp="1605029697" ModStamp="1605872591" WorldPos="-13.75 19 15.5" Rotation="0 0 0" Scale="84 2 82.5" Active="true" Mesh="" UID="16 71 268435457" AreaType="Liquid">
+            <Area ID="268435457" Name="Liquid_1" CreStamp="1605029697" ModStamp="1605875220" WorldPos="-13.75 19 15.5" Rotation="0 0 0" Scale="84 2 82.5" Active="true" Mesh="" UID="16 71 268435457" AreaType="Liquid">
                 <UserVariables>
                     <Var ObjectId="268435457" Name="Note" Value="" />
                     <Var ObjectId="268435457" Name="BlocksLineOfSight" Value="false" />
@@ -123,7 +123,7 @@
                     <Var ObjectId="268436769" Name="ParentAttachBody" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268436770" Name="Outdoor_Soundscape" CreStamp="1605726214" ModStamp="1605726557" WorldPos="35.25 61.5 78.5" Rotation="0 0 0" Scale="376.5 131.25 343" Active="true" Mesh="" UID="16 1304 268436770" AreaType="Soundscape">
+            <Area ID="268436770" Name="Outdoor_Soundscape" CreStamp="1605726214" ModStamp="1605874061" WorldPos="35.25 61.5 78.5" Rotation="0 0 0" Scale="376.5 131.25 343" Active="true" Mesh="" UID="16 1304 268436770" AreaType="Soundscape">
                 <UserVariables>
                     <Var ObjectId="268436770" Name="Note" Value="" />
                     <Var ObjectId="268436770" Name="UseReverb" Value="true" />
@@ -134,7 +134,7 @@
                     <Var ObjectId="268436770" Name="Prio" Value="1" />
                     <Var ObjectId="268436770" Name="Level" Value="0: Global" />
                     <Var ObjectId="268436770" Name="BG_Sound" Value="level_amb_shared/amb/background/level_dreams/park_birds" />
-                    <Var ObjectId="268436770" Name="BG_Volume" Value="0.2" />
+                    <Var ObjectId="268436770" Name="BG_Volume" Value="0.1" />
                     <Var ObjectId="268436770" Name="BG_FadeInTime" Value="1" />
                     <Var ObjectId="268436770" Name="BG_FadeOutTime" Value="1" />
                     <Var ObjectId="268436770" Name="BG_FadeTransitionSpeed" Value="1" />
