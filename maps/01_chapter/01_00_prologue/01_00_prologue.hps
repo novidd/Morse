@@ -170,12 +170,21 @@ class cScrMap : iScrMap
 			}
 		}
 		
-		//Sound for radio in shed
-		/*
+		// Sound for the radio in shed
+		/**
 		 * "level_entity_shared/radio/radio_static"
 		 * 
-		*/
+		 */
+		 
+		// Functions for intro sequence
+		/**
+		 * CameraAnimation_Begin();
+		 * CameraAnimation_End();
+		 * Effect_Fade_In()
+		 * Effect_Fade_Out()
+		 */
 	}
+	
 
 	//-------------------------------------------------------
 
