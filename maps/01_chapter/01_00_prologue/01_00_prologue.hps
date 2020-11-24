@@ -353,7 +353,7 @@ class cScrMap : iScrMap
 		//} END General	
 	 
 		/////////////////////////////////////////
-		// Event *Intro sequence*
+		// Event *Cave sequence*
 		//{//////////////////////////////////////
 
 		//-------------------------------------------------------
@@ -374,35 +374,40 @@ class cScrMap : iScrMap
 		// Sequence_DoStepAndContinue() - Do this and go on to the next step
 		// Sequence_End() - Call this at the end of the sequence
 
-		//Music_PlayExt("A2_1_2_CaveRumble.ogg", true, 0.3f, 1.f, 0.3f, 0.3f, eMusicPrio_SceneAmb, false);
 		cSequenceStatesData mSeqIntro;
 		void Seq_Intro(const tString& in asName)
 		{
 			Sequence_Begin("Seq_Intro", mSeqIntro);
 			if(Sequence_DoStepAndWait(1.0f))  // Intro start
 			{
+				
 				Effect_Fade_Out(0.f);
+				Player_SetNightVisionEnabled(false);
 				Player_Teleport("Intro_Cave");
 				Player_SetActive(false);
 
 				CameraAnimation_Begin("Intro_CaveAnimation", "", false);
 				Music_PlayExt("A2_01_02_PortalCave", true, 0.3f, 1.f, 0.3f, 0.3f, eMusicPrio_SceneAmb, false);
+				Entity_SetActive("ghoul_intro_cave", true);
 			}
-			else if (Sequence_DoStepAndWait(4.0f)) // Add some screen effects
+			else if (Sequence_DoStepAndWait(7.0f)) // Add some screen effects
 			{
 				Effect_Fade_In(3.0f);
-				//Effect_Blur_Start(0.015f, 3.0f);
-				//Effect_ChromaticAberration_CreateInstance(0.0035f, 10.f);
-				//Effect_DoF_Start(2.0f, 10.0f, 0.5f, 1.0f);
+				Effect_Blur_Start(0.01f, 3.0f);
+				Effect_ChromaticAberration_CreateInstance(0.0035f, 10.f);
+				Effect_DoF_Start(2.0f, 9.0f, 0.5f, 5.0f); // DoF with blurrier further plane
 			}
 			else if (Sequence_DoStepAndWait(2.5f))
 			{
+				// Make the ghoul patrol along the nodes in the cave
+				//Music_PlayExt("A2_1_2_CaveRumble.ogg", true, 0.3f, 1.f, 0.3f, 0.3f, eMusicPrio_SceneAmb, false);
 				
+				Effect_DoF_Start(1.0f, 15.0f, 0.5f, 3.0f); // Increase DoF further plane distance
 			}
 			Sequence_End();
 		}
 
-		//} END Event *Intro sequence*
+		//} END Event *Cave sequence*
 	 
 	//} END SCENE 1
  

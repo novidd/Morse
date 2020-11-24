@@ -183,7 +183,7 @@
                     <Var ObjectId="268435464" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435465" Name="Cave_Soundscape" CreStamp="1606153805" ModStamp="1606156796" WorldPos="-10 0 -295" Rotation="0 0 0" Scale="50 25 50" Active="true" Mesh="" UID="16 3388 268435465" AreaType="Soundscape">
+            <Area ID="268435465" Name="Cave_Soundscape" CreStamp="1606153805" ModStamp="1606240403" WorldPos="-10 0 -295" Rotation="0 0 0" Scale="50 25 50" Active="true" Mesh="" UID="16 3388 268435465" AreaType="Soundscape">
                 <UserVariables>
                     <Var ObjectId="268435465" Name="Note" Value="" />
                     <Var ObjectId="268435465" Name="UseReverb" Value="true" />
@@ -194,7 +194,7 @@
                     <Var ObjectId="268435465" Name="Prio" Value="0" />
                     <Var ObjectId="268435465" Name="Level" Value="2: Room" />
                     <Var ObjectId="268435465" Name="BG_Sound" Value="level_amb_shared/amb/background/01_04_dark_world_ledge/cave" />
-                    <Var ObjectId="268435465" Name="BG_Volume" Value="0.5" />
+                    <Var ObjectId="268435465" Name="BG_Volume" Value="1" />
                     <Var ObjectId="268435465" Name="BG_FadeInTime" Value="1" />
                     <Var ObjectId="268435465" Name="BG_FadeOutTime" Value="1" />
                     <Var ObjectId="268435465" Name="BG_FadeTransitionSpeed" Value="1" />
@@ -210,43 +210,73 @@
                     <Var ObjectId="268435465" Name="ParentAttachBody" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268438937" Name="Intro_CaveAnimation_1" CreStamp="1606164851" ModStamp="1606168201" WorldPos="0.265757 1.262 -287.746" Rotation="-0 3.22873 -0" Scale="0.25 0.25 0.5" Active="true" Mesh="" UID="16 3392 268438937" AreaType="CameraAnimation">
+            <Area ID="268435466" Name="Intro_CaveAnimation_1" CreStamp="1606164851" ModStamp="1606168201" WorldPos="0.287752 1.262 -287.749" Rotation="-0 3.31752 -0" Scale="0.25 0.25 0.5" Active="true" Mesh="" UID="16 3392 268435466" AreaType="CameraAnimation">
                 <UserVariables>
-                    <Var ObjectId="268438937" Name="Note" Value="" />
-                    <Var ObjectId="268438937" Name="MaxYaw" Value="45" />
-                    <Var ObjectId="268438937" Name="MaxPitch" Value="45" />
-                    <Var ObjectId="268438937" Name="LookSpeedMultiplier" Value="1" />
-                    <Var ObjectId="268438937" Name="ForwardTime" Value="24" />
-                    <Var ObjectId="268438937" Name="BackwardTime" Value="1" />
-                    <Var ObjectId="268438937" Name="AutoMovement" Value="1" />
-                    <Var ObjectId="268438937" Name="LookMoveDistance" Value="0" />
-                    <Var ObjectId="268438937" Name="LookMoveMaxAngle" Value="0" />
-                    <Var ObjectId="268438937" Name="InteractiveMovement" Value="false" />
-                    <Var ObjectId="268438937" Name="UseSpeedFading" Value="true" />
-                    <Var ObjectId="268438937" Name="CrouchOnExit" Value="false" />
-                    <Var ObjectId="268438937" Name="InitToCamera" Value="false" />
-                    <Var ObjectId="268438937" Name="UsePlayerEyeline" Value="false" />
-                    <Var ObjectId="268438937" Name="CallbackFunc" Value="" />
+                    <Var ObjectId="268435466" Name="Note" Value="" />
+                    <Var ObjectId="268435466" Name="MaxYaw" Value="45" />
+                    <Var ObjectId="268435466" Name="MaxPitch" Value="45" />
+                    <Var ObjectId="268435466" Name="LookSpeedMultiplier" Value="1" />
+                    <Var ObjectId="268435466" Name="ForwardTime" Value="24" />
+                    <Var ObjectId="268435466" Name="BackwardTime" Value="1" />
+                    <Var ObjectId="268435466" Name="AutoMovement" Value="1" />
+                    <Var ObjectId="268435466" Name="LookMoveDistance" Value="0" />
+                    <Var ObjectId="268435466" Name="LookMoveMaxAngle" Value="0" />
+                    <Var ObjectId="268435466" Name="InteractiveMovement" Value="false" />
+                    <Var ObjectId="268435466" Name="UseSpeedFading" Value="true" />
+                    <Var ObjectId="268435466" Name="CrouchOnExit" Value="false" />
+                    <Var ObjectId="268435466" Name="InitToCamera" Value="false" />
+                    <Var ObjectId="268435466" Name="UsePlayerEyeline" Value="false" />
+                    <Var ObjectId="268435466" Name="CallbackFunc" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268438943" Name="Intro_CaveAnimation_2" CreStamp="1606166326" ModStamp="1606235710" WorldPos="0.22308 1.262 -288.244" Rotation="-0 3.22873 -0" Scale="0.25 0.25 0.5" Active="true" Mesh="" UID="16 3390 268438943" AreaType="CameraAnimation">
+            <Area ID="268435467" Name="Intro_CaveAnimation_2" CreStamp="1606166326" ModStamp="1606235710" WorldPos="0.201085 1.262 -288.241" Rotation="-0 3.31752 -0" Scale="0.25 0.25 0.5" Active="true" Mesh="" UID="16 3390 268435467" AreaType="CameraAnimation">
                 <UserVariables>
-                    <Var ObjectId="268438943" Name="Note" Value="" />
-                    <Var ObjectId="268438943" Name="MaxYaw" Value="45" />
-                    <Var ObjectId="268438943" Name="MaxPitch" Value="45" />
-                    <Var ObjectId="268438943" Name="LookSpeedMultiplier" Value="1" />
-                    <Var ObjectId="268438943" Name="ForwardTime" Value="12" />
-                    <Var ObjectId="268438943" Name="BackwardTime" Value="1" />
-                    <Var ObjectId="268438943" Name="AutoMovement" Value="1" />
-                    <Var ObjectId="268438943" Name="LookMoveDistance" Value="0" />
-                    <Var ObjectId="268438943" Name="LookMoveMaxAngle" Value="0" />
-                    <Var ObjectId="268438943" Name="InteractiveMovement" Value="false" />
-                    <Var ObjectId="268438943" Name="UseSpeedFading" Value="true" />
-                    <Var ObjectId="268438943" Name="CrouchOnExit" Value="false" />
-                    <Var ObjectId="268438943" Name="InitToCamera" Value="false" />
-                    <Var ObjectId="268438943" Name="UsePlayerEyeline" Value="false" />
-                    <Var ObjectId="268438943" Name="CallbackFunc" Value="" />
+                    <Var ObjectId="268435467" Name="Note" Value="" />
+                    <Var ObjectId="268435467" Name="MaxYaw" Value="45" />
+                    <Var ObjectId="268435467" Name="MaxPitch" Value="45" />
+                    <Var ObjectId="268435467" Name="LookSpeedMultiplier" Value="1" />
+                    <Var ObjectId="268435467" Name="ForwardTime" Value="12" />
+                    <Var ObjectId="268435467" Name="BackwardTime" Value="1" />
+                    <Var ObjectId="268435467" Name="AutoMovement" Value="1" />
+                    <Var ObjectId="268435467" Name="LookMoveDistance" Value="0" />
+                    <Var ObjectId="268435467" Name="LookMoveMaxAngle" Value="0" />
+                    <Var ObjectId="268435467" Name="InteractiveMovement" Value="false" />
+                    <Var ObjectId="268435467" Name="UseSpeedFading" Value="true" />
+                    <Var ObjectId="268435467" Name="CrouchOnExit" Value="false" />
+                    <Var ObjectId="268435467" Name="InitToCamera" Value="false" />
+                    <Var ObjectId="268435467" Name="UsePlayerEyeline" Value="false" />
+                    <Var ObjectId="268435467" Name="CallbackFunc" Value="" />
                 </UserVariables>
+            </Area>
+            <Area ID="268438852" Name="PathNodePatrol_Intro_Cave_1" CreStamp="1606245929" ModStamp="1606247649" WorldPos="-11.0726 0.54471 -300.027" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3367 268438852" AreaType="PathNodePatrol">
+                <UserVariables />
+            </Area>
+            <Area ID="268438866" Name="PathNodePatrol_Intro_Cave_2" CreStamp="1606245966" ModStamp="1606247669" WorldPos="-8.8498 0.428028 -300.248" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3365 268438866" AreaType="PathNodePatrol">
+                <UserVariables />
+            </Area>
+            <Area ID="268438867" Name="PathNodePatrol_Intro_Cave_3" CreStamp="1606246005" ModStamp="1606247672" WorldPos="-5.99264 0.369026 -298.285" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3363 268438867" AreaType="PathNodePatrol">
+                <UserVariables />
+            </Area>
+            <Area ID="268438868" Name="PathNodePatrol_Intro_Cave_4" CreStamp="1606246021" ModStamp="1606247689" WorldPos="-4.23131 0.369026 -298.052" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3364 268438868" AreaType="PathNodePatrol">
+                <UserVariables />
+            </Area>
+            <Area ID="268438869" Name="PathNodePatrol_Intro_Cave_5" CreStamp="1606246025" ModStamp="1606247692" WorldPos="-3.85149 0.400579 -300.628" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3366 268438869" AreaType="PathNodePatrol">
+                <UserVariables />
+            </Area>
+            <Area ID="268438870" Name="PathNodePatrol_Intro_Cave_6" CreStamp="1606246047" ModStamp="1606247697" WorldPos="-4.01997 0.726965 -303.094" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3362 268438870" AreaType="PathNodePatrol">
+                <UserVariables />
+            </Area>
+            <Area ID="268438871" Name="PathNodePatrol_Intro_Cave_7" CreStamp="1606246052" ModStamp="1606247702" WorldPos="-4.22742 1.60316 -304.557" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3361 268438871" AreaType="PathNodePatrol">
+                <UserVariables />
+            </Area>
+            <Area ID="268438872" Name="PathNodePatrol_Intro_Cave_8" CreStamp="1606246057" ModStamp="1606247706" WorldPos="-5.36484 1.28605 -306.323" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3356 268438872" AreaType="PathNodePatrol">
+                <UserVariables />
+            </Area>
+            <Area ID="268438873" Name="PathNodePatrol_Intro_Cave_9" CreStamp="1606246065" ModStamp="1606247709" WorldPos="-7.00981 1.92697 -308.245" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3354 268438873" AreaType="PathNodePatrol">
+                <UserVariables />
+            </Area>
+            <Area ID="268438874" Name="PathNodePatrol_Intro_Cave_10" CreStamp="1606246073" ModStamp="1606247713" WorldPos="-8.26302 1.86449 -310.312" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3355 268438874" AreaType="PathNodePatrol">
+                <UserVariables />
             </Area>
         </Objects>
     </Section>
