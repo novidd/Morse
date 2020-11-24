@@ -122,8 +122,8 @@ class cScrMap : iScrMap
 	{
 		PlayerBody_SetActive(true);
 		Player_SetVertigoActive(false);
-		
 		//Player_SetNightVisionEnabled(false);
+		
 		// Put display name entry in english.lang / Levels
 		GetBase().SetDisplayNameEntry("01-00-prologue");
 		
@@ -154,10 +154,13 @@ class cScrMap : iScrMap
 	void OnStart()
 	{	
 		// Any general setup of script / entities
+		bool mbStartIntro = true;
+
 		/////////////////////////
 		// Debug
 		if(cLux_ScriptDebugOn())
 		{
+			//mbStartIntro = false;
 			if (ItemType_GetCountInInventory("Lantern") < 1)
 			{
 				cLux_AddDebugMessage("Added lantern to inventory!");
@@ -175,14 +178,9 @@ class cScrMap : iScrMap
 		 * "level_entity_shared/radio/radio_static"
 		 * 
 		 */
-		 
-		// Functions for intro sequence
-		/**
-		 * CameraAnimation_Begin();
-		 * CameraAnimation_End();
-		 * Effect_Fade_In()
-		 * Effect_Fade_Out()
-		 */
+
+		 // Initiate the intro
+		 if (mbStartIntro) { Seq_Intro(""); }
 	}
 	
 
@@ -334,7 +332,7 @@ class cScrMap : iScrMap
  
 	//////////////////////////////////////////////////////////////////////////////////////////
 	// ==============
-	// SCENE X *NAME OF SCENE*
+	// SCENE 1 *Intro*
 	// ==============
 	//{//////////////////////////////////////////////////////////////////////////////////////
  
@@ -355,7 +353,7 @@ class cScrMap : iScrMap
 		//} END General	
 	 
 		/////////////////////////////////////////
-		// Event *Name Of Event*
+		// Event *Intro sequence*
 		//{//////////////////////////////////////
 
 		//-------------------------------------------------------
@@ -367,9 +365,45 @@ class cScrMap : iScrMap
 		/*Put any functions that are only used in Scene X, Event X here.*/
 
 		//-------------------------------------------------------
+		
+		// Sequences - similiar to using switch() and timers
+		// Sequence_Begin(name, mSequenceData) - Start the sequence
+		// Sequence_DoStepAndWait(n) - Do this step and then wait for n second(s)
+		// Sequence_DoStepAndPause() - Do this and then pause until told otherwise
+		// SequenceStates_Resume(name) - After pausing a sequence, call this to resume
+		// Sequence_DoStepAndContinue() - Do this and go on to the next step
+		// Sequence_End() - Call this at the end of the sequence
 
-		//} END Event *Name Of Event*
+		//Music_PlayExt("A2_1_2_CaveRumble.ogg", true, 0.3f, 1.f, 0.3f, 0.3f, eMusicPrio_SceneAmb, false);
+		cSequenceStatesData mSeqIntro;
+		void Seq_Intro(const tString& in asName)
+		{
+			Sequence_Begin("Seq_Intro", mSeqIntro);
+			if(Sequence_DoStepAndWait(1.0f))  // Intro start
+			{
+				Effect_Fade_Out(0.f);
+				Player_Teleport("Intro_Cave");
+				Player_SetActive(false);
+
+				CameraAnimation_Begin("Intro_CaveAnimation", "", false);
+				Music_PlayExt("A2_01_02_PortalCave", true, 0.3f, 1.f, 0.3f, 0.3f, eMusicPrio_SceneAmb, false);
+			}
+			else if (Sequence_DoStepAndWait(4.0f)) // Add some screen effects
+			{
+				Effect_Fade_In(3.0f);
+				//Effect_Blur_Start(0.015f, 3.0f);
+				//Effect_ChromaticAberration_CreateInstance(0.0035f, 10.f);
+				//Effect_DoF_Start(2.0f, 10.0f, 0.5f, 1.0f);
+			}
+			else if (Sequence_DoStepAndWait(2.5f))
+			{
+				
+			}
+			Sequence_End();
+		}
+
+		//} END Event *Intro sequence*
 	 
-	//} END SCENE X
+	//} END SCENE 1
  
 }
