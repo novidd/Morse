@@ -1,6 +1,12 @@
 <HPLMapTrack_Sound ID="90E0301C3CDE4BAFC680DBE72BA0073B8F13F3FB" MajorVersion="1" MinorVersion="1">
     <Section Name="12450711482325857532">
-        <Objects />
+        <Objects>
+            <Sound ID="268438841" Name="Sound_1" CreStamp="1606319331" ModStamp="1606319347" WorldPos="-0.49634 2.74847 -289.505" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="player/tools/rift/rift_energy" MinDistance="1" MaxDistance="5" Volume="1" Active="true" UseCustomProperties="false" UID="16 3343 268438841" />
+            <Sound ID="268438842" Name="Sound_Cave_Ghoul_Sand_1" CreStamp="1606321480" ModStamp="1606323154" WorldPos="-8.50481 2.21943 -300.146" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="01_02_caves/sweeteners/specials/deepcave_entry" MinDistance="1" MaxDistance="5" Volume="1" Active="true" UseCustomProperties="false" UID="16 3342 268438842" />
+            <Sound ID="268438843" Name="Sound_Cave_Ghoul_Move_1" CreStamp="1606321641" ModStamp="1606323148" WorldPos="-9.01436 2.21943 -300.419" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="01_02_caves/scare_events/cave_movement_03" MinDistance="1" MaxDistance="20" Volume="1" Active="true" UseCustomProperties="false" UID="16 3340 268438843" />
+            <Sound ID="268438851" Name="Sound_Cave_Ghoul_Sand_2" CreStamp="1606323156" ModStamp="1606323264" WorldPos="-3.49522 2.21943 -301.364" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="01_02_caves/sweeteners/specials/deepcave_entry" MinDistance="1" MaxDistance="5" Volume="1" Active="true" UseCustomProperties="false" UID="16 3335 268438851" />
+            <Sound ID="268438852" Name="Sound_Cave_Ghoul_Move_2" CreStamp="1606323156" ModStamp="1606323264" WorldPos="-4.00478 2.21943 -301.636" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="01_02_caves/scare_events/cave_movement_03" MinDistance="1" MaxDistance="20" Volume="1" Active="true" UseCustomProperties="false" UID="16 3334 268438852" />
+        </Objects>
     </Section>
     <Section Name="9993333931400956225">
         <Objects />

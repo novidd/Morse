@@ -172,12 +172,6 @@ class cScrMap : iScrMap
 				Entity_SetActive("ShedDoor_Lock_2", false);
 			}
 		}
-		
-		// Sound for the radio in shed
-		/**
-		 * "level_entity_shared/radio/radio_static"
-		 * 
-		 */
 
 		 // Initiate the intro
 		 if (mbStartIntro) { Seq_Intro(""); }
@@ -303,7 +297,7 @@ class cScrMap : iScrMap
 		Map_AddTimer(asEntity, 0.33f, "CheckIfCandleLit");
 	}
 	
-	void CheckIfCandleLit(const tString&in asTimer)
+	void CheckIfCandleLit(const tString &in asTimer)
 	{
 		bool bIsLit = Lamp_GetLit(asTimer);
 		tString sLamp = "Light_" + Entity_GetVarString(asTimer, "");
@@ -332,7 +326,7 @@ class cScrMap : iScrMap
  
 	//////////////////////////////////////////////////////////////////////////////////////////
 	// ==============
-	// SCENE 1 *Intro*
+	// SCENE 1 *INTRO*
 	// ==============
 	//{//////////////////////////////////////////////////////////////////////////////////////
  
@@ -347,13 +341,15 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 	 
 		/*Put any functions that are used in more than one event in Scene 1 here.*/
+		
+		// player/UI/permafail/sequence/arm_look_stinger PLAY THIS SOUND WHEN THE MORSE LOGO APPEARS
 	 
 		//-------------------------------------------------------
 		
 		//} END General	
 	 
 		/////////////////////////////////////////
-		// Event A *Cave sequence*
+		// Event A *CAVE SEQUENCE*
 		//{//////////////////////////////////////
 
 		//-------------------------------------------------------
@@ -363,14 +359,63 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 
 		/*Put any functions that are only used in Scene 1, Event A here.*/
+		
+		void OnTimer_EnableGhoul(const tString &in asTimer) // Make the ghoul patrol along the nodes in the cave
+		{
+			Entity_SetActive("ghoul_intro_cave", true);
+			
+			Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_4");
+			Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_7");
+			Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_9");
+			Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_22");
+			Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_14");
+			Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_16");
 
+			Ghoul_CommandPatrol_Execute("ghoul_intro_cave", false, 1, false, eGhoulSpeed_Walk, "");
+			
+			Map_AddTimer("Timer_LowerDoF", 12.0f, "OnTimer_EditIntroCaveEffects");
+		}
+		
+		void OnTimer_EditIntroCaveEffects(const tString &in asTimer)
+		{
+			if (asTimer == "Timer_LowerDoF") // Increase DoF further plane distance (makes screen blurry at a further distance)
+			{
+				Effect_DoF_Start(1.0f, 20.0f, 0.5f, 3.0f);
+			}
+		}
+		
+		void FadeInOutMicroFlash(const tString &in asEffect)
+		{
+			Sound_CreateAtEntity("", "player/UI/fear_system/microflash", "player", 0.1f, false, 0.3f);
+			if (asEffect == "In")
+			{
+				Effect_Fade_In(0.1f);
+			}
+			else if (asEffect == "Out")
+			{
+				Effect_Fade_Out(0.1f);
+			}
+		}
+		
+		bool OnTrigger_Ghoul_Vocalisation(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			if (asParent == "Trigger_Ghoul_Vocalisation_1" && alState == 1)
+			{
+				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_smell_start_search", asChild, 0.1f, false, 0.75f);
+			}
+			else if (asParent == "Trigger_Ghoul_Vocalisation_2" && alState == 1)
+			{
+				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_search", asChild, 0.1f, false, 0.75f);
+			}
+			return true;
+		}
 		//-------------------------------------------------------
 
 		cSequenceStatesData mSeqIntro;
 		void Seq_Intro(const tString& in asName)
 		{
 			Sequence_Begin("Seq_Intro", mSeqIntro);
-			if(Sequence_DoStepAndWait(1.0f))  // Intro start, change wait time to 7.0f
+			if(Sequence_DoStepAndWait(0.5f))  // Intro start, change wait time to 7.0f
 			{
 				
 				Effect_Fade_Out(0.f);
@@ -380,36 +425,70 @@ class cScrMap : iScrMap
 
 				CameraAnimation_Begin("Intro_CaveAnimation", "", false);
 				Music_PlayExt("A2_01_02_PortalCave.ogg", true, 0.3f, 1.f, 0.3f, 0.3f, eMusicPrio_SceneAmb, false);
-				Entity_SetActive("ghoul_intro_cave", true);
+				
+				Sound_Play("Sound_Cave_Ghoul_Sand_1", 2.0f);				
+				Sound_Play("Sound_Cave_Ghoul_Move_1", 2.0f);
+
+				Map_AddTimer("Timer_EnableGhoul", 2.0f, "OnTimer_EnableGhoul"); // Enable the ghoul
+			}
+			else if (Sequence_DoStepAndWait(1.0f))
+			{
+				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_exit_hole", "ghoul_intro_cave", 0.1f, false, 0.75f);
 			}
 			else if (Sequence_DoStepAndWait(5.0f)) // Add some screen effects
 			{
-				Effect_Fade_In(3.0f);
 				Effect_Blur_Start(0.01f, 3.0f);
 				Effect_ChromaticAberration_CreateInstance(0.0035f, 10.f);
 				Effect_DoF_Start(2.0f, 9.0f, 0.5f, 5.0f); // DoF with blurrier further plane
+				FadeInOutMicroFlash("In");
 				
 				Music_PlayExt("A2_1_2_CaveRumble.ogg", true, 0.3f, 1.f, 14.0f, 0.3f, eMusicPrio_SceneAmb, false);
+				
 			}
-			else if (Sequence_DoStepAndWait(11.0f)) // Make the ghoul patrol along the nodes in the cave
+			else if (Sequence_DoStepAndWait(0.5f))
 			{
-				Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_4");
-				Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_7");
-				Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_9");
-				Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_22");
-				Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_14");
-				Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_16");
-
-				Ghoul_CommandPatrol_Execute("ghoul_intro_cave", false, 1, false, eGhoulSpeed_Walk, "");
+				FadeInOutMicroFlash("Out");
 			}
-			else if (Sequence_DoStepAndWait(2.5f))
+			else if (Sequence_DoStepAndWait(2.0f))
 			{
-				Effect_DoF_Start(1.0f, 20.0f, 0.5f, 3.0f); // Increase DoF further plane distance
+				FadeInOutMicroFlash("In");
+			}
+			else if (Sequence_DoStepAndWait(0.5f))
+			{
+				FadeInOutMicroFlash("Out");
+			}
+			else if (Sequence_DoStepAndWait(5.0f))
+			{
+				FadeInOutMicroFlash("In");
+				Sound_CreateAtEntity("", "level_entity_shared/radio/radio_static", "player", 6.0f, false, 1.0f);
+				Sound_CreateAtEntity("", "level_entity_shared/radio/radio_static", "radio_transmitter_1", 0.1f, false, 1.0f);
+			}
+			else if (Sequence_DoStepAndWait(1.0f))
+			{
+				FadeInOutMicroFlash("Out");
+				Sound_CreateAtEntity("", "creatures/foley/creature/ghoul/ghoul_walk", "ghoul_intro_cave", 0.1f, false, 0.75f);
+			}
+			else if (Sequence_DoStepAndWait(1.0f))
+			{
+				Sound_CreateAtEntity("", "creatures/foley/creature/ghoul/ghoul_walk", "ghoul_intro_cave", 0.1f, false, 0.75f);
+			}
+			else if (Sequence_DoStepAndWait(1.0f))
+			{
+				Entity_SetActive("ghoul_intro_cave", false);
+				
+				Sound_CreateAtEntity("", "creatures/foley/creature/ghoul/ghoul_walk", "ghoul_intro_cave", 0.1f, false, 0.75f);
+				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_enter_hole", "ghoul_intro_cave", 0.1f, false, 0.75f);
+				Sound_Play("Sound_Cave_Ghoul_Sand_2", 1.0f);
+				Sound_Play("Sound_Cave_Ghoul_Move_2", 1.0f);
+			}
+			else if (Sequence_DoStepAndWait(1.0f))
+			{
+				FadeInOutMicroFlash("In");
 			}
 			Sequence_End();
 		}
 
-		//} END Event *Cave sequence*
+		//} END Event *CAVE SEQUENCE*
 	 
 	//} END SCENE 1
  
