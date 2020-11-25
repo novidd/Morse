@@ -183,7 +183,7 @@
                     <Var ObjectId="268435464" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435465" Name="Cave_Soundscape" CreStamp="1606153805" ModStamp="1606240403" WorldPos="-10 0 -295" Rotation="0 0 0" Scale="50 25 50" Active="true" Mesh="" UID="16 3388 268435465" AreaType="Soundscape">
+            <Area ID="268435465" Name="Cave_Soundscape" CreStamp="1606153805" ModStamp="1606334147" WorldPos="-3.22939 2.08755 -295.676" Rotation="0 0 0" Scale="18.046 15 26.133" Active="true" Mesh="" UID="16 3388 268435465" AreaType="Soundscape">
                 <UserVariables>
                     <Var ObjectId="268435465" Name="Note" Value="" />
                     <Var ObjectId="268435465" Name="UseReverb" Value="true" />
@@ -456,6 +456,12 @@
                     <Var ObjectId="268438863" Name="CanInteractWithoutCallback" Value="false" />
                     <Var ObjectId="268438863" Name="MaxFocusDistance" Value="-1" />
                     <Var ObjectId="268438863" Name="CustomInteractIcon" Value="Default" />
+                </UserVariables>
+            </Area>
+            <Area ID="268438865" Name="Intro_TitleCard" CreStamp="1606334225" ModStamp="1606334533" WorldPos="0 1 -330" Rotation="0 4.71239 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 3384 268438865" AreaType="PlayerStart">
+                <UserVariables>
+                    <Var ObjectId="268438865" Name="Note" Value="" />
+                    <Var ObjectId="268438865" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
         </Objects>
