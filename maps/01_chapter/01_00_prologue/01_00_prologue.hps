@@ -287,45 +287,6 @@ class cScrMap : iScrMap
 	/*Put any variables that are used in more than one scene here.*/
  
 	//-------------------------------------------------------
-	
-	void OnConnectionStateChange_ShedLock(const tString &in asEntity, int alState)
-	{
-		tString sDoor = "ShedMain_" + Entity_GetVarString(asEntity, "");
-		bool bLocked = alState == 1;
-		
-		cLux_AddDebugMessage("Shed door is locked: " + bLocked);
-		SwingDoor_SetLocked(sDoor, bLocked, true);
-		SwingDoor_SetBlocked(sDoor, bLocked, true);
-	}
-	
-	//-------------------------------------------------------
-	
-	void OnPlayerInteract_ShedCandle(const tString &in asEntity)
-	{	
-		// The use of a timer is necessary because Lamp_GetLit() returns false at the moment you light a lamp
-		Map_AddTimer(asEntity, 0.33f, "CheckIfCandleLit");
-	}
-	
-	void CheckIfCandleLit(const tString &in asTimer)
-	{
-		bool bIsLit = Lamp_GetLit(asTimer);
-		tString sLamp = "Light_" + Entity_GetVarString(asTimer, "");
-		
-		Light_SetVisible(sLamp, bIsLit);
-		
-		if (bIsLit)
-		{
-			Sound_CreateAtEntity("shed_candle_burn_"+asTimer, "level_entity_shared/fire/wall_torch/wall_torch_burn", asTimer, 0.0f, false, 1.0f/3);
-			return;
-		}
-		else
-		{
-			Sound_Stop("shed_candle_burn_"+asTimer, 0.5f);
-			return;
-		}
-	}
-
-	//-------------------------------------------------------
  
 	/*Put any functions that are used in more than one scene here.*/
  
@@ -416,7 +377,6 @@ class cScrMap : iScrMap
 			return true;
 		}
 		
-		//-------------------------------------------------------
 
 		cSequenceStatesData mSeqIntroCave;
 		void Seq_IntroCave(const tString& in asName)
@@ -498,6 +458,7 @@ class cScrMap : iScrMap
 			}
 			Sequence_End();
 		}
+		//-------------------------------------------------------
 
 		//} END Event *CAVE SEQUENCE*
 		
@@ -512,8 +473,6 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 
 		/*Put any functions that are only used in Scene 1, Event B here.*/
-
-		//-------------------------------------------------------
 		
 		cSequenceStatesData mSeqIntroTitleCard;
 		void Seq_IntroTitleCard(const tString& in asName)
@@ -557,9 +516,84 @@ class cScrMap : iScrMap
 			}
 			Sequence_End();
 		}
+		//-------------------------------------------------------
 		
 		//} END Event *TITLE CARD/SHED SEQUENCE*
 	 
 	//} END SCENE 1
  
+	//////////////////////////////////////////////////////////////////////////////////////////
+	// ==============
+	// SCENE 2 *SHED*
+	// ==============
+	//{//////////////////////////////////////////////////////////////////////////////////////
+ 
+		/////////////////////////////////////////
+		// General
+		//{//////////////////////////////////////
+		 
+		//-------------------------------------------------------
+	 
+		/*Put any variables that are used by many events in Scene 2 here.*/
+		
+		//-------------------------------------------------------
+	 
+		/*Put any functions that are used in more than one event in Scene 2 here.*/
+		
+		void OnConnectionStateChange_ShedLock(const tString &in asEntity, int alState)
+		{
+			tString sDoor = "ShedMain_" + Entity_GetVarString(asEntity, "");
+			bool bLocked = alState == 1;
+		
+			cLux_AddDebugMessage("Shed door is locked: " + bLocked);
+			SwingDoor_SetLocked(sDoor, bLocked, true);
+			SwingDoor_SetBlocked(sDoor, bLocked, true);
+		}
+		
+		void OnPlayerInteract_ShedCandle(const tString &in asEntity)
+		{	
+			// The use of a timer is necessary because Lamp_GetLit() returns false at the moment you light a lamp
+			Map_AddTimer(asEntity, 0.33f, "CheckIfCandleLit");
+		}
+	
+		void CheckIfCandleLit(const tString &in asTimer)
+		{
+			bool bIsLit = Lamp_GetLit(asTimer);
+			tString sLamp = "Light_" + Entity_GetVarString(asTimer, "");
+		
+			Light_SetVisible(sLamp, bIsLit);
+		
+			if (bIsLit)
+			{
+				Sound_CreateAtEntity("shed_candle_burn_"+asTimer, "level_entity_shared/fire/wall_torch/wall_torch_burn", asTimer, 0.0f, false, 1.0f/3);
+				return;
+			}
+			else
+			{
+				Sound_Stop("shed_candle_burn_"+asTimer, 0.5f);
+				return;
+			}
+		}
+		
+		//-------------------------------------------------------
+		
+		//} END General	
+	 
+		/////////////////////////////////////////
+		// Event A *RADIO TRANSMISSION*
+		//{//////////////////////////////////////
+
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 1, Event A here.*/
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 1, Event A here.*/
+		
+		//-------------------------------------------------------
+
+		//} END Event *RADIO TRANSMISSION*
+	 
+	//} END SCENE 1
 }
