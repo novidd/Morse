@@ -122,7 +122,6 @@ class cScrMap : iScrMap
 	{
 		PlayerBody_SetActive(true);
 		Player_SetVertigoActive(false);
-		//Player_SetNightVisionEnabled(false);
 		
 		// Put display name entry in english.lang / Levels
 		GetBase().SetDisplayNameEntry("01-00-prologue");
@@ -174,7 +173,7 @@ class cScrMap : iScrMap
 		}
 
 		 // Initiate the intro
-		 if (mbStartIntro) { Seq_Intro(""); }
+		 if (mbStartIntro) { Seq_IntroCave(""); }
 	}
 	
 
@@ -411,14 +410,16 @@ class cScrMap : iScrMap
 			}
 			return true;
 		}
+		
 		//-------------------------------------------------------
 
-		cSequenceStatesData mSeqIntro;
-		void Seq_Intro(const tString& in asName)
+		cSequenceStatesData mSeqIntroCave;
+		void Seq_IntroCave(const tString& in asName)
 		{
-			Sequence_Begin("Seq_Intro", mSeqIntro);
+			Sequence_Begin("Seq_IntroCave", mSeqIntroCave);
 			if(Sequence_DoStepAndWait(7.0f))  // Intro start
 			{
+				cLux_AddDebugMessage("Cave Intro Sequence starting...");
 				
 				Effect_Fade_Out(0.f);
 				Player_SetNightVisionEnabled(false);
@@ -482,14 +483,40 @@ class cScrMap : iScrMap
 				Sound_CreateAtEntity("", "01_02_caves/scare_events/cave_movement_03", "Sound_Cave_Ghoul_Move_1", 1.0f);
 				Sound_CreateAtEntity("", "01_02_caves/sweeteners/specials/deepcave_entry", "Sound_Cave_Ghoul_Sand_1", 1.0f);
 			}
-			else if (Sequence_DoStepAndWait(1.0f))
+			else if (Sequence_DoStepAndWait(3.0f))
 			{
 				FadeInOutMicroFlash("In");
+			}
+			else if (Sequence_DoStepAndWait(1.0f))
+			{
+				FadeInOutMicroFlash("Out");
+			}
+			else if (Sequence_DoStepAndWait(0.0f))
+			{
+				cLux_AddDebugMessage("Cave Intro Sequence finished...");
+				//Seq_IntroTitleCard("");
 			}
 			Sequence_End();
 		}
 
 		//} END Event *CAVE SEQUENCE*
+		
+		/////////////////////////////////////////
+		// Event B *TITLE CARD SEQUENCE*
+		//{//////////////////////////////////////
+
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 1, Event B here.*/
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 1, Event B here.*/
+
+		//-------------------------------------------------------
+
+		
+		//} END Event *TITLE CARD SEQUENCE*
 	 
 	//} END SCENE 1
  

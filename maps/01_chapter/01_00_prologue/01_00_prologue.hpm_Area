@@ -210,13 +210,13 @@
                     <Var ObjectId="268435465" Name="ParentAttachBody" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435466" Name="Intro_CaveAnimation_1" CreStamp="1606164851" ModStamp="1606168201" WorldPos="0.287752 1.262 -287.749" Rotation="-0 3.31752 -0" Scale="0.25 0.25 0.5" Active="true" Mesh="" UID="16 3392 268435466" AreaType="CameraAnimation">
+            <Area ID="268435466" Name="Intro_CaveAnimation_1" CreStamp="1606164851" ModStamp="1606325266" WorldPos="0.311002 1.262 -287.754" Rotation="-0 3.41298 -0" Scale="0.25 0.25 0.5" Active="true" Mesh="" UID="16 3392 268435466" AreaType="CameraAnimation">
                 <UserVariables>
                     <Var ObjectId="268435466" Name="Note" Value="" />
                     <Var ObjectId="268435466" Name="MaxYaw" Value="45" />
                     <Var ObjectId="268435466" Name="MaxPitch" Value="45" />
                     <Var ObjectId="268435466" Name="LookSpeedMultiplier" Value="1" />
-                    <Var ObjectId="268435466" Name="ForwardTime" Value="24" />
+                    <Var ObjectId="268435466" Name="ForwardTime" Value="26" />
                     <Var ObjectId="268435466" Name="BackwardTime" Value="1" />
                     <Var ObjectId="268435466" Name="AutoMovement" Value="1" />
                     <Var ObjectId="268435466" Name="LookMoveDistance" Value="0" />
@@ -229,7 +229,7 @@
                     <Var ObjectId="268435466" Name="CallbackFunc" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435467" Name="Intro_CaveAnimation_2" CreStamp="1606166326" ModStamp="1606235710" WorldPos="0.201085 1.262 -288.241" Rotation="-0 3.31752 -0" Scale="0.25 0.25 0.5" Active="true" Mesh="" UID="16 3390 268435467" AreaType="CameraAnimation">
+            <Area ID="268435467" Name="Intro_CaveAnimation_2" CreStamp="1606166326" ModStamp="1606235710" WorldPos="0.177837 1.262 -288.236" Rotation="-0 3.41298 -0" Scale="0.25 0.25 0.5" Active="true" Mesh="" UID="16 3390 268435467" AreaType="CameraAnimation">
                 <UserVariables>
                     <Var ObjectId="268435467" Name="Note" Value="" />
                     <Var ObjectId="268435467" Name="MaxYaw" Value="45" />
