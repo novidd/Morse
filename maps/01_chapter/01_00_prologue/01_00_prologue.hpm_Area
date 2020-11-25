@@ -248,34 +248,46 @@
                     <Var ObjectId="268435467" Name="CallbackFunc" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268438852" Name="PathNodePatrol_Intro_Cave_1" CreStamp="1606245929" ModStamp="1606247649" WorldPos="-11.0726 0.54471 -300.027" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3367 268438852" AreaType="PathNodePatrol">
+            <Area ID="268438809" Name="PathNode_1" CreStamp="1606251946" ModStamp="1606251952" WorldPos="-11.5357 0.510258 -300.042" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3365 268438809" AreaType="PathNode">
                 <UserVariables />
             </Area>
-            <Area ID="268438866" Name="PathNodePatrol_Intro_Cave_2" CreStamp="1606245966" ModStamp="1606247669" WorldPos="-8.8498 0.428028 -300.248" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3365 268438866" AreaType="PathNodePatrol">
+            <Area ID="268438810" Name="PathNode_2" CreStamp="1606251953" ModStamp="1606251955" WorldPos="-10.6388 0.611071 -300.212" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3364 268438810" AreaType="PathNode">
                 <UserVariables />
             </Area>
-            <Area ID="268438867" Name="PathNodePatrol_Intro_Cave_3" CreStamp="1606246005" ModStamp="1606247672" WorldPos="-5.99264 0.369026 -298.285" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3363 268438867" AreaType="PathNodePatrol">
+            <Area ID="268438811" Name="PathNode_3" CreStamp="1606251956" ModStamp="1606251959" WorldPos="-9.53808 0.590501 -300.362" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3363 268438811" AreaType="PathNode">
                 <UserVariables />
             </Area>
-            <Area ID="268438868" Name="PathNodePatrol_Intro_Cave_4" CreStamp="1606246021" ModStamp="1606247689" WorldPos="-4.23131 0.369026 -298.052" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3364 268438868" AreaType="PathNodePatrol">
+            <Area ID="268438812" Name="PathNode_4" CreStamp="1606251960" ModStamp="1606251967" WorldPos="-8.51992 0.506518 -300.1" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3366 268438812" AreaType="PathNode">
                 <UserVariables />
             </Area>
-            <Area ID="268438869" Name="PathNodePatrol_Intro_Cave_5" CreStamp="1606246025" ModStamp="1606247692" WorldPos="-3.85149 0.400579 -300.628" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3366 268438869" AreaType="PathNodePatrol">
+            <Area ID="268438813" Name="PathNode_5" CreStamp="1606251963" ModStamp="1606251966" WorldPos="-7.50574 0.469247 -299.493" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3354 268438813" AreaType="PathNode">
                 <UserVariables />
             </Area>
-            <Area ID="268438870" Name="PathNodePatrol_Intro_Cave_6" CreStamp="1606246047" ModStamp="1606247697" WorldPos="-4.01997 0.726965 -303.094" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3362 268438870" AreaType="PathNodePatrol">
+            <Area ID="268438814" Name="PathNode_6" CreStamp="1606251968" ModStamp="1606251985" WorldPos="-6.15898 0.403365 -298.497" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3355 268438814" AreaType="PathNode">
                 <UserVariables />
             </Area>
-            <Area ID="268438871" Name="PathNodePatrol_Intro_Cave_7" CreStamp="1606246052" ModStamp="1606247702" WorldPos="-4.22742 1.60316 -304.557" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3361 268438871" AreaType="PathNodePatrol">
+            <Area ID="268438815" Name="PathNode_7" CreStamp="1606251971" ModStamp="1606251984" WorldPos="-5.09562 0.387661 -298.497" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3367 268438815" AreaType="PathNode">
                 <UserVariables />
             </Area>
-            <Area ID="268438872" Name="PathNodePatrol_Intro_Cave_8" CreStamp="1606246057" ModStamp="1606247706" WorldPos="-5.36484 1.28605 -306.323" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3356 268438872" AreaType="PathNodePatrol">
+            <Area ID="268438816" Name="PathNode_8" CreStamp="1606251973" ModStamp="1606251987" WorldPos="-4.16122 0.413018 -299.045" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3361 268438816" AreaType="PathNode">
                 <UserVariables />
             </Area>
-            <Area ID="268438873" Name="PathNodePatrol_Intro_Cave_9" CreStamp="1606246065" ModStamp="1606247709" WorldPos="-7.00981 1.92697 -308.245" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3354 268438873" AreaType="PathNodePatrol">
+            <Area ID="268438817" Name="PathNode_9" CreStamp="1606251975" ModStamp="1606251991" WorldPos="-4.0149 0.435148 -300.31" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3356 268438817" AreaType="PathNode">
                 <UserVariables />
             </Area>
-            <Area ID="268438874" Name="PathNodePatrol_Intro_Cave_10" CreStamp="1606246073" ModStamp="1606247713" WorldPos="-8.26302 1.86449 -310.312" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3355 268438874" AreaType="PathNodePatrol">
+            <Area ID="268438822" Name="PathNode_14" CreStamp="1606252001" ModStamp="1606252573" WorldPos="-4.23299 1.58593 -304.435" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3362 268438822" AreaType="PathNode">
+                <UserVariables />
+            </Area>
+            <Area ID="268438823" Name="PathNode_15" CreStamp="1606252003" ModStamp="1606252009" WorldPos="-4.77312 1.47776 -304.999" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3338 268438823" AreaType="PathNode">
+                <UserVariables />
+            </Area>
+            <Area ID="268438824" Name="PathNode_16" CreStamp="1606252010" ModStamp="1606253266" WorldPos="-5.1529 1.34849 -306.03" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3341 268438824" AreaType="PathNode">
+                <UserVariables />
+            </Area>
+            <Area ID="268438836" Name="PathNode_27" CreStamp="1606252215" ModStamp="1606252574" WorldPos="-3.8155 0.508609 -301.933" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3325 268438836" AreaType="PathNode">
+                <UserVariables />
+            </Area>
+            <Area ID="268438837" Name="PathNode_22" CreStamp="1606252871" ModStamp="1606252905" WorldPos="-4.23299 1.06362 -303.217" Rotation="0 0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 3328 268438837" AreaType="PathNode">
                 <UserVariables />
             </Area>
         </Objects>

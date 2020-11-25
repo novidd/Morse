@@ -342,43 +342,35 @@ class cScrMap : iScrMap
 		 
 		//-------------------------------------------------------
 	 
-		/*Put any variables that are used by many events in Scene X here.*/
+		/*Put any variables that are used by many events in Scene 1 here.*/
 	 
 		//-------------------------------------------------------
 	 
-		/*Put any functions that are used in more than one event in Scene X here.*/
+		/*Put any functions that are used in more than one event in Scene 1 here.*/
 	 
 		//-------------------------------------------------------
 		
 		//} END General	
 	 
 		/////////////////////////////////////////
-		// Event *Cave sequence*
+		// Event A *Cave sequence*
 		//{//////////////////////////////////////
 
 		//-------------------------------------------------------
 
-		/*Put any variables that are only used in Scene X, Event X here.*/
+		/*Put any variables that are only used in Scene 1, Event A here.*/
 
 		//-------------------------------------------------------
 
-		/*Put any functions that are only used in Scene X, Event X here.*/
+		/*Put any functions that are only used in Scene 1, Event A here.*/
 
 		//-------------------------------------------------------
-		
-		// Sequences - similiar to using switch() and timers
-		// Sequence_Begin(name, mSequenceData) - Start the sequence
-		// Sequence_DoStepAndWait(n) - Do this step and then wait for n second(s)
-		// Sequence_DoStepAndPause() - Do this and then pause until told otherwise
-		// SequenceStates_Resume(name) - After pausing a sequence, call this to resume
-		// Sequence_DoStepAndContinue() - Do this and go on to the next step
-		// Sequence_End() - Call this at the end of the sequence
 
 		cSequenceStatesData mSeqIntro;
 		void Seq_Intro(const tString& in asName)
 		{
 			Sequence_Begin("Seq_Intro", mSeqIntro);
-			if(Sequence_DoStepAndWait(1.0f))  // Intro start
+			if(Sequence_DoStepAndWait(1.0f))  // Intro start, change wait time to 7.0f
 			{
 				
 				Effect_Fade_Out(0.f);
@@ -387,22 +379,32 @@ class cScrMap : iScrMap
 				Player_SetActive(false);
 
 				CameraAnimation_Begin("Intro_CaveAnimation", "", false);
-				Music_PlayExt("A2_01_02_PortalCave", true, 0.3f, 1.f, 0.3f, 0.3f, eMusicPrio_SceneAmb, false);
+				Music_PlayExt("A2_01_02_PortalCave.ogg", true, 0.3f, 1.f, 0.3f, 0.3f, eMusicPrio_SceneAmb, false);
 				Entity_SetActive("ghoul_intro_cave", true);
 			}
-			else if (Sequence_DoStepAndWait(7.0f)) // Add some screen effects
+			else if (Sequence_DoStepAndWait(5.0f)) // Add some screen effects
 			{
 				Effect_Fade_In(3.0f);
 				Effect_Blur_Start(0.01f, 3.0f);
 				Effect_ChromaticAberration_CreateInstance(0.0035f, 10.f);
 				Effect_DoF_Start(2.0f, 9.0f, 0.5f, 5.0f); // DoF with blurrier further plane
+				
+				Music_PlayExt("A2_1_2_CaveRumble.ogg", true, 0.3f, 1.f, 14.0f, 0.3f, eMusicPrio_SceneAmb, false);
+			}
+			else if (Sequence_DoStepAndWait(11.0f)) // Make the ghoul patrol along the nodes in the cave
+			{
+				Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_4");
+				Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_7");
+				Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_9");
+				Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_22");
+				Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_14");
+				Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_16");
+
+				Ghoul_CommandPatrol_Execute("ghoul_intro_cave", false, 1, false, eGhoulSpeed_Walk, "");
 			}
 			else if (Sequence_DoStepAndWait(2.5f))
 			{
-				// Make the ghoul patrol along the nodes in the cave
-				//Music_PlayExt("A2_1_2_CaveRumble.ogg", true, 0.3f, 1.f, 0.3f, 0.3f, eMusicPrio_SceneAmb, false);
-				
-				Effect_DoF_Start(1.0f, 15.0f, 0.5f, 3.0f); // Increase DoF further plane distance
+				Effect_DoF_Start(1.0f, 20.0f, 0.5f, 3.0f); // Increase DoF further plane distance
 			}
 			Sequence_End();
 		}
