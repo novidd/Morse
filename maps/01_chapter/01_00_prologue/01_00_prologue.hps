@@ -363,6 +363,8 @@ class cScrMap : iScrMap
 		void OnTimer_EnableGhoul(const tString &in asTimer) // Make the ghoul patrol along the nodes in the cave
 		{
 			Entity_SetActive("ghoul_intro_cave", true);
+			Sound_CreateAtEntity("", "01_02_caves/scare_events/cave_movement_03", "Sound_Cave_Ghoul_Move_1", 2.0f);
+			Sound_CreateAtEntity("", "01_02_caves/sweeteners/specials/deepcave_entry", "Sound_Cave_Ghoul_Sand_1", 2.0f);
 			
 			Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_4");
 			Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_7");
@@ -415,7 +417,7 @@ class cScrMap : iScrMap
 		void Seq_Intro(const tString& in asName)
 		{
 			Sequence_Begin("Seq_Intro", mSeqIntro);
-			if(Sequence_DoStepAndWait(0.5f))  // Intro start, change wait time to 7.0f
+			if(Sequence_DoStepAndWait(7.0f))  // Intro start
 			{
 				
 				Effect_Fade_Out(0.f);
@@ -425,21 +427,19 @@ class cScrMap : iScrMap
 
 				CameraAnimation_Begin("Intro_CaveAnimation", "", false);
 				Music_PlayExt("A2_01_02_PortalCave.ogg", true, 0.3f, 1.f, 0.3f, 0.3f, eMusicPrio_SceneAmb, false);
-				
-				Sound_Play("Sound_Cave_Ghoul_Sand_1", 2.0f);				
-				Sound_Play("Sound_Cave_Ghoul_Move_1", 2.0f);
 
-				Map_AddTimer("Timer_EnableGhoul", 2.0f, "OnTimer_EnableGhoul"); // Enable the ghoul
+				Map_AddTimer("Timer_EnableGhoul", 8.5f, "OnTimer_EnableGhoul"); // Enable the ghoul
 			}
 			else if (Sequence_DoStepAndWait(1.0f))
 			{
 				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_exit_hole", "ghoul_intro_cave", 0.1f, false, 0.75f);
 			}
-			else if (Sequence_DoStepAndWait(5.0f)) // Add some screen effects
+			else if (Sequence_DoStepAndWait(5.0f))
 			{
 				Effect_Blur_Start(0.01f, 3.0f);
 				Effect_ChromaticAberration_CreateInstance(0.0035f, 10.f);
-				Effect_DoF_Start(2.0f, 9.0f, 0.5f, 5.0f); // DoF with blurrier further plane
+				Effect_DoF_Start(2.0f, 9.0f, 0.5f, 5.0f);
+				Effect_RadialBlur_Start(0.5f, 0.1f, 0.8f, 0.0f);
 				FadeInOutMicroFlash("In");
 				
 				Music_PlayExt("A2_1_2_CaveRumble.ogg", true, 0.3f, 1.f, 14.0f, 0.3f, eMusicPrio_SceneAmb, false);
@@ -452,6 +452,9 @@ class cScrMap : iScrMap
 			else if (Sequence_DoStepAndWait(2.0f))
 			{
 				FadeInOutMicroFlash("In");
+				Sound_CreateAtEntity("", "level_entity_shared/radio/radio_static", "player", 8.0f, false, 1.0f);
+				Sound_CreateAtEntity("", "level_entity_shared/radio/radio_static", "radio_transmitter_1", 0.1f, false, 1.0f);
+				//Play MORSE code for S.O.S.
 			}
 			else if (Sequence_DoStepAndWait(0.5f))
 			{
@@ -460,8 +463,6 @@ class cScrMap : iScrMap
 			else if (Sequence_DoStepAndWait(5.0f))
 			{
 				FadeInOutMicroFlash("In");
-				Sound_CreateAtEntity("", "level_entity_shared/radio/radio_static", "player", 6.0f, false, 1.0f);
-				Sound_CreateAtEntity("", "level_entity_shared/radio/radio_static", "radio_transmitter_1", 0.1f, false, 1.0f);
 			}
 			else if (Sequence_DoStepAndWait(1.0f))
 			{
@@ -478,8 +479,8 @@ class cScrMap : iScrMap
 				
 				Sound_CreateAtEntity("", "creatures/foley/creature/ghoul/ghoul_walk", "ghoul_intro_cave", 0.1f, false, 0.75f);
 				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_enter_hole", "ghoul_intro_cave", 0.1f, false, 0.75f);
-				Sound_Play("Sound_Cave_Ghoul_Sand_2", 1.0f);
-				Sound_Play("Sound_Cave_Ghoul_Move_2", 1.0f);
+				Sound_CreateAtEntity("", "01_02_caves/scare_events/cave_movement_03", "Sound_Cave_Ghoul_Move_1", 1.0f);
+				Sound_CreateAtEntity("", "01_02_caves/sweeteners/specials/deepcave_entry", "Sound_Cave_Ghoul_Sand_1", 1.0f);
 			}
 			else if (Sequence_DoStepAndWait(1.0f))
 			{
