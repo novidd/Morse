@@ -493,8 +493,8 @@ class cScrMap : iScrMap
 			}
 			else if (Sequence_DoStepAndWait(0.0f))
 			{
-				cLux_AddDebugMessage("Cave Intro Sequence finished...");
-				//Seq_IntroTitleCard("");
+				cLux_AddDebugMessage("Ending Cave Intro Sequence...");
+				Seq_IntroTitleCard("");
 			}
 			Sequence_End();
 		}
@@ -514,7 +514,21 @@ class cScrMap : iScrMap
 		/*Put any functions that are only used in Scene 1, Event B here.*/
 
 		//-------------------------------------------------------
-
+		
+		cSequenceStatesData mSeqIntroTitleCard;
+		void Seq_IntroTitleCard(const tString& in asName)
+		{
+			Sequence_Begin("Seq_IntroTitleCard", mSeqIntroTitleCard);
+			if(Sequence_DoStepAndWait(1.0f))  // Intro start
+			{
+				cLux_AddDebugMessage("Starting Title Card Intro Sequence...");
+			}
+			else if (Sequence_DoStepAndWait(1.0f))
+			{
+				
+			}
+			Sequence_End();
+		}
 		
 		//} END Event *TITLE CARD SEQUENCE*
 	 
