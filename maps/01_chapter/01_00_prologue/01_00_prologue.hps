@@ -31,64 +31,6 @@ class cScrMap : iScrMap
 {
 	//--------------------------------------------
 	
-	//////////////////////////////////////////////////////////////////////////////////////////
-	// ==============
-	// USEFUL FUNCTIONS, AND SUCH
-	// ==============
-	//{///////////////////////////////////////////////////////////////////////////////////////
-	
-	//////////////////
-	//{ Functions
-	
-	// Map_AddTimer(const tString&in asName, float afTime, const tString&in asFunction) - void FuncName(const tString&in asTimer){}
-	
-	// Map_RemoveTimer(const tString&in asName) - Removes a specific timer identified by the unique string asName
-	
-	// cVector3f - Player_GetPosition() - Gets player postion as a vector of three fields (x, y ,z)
-	
-	// Player_Teleport(const tString &in asStartPosName, bool abAlignRotation = true) - Teleport player to a PlayerStartArea
-	
-	// Player_SetNightVisionEnabled(bool) - Disable/Enable nightvision
-	
-	/*	Sequences - similiar to using switch() and timers
-
-	cSequenceStatesData mSequenceAlert;
-	void Sequence_Alert(const tString& in asName)
-	{
-		Sequence_Begin("Sequence_Alert", mSequenceAlert);
-		
-		if(Sequence_DoStepAndWait(1.0f))  // Do this step and then wait for 1 second
-		{
-			MakeALoudNoise();
-		}
-		else if (Sequence_DoStepAndWait(2.5f)) // Do this and then wait for 2.5 seconds
-		{
-			FlashABrightLight();
-		}
-		else if (Sequence_DoStepAndPause()) // Do this and then pause until told otherwise
-		{
-			SaySomethingAndCallBack("OnSayingSomethingComplete");
-		}
-		else if (Sequence_DoStepAndWait(10.0f)) // Do this and then wait for 10s
-		{
-			CrushPlayerLikeAnAnt();
-		}
-		else if (Sequence_DoStepAndContinue()) // Do this and go on to the next step (in this case there isn't one)
-		{
-			ApologiseToPlayer();
-		}
-		
-		Sequence_End();
-	}
-
-	void OnSayingSomethingComplete()
-	{
-		// Saying something is now complete - poke the sequence to continue processing
-		SequenceStates_Resume("Sequence_Alert");
-	}*/
-	
-	//}-------------------------------------------------------
-	
 	////////////////////////
 	//{ Creating variables
 	
@@ -105,8 +47,6 @@ class cScrMap : iScrMap
 	// Global variables across maps - cScript_SetGlobarVar(asName, value), cScript_GetGlobalVar(asName)
 	
 	//}-------------------------------------------------------
-	
-	//} END USEFUL FUNCTIONS, AND SUCH
 	
 	//////////////////////////////////////////////////////////////////////////////////////////
 	// ==============
@@ -160,7 +100,7 @@ class cScrMap : iScrMap
 		// Debug
 		if(cLux_ScriptDebugOn())
 		{
-			//mbStartIntro = false;
+			mbStartIntro = false;
 			if (mbStartIntro == false) // Disable effects used in the intro
 			{
 				Effect_Blur_FadeOut(mlBlurId, 0.0f);

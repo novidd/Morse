@@ -1541,7 +1541,7 @@
                     <Var ObjectId="268435501" Name="FlickerOffAlpha" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435502" Name="telegraph_receiver_1" CreStamp="1605038188" ModStamp="1605212881" WorldPos="-0.614871 21.6396 29.7334" Rotation="0 -1.50367 0" Scale="1 1 1" FileIndex="172" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 204 268435502">
+            <Entity ID="268435502" Name="telegraph_receiver_1" CreStamp="1605038188" ModStamp="1606417981" WorldPos="-0.673627 21.6396 29.7334" Rotation="0 1.54359 0" Scale="1 1 1" FileIndex="172" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 204 268435502">
                 <UserVariables>
                     <Var ObjectId="268435502" Name="Note" Value="" />
                     <Var ObjectId="268435502" Name="EventInstanceTag" Value="" />
@@ -34585,7 +34585,7 @@
                     <Var ObjectId="268436124" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436125" Name="simple_grey_plane_1" CreStamp="1606152798" ModStamp="1606168316" WorldPos="-5 13.75 -270.75" Rotation="0 0 0" Scale="30 40 1" FileIndex="568" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 3344 268436125">
+            <Entity ID="268436125" Name="simple_grey_plane_1" CreStamp="1606152798" ModStamp="1606418064" WorldPos="-5 13.75 -270.75" Rotation="0 0 0" Scale="40 40 1" FileIndex="568" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 3344 268436125">
                 <UserVariables>
                     <Var ObjectId="268436125" Name="Note" Value="" />
                     <Var ObjectId="268436125" Name="EventInstanceTag" Value="" />
