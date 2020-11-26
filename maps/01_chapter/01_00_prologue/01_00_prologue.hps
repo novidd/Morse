@@ -160,7 +160,7 @@ class cScrMap : iScrMap
 		// Debug
 		if(cLux_ScriptDebugOn())
 		{
-			mbStartIntro = false;
+			//mbStartIntro = false;
 			if (mbStartIntro == false) // Disable effects used in the intro
 			{
 				Effect_Blur_FadeOut(mlBlurId, 0.0f);
@@ -382,7 +382,7 @@ class cScrMap : iScrMap
 		void Seq_IntroCave(const tString& in asName)
 		{
 			Sequence_Begin("Seq_IntroCave", mSeqIntroCave);
-			if(Sequence_DoStepAndWait(0.0f))  // Intro start time at 7.0f
+			if(Sequence_DoStepAndWait(7.0f))  // Intro start time at 7.0f
 			{
 				cLux_AddDebugMessage("Cave Intro Sequence starting...");
 				
@@ -400,7 +400,7 @@ class cScrMap : iScrMap
 			{
 				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_exit_hole", "ghoul_intro_cave", 0.1f, false, 0.75f);
 			}
-			else if (Sequence_DoStepAndWait(0.0f)) // 5.0f
+			else if (Sequence_DoStepAndWait(5.0f))
 			{
 				FadeInOutMicroFlash("In");
 				Music_PlayExt("A2_1_2_CaveRumble.ogg", true, 0.3f, 1.f, 14.0f, 0.3f, eMusicPrio_SceneAmb, false);
@@ -410,7 +410,7 @@ class cScrMap : iScrMap
 			{
 				FadeInOutMicroFlash("Out");
 			}
-			else if (Sequence_DoStepAndWait(2.0f)) // 2.0f
+			else if (Sequence_DoStepAndWait(2.0f))
 			{
 				FadeInOutMicroFlash("In");
 				Sound_CreateAtEntity("radio_player", "level_entity_shared/radio/radio_static", "player", 8.0f, false, 1.0f);
@@ -420,7 +420,7 @@ class cScrMap : iScrMap
 			{
 				FadeInOutMicroFlash("Out");
 			}
-			else if (Sequence_DoStepAndWait(0.0f)) // 5.0f
+			else if (Sequence_DoStepAndWait(5.0f))
 			{
 				FadeInOutMicroFlash("In");
 			}
@@ -442,7 +442,7 @@ class cScrMap : iScrMap
 				Sound_CreateAtEntity("", "01_02_caves/scare_events/cave_movement_03", "Sound_Cave_Ghoul_Move_1", 1.0f);
 				Sound_CreateAtEntity("", "01_02_caves/sweeteners/specials/deepcave_entry", "Sound_Cave_Ghoul_Sand_1", 1.0f);
 			}
-			else if (Sequence_DoStepAndWait(0.0f)) // 3.0f
+			else if (Sequence_DoStepAndWait(3.0f))
 			{
 				FadeInOutMicroFlash("In");
 			}
@@ -478,25 +478,26 @@ class cScrMap : iScrMap
 		void Seq_IntroTitleCard(const tString& in asName)
 		{
 			Sequence_Begin("Seq_IntroTitleCard", mSeqIntroTitleCard);
-			if(Sequence_DoStepAndWait(0.0f))  // Intro start, 2.0f
+			if(Sequence_DoStepAndWait(2.0f))
 			{
 				cLux_AddDebugMessage("Starting Title Card Intro Sequence...");
 				Player_Teleport("Intro_TitleCard", true);
 			}
-			else if (Sequence_DoStepAndWait(0.0f)) // 8.0f
+			else if (Sequence_DoStepAndWait(8.0f))
 			{
 				Effect_Fade_In(3.0f);
 				//Show title card
 			}
-			else if (Sequence_DoStepAndWait(0.0f)) // 3.0f
+			else if (Sequence_DoStepAndWait(3.0f))
 			{
 				Effect_Fade_Out(3.0f);
-				Sound_Stop("radio_player", 3.0f);
+				Sound_Stop("radio_player", 6.0f);
 			}
 			else if (Sequence_DoStepAndWait(3.0f))
 			{
 				cLux_AddDebugMessage("Ending Title Card Intro Sequence...");
 				Player_Teleport("Intro_Shed", true);
+				Music_Stop(6.0f, eMusicPrio_SceneAmb);
 				
 				//Enable/Disable screen effects
 				Player_SetNightVisionEnabled(true);
@@ -504,15 +505,35 @@ class cScrMap : iScrMap
 				Effect_DoF_FadeOut(mlDofId, 0.0f);
 				Effect_ChromaticAberration_DestroyInstance(mlChromAbId);
 				Effect_RadialBlur_FadeOut(mlRadBlurId, 0.0f);
-
 			}
-			else if (Sequence_DoStepAndWait(3.0f))
+			else if (Sequence_DoStepAndWait(1.0f))
 			{
 				cLux_AddDebugMessage("Starting Shed Intro Sequence...");
-				Music_Stop(6.0f, eMusicPrio_SceneAmb);
-				Effect_Fade_In(3.0f);
 				
+				Sound_CreateAtEntity("", "player/foley/default/pose_crouch", "player", 0.1f, false, 1.0f);				
+				Sound_CreateAtEntity("", "player/vocalisations/actions/player_release_med", "player", 0.1f, false, 0.3f);
+			}
+			else if (Sequence_DoStepAndWait(1.0f))
+			{	//player/foley/default/pose_crouch player/foley/default/pose_jump player/foley/default/pose_stand
+				Sound_CreateAtEntity("", "player/foley/default/pose_stand", "player", 0.1f, false, 1.0f);
+			}
+			else if (Sequence_DoStepAndWait(1.25f))
+			{
+				Sound_CreateAtEntity("", "player/foley/default/pose_crouch", "player", 0.1f, false, 1.0f);
+			}
+			else if (Sequence_DoStepAndWait(1.0f))
+			{
+				Sound_CreateAtEntity("", "player/foley/default/pose_crouch", "player", 0.1f, false, 1.0f);
+			}
+			else if (Sequence_DoStepAndWait(1.5f))
+			{
+				Sound_CreateAtEntity("", "player/foley/default/pose_stand", "player", 0.1f, false, 1.0f);
+				Sound_CreateAtEntity("", "player/vocalisations/actions/player_crouch", "player", 0.1f, false, 0.3f);
+			}
+			else if (Sequence_DoStepAndWait(1.0f))
+			{
 				Player_SetActive(true);
+				Effect_Fade_In(3.0f);
 			}
 			Sequence_End();
 		}

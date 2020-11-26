@@ -1,7 +1,7 @@
 <HPLMapTrack_Area ID="90E0301C3CDE4BAFC680DBE72BA0073B8F13F3FB" MajorVersion="1" MinorVersion="1">
     <Section Name="12450711482325857532">
         <Objects>
-            <Area ID="268435456" Name="Intro_Shed" CreStamp="1605011576" ModStamp="1606166537" WorldPos="4.58637 21.6577 29.258" Rotation="0 -1.56721 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 58 268435456" AreaType="PlayerStart">
+            <Area ID="268435456" Name="Intro_Shed" CreStamp="1605011576" ModStamp="1606413558" WorldPos="4.65307 21.658 29.2615" Rotation="0 -1.56721 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 58 268435456" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268435456" Name="Note" Value="" />
                     <Var ObjectId="268435456" Name="Crouching" Value="false" />
@@ -82,11 +82,11 @@
                     <Var ObjectId="268435459" Name="DeactivateOnInteract" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435460" Name="FearThreat_1" CreStamp="1605557182" ModStamp="1605557220" WorldPos="-0.664134 20.6847 26.0655" Rotation="0 -0.584418 0" Scale="0.312326 0.0559521 0.130346" Active="true" Mesh="" UID="16 1073 268435460" AreaType="FearThreat">
+            <Area ID="268435460" Name="FearThreat_1" CreStamp="1605557182" ModStamp="1606411171" WorldPos="-0.75 20.75 26" Rotation="-0 4.65157 -0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 1073 268435460" AreaType="FearThreat">
                 <UserVariables>
                     <Var ObjectId="268435460" Name="Threat_BaseFearRate" Value="0.1" />
-                    <Var ObjectId="268435460" Name="Threat_SurpriseFactor" Value="-1.0" />
-                    <Var ObjectId="268435460" Name="Threat_LookAtFactor" Value="-1.0" />
+                    <Var ObjectId="268435460" Name="Threat_SurpriseFactor" Value="0.1" />
+                    <Var ObjectId="268435460" Name="Threat_LookAtFactor" Value="0.1" />
                     <Var ObjectId="268435460" Name="Threat_ActivationDelay" Value="0.2" />
                     <Var ObjectId="268435460" Name="Threat_ActivationLightLevel" Value="0.1" />
                     <Var ObjectId="268435460" Name="Threat_MaxFearDistance" Value="2.0" />
@@ -210,13 +210,13 @@
                     <Var ObjectId="268435465" Name="ParentAttachBody" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435466" Name="Intro_CaveAnimation_1" CreStamp="1606164851" ModStamp="1606325266" WorldPos="0.311002 1.262 -287.754" Rotation="-0 3.41298 -0" Scale="0.25 0.25 0.5" Active="true" Mesh="" UID="16 3392 268435466" AreaType="CameraAnimation">
+            <Area ID="268435466" Name="Intro_CaveAnimation_1" CreStamp="1606164851" ModStamp="1606416105" WorldPos="0.311002 1.262 -287.754" Rotation="-0 3.41298 -0" Scale="0.25 0.25 0.5" Active="true" Mesh="" UID="16 3392 268435466" AreaType="CameraAnimation">
                 <UserVariables>
                     <Var ObjectId="268435466" Name="Note" Value="" />
                     <Var ObjectId="268435466" Name="MaxYaw" Value="45" />
                     <Var ObjectId="268435466" Name="MaxPitch" Value="45" />
                     <Var ObjectId="268435466" Name="LookSpeedMultiplier" Value="1" />
-                    <Var ObjectId="268435466" Name="ForwardTime" Value="26" />
+                    <Var ObjectId="268435466" Name="ForwardTime" Value="28" />
                     <Var ObjectId="268435466" Name="BackwardTime" Value="1" />
                     <Var ObjectId="268435466" Name="AutoMovement" Value="1" />
                     <Var ObjectId="268435466" Name="LookMoveDistance" Value="0" />
@@ -462,6 +462,24 @@
                 <UserVariables>
                     <Var ObjectId="268438865" Name="Note" Value="" />
                     <Var ObjectId="268438865" Name="Crouching" Value="false" />
+                </UserVariables>
+            </Area>
+            <Area ID="268438871" Name="Fear_Shed" CreStamp="1606387819" ModStamp="1606412573" WorldPos="2.75 22 24.5" Rotation="0 0 0" Scale="7.75 3 3.5" Active="true" Mesh="" UID="16 3324 268438871" AreaType="Fear">
+                <UserVariables>
+                    <Var ObjectId="268438871" Name="Priority" Value="2" />
+                    <Var ObjectId="268438871" Name="Safe" Value="false" />
+                    <Var ObjectId="268438871" Name="NoFear" Value="true" />
+                    <Var ObjectId="268438871" Name="DarknessFear" Value="true" />
+                    <Var ObjectId="268438871" Name="BabyKickRateMultiplier" Value="1" />
+                    <Var ObjectId="268438871" Name="Locked" Value="false" />
+                    <Var ObjectId="268438871" Name="AllowProgressWithToken" Value="true" />
+                    <Var ObjectId="268438871" Name="AllowProgressWithoutToken" Value="false" />
+                    <Var ObjectId="268438871" Name="MaxProgressCount" Value="1" />
+                    <Var ObjectId="268438871" Name="ProgressAmount" Value="1" />
+                    <Var ObjectId="268438871" Name="SafeMusic" Value="fear_system_safe_01" />
+                    <Var ObjectId="268438871" Name="NonAgentRateCap" Value="0.8" />
+                    <Var ObjectId="268438871" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268438871" Name="CC_Funcs" Value="" />
                 </UserVariables>
             </Area>
         </Objects>
