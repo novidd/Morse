@@ -234,7 +234,7 @@ class cScrMap : iScrMap
  
 	//} END MAIN FUNCTIONS
  
-	//////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
 	// ==============
 	// SCENE 1 *INTRO*
 	// ==============
@@ -319,7 +319,7 @@ class cScrMap : iScrMap
 		
 
 		cSequenceStatesData mSeqIntroCave;
-		void Seq_IntroCave(const tString& in asName)
+		void Seq_IntroCave(const tString &in asName)
 		{
 			Sequence_Begin("Seq_IntroCave", mSeqIntroCave);
 			if(Sequence_DoStepAndWait(7.0f))  // Intro start time at 7.0f
@@ -415,7 +415,7 @@ class cScrMap : iScrMap
 		/*Put any functions that are only used in Scene 1, Event B here.*/
 		
 		cSequenceStatesData mSeqIntroTitleCard;
-		void Seq_IntroTitleCard(const tString& in asName)
+		void Seq_IntroTitleCard(const tString &in asName)
 		{
 			Sequence_Begin("Seq_IntroTitleCard", mSeqIntroTitleCard);
 			if(Sequence_DoStepAndWait(2.0f))
@@ -483,7 +483,7 @@ class cScrMap : iScrMap
 	 
 	//} END SCENE 1
  
-	//////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
 	// ==============
 	// SCENE 2 *SHED*
 	// ==============
@@ -509,31 +509,6 @@ class cScrMap : iScrMap
 			cLux_AddDebugMessage("Shed door is locked: " + bLocked);
 			SwingDoor_SetLocked(sDoor, bLocked, true);
 			SwingDoor_SetBlocked(sDoor, bLocked, true);
-		}
-		
-		void OnPlayerInteract_ShedCandle(const tString &in asEntity)
-		{	
-			// The use of a timer is necessary because Lamp_GetLit() returns false at the moment you light a lamp
-			Map_AddTimer(asEntity, 0.33f, "CheckIfCandleLit");
-		}
-	
-		void CheckIfCandleLit(const tString &in asTimer)
-		{
-			bool bIsLit = Lamp_GetLit(asTimer);
-			tString sLamp = "Light_" + Entity_GetVarString(asTimer, "");
-		
-			Light_SetVisible(sLamp, bIsLit);
-		
-			if (bIsLit)
-			{
-				Sound_CreateAtEntity("shed_candle_burn_"+asTimer, "level_entity_shared/fire/wall_torch/wall_torch_burn", asTimer, 0.0f, false, 1.0f/3);
-				return;
-			}
-			else
-			{
-				Sound_Stop("shed_candle_burn_"+asTimer, 0.5f);
-				return;
-			}
 		}
 		
 		//-------------------------------------------------------
