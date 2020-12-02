@@ -63,6 +63,8 @@ class cScrMap : iScrMap
 		PlayerBody_SetActive(true);
 		Player_SetVertigoActive(false);
 		
+		//Player_SetAmbientLight_Outdoors(true);
+		
 		// Put display name entry in english.lang / Levels
 		GetBase().SetDisplayNameEntry("01-00-prologue");
 		
@@ -433,6 +435,11 @@ class cScrMap : iScrMap
 				cLux_AddDebugMessage("Nest Intro Sequence starting...");
 				
 				Player_Teleport("Intro_Nest_Entrance");
+				
+				//Player_SetActive(true);
+				//Entity_SetActive("ghoul_intro_nest", false);
+				//Effect_Fade_In(0.f);
+				
 				CameraAnimation_Begin("Intro_NestCaveAnimation", "", false);
 			}
 			else if (Sequence_DoStepAndWait(0.5f))
