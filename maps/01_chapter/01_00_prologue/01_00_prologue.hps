@@ -263,8 +263,6 @@ class cScrMap : iScrMap
 		 * Makes screen either fade in or out that simultaneously plays a microflash sound effect at player
 		 * 
 		 * @param asEffect, either "In" or "Out". 
-		 * @param abBlinded, If agent should be blind.
-		 * @param afRecovery, Time until recovery (set to < 0 for indefinite).
 		 **/
 		void FadeInOutMicroFlash(const tString &in asEffect)
 		{
@@ -425,39 +423,64 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 
 		/*Put any functions that are only used in Scene 1, Event B here.*/
-
+		
 		cSequenceStatesData mSeqIntroNest;
 		void Seq_IntroNest(const tString &in asName)
 		{
 			Sequence_Begin("Seq_IntroNest", mSeqIntroNest);
-			if(Sequence_DoStepAndWait(1.0f))
+			if(Sequence_DoStepAndWait(0.5f)) // 1.0f
 			{
 				cLux_AddDebugMessage("Nest Intro Sequence starting...");
 				
-				Player_Teleport("Intro_Nest");
+				Player_Teleport("Intro_Nest_Entrance");
 				CameraAnimation_Begin("Intro_NestCaveAnimation", "", false);
 			}
-			else if (Sequence_DoStepAndWait(1.0f))
+			else if (Sequence_DoStepAndWait(0.5f))
+			{
+				Entity_PlayAnimation("ghoul_intro_nest", "crouch_idle_ledge", 0.1f, true, false, "");
+			}
+			else if (Sequence_DoStepAndWait(0.75f)) // 3.75f
 			{
 				FadeInOutMicroFlash("In");
-			}
-			else if (Sequence_DoStepAndWait(2.0f))
-			{
-				FadeInOutMicroFlash("Out");
 			}
 			else if (Sequence_DoStepAndWait(1.5f))
 			{
-				FadeInOutMicroFlash("In");
+				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_stalk_taunt", "ghoul_intro_nest", 0.1f, false, 0.5f);
 			}
-			else if (Sequence_DoStepAndWait(1.75f))
+			else if (Sequence_DoStepAndWait(1.25f))
+			{
+				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_search", "ghoul_intro_nest", 0.1f, false, 0.5f);
+			}
+			else if (Sequence_DoStepAndWait(0.5f))
 			{
 				FadeInOutMicroFlash("Out");
 			}
 			else if (Sequence_DoStepAndWait(1.0f))
 			{
+				Entity_StopAnimation("ghoul_intro_nest");
+				Entity_SetActive("ghoul_intro_nest", false);
+				Sound_CreateAtEntity("", "01_02_caves/scare_events/cave_movement_03", "ghoul_intro_nest", 0.5f, false, 0.5f);
+				Sound_CreateAtEntity("", "01_02_caves/sweeteners/specials/deepcave_entry", "ghoul_intro_nest", 0.5f, false, 0.5f);
+			}
+			else if (Sequence_DoStepAndWait(2.5f))
+			{
 				FadeInOutMicroFlash("In");
 			}
-			//Seq_IntroTitleCard("");
+			else if (Sequence_DoStepAndWait(4.0f))
+			{
+				Sound_CreateAtEntity("", "01_02_caves/sweeteners/near/ghoul_screams", "Sound_Nest_Ghoul_Scream", 0.1f, false, 1.0f);
+			}
+			else if (Sequence_DoStepAndWait(1.0f))
+			{
+				FadeInOutMicroFlash("Out");
+			}
+			else if (Sequence_DoStepAndWait(1.0f))
+			{
+				//Player_Teleport("Intro_Nest_Center");
+				//CameraAnimation_End();
+			}
+			// Seq_IntroTitleCard("");
+			// Anim for ghoul on rock: eat_ground
 			Sequence_End();
 		}
 		//-------------------------------------------------------

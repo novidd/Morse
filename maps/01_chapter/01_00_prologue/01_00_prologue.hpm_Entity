@@ -39631,6 +39631,63 @@
                     <Var ObjectId="268436216" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
+            <Entity ID="268440808" Name="ghoul_intro_nest" CreStamp="1606924544" ModStamp="1606928006" WorldPos="-10.728 0.555349 -314.465" Rotation="-0 3.65737 -0" Scale="1 1 1" FileIndex="104" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 5348 268440808">
+                <UserVariables>
+                    <Var ObjectId="268440808" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268440808" Name="UserVar" Value="" />
+                    <Var ObjectId="268440808" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268440808" Name="EffectsActive" Value="true" />
+                    <Var ObjectId="268440808" Name="AutoDisableWhenOutOfSight" Value="false" />
+                    <Var ObjectId="268440808" Name="AutoDisableWhenOutOfSightMinDist" Value="10" />
+                    <Var ObjectId="268440808" Name="AutoDisableCallback" Value="" />
+                    <Var ObjectId="268440808" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268440808" Name="UpdateWhenInvisible" Value="false" />
+                    <Var ObjectId="268440808" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268440808" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268440808" Name="SensesActive" Value="false" />
+                    <Var ObjectId="268440808" Name="ConnectionStateChangeCallback" Value="" />
+                    <Var ObjectId="268440808" Name="PlayerLookAtCallback" Value="" />
+                    <Var ObjectId="268440808" Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268440808" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
+                    <Var ObjectId="268440808" Name="PlayerLookAtCheckRayIntersection" Value="true" />
+                    <Var ObjectId="268440808" Name="PlayerLookAtMaxDistance" Value="-1" />
+                    <Var ObjectId="268440808" Name="PlayerLookAtCallbackDelay" Value="0" />
+                    <Var ObjectId="268440808" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268440808" Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268440808" Name="PlayerInteractLeaveCallback" Value="" />
+                    <Var ObjectId="268440808" Name="PlayerInteractLeaveCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268440808" Name="RecieveMessageCallback" Value="" />
+                    <Var ObjectId="268440808" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268440808" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268440808" Name="ConnectedEntity" Value="" />
+                    <Var ObjectId="268440808" Name="ConnectedEntityInvertState" Value="false" />
+                    <Var ObjectId="268440808" Name="ConnectedEntityStatesUsed" Value="0" />
+                    <Var ObjectId="268440808" Name="HearingMul" Value="1" />
+                    <Var ObjectId="268440808" Name="SightMul" Value="1" />
+                    <Var ObjectId="268440808" Name="RetreatAreas" Value="" />
+                    <Var ObjectId="268440808" Name="HoleNetwork" Value="" />
+                    <Var ObjectId="268440808" Name="PlayerPath" Value="" />
+                    <Var ObjectId="268440808" Name="HoleConnections" Value="" />
+                    <Var ObjectId="268440808" Name="UseVoice" Value="true" />
+                    <Var ObjectId="268440808" Name="VoiceCharacter" Value="" />
+                    <Var ObjectId="268440808" Name="AlertSubject" Value="" />
+                    <Var ObjectId="268440808" Name="RetreatSubject" Value="" />
+                    <Var ObjectId="268440808" Name="EmergeSubject" Value="" />
+                    <Var ObjectId="268440808" Name="SmellSubject" Value="" />
+                    <Var ObjectId="268440808" Name="EndSearchSubject" Value="" />
+                    <Var ObjectId="268440808" Name="CheckLastKnownPositionSubject" Value="" />
+                    <Var ObjectId="268440808" Name="HitByObjectSubject" Value="" />
+                    <Var ObjectId="268440808" Name="WanderSubject" Value="" />
+                    <Var ObjectId="268440808" Name="WanderMinMaxTime" Value="10 15" />
+                    <Var ObjectId="268440808" Name="SearchSubject" Value="" />
+                    <Var ObjectId="268440808" Name="SearchMinMaxTime" Value="10 15" />
+                    <Var ObjectId="268440808" Name="EatMeatSubject" Value="" />
+                    <Var ObjectId="268440808" Name="EatMeatMinMaxTime" Value="10 15" />
+                    <Var ObjectId="268440808" Name="HeadTracker_TargetEntity" Value="" />
+                    <Var ObjectId="268440808" Name="HeadTracker_Active" Value="true" />
+                    <Var ObjectId="268440808" Name="Listener_Active" Value="true" />
+                </UserVariables>
+            </Entity>
         </Objects>
     </Section>
     <Section Name="9993333931400956225">
