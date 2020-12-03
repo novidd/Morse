@@ -40072,7 +40072,7 @@
                     <Var ObjectId="268441030" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268441033" Name="fetish_light_4" CreStamp="1607021106" ModStamp="1607021394" WorldPos="-3.62085 -22.1178 -290.974" Rotation="-1.31753 -1.20542 1.348" Scale="1 1 1" FileIndex="714" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 5620 268441033">
+            <Entity ID="268441033" Name="fetish_light_4" CreStamp="1607021106" ModStamp="1607024288" WorldPos="-3.62085 -21.976 -290.974" Rotation="-1.44438 -0.781189 1.49594" Scale="1 1 1" FileIndex="714" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 5620 268441033">
                 <UserVariables>
                     <Var ObjectId="268441033" Name="Note" Value="" />
                     <Var ObjectId="268441033" Name="CastShadows" Value="false" />
@@ -40080,7 +40080,7 @@
                     <Var ObjectId="268441033" Name="ColorMul" Value="1 1 1 1" />
                     <Var ObjectId="268441033" Name="ColorBrightness" Value="1" />
                     <Var ObjectId="268441033" Name="IllumColor" Value="0.47843140363693237305 0.69803923368453979492 0.6235294342041015625 1" />
-                    <Var ObjectId="268441033" Name="IllumBrightness" Value="5" />
+                    <Var ObjectId="268441033" Name="IllumBrightness" Value="1" />
                     <Var ObjectId="268441033" Name="IsOccluder" Value="false" />
                     <Var ObjectId="268441033" Name="CollideGroup" Value="" />
                     <Var ObjectId="268441033" Name="RenderLayer" Value="0" />
@@ -40151,6 +40151,20 @@
                     <Var ObjectId="268441035" Name="Threat_BaseFearRateMultiplier" Value="1.0" />
                     <Var ObjectId="268441035" Name="Threat_ActivationCallback" Value="" />
                     <Var ObjectId="268441035" Name="Threat_DeactivationCallback" Value="" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268441046" Name="fetish_light_5" CreStamp="1607023134" ModStamp="1607023326" WorldPos="6.63586 -12.1834 -296.634" Rotation="-1.35756 -0.787015 1.47402" Scale="1 1 1" FileIndex="714" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 5625 268441046">
+                <UserVariables>
+                    <Var ObjectId="268441046" Name="Note" Value="" />
+                    <Var ObjectId="268441046" Name="CastShadows" Value="false" />
+                    <Var ObjectId="268441046" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268441046" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268441046" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268441046" Name="IllumColor" Value="0.47843140363693237305 0.69803923368453979492 0.6235294342041015625 1" />
+                    <Var ObjectId="268441046" Name="IllumBrightness" Value="5" />
+                    <Var ObjectId="268441046" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268441046" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268441046" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
         </Objects>
