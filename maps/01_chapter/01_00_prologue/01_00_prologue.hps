@@ -434,7 +434,8 @@ class cScrMap : iScrMap
 			{
 				cLux_AddDebugMessage("Nest Intro Sequence starting...");
 				
-				Player_Teleport("Intro_Nest_Entrance");
+				//Player_Teleport("Intro_Nest_Entrance");
+				Player_Teleport("Intro_Nest_Path");
 				
 				Player_SetActive(true);
 				Entity_SetActive("ghoul_intro_nest", false);
