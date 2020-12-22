@@ -425,6 +425,7 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 
 		/*Put any functions that are only used in Scene 1, Event B here.*/
+		//sleep_weak_a.fbx, ghoul_radioRoom_beam_waitIdle.fbx
 		
 		cSequenceStatesData mSeqIntroNest;
 		void Seq_IntroNest(const tString &in asName)
@@ -440,6 +441,9 @@ class cScrMap : iScrMap
 				Player_SetActive(true);
 				Entity_SetActive("ghoul_intro_nest", false);
 				Effect_Fade_In(0.f);
+				
+				Entity_SetActive("ghoul_nest_beam", true);
+				Entity_PlayAnimation("ghoul_nest_beam", "ghoul_radioRoom_beam_waitIdle", 0.1f, true, false, "");
 				
 				//CameraAnimation_Begin("Intro_NestCaveAnimation", "", false);
 			}
