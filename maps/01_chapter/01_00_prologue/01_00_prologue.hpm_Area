@@ -560,6 +560,124 @@
                     <Var ObjectId="268435494" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
+            <Area ID="268435495" Name="Liquid_2" CreStamp="1608637733" ModStamp="1608650864" WorldPos="-1.45022 -21.7423 -295.609" Rotation="0 0.785398 0" Scale="13.0599 1 9.17155" Active="true" Mesh="" UID="16 6410 268435495" AreaType="Liquid">
+                <UserVariables>
+                    <Var ObjectId="268435495" Name="Note" Value="" />
+                    <Var ObjectId="268435495" Name="BlocksLineOfSight" Value="false" />
+                    <Var ObjectId="268435495" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268435495" Name="UserVar" Value="" />
+                    <Var ObjectId="268435495" Name="Static" Value="false" />
+                    <Var ObjectId="268435495" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268435495" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268435495" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268435495" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268435495" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268435495" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268435495" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268435495" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="268435495" Name="Density" Value="100" />
+                    <Var ObjectId="268435495" Name="LinearViscosity" Value="1" />
+                    <Var ObjectId="268435495" Name="AngularViscosity" Value="1" />
+                    <Var ObjectId="268435495" Name="PhysicsMaterial" Value="water" />
+                    <Var ObjectId="268435495" Name="PlayerSpeedMul" Value="0.8" />
+                    <Var ObjectId="268435495" Name="BuoyancyOnPlayerOnly" Value="false" />
+                    <Var ObjectId="268435495" Name="HasWaves" Value="true" />
+                    <Var ObjectId="268435495" Name="WaveAmp" Value="0.1" />
+                    <Var ObjectId="268435495" Name="WaveFreq" Value="3" />
+                    <Var ObjectId="268435495" Name="MaxWaveDistance" Value="25" />
+                    <Var ObjectId="268435495" Name="UpperMaterial" Value="waterplane_cistern_reflect.mat" />
+                    <Var ObjectId="268435495" Name="LowerMaterial" Value="waterplane_saltmine_cheap.mat" />
+                    <Var ObjectId="268435495" Name="GridSize" Value="0" />
+                    <Var ObjectId="268435495" Name="TextureTileSize" Value="6" />
+                    <Var ObjectId="268435495" Name="StaticMesh" Value="true" />
+                    <Var ObjectId="268435495" Name="EnvParticlesToClip" Value="" />
+                    <Var ObjectId="268435495" Name="ReflectionColor" Value="1 1 1 1" />
+                    <Var ObjectId="268435495" Name="ReflectionBrightness" Value="5" />
+                    <Var ObjectId="268435495" Name="UseFog" Value="true" />
+                    <Var ObjectId="268435495" Name="FogColor" Value="0.0274509824812412262 0.02352941408753395081 0.01960784383118152618 1" />
+                    <Var ObjectId="268435495" Name="FogStart" Value="0" />
+                    <Var ObjectId="268435495" Name="FogEnd" Value="6" />
+                    <Var ObjectId="268435495" Name="FogFalloffExp" Value="1" />
+                    <Var ObjectId="268435495" Name="FogBrightness" Value="1" />
+                    <Var ObjectId="268435495" Name="FogExponential" Value="true" />
+                    <Var ObjectId="268435495" Name="FogDensity" Value="50" />
+                    <Var ObjectId="268435495" Name="FogHeightBased" Value="false" />
+                    <Var ObjectId="268435495" Name="FogHeightDensity" Value="0.25" />
+                    <Var ObjectId="268435495" Name="FogHeightHorizon" Value="1" />
+                    <Var ObjectId="268435495" Name="FogUnderwater" Value="true" />
+                    <Var ObjectId="268435495" Name="FogSkybox" Value="false" />
+                    <Var ObjectId="268435495" Name="EffectOnExit" Value="true" />
+                    <Var ObjectId="268435495" Name="CameraCollideCallback" Value="" />
+                    <Var ObjectId="268435495" Name="CameraEnterEffectPreset" Value="" />
+                    <Var ObjectId="268435495" Name="CameraExitEffectPreset" Value="" />
+                    <Var ObjectId="268435495" Name="UnderwaterLightColor" Value="0.20000001788139343262 0.20000001788139343262 0.34901961684226989746 1" />
+                </UserVariables>
+            </Area>
+            <Area ID="268435496" Name="Intro_NestAnimation_1" CreStamp="1608646203" ModStamp="1608646291" WorldPos="-6.87131 -13.7196 -310.87" Rotation="-3.14159 2.63293 3.11737" Scale="0.25 0.25 0.5" Active="true" Mesh="" UID="16 6415 268435496" AreaType="CameraAnimation">
+                <UserVariables>
+                    <Var ObjectId="268435496" Name="Note" Value="" />
+                    <Var ObjectId="268435496" Name="MaxYaw" Value="45" />
+                    <Var ObjectId="268435496" Name="MaxPitch" Value="45" />
+                    <Var ObjectId="268435496" Name="LookSpeedMultiplier" Value="1" />
+                    <Var ObjectId="268435496" Name="ForwardTime" Value="30" />
+                    <Var ObjectId="268435496" Name="BackwardTime" Value="1" />
+                    <Var ObjectId="268435496" Name="AutoMovement" Value="1" />
+                    <Var ObjectId="268435496" Name="LookMoveDistance" Value="0" />
+                    <Var ObjectId="268435496" Name="LookMoveMaxAngle" Value="0" />
+                    <Var ObjectId="268435496" Name="InteractiveMovement" Value="false" />
+                    <Var ObjectId="268435496" Name="UseSpeedFading" Value="true" />
+                    <Var ObjectId="268435496" Name="CrouchOnExit" Value="false" />
+                    <Var ObjectId="268435496" Name="InitToCamera" Value="false" />
+                    <Var ObjectId="268435496" Name="UsePlayerEyeline" Value="false" />
+                    <Var ObjectId="268435496" Name="CallbackFunc" Value="" />
+                </UserVariables>
+            </Area>
+            <Area ID="268435497" Name="Intro_NestAnimation_2" CreStamp="1608646244" ModStamp="1608646704" WorldPos="-6.26957 -13.7196 -309.773" Rotation="-3.14159 2.63293 3.11737" Scale="0.25 0.25 0.5" Active="true" Mesh="" UID="16 6430 268435497" AreaType="CameraAnimation">
+                <UserVariables>
+                    <Var ObjectId="268435497" Name="Note" Value="" />
+                    <Var ObjectId="268435497" Name="MaxYaw" Value="45" />
+                    <Var ObjectId="268435497" Name="MaxPitch" Value="45" />
+                    <Var ObjectId="268435497" Name="LookSpeedMultiplier" Value="1" />
+                    <Var ObjectId="268435497" Name="ForwardTime" Value="30" />
+                    <Var ObjectId="268435497" Name="BackwardTime" Value="1" />
+                    <Var ObjectId="268435497" Name="AutoMovement" Value="1" />
+                    <Var ObjectId="268435497" Name="LookMoveDistance" Value="0" />
+                    <Var ObjectId="268435497" Name="LookMoveMaxAngle" Value="0" />
+                    <Var ObjectId="268435497" Name="InteractiveMovement" Value="false" />
+                    <Var ObjectId="268435497" Name="UseSpeedFading" Value="true" />
+                    <Var ObjectId="268435497" Name="CrouchOnExit" Value="false" />
+                    <Var ObjectId="268435497" Name="InitToCamera" Value="false" />
+                    <Var ObjectId="268435497" Name="UsePlayerEyeline" Value="false" />
+                    <Var ObjectId="268435497" Name="CallbackFunc" Value="" />
+                </UserVariables>
+            </Area>
+            <Area ID="268435498" Name="Lake_Soundscape_1" CreStamp="1608648667" ModStamp="1608649323" WorldPos="-0.465462 -19.1868 -297.408" Rotation="0 0.550254 0" Scale="9.44684 7.75662 5.13568" Active="true" Mesh="" UID="16 6394 268435498" AreaType="Soundscape">
+                <UserVariables>
+                    <Var ObjectId="268435498" Name="Note" Value="" />
+                    <Var ObjectId="268435498" Name="UseReverb" Value="true" />
+                    <Var ObjectId="268435498" Name="ReverbType" Value="Off" />
+                    <Var ObjectId="268435498" Name="ReverbPrio" Value="0" />
+                    <Var ObjectId="268435498" Name="ReverbAmount" Value="1" />
+                    <Var ObjectId="268435498" Name="ReverbFadeTime" Value="1" />
+                    <Var ObjectId="268435498" Name="Prio" Value="0" />
+                    <Var ObjectId="268435498" Name="Level" Value="3: SubRoom" />
+                    <Var ObjectId="268435498" Name="BG_Sound" Value="level_amb_shared/amb/background/02_05_cistern/flow_connection" />
+                    <Var ObjectId="268435498" Name="BG_Volume" Value="0.3" />
+                    <Var ObjectId="268435498" Name="BG_FadeInTime" Value="1.5" />
+                    <Var ObjectId="268435498" Name="BG_FadeOutTime" Value="1.5" />
+                    <Var ObjectId="268435498" Name="BG_FadeTransitionSpeed" Value="1" />
+                    <Var ObjectId="268435498" Name="BG_ParentVolMul" Value="1" />
+                    <Var ObjectId="268435498" Name="SoundEnt_InNames" Value="" />
+                    <Var ObjectId="268435498" Name="SoundEnt_OutNames" Value="" />
+                    <Var ObjectId="268435498" Name="SoundEnt_FadeInTime" Value="1" />
+                    <Var ObjectId="268435498" Name="SoundEnt_FadeOutTime" Value="1" />
+                    <Var ObjectId="268435498" Name="SoundPrefixPrio" Value="0" />
+                    <Var ObjectId="268435498" Name="SoundPrefix" Value="[None]" />
+                    <Var ObjectId="268435498" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268435498" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268435498" Name="ParentAttachBody" Value="" />
+                </UserVariables>
+            </Area>
         </Objects>
     </Section>
     <Section Name="9993333931400956225">
