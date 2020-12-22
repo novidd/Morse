@@ -42170,7 +42170,7 @@
                     <Var ObjectId="268441929" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268441930" Name="pine_noSnow_61" CreStamp="1608660654" ModStamp="1608675333" WorldPos="60.8419 19.9862 110.521" Rotation="0 -1.54 0" Scale="2 2 2" FileIndex="744" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 6434 268441930">
+            <Entity ID="268441930" Name="pine_noSnow_61" CreStamp="1608660654" ModStamp="1608675634" WorldPos="60.3475 19.9862 110.778" Rotation="0 -1.54 0" Scale="2 2 2" FileIndex="744" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 6434 268441930">
                 <UserVariables>
                     <Var ObjectId="268441930" Name="Note" Value="" />
                     <Var ObjectId="268441930" Name="CastShadows" Value="true" />
@@ -42394,7 +42394,7 @@
                     <Var ObjectId="268441945" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268441946" Name="pine_noSnow_77" CreStamp="1608662913" ModStamp="1608675248" WorldPos="8.84007 20.6725 53.4263" Rotation="-0 4.42654 -0" Scale="2 2 2" FileIndex="744" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 6515 268441946">
+            <Entity ID="268441946" Name="pine_noSnow_77" CreStamp="1608662913" ModStamp="1608675762" WorldPos="8.32501 20.6725 53.7411" Rotation="-0 4.42654 -0" Scale="2 2 2" FileIndex="744" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 6515 268441946">
                 <UserVariables>
                     <Var ObjectId="268441946" Name="Note" Value="" />
                     <Var ObjectId="268441946" Name="CastShadows" Value="true" />
@@ -42658,6 +42658,76 @@
                     <Var ObjectId="268441964" Name="IsOccluder" Value="false" />
                     <Var ObjectId="268441964" Name="CollideGroup" Value="" />
                     <Var ObjectId="268441964" Name="RenderLayer" Value="0" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268441965" Name="pine_noSnow_96" CreStamp="1608675605" ModStamp="1608675608" WorldPos="70.4348 20.1554 95.6819" Rotation="0 -1.54 0" Scale="2 2 2" FileIndex="744" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1182 268441965">
+                <UserVariables>
+                    <Var ObjectId="268441965" Name="Note" Value="" />
+                    <Var ObjectId="268441965" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268441965" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268441965" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268441965" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268441965" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268441965" Name="IllumBrightness" Value="5" />
+                    <Var ObjectId="268441965" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268441965" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268441965" Name="RenderLayer" Value="0" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268441966" Name="pine_noSnow_97" CreStamp="1608675610" ModStamp="1608675613" WorldPos="66.9442 20.1554 95.3288" Rotation="0 -1.54 0" Scale="2 2 2" FileIndex="744" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1169 268441966">
+                <UserVariables>
+                    <Var ObjectId="268441966" Name="Note" Value="" />
+                    <Var ObjectId="268441966" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268441966" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268441966" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268441966" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268441966" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268441966" Name="IllumBrightness" Value="5" />
+                    <Var ObjectId="268441966" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268441966" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268441966" Name="RenderLayer" Value="0" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268441967" Name="pine_noSnow_98" CreStamp="1608675614" ModStamp="1608675617" WorldPos="67.1016 20.1554 102.958" Rotation="0 -1.54 0" Scale="2 2 2" FileIndex="744" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1180 268441967">
+                <UserVariables>
+                    <Var ObjectId="268441967" Name="Note" Value="" />
+                    <Var ObjectId="268441967" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268441967" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268441967" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268441967" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268441967" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268441967" Name="IllumBrightness" Value="5" />
+                    <Var ObjectId="268441967" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268441967" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268441967" Name="RenderLayer" Value="0" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268441968" Name="pine_noSnow_99" CreStamp="1608675618" ModStamp="1608675619" WorldPos="67.1016 20.1554 108.372" Rotation="0 -1.54 0" Scale="2 2 2" FileIndex="744" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1168 268441968">
+                <UserVariables>
+                    <Var ObjectId="268441968" Name="Note" Value="" />
+                    <Var ObjectId="268441968" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268441968" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268441968" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268441968" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268441968" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268441968" Name="IllumBrightness" Value="5" />
+                    <Var ObjectId="268441968" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268441968" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268441968" Name="RenderLayer" Value="0" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268441969" Name="pine_noSnow_100" CreStamp="1608675622" ModStamp="1608675624" WorldPos="65.4271 20.1554 105.939" Rotation="0 -1.54 0" Scale="2 2 2" FileIndex="744" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1179 268441969">
+                <UserVariables>
+                    <Var ObjectId="268441969" Name="Note" Value="" />
+                    <Var ObjectId="268441969" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268441969" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268441969" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268441969" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268441969" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268441969" Name="IllumBrightness" Value="5" />
+                    <Var ObjectId="268441969" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268441969" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268441969" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
         </Objects>
