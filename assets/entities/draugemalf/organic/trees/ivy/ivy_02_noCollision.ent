@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entity>
+  <ModelData>
+    <Entities />
+    <Mesh Filename="static_objects/organic/ivy/ivy_02.DAE">
+      <SubMesh ID="0" Name="foliage_Ivy01__2_" CreStamp="0" ModStamp="0" WorldPos="0.162445 -0.006955 0.041572" Rotation="-1.5708 -0 0" Scale="1 1 1" TriCount="88" Material="" />
+      <SubMesh ID="1" Name="foliage_Ivy01__2_001" CreStamp="0" ModStamp="0" WorldPos="0.162445 -0.006955 0.041572" Rotation="-1.5708 -0 0" Scale="1 1 1" TriCount="88" Material="" />
+    </Mesh>
+    <Bones />
+    <Shapes />
+    <Bodies />
+    <Joints />
+    <Animations />
+    <ProcAnimations />
+  </ModelData>
+  <UserDefinedVariables EntityType="StaticProp">
+    <Var Name="ShowMesh" Value="true" />
+  </UserDefinedVariables>
+</Entity>

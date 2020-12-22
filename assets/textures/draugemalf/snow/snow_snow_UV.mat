@@ -1,0 +1,28 @@
+<Material>
+    <Main BlendMode="Add" DepthTest="true" ForceFullScaleTextures="true" PhysicsMaterial="Bed Springy" Type="projectedUV" UVSubDivs="1 1" UseAlpha="false" />
+    <TextureUnits>
+        <DiffuseSide AnimFrameTime="0" AnimMode="None" AnimStartTime="0" Compress="true" File="mods/SOMAWinterModdingEvent/assets/textures/draugemalf/snow/snow_default.dds" MipMaps="false" Type="2D" Wrap="Repeat" />
+        <DiffuseTop AnimFrameTime="0" AnimMode="None" AnimStartTime="0" Compress="true" File="mods/SOMAWinterModdingEvent/assets/textures/draugemalf/snow/snow_default.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+        <DiffuseBottom AnimFrameTime="0" AnimMode="None" AnimStartTime="0" Compress="true" File="mods/SOMAWinterModdingEvent/assets/textures/draugemalf/snow/snow_default.dds" MipMaps="false" Type="2D" Wrap="Repeat" />
+        <NMapSide AnimFrameTime="0" AnimMode="None" AnimStartTime="0" Compress="true" File="mods/SOMAWinterModdingEvent/assets/textures/draugemalf/snow/snow_default_nrm.dds" MipMaps="false" Type="2D" Wrap="Repeat" />
+        <NMapTop AnimFrameTime="0" AnimMode="None" AnimStartTime="0" Compress="true" File="mods/SOMAWinterModdingEvent/assets/textures/draugemalf/snow/snow_default_nrm.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+        <NMapBottom AnimFrameTime="0" AnimMode="None" AnimStartTime="0" Compress="true" File="mods/SOMAWinterModdingEvent/assets/textures/draugemalf/snow/snow_default_nrm.dds" MipMaps="false" Type="2D" Wrap="Repeat" />
+        <SpecularSide AnimFrameTime="0" AnimMode="None" AnimStartTime="0" Compress="true" File="mods/SOMAWinterModdingEvent/assets/textures/draugemalf/snow/snow_default_spec.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+        <SpecularTop AnimFrameTime="0" AnimMode="None" AnimStartTime="0" Compress="false" File="mods/SOMAWinterModdingEvent/assets/textures/draugemalf/snow/snow_default_spec.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+        <SpecularBottom AnimFrameTime="0" AnimMode="None" AnimStartTime="0" Compress="false" File="mods/SOMAWinterModdingEvent/assets/textures/draugemalf/snow/snow_default_spec.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+    </TextureUnits>
+    <SpecificVariables>
+        <Var Name="TextureUVScaleSide" Value="6" />
+        <Var Name="TextureUVScaleTop" Value="4" />
+        <Var Name="TextureUVScaleBottom" Value="6" />
+        <Var Name="TextureUVOffset" Value="0.000000   0.000000   0.000000" />
+        <Var Name="PlanarUVRotation" Value="0.000000   0.000000   0.000000" />
+        <Var Name="BlendSmoothness" Value="1" />
+        <Var Name="NormalMapBlendImpact" Value="0.6" />
+        <Var Name="DynamicObjectSupport" Value="false" />
+        <Var Name="DetailTextureActive" Value="false" />
+        <Var Name="DetailTextureUVScale" Value="1" />
+        <Var Name="DetailBlendWeight" Value="0.5" />
+        <Var Name="DetailBlendMode" Value="Alpha" />
+    </SpecificVariables>
+</Material>

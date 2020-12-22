@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Material>
+  <Main BlendMode="Alpha" DepthTest="true" ForceFullScaleTextures="false" PhysicsMaterial="Default Soft" Type="decal" UVSubDivs="1 1" UseAlpha="false" />
+  <TextureUnits>
+    <Diffuse AnimFrameTime="1" AnimMode="None" AnimStartTime="0" Compress="false" File="textures/draugemalf/decals/snow_cover.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+    <NMap AnimFrameTime="1" AnimMode="None" AnimStartTime="0" Compress="false" File="textures/draugemalf/decals/snow_cover_nrm.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+    <Specular AnimFrameTime="1" AnimMode="None" AnimStartTime="0" Compress="false" File="textures/draugemalf/snow/snow_grassy_spec.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+  </TextureUnits>
+  <SpecificVariables>
+    <Var Name="HeightMapScale" Value="0.05" />
+    <Var Name="HeightMapBias" Value="0" />
+    <Var Name="FrenselBias" Value="0.2" />
+    <Var Name="FrenselPow" Value="8" />
+    <Var Name="DetailUvMul" Value="4 4" />
+    <Var Name="DetailFadeStart" Value="5" />
+    <Var Name="DetailFadeEnd" Value="10" />
+    <Var Name="DetailWeight" Value="1" />
+  </SpecificVariables>
+</Material>

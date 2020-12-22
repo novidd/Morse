@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Material>
+  <Main BlendMode="Add" DepthTest="true" ForceFullScaleTextures="true" PhysicsMaterial="Bed Springy" Type="projectedUV" UVSubDivs="1 1" UseAlpha="false" />
+  <TextureUnits>
+    <DiffuseSide AnimFrameTime="1" AnimMode="None" AnimStartTime="0" Compress="false" File="textures/draugemalf/snow/ice_rock_UV.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+    <DiffuseTop AnimFrameTime="1" AnimMode="None" AnimStartTime="0" Compress="false" File="textures/draugemalf/snow/ice_chiseled.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+    <NMapSide AnimFrameTime="1" AnimMode="None" AnimStartTime="0" Compress="false" File="textures/draugemalf/snow/ice_glacier_nrm.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+    <NMapTop AnimFrameTime="1" AnimMode="None" AnimStartTime="0" Compress="false" File="textures/draugemalf/snow/ice_chiseled_nrm.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+    <NMapBottom AnimFrameTime="1" AnimMode="None" AnimStartTime="0" Compress="false" File="textures/draugemalf/snow/ice_glacier_nrm.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+    <SpecularSide AnimFrameTime="1" AnimMode="None" AnimStartTime="0" Compress="false" File="textures/draugemalf/snow/ice_glacier_spec.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+    <SpecularTop AnimFrameTime="1" AnimMode="None" AnimStartTime="0" Compress="false" File="textures/draugemalf/snow/ice_chiseled_spec.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+    <SpecularBottom AnimFrameTime="1" AnimMode="None" AnimStartTime="0" Compress="false" File="textures/draugemalf/snow/ice_glacier_nrm.dds" MipMaps="true" Type="2D" Wrap="Repeat" />
+  </TextureUnits>
+  <SpecificVariables>
+    <Var Name="TextureUVScaleSide" Value="6" />
+    <Var Name="TextureUVScaleTop" Value="4" />
+    <Var Name="TextureUVScaleBottom" Value="4" />
+    <Var Name="TextureUVOffset" Value="0 0 0" />
+    <Var Name="PlanarUVRotation" Value="0 0 0" />
+    <Var Name="BlendSmoothness" Value="0.5" />
+    <Var Name="NormalMapBlendImpact" Value="0" />
+    <Var Name="DynamicObjectSupport" Value="false" />
+    <Var Name="DetailTextureActive" Value="false" />
+    <Var Name="DetailTextureUVScale" Value="0.3" />
+    <Var Name="DetailBlendWeight" Value="0.5" />
+    <Var Name="DetailBlendMode" Value="Alpha" />
+  </SpecificVariables>
+</Material>

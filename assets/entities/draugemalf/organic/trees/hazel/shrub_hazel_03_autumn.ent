@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entity>
+  <ModelData>
+    <Entities />
+    <Mesh Filename="entities/organic/shrubs/shrub_hazel/shrub_hazel_03_autumn.DAE">
+      <SubMesh ID="0" Name="shrub_hazel03_CommonHazelBark" CreStamp="0" ModStamp="0" WorldPos="0.263274 0.481623 0.07585" Rotation="-1.5708 -0 0" Scale="1 1 1" TriCount="445" Material="" />
+      <SubMesh ID="2" Name="shrub_hazel03_CommonHazelLeaves_1" CreStamp="0" ModStamp="0" WorldPos="0.26848 0.696177 0.036176" Rotation="-1.5708 -0 0" Scale="1 1 1" TriCount="152" Material="" />
+      <SubMesh ID="3" Name="shrub_hazel03_CommonHazelLeaves_002" CreStamp="0" ModStamp="0" WorldPos="0.26848 0.696177 0.036176" Rotation="-1.5708 -0 0" Scale="1 1 1" TriCount="152" Material="" />
+    </Mesh>
+    <Bones />
+    <Shapes>
+      <Shape ID="5" Name="ShapeBox_1" CreStamp="1426604840" ModStamp="1426605073" WorldPos="0.0330714 0.217812 -0.0141113" Rotation="0 -0 -0.159204" Scale="0.0259647 0.435357 0.0272524" RelativeTranslation="-0.048666 -0.169161 0.0195859" RelativeRotation="0 -0 -0.159204" RelativeScale="1 1 1" ShapeType="Box" />
+      <Shape ID="6" Name="ShapeBox_2" CreStamp="1426604991" ModStamp="1426605101" WorldPos="0.130403 0.556133 -0.00567392" Rotation="0 -0 -0.374124" Scale="0.0259647 0.329257 0.0272524" RelativeTranslation="0.048666 0.169161 0.0280233" RelativeRotation="0 -0 -0.374124" RelativeScale="1 1 1" ShapeType="Box" />
+      <Shape ID="8" Name="ShapeBox_3" CreStamp="1426605114" ModStamp="1426605134" WorldPos="0.117266 0.522671 -0.0617204" Rotation="-0.326557 -0 -0.374124" Scale="0.0259647 0.282503 0.0272524" RelativeTranslation="0.0355285 0.135699 -0.0280233" RelativeRotation="-0.326557 -0 -0.374124" RelativeScale="1 1 1" ShapeType="Box" />
+    </Shapes>
+    <Bodies>
+      <Body ID="9" Name="Body_1" CreStamp="0" ModStamp="1426605204" WorldPos="0.0817374 0.386972 -0.0336972" Rotation="0 0 0" Scale="1 1 1" Material="" Mass="0" AngularDamping="0.1" LinearDamping="0.1" MaxAngularSpeed="20" MaxLinearSpeed="20" BuoyancyDensityMul="1" BlocksSound="false" ContinuousCollision="true" CanAttachCharacter="false" PushedByCharacterGravity="false" CollideCharacter="true" CollideNonCharacter="true" Volatile="false" UseSurfaceEffects="true" HasGravity="true" BlocksLight="true">
+        <Children>
+          <Child ID="0" />
+          <Child ID="2" />
+          <Child ID="3" />
+        </Children>
+        <Shape ID="8" />
+        <Shape ID="6" />
+        <Shape ID="5" />
+      </Body>
+    </Bodies>
+    <Joints />
+    <Animations />
+    <ProcAnimations />
+  </ModelData>
+  <UserDefinedVariables EntityType="StaticProp">
+    <Var Name="ShowMesh" Value="true" />
+  </UserDefinedVariables>
+</Entity>

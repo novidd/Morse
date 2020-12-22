@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entity>
+  <ModelData>
+    <Entities />
+    <Mesh Filename="entities/organic/shrubs/shrub_hazel/shrub_hazel_01_autumn.DAE">
+      <SubMesh ID="0" Name="shrub_hazel01_CommonHazelBark" CreStamp="0" ModStamp="0" WorldPos="-0.053345 0.012221 -0.026493" Rotation="-1.5708 -0 0" Scale="1 1 1" TriCount="10096" Material="" />
+      <SubMesh ID="1" Name="Object169" CreStamp="0" ModStamp="0" WorldPos="-0.080798 1.03192 -0.813098" Rotation="-1.5708 -8.72664e-008 -3.31613e-007" Scale="1 1 1" TriCount="4464" Material="" />
+    </Mesh>
+    <Bones />
+    <Shapes />
+    <Bodies />
+    <Joints />
+    <Animations />
+    <ProcAnimations />
+  </ModelData>
+  <UserDefinedVariables EntityType="StaticProp">
+    <Var Name="ShowMesh" Value="true" />
+  </UserDefinedVariables>
+</Entity>

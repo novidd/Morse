@@ -1,0 +1,23 @@
+<HPLMapTrack_Entity ID="6C7FD44B812E8F0593A90B5F474B042CF15F1489" MajorVersion="1" MinorVersion="1">
+    <Section Name="12450711482325857532">
+        <FileIndex_Entities NumOfFiles="1">
+            <File Id="0" Path="mods/Morse/assets/entities/draugemalf/snowy/trees/pine_noSnow.ent" />
+        </FileIndex_Entities>
+        <Objects>
+            <Entity ID="268435464" Name="pine_noSnow_1" CreStamp="1608656649" ModStamp="1608656663" WorldPos="-0.25 5.5 -4" Rotation="0 0 0" Scale="1 1 1" FileIndex="0" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 30 268435464">
+                <UserVariables>
+                    <Var ObjectId="268435464" Name="Note" Value="" />
+                    <Var ObjectId="268435464" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268435464" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268435464" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268435464" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268435464" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268435464" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268435464" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268435464" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268435464" Name="RenderLayer" Value="0" />
+                </UserVariables>
+            </Entity>
+        </Objects>
+    </Section>
+</HPLMapTrack_Entity>

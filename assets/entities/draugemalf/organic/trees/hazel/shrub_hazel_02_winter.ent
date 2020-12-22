@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entity>
+  <ModelData>
+    <Entities />
+    <Mesh Filename="entities/organic/shrubs/shrub_hazel/shrub_hazel_02_winter.DAE">
+      <SubMesh ID="0" Name="shrub_hazel02_CommonHazelBark" CreStamp="0" ModStamp="0" WorldPos="0 0 0" Rotation="-1.5708 -0 0" Scale="1 1 1" TriCount="440" Material="" />
+      <SubMesh ID="2" Name="shrub_hazel02_CommonHazelLeaves_1" CreStamp="0" ModStamp="0" WorldPos="0 0 0" Rotation="-1.5708 -0 0" Scale="1 1 1" TriCount="272" Material="" />
+    </Mesh>
+    <Bones />
+    <Shapes>
+      <Shape ID="3" Name="ShapeBox_1" CreStamp="1424876647" ModStamp="1424876686" WorldPos="0.157673 0.128582 0.13493" Rotation="0.0319232 -0 -0.0534286" Scale="0.0674253 1.40938 0.057715" RelativeTranslation="0 0 0" RelativeRotation="0.0319232 -0 -0.0534286" RelativeScale="1 1 1" ShapeType="Box" />
+    </Shapes>
+    <Bodies>
+      <Body ID="4" Name="Body_1" CreStamp="0" ModStamp="1424876700" WorldPos="0.157673 0.128582 0.13493" Rotation="0 0 0" Scale="1 1 1" Material="Wood Brittle" Mass="0" AngularDamping="0.1" LinearDamping="0.1" MaxAngularSpeed="20" MaxLinearSpeed="20" BuoyancyDensityMul="1" BlocksSound="false" ContinuousCollision="true" CanAttachCharacter="false" PushedByCharacterGravity="false" CollideCharacter="true" CollideNonCharacter="true" Volatile="false" UseSurfaceEffects="true" HasGravity="true" BlocksLight="true">
+        <Children>
+          <Child ID="0" />
+          <Child ID="2" />
+        </Children>
+        <Shape ID="3" />
+      </Body>
+    </Bodies>
+    <Joints />
+    <Animations />
+    <ProcAnimations />
+  </ModelData>
+  <UserDefinedVariables EntityType="StaticProp">
+    <Var Name="ShowMesh" Value="true" />
+  </UserDefinedVariables>
+</Entity>
