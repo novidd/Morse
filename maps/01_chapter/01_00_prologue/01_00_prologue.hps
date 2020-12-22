@@ -20,6 +20,9 @@
 #include "custom/helpers/helper_modules_custom.hps"
 #include "custom/helpers/helper_props_custom.hps"
 
+// Morse helpers
+#include "morse_scripts/morse_helpers/base_helper.hps"
+
 //--------------------------------------------------
  
 /*Place any global values here. These must be const variables as they will not be saved*/
@@ -122,7 +125,6 @@ class cScrMap : iScrMap
 				Entity_SetActive("ShedDoor_Lock_2", false);
 			}
 		}
-
 		 // Initiate the intro
 		 if (mbStartIntro) { Seq_IntroCave(""); }
 	}
@@ -198,8 +200,9 @@ class cScrMap : iScrMap
 	{
 		if(abPressed==false) return;
 		
-		if(alAction == eAction_Test1)
+		if(alAction == eAction_ScrollUp)
 		{
+
 		}
 	}
 
