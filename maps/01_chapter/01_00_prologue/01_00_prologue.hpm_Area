@@ -123,13 +123,13 @@
                     <Var ObjectId="268435461" Name="ParentAttachBody" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435462" Name="Outdoor_Soundscape" CreStamp="1605726214" ModStamp="1605874061" WorldPos="35.25 61.5 78.5" Rotation="0 0 0" Scale="376.5 131.25 343" Active="true" Mesh="" UID="16 1304 268435462" AreaType="Soundscape">
+            <Area ID="268435462" Name="Outdoor_Soundscape" CreStamp="1605726214" ModStamp="1608763189" WorldPos="35.25 61.5 78.5" Rotation="0 0 0" Scale="376.5 131.25 343" Active="true" Mesh="" UID="16 1304 268435462" AreaType="Soundscape">
                 <UserVariables>
                     <Var ObjectId="268435462" Name="Note" Value="" />
                     <Var ObjectId="268435462" Name="UseReverb" Value="true" />
                     <Var ObjectId="268435462" Name="ReverbType" Value="Forest" />
                     <Var ObjectId="268435462" Name="ReverbPrio" Value="100" />
-                    <Var ObjectId="268435462" Name="ReverbAmount" Value="1" />
+                    <Var ObjectId="268435462" Name="ReverbAmount" Value="0.75" />
                     <Var ObjectId="268435462" Name="ReverbFadeTime" Value="1" />
                     <Var ObjectId="268435462" Name="Prio" Value="1" />
                     <Var ObjectId="268435462" Name="Level" Value="0: Global" />
