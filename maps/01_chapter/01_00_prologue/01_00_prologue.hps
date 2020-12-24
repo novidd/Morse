@@ -75,7 +75,7 @@ class cScrMap : iScrMap
 		Sound_CreateAtEntity("", "level_entity_shared/radio/radio_static", "radio_transmitter_1", 0.1f, false, 1.0f, 5.0f, 10.0f);
 		
 		/* TODO:
-		 * Add wind soundscape for outdoor environments
+		 * Add louder wind soundscape at the camp ledge
 		 * Add grass undergrowth in the forest trail
 		 * Add stones/debris around the forest trail
 		 * Add an old broken makeshift fence that follows the forest trail
