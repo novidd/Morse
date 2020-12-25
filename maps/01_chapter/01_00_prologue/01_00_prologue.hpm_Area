@@ -96,7 +96,7 @@
                     <Var ObjectId="268435460" Name="AdditionalActivationTriggers" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435461" Name="Lake_Soundscape" CreStamp="1605725446" ModStamp="1605731383" WorldPos="-13.75 21.25 15.5" Rotation="0 0 0" Scale="100.25 48.8605 99.75" Active="true" Mesh="" UID="16 1355 268435461" AreaType="Soundscape">
+            <Area ID="268435461" Name="Lake_Soundscape" CreStamp="1605725446" ModStamp="1605731383" WorldPos="-13.75 21.25 15.5" Rotation="0 -0 0" Scale="100.25 48.8605 99.75" Active="true" Mesh="" UID="16 1355 268435461" AreaType="Soundscape">
                 <UserVariables>
                     <Var ObjectId="268435461" Name="Note" Value="" />
                     <Var ObjectId="268435461" Name="UseReverb" Value="true" />
