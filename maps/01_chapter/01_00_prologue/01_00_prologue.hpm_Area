@@ -678,6 +678,21 @@
                     <Var ObjectId="268435498" Name="ParentAttachBody" Value="" />
                 </UserVariables>
             </Area>
+            <Area ID="268445032" Name="Ladder_1" CreStamp="1609024787" ModStamp="1609024990" WorldPos="-0.25 22.2336 31.093" Rotation="0 0 0" Scale="0.5 2.82741 0.5" Active="true" Mesh="" UID="16 2940 268445032" AreaType="Ladder">
+                <UserVariables>
+                    <Var ObjectId="268445032" Name="Note" Value="" />
+                    <Var ObjectId="268445032" Name="Material" Value="wood" />
+                    <Var ObjectId="268445032" Name="Exit_Top" Value="" />
+                    <Var ObjectId="268445032" Name="Exit_TopCrouching" Value="False" />
+                    <Var ObjectId="268445032" Name="Exit_Bottom" Value="" />
+                    <Var ObjectId="268445032" Name="Exit_BottomCrouching" Value="False" />
+                    <Var ObjectId="268445032" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268445032" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268445032" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268445032" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268445032" Name="ExitCallback" Value="" />
+                </UserVariables>
+            </Area>
         </Objects>
     </Section>
     <Section Name="9993333931400956225">
