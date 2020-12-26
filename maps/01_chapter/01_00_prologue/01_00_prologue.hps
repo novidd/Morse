@@ -63,15 +63,14 @@ class cScrMap : iScrMap
 	// Set up map environment
 	void Setup()
 	{
+		// Player settings
 		PlayerBody_SetActive(true);
 		Player_SetVertigoActive(false);
-		
-		//Player_SetAmbientLight_Outdoors(true);
 		
 		// Put display name entry in english.lang / Levels
 		GetBase().SetDisplayNameEntry("01-00-prologue");
 		
-		// Set up color grading etc.
+		// Start radio transmission sounds
 		Sound_CreateAtEntity("", "level_entity_shared/radio/radio_static", "radio_transmitter_1", 0.1f, false, 1.0f, 5.0f, 10.0f);
 		
 		/* TODO:
@@ -154,6 +153,7 @@ class cScrMap : iScrMap
 	// Run when leaving map
 	void OnLeave()
 	{
+		
 	}
 
 	//-------------------------------------------------------
@@ -162,7 +162,7 @@ class cScrMap : iScrMap
 	// Runs on every frame
 	void OnUpdate()
 	{
-
+		
 	}
 
 	//-------------------------------------------------------
@@ -171,6 +171,7 @@ class cScrMap : iScrMap
 	// The player has died.
 	void OnPlayerKilled(int alRecentDeaths, const tString&in asSource)
 	{
+		
 	}
 	
 	//-------------------------------------------------------
@@ -211,7 +212,7 @@ class cScrMap : iScrMap
 		
 		if(alAction == eAction_ScrollUp)
 		{
-			
+			cLux_AddDebugMessage("DEBUG: On scroll up...");
 		}
 	}
 
