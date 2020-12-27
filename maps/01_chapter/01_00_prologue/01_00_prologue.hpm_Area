@@ -678,7 +678,7 @@
                     <Var ObjectId="268435498" Name="ParentAttachBody" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435499" Name="Ladder_Shed" CreStamp="1609024787" ModStamp="1609082889" WorldPos="-0.25 22.1478 31.093" Rotation="0 -0 0" Scale="0.5 2.64697 0.5" Active="true" Mesh="" UID="16 2940 268435499" AreaType="Ladder">
+            <Area ID="268435499" Name="Ladder_Shed" CreStamp="1609024787" ModStamp="1609111029" WorldPos="-0.25 22.1478 31.093" Rotation="0 0 0" Scale="0.5 2.66334 0.5" Active="true" Mesh="" UID="16 2940 268435499" AreaType="Ladder">
                 <UserVariables>
                     <Var ObjectId="268435499" Name="Note" Value="" />
                     <Var ObjectId="268435499" Name="Material" Value="wood" />
@@ -693,7 +693,7 @@
                     <Var ObjectId="268435499" Name="ExitCallback" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435500" Name="Ladder_Shed_Exit_Bottom" CreStamp="1609078396" ModStamp="1609080892" WorldPos="-0.25 20.579 31.3456" Rotation="0 -0 0" Scale="1 0.25 0.25" Active="true" Mesh="" UID="16 3252 268435500" AreaType="Trigger">
+            <Area ID="268435500" Name="Ladder_Shed_Exit_Bottom" CreStamp="1609078396" ModStamp="1609080892" WorldPos="-0.25 20.579 31.3456" Rotation="0 0 0" Scale="1 0.25 0.25" Active="true" Mesh="" UID="16 3252 268435500" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435500" Name="Note" Value="" />
                     <Var ObjectId="268435500" Name="BlocksLineOfSight" Value="false" />
@@ -721,7 +721,7 @@
                     <Var ObjectId="268435500" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435501" Name="Ladder_Shed_Exit_Top" CreStamp="1609078504" ModStamp="1609079432" WorldPos="-0.25 23.529 30.845" Rotation="0 -0 0" Scale="1 0.25 0.25" Active="true" Mesh="" UID="16 3219 268435501" AreaType="Trigger">
+            <Area ID="268435501" Name="Ladder_Shed_Exit_Top" CreStamp="1609078504" ModStamp="1609079432" WorldPos="-0.25 23.529 30.845" Rotation="0 0 0" Scale="1 0.25 0.25" Active="true" Mesh="" UID="16 3219 268435501" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435501" Name="Note" Value="" />
                     <Var ObjectId="268435501" Name="BlocksLineOfSight" Value="false" />
@@ -749,7 +749,7 @@
                     <Var ObjectId="268435501" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435502" Name="Ladder_Shed_InteractAux" CreStamp="1609079490" ModStamp="1609080069" WorldPos="-0.25 23.529 31.096" Rotation="0 -0 0" Scale="0.644641 0.25 0.25" Active="true" Mesh="" UID="16 3218 268435502" AreaType="InteractAux">
+            <Area ID="268435502" Name="Ladder_Shed_InteractAux" CreStamp="1609079490" ModStamp="1609080069" WorldPos="-0.25 23.529 31.096" Rotation="0 0 0" Scale="0.644641 0.25 0.25" Active="true" Mesh="" UID="16 3218 268435502" AreaType="InteractAux">
                 <UserVariables>
                     <Var ObjectId="268435502" Name="Note" Value="" />
                     <Var ObjectId="268435502" Name="InteractParent" Value="Ladder_Shed" />
