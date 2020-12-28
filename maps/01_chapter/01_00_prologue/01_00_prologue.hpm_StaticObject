@@ -1,12 +1,12 @@
 <HPLMapTrack_StaticObject ID="90E0301C3CDE4BAFC680DBE72BA0073B8F13F3FB" MajorVersion="1" MinorVersion="1">
     <Section Name="12450711482325857532">
-        <FileIndex_StaticObjects NumOfFiles="202">
-            <File Id="0" Path="mods/Morse/assets/static_objects/outside/grass/grass01.DAE" />
+        <FileIndex_StaticObjects NumOfFiles="228">
+            <File Id="0" Path="mods/Morse/assets/static_objects/morse_outside/grass/grass01.DAE" />
             <File Id="1" Path="static_objects/dream/apartment/ds3_broken_apartment/apartment_window_glass.dae" />
-            <File Id="2" Path="mods/Morse/assets/static_objects/outside/grass/daisies.dae" />
-            <File Id="3" Path="mods/Morse/assets/static_objects/outside/tree/pine.dae" />
-            <File Id="4" Path="mods/Morse/assets/static_objects/outside/tree/pine_lowpoly02.dae" />
-            <File Id="5" Path="mods/Morse/assets/static_objects/outside/tree/pine_lowpoly.dae" />
+            <File Id="2" Path="mods/Morse/assets/static_objects/morse_outside/grass/daisies.dae" />
+            <File Id="3" Path="mods/Morse/assets/static_objects/morse_outside/tree/pine.dae" />
+            <File Id="4" Path="mods/Morse/assets/static_objects/morse_outside/tree/pine_lowpoly02.dae" />
+            <File Id="5" Path="mods/Morse/assets/static_objects/morse_outside/tree/pine_lowpoly.dae" />
             <File Id="6" Path="static_objects/paris_ending/floor/shed_floor.dae" />
             <File Id="7" Path="static_objects/paris_ending/paris_ground/paris_grass_corner_01.dae" />
             <File Id="8" Path="static_objects/paris_ending/paris_ground/paris_grass_middle.dae" />
@@ -26,7 +26,7 @@
             <File Id="22" Path="static_objects/arabic_fort/interior/wall/ab_interior_entrance_benchwork_01.dae" />
             <File Id="23" Path="static_objects/arabic_fort/interior/wall/ab_interior_entrance_pallet_02.dae" />
             <File Id="24" Path="static_objects/arabic_fort/interior/wall/ab_interior_entrance_planks_01.dae" />
-            <File Id="25" Path="mods/Morse/assets/static_objects/outside/moon/moon.DAE" />
+            <File Id="25" Path="mods/Morse/assets/static_objects/morse_outside/moon/moon.DAE" />
             <File Id="26" Path="static_objects/darkworld/organic/roots/dark_world_hanging_moss/dark_world_hanging_moss01.dae" />
             <File Id="27" Path="static_objects/darkworld/organic/roots/dark_world_hanging_moss/dark_world_hanging_moss_arc.dae" />
             <File Id="28" Path="static_objects/darkworld/organic/roots/dark_world_hanging_moss/dark_world_hanging_moss03.dae" />
@@ -203,6 +203,32 @@
             <File Id="199" Path="mods/Morse/assets/static_objects/draugemalf/snowy/rocks_ice/arch_half_ice.dae" />
             <File Id="200" Path="mods/Morse/assets/static_objects/draugemalf/snowy/rocks_snow/lavapillar03_snow.dae" />
             <File Id="201" Path="mods/Morse/assets/static_objects/draugemalf/organic/trees/autumn/beech/tree_beech01_autumn.DAE" />
+            <File Id="202" Path="static_objects/arabic_fort/interior/debris/temple_brick_04.dae" />
+            <File Id="203" Path="static_objects/arabic_fort/interior/wall/ab_interior_captain_spikes_01.dae" />
+            <File Id="204" Path="static_objects/arabic_fort/exterior/fountain/fountain_watergarden.dae" />
+            <File Id="205" Path="static_objects/arabic_fort/interior/ab_interior_block04.dae" />
+            <File Id="206" Path="static_objects/arabic_fort/interior/ab_interior_mesh_tileable_01.dae" />
+            <File Id="207" Path="static_objects/arabic_fort/interior/ab_interior_mesh_tileable_02.dae" />
+            <File Id="208" Path="static_objects/arabic_fort/interior/ab_interior_mesh_frame_02.dae" />
+            <File Id="209" Path="static_objects/arabic_fort/interior/ceiling/ab_interior_ceiling_girder_beam_01.dae" />
+            <File Id="210" Path="static_objects/arabic_fort/interior/ceiling/ab_interior_ceiling_girder_system_01.dae" />
+            <File Id="211" Path="static_objects/arabic_fort/interior/debris/ab_debris_plaster01.dae" />
+            <File Id="212" Path="static_objects/arabic_fort/interior/special/02_04_cannon_rubble.dae" />
+            <File Id="213" Path="static_objects/arabic_fort/interior/special/02_04_cellar_tunnels_wood_board_broken_end.dae" />
+            <File Id="214" Path="static_objects/arabic_fort/interior/special/02_04_cellar_tunnels_wood_board_1.dae" />
+            <File Id="215" Path="static_objects/arabic_fort/interior/special/02_04_saltpeter_powder.dae" />
+            <File Id="216" Path="static_objects/arabic_fort/interior/special/02_04_broken_walls/02_04_wall_hole01.dae" />
+            <File Id="217" Path="static_objects/arabic_fort/interior/special/02_04_water_spouts/water_collection_spout_lip.dae" />
+            <File Id="218" Path="static_objects/arabic_fort/interior/special/02_04_water_spouts/water_collection_spout_long.dae" />
+            <File Id="219" Path="static_objects/arabic_fort/interior/tower/ab_interior_tower_wall02_damaged.dae" />
+            <File Id="220" Path="static_objects/arabic_fort/interior/wall/ab_interior_captain_altar.dae" />
+            <File Id="221" Path="static_objects/arabic_fort/interior/wall/ab_interior_captain_arch_little_double_01.dae" />
+            <File Id="222" Path="static_objects/arabic_fort/interior/wall/ab_interior_captain_column_01.dae" />
+            <File Id="223" Path="static_objects/arabic_fort/interior/wall/ab_interior_captain_gorestuff_01.dae" />
+            <File Id="224" Path="static_objects/arabic_fort/interior/wall/ab_interior_captain_font_02.dae" />
+            <File Id="225" Path="static_objects/arabic_fort/interior/wall/ab_interior_captain_roof_01.dae" />
+            <File Id="226" Path="static_objects/arabic_fort/interior/wall/ab_interior_captain_skirting_01.dae" />
+            <File Id="227" Path="static_objects/arabic_fort/interior/wall/ab_interior_captain_skirting_03.dae" />
         </FileIndex_StaticObjects>
         <Objects>
             <StaticObject ID="268440516" Name="archaeology_scaffolding_scaffolding_part_plank_1" CreStamp="1605212370" ModStamp="1605213754" WorldPos="-0.872367 22.0385 30.433" Rotation="1.5708 3.14159 -1.5708" Scale="1 1 2.06165" FileIndex="31" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 495 268440516" />
@@ -685,6 +711,7 @@
             <StaticObject ID="268440993" Name="archaeology_archaeology_ladder_archaeology_ladder_middle_3" CreStamp="1609024365" ModStamp="1609024656" WorldPos="-0.25 22.0754 31" Rotation="0 0 0" Scale="1 1 1" FileIndex="34" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 2938 268440993" />
             <StaticObject ID="268440994" Name="archaeology_archaeology_ladder_archaeology_ladder_middle_4" CreStamp="1609024371" ModStamp="1609024656" WorldPos="-0.25 22.5754 31" Rotation="0 0 0" Scale="1 1 1" FileIndex="34" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 2934 268440994" />
             <StaticObject ID="268440995" Name="archaeology_archaeology_ladder_archaeology_ladder_middle_5" CreStamp="1609082919" ModStamp="1609082922" WorldPos="-0.25 23 31" Rotation="0 0 0" Scale="1 1 1" FileIndex="34" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 3108 268440995" />
+            <StaticObject ID="268441856" Name="arabic_fort_interior_ceiling_ab_interior_ceiling_girder_beam_01_1" CreStamp="1609171310" ModStamp="1609171346" WorldPos="1.53966 22.7709 30.0052" Rotation="-3.14159 0.00969196 -3.14159" Scale="0.5 0.5 0.5" FileIndex="209" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 6684 268441856" />
         </Objects>
     </Section>
     <Section Name="9993333931400956225">

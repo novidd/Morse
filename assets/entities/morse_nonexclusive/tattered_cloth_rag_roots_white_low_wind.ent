@@ -1,0 +1,23 @@
+<Entity>
+    <ModelData>
+        <Entities />
+        <Mesh Filename="entities/nonexclusive/debris/tattered_cloth_rag/tattered_cloth_rag_roots_white.dae">
+            <SubMesh ID="4" Name="Mesh__2___2_" CreStamp="0" ModStamp="0" WorldPos="0 0 0" Rotation="0 0 0" Scale="1 1 1" TriCount="266" Material="" Static="false" />
+        </Mesh>
+        <Bones />
+        <Shapes>
+            <Shape ID="2" Name="ShapeCylinder_1" CreStamp="1455711202" ModStamp="1455711215" WorldPos="0 0 0" Rotation="0 0 0" Scale="0.111141 0.291115 0" RelativeTranslation="0 0 0" RelativeRotation="0 -0 0" RelativeScale="1 1 1" ShapeType="Cylinder" />
+        </Shapes>
+        <Bodies>
+            <Body ID="3" Name="Body_1" CreStamp="0" ModStamp="1455711311" WorldPos="0 0 0" Rotation="0 0 0" Scale="1 1 1" Material="Default Soft" Mass="0" AngularDamping="0.5" LinearDamping="0.1" MaxAngularSpeed="20" MaxLinearSpeed="20" BuoyancyDensityMul="1" BlocksSound="false" ContinuousCollision="true" CanAttachCharacter="false" PushedByCharacterGravity="false" CollideCharacter="true" CollideNonCharacter="true" Volatile="false" UseSurfaceEffects="true" HasGravity="true" BlocksLight="true">
+                <Shape ID="2" />
+            </Body>
+        </Bodies>
+        <Joints />
+        <Animations />
+        <ProcAnimations />
+    </ModelData>
+    <UserDefinedVariables EntityType="StaticProp">
+        <Var ObjectId="4294967295" Name="ShowMesh" Value="true" />
+    </UserDefinedVariables>
+</Entity>
