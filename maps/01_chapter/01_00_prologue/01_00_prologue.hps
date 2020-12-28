@@ -215,6 +215,7 @@ class cScrMap : iScrMap
 		if(alAction == eAction_ScrollUp)
 		{
 			cLux_AddDebugMessage("DEBUG: On scroll up...");
+			Lantern_SetAmount(10);
 		}
 	}
 
