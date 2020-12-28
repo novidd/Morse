@@ -80,7 +80,7 @@ class cScrMap : iScrMap
 		 * Add grass undergrowth in the forest trail
 		 * Add stones/debris around the forest trail
 		 * Add an old broken makeshift fence that follows the forest trail
-		 * 
+		 * When using the telegraph key play a morse code sound effect/display a text onscreen saying that i doesn't work
 		 * In the loading screens ask the player personal questions (refer to them as "you"): "Why should you care?" 
 		*/
 	}
