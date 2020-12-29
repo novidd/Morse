@@ -72,7 +72,7 @@ class cScrMap : iScrMap
 		Player_SetVertigoActive(false);
 		
 		// Enable stamina system
-		staminaSystem.StaminaSystemSetActive(true);
+		staminaSystem.SetStaminaSystemActive(true);
 		
 		// Put display name entry in english.lang / Levels
 		GetBase().SetDisplayNameEntry("01-00-prologue");
@@ -227,7 +227,7 @@ class cScrMap : iScrMap
 		
 		if(alAction == eAction_ScrollUp)
 		{
-			cLux_AddDebugMessage("DEBUG:");
+			cLux_AddDebugMessage("DEBUG: On scroll up...");
 			Lantern_SetAmount(10);
 		}
 	}

@@ -39,29 +39,15 @@ class cStamina_System
 	
 	//-------------------------------------------------------
 	
-	/**
-	 * Enables/Disables the stamina system, where the player has limited stamina to run, jump (cannot jump at stamina > 15.0),
-	 * crouch (slows down crouching animation at stamina < 50.0). The stamina's value is at a range of 0 - 100.
-	 * 
-	 * @param bool abActive, whether the stamina system should be active or not. 
-	**/
-	void StaminaSystemSetActive(bool abActive)
-	{
-		cLux_AddDebugMessage("STAMINA SYSTEM ACTIVE!");
-		if (abActive)
-		{
-			this.mbStaminaSystemActive = abActive;
-		}
-		else
-		{
-			this.ResetStaminaSystemData();
-		}
-	}
-	
-	//-------------------------------------------------------
-	
 	/* TODO:
-	 * Add getters and setters for each of the variables in the constructor.
+	 * Add a method that disables/enables stamina regain
+	 * Add a method that disables/enables jump stamina cost
+	 * Add a method that disables/enables running stamina cost
+	 * Add a method that disables/enables crouch slow stand up motion
+	 * 
+	 * Add a method that disables/enables staminas effect on ladder climbing speed
+	 * Add a method that disables/enables staminas effect on running speed
+	 * Add a method that disables/enables staminas effect on the ability to jump
 	 */
 	
 	/* 
@@ -80,15 +66,18 @@ class cStamina_System
 	*/
 	
 	/**
-	 * A handler for managing the players stamina, runs at every frame. 
+	 * A handler for managing the players stamina, runs at every frame.
 	 * This must be called inside the Update function within the cScrMap class in the [map].hps file!
+	 * //
+	 * The player has limited stamina to run, jump (cannot jump at stamina > 15.0),
+	 * crouch (slows down crouching animation at stamina < 50.0). The stamina's value is at a range of 0 - 100.
 	**/
 	void StaminaHandler(float afTimeStep)
 	{
 		if (!this.mbStaminaSystemActive) { return; }
 		
 		// Decrement the total stamina if player is running
-		if (Player_GetRunning() && this.mfStaminaTotal > 0.1f)
+		if (Player_GetRunning() && this.mfStaminaTotal >= 0.1f)
 		{
 			this.mfStaminaTotal -= 0.1f;
 		}
@@ -106,7 +95,108 @@ class cStamina_System
 	void ResetStaminaSystemData()
 	{
 		this.mfStaminaTotal = 100.00f;
+		this.mfStaminaMax = 100.0f;
 		this.mbStaminaSystemActive = false;
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Sets the player's stamina to a certain value.
+	 * 
+	 * @param float afX, the value to set the stamina to (Max value: GetMaxStamina(), Min value: 0.0f).
+	**/
+	void SetStamina(float afX)
+	{
+		if (afX > GetMaxStamina() || afX < 0)
+		{
+			Error("The value range for the stamina is 0.0 - " + cString_ToString(GetMaxStamina(), 1.0f) + ", " + cString_ToString(afX, 1.0f) + " is out of range.");
+			return;
+		}
+		else
+		{
+			this.mfStaminaTotal = afX;
+			return;
+		}
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Gets the player's current stamina.
+	 * 
+	 * @returns float, the player's current stamina (Max value: GetMaxStamina(), Min value: 0.0f).
+	**/
+	float GetStamina()
+	{
+		return this.mfStaminaTotal;
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Sets the maximum stamina allowed in the stamina system.
+	 * 
+	 * @param float afX, the maximum stamina (Max value: 1000.0f, Min value: 0.0f).
+	**/
+	void SetMaxStamina(float afX = 100.0f)
+	{
+		if (afX > 1000.0f || afX < 0)
+		{
+			Error("The value range for the maximum stamina is 0.0 - 1000.0, " + cString_ToString(afX, 1.0f) + " is out of range.");
+			return;
+		}
+		else
+		{
+			this.mfStaminaMax = afX;
+			this.mfStaminaTotal = afX;
+			return;
+		}
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Gets the maximum stamina for the stamina system.
+	 * 
+	 * @returns float, the maximum stamina (Max value: 1000.0f, Min value: 0.0f).
+	**/
+	float GetMaxStamina()
+	{
+		return this.mfStaminaMax;
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Enables/Disables the stamina system.
+	 * 
+	 * @param bool abActive, whether the stamina system should be active or not. 
+	**/
+	void SetStaminaSystemActive(bool abActive = true)
+	{
+		if (abActive)
+		{
+			this.mbStaminaSystemActive = abActive;
+			return;
+		}
+		else
+		{
+			this.ResetStaminaSystemData();
+			return;
+		}
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Checks if the stamina system is active.
+	 * 
+	 * @returns bool, checks whether the stamina system is active or not.
+	**/
+	bool GetStaminaSystemActive()
+	{
+		return this.mbStaminaSystemActive;
 	}
 	
 	//-------------------------------------------------------
@@ -128,8 +218,9 @@ class cStamina_System
 		if (cLux_ScriptDebugOn())
 		{
 			array<tString> mvStaminaSystemData = GetStaminaSystemData();
-			ImGui_DoLabelExt("Stamina: "+mvStaminaSystemData[0], GetLabelData(), ImGui_NrmPos(0.14f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
-			ImGui_DoLabelExt("StaminaEnabled: "+mvStaminaSystemData[1], GetLabelData(), ImGui_NrmPos(0.22f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("Stamina: " + mvStaminaSystemData[0], GetLabelData(), ImGui_NrmPos(0.14f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("StaminaEnabled: " + mvStaminaSystemData[1], GetLabelData(), ImGui_NrmPos(0.22f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			return;
 		}
 	}
 	
@@ -142,9 +233,10 @@ class cStamina_System
 	**/
 	array<tString> GetStaminaSystemData()
 	{
-		tString msGuiTextStaminaAmount = cString_ToString(this.mfStaminaTotal, 2.0f);
+		tString msGuiTextStaminaTotal = cString_ToString(this.mfStaminaTotal, 2.0f);
+		tString msGuiTextStaminaMax = cString_ToString(this.mfStaminaTotal, 2.0f);
 		bool mbGuiTextStaminaActive = this.mbStaminaSystemActive;
-		array<tString> mvStaminaSystemData = {msGuiTextStaminaAmount, mbGuiTextStaminaActive};
+		array<tString> mvStaminaSystemData = {msGuiTextStaminaTotal, mbGuiTextStaminaActive};
 		return mvStaminaSystemData;
 	}
 	
