@@ -1,4 +1,5 @@
 #include "helpers/helper_effects.hps"
+#include "helpers/helper_map.hps"
 #include "helpers/helper_audio.hps"
 #include "helpers/helper_imgui.hps"
 #include "helpers/helper_player.hps"
@@ -20,6 +21,7 @@ class cStamina_System
 	// Stamina system data
 	float mfStaminaTotal;
 	float mfStaminaMax;
+	float mfStaminaRegainMul;
 	bool mbStaminaSystemActive;
 
 	
@@ -30,6 +32,7 @@ class cStamina_System
 	{
 		mfStaminaTotal = 100.00f;
 		mfStaminaMax = 100.0f;
+		mfStaminaRegainMul = 0.0f;
 		mbStaminaSystemActive = false;
 	}
 	
@@ -48,12 +51,15 @@ class cStamina_System
 	 * Add a method that disables/enables staminas effect on ladder climbing speed
 	 * Add a method that disables/enables staminas effect on running speed
 	 * Add a method that disables/enables staminas effect on the ability to jump
+	 * 
+	 * Add a method that gets the stamina regain multiplier
 	 */
 	
 	/* 
 	 * Player_GetCanRun()
 	 * Player_SetCanRun()
 	 * Player_GetRunning()
+	 * Player_IsClimbingLadder()
 	 * Player_GetRunSpeedMul()
 	 * Player_SetMoveSpeedMul() / Player_FadeMoveSpeedMulTo()
 	 * Player_SetAllMoveSpeedMuls() / Player_FadeAllMoveSpeedMulsTo()
@@ -74,16 +80,21 @@ class cStamina_System
 	**/
 	void StaminaHandler(float afTimeStep)
 	{
-		if (!this.mbStaminaSystemActive) { return; }
+		if (!mbStaminaSystemActive) { return; }
+		if (mfStaminaRegainMul > 1.0f) { mfStaminaRegainMul = 1.0f; }
 		
 		// Decrement the total stamina if player is running
-		if (Player_GetRunning() && this.mfStaminaTotal >= 0.1f)
+		if (Player_GetRunning() && mfStaminaTotal >= 0.1f)
 		{
-			this.mfStaminaTotal -= 0.1f;
+			mfStaminaRegainMul = 0.0f;
+			mfStaminaTotal -= 0.1f;
+			return;
 		}
-		else if (!Player_GetRunning() && this.mfStaminaTotal < this.mfStaminaMax) // Increment the total stamina if player is not running
-		{
-			this.mfStaminaTotal += 0.05f;
+		else if (!Player_GetRunning() && mfStaminaTotal < mfStaminaMax && mfStaminaRegainMul <= 1.0f) // Increment the total stamina
+		{	
+			mfStaminaRegainMul += 0.005f;
+			mfStaminaTotal += 0.05f*mfStaminaRegainMul;
+			return;
 		}
 	}
 	
@@ -94,9 +105,10 @@ class cStamina_System
 	**/
 	void ResetStaminaSystemData()
 	{
-		this.mfStaminaTotal = 100.00f;
-		this.mfStaminaMax = 100.0f;
-		this.mbStaminaSystemActive = false;
+		mfStaminaTotal = 100.00f;
+		mfStaminaMax = 100.0f;
+		mfStaminaRegainMul = 0.0f;
+		mbStaminaSystemActive = false;
 	}
 	
 	//-------------------------------------------------------
@@ -115,7 +127,7 @@ class cStamina_System
 		}
 		else
 		{
-			this.mfStaminaTotal = afX;
+			mfStaminaTotal = afX;
 			return;
 		}
 	}
@@ -129,7 +141,7 @@ class cStamina_System
 	**/
 	float GetStamina()
 	{
-		return this.mfStaminaTotal;
+		return mfStaminaTotal;
 	}
 	
 	//-------------------------------------------------------
@@ -148,8 +160,8 @@ class cStamina_System
 		}
 		else
 		{
-			this.mfStaminaMax = afX;
-			this.mfStaminaTotal = afX;
+			mfStaminaMax = afX;
+			mfStaminaTotal = afX;
 			return;
 		}
 	}
@@ -163,7 +175,7 @@ class cStamina_System
 	**/
 	float GetMaxStamina()
 	{
-		return this.mfStaminaMax;
+		return mfStaminaMax;
 	}
 	
 	//-------------------------------------------------------
@@ -177,12 +189,12 @@ class cStamina_System
 	{
 		if (abActive)
 		{
-			this.mbStaminaSystemActive = abActive;
+			mbStaminaSystemActive = abActive;
 			return;
 		}
 		else
 		{
-			this.ResetStaminaSystemData();
+			ResetStaminaSystemData();
 			return;
 		}
 	}
@@ -196,7 +208,7 @@ class cStamina_System
 	**/
 	bool GetStaminaSystemActive()
 	{
-		return this.mbStaminaSystemActive;
+		return mbStaminaSystemActive;
 	}
 	
 	//-------------------------------------------------------
@@ -233,9 +245,10 @@ class cStamina_System
 	**/
 	array<tString> GetStaminaSystemData()
 	{
-		tString msGuiTextStaminaTotal = cString_ToString(this.mfStaminaTotal, 2.0f);
-		tString msGuiTextStaminaMax = cString_ToString(this.mfStaminaTotal, 2.0f);
-		bool mbGuiTextStaminaActive = this.mbStaminaSystemActive;
+		tString msGuiTextStaminaTotal = cString_ToString(mfStaminaTotal, 2.0f);
+		tString msGuiTextStaminaMax = cString_ToString(mfStaminaTotal, 2.0f);
+		bool mbGuiTextStaminaActive = mbStaminaSystemActive;
+		
 		array<tString> mvStaminaSystemData = {msGuiTextStaminaTotal, mbGuiTextStaminaActive};
 		return mvStaminaSystemData;
 	}
@@ -251,7 +264,7 @@ class cStamina_System
 	{
 		cImGuiLabelData label;
 		label.mFontAlign = eFontAlign_Center;
-		label.mFont.mvSize = this.mvDebugFontSize;
+		label.mFont.mvSize = mvDebugFontSize;
 		
 		return label;
 	}
