@@ -1,0 +1,170 @@
+#include "helpers/helper_effects.hps"
+#include "helpers/helper_audio.hps"
+#include "helpers/helper_imgui.hps"
+#include "helpers/helper_player.hps"
+
+
+/**
+ * Creates an instance of the stamina system. This must be called outside of the cScrMap class in the [map].hps file!
+ * 
+ * @returns cStamina_System, an instance of the stamina system. 
+**/
+cStamina_System Player_StaminaSystemCreateInstance()
+{
+	cStamina_System staminaSystem;
+	return staminaSystem;
+}
+
+class cStamina_System
+{
+	// Stamina system data
+	float mfStaminaTotal;
+	float mfStaminaMax;
+	bool mbStaminaSystemActive;
+
+	
+	// Debug data
+	cVector2f mvDebugFontSize = cVector2f(16.5f, 16.5f);
+	
+	cStamina_System()
+	{
+		mfStaminaTotal = 100.00f;
+		mfStaminaMax = 100.0f;
+		mbStaminaSystemActive = false;
+	}
+	
+	/////////////////////////////////////////
+	// MAIN FUNCTIONS
+	//{//////////////////////////////////////
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Enables/Disables the stamina system, where the player has limited stamina to run, jump (cannot jump at stamina > 15.0),
+	 * crouch (slows down crouching animation at stamina < 50.0). The stamina's value is at a range of 0 - 100.
+	 * 
+	 * @param bool abActive, whether the stamina system should be active or not. 
+	**/
+	void StaminaSystemSetActive(bool abActive)
+	{
+		cLux_AddDebugMessage("STAMINA SYSTEM ACTIVE!");
+		if (abActive)
+		{
+			this.mbStaminaSystemActive = abActive;
+		}
+		else
+		{
+			this.ResetStaminaSystemData();
+		}
+	}
+	
+	//-------------------------------------------------------
+	
+	/* TODO:
+	 * Add getters and setters for each of the variables in the constructor.
+	 */
+	
+	/* 
+	 * Player_GetCanRun()
+	 * Player_SetCanRun()
+	 * Player_GetRunning()
+	 * Player_GetRunSpeedMul()
+	 * Player_SetMoveSpeedMul() / Player_FadeMoveSpeedMulTo()
+	 * Player_SetAllMoveSpeedMuls() / Player_FadeAllMoveSpeedMulsTo()
+	 * Player_GetRunSpeedMul()
+	 * Player_SetRunSpeedMul() / Player_FadeRunSpeedMulTo()
+	 * Player_SetJumpDisabled() - if stamina < 15.0
+	 * Player_SetSlowStandupMotion()
+	 * Player_SetLadderMoveMul()
+	 * Player_SetCrouchSpeedMul()
+	*/
+	
+	/**
+	 * A handler for managing the players stamina, runs at every frame. 
+	 * This must be called inside the Update function within the cScrMap class in the [map].hps file!
+	**/
+	void StaminaHandler(float afTimeStep)
+	{
+		if (!this.mbStaminaSystemActive) { return; }
+		
+		// Decrement the total stamina if player is running
+		if (Player_GetRunning() && this.mfStaminaTotal > 0.1f)
+		{
+			this.mfStaminaTotal -= 0.1f;
+		}
+		else if (!Player_GetRunning() && this.mfStaminaTotal < this.mfStaminaMax) // Increment the total stamina if player is not running
+		{
+			this.mfStaminaTotal += 0.05f;
+		}
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Resets the data within the current instance of the stamina system.
+	**/
+	void ResetStaminaSystemData()
+	{
+		this.mfStaminaTotal = 100.00f;
+		this.mbStaminaSystemActive = false;
+	}
+	
+	//-------------------------------------------------------
+	
+	//} END MAIN FUNCTIONS
+	
+	/////////////////////////////////////////
+	// DEBUG
+	//{//////////////////////////////////////
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Draws debug info of the stamina system instance, making the debugging process easier.
+	 * Only draws the debug info if cLux_ScriptDebugOn() returns true.
+	**/
+	void DrawDebugInfo()
+	{
+		if (cLux_ScriptDebugOn())
+		{
+			array<tString> mvStaminaSystemData = GetStaminaSystemData();
+			ImGui_DoLabelExt("Stamina: "+mvStaminaSystemData[0], GetLabelData(), ImGui_NrmPos(0.14f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("StaminaEnabled: "+mvStaminaSystemData[1], GetLabelData(), ImGui_NrmPos(0.22f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+		}
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Gets the data of the stamina system. This is used for debugging!
+	 * 
+	 * @returns array<tString>, an array of the stamina system data
+	**/
+	array<tString> GetStaminaSystemData()
+	{
+		tString msGuiTextStaminaAmount = cString_ToString(this.mfStaminaTotal, 2.0f);
+		bool mbGuiTextStaminaActive = this.mbStaminaSystemActive;
+		array<tString> mvStaminaSystemData = {msGuiTextStaminaAmount, mbGuiTextStaminaActive};
+		return mvStaminaSystemData;
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Gets the data of the stamina system. This is used for debugging!
+	 * 
+	 * @returns array<tString>, an array of the stamina system data
+	**/
+	cImGuiLabelData GetLabelData()
+	{
+		cImGuiLabelData label;
+		label.mFontAlign = eFontAlign_Center;
+		label.mFont.mvSize = this.mvDebugFontSize;
+		
+		return label;
+	}
+	
+	//-------------------------------------------------------
+	
+	//} END DEBUG
+}

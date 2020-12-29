@@ -21,12 +21,16 @@
 #include "custom/helpers/helper_props_custom.hps"
 
 // Morse helpers
-//#include "morse_scripts/morse_helpers/base_helper.hps"
+//#include "morse_scripts/morse_helpers/general_helper.hps"
+#include "morse_scripts/morse_helpers/helper_stamina.hps"
 
 //--------------------------------------------------
  
 /*Place any global values here. These must be const variables as they will not be saved*/
 /*This is also the place for enums and classes, but these should be avoided whenever possible*/
+
+// Create instance of the stamina system
+cStamina_System staminaSystem = Player_StaminaSystemCreateInstance();
  
 //--------------------------------------------------
  
@@ -67,6 +71,9 @@ class cScrMap : iScrMap
 		PlayerBody_SetActive(true);
 		Player_SetVertigoActive(false);
 		
+		// Enable stamina system
+		staminaSystem.StaminaSystemSetActive(true);
+		
 		// Put display name entry in english.lang / Levels
 		GetBase().SetDisplayNameEntry("01-00-prologue");
 		
@@ -89,7 +96,6 @@ class cScrMap : iScrMap
 		 * they introduced an inivisible stamina system where you would run slower or climb ladders slower if you ran for too long. 
 		 * I think that would be a pretty cool feature.
 		*/
-		// Player_SetStaminaActive(true);
 	}
 	
 	//-------------------------------------------------------
@@ -117,7 +123,7 @@ class cScrMap : iScrMap
 	{	
 		// Any general setup of script / entities
 		bool mbStartIntro = true;
-
+		
 		/////////////////////////
 		// Debug
 		if(cLux_ScriptDebugOn())
@@ -169,9 +175,9 @@ class cScrMap : iScrMap
 
 	////////////////////////////
 	// Runs on every frame
-	void OnUpdate()
+	void Update(float afTimeStep)
 	{
-		
+		staminaSystem.StaminaHandler(afTimeStep);
 	}
 
 	//-------------------------------------------------------
@@ -221,11 +227,20 @@ class cScrMap : iScrMap
 		
 		if(alAction == eAction_ScrollUp)
 		{
-			cLux_AddDebugMessage("DEBUG: On scroll up...");
+			cLux_AddDebugMessage("DEBUG:");
 			Lantern_SetAmount(10);
 		}
 	}
 
+	//-------------------------------------------------------
+
+	////////////////////////////
+	// Draw gui elements
+	void OnGui(float afTimeStep)
+	{
+		staminaSystem.DrawDebugInfo();
+	}
+	
 	//-------------------------------------------------------
 
 	////////////////////////////
@@ -303,7 +318,7 @@ class cScrMap : iScrMap
 		}
 		//-------------------------------------------------------
 		
-		//} END General	
+		//} END General
 	 
 		/////////////////////////////////////////
 		// Event A *CAVE SEQUENCE*
