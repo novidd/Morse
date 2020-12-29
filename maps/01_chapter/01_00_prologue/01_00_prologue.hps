@@ -83,6 +83,13 @@ class cScrMap : iScrMap
 		 * When using the telegraph key play a morse code sound effect/display a text onscreen saying that i doesn't work
 		 * In the loading screens ask the player personal questions (refer to them as "you"): "Why should you care?" 
 		*/
+		
+		/* Create stamina system in helper file:
+		 * Last one, in the game, halfway through, 
+		 * they introduced an inivisible stamina system where you would run slower or climb ladders slower if you ran for too long. 
+		 * I think that would be a pretty cool feature.
+		*/
+		// Player_SetStaminaActive(true);
 	}
 	
 	//-------------------------------------------------------
