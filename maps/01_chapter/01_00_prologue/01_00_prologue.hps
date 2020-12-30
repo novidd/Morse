@@ -177,7 +177,7 @@ class cScrMap : iScrMap
 	// Runs on every frame
 	void Update(float afTimeStep)
 	{
-		staminaSystem.StaminaHandler(afTimeStep);
+		staminaSystem.StartStaminaSystem(afTimeStep);
 	}
 
 	//-------------------------------------------------------
