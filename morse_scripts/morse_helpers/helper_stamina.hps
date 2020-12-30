@@ -1,9 +1,5 @@
-#include "helpers/helper_effects.hps"
-#include "helpers/helper_map.hps"
-#include "helpers/helper_audio.hps"
 #include "helpers/helper_imgui.hps"
 #include "helpers/helper_player.hps"
-
 
 /**
  * Creates an instance of the stamina system. This must be called outside of the cScrMap class in the [map].hps file!
@@ -19,29 +15,40 @@ cStamina_System Player_StaminaSystemCreateInstance()
 class cStamina_System
 {
 	// Stamina system data
+
+	// Float
 	float mfStaminaTotal;
 	float mfStaminaMax;
 	float mfStaminaRegainMul;
 	float mfStaminaUseMul;
 	float mfStaminaRegainMulCounter;
-	bool mbStaminaAffectJump;
+	
+	// Bool
+	bool mbStaminaRegain;
+	bool mbStaminaDrain;
+	bool mbRunningAffectStamina;
 	bool mbStaminaAffectRunSpeed;
-	bool mbStaminaAffectLadderClimbSpeed;
+	
 	bool mbStaminaSystemActive;
 	
 	// Debug data
-	cVector2f mvDebugFontSize = cVector2f(16.5f, 16.5f);
+	cVector2f mvDebugFontSize = cVector2f(16.0f, 16.0f);
 	
 	cStamina_System()
 	{
+		// Float
 		mfStaminaTotal = 100.00f;
 		mfStaminaMax = 100.0f;
 		mfStaminaRegainMul = 0.25f;
 		mfStaminaUseMul = 1.0f;
 		mfStaminaRegainMulCounter = 0.0f;
-		mbStaminaAffectJump = true;
+		
+		// Bool
+		mbStaminaRegain = true;
+		mbStaminaDrain = true;
+		mbRunningAffectStamina = true;
 		mbStaminaAffectRunSpeed = true;
-		mbStaminaAffectLadderClimbSpeed = true;
+		
 		mbStaminaSystemActive = false;
 	}
 	
@@ -56,48 +63,31 @@ class cStamina_System
 	**/
 	void ResetStaminaSystemData()
 	{
+		// Float
 		mfStaminaTotal = 100.00f;
 		mfStaminaMax = 100.0f;
 		mfStaminaRegainMul = 0.25f;
 		mfStaminaUseMul = 1.0f;
 		mfStaminaRegainMulCounter = 0.0f;
-		mbStaminaAffectJump = true;
+		
+		// Bool
+		mbStaminaRegain = true;
+		mbStaminaDrain = true;
+		mbRunningAffectStamina = true;
 		mbStaminaAffectRunSpeed = true;
-		mbStaminaAffectLadderClimbSpeed = true;
+		
 		mbStaminaSystemActive = false;
+		
 		return;
 	}
 	
 	//-------------------------------------------------------
 	
-	/* TODO:
-	 * Add a method that disables/enables stamina regain
-	 * Add a method that disables/enables running stamina cost
-	 * Add a method that disables/enables crouch slow stand up motion
-	*/
-	
-	/* 
-	 * Player_GetCanRun()
-	 * Player_SetCanRun()
-	 * Player_GetRunning()
-	 * Player_IsClimbingLadder()
-	 * Player_GetRunSpeedMul()
-	 * Player_SetMoveSpeedMul() / Player_FadeMoveSpeedMulTo()
-	 * Player_SetAllMoveSpeedMuls() / Player_FadeAllMoveSpeedMulsTo()
-	 * Player_GetRunSpeedMul()
-	 * Player_SetRunSpeedMul() / Player_FadeRunSpeedMulTo()
-	 * Player_SetJumpDisabled() - if stamina < 15.0
-	 * Player_SetSlowStandupMotion()
-	 * Player_SetLadderMoveMul()
-	 * Player_SetCrouchSpeedMul()
-	*/
-	
 	/**
 	 * Runs the handlers for managing the players stamina, runs at every frame.
 	 * This must be called inside the Update function within the cScrMap class in the [map].hps file!
 	 * //
-	 * The player has at default limited stamina to run, jump (cannot jump at stamina < 15.0),
-	 * and crouch (slows down crouching animation at stamina < 50.0). The stamina's value is at a range of 0 - 100.
+	 * The player has at default limited stamina to run. The stamina's value is at a range of 0 - 100.
 	 * 
 	 * @param float afTimeStep, the time between each step (1s/60fps = 0.01667s/fps)
 	**/
@@ -108,29 +98,67 @@ class cStamina_System
 			Error("The stamina system is not active, use Player_StaminaSystemCreateInstance().SetStaminaSystemActive(true)");
 			return; 
 		}
-		
+	
 		StaminaRunningHandler();
-		PlayerSpeedHandler();
+		PlayerRunningSpeedHandler();
+		RegainStaminaHandler();
 		return;
 	}
 	
 	//-------------------------------------------------------
 	
 	/**
-	 * A handler for decrementing/incrementing the players stamina while running/not running, runs at every frame.
+	 * A handler for decrementing the players stamina while running, runs at every frame.
 	**/
 	void StaminaRunningHandler()
 	{
-		if (mfStaminaRegainMulCounter > GetStaminaRegainMul()) { mfStaminaRegainMulCounter = GetStaminaRegainMul(); }
-		
-		// Decrement the total stamina if player is running
-		if (Player_GetRunning() && GetStamina() >= 0.1f)
+		if (GetRunningAffectStamina())
 		{
-			mfStaminaRegainMulCounter = 0.0f;
-			mfStaminaTotal -= 0.1f*GetStaminaUsageMul();
-			return;
+			if (mfStaminaRegainMulCounter > GetStaminaRegainMul()) { mfStaminaRegainMulCounter = GetStaminaRegainMul(); }
+			
+			// Decrement the total stamina if player is running
+			if (Player_GetRunning() && GetStaminaDrain() && GetStamina() >= 0.1f)
+			{
+				mfStaminaRegainMulCounter = 0.0f;
+				mfStaminaTotal -= 0.1f*GetStaminaUsageMul();
+				return;
+			}
 		}
-		else if (!Player_GetRunning() && GetStamina() < GetMaxStamina() && mfStaminaRegainMulCounter <= GetStaminaRegainMul()) // Increment the total stamina if the player is idle/walking
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * A handler for incrementing the players stamina while idle/walking, runs at every frame.
+	 * Lowers running speed when GetStamina() < GetMaxStamina()/2.0f.
+	 * Resets running speed when GetStamina() > GetMaxStamina()/2.0f.
+	**/
+	void PlayerRunningSpeedHandler()
+	{
+		if (GetStaminaAffectRunSpeed())
+		{
+			if (GetStamina() < GetMaxStamina()/2.0f)
+			{
+				Player_SetRunSpeedMul(GetStamina()/100.0f);
+				return;
+			}
+			else if (GetStamina() > GetMaxStamina()/2.0f)
+			{
+				Player_SetRunSpeedMul(1.0f);
+				return;
+			}
+			
+		}
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * A handler for incrementing the players stamina while idle/walking, runs at every frame.
+	**/
+	void RegainStaminaHandler()
+	{
+		if (!Player_GetRunning() && GetStaminaRegain() && GetStamina() < GetMaxStamina() && mfStaminaRegainMulCounter <= GetStaminaRegainMul())
 		{	
 			mfStaminaRegainMulCounter += 0.005f+GetStaminaRegainMul()/10.0f;
 			mfStaminaTotal += 0.05f*mfStaminaRegainMulCounter;
@@ -140,58 +168,95 @@ class cStamina_System
 	
 	//-------------------------------------------------------
 	
-	/* 
-	 * Player_GetCanRun()
-	 * Player_SetCanRun()
-	 * Player_GetRunning()
-	 * Player_IsClimbingLadder()
-	 * Player_GetRunSpeedMul()
-	 * Player_SetMoveSpeedMul() / Player_FadeMoveSpeedMulTo()
-	 * Player_SetAllMoveSpeedMuls() / Player_FadeAllMoveSpeedMulsTo()
-	 * Player_GetRunSpeedMul()
-	 * Player_SetRunSpeedMul() / Player_FadeRunSpeedMulTo()
-	 * Player_SetJumpDisabled() - if stamina < 15.0
-	 * Player_SetSlowStandupMotion()
-	 * Player_SetLadderMoveMul()
-	 * Player_SetCrouchSpeedMul()
-	*/
-	
-	void PlayerSpeedHandler()
-	{
-		
-	}
-	
-	//-------------------------------------------------------
-	
 	/**
-	 * Sets if climbing ladders affects stamina.
+	 * Sets if stamina should drain.
 	 * 
-	 * @param bool abActive, if climbing ladders should affect stamina. 
+	 * @param bool abActive, if stamina should drain.
 	**/
-	void SetStaminaAffectLadderClimbSpeed(bool abActive)
+	void SetStaminaDrain(bool abActive)
 	{
-		mbStaminaAffectLadderClimbSpeed = abActive;
+		mbStaminaDrain = abActive;
+		if (!abActive)
+		{
+			SetStamina(GetMaxStamina());
+			return;
+		}
 		return;
 	}
 	
 	//-------------------------------------------------------
 	
 	/**
-	 * Gets if climbing ladders affects stamina.
+	 * Gets if stamina drains.
 	 * 
-	 * @returns bool, checks if climbing ladders affects stamina. 
+	 * @returns bool, checks if stamina drains.
 	**/
-	bool GetStaminaAffectLadderClimbSpeed()
+	bool GetStaminaDrain()
 	{
-		return mbStaminaAffectLadderClimbSpeed;
+		return mbStaminaDrain;
 	}
 	
 	//-------------------------------------------------------
 	
 	/**
-	 * Sets if running affects stamina.
+	 * Sets if stamina should regenerate.
 	 * 
-	 * @param bool abActive, if running should affect stamina. 
+	 * @param bool abActive, if stamina should regenerate.
+	**/
+	void SetStaminaRegain(bool abActive = true)
+	{
+		mbStaminaRegain = abActive;
+		return;
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Gets if stamina regenerates.
+	 * 
+	 * @returns bool, if stamina regenerates.
+	**/
+	bool GetStaminaRegain()
+	{
+		return mbStaminaRegain;
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Sets if running costs stamina.
+	 * 
+	 * @param bool abActive, if running should affect stamina.
+	**/
+	void SetRunningAffectStamina(bool abActive = true)
+	{
+		mbRunningAffectStamina = abActive;
+		if (!abActive)
+		{
+			SetStamina(GetMaxStamina());
+			return;
+		}
+		return;
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Gets if running costs stamina.
+	 * 
+	 * @returns bool, checks if running affects stamina.
+	**/
+	bool GetRunningAffectStamina()
+	{
+		return mbRunningAffectStamina;
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Sets if stamina affects running speed.
+	 * 
+	 * @param bool abActive, if stamina should affect running speed. 
 	**/
 	void SetStaminaAffectRunSpeed(bool abActive = true)
 	{
@@ -202,38 +267,13 @@ class cStamina_System
 	//-------------------------------------------------------
 	
 	/**
-	 * Gets if running affects stamina.
+	 * Gets if stamina affects running speed.
 	 * 
-	 * @returns bool, checks if running affects stamina. 
+	 * @returns bool, checks if stamina affects running speed. 
 	**/
 	bool GetStaminaAffectRunSpeed()
 	{
 		return mbStaminaAffectRunSpeed;
-	}
-	
-	//-------------------------------------------------------
-	
-	/**
-	 * Sets if jumping affects stamina.
-	 * 
-	 * @param bool abActive, if jumping should affect stamina. 
-	**/
-	void SetStaminaAffectJump(bool abActive = true)
-	{
-		mbStaminaAffectJump = abActive;
-		return;
-	}
-	
-	//-------------------------------------------------------
-	
-	/**
-	 * Gets if jumping affects stamina.
-	 * 
-	 * @returns bool, checks if jumping affects stamina. 
-	**/
-	bool GetStaminaAffectJump()
-	{
-		return mbStaminaAffectJump;
 	}
 	
 	//-------------------------------------------------------
@@ -421,8 +461,13 @@ class cStamina_System
 		if (cLux_ScriptDebugOn())
 		{
 			array<tString> mvStaminaSystemData = GetStaminaSystemData();
-			ImGui_DoLabelExt("Stamina: " + mvStaminaSystemData[0], GetLabelData(), ImGui_NrmPos(0.14f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
-			ImGui_DoLabelExt("StaminaEnabled: " + mvStaminaSystemData[1], GetLabelData(), ImGui_NrmPos(0.22f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("Stamina: " + mvStaminaSystemData[0], GetLabelData(), ImGui_NrmPos(0.70f, 0.4625f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("Max Stamina: " + mvStaminaSystemData[1], GetLabelData(), ImGui_NrmPos(0.61f, 0.4625f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("StaminaSystemEnabled: " + mvStaminaSystemData[2], GetLabelData(), ImGui_NrmPos(0.77f, 0.4625f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("RunAffectStamina: " + mvStaminaSystemData[3], GetLabelData(), ImGui_NrmPos(0.61f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("StaminaAffectRunSpeed: " + mvStaminaSystemData[4], GetLabelData(), ImGui_NrmPos(0.71f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("StaminaDrain: " + mvStaminaSystemData[5], GetLabelData(), ImGui_NrmPos(0.8325f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("StaminaRegain: " + mvStaminaSystemData[6], GetLabelData(), ImGui_NrmPos(0.911f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
 			return;
 		}
 	}
@@ -437,10 +482,18 @@ class cStamina_System
 	array<tString> GetStaminaSystemData()
 	{
 		tString msGuiTextStaminaTotal = cString_ToString(mfStaminaTotal, 2.0f);
-		tString msGuiTextStaminaMax = cString_ToString(mfStaminaTotal, 2.0f);
-		bool mbGuiTextStaminaActive = mbStaminaSystemActive;
+		tString msGuiTextStaminaMax = cString_ToString(mfStaminaMax, 2.0f);
 		
-		array<tString> mvStaminaSystemData = {msGuiTextStaminaTotal, mbGuiTextStaminaActive};
+		bool mbGuiTextStaminaActive = mbStaminaSystemActive;
+		bool mbGuiTextRunningAffectStamina = mbRunningAffectStamina;
+		bool mbGuiTextStaminaAffectRunSpeed = mbStaminaAffectRunSpeed;
+		bool mbGuiTextStaminaDrain = mbStaminaDrain;
+		bool mbGuiTextStaminaRegain = mbStaminaRegain;
+		
+		array<tString> mvStaminaSystemData = {
+			msGuiTextStaminaTotal, msGuiTextStaminaMax, mbGuiTextStaminaActive, mbGuiTextRunningAffectStamina,
+			mbGuiTextStaminaAffectRunSpeed, mbGuiTextStaminaDrain, mbGuiTextStaminaRegain
+		};
 		return mvStaminaSystemData;
 	}
 	
@@ -454,7 +507,7 @@ class cStamina_System
 	cImGuiLabelData GetLabelData()
 	{
 		cImGuiLabelData label;
-		label.mFontAlign = eFontAlign_Center;
+		label.mFontAlign = eFontAlign_Left;
 		label.mFont.mvSize = mvDebugFontSize;
 		
 		return label;

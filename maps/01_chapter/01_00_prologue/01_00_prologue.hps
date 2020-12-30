@@ -72,7 +72,7 @@ class cScrMap : iScrMap
 		Player_SetVertigoActive(false);
 		
 		// Enable stamina system
-		staminaSystem.SetStaminaSystemActive(true);
+		staminaSystem.SetStaminaSystemActive(false);
 		
 		// Put display name entry in english.lang / Levels
 		GetBase().SetDisplayNameEntry("01-00-prologue");
@@ -230,6 +230,11 @@ class cScrMap : iScrMap
 			cLux_AddDebugMessage("DEBUG: On scroll up...");
 			Lantern_SetAmount(10);
 		}
+		
+		if (alAction == eAction_ScrollDown)
+		{
+			cLux_AddDebugMessage("DEBUG: On scroll down...");
+		}
 	}
 
 	//-------------------------------------------------------
@@ -238,7 +243,7 @@ class cScrMap : iScrMap
 	// Draw gui elements
 	void OnGui(float afTimeStep)
 	{
-		staminaSystem.DrawDebugInfo();
+		//staminaSystem.DrawDebugInfo();
 	}
 	
 	//-------------------------------------------------------
