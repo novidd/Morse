@@ -93,7 +93,7 @@ class cStamina_System
 	**/
 	void StartStaminaSystem(float afTimeStep)
 	{
-		if (!GetStaminaSystemActive()) 
+		if (!GetStaminaSystemActive())
 		{ 
 			Error("The stamina system is not active, use Player_StaminaSystemCreateInstance().SetStaminaSystemActive(true)");
 			return; 
@@ -115,6 +115,8 @@ class cStamina_System
 		if (GetRunningAffectStamina())
 		{
 			if (mfStaminaRegainMulCounter > GetStaminaRegainMul()) { mfStaminaRegainMulCounter = GetStaminaRegainMul(); }
+			//if (GetStamina() < 0) { mfStaminaTotal = 0.0f; }
+			//Remove && GetStamina() >= 0.1f
 			
 			// Decrement the total stamina if player is running
 			if (Player_GetRunning() && GetStaminaDrain() && GetStamina() >= 0.1f)
@@ -461,13 +463,15 @@ class cStamina_System
 		if (cLux_ScriptDebugOn())
 		{
 			array<tString> mvStaminaSystemData = GetStaminaSystemData();
-			ImGui_DoLabelExt("Stamina: " + mvStaminaSystemData[0], GetLabelData(), ImGui_NrmPos(0.70f, 0.4625f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
-			ImGui_DoLabelExt("Max Stamina: " + mvStaminaSystemData[1], GetLabelData(), ImGui_NrmPos(0.61f, 0.4625f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
-			ImGui_DoLabelExt("StaminaSystemEnabled: " + mvStaminaSystemData[2], GetLabelData(), ImGui_NrmPos(0.77f, 0.4625f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
-			ImGui_DoLabelExt("RunAffectStamina: " + mvStaminaSystemData[3], GetLabelData(), ImGui_NrmPos(0.61f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
-			ImGui_DoLabelExt("StaminaAffectRunSpeed: " + mvStaminaSystemData[4], GetLabelData(), ImGui_NrmPos(0.71f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
-			ImGui_DoLabelExt("StaminaDrain: " + mvStaminaSystemData[5], GetLabelData(), ImGui_NrmPos(0.8325f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
-			ImGui_DoLabelExt("StaminaRegain: " + mvStaminaSystemData[6], GetLabelData(), ImGui_NrmPos(0.911f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			cImGuiLabelData mLabelData = GetLabelData();
+			
+			ImGui_DoLabelExt("Stamina: " + mvStaminaSystemData[0], mLabelData, ImGui_NrmPos(0.70f, 0.4625f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("Max Stamina: " + mvStaminaSystemData[1], mLabelData, ImGui_NrmPos(0.61f, 0.4625f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("StaminaSystemEnabled: " + mvStaminaSystemData[2], mLabelData, ImGui_NrmPos(0.77f, 0.4625f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("RunAffectStamina: " + mvStaminaSystemData[3], mLabelData, ImGui_NrmPos(0.61f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("StaminaAffectRunSpeed: " + mvStaminaSystemData[4], mLabelData, ImGui_NrmPos(0.71f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("StaminaDrain: " + mvStaminaSystemData[5], mLabelData, ImGui_NrmPos(0.8325f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
+			ImGui_DoLabelExt("StaminaRegain: " + mvStaminaSystemData[6], mLabelData, ImGui_NrmPos(0.911f, 0.4835f, 10.0f), ImGui_NrmSize(1.0f,1.0f));
 			return;
 		}
 	}
