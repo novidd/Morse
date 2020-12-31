@@ -81,20 +81,15 @@ class cScrMap : iScrMap
 		Sound_CreateAtEntity("", "level_entity_shared/radio/radio_static", "radio_transmitter_1", 0.1f, false, 1.0f, 5.0f, 10.0f);
 		
 		/* TODO:
-		 * Make a second floor on the shed, player takes a ladder to reach it
 		 * Add cobwebs inside the shed
 		 * Add louder wind soundscape at the camp ledge
 		 * Add grass undergrowth in the forest trail
 		 * Add stones/debris around the forest trail
-		 * Add an old broken makeshift fence that follows the forest trail
+		 * Add so the player takes damage when walking into the campfire
+		 * Add so when the player interacts with water kegs/barrels display a message saying that its empty/water is running thin.
+		 * Add a spotlight to the lamp entity in the camp tent in a new entity
 		 * When using the telegraph key play a morse code sound effect/display a text onscreen saying that i doesn't work
 		 * In the loading screens ask the player personal questions (refer to them as "you"): "Why should you care?" 
-		*/
-		
-		/* Create stamina system in helper file:
-		 * Last one, in the game, halfway through, 
-		 * they introduced an inivisible stamina system where you would run slower or climb ladders slower if you ran for too long. 
-		 * I think that would be a pretty cool feature.
 		*/
 	}
 	
@@ -177,7 +172,7 @@ class cScrMap : iScrMap
 	// Runs on every frame
 	void Update(float afTimeStep)
 	{
-		staminaSystem.StartStaminaSystem(afTimeStep);
+		//staminaSystem.StartStaminaSystem(afTimeStep);
 	}
 
 	//-------------------------------------------------------
@@ -243,7 +238,7 @@ class cScrMap : iScrMap
 	// Draw gui elements
 	void OnGui(float afTimeStep)
 	{
-		//staminaSystem.DrawDebugInfo();
+		staminaSystem.DrawDebugInfo();
 	}
 	
 	//-------------------------------------------------------

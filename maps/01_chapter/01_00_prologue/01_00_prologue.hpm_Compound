@@ -1,9 +1,25 @@
 <HPLMapTrack_Compound ID="90E0301C3CDE4BAFC680DBE72BA0073B8F13F3FB" MajorVersion="1" MinorVersion="1">
     <Section Name="12450711482325857532">
         <Objects>
-            <Compound ID="268441802" Name="Compound_Barrel" CreStamp="0" ModStamp="1609089340" WorldPos="5.83077 20.8938 31.2639" Rotation="0 -0.272636 0" Scale="1 1 1" UID="16 2999 268441802">
+            <Compound ID="268441970" Name="Compound_Barrel" CreStamp="0" ModStamp="1609089340" WorldPos="5.83077 20.8938 31.2639" Rotation="0 -0.272636 0" Scale="1 1 1" UID="16 2999 268441970">
+                <Component ID="268440502" />
                 <Component ID="268440503" />
-                <Component ID="268440504" />
+            </Compound>
+            <Compound ID="268441971" Name="Compound_1" CreStamp="0" ModStamp="1609348963" WorldPos="33.1643 21.6725 66.2252" Rotation="-0 2.20325 -0" Scale="1 1 1" UID="16 6700 268441971">
+                <Component ID="268440516" />
+                <Component ID="268440517" />
+                <Component ID="268440505" />
+                <Component ID="268440506" />
+            </Compound>
+            <Compound ID="268441972" Name="Compound_2" CreStamp="0" ModStamp="1609374085" WorldPos="62.2717 21.374 108.868" Rotation="0 -1.04378 0" Scale="1 1 1" UID="16 1684 268441972">
+                <Component ID="268440683" />
+                <Component ID="268440712" />
+                <Component ID="268440713" />
+            </Compound>
+            <Compound ID="268441973" Name="Compound_3" CreStamp="0" ModStamp="1609374510" WorldPos="56.7446 20.8224 107.587" Rotation="0 1.56698 0" Scale="1 1 1" UID="16 1683 268441973">
+                <Component ID="268440663" />
+                <Component ID="268440661" />
+                <Component ID="268440662" />
             </Compound>
         </Objects>
     </Section>
