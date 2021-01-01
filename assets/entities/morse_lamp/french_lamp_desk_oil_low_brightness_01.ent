@@ -1,0 +1,101 @@
+<Entity>
+    <ModelData>
+        <Entities>
+            <PointLight ID="107" Name="Light_Point_1" CreStamp="1537355831" ModStamp="1598442334" WorldPos="0 0.441596 0" Rotation="0 0 0" Scale="1 1 1" CastShadows="false" ShadowResolution="High" ShadowsAffectStatic="true" ShadowsAffectDynamic="true" Radius="0.7" Gobo="" GoboType="Diffuse" GoboAnimMode="None" GoboAnimFrameTime="1" GoboAnimStartTime="0" DiffuseColor="1 0.909744 0.746094 1" FlickerActive="false" FlickerOnMinLength="0" FlickerOnMaxLength="0" FlickerOnPS="" FlickerOnSound="" FlickerOffMinLength="0" FlickerOffMaxLength="0" FlickerOffPS="" FlickerOffSound="" FlickerOffColor="0.896484 0.815941 0.668861 1" FlickerOffRadius="0.7" FlickerFade="true" FlickerOnFadeMinLength="0.2" FlickerOnFadeMaxLength="0.2" FlickerOffFadeMinLength="0.3" FlickerOffFadeMaxLength="1" CastDiffuseLight="true" CastSpecularLight="true" Brightness="2" Static="false" CulledByDistance="true" CulledByFog="true" FalloffPow="1" ConnectedLightMaskID="4294967295" />
+            <Billboard ID="108" Name="Billboard_1" CreStamp="1537356070" ModStamp="1609464878" WorldPos="0 0.27602 0" Rotation="0 0 0" Scale="1 1 1" BillboardType="Point" MaterialFile="E:/Work/studio/Frictional Games/Amnesia2/trunk/redist/billboards/halo/lampglow_generic.mat" IsHalo="false" BillboardSize="0.5 0.5" HaloSourceSize="0.3 0.3 0.3" BillboardOffset="0.3" BillboardColor="1 0.926407 0.792969 0.287109" Brightness="0.035" CulledByDistance="false" CulledByFog="true" ConnectLight="Light_Point_1" Static="false" RangeMinStart="-1" RangeMinEnd="-1" RangeMaxStart="-1" RangeMaxEnd="-1" />
+            <Billboard ID="109" Name="Billboard_2" CreStamp="1537356225" ModStamp="1609464855" WorldPos="0 0.317127 0" Rotation="0 0 0" Scale="1 1 1" BillboardType="Point" MaterialFile="E:/Work/studio/Frictional Games/Amnesia2/trunk/redist/billboards/halo/lampglow_curie.mat" IsHalo="false" BillboardSize="1.5 1.5" HaloSourceSize="0.3 0.3 0.3" BillboardOffset="0.4" BillboardColor="1 0.926407 0.792969 0.287109" Brightness="0.035" CulledByDistance="false" CulledByFog="true" ConnectLight="Light_Point_1" Static="false" RangeMinStart="-1" RangeMinEnd="-1" RangeMaxStart="-1" RangeMaxEnd="-1" />
+            <Sound ID="114" Name="Sound_1" CreStamp="1600443435" ModStamp="1600443449" WorldPos="0 0.249916 0" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="level_entity_shared/fire/glass_lantern/glass_lantern_burn" MinDistance="1" MaxDistance="6" Volume="1" Active="true" UseCustomProperties="false" />
+        </Entities>
+        <Mesh Filename="entities/french_colonization/lamp/french_lamp_desk_oil_01/french_lamp_desk_oil_01.DAE">
+            <SubMesh ID="0" Name="french_lamp_desk_oil_01_1_low" CreStamp="0" ModStamp="0" WorldPos="0 0.00632346 0" Rotation="-1.5708 -0 0" Scale="0.792078 0.792078 0.81868" TriCount="346" Material="" Static="false" />
+            <SubMesh ID="1" Name="french_lamp_desk_oil_01_2_low" CreStamp="0" ModStamp="0" WorldPos="0 0.060193 0" Rotation="-1.5708 -0.322481 0" Scale="1.46716 1.46716 1.51644" TriCount="324" Material="" Static="false" />
+            <SubMesh ID="2" Name="french_lamp_desk_oil_01_18_high" CreStamp="0" ModStamp="0" WorldPos="0 0.291967 0" Rotation="-1.5708 0.169543 0" Scale="1.39719 1.39719 1.44411" TriCount="270" Material="" Static="false" />
+            <SubMesh ID="3" Name="french_lamp_desk_oil_01_11_low" CreStamp="0" ModStamp="0" WorldPos="0.00264366 0.286849 -0.00093332" Rotation="1.5708 -1.0472 3.14159" Scale="1.5 1.5 1.5" TriCount="210" Material="" Static="false" />
+            <SubMesh ID="4" Name="french_lamp_desk_oil_01_20_low" CreStamp="0" ModStamp="0" WorldPos="-0.0918691 0.0723921 0.0374305" Rotation="-4.87577e-05 -1.26526 0" Scale="1.5 1.5 1.5" TriCount="24" Material="" Static="false" />
+            <SubMesh ID="5" Name="french_lamp_desk_oil_01_15_low" CreStamp="0" ModStamp="0" WorldPos="-0.132463 0.0723942 0.0509348" Rotation="-4.84567e-05 -1.26526 0" Scale="2.607 2.607 2.607" TriCount="44" Material="" Static="false" />
+            <SubMesh ID="6" Name="french_lamp_desk_oil_01_19_low" CreStamp="0" ModStamp="0" WorldPos="0.0906822 0.0382258 -0.0357741" Rotation="-1.5708 -0 -0.0872667" Scale="1.5 1.5 1.5" TriCount="102" Material="" Static="false" />
+            <SubMesh ID="7" Name="french_lamp_desk_oil_01_6_low" CreStamp="0" ModStamp="0" WorldPos="0 0.474998 0" Rotation="-1.5708 -0 0" Scale="1.43774 1.43774 1.48603" TriCount="863" Material="" Static="false" />
+            <SubMesh ID="8" Name="french_lamp_desk_oil_01_14_high" CreStamp="0" ModStamp="0" WorldPos="0 0.28423 0" Rotation="-1.5708 0.0258589 0" Scale="1 1 1" TriCount="360" Material="" Static="false" />
+            <SubMesh ID="9" Name="french_lamp_desk_oil_01_17_low" CreStamp="0" ModStamp="0" WorldPos="0 0 0" Rotation="-1.5708 -0 0" Scale="1 1 1" TriCount="432" Material="" Static="false" />
+            <SubMesh ID="10" Name="french_lamp_desk_oil_01_12_low" CreStamp="0" ModStamp="0" WorldPos="0.00264366 0.286849 -0.00093332" Rotation="-1.5708 -1.0472 0" Scale="1.5 1.5 1.5" TriCount="210" Material="" Static="false" />
+            <SubMesh ID="11" Name="french_lamp_desk_oil_01_16_low" CreStamp="0" ModStamp="0" WorldPos="0.00264366 0.286544 -0.00093332" Rotation="-1.5708 -0 0" Scale="1.5 1.5 1.5" TriCount="210" Material="" Static="false" />
+            <SubMesh ID="12" Name="french_lamp_desk_oil_01_8_low" CreStamp="0" ModStamp="0" WorldPos="0.00264366 0.286849 -0.000933319" Rotation="-1.5708 1.0472 0" Scale="1.5 1.5 1.5" TriCount="210" Material="" Static="false" />
+            <SubMesh ID="13" Name="french_lamp_desk_oil_01_9_low" CreStamp="0" ModStamp="0" WorldPos="0.00264366 0.286849 -0.000933319" Rotation="1.5708 1.0472 3.14159" Scale="1.5 1.5 1.5" TriCount="200" Material="" Static="false" />
+            <SubMesh ID="14" Name="french_lamp_desk_oil_01_10_low" CreStamp="0" ModStamp="0" WorldPos="0.00264366 0.286849 -0.00093332" Rotation="1.5708 6.66667e-07 3.14159" Scale="1.5 1.5 1.5" TriCount="210" Material="" Static="false" />
+        </Mesh>
+        <Bones />
+        <Shapes>
+            <Shape ID="110" Name="ShapeCylinder_1" CreStamp="1539695880" ModStamp="1539695897" WorldPos="0 0.026332 0" Rotation="0 0 0" Scale="0.170674 0.0538183 0" RelativeTranslation="0 -0.136228 0" RelativeRotation="0 -0 0" RelativeScale="1 1 1" ShapeType="Cylinder" />
+            <Shape ID="111" Name="ShapeCylinder_2" CreStamp="1539695899" ModStamp="1539695915" WorldPos="0 0.298788 0" Rotation="0 0 0" Scale="0.101637 0.578078 0" RelativeTranslation="0 0.136228 0" RelativeRotation="0 -0 0" RelativeScale="1 1 1" ShapeType="Cylinder" />
+            <Shape ID="112" Name="ShapeSphere_1" CreStamp="1539696798" ModStamp="1539696807" WorldPos="0 0.250025 0" Rotation="0 0 0" Scale="0.187371 0 0" RelativeTranslation="0 0.087465 0" RelativeRotation="0 -0 0" RelativeScale="1 1 1" ShapeType="Sphere" />
+        </Shapes>
+        <Bodies>
+            <Body ID="113" Name="Body_1" CreStamp="0" ModStamp="1539696819" WorldPos="0 0.16256 0" Rotation="0 0 0" Scale="1 1 1" Material="" Mass="0" AngularDamping="0.5" LinearDamping="0.1" MaxAngularSpeed="20" MaxLinearSpeed="20" BuoyancyDensityMul="1" BlocksSound="false" ContinuousCollision="true" CanAttachCharacter="false" PushedByCharacterGravity="false" CollideCharacter="true" CollideNonCharacter="true" Volatile="false" UseSurfaceEffects="true" HasGravity="true" BlocksLight="true">
+                <Shape ID="110" />
+                <Shape ID="111" />
+                <Shape ID="112" />
+            </Body>
+        </Bodies>
+        <Joints />
+        <Animations />
+        <ProcAnimations />
+    </ModelData>
+    <UserDefinedVariables EntityType="Prop_Lamp">
+        <Var ObjectId="4294967295" Name="Health" Value="100" />
+        <Var ObjectId="4294967295" Name="Toughness" Value="0" />
+        <Var ObjectId="4294967295" Name="MaxInteractDistance" Value="0" />
+        <Var ObjectId="4294967295" Name="EventTag" Value="" />
+        <Var ObjectId="4294967295" Name="ShowHints" Value="true" />
+        <Var ObjectId="4294967295" Name="LifeLength" Value="0" />
+        <Var ObjectId="4294967295" Name="DissolveDuringLifeDecrease" Value="true" />
+        <Var ObjectId="4294967295" Name="QuickSave" Value="false" />
+        <Var ObjectId="4294967295" Name="FullGameSave" Value="false" />
+        <Var ObjectId="4294967295" Name="BlocksLineOfSight" Value="true" />
+        <Var ObjectId="4294967295" Name="MainPhysicsBody" Value="" />
+        <Var ObjectId="4294967295" Name="NoGravityWhenUnderwater" Value="false" />
+        <Var ObjectId="4294967295" Name="DisableFreezeAtStart" Value="false" />
+        <Var ObjectId="4294967295" Name="CustomScriptFile" Value="" />
+        <Var ObjectId="4294967295" Name="CustomScriptClass" Value="" />
+        <Var ObjectId="4294967295" Name="ShowMesh" Value="true" />
+        <Var ObjectId="4294967295" Name="DissolveOnDestruction" Value="false" />
+        <Var ObjectId="4294967295" Name="DissolveTime" Value="1.0" />
+        <Var ObjectId="4294967295" Name="RandomizeAnimationStart" Value="true" />
+        <Var ObjectId="4294967295" Name="RootMotionBone" Value="" />
+        <Var ObjectId="4294967295" Name="EffectsOnSound" Value="level_entity_shared/fire/fire_ignite/glass_lantern_ignite" />
+        <Var ObjectId="4294967295" Name="EffectsOffSound" Value="level_entity_shared/fire/glass_lantern/glass_lantern_extinguish" />
+        <Var ObjectId="4294967295" Name="EffectsOnTime" Value="1" />
+        <Var ObjectId="4294967295" Name="EffectsOffTime" Value="1" />
+        <Var ObjectId="4294967295" Name="StaticMoveCheckCollision" Value="false" />
+        <Var ObjectId="4294967295" Name="StaticMoveStartSound" Value="" />
+        <Var ObjectId="4294967295" Name="StaticMoveStopSound" Value="" />
+        <Var ObjectId="4294967295" Name="StaticMoveLoopSound" Value="" />
+        <Var ObjectId="4294967295" Name="StaticMoveLoopSoundFade" Value="true" />
+        <Var ObjectId="4294967295" Name="BreakActive" Value="false" />
+        <Var ObjectId="4294967295" Name="CustomBreakBehaviour" Value="false" />
+        <Var ObjectId="4294967295" Name="BreakOnlyOnMainBody" Value="false" />
+        <Var ObjectId="4294967295" Name="BreakDestroyJoints" Value="false" />
+        <Var ObjectId="4294967295" Name="BreakMinEnergy" Value="100" />
+        <Var ObjectId="4294967295" Name="BreakEntity" Value="" />
+        <Var ObjectId="4294967295" Name="BreakEntityAlignBody" Value="" />
+        <Var ObjectId="4294967295" Name="BreakSound" Value="" />
+        <Var ObjectId="4294967295" Name="BreakParticleSystem" Value="" />
+        <Var ObjectId="4294967295" Name="BreakImpulse" Value="4" />
+        <Var ObjectId="4294967295" Name="CanBeLitByPlayer" Value="true" />
+        <Var ObjectId="4294967295" Name="CanBeSnuffedOutByPlayer" Value="true" />
+        <Var ObjectId="4294967295" Name="CanBeGrabbed" Value="falsDrainCallbacke" />
+        <Var ObjectId="4294967295" Name="RequiresMatches" Value="true" />
+        <Var ObjectId="4294967295" Name="RequiresOil" Value="false" />
+        <Var ObjectId="4294967295" Name="LightByDistance" Value="false" />
+        <Var ObjectId="4294967295" Name="LightDistance" Value="5.0" />
+        <Var ObjectId="4294967295" Name="FlickerMinOnTime" Value="0.05" />
+        <Var ObjectId="4294967295" Name="FlickerMaxOnTime" Value="1" />
+        <Var ObjectId="4294967295" Name="FlickerMinOffTime" Value="0.025" />
+        <Var ObjectId="4294967295" Name="FlickerMaxOffTime" Value="0.15" />
+        <Var ObjectId="4294967295" Name="FlickerFade" Value="false" />
+        <Var ObjectId="4294967295" Name="FlickerOnSound" Value="" />
+        <Var ObjectId="4294967295" Name="FlickerOffSound" Value="" />
+        <Var ObjectId="4294967295" Name="FlickerOnPS" Value="" />
+        <Var ObjectId="4294967295" Name="FlickerOffPS" Value="" />
+        <Var ObjectId="4294967295" Name="FlickerOffAlpha" Value="0" />
+    </UserDefinedVariables>
+</Entity>

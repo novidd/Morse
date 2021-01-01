@@ -121,6 +121,9 @@ class cScrMap : iScrMap
 		// Any general setup of script / entities
 		bool mbStartIntro = true;
 		
+		// Add force to dice blocks
+		Entity_AddForce("roman_personal_dice_*", cVector3f(-5.f, 50.f, -5.f), false, true);
+		
 		/////////////////////////
 		// Debug
 		if(cLux_ScriptDebugOn())

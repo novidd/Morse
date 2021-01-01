@@ -1,25 +1,16 @@
 <HPLMapTrack_Compound ID="90E0301C3CDE4BAFC680DBE72BA0073B8F13F3FB" MajorVersion="1" MinorVersion="1">
     <Section Name="12450711482325857532">
         <Objects>
-            <Compound ID="268441980" Name="Compound_Barrel" CreStamp="0" ModStamp="1609089340" WorldPos="5.83077 20.8938 31.2639" Rotation="-7.41315e-10 -0.272636 7.73633e-09" Scale="1 1 1" UID="16 2999 268441980">
-                <Component ID="268440506" />
-                <Component ID="268440507" />
-            </Compound>
-            <Compound ID="268441981" Name="Compound_1" CreStamp="0" ModStamp="1609348963" WorldPos="33.1643 21.6725 66.2252" Rotation="-0 2.20325 -0" Scale="1 1 1" UID="16 6700 268441981">
-                <Component ID="268440520" />
-                <Component ID="268440521" />
-                <Component ID="268440509" />
-                <Component ID="268440510" />
-            </Compound>
-            <Compound ID="268441982" Name="Compound_2" CreStamp="0" ModStamp="2341097349744" WorldPos="62.2717 21.374 108.868" Rotation="0 -1.04378 0" Scale="1 1 1" UID="16 1684 268441982">
-                <Component ID="268440687" />
-                <Component ID="268440716" />
-                <Component ID="268440717" />
-            </Compound>
             <Compound ID="268441983" Name="Compound_3" CreStamp="0" ModStamp="1609374510" WorldPos="56.7446 20.8224 107.587" Rotation="0 1.56698 0" Scale="1 1 1" UID="16 1683 268441983">
                 <Component ID="268440667" />
                 <Component ID="268440665" />
                 <Component ID="268440666" />
+            </Compound>
+            <Compound ID="268442064" Name="Compound_1" CreStamp="0" ModStamp="1609461501" WorldPos="57.4282 20.5738 107.885" Rotation="0 0.197979 0" Scale="1 1 1" UID="16 6700 268442064">
+                <Component ID="268440508" />
+                <Component ID="268440509" />
+                <Component ID="268440519" />
+                <Component ID="268440520" />
             </Compound>
         </Objects>
     </Section>
