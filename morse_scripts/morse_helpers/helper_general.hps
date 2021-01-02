@@ -22,6 +22,20 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////
 // ==============
+// ENUMS / CLASSES
+// ==============
+//{///////////////////////////////////////////////////////////////////////////////////////
+
+shared enum ePlayerDamageType
+{
+	ePlayerDamageSmall,
+	ePlayerDamageMedium,
+	ePlayerDamageLarge
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// ==============
 // MAIN FUNCTIONS
 // ==============
 //{///////////////////////////////////////////////////////////////////////////////////////
@@ -29,6 +43,26 @@
 	/////////////////////////////////////////
 	// Gameplay
 	//{//////////////////////////////////////
+	
+	//-------------------------------------------------------
+	/**
+	 * Set a certian amount of matches in the player inventory.
+	 * 
+	 * player/emotes/pain_small
+	 * player/emotes/pain_med
+	 * player/emotes/pain_large
+	 * 
+	 * @param float afAmount, how much damage to do to the player.
+	 * @param float afMaxFear, max fear level the damage can cause.
+	 * @param int alType, the type of damage, which damage effect should be applied to the screen.
+	 * @param String asSource, the name of the entity doing the damage.
+	 * @param String asSoundname, the internal name of the sound ().
+	 * @param ePlayerDamageType alType, the name of the entity doing the damage.
+	**/
+	void Player_GiveDamageAndSound(float afAmount, float afMaxFear, int alEffectType, const tString &in asSource, const tString &in asSoundName, ePlayerDamageType alDamageType)
+	{
+		
+	}
 	
 	//-------------------------------------------------------
 

@@ -75,9 +75,6 @@ class cScrMap : iScrMap
 		 * Add bear traps in the deep forest.
 		 * When using the telegraph key play a morse code sound effect/display a text onscreen saying that i doesn't work.
 		 * In the loading screens ask the player personal questions (refer to them as "you"): "Why should you care?".
-		 * 
-		 * cScript_SetGlobalVarBool("HideAmuletBracelet", false);
-		 * Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
 		*/
 	}
 	
@@ -742,7 +739,11 @@ class cScrMap : iScrMap
 		{
 			if (cScript_GetGlobalVarBool("IsCampfireLit"))
 			{
-				Player_GiveDamage(2.5f, 1.0f, 1, asParent);
+				if (!Sound_Exists("fire_playerdamage"))
+				{
+					Player_GiveDamage(2.5f, 1.0f, 1, asParent);
+					Sound_CreateAtEntity("fire_playerdamage", "player/emotes/pain_med", asChild);
+				}
 				return true;
 			}
 			return true;
