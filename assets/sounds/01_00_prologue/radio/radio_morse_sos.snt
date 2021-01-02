@@ -1,8 +1,0 @@
-<SOUNDENTITY>
-  <SOUNDS>
-  	<Main>
-  		<Sound File="radio_morse_sos" />
-  	</Main>
-  </SOUNDS>
-  <PROPERTIES Volume="0.3" MinDistance="5" MaxDistance="10" Random="0" Interval="0" FadeEnd="False" FadeStart="False" Stream="False" Loop="True" Use3D="True" Blockable="False" BlockVolumeMul="0.3" Priority="0" />
-</SOUNDENTITY>

@@ -21,7 +21,7 @@
 #include "custom/helpers/helper_props_custom.hps"
 
 // Morse helpers
-//#include "morse_scripts/morse_helpers/general_helper.hps"
+#include "morse_scripts/morse_helpers/helper_general.hps"
 #include "morse_scripts/morse_helpers/helper_stamina.hps"
 
 //--------------------------------------------------
@@ -38,23 +38,6 @@ class cScrMap : iScrMap
 {
 	//--------------------------------------------
 	
-	////////////////////////
-	//{ Creating variables
-	
-	// String - tString varName = "Whatever"; varName.length() to get length of string
-	
-	// Int - int varName = A whole number; OR use uint for values between 0 - 255
-	
-	// Float - float varName = A floating point number
-	
-	// Arrays - array<int/bool/tString> varName = {v1, v2, ... vX}; varName.length() to get length of array
-	
-	// Constants - const varType varName = Appropriate value; Ex. const tString randomText = "Boopeti, Baapeti"; (GLOBAL VARIABLES HAVE TO BE A CONSTANT)!
-	
-	// Global variables across maps - cScript_SetGlobarVar(asName, value), cScript_GetGlobalVar(asName)
-	
-	//}-------------------------------------------------------
-	
 	//////////////////////////////////////////////////////////////////////////////////////////
 	// ==============
 	// MAIN CALLBACKS
@@ -70,6 +53,8 @@ class cScrMap : iScrMap
 		// Player settings
 		PlayerBody_SetActive(true);
 		Player_SetVertigoActive(false);
+		Player_SetMaxHealth(100.0);
+		Player_SetHealth(100.0f);
 		
 		// Enable stamina system
 		staminaSystem.SetStaminaSystemActive(false);
@@ -85,13 +70,14 @@ class cScrMap : iScrMap
 		 * Add louder wind soundscape at the camp ledge.
 		 * Add grass undergrowth in the forest trail.
 		 * Add stones/debris around the forest trail.
-		 * Add so when the player interacts with water kegs/barrels display a message saying that its empty/water is running thin.
-		 * Add a spotlight to the lamp entity in the camp tent.
+		 * Add interactability to empty water kegs/barrels.
 		 * Add so the player can choose to put the fire in the camp or keep it going. (Have miscellaneous stats in the credits at end of mod).
 		 * Add bear traps in the deep forest.
-		 * Add so the player takes damage when walking into the campfire.
 		 * When using the telegraph key play a morse code sound effect/display a text onscreen saying that i doesn't work.
 		 * In the loading screens ask the player personal questions (refer to them as "you"): "Why should you care?".
+		 * 
+		 * cScript_SetGlobalVarBool("HideAmuletBracelet", false);
+		 * Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
 		*/
 	}
 	
@@ -120,6 +106,7 @@ class cScrMap : iScrMap
 	{	
 		// Any general setup of script / entities
 		bool mbStartIntro = true;
+		cScript_SetGlobalVarBool("IsCampfireLit", true);
 		
 		// Add force to dice blocks
 		Entity_AddForce("roman_personal_dice_*", cVector3f(-5.f, 50.f, -5.f), false, true);
@@ -141,6 +128,7 @@ class cScrMap : iScrMap
 			{
 				cLux_AddDebugMessage("Added lantern to inventory!");
 				Item_AddToInventory("Lantern");
+
 				Lantern_SetAmount(10);
 				
 				// Unlock shed doors
@@ -160,6 +148,7 @@ class cScrMap : iScrMap
 	void OnEnter()
 	{	
 		Game_AutoSave();
+		Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
 	}
 
 	//-------------------------------------------------------
@@ -224,6 +213,11 @@ class cScrMap : iScrMap
 	void OnAction(int alAction, bool abPressed) 
 	{
 		if(abPressed==false) return;
+		
+		if (alAction == eAction_LeanRight)
+		{
+			
+		}
 		
 		if(alAction == eAction_ScrollUp)
 		{
@@ -307,7 +301,7 @@ class cScrMap : iScrMap
 		 * Makes screen either fade in or out that simultaneously plays a microflash sound effect at player
 		 * 
 		 * @param asEffect, either "In" or "Out". 
-		 **/
+		**/
 		void FadeInOutMicroFlash(const tString &in asEffect)
 		{
 			Sound_CreateAtEntity("", "player/UI/fear_system/microflash", "player", 0.1f, false, 0.3f);
@@ -707,7 +701,7 @@ class cScrMap : iScrMap
 
 		//-------------------------------------------------------
 
-		/*Put any variables that are only used in Scene 1, Event A here.*/
+		/*Put any variables that are only used in Scene 2, Event A here.*/
 
 		//-------------------------------------------------------
 
@@ -731,11 +725,28 @@ class cScrMap : iScrMap
 		 
 		//-------------------------------------------------------
 	 
-		/*Put any variables that are used by many events in Scene 2 here.*/
+		/*Put any variables that are used by many events in Scene 3 here.*/
 		
 		//-------------------------------------------------------
 	 
-		/*Put any functions that are used in more than one event in Scene 2 here.*/
+		/*Put any functions that are used in more than one event in Scene 3 here.*/
+		
+		void ExtractOil_OnPlayerInteract(const tString &in asEntity)
+		{
+			ExtractOil(asEntity, "ModernOil");
+		}
+		
+		//-------------------------------------------------------
+		
+		bool FirePlayerDamage_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			if (cScript_GetGlobalVarBool("IsCampfireLit"))
+			{
+				Player_GiveDamage(2.5f, 1.0f, 1, asParent);
+				return true;
+			}
+			return true;
+		}
 		
 		//-------------------------------------------------------
 		
@@ -747,11 +758,11 @@ class cScrMap : iScrMap
 
 		//-------------------------------------------------------
 
-		/*Put any variables that are only used in Scene 1, Event A here.*/
+		/*Put any variables that are only used in Scene 3, Event A here.*/
 
 		//-------------------------------------------------------
 
-		/*Put any functions that are only used in Scene 1, Event A here.*/
+		/*Put any functions that are only used in Scene 3, Event A here.*/
 		
 		//-------------------------------------------------------
 

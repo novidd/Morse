@@ -1,0 +1,16 @@
+<SOUNDENTITY>
+  <SOUNDS>
+  	<Main>
+  		<Sound File="cellar_light_flicker_01" />
+		<Sound File="cellar_light_flicker_02" />
+		<Sound File="cellar_light_flicker_03" />
+		<Sound File="cellar_light_flicker_04" />
+		<Sound File="cellar_light_flicker_05" />
+		<Sound File="cellar_light_flicker_06" />
+		<Sound File="cellar_light_flicker_07" />
+		<Sound File="cellar_light_flicker_08" />
+		<Sound File="cellar_light_flicker_09" />
+  	</Main>
+  </SOUNDS>
+  <PROPERTIES Volume="0.1" MinDistance="3" MaxDistance="10" Random="1" Interval="0" FadeEnd="False" FadeStart="False" Stream="False" Loop="False" Use3D="True" Blockable="False" BlockVolumeMul="0.3" Priority="0" />
+</SOUNDENTITY>

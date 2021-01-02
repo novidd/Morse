@@ -1,9 +1,124 @@
-/**
- * Function description
- * 
- * @param PARAMETER, parameter description. 
-**/
-void TempFunc() 
-{
-	//Do stuff
-}
+#include "interfaces/Map_Interface.hps"
+#include "base/Inputhandler_Types.hps"
+
+#include "helpers/helper_map.hps"
+#include "helpers/helper_props.hps"
+#include "helpers/helper_effects.hps"
+#include "helpers/helper_audio.hps"
+#include "helpers/helper_imgui.hps"
+#include "helpers/helper_sequences.hps"
+#include "helpers/helper_game.hps"
+#include "helpers/helper_modules.hps"
+#include "helpers/helper_ai.hps"
+#include "helpers/helper_player.hps"
+
+#include "helpers/helper_items.hps"
+#include "helpers/helper_areas.hps"
+#include "helpers/helper_agent.hps"
+#include "custom/helpers/helper_areas_custom.hps"
+#include "custom/helpers/helper_player_custom.hps"
+#include "custom/helpers/helper_modules_custom.hps"
+#include "custom/helpers/helper_props_custom.hps"
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// ==============
+// MAIN FUNCTIONS
+// ==============
+//{///////////////////////////////////////////////////////////////////////////////////////
+
+	/////////////////////////////////////////
+	// Gameplay
+	//{//////////////////////////////////////
+	
+	//-------------------------------------------------------
+
+	/**
+	 * Adds oil to the player inventory while interacting with an entity/trigger area.
+	 * There has to be a defined uservar integer >= 1 (integer = 1 barrel is empty, integer > 1 the barrel has Entity_GetVarInt(asEntity, "") - 1 uses left) for the selected entity/trigger area in the level editor.
+	 * (If uservar = 3, then the player can get oil 2 times, etc)
+	 * 
+	 * @param String asEntity, the entity/trigger area interacted with to get the uservar from, and the source to play the extract_oil sound. 
+	 * @param String asOilType, the type of oil to give the player, must either be "ModernOil" (small) / "HerbertOil" (medium) / "AlchemistOil" (large).  
+	**/
+	void ExtractOil(const tString &in asEntity, const tString &in asOilType)
+	{
+		// Checks if uservar is a valid integer
+		if (Entity_GetVarInt(asEntity, "") <= 0)
+		{
+			Error("The user var for " + asEntity + " is not valid, it must be an integer >= 1.");
+			return;
+		}
+		
+		// Checks if asOilType is a valid oil type
+		if (asOilType != "ModernOil" && asOilType != "HerbertOil" && asOilType != "AlchemistOil")
+		{
+			Error(asOilType + " is not a valid oil type, it must either be 'ModernOil' (small) / 'HerbertOil' (medium) / 'AlchemistOil' (large)");
+			return;
+		}
+		
+		// Checks if uservar = 1, if true, the oil barrel is empty
+		if (Entity_GetVarInt(asEntity, "") == 1)
+		{
+			Sound_CreateAtEntity("extract_oil", "morse_player/UI/extract_oil/extract_oil_empty", asEntity, .1f, false, .5f);
+			return;
+		}// Checks if uservar > 1, if true, the oil barrel is not empty and the player gets some oil
+		else if (Entity_GetVarInt(asEntity, "") > 1)
+		{
+			Entity_SetVarInt(asEntity, "", Entity_GetVarInt(asEntity, "") - 1);
+			Item_AddToInventory(asOilType, true);
+			Sound_CreateAtEntity("extract_oil", "morse_player/UI/extract_oil/extract_oil_fill", asEntity, .1f, false, .5f);
+			return;
+		}
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Set a certian amount of matches in the player inventory.
+	 * (Sometimes plays an annoying sound effect, so avoid using this function)
+	 * 
+	 * @param int alAmount, the amount of matches to set to.  
+	**/
+	void Match_Set(int alAmount)
+	{
+		Item_AddToInventory("Matchbook", false);
+		Item_SetContent(ItemType_GetFirstInInventory("Matchbook"), "Matches", alAmount);
+		return;
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Add a certian amount of matches to the player inventory.
+	 * (Sometimes plays an annoying sound effect, so avoid using this function)
+	 * 
+	 * @param int alAmount, the amount of matches to add.  
+	**/
+	void Match_Add(int alAmount)
+	{
+		int mlMatchesCount = Matches_GetCount();
+		int mlMatchesSum = mlMatchesCount + alAmount;
+		
+		if (alAmount <= 0)
+		{
+			Error("To add matches the amount must be > 0, " + alAmount + " is <= 0.");
+			return;
+		}
+		else
+		{
+			if (mlMatchesSum > 10)
+			{
+				Error("Setting total matches to 10, " 
+				+ cString_ToString(Matches_GetCount(), 1) + "+" + cString_ToString(alAmount, 1) + " exceeds the max of 10 matches.");
+				
+				Item_SetContent(ItemType_GetFirstInInventory("Matchbook"), "Matches", 10);
+				return;
+			}
+			
+			Item_AddToInventory("Matchbook", false);
+			Item_SetContent(ItemType_GetFirstInInventory("Matchbook"), "Matches", mlMatchesCount + alAmount);
+			return;
+		}
+	}
+	
+	//-------------------------------------------------------
