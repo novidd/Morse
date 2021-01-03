@@ -61,21 +61,6 @@ class cScrMap : iScrMap
 		
 		// Put display name entry in english.lang / Levels
 		GetBase().SetDisplayNameEntry("01-00-prologue");
-		
-		// Start radio transmission sounds
-		Sound_CreateAtEntity("", "level_entity_shared/radio/radio_static", "radio_transmitter_1", 0.1f, false, 1.0f, 5.0f, 10.0f);
-		
-		/* TODO:
-		 * Add cobwebs inside the shed.
-		 * Add louder wind soundscape at the camp ledge.
-		 * Add grass undergrowth in the forest trail.
-		 * Add stones/debris around the forest trail.
-		 * Add interactability to empty water kegs/barrels.
-		 * Add so the player can choose to put the fire in the camp or keep it going. (Have miscellaneous stats in the credits at end of mod).
-		 * Add bear traps in the deep forest.
-		 * When using the telegraph key play a morse code sound effect/display a text onscreen saying that i doesn't work.
-		 * In the loading screens ask the player personal questions (refer to them as "you"): "Why should you care?".
-		*/
 	}
 	
 	//-------------------------------------------------------
@@ -100,13 +85,16 @@ class cScrMap : iScrMap
 	////////////////////////////
 	// Run first time starting map
 	void OnStart()
-	{	
+	{	// Old skybox hex color: 43AFE1FF
+		
 		// Any general setup of script / entities
 		bool mbStartIntro = true;
 		cScript_SetGlobalVarBool("IsCampfireLit", true);
 		
-		// Add force to dice blocks
-		Entity_AddForce("roman_personal_dice_*", cVector3f(-5.f, 50.f, -5.f), false, true);
+		Entity_AddForce("roman_personal_dice_*", cVector3f(-5.f, 50.f, -5.f), false, true); // Add force to dice blocks
+		
+		// Sounds
+		//Sound_CreateAtEntity("", "morse_events/radio/radio_transmission", "radio_transmitter_transmission", 0.f, false, .1f);
 		
 		/////////////////////////
 		// Debug
@@ -123,7 +111,6 @@ class cScrMap : iScrMap
 			
 			if (ItemType_GetCountInInventory("Lantern") < 1)
 			{
-				cLux_AddDebugMessage("Added lantern to inventory!");
 				Item_AddToInventory("Lantern");
 
 				Lantern_SetAmount(10);
@@ -133,10 +120,9 @@ class cScrMap : iScrMap
 				Entity_SetActive("ShedDoor_Lock_2", false);
 			}
 		}
-		 // Initiate the intro
-		 if (mbStartIntro) { Seq_IntroCave(""); }
+		// Initiate the intro
+		if (mbStartIntro) { Seq_IntroCave(""); }
 	}
-	
 
 	//-------------------------------------------------------
 
@@ -260,10 +246,33 @@ class cScrMap : iScrMap
 	//-------------------------------------------------------
  
 	/*Put any variables that are used in more than one scene here.*/
+	
+	int mlChromAbId = Effect_ChromaticAberration_CreateInstance(0.0035f, 10.f);
+	int mlRadBlurId = Effect_RadialBlur_Start(0.5f, 0.1f, 0.8f, 0.0f);
+	int mlBlurId = Effect_Blur_Start(0.01f, 3.0f);
+	int mlDofId = Effect_DoF_Start(1.0f, 20.0f, 0.5f, 3.0f);
  
 	//-------------------------------------------------------
  
 	/*Put any functions that are used in more than one scene here.*/
+	
+	/**
+	 * Makes screen either fade in or out that simultaneously plays a microflash sound effect at player
+	 * 
+	 * @param asEffect, either "In" or "Out". 
+	**/
+	void FadeInOutMicroFlash(const tString &in asEffect)
+	{
+		Sound_CreateAtEntity("", "player/UI/fear_system/microflash", "player", 0.1f, false, 0.3f);
+		if (asEffect == "In")
+		{
+			Effect_Fade_In(0.1f);
+		}
+		else if (asEffect == "Out")
+		{
+			Effect_Fade_Out(0.1f);
+		}
+	}
  
 	//-------------------------------------------------------
  
@@ -283,34 +292,10 @@ class cScrMap : iScrMap
 	 
 		/*Put any variables that are used by many events in Scene 1 here.*/
 		
-		int mlChromAbId = Effect_ChromaticAberration_CreateInstance(0.0035f, 10.f);
-		int mlRadBlurId = Effect_RadialBlur_Start(0.5f, 0.1f, 0.8f, 0.0f);
-		int mlBlurId = Effect_Blur_Start(0.01f, 3.0f);
-		int mlDofId = Effect_DoF_Start(1.0f, 20.0f, 0.5f, 3.0f);
-		
 		//-------------------------------------------------------
 	 
 		/*Put any functions that are used in more than one event in Scene 1 here.*/
 		
-		// player/UI/permafail/sequence/arm_look_stinger PLAY THIS SOUND WHEN THE MORSE LOGO APPEARS
-		
-		/**
-		 * Makes screen either fade in or out that simultaneously plays a microflash sound effect at player
-		 * 
-		 * @param asEffect, either "In" or "Out". 
-		**/
-		void FadeInOutMicroFlash(const tString &in asEffect)
-		{
-			Sound_CreateAtEntity("", "player/UI/fear_system/microflash", "player", 0.1f, false, 0.3f);
-			if (asEffect == "In")
-			{
-				Effect_Fade_In(0.1f);
-			}
-			else if (asEffect == "Out")
-			{
-				Effect_Fade_Out(0.1f);
-			}
-		}
 		//-------------------------------------------------------
 		
 		//} END General
@@ -591,6 +576,7 @@ class cScrMap : iScrMap
 
 		/*Put any functions that are only used in Scene 1, Event C here.*/
 		
+		// player/UI/permafail/sequence/arm_look_stinger PLAY THIS SOUND WHEN THE MORSE LOGO APPEARS
 		cSequenceStatesData mSeqIntroTitleCard;
 		void Seq_IntroTitleCard(const tString &in asName)
 		{
@@ -702,11 +688,71 @@ class cScrMap : iScrMap
 
 		//-------------------------------------------------------
 
-		/*Put any functions that are only used in Scene 1, Event A here.*/
+		/*Put any functions that are only used in Scene 2, Event A here.*/
+		
+		void RadioButton_OnPlayerInteract(const tString &in asEntity)
+		{
+			cLux_AddDebugMessage("Clicked: "+asEntity);
+			//Sound_CreateAtEntity("", "morse_events/radio/radio_transmission", "radio_transmitter");
+		}
+		
+		bool RadioSetUserVar_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			Entity_SetVarBool(asChild, "", !Entity_GetVarBool(asChild, ""));
+			Light_SetVisible(asChild + "_button_light", !Entity_GetVarBool(asChild, ""));
+			return true;
+		}
 		
 		//-------------------------------------------------------
 
 		//} END Event *RADIO TRANSMISSION*
+		
+		/////////////////////////////////////////
+		// Event B *PLAYER INTERACTS WITH TELEGRAPH KEY*
+		//{//////////////////////////////////////
+
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 2, Event B here.*/
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 2, Event B here.*/
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER INTERACTS WITH TELEGRAPH KEY*
+		
+		/////////////////////////////////////////
+		// Event C *PLAYER PICKS UP LANTERN*
+		//{//////////////////////////////////////
+
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 2, Event C here.*/
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 2, Event C here.*/
+		
+		void PickUpLantern_OnPlayerInteract(const tString &in asEntity)
+		{
+			// Run a timer because Lantern_SetAmount() cannot set oil amount on a lantern that does not yet exist
+			Map_AddTimer("", .05f, "SetLanternAmount_OnTimer");
+			
+			// Play oneshot music
+		}
+		
+		//-------------------------------------------------------
+		
+		void SetLanternAmount_OnTimer(const tString &in asTimer)
+		{
+			Lantern_SetAmount(3);
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER PICKS UP LANTERN*
 	 
 	//} END SCENE 2
 	
@@ -730,7 +776,7 @@ class cScrMap : iScrMap
 		
 		void ExtractOil_OnPlayerInteract(const tString &in asEntity)
 		{
-			ExtractOil(asEntity, "ModernOil");
+			ExtractOil(asEntity, eOilSmall);
 		}
 		
 		//-------------------------------------------------------
@@ -739,11 +785,7 @@ class cScrMap : iScrMap
 		{
 			if (cScript_GetGlobalVarBool("IsCampfireLit"))
 			{
-				if (!Sound_Exists("fire_playerdamage"))
-				{
-					Player_GiveDamage(2.5f, 1.0f, 1, asParent);
-					Sound_CreateAtEntity("fire_playerdamage", "player/emotes/pain_med", asChild);
-				}
+				Player_GiveDamageAndSound(2.5f, 10.0f, 1, asParent, "fire_playerdamage", ePlayerDamageMedium);
 				return true;
 			}
 			return true;

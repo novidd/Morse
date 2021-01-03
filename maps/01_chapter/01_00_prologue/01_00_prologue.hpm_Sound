@@ -1,7 +1,8 @@
 <HPLMapTrack_Sound ID="90E0301C3CDE4BAFC680DBE72BA0073B8F13F3FB" MajorVersion="1" MinorVersion="1">
     <Section Name="12450711482325857532">
         <Objects>
-            <Sound ID="268441264" Name="Sound_1" CreStamp="1606319331" ModStamp="1606334759" WorldPos="-0.49634 2.74847 -309.5" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="player/tools/rift/rift_energy" MinDistance="1" MaxDistance="30" Volume="1" Active="true" UseCustomProperties="true" UID="16 3343 268441264" />
+            <Sound ID="268441642" Name="Sound_1" CreStamp="1606319331" ModStamp="1606334759" WorldPos="-0.49634 2.74847 -309.5" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="player/tools/rift/rift_energy" MinDistance="1" MaxDistance="30" Volume="1" Active="true" UseCustomProperties="true" UID="16 3343 268441642" />
+            <Sound ID="268441643" Name="Sound_Wind_1" CreStamp="1609602784" ModStamp="1609603004" WorldPos="68.75 23 113" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="level_amb_shared/amb/sweeteners/01_02_caves/wind_roof" MinDistance="5" MaxDistance="15" Volume="1" Active="true" UseCustomProperties="true" UID="16 6303 268441643" />
         </Objects>
     </Section>
     <Section Name="9993333931400956225">
@@ -9,7 +10,7 @@
     </Section>
     <Section Name="570198258105585246">
         <Objects>
-            <Sound ID="301990401" Name="Sound_Wind_1" CreStamp="1609602784" ModStamp="1609603004" WorldPos="68.75 23 113" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="level_amb_shared/amb/sweeteners/01_02_caves/wind_roof" MinDistance="5" MaxDistance="15" Volume="1" Active="true" UseCustomProperties="true" UID="18 6303 301990401" />
+            <Sound ID="301989890" Name="Sound_Radio_Static" CreStamp="1609626571" ModStamp="1609693436" WorldPos="-0.514 22.0073 28.577" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="level_entity_shared/radio/radio_static" MinDistance="1" MaxDistance="8" Volume="1" Active="true" UseCustomProperties="true" UID="18 6527 301989890" />
         </Objects>
     </Section>
 </HPLMapTrack_Sound>

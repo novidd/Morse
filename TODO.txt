@@ -1,0 +1,33 @@
+GENERAL:
+
+	TODO:
+	 * In the loading screens ask the player personal questions (refer to them as "you"): "Why should you care?".
+	 * Have miscellaneous stats in the credits at end of mod.
+ 
+MAPS:
+
+	01_00_prologue:
+
+		LEVEL:
+			TODO:
+			 * Add cobwebs inside the shed.
+			 * Add grass undergrowth in the forest trail.
+			 * Add stones/debris around the forest trail.
+			 * Add bear traps in the deep forest.
+			 * Add a pointlight on important entities.
+				* telegraph key
+				* lantern
+				* oil barrel(s)
+				* notes
+			* Add the well in the early deep forest path, where the player character goes to get clean, purified water.
+			* In the early deep forest path there is a sign that points toward a hiking path (player cant go there).
+			* Place an electrified fence in the deep forest path close to the mine.
+			* To get access to the path to the mine, the player has to throw water from a bucket on the electrified fence to make it safe to climb.
+			* In the deep forest path close to the mine there is a blocked path that leads to the abandoned mining village.
+			
+		SCRIPTS:
+			TODO:
+			 * When using the telegraph key play a morse code sound effect/display a text onscreen saying that it doesn't work.
+			 * Add the ability to disable/enable the radio transmitter.
+			 * Add so the player can choose to put the fire in the camp or keep it going. (Have miscellaneous stats in the credits at end of mod).
+			 * Add interactability to empty water kegs/barrels.

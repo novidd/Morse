@@ -2,4 +2,8 @@
 	<CATEGORY Name="Hints">
 		<Entry Name="HintIntroPlayerMove">Hold $Input{Forward} to stand up.</Entry>
 	</CATEGORY>
+	
+	<CATEGORY Name="Levels">
+		<Entry Name="01-00-prologue">The Prologue</Entry>
+	</CATEGORY>
 </LANGUAGE>

@@ -28,11 +28,17 @@
 
 shared enum ePlayerDamageType
 {
-	ePlayerDamageSmall,
-	ePlayerDamageMedium,
-	ePlayerDamageLarge
+	ePlayerDamageSmall, // 0
+	ePlayerDamageMedium, // 1
+	ePlayerDamageLarge // 2
 }
 
+shared enum eLanternOilType
+{
+	eOilSmall,
+	eOilMedium,
+	eOilLarge
+}
 
 //////////////////////////////////////////////////////////////////////////////////////////
 // ==============
@@ -46,22 +52,26 @@ shared enum ePlayerDamageType
 	
 	//-------------------------------------------------------
 	/**
-	 * Set a certian amount of matches in the player inventory.
-	 * 
-	 * player/emotes/pain_small
-	 * player/emotes/pain_med
-	 * player/emotes/pain_large
+	 * Makes the player take damage and plays a reaction scream sound effect.
 	 * 
 	 * @param float afAmount, how much damage to do to the player.
 	 * @param float afMaxFear, max fear level the damage can cause.
 	 * @param int alType, the type of damage, which damage effect should be applied to the screen.
 	 * @param String asSource, the name of the entity doing the damage.
-	 * @param String asSoundname, the internal name of the sound ().
-	 * @param ePlayerDamageType alType, the name of the entity doing the damage.
+	 * @param String asSoundname, the internal name of the sound (can later be used to stop the sound, etc).
+	 * @param ePlayerDamageType alType, the type of reaction scream sound to play, must be ePlayerDamage[Type].
 	**/
-	void Player_GiveDamageAndSound(float afAmount, float afMaxFear, int alEffectType, const tString &in asSource, const tString &in asSoundName, ePlayerDamageType alDamageType)
+	void Player_GiveDamageAndSound(float afAmount, float afMaxFear, int alEffectType, const tString &in asSource,
+									const tString &in asSoundName, ePlayerDamageType alDamageType)
 	{
+		const array<tString> mvSoundFiles = {"player/emotes/pain_small", "player/emotes/pain_med", "player/emotes/pain_large"};
 		
+		Player_GiveDamage(afAmount, afMaxFear, alEffectType, asSource);
+		
+		if (!Sound_Exists(asSoundName))
+		{
+			Sound_CreateAtEntity(asSoundName, mvSoundFiles[alDamageType], "player");
+		}
 	}
 	
 	//-------------------------------------------------------
@@ -74,7 +84,7 @@ shared enum ePlayerDamageType
 	 * @param String asEntity, the entity/trigger area interacted with to get the uservar from, and the source to play the extract_oil sound. 
 	 * @param String asOilType, the type of oil to give the player, must either be "ModernOil" (small) / "HerbertOil" (medium) / "AlchemistOil" (large).  
 	**/
-	void ExtractOil(const tString &in asEntity, const tString &in asOilType)
+	void ExtractOil(const tString &in asEntity, eLanternOilType alOilType)
 	{
 		// Checks if uservar is a valid integer
 		if (Entity_GetVarInt(asEntity, "") <= 0)
@@ -83,12 +93,14 @@ shared enum ePlayerDamageType
 			return;
 		}
 		
-		// Checks if asOilType is a valid oil type
-		if (asOilType != "ModernOil" && asOilType != "HerbertOil" && asOilType != "AlchemistOil")
-		{
-			Error(asOilType + " is not a valid oil type, it must either be 'ModernOil' (small) / 'HerbertOil' (medium) / 'AlchemistOil' (large)");
-			return;
-		}
+		// Checks if alOilType is a valid oil type
+		//if (asOilType != "ModernOil" && asOilType != "HerbertOil" && asOilType != "AlchemistOil")
+		//{
+		//	Error(asOilType + " is not a valid oil type, it must either be 'ModernOil' (small) / 'HerbertOil' (medium) / 'AlchemistOil' (large)");
+		//	return;
+		//}
+		
+		const array<tString> msOilTypes = {"ModernOil", "HerbertOil", "AlchemistOil"};
 		
 		// Checks if uservar = 1, if true, the oil barrel is empty
 		if (Entity_GetVarInt(asEntity, "") == 1)
@@ -99,7 +111,7 @@ shared enum ePlayerDamageType
 		else if (Entity_GetVarInt(asEntity, "") > 1)
 		{
 			Entity_SetVarInt(asEntity, "", Entity_GetVarInt(asEntity, "") - 1);
-			Item_AddToInventory(asOilType, true);
+			Item_AddToInventory(msOilTypes[alOilType], true);
 			Sound_CreateAtEntity("extract_oil", "morse_player/UI/extract_oil/extract_oil_fill", asEntity, .1f, false, .5f);
 			return;
 		}
@@ -130,8 +142,8 @@ shared enum ePlayerDamageType
 	**/
 	void Match_Add(int alAmount)
 	{
-		int mlMatchesCount = Matches_GetCount();
-		int mlMatchesSum = mlMatchesCount + alAmount;
+		const int mlMatchesCount = Matches_GetCount();
+		const int mlMatchesSum = mlMatchesCount + alAmount;
 		
 		if (alAmount <= 0)
 		{
