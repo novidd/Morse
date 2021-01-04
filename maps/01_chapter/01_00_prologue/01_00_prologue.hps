@@ -741,6 +741,7 @@ class cScrMap : iScrMap
 		/////////////////////////////////////////
 		// Event B *PLAYER INTERACTS WITH TELEGRAPH KEY*
 		//{//////////////////////////////////////
+		
 
 		//-------------------------------------------------------
 
@@ -749,6 +750,14 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 
 		/*Put any functions that are only used in Scene 2, Event B here.*/
+		
+		void TelegraphKey_OnConnectionStateChange(const tString &in asEntity, int alState)
+		{
+			if (alState == -1)
+			{
+				
+			}
+		}
 		
 		//-------------------------------------------------------
 
