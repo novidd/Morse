@@ -47,7 +47,34 @@ shared enum eLanternOilType
 //{///////////////////////////////////////////////////////////////////////////////////////
 
 	/////////////////////////////////////////
-	// Gameplay
+	// LIGHTS
+	//{//////////////////////////////////////
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Makes the player take damage and plays a reaction scream sound effect.
+	 * 
+	 * @param float afAmount, how much damage to do to the player.
+	**/
+	void Light_FadeBrightnessToBool(const tString &in asLightName, float afMax, float afMin, float afTime, bool abIncrease)
+	{
+		if (abIncrease) // If brightness should increase
+		{
+			Light_FadeBrightnessTo(asLightName, afMax, afTime);
+		}
+		else // If brightness should decrease
+		{
+			Light_FadeBrightnessTo(asLightName, afMin, afTime);
+		}
+	}
+	
+	//-------------------------------------------------------
+	
+	//} END LIGHTS
+	
+	/////////////////////////////////////////
+	// GAMEPLAY
 	//{//////////////////////////////////////
 	
 	//-------------------------------------------------------
@@ -168,3 +195,5 @@ shared enum eLanternOilType
 	}
 	
 	//-------------------------------------------------------
+	
+	//} END GAMEPLAY

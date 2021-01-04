@@ -35,6 +35,8 @@ cStamina_System staminaSystem = Player_StaminaSystemCreateInstance();
 // Variables
 const tString msRadioTransmissionMorse = "radio_transmission_morse";
 const tString msRadioElectricity = "radio_electrcity";
+
+const float mfHighlightingTime = 1.f;
  
 //--------------------------------------------------
  
@@ -91,10 +93,12 @@ class cScrMap : iScrMap
 	void OnStart()
 	{	// Old skybox hex color: 43AFE1FF
 		
-		// Any general setup of script / entities
+		// Variables
 		bool mbStartIntro = true;
 		cScript_SetGlobalVarBool("IsCampfireLit", true);
+		cScript_SetGlobalVarBool("IsBatteryDead", false);
 		
+		// Entity
 		Entity_AddForce("roman_personal_dice_*", cVector3f(-5.f, 50.f, -5.f), false, true); // Add force to dice blocks
 		
 		// Sounds
@@ -137,6 +141,8 @@ class cScrMap : iScrMap
 	{	
 		Game_AutoSave();
 		Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
+		
+		Light_FadeBrightnessTo("shed_desk_highlight_*", 0.f, .1f);
 	}
 
 	//-------------------------------------------------------
@@ -680,6 +686,14 @@ class cScrMap : iScrMap
 			return;
 		}
 		
+		bool ShedHighlighting_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			bool mbEnableHighlighting = alState == 1;
+			
+			Light_FadeBrightnessToBool("shed_desk_highlight_*", 1.f, 0.f, mfHighlightingTime, mbEnableHighlighting);
+			return true;
+		}
+		
 		//-------------------------------------------------------
 		
 		//} END General	
@@ -708,14 +722,16 @@ class cScrMap : iScrMap
 			// If radio is off
 			if (!Entity_GetVarBool(asEntity, ""))
 			{
-				Sound_Fade(msRadioTransmissionMorse, .0f, 0.1f);
+				//Sound_Fade(msRadioTransmissionMorse, .0f, 0.1f);
+				Sound_Stop(msRadioTransmissionMorse, .1f);
 				
 				Sound_Stop(msRadioElectricity, .1f);
 				Sound_Stop("Sound_Radio_Static", .1f);
 			}
 			else // If radio is on
 			{
-				Sound_Fade(msRadioTransmissionMorse, .1f, 2.0f);
+				//Sound_Fade(msRadioTransmissionMorse, .1f, 2.0f);
+				Sound_CreateAtEntity(msRadioTransmissionMorse, "morse_events/radio/radio_transmission", "radio_transmitter_transmission", 0.f, false, .1f);
 				
 				Sound_CreateAtEntity(msRadioElectricity, "02_04_living_quarters/scare_events/light_scare/spark_on", "radio_transmitter", .0f, false, .05f);
 				Sound_Play("Sound_Radio_Static", .1f);
@@ -755,8 +771,29 @@ class cScrMap : iScrMap
 		{
 			if (alState == -1)
 			{
+				Sound_Play("Sound_Telegraph_Key_1", .0f);
+				
+				if (!cScript_GetGlobalVarBool("IsBatteryDead"))
+				{
+					cScript_SetGlobalVarBool("IsBatteryDead", true);
+					
+					Sound_Play("Sound_Telegraph_Key_Battery_Spark", 0.f);
+					
+					Light_SetBrightness("telegraph_key_battery_light_*", 1.f);
+					Light_SetFlickerActive("telegraph_key_battery_light_1", true);
+					Map_AddTimer("telegraph_key_battery_light_", .25f, "DisableSparkLight_OnTimer");
+					
+					ParticleSystem_CreateAtEntity("", "sparks_tiny.ps", "telegraph_key_battery_spark", true);
+					//ParticleSystem_CreateAtEntityExt("", "smoke_steam_oneshot_tiny.ps", "telegraph_key_battery_smoke", true, cColor(0, 0, 0, 0));
+				}
 				
 			}
+		}
+		
+		void DisableSparkLight_OnTimer(const tString &in asTimer)
+		{
+			Light_SetBrightness(asTimer + "*", 0.f);
+			Light_SetFlickerActive(asTimer + "1", false);
 		}
 		
 		//-------------------------------------------------------
@@ -779,6 +816,8 @@ class cScrMap : iScrMap
 		{
 			// Run a timer because Lantern_SetAmount() cannot set oil amount on a lantern that does not yet exist
 			Map_AddTimer("", .05f, "SetLanternAmount_OnTimer");
+			
+			Light_FadeBrightnessTo("shed_lantern_highlight_1", 0.f, 5.f);
 			
 			// Play oneshot music
 			return;
