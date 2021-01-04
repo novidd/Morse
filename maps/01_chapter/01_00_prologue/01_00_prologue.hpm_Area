@@ -936,12 +936,12 @@
                     <Var ObjectId="301989895" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="301989896" Name="radio_transmitter_button" CreStamp="1609696869" ModStamp="1609698260" WorldPos="-0.426784 21.8301 28.5178" Rotation="0 1.444 0" Scale="0.0699635 0.0353527 0.0200543" Active="true" Mesh="" UID="18 6540 301989896" AreaType="Trigger">
+            <Area ID="301989896" Name="radio_transmitter_button" CreStamp="1609696869" ModStamp="1609710553" WorldPos="-0.426784 21.8301 28.5178" Rotation="0 1.444 0" Scale="0.0597591 0.0353527 0.0205395" Active="true" Mesh="" UID="18 6540 301989896" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="301989896" Name="Note" Value="" />
                     <Var ObjectId="301989896" Name="BlocksLineOfSight" Value="false" />
                     <Var ObjectId="301989896" Name="EventInstanceTag" Value="" />
-                    <Var ObjectId="301989896" Name="UserVar" Value="" />
+                    <Var ObjectId="301989896" Name="UserVar" Value="1" />
                     <Var ObjectId="301989896" Name="Static" Value="false" />
                     <Var ObjectId="301989896" Name="QuickSave" Value="false" />
                     <Var ObjectId="301989896" Name="FullGameSave" Value="false" />

@@ -1,0 +1,40 @@
+Warning: libpng warning: Interlace handling should be turned on when using png_read_image
+Warning: libpng warning: Interlace handling should be turned on when using png_read_image
+Warning: libpng warning: Interlace handling should be turned on when using png_read_image
+Warning: libpng warning: Interlace handling should be turned on when using png_read_image
+Warning: libpng warning: Interlace handling should be turned on when using png_read_image
+Warning: QPainter::begin: Paint device returned engine == 0, type: 1
+Warning: QPainter::setPen: Painter not active
+Warning: QPainter::setBrush: Painter not active
+Warning: QPainter::setRenderHint: Painter must be active to set rendering hints
+Warning: QPainter::setPen: Painter not active
+Warning: libpng warning: Interlace handling should be turned on when using png_read_image
+Debug: "00:02:02 c:\jk\workspace\build__4.44__designer_win\fmod4\tools\fmod_designer\src\eventform.ui.h:1638 BZ: Add Event Group" 
+Debug: "00:17:35 c:\jk\workspace\build__4.44__designer_win\fmod4\tools\fmod_designer\src\eventform.ui.h:1529 HH: Add Simple Event" 
+Debug: "00:17:40 ..\..\src\simpleeventcontroller.cpp:1741 IS: Add Sound to Playlist" 
+Debug: "00:17:48 ..\..\src\propertyeditor.cpp:4234 ER: Set Mode" 
+Debug: "00:17:54 ..\..\src\propertyeditor.cpp:2619 EO: Set x 3D Max Distance" 
+Debug: 
+Building project 'morse_entity'...
+Debug: Building project C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\entity\morse_entity.fev...
+Debug: Unique sound defs 1/3
+Debug: Retrieving sound file info...
+Debug: Retrieving reverb info...
+Debug: FEV file written ok
+Debug: Unique Envelope Points: 0 of 0
+Debug: Unique Strings: 215 characters of 215
+Debug: Caching sound file details for ''...
+Debug: src_sounds\button_interact.ogg
+Debug: src_sounds\oil_tank_empty.ogg
+Debug: src_sounds\oil_tank_fill.ogg
+Debug: Building 'morse_entity_bank01.fsb'
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\entity\src_sounds\oil_tank_empty.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\entity\src_sounds\oil_tank_fill.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\entity\src_sounds\button_interact.ogg
+Debug: Writing FSB...
+Debug: Finished building FSB
+Debug: 
+Debug: 
+Summary of build:
+SUCCESS: C:/Program Files (x86)/Steam/steamapps/common/Amnesia Rebirth/mods/Morse/assets/sounds/entity/morse_entity.fev
+SUCCESS: morse_entity_bank01.fsb

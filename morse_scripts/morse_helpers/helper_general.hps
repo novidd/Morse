@@ -105,14 +105,14 @@ shared enum eLanternOilType
 		// Checks if uservar = 1, if true, the oil barrel is empty
 		if (Entity_GetVarInt(asEntity, "") == 1)
 		{
-			Sound_CreateAtEntity("extract_oil", "morse_player/UI/extract_oil/extract_oil_empty", asEntity, .1f, false, .5f);
+			Sound_CreateAtEntity("extract_oil", "morse_entity/interact/extract_oil/extract_oil_empty", asEntity, .1f, false, .5f);
 			return;
 		}// Checks if uservar > 1, if true, the oil barrel is not empty and the player gets some oil
 		else if (Entity_GetVarInt(asEntity, "") > 1)
 		{
 			Entity_SetVarInt(asEntity, "", Entity_GetVarInt(asEntity, "") - 1);
 			Item_AddToInventory(msOilTypes[alOilType], true);
-			Sound_CreateAtEntity("extract_oil", "morse_player/UI/extract_oil/extract_oil_fill", asEntity, .1f, false, .5f);
+			Sound_CreateAtEntity("extract_oil", "morse_entity/interact/extract_oil/extract_oil_fill", asEntity, .1f, false, .5f);
 			return;
 		}
 	}

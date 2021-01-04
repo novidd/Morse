@@ -31,6 +31,10 @@
 
 // Create instance of the stamina system
 cStamina_System staminaSystem = Player_StaminaSystemCreateInstance();
+
+// Variables
+const tString msRadioTransmissionMorse = "radio_transmission_morse";
+const tString msRadioElectricity = "radio_electrcity";
  
 //--------------------------------------------------
  
@@ -94,7 +98,8 @@ class cScrMap : iScrMap
 		Entity_AddForce("roman_personal_dice_*", cVector3f(-5.f, 50.f, -5.f), false, true); // Add force to dice blocks
 		
 		// Sounds
-		//Sound_CreateAtEntity("", "morse_events/radio/radio_transmission", "radio_transmitter_transmission", 0.f, false, .1f);
+		Sound_CreateAtEntity(msRadioTransmissionMorse, "morse_events/radio/radio_transmission", "radio_transmitter_transmission", 0.f, false, .1f);
+		Sound_CreateAtEntity(msRadioElectricity, "02_04_living_quarters/scare_events/light_scare/spark_on", "radio_transmitter", .0f, false, .05f);
 		
 		/////////////////////////
 		// Debug
@@ -672,6 +677,7 @@ class cScrMap : iScrMap
 			cLux_AddDebugMessage("Shed door is locked: " + bLocked);
 			SwingDoor_SetLocked(sDoor, bLocked, true);
 			SwingDoor_SetBlocked(sDoor, bLocked, true);
+			return;
 		}
 		
 		//-------------------------------------------------------
@@ -692,14 +698,39 @@ class cScrMap : iScrMap
 		
 		void RadioButton_OnPlayerInteract(const tString &in asEntity)
 		{
-			cLux_AddDebugMessage("Clicked: "+asEntity);
-			//Sound_CreateAtEntity("", "morse_events/radio/radio_transmission", "radio_transmitter");
+			Entity_SetVarBool(asEntity, "", !Entity_GetVarBool(asEntity, ""));
+			
+			Light_SetVisible(asEntity + "_light", Entity_GetVarBool(asEntity, ""));
+			
+			Sound_CreateAtEntity("", "morse_entity/interact/button/button_interact", asEntity, .0f, false, .35f);
+			Sound_CreateAtEntity("radio_crackling", "02_04_living_quarters/radio/doctor_talk_end_world", "radio_transmitter", .0f, false, 2.0f);
+			
+			// If radio is off
+			if (!Entity_GetVarBool(asEntity, ""))
+			{
+				Sound_Fade(msRadioTransmissionMorse, .0f, 0.1f);
+				
+				Sound_Stop(msRadioElectricity, .1f);
+				Sound_Stop("Sound_Radio_Static", .1f);
+			}
+			else // If radio is on
+			{
+				Sound_Fade(msRadioTransmissionMorse, .1f, 2.0f);
+				
+				Sound_CreateAtEntity(msRadioElectricity, "02_04_living_quarters/scare_events/light_scare/spark_on", "radio_transmitter", .0f, false, .05f);
+				Sound_Play("Sound_Radio_Static", .1f);
+			}
 		}
 		
 		bool RadioSetUserVar_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
 		{
 			Entity_SetVarBool(asChild, "", !Entity_GetVarBool(asChild, ""));
-			Light_SetVisible(asChild + "_button_light", !Entity_GetVarBool(asChild, ""));
+			
+			if (Entity_GetVarBool("radio_transmitter_button", ""))
+			{
+				Light_SetVisible(asChild + "_button_light", !Entity_GetVarBool(asChild, ""));
+				return true;
+			}
 			return true;
 		}
 		
@@ -741,6 +772,7 @@ class cScrMap : iScrMap
 			Map_AddTimer("", .05f, "SetLanternAmount_OnTimer");
 			
 			// Play oneshot music
+			return;
 		}
 		
 		//-------------------------------------------------------
@@ -748,6 +780,7 @@ class cScrMap : iScrMap
 		void SetLanternAmount_OnTimer(const tString &in asTimer)
 		{
 			Lantern_SetAmount(3);
+			return;
 		}
 		
 		//-------------------------------------------------------
@@ -777,6 +810,7 @@ class cScrMap : iScrMap
 		void ExtractOil_OnPlayerInteract(const tString &in asEntity)
 		{
 			ExtractOil(asEntity, eOilSmall);
+			return;
 		}
 		
 		//-------------------------------------------------------
