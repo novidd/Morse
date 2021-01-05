@@ -21,16 +21,13 @@
 #include "custom/helpers/helper_props_custom.hps"
 
 // Morse helpers
-#include "morse_scripts/morse_helpers/helper_general.hps"
-#include "morse_scripts/morse_helpers/helper_stamina.hps"
+#include "morse_scripts/helpers/helper_general.hps"
+#include "morse_scripts/helpers/helper_stamina.hps"
 
 //--------------------------------------------------
  
 /*Place any global values here. These must be const variables as they will not be saved*/
 /*This is also the place for enums and classes, but these should be avoided whenever possible*/
-
-// Create instance of the stamina system
-cStamina_System staminaSystem = Player_StaminaSystemCreateInstance();
 
 // Variables
 const tString msRadioTransmissionMorse = "radio_transmission_morse";
@@ -62,8 +59,7 @@ class cScrMap : iScrMap
 		Player_SetMaxHealth(100.0f);
 		Player_SetHealth(100.0f);
 		
-		// Enable stamina system
-		staminaSystem.SetStaminaSystemActive(false);
+		Stamina_SetStaminaSystemActive(true);
 		
 		// Put display name entry in english.lang / Levels
 		GetBase().SetDisplayNameEntry("01-00-prologue");
@@ -160,7 +156,7 @@ class cScrMap : iScrMap
 	// Runs on every frame
 	void Update(float afTimeStep)
 	{
-		//staminaSystem.StartStaminaSystem(afTimeStep);
+		
 	}
 
 	//-------------------------------------------------------
@@ -231,7 +227,7 @@ class cScrMap : iScrMap
 	// Draw gui elements
 	void OnGui(float afTimeStep)
 	{
-		staminaSystem.DrawDebugInfo();
+		
 	}
 	
 	//-------------------------------------------------------
