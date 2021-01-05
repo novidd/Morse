@@ -21,6 +21,8 @@ MAPS:
 			 * In the early deep forest path there is a sign that points toward a hiking path (player cant go there).
 			 * Place an electrified fence in the deep forest path close to the mine.
 			 * In the deep forest path close to the mine there is a blocked path that leads to the abandoned mining village.
+			 * Add events/sound effects that play throughout the forest (bushes moving, branches snapping, animal sounds).
+			 * Add a campfire smoke particle system.
 			
 		SCRIPTS:
 			TODO:
@@ -28,3 +30,4 @@ MAPS:
 			 * Add interactability to empty water kegs/barrels.
 			 * To get access to the exposed wire the player has to break an electricity box with a rock(s) (throw mult. times).
 			 * To get access to the path to the mine, the player has to expose the wire with water to make it safe to climb.
+			 * Properly write modules for the stamina system and the general scripts.

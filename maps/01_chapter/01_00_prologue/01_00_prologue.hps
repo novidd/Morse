@@ -59,7 +59,7 @@ class cScrMap : iScrMap
 		// Player settings
 		PlayerBody_SetActive(true);
 		Player_SetVertigoActive(false);
-		Player_SetMaxHealth(100.0);
+		Player_SetMaxHealth(100.0f);
 		Player_SetHealth(100.0f);
 		
 		// Enable stamina system
