@@ -189,6 +189,8 @@ class cScrStaminaHandler : iScrUserModule, iScrUserModule_Interface
 		{	
 			mfStaminaRegainMulCounter += 0.005f+mfStaminaRegainMul/10.0f;
 			mfStaminaTotal += 0.05f*mfStaminaRegainMulCounter;
+			
+			if (mfStaminaTotal > mfStaminaMax) { mfStaminaTotal = mfStaminaMax; }
 			return;
 		}
 	}
