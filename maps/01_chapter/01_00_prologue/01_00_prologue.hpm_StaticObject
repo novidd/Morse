@@ -854,7 +854,82 @@
         <Objects />
     </Section>
     <Section Name="570198258105585246">
-        <FileIndex_StaticObjects NumOfFiles="0" />
-        <Objects />
+        <FileIndex_StaticObjects NumOfFiles="56">
+            <File Id="0" Path="static_objects/beduin/bedouin_town_bricks/bedouin_town_bricks_02.dae" />
+            <File Id="1" Path="static_objects/beduin/town_walls/town_wall_upper_bricks/town_wall_upper_bricks_large_01.dae" />
+            <File Id="2" Path="static_objects/caves/cave_rocks/cave_rocks_medium/cave_rocks_medium_01.dae" />
+            <File Id="3" Path="static_objects/caves/cave_stalactites/cave_stalactites_quality02/cave_stalactites_quality02.dae" />
+            <File Id="4" Path="static_objects/cistern/walls/cistern_wall_doorway_arch02.dae" />
+            <File Id="5" Path="static_objects/cistern/walls/cistern_wall_doorway_arch01_frame_only_broken.dae" />
+            <File Id="6" Path="static_objects/cistern/walls/cistern_wall_broken01.dae" />
+            <File Id="7" Path="static_objects/cistern/walls/cistern_wall_arch03_turn.dae" />
+            <File Id="8" Path="static_objects/cistern/walls/cistern_wall_doorway_arch01_frame_only.dae" />
+            <File Id="9" Path="static_objects/cistern/walls/wall_cistern_ghoul_hole/wall_cistern_ghoul_hole.dae" />
+            <File Id="10" Path="static_objects/cistern/walls/cistern_wall_arch02_single.dae" />
+            <File Id="11" Path="static_objects/cistern/walls/cistern_tube_slice.dae" />
+            <File Id="12" Path="static_objects/cistern/walls/cistern_wall_arch01.dae" />
+            <File Id="13" Path="static_objects/cistern/walls/cistern_tube_slice_small.dae" />
+            <File Id="14" Path="static_objects/cistern/walls/cistern_half_tube.dae" />
+            <File Id="15" Path="static_objects/cistern/pipes/pipe_straight_pipe_slide_floodgate_wall.dae" />
+            <File Id="16" Path="static_objects/cistern/ceiling/cistern_cupola_roof.dae" />
+            <File Id="17" Path="static_objects/cistern/ceiling/ceiling_arched_lower_cistern_segment_piece_small.dae" />
+            <File Id="18" Path="static_objects/cistern/ceiling/ceiling_arched_lower_cistern.dae" />
+            <File Id="19" Path="static_objects/cistern/arabic_fort_cistern/arabic_fort_cistern_wall_alcove_01.dae" />
+            <File Id="20" Path="static_objects/cistern/arabic_fort_cistern/arabic_fort_cistern_wall_default.dae" />
+            <File Id="21" Path="static_objects/cistern/ceiling/ceiling_arched.dae" />
+            <File Id="22" Path="static_objects/cistern/ceiling/ceiling_arched_4way.dae" />
+            <File Id="23" Path="static_objects/cistern/pillar/cistern_wall_pillar01_top_straight.dae" />
+            <File Id="24" Path="static_objects/cistern/pillar/cistern_wall_pillar01.dae" />
+            <File Id="25" Path="static_objects/french_colonization/prison/prison_support_beam_single/prison_support_beam_single.dae" />
+            <File Id="26" Path="static_objects/french_colonization/prison/prison_bars_wall/prison_bars_wall.dae" />
+            <File Id="27" Path="static_objects/paris_ending/floor/shed_floor.dae" />
+            <File Id="28" Path="static_objects/roman/roman_arch_brick/roman_arch_brick.dae" />
+            <File Id="29" Path="static_objects/roman/debris/roof_plaster_coffered_debris01.dae" />
+            <File Id="30" Path="static_objects/roman/roman_door_brick_frame/roman_door_brick_frame.dae" />
+            <File Id="31" Path="static_objects/roman/roman_pillar_doric/roman_pillar_doric.dae" />
+            <File Id="32" Path="static_objects/roman/roman_pillar_ionic/roman_pillar_ionic.dae" />
+            <File Id="33" Path="static_objects/roman/roman_plaster_door_frame/roman_plaster_door_frame.dae" />
+            <File Id="34" Path="static_objects/roman/roof_brick_arch/roof_arch_brick_broken.dae" />
+            <File Id="35" Path="static_objects/roman/roof_brick_arch/roof_arch_brick_broken02.dae" />
+            <File Id="36" Path="static_objects/roman/roof_brick_arch/roof_brick_arch.dae" />
+            <File Id="37" Path="static_objects/roman/roof_brick_arch/roof_brick_arch_4way.dae" />
+            <File Id="38" Path="static_objects/roman/walls/wall_stone_diag.dae" />
+            <File Id="39" Path="static_objects/roman/walls/wall_stone_diag_broken01.dae" />
+            <File Id="40" Path="static_objects/roman/walls/wall_stone_diag_welder_full.dae" />
+            <File Id="41" Path="static_objects/roman/walls/wall_stone_welder.dae" />
+            <File Id="42" Path="static_objects/roman/walls/wall_stone_diag_welder.dae" />
+            <File Id="43" Path="static_objects/taureg/walls/wall_taureg_blocks01_detail_02.dae" />
+            <File Id="44" Path="static_objects/taureg/walls/wall_taureg_broken_peekhole.dae" />
+            <File Id="45" Path="static_objects/taureg/walls/wall_taureg_blocks03.dae" />
+            <File Id="46" Path="static_objects/taureg/walls/taureg_straight.dae" />
+            <File Id="47" Path="static_objects/taureg/walls/taureg_grave_small.dae" />
+            <File Id="48" Path="static_objects/taureg/walls/taureg_pillar.dae" />
+            <File Id="49" Path="static_objects/taureg/walls/taureg_pillar_broken.dae" />
+            <File Id="50" Path="static_objects/taureg/walls/wall_taureg_blocks01_detail_03.dae" />
+            <File Id="51" Path="static_objects/taureg/walls/wall_taureg_blocks01.dae" />
+            <File Id="52" Path="static_objects/taureg/walls/taureg_straight_ladder.dae" />
+            <File Id="53" Path="static_objects/taureg/walls/taureg_straight_doorway.dae" />
+            <File Id="54" Path="static_objects/taureg/walls/taureg_convex_small.dae" />
+            <File Id="55" Path="static_objects/taureg/walls/wall_taureg_blocks02.dae" />
+        </FileIndex_StaticObjects>
+        <Objects>
+            <StaticObject ID="301990341" Name="french_colonization_prison_prison_support_beam_single_prison_support_beam_single_1" CreStamp="1609872082" ModStamp="1609872675" WorldPos="112.75 1 143.75" Rotation="0 -0.785398 0" Scale="1 1 1" FileIndex="25" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6304 301990341" />
+            <StaticObject ID="301990394" Name="taureg_walls_wall_taureg_broken_peekhole_1" CreStamp="1609873543" ModStamp="1609874200" WorldPos="117.5 0 136" Rotation="0 0.785398 0" Scale="1.5 2.25 1" FileIndex="44" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6303 301990394" />
+            <StaticObject ID="301990395" Name="taureg_walls_wall_taureg_broken_peekhole_2" CreStamp="1609873574" ModStamp="1609874435" WorldPos="130.75 0.25 148.75" Rotation="-0 3.92699 -0" Scale="1.5 2.25 1" FileIndex="44" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6299 301990395" />
+            <StaticObject ID="301990398" Name="taureg_walls_wall_taureg_broken_peekhole_3" CreStamp="1609873702" ModStamp="1609874426" WorldPos="123.25 0 141.5" Rotation="0 0.785398 0" Scale="1.5 1.725 1" FileIndex="44" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6300 301990398" />
+            <StaticObject ID="301990399" Name="taureg_walls_wall_taureg_broken_peekhole_4" CreStamp="1609873714" ModStamp="1609874428" WorldPos="125 0 143.25" Rotation="0 0.785398 0" Scale="1.5 1.725 1" FileIndex="44" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6302 301990399" />
+            <StaticObject ID="301990400" Name="bridge_center_1" CreStamp="1609873759" ModStamp="1609875251" WorldPos="126.25 -3.25 140.25" Rotation="0 -0.261799 0" Scale="1.25 1.25 1.25" FileIndex="48" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6296 301990400" />
+            <StaticObject ID="301990401" Name="taureg_walls_wall_taureg_broken_peekhole_5" CreStamp="1609873896" ModStamp="1609873996" WorldPos="123.25 6 141.5" Rotation="-1.5708 0.785398 0" Scale="1.5 2 1" FileIndex="44" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6301 301990401" />
+            <StaticObject ID="301990402" Name="bridge_center_2" CreStamp="1609873930" ModStamp="1609875251" WorldPos="126.25 1.75 140.25" Rotation="0 -0.2618 0" Scale="1.25 1.25 1.25" FileIndex="49" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6295 301990402" />
+            <StaticObject ID="301990403" Name="taureg_walls_wall_taureg_broken_peekhole_6" CreStamp="1609874022" ModStamp="1609874026" WorldPos="125 6 143.25" Rotation="1.5708 0.785398 0" Scale="1.5 2 1" FileIndex="44" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6297 301990403" />
+            <StaticObject ID="301990404" Name="bridge_center_3" CreStamp="1609874049" ModStamp="1609875261" WorldPos="122 -3.25 144.5" Rotation="0 1.0472 0" Scale="1.25 1.25 1.25" FileIndex="48" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6294 301990404" />
+            <StaticObject ID="301990405" Name="bridge_center_4" CreStamp="1609874049" ModStamp="1609875261" WorldPos="122 1.75 144.5" Rotation="0 1.0472 0" Scale="1.25 1.25 1.25" FileIndex="49" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6298 301990405" />
+            <StaticObject ID="301990406" Name="taureg_walls_wall_taureg_broken_peekhole_7" CreStamp="1609874145" ModStamp="1609874232" WorldPos="120.375 5.75 138.75" Rotation="-1.77636e-15 0.785398 0" Scale="1.5 0.5 1" FileIndex="44" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6293 301990406" />
+            <StaticObject ID="301990413" Name="taureg_walls_wall_taureg_broken_peekhole_8" CreStamp="1609874336" ModStamp="1609874353" WorldPos="127.875 5.75 146" Rotation="-1.77636e-15 0.785398 0" Scale="1.5 0.5 1" FileIndex="44" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6292 301990413" />
+            <StaticObject ID="301990417" Name="taureg_walls_wall_taureg_blocks03_1" CreStamp="1609874837" ModStamp="1609875138" WorldPos="125.25 0 139.5" Rotation="-3.14159 0.735606 -3.14159" Scale="0.75 0.75 0.75" FileIndex="45" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6290 301990417" />
+            <StaticObject ID="301990425" Name="taureg_walls_wall_taureg_blocks03_2" CreStamp="1609875118" ModStamp="1609875140" WorldPos="125.25 0.366511 139.5" Rotation="-3.14159 0.735606 -3.14159" Scale="0.75 0.75 0.75" FileIndex="45" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6288 301990425" />
+            <StaticObject ID="301990426" Name="taureg_walls_wall_taureg_blocks03_3" CreStamp="1609875148" ModStamp="1609875150" WorldPos="125.25 0.741242 139.5" Rotation="-3.14159 0.735606 -3.14159" Scale="0.75 0.75 0.75" FileIndex="45" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6291 301990426" />
+            <StaticObject ID="301990427" Name="taureg_walls_wall_taureg_blocks03_4" CreStamp="1609875150" ModStamp="1609875153" WorldPos="125.25 1.10247 139.5" Rotation="-3.14159 0.735606 -3.14159" Scale="0.75 0.75 0.75" FileIndex="45" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="18 6289 301990427" />
+        </Objects>
     </Section>
 </HPLMapTrack_StaticObject>

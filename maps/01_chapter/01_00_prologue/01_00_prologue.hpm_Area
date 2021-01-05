@@ -1020,6 +1020,12 @@
                     <Var ObjectId="301989911" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
+            <Area ID="301990285" Name="Start_Deep_Forest_Entrance" CreStamp="1609867677" ModStamp="1609867716" WorldPos="122.72 9.14026 91.9816" Rotation="0 -0.0462743 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="18 58 301990285" AreaType="PlayerStart">
+                <UserVariables>
+                    <Var ObjectId="301990285" Name="Note" Value="" />
+                    <Var ObjectId="301990285" Name="Crouching" Value="false" />
+                </UserVariables>
+            </Area>
         </Objects>
     </Section>
 </HPLMapTrack_Area>
