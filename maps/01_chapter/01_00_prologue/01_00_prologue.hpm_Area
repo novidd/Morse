@@ -1026,10 +1026,96 @@
                     <Var ObjectId="301990285" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="301990563" Name="Start_Deep_Forest_Bridge" CreStamp="1609889624" ModStamp="1609889643" WorldPos="113.316 7.89863 130.029" Rotation="0 0.739941 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="18 58 301990563" AreaType="PlayerStart">
+            <Area ID="301990563" Name="Start_Deep_Forest_Bridge" CreStamp="1609889624" ModStamp="1609889643" WorldPos="113.316 7.89863 130.029" Rotation="0 0.739941 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="18 6081 301990563" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="301990563" Name="Note" Value="" />
                     <Var ObjectId="301990563" Name="Crouching" Value="false" />
+                </UserVariables>
+            </Area>
+            <Area ID="301990769" Name="Liquid_3" CreStamp="1609950265" ModStamp="1609961134" WorldPos="118.882 0.809063 137.235" Rotation="0 -0 0" Scale="25 1 25" Active="true" Mesh="" UID="18 71 301990769" AreaType="Liquid">
+                <UserVariables>
+                    <Var ObjectId="301990769" Name="Note" Value="" />
+                    <Var ObjectId="301990769" Name="BlocksLineOfSight" Value="false" />
+                    <Var ObjectId="301990769" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="301990769" Name="UserVar" Value="" />
+                    <Var ObjectId="301990769" Name="Static" Value="false" />
+                    <Var ObjectId="301990769" Name="QuickSave" Value="false" />
+                    <Var ObjectId="301990769" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="301990769" Name="CC_Entities" Value="" />
+                    <Var ObjectId="301990769" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="301990769" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="301990769" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="301990769" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="301990769" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="301990769" Name="Density" Value="100" />
+                    <Var ObjectId="301990769" Name="LinearViscosity" Value="1" />
+                    <Var ObjectId="301990769" Name="AngularViscosity" Value="1" />
+                    <Var ObjectId="301990769" Name="PhysicsMaterial" Value="water" />
+                    <Var ObjectId="301990769" Name="PlayerSpeedMul" Value="0.8" />
+                    <Var ObjectId="301990769" Name="BuoyancyOnPlayerOnly" Value="false" />
+                    <Var ObjectId="301990769" Name="HasWaves" Value="true" />
+                    <Var ObjectId="301990769" Name="WaveAmp" Value="0.04" />
+                    <Var ObjectId="301990769" Name="WaveFreq" Value="3" />
+                    <Var ObjectId="301990769" Name="MaxWaveDistance" Value="25" />
+                    <Var ObjectId="301990769" Name="UpperMaterial" Value="C:/Program Files (x86)/Steam/steamapps/common/Amnesia Rebirth/textures/liquid/water/waterplane_cistern_reflect.mat" />
+                    <Var ObjectId="301990769" Name="LowerMaterial" Value="C:/Program Files (x86)/Steam/steamapps/common/Amnesia Rebirth/textures/liquid/water/waterplane_saltmine_cheap.mat" />
+                    <Var ObjectId="301990769" Name="GridSize" Value="0" />
+                    <Var ObjectId="301990769" Name="TextureTileSize" Value="6" />
+                    <Var ObjectId="301990769" Name="StaticMesh" Value="true" />
+                    <Var ObjectId="301990769" Name="EnvParticlesToClip" Value="" />
+                    <Var ObjectId="301990769" Name="ReflectionColor" Value="1 1 1 1" />
+                    <Var ObjectId="301990769" Name="ReflectionBrightness" Value="1" />
+                    <Var ObjectId="301990769" Name="UseFog" Value="true" />
+                    <Var ObjectId="301990769" Name="FogColor" Value="0.134765625 0.1244735419750213623 0.10581207275390625 1" />
+                    <Var ObjectId="301990769" Name="FogStart" Value="0" />
+                    <Var ObjectId="301990769" Name="FogEnd" Value="6" />
+                    <Var ObjectId="301990769" Name="FogFalloffExp" Value="0.1" />
+                    <Var ObjectId="301990769" Name="FogBrightness" Value="0.1" />
+                    <Var ObjectId="301990769" Name="FogExponential" Value="true" />
+                    <Var ObjectId="301990769" Name="FogDensity" Value="11" />
+                    <Var ObjectId="301990769" Name="FogHeightBased" Value="false" />
+                    <Var ObjectId="301990769" Name="FogHeightDensity" Value="0.25" />
+                    <Var ObjectId="301990769" Name="FogHeightHorizon" Value="1" />
+                    <Var ObjectId="301990769" Name="FogUnderwater" Value="true" />
+                    <Var ObjectId="301990769" Name="FogSkybox" Value="false" />
+                    <Var ObjectId="301990769" Name="EffectOnExit" Value="true" />
+                    <Var ObjectId="301990769" Name="CameraCollideCallback" Value="" />
+                    <Var ObjectId="301990769" Name="CameraEnterEffectPreset" Value="" />
+                    <Var ObjectId="301990769" Name="CameraExitEffectPreset" Value="" />
+                    <Var ObjectId="301990769" Name="UnderwaterLightColor" Value="0.17810821533203125 0.19781427085399627686 0.314453125 1" />
+                </UserVariables>
+            </Area>
+            <Area ID="301990770" Name="Bridge_Soundscape_1" CreStamp="1609950358" ModStamp="1609960859" WorldPos="119.5 2.87438 138" Rotation="0 -0.523599 0" Scale="10 15 26.5" Active="true" Mesh="" UID="18 1355 301990770" AreaType="Soundscape">
+                <UserVariables>
+                    <Var ObjectId="301990770" Name="Note" Value="" />
+                    <Var ObjectId="301990770" Name="UseReverb" Value="true" />
+                    <Var ObjectId="301990770" Name="ReverbType" Value="Off" />
+                    <Var ObjectId="301990770" Name="ReverbPrio" Value="0" />
+                    <Var ObjectId="301990770" Name="ReverbAmount" Value="1" />
+                    <Var ObjectId="301990770" Name="ReverbFadeTime" Value="1" />
+                    <Var ObjectId="301990770" Name="Prio" Value="0" />
+                    <Var ObjectId="301990770" Name="Level" Value="1: Area" />
+                    <Var ObjectId="301990770" Name="BG_Sound" Value="level_amb_shared/amb/background/02_05_cistern/flow_connection" />
+                    <Var ObjectId="301990770" Name="BG_Volume" Value="0.3" />
+                    <Var ObjectId="301990770" Name="BG_FadeInTime" Value="1.5" />
+                    <Var ObjectId="301990770" Name="BG_FadeOutTime" Value="1.5" />
+                    <Var ObjectId="301990770" Name="BG_FadeTransitionSpeed" Value="1" />
+                    <Var ObjectId="301990770" Name="BG_ParentVolMul" Value="1" />
+                    <Var ObjectId="301990770" Name="SoundEnt_InNames" Value="" />
+                    <Var ObjectId="301990770" Name="SoundEnt_OutNames" Value="" />
+                    <Var ObjectId="301990770" Name="SoundEnt_FadeInTime" Value="1" />
+                    <Var ObjectId="301990770" Name="SoundEnt_FadeOutTime" Value="1" />
+                    <Var ObjectId="301990770" Name="SoundPrefixPrio" Value="0" />
+                    <Var ObjectId="301990770" Name="SoundPrefix" Value="[None]" />
+                    <Var ObjectId="301990770" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="301990770" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="301990770" Name="ParentAttachBody" Value="" />
+                </UserVariables>
+            </Area>
+            <Area ID="301990847" Name="Start_Deep_Forest_Bridge_Below" CreStamp="1609957546" ModStamp="1609957575" WorldPos="126.032 1.50872 132.256" Rotation="0 -0.493078 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="18 58 301990847" AreaType="PlayerStart">
+                <UserVariables>
+                    <Var ObjectId="301990847" Name="Note" Value="" />
+                    <Var ObjectId="301990847" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
         </Objects>
