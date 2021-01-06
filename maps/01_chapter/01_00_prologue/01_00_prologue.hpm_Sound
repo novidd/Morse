@@ -1,18 +1,17 @@
 <HPLMapTrack_Sound ID="90E0301C3CDE4BAFC680DBE72BA0073B8F13F3FB" MajorVersion="1" MinorVersion="1">
     <Section Name="12450711482325857532">
         <Objects>
-            <Sound ID="268441644" Name="Sound_1" CreStamp="1606319331" ModStamp="1606334759" WorldPos="-0.49634 2.74847 -309.5" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="player/tools/rift/rift_energy" MinDistance="1" MaxDistance="30" Volume="1" Active="true" UseCustomProperties="true" UID="16 3343 268441644" />
-            <Sound ID="268441645" Name="Sound_Wind_1" CreStamp="1609602784" ModStamp="1609603004" WorldPos="68.75 23 113" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="level_amb_shared/amb/sweeteners/01_02_caves/wind_roof" MinDistance="5" MaxDistance="15" Volume="1" Active="true" UseCustomProperties="true" UID="16 6303 268441645" />
-            <Sound ID="268441646" Name="Sound_Radio_Static" CreStamp="1609626571" ModStamp="1609693436" WorldPos="-0.514 22.0073 28.577" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="level_entity_shared/radio/radio_static" MinDistance="1" MaxDistance="8" Volume="1" Active="true" UseCustomProperties="true" UID="16 6941 268441646" />
+            <Sound ID="268442088" Name="Sound_1" CreStamp="1606319331" ModStamp="1606334759" WorldPos="-0.49634 2.74847 -309.5" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="player/tools/rift/rift_energy" MinDistance="1" MaxDistance="30" Volume="1" Active="true" UseCustomProperties="true" UID="16 3343 268442088" />
+            <Sound ID="268442089" Name="Sound_Wind_1" CreStamp="1609602784" ModStamp="1609603004" WorldPos="68.75 23 113" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="level_amb_shared/amb/sweeteners/01_02_caves/wind_roof" MinDistance="5" MaxDistance="15" Volume="1" Active="true" UseCustomProperties="true" UID="16 7279 268442089" />
+            <Sound ID="268442090" Name="Sound_Radio_Static" CreStamp="1609626571" ModStamp="1609693436" WorldPos="-0.514 22.0073 28.577" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="level_entity_shared/radio/radio_static" MinDistance="1" MaxDistance="8" Volume="1" Active="true" UseCustomProperties="true" UID="16 6941 268442090" />
+            <Sound ID="268442091" Name="Sound_Telegraph_Key_1" CreStamp="1609773308" ModStamp="1609773351" WorldPos="-0.241838 21.7136 29.6263" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="02_04_living_quarters/winch/winch_start" MinDistance="1" MaxDistance="3" Volume="1" Active="true" UseCustomProperties="true" UID="16 7278 268442091" />
+            <Sound ID="268442092" Name="Sound_Telegraph_Key_Battery_Spark" CreStamp="1609778175" ModStamp="1609778565" WorldPos="-0.895 22.145 30.127" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="02_04_living_quarters/scare_events/light_scare/spark_scare" MinDistance="1" MaxDistance="5" Volume="0.5" Active="true" UseCustomProperties="true" UID="16 7277 268442092" />
         </Objects>
     </Section>
     <Section Name="9993333931400956225">
         <Objects />
     </Section>
     <Section Name="570198258105585246">
-        <Objects>
-            <Sound ID="301989888" Name="Sound_Telegraph_Key_1" CreStamp="1609773308" ModStamp="1609773351" WorldPos="-0.241838 21.7136 29.6263" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="02_04_living_quarters/winch/winch_start" MinDistance="1" MaxDistance="3" Volume="1" Active="true" UseCustomProperties="true" UID="18 15 301989888" />
-            <Sound ID="301989912" Name="Sound_Telegraph_Key_Battery_Spark" CreStamp="1609778175" ModStamp="1609778565" WorldPos="-0.895 22.145 30.127" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="02_04_living_quarters/scare_events/light_scare/spark_scare" MinDistance="1" MaxDistance="5" Volume="0.5" Active="true" UseCustomProperties="true" UID="18 39 301989912" />
-        </Objects>
+        <Objects />
     </Section>
 </HPLMapTrack_Sound>
