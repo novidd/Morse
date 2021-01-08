@@ -961,7 +961,9 @@
         <Objects />
     </Section>
     <Section Name="570198258105585246">
-        <FileIndex_StaticObjects NumOfFiles="0" />
+        <FileIndex_StaticObjects NumOfFiles="1">
+            <File Id="0" Path="static_objects/french_colonization/prison/prison_support_beam_single/prison_support_beam_single.dae" />
+        </FileIndex_StaticObjects>
         <Objects />
     </Section>
 </HPLMapTrack_StaticObject>
