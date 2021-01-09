@@ -1019,16 +1019,22 @@
                     <Var ObjectId="268435512" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435513" Name="Start_Deep_Forest_Bridge" CreStamp="1609889624" ModStamp="1609971764" WorldPos="113.75 7.89863 130.029" Rotation="0 0.739941 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 6081 268435513" AreaType="PlayerStart">
+            <Area ID="268435513" Name="Start_Deep_Forest_Bridge" CreStamp="1609889624" ModStamp="1609971764" WorldPos="113.75 7.89863 130.029" Rotation="0 0.739941 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 7604 268435513" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268435513" Name="Note" Value="" />
                     <Var ObjectId="268435513" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435514" Name="Start_Deep_Forest_Bridge_Below" CreStamp="1609957546" ModStamp="1609971760" WorldPos="124.75 1.75 131.75" Rotation="0 -0.754877 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 6956 268435514" AreaType="PlayerStart">
+            <Area ID="268435514" Name="Start_Deep_Forest_Bridge_Below" CreStamp="1609957546" ModStamp="1610208390" WorldPos="123.373 1.75 132.538" Rotation="0 -0.754877 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 6956 268435514" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268435514" Name="Note" Value="" />
                     <Var ObjectId="268435514" Name="Crouching" Value="false" />
+                </UserVariables>
+            </Area>
+            <Area ID="268435515" Name="Start_Deep_Forest_Fence" CreStamp="1610125949" ModStamp="1610214286" WorldPos="128.284 9.25592 172.281" Rotation="0 0.92966 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 6081 268435515" AreaType="PlayerStart">
+                <UserVariables>
+                    <Var ObjectId="268435515" Name="Note" Value="" />
+                    <Var ObjectId="268435515" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
         </Objects>
@@ -1037,13 +1043,6 @@
         <Objects />
     </Section>
     <Section Name="570198258105585246">
-        <Objects>
-            <Area ID="301989977" Name="Start_Deep_Forest_Fence" CreStamp="1610125949" ModStamp="1610126844" WorldPos="132.75 9 168" Rotation="0 1.00174 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="18 6081 301989977" AreaType="PlayerStart">
-                <UserVariables>
-                    <Var ObjectId="301989977" Name="Note" Value="" />
-                    <Var ObjectId="301989977" Name="Crouching" Value="false" />
-                </UserVariables>
-            </Area>
-        </Objects>
+        <Objects />
     </Section>
 </HPLMapTrack_Area>

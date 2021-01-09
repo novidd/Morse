@@ -6,6 +6,8 @@ GENERAL:
 	 * Add a pointlight on important entities.
 	  * oil barrel(s)
 	  * notes
+	  * items
+	  * interactable entities
  
 MAPS:
 
@@ -16,20 +18,12 @@ MAPS:
 			 * Add cobwebs inside the shed.
 			 * Add grass undergrowth in the forest trail (cant do this, level editor bugged).
 			 * Add stones/debris around the forest trail.
-			 * Add bear traps in the deep forest.
-			 * Add the well in the early deep forest path, where the player character goes to get clean, purified water.
-			 * In the early deep forest path there is a sign that points toward a hiking path (player cant go there).
-			 * Place an electrified fence in the deep forest path close to the mine.
-			 * In the deep forest path close to the mine there is a blocked path that leads to the abandoned mining village.
 			 * Add events/sound effects that play throughout the forest (bushes moving, branches snapping, animal sounds).
 			 * Add a campfire smoke particle system.
-			 * Along the southern deep forest trail add a cart that has an arrow on it with some blood.
-			 * 
 			 
 		SCRIPTS:
 			TODO:
 			 * Add so the player can choose to put the fire in the camp or keep it going. (Have miscellaneous stats in the credits at end of mod).
 			 * Add interactability to empty water kegs/barrels.
-			 * After the player enters the deep forest start raining and later add thunder.
-			 * To get access to the exposed wire the player has to break an electricity box with a rock(s) (throw mult. times).
-			 * To get access to the path to the mine, the player has to expose the wire with water to make it safe to climb.
+			 * Later in the camp it starts raining and later add thunder.
+			 * The player gets kidnapped and dragged into the mines by a native americans.
