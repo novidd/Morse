@@ -194,4 +194,24 @@ shared enum eLanternOilType
 	
 	//-------------------------------------------------------
 	
+	/**
+	 * Makes screen either fade in or out that simultaneously plays a microflash sound effect at player
+	 * 
+	 * @param asEffect, either "In" or "Out". 
+	**/
+	void FadeInOutMicroFlash(const tString &in asEffect)
+	{
+		Sound_CreateAtEntity("", "player/UI/fear_system/microflash", "player", 0.1f, false, 0.3f);
+		if (asEffect == "In")
+		{
+			Effect_Fade_In(0.1f);
+		}
+		else if (asEffect == "Out")
+		{
+			Effect_Fade_Out(0.1f);
+		}
+	}
+	
+	//-------------------------------------------------------
+	
 	//} END GAMEPLAY

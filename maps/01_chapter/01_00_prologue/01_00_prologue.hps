@@ -34,6 +34,8 @@ const tString msRadioTransmissionMorse = "radio_transmission_morse";
 const tString msRadioElectricity = "radio_electrcity";
 
 const float mfHighlightingTime = 1.f;
+
+const float mfGlobalMusicVolume = 0.15f;
  
 //--------------------------------------------------
  
@@ -56,10 +58,10 @@ class cScrMap : iScrMap
 		// Player settings
 		PlayerBody_SetActive(true);
 		Player_SetVertigoActive(false);
-		Player_SetMaxHealth(100.0f);
-		Player_SetHealth(100.0f);
+		Player_SetMaxHealth(100.f);
+		Player_SetHealth(100.f);
 		
-		Stamina_SetStaminaSystemActive(true);
+		//Stamina_SetStaminaSystemActive(true);
 		
 		// Put display name entry in english.lang / Levels
 		GetBase().SetDisplayNameEntry("01-00-prologue");
@@ -80,6 +82,14 @@ class cScrMap : iScrMap
 		//////////////
 		// Preload screen effects
 		//Material_Preload("some_material.mat");
+		
+		//////////////
+		// Preload sounds
+		Sound_PreloadGroup("morse_entity", true);
+		Sound_PreloadGroup("morse_events", true);
+		//Sound_PreloadGroup("morse_player", true);
+		
+		//Sound_PreloadGroup("01_prologue", true);
 	}
 	
 	//-------------------------------------------------------
@@ -97,36 +107,24 @@ class cScrMap : iScrMap
 		// Entity
 		Entity_AddForce("roman_personal_dice_*", cVector3f(-5.f, 50.f, -5.f), false, true); // Add force to dice blocks
 		
-		// Sounds
-		Sound_CreateAtEntity(msRadioTransmissionMorse, "morse_events/radio/radio_transmission", "radio_transmitter_transmission", 0.f, false, .1f);
-		Sound_CreateAtEntity(msRadioElectricity, "02_04_living_quarters/scare_events/light_scare/spark_on", "radio_transmitter", .0f, false, .05f);
+		// Lights
+		Light_FadeBrightnessTo("radio_transmitter_button_light", 0.f, .1f);
 		
 		/////////////////////////
 		// Debug
 		if(cLux_ScriptDebugOn())
 		{
 			mbStartIntro = false;
-			if (mbStartIntro == false) // Disable effects used in the intro
-			{
-				Effect_Blur_FadeOut(mlBlurId, 0.0f);
-				Effect_DoF_FadeOut(mlDofId, 0.0f);
-				Effect_ChromaticAberration_DestroyInstance(mlChromAbId);
-				Effect_RadialBlur_FadeOut(mlRadBlurId, 0.0f);
-			}
 			
 			if (ItemType_GetCountInInventory("Lantern") < 1)
 			{
 				Item_AddToInventory("Lantern");
 
 				Lantern_SetAmount(10);
-				
-				// Unlock shed doors
-				Entity_SetActive("ShedDoor_Lock_1", false);
-				Entity_SetActive("ShedDoor_Lock_2", false);
 			}
 		}
 		// Initiate the intro
-		if (mbStartIntro) { Seq_IntroCave(""); }
+		if (mbStartIntro) { Seq_Intro(""); }
 	}
 
 	//-------------------------------------------------------
@@ -136,7 +134,9 @@ class cScrMap : iScrMap
 	void OnEnter()
 	{	
 		Game_AutoSave();
-		Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
+		
+		//Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
+		Item_RemoveFromInventory(ItemType_GetFirstInInventory("CurseMedallion"));
 		
 		Light_FadeBrightnessTo("shed_desk_highlight_*", 0.f, .1f);
 	}
@@ -253,35 +253,38 @@ class cScrMap : iScrMap
 	//-------------------------------------------------------
  
 	/*Put any variables that are used in more than one scene here.*/
-	
-	int mlChromAbId = Effect_ChromaticAberration_CreateInstance(0.0035f, 10.f);
-	int mlRadBlurId = Effect_RadialBlur_Start(0.5f, 0.1f, 0.8f, 0.0f);
-	int mlBlurId = Effect_Blur_Start(0.01f, 3.0f);
-	int mlDofId = Effect_DoF_Start(1.0f, 20.0f, 0.5f, 3.0f);
  
 	//-------------------------------------------------------
  
 	/*Put any functions that are used in more than one scene here.*/
-	
-	/**
-	 * Makes screen either fade in or out that simultaneously plays a microflash sound effect at player
-	 * 
-	 * @param asEffect, either "In" or "Out". 
-	**/
-	void FadeInOutMicroFlash(const tString &in asEffect)
-	{
-		Sound_CreateAtEntity("", "player/UI/fear_system/microflash", "player", 0.1f, false, 0.3f);
-		if (asEffect == "In")
-		{
-			Effect_Fade_In(0.1f);
-		}
-		else if (asEffect == "Out")
-		{
-			Effect_Fade_Out(0.1f);
-		}
-	}
  
 	//-------------------------------------------------------
+	
+	/////////////////////////////////////////
+	// VO EVENTS 
+	//{//////////////////////////////////////
+	
+	/**
+	 * Handles how the vo should be played.
+	 * 
+	 * @param String asSubject, the name of the subject to play.
+	 * @param String asEntity, entity interacted/collided with to trigger vo (used to store uservars = subject name).
+	 * @param int alSpecificLineIdx, if 0 or higher then a specific line index will be played. Set as -1 to play as stated in the data.
+	 * @param String asCallback, called when subject is done playing. Syntax: void Func(const tString&in asScene, const tString&in asSubject)
+	 * @param int alPrio, The priority of the voice, if higher than the currently playing, the current gets stopped and replaced, else this voice is not played.
+	**/
+	void Voice_Handler(const tString&in asSubject, const tString &in asEntity = "", int alSpecificLineIdx = -1, const tString&in asCallback = "", int alPrio = 0)
+	{
+		Voice_Play(asSubject);
+	}
+	
+	bool Voice_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
+	{
+		Voice_Handler(Entity_GetVarString(asParent, ""), asParent);
+		return false;
+	}
+		
+	//} END VO EVENTS
  
 	//} END MAIN FUNCTIONS
  
@@ -308,10 +311,9 @@ class cScrMap : iScrMap
 		//} END General
 	 
 		/////////////////////////////////////////
-		// Event A *CAVE SEQUENCE*
+		// Event A *INTRO SEQUENCE*
 		//{//////////////////////////////////////
 		
-
 		//-------------------------------------------------------
 
 		/*Put any variables that are only used in Scene 1, Event A here.*/
@@ -320,336 +322,58 @@ class cScrMap : iScrMap
 
 		/*Put any functions that are only used in Scene 1, Event A here.*/
 		
-		void OnTimer_EnableGhoul(const tString &in asTimer) // Make the ghoul patrol along the nodes in the cave
+		cSequenceStatesData mSeqIntro;
+		void Seq_Intro(const tString &in asName)
 		{
-			Entity_SetActive("ghoul_intro_cave", true);
-			Sound_CreateAtEntity("", "01_02_caves/scare_events/cave_movement_03", "Sound_Cave_Ghoul_Move_1", 2.0f);
-			Sound_CreateAtEntity("", "01_02_caves/sweeteners/specials/deepcave_entry", "Sound_Cave_Ghoul_Sand_1", 2.0f);
-			
-			Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_4");
-			Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_7");
-			Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_9");
-			Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_22");
-			Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_14");
-			Ghoul_CommandPatrol_AddNode("ghoul_intro_cave", "PathNode_16");
-
-			Ghoul_CommandPatrol_Execute("ghoul_intro_cave", false, 1, false, eGhoulSpeed_Walk, "OnPatrolFinish_GhoulIntroCave");
-		}
-		
-		void OnPatrolFinish_GhoulIntroCave(const tString &in asEntity)
-		{
-			Entity_SetActive(asEntity, false);
-		}
-		
-		bool OnTrigger_Ghoul_Vocalisation(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			if (asParent == "Trigger_Ghoul_Vocalisation_1" && alState == 1)
+			Sequence_Begin("Seq_Intro", mSeqIntro);
+			if(Sequence_DoStepAndWait(1.f))
 			{
-				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_smell_start_search", asChild, 0.1f, false, 0.75f);
-			}
-			else if (asParent == "Trigger_Ghoul_Vocalisation_2" && alState == 1)
-			{
-				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_search", asChild, 0.1f, false, 0.75f);
-			}
-			return true;
-		}
-		
-
-		cSequenceStatesData mSeqIntroCave;
-		void Seq_IntroCave(const tString &in asName)
-		{
-			Sequence_Begin("Seq_IntroCave", mSeqIntroCave);
-			if(Sequence_DoStepAndWait(0.0f))  // Intro start time at 7.0f
-			{
-				cLux_AddDebugMessage("Cave Intro Sequence starting...");
+				cLux_AddDebugMessage("Intro Sequence starting...");
 				
 				Effect_Fade_Out(0.f);
-				Player_SetNightVisionEnabled(false);
-				Player_Teleport("Intro_Cave");
 				Player_SetActive(false);
-
-				CameraAnimation_Begin("Intro_CaveAnimation", "", false);
-				Music_PlayExt("A2_01_02_PortalCave.ogg", true, 0.3f, 1.f, 0.3f, 0.3f, eMusicPrio_SceneAmb, false);
-
-				Map_AddTimer("Timer_EnableGhoul", 8.5f, "OnTimer_EnableGhoul"); // Enable the ghoul
-			}
-			else if (Sequence_DoStepAndWait(1.0f))
-			{
-				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_exit_hole", "ghoul_intro_cave", 0.1f, false, 0.75f);
-			}
-			else if (Sequence_DoStepAndWait(0.0f)) // 5.0f
-			{
-				FadeInOutMicroFlash("In");
-				Music_PlayExt("A2_1_2_CaveRumble.ogg", true, 0.3f, 1.f, 14.0f, 0.3f, eMusicPrio_SceneAmb, false);
 				
 			}
-			else if (Sequence_DoStepAndWait(0.5f))
+			else if (Sequence_DoStepAndWait(3.f))
 			{
-				FadeInOutMicroFlash("Out");
-			}
-			else if (Sequence_DoStepAndWait(0.0f)) // 2.0f
-			{
-				FadeInOutMicroFlash("In");
-				Sound_CreateAtEntity("radio_player", "level_entity_shared/radio/radio_static", "player", 8.0f, false, 1.0f);
-				//Play MORSE code for S.O.S.
-			}
-			else if (Sequence_DoStepAndWait(0.5f))
-			{
-				FadeInOutMicroFlash("Out");
-			}
-			else if (Sequence_DoStepAndWait(0.0f)) // 5.0f
-			{
-				FadeInOutMicroFlash("In");
-			}
-			else if (Sequence_DoStepAndWait(0.0f)) // 1.0f
-			{
-				FadeInOutMicroFlash("Out");
-				Sound_CreateAtEntity("", "creatures/foley/creature/ghoul/ghoul_walk", "ghoul_intro_cave", 0.1f, false, 0.75f);
-			}
-			else if (Sequence_DoStepAndWait(0.0f)) // 1.0f
-			{
-				Sound_CreateAtEntity("", "creatures/foley/creature/ghoul/ghoul_walk", "ghoul_intro_cave", 0.1f, false, 0.75f);
-			}
-			else if (Sequence_DoStepAndWait(0.0f)) // 1.0f
-			{
-				Entity_SetActive("ghoul_intro_cave", false);
+				Player_Teleport("Start_Begin");
 				
-				Sound_CreateAtEntity("", "creatures/foley/creature/ghoul/ghoul_walk", "ghoul_intro_cave", 0.1f, false, 0.75f);
-				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_enter_hole", "ghoul_intro_cave", 0.1f, false, 0.75f);
-				Sound_CreateAtEntity("", "01_02_caves/scare_events/cave_movement_03", "Sound_Cave_Ghoul_Move_1", 1.0f);
-				Sound_CreateAtEntity("", "01_02_caves/sweeteners/specials/deepcave_entry", "Sound_Cave_Ghoul_Sand_1", 1.0f);
+				Player_StartLookAt("LookIntro_1", 3.f, 50.f, 100.f);
+				Player_FadeFOVTo(.75f, .015f);
+				
+				Sound_FadeGlobalVolume(0.f, 0.f);
+				
+				Music_Play("01_00_cosmos", mfGlobalMusicVolume, false, eMusicPrio_SceneAmb);
 			}
-			else if (Sequence_DoStepAndWait(0.0f)) // 3.0f
+			else if (Sequence_DoStepAndWait(47.f))
 			{
-				FadeInOutMicroFlash("In");
+				Effect_Fade_In(3.f);
 			}
-			else if (Sequence_DoStepAndWait(0.0f)) // 1.0f
+			else if (Sequence_DoStepAndWait(4.f))
 			{
-				FadeInOutMicroFlash("Out");
+				Effect_Fade_Out(3.f);
 			}
-			else if (Sequence_DoStepAndWait(0.0f))
+			else if (Sequence_DoStepAndWait(6.f))
 			{
-				cLux_AddDebugMessage("Ending Cave Intro Sequence...");
-				CameraAnimation_End();
-				Seq_IntroNest("");
+				Player_StopLookAt(0);
+				Player_FadeFOVToDefault(100.f);
+				
+				Player_Teleport("Start_Shed");
+				
+				Music_Stop(10.f, eMusicPrio_SceneAmb);
+			}
+			else if (Sequence_DoStepAndWait(1.f))
+			{
+				Player_SetActive(true);
+				
+				Effect_Fade_In(3.0f);
+				Sound_FadeGlobalVolume(1.f, 3.f);
 			}
 			Sequence_End();
 		}
 		//-------------------------------------------------------
 
 		//} END Event *CAVE SEQUENCE*
-		
-		/////////////////////////////////////////
-		// Event B *NEST SEQUENCE*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 1, Event B here.*/
-
-		//-------------------------------------------------------
-
-		/*Put any functions that are only used in Scene 1, Event B here.*/
-		//sleep_weak_a.fbx, ghoul_radioRoom_beam_waitIdle.fbx
-		
-		cSequenceStatesData mSeqIntroNest;
-		void Seq_IntroNest(const tString &in asName)
-		{
-			Sequence_Begin("Seq_IntroNest", mSeqIntroNest);
-			if(Sequence_DoStepAndWait(1.0f)) // 1.0f
-			{
-				cLux_AddDebugMessage("Nest Intro Sequence starting...");
-				
-				Player_Teleport("Intro_Nest_Entrance");
-				
-				Entity_SetActive("ghoul_nest_beam", true);
-				Entity_PlayAnimation("ghoul_nest_beam", "ghoul_radioRoom_beam_waitIdle", 0.1f, true, false, "");
-				
-				CameraAnimation_Begin("Intro_NestCaveAnimation", "", false);
-				
-				//Player_Teleport("Intro_Nest_Path");
-				//Player_SetActive(true);
-				//Entity_SetActive("ghoul_intro_nest", false);
-				//Effect_Fade_In(0.f);
-			}
-			else if (Sequence_DoStepAndWait(0.5f))
-			{
-				Entity_PlayAnimation("ghoul_intro_nest", "crouch_idle_ledge", 0.1f, true, false, "");
-			}
-			else if (Sequence_DoStepAndWait(3.75f)) // 3.75f
-			{
-				FadeInOutMicroFlash("In");
-			}
-			else if (Sequence_DoStepAndWait(1.5f))
-			{
-				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_stalk_taunt", "ghoul_intro_nest", 0.1f, false, 0.5f);
-			}
-			else if (Sequence_DoStepAndWait(1.25f))
-			{
-				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_search", "ghoul_intro_nest", 0.1f, false, 0.5f);
-			}
-			else if (Sequence_DoStepAndWait(0.5f))
-			{
-				FadeInOutMicroFlash("Out");
-			}
-			else if (Sequence_DoStepAndWait(1.0f))
-			{
-				Entity_StopAnimation("ghoul_intro_nest");
-				Entity_SetActive("ghoul_intro_nest", false);
-				Sound_CreateAtEntity("", "01_02_caves/scare_events/cave_movement_03", "ghoul_intro_nest", 0.5f, false, 0.5f);
-				Sound_CreateAtEntity("", "01_02_caves/sweeteners/specials/deepcave_entry", "ghoul_intro_nest", 0.5f, false, 0.5f);
-			}
-			else if (Sequence_DoStepAndWait(2.5f))
-			{
-				FadeInOutMicroFlash("In");
-			}
-			else if (Sequence_DoStepAndWait(4.0f))
-			{
-				Sound_CreateAtEntity("", "01_02_caves/sweeteners/near/ghoul_screams", "Sound_Nest_Ghoul_Scream", 0.1f, false, 1.0f);
-			}
-			else if (Sequence_DoStepAndWait(3.0f))
-			{
-				FadeInOutMicroFlash("Out");
-			}
-			else if (Sequence_DoStepAndWait(1.0f)) // 1.0f
-			{
-				Player_Teleport("Intro_Nest_Path");
-				CameraAnimation_End();
-			}
-			else if (Sequence_DoStepAndWait(3.0f))
-			{
-				CameraAnimation_Begin("Intro_NestAnimation", "", false);
-			}
-			else if (Sequence_DoStepAndWait(1.0f))
-			{
-				FadeInOutMicroFlash("Out");
-			}
-			else if (Sequence_DoStepAndWait(0.5f))
-			{
-				FadeInOutMicroFlash("In");
-			}
-			else if (Sequence_DoStepAndWait(1.0f))
-			{
-				FadeInOutMicroFlash("Out");
-			}
-			else if (Sequence_DoStepAndWait(2.0f))
-			{
-				FadeInOutMicroFlash("In");
-			}
-			else if (Sequence_DoStepAndWait(1.0f))
-			{
-				FadeInOutMicroFlash("Out");
-			}
-			else if (Sequence_DoStepAndWait(0.5f))
-			{
-				Sound_CreateAtEntity("", "creatures/vocalisations/creature/ghoul/ghoul_search", "ghoul_nest_beam", 0.1f, false, 1.0f);
-			}
-			else if (Sequence_DoStepAndWait(1.0f))
-			{
-				Sound_CreateAtEntity("", "01_02_caves/scare_events/cave_movement_03", "ghoul_nest_beam", 0.5f, false, 0.5f);
-				Sound_CreateAtEntity("", "01_02_caves/sweeteners/specials/deepcave_entry", "ghoul_nest_beam", 0.5f, false, 0.5f);
-				Entity_SetActive("ghoul_nest_beam", false);
-			}
-			else if (Sequence_DoStepAndWait(3.0f))
-			{
-				FadeInOutMicroFlash("In");
-			}
-			else if (Sequence_DoStepAndWait(3.0f))
-			{
-				FadeInOutMicroFlash("Out");
-			}
-			else if (Sequence_DoStepAndWait(1.0f))
-			{
-				//Player_Teleport("Intro_Nest_Center");
-				CameraAnimation_End();
-			}
-			// Seq_IntroTitleCard("");
-			// Anim for ghoul on rock: eat_ground
-			Sequence_End();
-		}
-		//-------------------------------------------------------
-
-		//} END Event *NEST SEQUENCE*
-		
-		/////////////////////////////////////////
-		// Event C *TITLE CARD/SHED SEQUENCE*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 1, Event C here.*/
-
-		//-------------------------------------------------------
-
-		/*Put any functions that are only used in Scene 1, Event C here.*/
-		
-		// player/UI/permafail/sequence/arm_look_stinger PLAY THIS SOUND WHEN THE MORSE LOGO APPEARS
-		cSequenceStatesData mSeqIntroTitleCard;
-		void Seq_IntroTitleCard(const tString &in asName)
-		{
-			Sequence_Begin("Seq_IntroTitleCard", mSeqIntroTitleCard);
-			if(Sequence_DoStepAndWait(2.0f))
-			{
-				cLux_AddDebugMessage("Starting Title Card Intro Sequence...");
-				Player_Teleport("Intro_TitleCard", true);
-			}
-			else if (Sequence_DoStepAndWait(8.0f))
-			{
-				Effect_Fade_In(3.0f);
-				//Show title card
-			}
-			else if (Sequence_DoStepAndWait(3.0f))
-			{
-				Effect_Fade_Out(3.0f);
-				Sound_Stop("radio_player", 6.0f);
-			}
-			else if (Sequence_DoStepAndWait(3.0f))
-			{
-				cLux_AddDebugMessage("Ending Title Card Intro Sequence...");
-				Player_Teleport("Intro_Shed", true);
-				Music_Stop(6.0f, eMusicPrio_SceneAmb);
-				
-				//Enable/Disable screen effects
-				Player_SetNightVisionEnabled(true);
-				Effect_Blur_FadeOut(mlBlurId, 0.0f);
-				Effect_DoF_FadeOut(mlDofId, 0.0f);
-				Effect_ChromaticAberration_DestroyInstance(mlChromAbId);
-				Effect_RadialBlur_FadeOut(mlRadBlurId, 0.0f);
-			}
-			else if (Sequence_DoStepAndWait(1.0f))
-			{
-				cLux_AddDebugMessage("Starting Shed Intro Sequence...");
-				
-				Sound_CreateAtEntity("", "player/foley/default/pose_crouch", "player", 0.1f, false, 1.0f);				
-				Sound_CreateAtEntity("", "player/vocalisations/actions/player_release_med", "player", 0.1f, false, 0.3f);
-			}
-			else if (Sequence_DoStepAndWait(1.0f))
-			{	//player/foley/default/pose_crouch player/foley/default/pose_jump player/foley/default/pose_stand
-				Sound_CreateAtEntity("", "player/foley/default/pose_stand", "player", 0.1f, false, 1.0f);
-			}
-			else if (Sequence_DoStepAndWait(1.25f))
-			{
-				Sound_CreateAtEntity("", "player/foley/default/pose_crouch", "player", 0.1f, false, 1.0f);
-			}
-			else if (Sequence_DoStepAndWait(1.0f))
-			{
-				Sound_CreateAtEntity("", "player/foley/default/pose_crouch", "player", 0.1f, false, 1.0f);
-			}
-			else if (Sequence_DoStepAndWait(1.5f))
-			{
-				Sound_CreateAtEntity("", "player/foley/default/pose_stand", "player", 0.1f, false, 1.0f);
-				Sound_CreateAtEntity("", "player/vocalisations/actions/player_crouch", "player", 0.1f, false, 0.3f);
-			}
-			else if (Sequence_DoStepAndWait(1.0f))
-			{
-				Player_SetActive(true);
-				Effect_Fade_In(3.0f);
-			}
-			Sequence_End();
-		}
-		//-------------------------------------------------------
-		
-		//} END Event *TITLE CARD/SHED SEQUENCE*
 	 
 	//} END SCENE 1
  
@@ -692,10 +416,10 @@ class cScrMap : iScrMap
 		
 		//-------------------------------------------------------
 		
-		//} END General	
+		//} END General
 	 
 		/////////////////////////////////////////
-		// Event A *RADIO TRANSMISSION*
+		// Event A *PLAYER INTERACTS WITH RADIO*
 		//{//////////////////////////////////////
 
 		//-------------------------------------------------------
@@ -710,10 +434,11 @@ class cScrMap : iScrMap
 		{
 			Entity_SetVarBool(asEntity, "", !Entity_GetVarBool(asEntity, ""));
 			
-			Light_SetVisible(asEntity + "_light", Entity_GetVarBool(asEntity, ""));
+			//Light_SetVisible(asEntity + "_light", Entity_GetVarBool(asEntity, ""));
+			Light_FadeBrightnessToBool(asEntity + "_light", 1.f, 0.f, 0.f, Entity_GetVarBool(asEntity, ""));
 			
 			Sound_CreateAtEntity("", "morse_entity/interact/button/button_interact", asEntity, .0f, false, .35f);
-			Sound_CreateAtEntity("radio_crackling", "02_04_living_quarters/radio/doctor_talk_end_world", "radio_transmitter", .0f, false, 2.0f);
+			Sound_CreateAtEntity("radio_crackling", "02_04_living_quarters/radio/doctor_talk_end_world", "radio_transmitter", .0f, false, 2.f);
 			
 			// If radio is off
 			if (!Entity_GetVarBool(asEntity, ""))
@@ -748,7 +473,7 @@ class cScrMap : iScrMap
 		
 		//-------------------------------------------------------
 
-		//} END Event *RADIO TRANSMISSION*
+		//} END Event *PLAYER INTERACTS WITH RADIO*
 		
 		/////////////////////////////////////////
 		// Event B *PLAYER INTERACTS WITH TELEGRAPH KEY*
@@ -830,6 +555,24 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 
 		//} END Event *PLAYER PICKS UP LANTERN*
+		
+		/////////////////////////////////////////
+		// Event D *PLAYER PICKS UP NOTE*
+		//{//////////////////////////////////////
+
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 2, Event D here.*/
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 2, Event D here.*/
+		
+		//Music_Play("01_00_awaken", .15f, true, eMusicPrio_SceneAmb);
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER PICKS UP NOTE*
 	 
 	//} END SCENE 2
 	
@@ -863,7 +606,7 @@ class cScrMap : iScrMap
 		{
 			if (cScript_GetGlobalVarBool("IsCampfireLit"))
 			{
-				Player_GiveDamageAndSound(2.5f, 10.0f, 1, asParent, "fire_playerdamage", ePlayerDamageMedium);
+				Player_GiveDamageAndSound(2.5f, 10.f, 1, asParent, "fire_playerdamage", ePlayerDamageMedium);
 				return true;
 			}
 			return true;
