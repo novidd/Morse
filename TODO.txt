@@ -18,14 +18,16 @@ MAPS:
 			 * Add grass undergrowth in the forest trail (cant do this, level editor bugged).
 			 * Add stones/debris around the forest trail.
 			 * Add events/sound effects that play throughout the forest (bushes moving, branches snapping, animal sounds).
-			 * Create an arrow?
+			 * Create an outhouse.
 			 
 		SCRIPTS:
 			TODO:
 			 * Add interactability to empty water kegs/barrels.
 			 * Later in the camp it starts raining and later add thunder (the campfire becomes unlit).
-			 * The player gets kidnapped and dragged into the mines by native americans.
 			 * play 01_00_disturbancedrone (layered) and 01_00_disturbance (main) when the player wakes up from scary noises.
+			 * The player gets kidnapped and dragged into the mines by native americans.
 			 * Add vo throughout the level.
 			 * (NOT NECESSARY) Create a fire damage module, that checks if the player is inside of a trigger area ("FirePlayerDamage_X") use Entity_GetCollide(), 
 			   to get all the trigger areas use Map_GetEntityArray().
+			   
+			 * After staring at cosmos for 50s change to players pov on the 2nd shed floor. A few seconds after player gets control play CheckRadio subject.

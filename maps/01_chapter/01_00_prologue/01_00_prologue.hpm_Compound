@@ -502,6 +502,13 @@
         <Objects />
     </Section>
     <Section Name="570198258105585246">
-        <Objects />
+        <Objects>
+            <Compound ID="301989992" Name="Compound_13" CreStamp="0" ModStamp="1610402663" WorldPos="57.4024 20.9486 108.192" Rotation="0.0131617 0.44361 0.0421586" Scale="1 1 1" UID="18 526 301989992">
+                <Component ID="268440414" />
+                <Component ID="268440413" />
+                <Component ID="268440424" />
+                <Component ID="268440425" />
+            </Compound>
+        </Objects>
     </Section>
 </HPLMapTrack_Compound>

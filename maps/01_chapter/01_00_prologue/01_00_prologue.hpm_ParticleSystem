@@ -25,7 +25,7 @@
     </Section>
     <Section Name="570198258105585246">
         <Objects>
-            <ParticleSystem ID="301989893" Name="PS_3" CreStamp="1610386370" ModStamp="1610386755" WorldPos="62.026 20.5 104.277" Rotation="0 0.785398 0" Scale="1 1 1" File="C:/Program Files (x86)/Steam/steamapps/common/Amnesia Rebirth/particles/smoke/smoke_fireplace_plume_continous.ps" Color="0.107422 0.101726 0.0969315 0.392157" Brightness="0.5" FadeAtDistance="false" MinFadeDistanceStart="2" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MaxFadeDistanceEnd="110" Static="false" CulledByDistance="true" CulledByFog="true" ConnectLight="" UID="18 515 301989893" />
+            <ParticleSystem ID="301989893" Name="CampFire_PS_1" CreStamp="1610386370" ModStamp="1610403105" WorldPos="62.026 20.5 104.277" Rotation="0 0.785398 0" Scale="1 1 1" File="C:/Program Files (x86)/Steam/steamapps/common/Amnesia Rebirth/particles/smoke/smoke_fireplace_plume_continous.ps" Color="0.107422 0.101726 0.0969315 0.392157" Brightness="0.5" FadeAtDistance="false" MinFadeDistanceStart="2" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MaxFadeDistanceEnd="110" Static="false" CulledByDistance="true" CulledByFog="true" ConnectLight="" UID="18 515 301989893" />
         </Objects>
     </Section>
 </HPLMapTrack_ParticleSystem>

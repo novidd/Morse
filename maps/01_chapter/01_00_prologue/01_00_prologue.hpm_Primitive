@@ -8,6 +8,8 @@
         <Objects />
     </Section>
     <Section Name="570198258105585246">
-        <Objects />
+        <Objects>
+            <Plane ID="301989994" Name="Plane" CreStamp="1610403620" ModStamp="1610403630" WorldPos="57.25 20.55 106.25" Rotation="8.58351e-08 -0.523599 3.14159" Scale="1 1 1" Material="textures/technical/simple_black.mat" StartCorner="0 0 0" EndCorner="0.75 0 1.75" CastShadows="false" Collides="true" DiffuseColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" TileAmount="1 1 1" TileOffset="0 0 0" TextureAngle="0" AlignToWorldCoords="false" UID="18 524 301989994" Corner1UV="0 1.75" Corner2UV="0 0" Corner3UV="0.75 0" Corner4UV="0.75 1.75" />
+        </Objects>
     </Section>
 </HPLMapTrack_Primitive>

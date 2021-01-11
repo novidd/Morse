@@ -215,16 +215,22 @@ class cScrMap : iScrMap
 	{
 		if(abPressed==false) return;
 		
-		if (alAction == eAction_Test0)
+		if (alAction == eAction_Test0) // Numpad 0
 		{
-			cLux_AddDebugMessage("Starting intro...");
+			cLux_AddDebugMessage("Running intro...");
 		}
 		
-		if (alAction == eAction_LeanRight)
+		if (alAction == eAction_Test1)
 		{
-			PlayerBody_PlayCutsceneAtEntity("plane_stumble", "Area_PlaneStumble", false, 0.3f, "");
-			PlayerBody_SetCutsceneMaxPitch(5.f);
-			PlayerBody_SetCutsceneMaxYaw(5.f);
+			/*
+			 * Run this animation on wake up for the camp disturbance events
+			 * Hide pillow to avoid player head clipping, enable after
+			 * Reset pillow position the starting position get var on map start (global const var outside cScrMap)
+			 */
+			PlayerBody_PlayCutsceneAtEntity("wake_up_from_death_2", "SleepPos", false, 0.3f, "");
+			Entity_SetActive("pillow", false);
+			PlayerBody_SetCutsceneMaxPitch(2.5f);
+			PlayerBody_SetCutsceneMaxYaw(2.5f);
 		}
 		
 		if(alAction == eAction_ScrollUp)
