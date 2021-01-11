@@ -103,6 +103,7 @@ class cScrMap : iScrMap
 		bool mbStartIntro = true;
 		cScript_SetGlobalVarBool("IsCampfireLit", true);
 		cScript_SetGlobalVarBool("IsBatteryDead", false);
+		cScript_SetGlobalVarBool("IsInFire", false);
 		
 		// Entity
 		Entity_AddForce("roman_personal_dice_*", cVector3f(-5.f, 50.f, -5.f), false, true); // Add force to dice blocks
@@ -156,7 +157,17 @@ class cScrMap : iScrMap
 	// Runs on every frame
 	void Update(float afTimeStep)
 	{
-		
+		// Give player damage while standing in the camp fire
+		if(!Map_TimerExists("negate_damage") && cScript_GetGlobalVarBool("IsInFire") && cScript_GetGlobalVarBool("IsCampfireLit"))
+		{
+			Player_GiveDamageAndSound(2.f, 10.f, 1, "FirePlayerDamage", "fire_playerdamage", true, ePlayerDamageMedium);
+			Map_AddTimer("negate_damage", .75f, "NegateDamage_OnTimer");
+		}
+	}
+
+	void NegateDamage_OnTimer(const tString &in asTimer)
+	{
+		return;
 	}
 
 	//-------------------------------------------------------
@@ -204,9 +215,16 @@ class cScrMap : iScrMap
 	{
 		if(abPressed==false) return;
 		
+		if (alAction == eAction_Test0)
+		{
+			cLux_AddDebugMessage("Starting intro...");
+		}
+		
 		if (alAction == eAction_LeanRight)
 		{
-			
+			PlayerBody_PlayCutsceneAtEntity("plane_stumble", "Area_PlaneStumble", false, 0.3f, "");
+			PlayerBody_SetCutsceneMaxPitch(5.f);
+			PlayerBody_SetCutsceneMaxYaw(5.f);
 		}
 		
 		if(alAction == eAction_ScrollUp)
@@ -275,15 +293,15 @@ class cScrMap : iScrMap
 	**/
 	void Voice_Handler(const tString&in asSubject, const tString &in asEntity = "", int alSpecificLineIdx = -1, const tString&in asCallback = "", int alPrio = 0)
 	{
-		Voice_Play(asSubject);
+		Voice_Play(asSubject, alSpecificLineIdx, asCallback, alPrio);
 	}
 	
 	bool Voice_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
 	{
-		Voice_Handler(Entity_GetVarString(asParent, ""), asParent);
 		return false;
+		Voice_Handler(Entity_GetVarString(asParent, ""), asParent);
 	}
-		
+	
 	//} END VO EVENTS
  
 	//} END MAIN FUNCTIONS
@@ -604,11 +622,10 @@ class cScrMap : iScrMap
 		
 		bool FirePlayerDamage_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
 		{
-			if (cScript_GetGlobalVarBool("IsCampfireLit"))
-			{
-				Player_GiveDamageAndSound(2.5f, 10.f, 1, asParent, "fire_playerdamage", ePlayerDamageMedium);
-				return true;
-			}
+			if (alState == 1)
+				cScript_SetGlobalVarBool("IsInFire", true);
+			else
+				cScript_SetGlobalVarBool("IsInFire", false);
 			return true;
 		}
 		

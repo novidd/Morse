@@ -12,7 +12,7 @@
  </Sections>
  <Subjects>
   <Subject Desc="Arthur says he should check the radio" Name="Dialogue_CheckRadio" UseSingleRandomLine="False" ShowSubtitlesIfMissing="False" SceneId="0" EffectId="-1" Section="Main">
-   <Line CharacterId="0" Prio="0" TextStatus="Placeholder" PlayOnce="True">
+   <Line CharacterId="0" Prio="0" TextStatus="ToTranslators" PlayOnce="True">
     <Sound Text="Maybe the transmission is still running, I should check." FileName="shed_dialogue_checkradio_001_player_001" Timestamp="2021-01-10 10:45" />
    </Line>
   </Subject>

@@ -20,12 +20,6 @@
 #include "custom/helpers/helper_modules_custom.hps"
 #include "custom/helpers/helper_props_custom.hps"
 
-//////////////////////////////////////////////////////////////////////////////////////////
-// ==============
-// ENUMS / CLASSES
-// ==============
-//{///////////////////////////////////////////////////////////////////////////////////////
-
 shared enum ePlayerDamageType
 {
 	ePlayerDamageSmall, // 0
@@ -53,9 +47,13 @@ shared enum eLanternOilType
 	//-------------------------------------------------------
 	
 	/**
-	 * Makes the player take damage and plays a reaction scream sound effect.
+	 * Fades a light's brightness to min or max value which is determined with a bool.
 	 * 
-	 * @param float afAmount, how much damage to do to the player.
+	 * @param String asLightName, the light to change brightness with. Can contain wildcards.
+	 * @param float afMax, the brightness the light will be set to, takes effect when abIncrease = true.
+	 * @param float afMin, the brightness the light will be set to, takes effect when abIncrease = false.
+	 * @param float afTime, the time to fade the light in or out.
+	 * @param bool abIncrease, whether to set increase or decrease the brightness.
 	**/
 	void Light_FadeBrightnessToBool(const tString &in asLightName, float afMax, float afMin, float afTime, bool abIncrease)
 	{
@@ -83,19 +81,20 @@ shared enum eLanternOilType
 	 * 
 	 * @param float afAmount, how much damage to do to the player.
 	 * @param float afMaxFear, max fear level the damage can cause.
-	 * @param int alType, the type of damage, which damage effect should be applied to the screen.
+	 * @param int alEffectType, the type of damage, which damage effect should be applied to the screen.
 	 * @param String asSource, the name of the entity doing the damage.
 	 * @param String asSoundname, the internal name of the sound (can later be used to stop the sound, etc).
+	 * @param bool abPlaySound, if the damage sound should be played.
 	 * @param ePlayerDamageType alType, the type of reaction scream sound to play, must be ePlayerDamage[Type].
 	**/
 	void Player_GiveDamageAndSound(float afAmount, float afMaxFear, int alEffectType, const tString &in asSource,
-									const tString &in asSoundName, ePlayerDamageType alDamageType)
+									const tString &in asSoundName, bool abPlaySound, ePlayerDamageType alDamageType)
 	{
 		const array<tString> mvSoundFiles = {"player/emotes/pain_small", "player/emotes/pain_med", "player/emotes/pain_large"};
 		
 		Player_GiveDamage(afAmount, afMaxFear, alEffectType, asSource);
 		
-		if (!Sound_Exists(asSoundName))
+		if (!Sound_Exists(asSoundName) && abPlaySound)
 		{
 			Sound_CreateAtEntity(asSoundName, mvSoundFiles[alDamageType], "player");
 		}
@@ -118,13 +117,6 @@ shared enum eLanternOilType
 			Error("The user var for " + asEntity + " is not valid, it must be an integer >= 1.");
 			return;
 		}
-		
-		// Checks if alOilType is a valid oil type
-		//if (asOilType != "ModernOil" && asOilType != "HerbertOil" && asOilType != "AlchemistOil")
-		//{
-		//	Error(asOilType + " is not a valid oil type, it must either be 'ModernOil' (small) / 'HerbertOil' (medium) / 'AlchemistOil' (large)");
-		//	return;
-		//}
 		
 		const array<tString> msOilTypes = {"ModernOil", "HerbertOil", "AlchemistOil"};
 		

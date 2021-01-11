@@ -15,11 +15,10 @@ MAPS:
 
 		LEVEL:
 			TODO:
-			 * Add cobwebs inside the shed.
 			 * Add grass undergrowth in the forest trail (cant do this, level editor bugged).
 			 * Add stones/debris around the forest trail.
 			 * Add events/sound effects that play throughout the forest (bushes moving, branches snapping, animal sounds).
-			 * Add a campfire smoke particle system.
+			 * Create an arrow?
 			 
 		SCRIPTS:
 			TODO:
@@ -28,3 +27,5 @@ MAPS:
 			 * The player gets kidnapped and dragged into the mines by native americans.
 			 * play 01_00_disturbancedrone (layered) and 01_00_disturbance (main) when the player wakes up from scary noises.
 			 * Add vo throughout the level.
+			 * (NOT NECESSARY) Create a fire damage module, that checks if the player is inside of a trigger area ("FirePlayerDamage_X") use Entity_GetCollide(), 
+			   to get all the trigger areas use Map_GetEntityArray().
