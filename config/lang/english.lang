@@ -1,9 +1,34 @@
 <LANGUAGE>
+	<!-- HINTS -->
 	<CATEGORY Name="Hints">
+	
 		<Entry Name="HintIntroPlayerMove">Hold $Input{Forward} to stand up.</Entry>
+		
+	</CATEGORY>
+	<!-- END HINTS -->
+	
+	<!-- LEVEL -->
+	<CATEGORY Name="01_00_prologue">
+	
+		<Entry Name="01-00-prologue">The Prologue</Entry>
+		
+		<Entry Name="NoteTransmission_FrontEntry">My first readable</Entry>
+		<Entry Name="NoteTransmission_BackEntry">First readable's backside</Entry>
+		<Entry Name="NoteTransmission_FrontEntry_Name">This is the title of the note which will show in the sketchbook. It seems to need to be called the same as the FrontEntry + "_Name".</Entry>
+	
 	</CATEGORY>
 	
 	<CATEGORY Name="Levels">
-		<Entry Name="01-00-prologue">The Prologue</Entry>
+	
+		<Entry Name="01_00_prologue_sketchbook_category">Prologue</Entry>
+		
+	</CATEGORY>
+	<!-- END LEVEL -->
+	
+	<CATEGORY Name="SubtitleCharNames">
+	
+		<Entry Name="Player">Arthur</Entry>
+		<Entry Name="IntroArthur">Arthur</Entry>
+		
 	</CATEGORY>
 </LANGUAGE>

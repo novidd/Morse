@@ -281,12 +281,12 @@ class cScrMap : iScrMap
 	//-------------------------------------------------------
  
 	/*Put any functions that are used in more than one scene here.*/
- 
-	//-------------------------------------------------------
 	
 	/////////////////////////////////////////
 	// VO EVENTS 
 	//{//////////////////////////////////////
+	
+	//-------------------------------------------------------
 	
 	/**
 	 * Handles how the vo should be played.
@@ -302,13 +302,21 @@ class cScrMap : iScrMap
 		Voice_Play(asSubject, alSpecificLineIdx, asCallback, alPrio);
 	}
 	
-	bool Voice_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
-	{
-		return false;
-		Voice_Handler(Entity_GetVarString(asParent, ""), asParent);
-	}
+	//-------------------------------------------------------
 	
 	//} END VO EVENTS
+	
+	/////////////////////////////////////////
+	// AMBIENCE/SWEETENERS
+	//{//////////////////////////////////////
+	
+	//-------------------------------------------------------
+	
+	
+	
+	//-------------------------------------------------------
+	
+	//} END AMBIENCE/SWEETENERS
  
 	//} END MAIN FUNCTIONS
  
@@ -377,21 +385,26 @@ class cScrMap : iScrMap
 			{
 				Effect_Fade_Out(3.f);
 			}
-			else if (Sequence_DoStepAndWait(6.f))
+			else if (Sequence_DoStepAndWait(2.f))
 			{
-				Player_StopLookAt(0);
+				Player_StartLookAt("LookIntro_2", 3.f, 50.f, 100.f);
 				Player_FadeFOVToDefault(100.f);
 				
 				Player_Teleport("Start_Shed");
-				
-				Music_Stop(10.f, eMusicPrio_SceneAmb);
 			}
-			else if (Sequence_DoStepAndWait(1.f))
+			else if (Sequence_DoStepAndWait(8.f))
 			{
+				Player_StopLookAt(0);
 				Player_SetActive(true);
 				
 				Effect_Fade_In(3.0f);
+				
 				Sound_FadeGlobalVolume(1.f, 3.f);
+				Music_Stop(10.f, eMusicPrio_SceneAmb);
+			}
+			else if (Sequence_DoStepAndWait(0.f))
+			{
+				Voice_Play("Dialogue_CheckRadio");
 			}
 			Sequence_End();
 		}

@@ -2,14 +2,13 @@
     <Section Name="12450711482325857532">
         <Objects>
             <Plane ID="268442528" Name="Plane" CreStamp="1610289957" ModStamp="1610294602" WorldPos="-0.5 147.25 -0.5" Rotation="0 0 0" Scale="1 1 1" Material="textures/technical/simple_black.mat" StartCorner="0 0 0" EndCorner="1 0 1" CastShadows="false" Collides="true" DiffuseColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" TileAmount="1 1 1" TileOffset="0 0 0" TextureAngle="0" AlignToWorldCoords="false" UID="16 8412 268442528" Corner1UV="0 1" Corner2UV="0 0" Corner3UV="1 0" Corner4UV="1 1" />
+            <Plane ID="268442529" Name="Plane_New_1" CreStamp="1610403620" ModStamp="1610403630" WorldPos="57.25 20.55 106.25" Rotation="8.58351e-08 -0.523599 3.14159" Scale="1 1 1" Material="textures/technical/simple_black.mat" StartCorner="0 0 0" EndCorner="0.75 0 1.75" CastShadows="false" Collides="true" DiffuseColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" TileAmount="1 1 1" TileOffset="0 0 0" TextureAngle="0" AlignToWorldCoords="false" UID="16 8399 268442529" Corner1UV="0 1.75" Corner2UV="0 0" Corner3UV="0.75 0" Corner4UV="0.75 1.75" />
         </Objects>
     </Section>
     <Section Name="9993333931400956225">
         <Objects />
     </Section>
     <Section Name="570198258105585246">
-        <Objects>
-            <Plane ID="301989994" Name="Plane" CreStamp="1610403620" ModStamp="1610403630" WorldPos="57.25 20.55 106.25" Rotation="8.58351e-08 -0.523599 3.14159" Scale="1 1 1" Material="textures/technical/simple_black.mat" StartCorner="0 0 0" EndCorner="0.75 0 1.75" CastShadows="false" Collides="true" DiffuseColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" TileAmount="1 1 1" TileOffset="0 0 0" TextureAngle="0" AlignToWorldCoords="false" UID="18 524 301989994" Corner1UV="0 1.75" Corner2UV="0 0" Corner3UV="0.75 0" Corner4UV="0.75 1.75" />
-        </Objects>
+        <Objects />
     </Section>
 </HPLMapTrack_Primitive>
