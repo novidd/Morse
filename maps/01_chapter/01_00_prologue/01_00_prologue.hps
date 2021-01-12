@@ -288,19 +288,7 @@ class cScrMap : iScrMap
 	
 	//-------------------------------------------------------
 	
-	/**
-	 * Handles how the vo should be played.
-	 * 
-	 * @param String asSubject, the name of the subject to play.
-	 * @param String asEntity, entity interacted/collided with to trigger vo (used to store uservars = subject name).
-	 * @param int alSpecificLineIdx, if 0 or higher then a specific line index will be played. Set as -1 to play as stated in the data.
-	 * @param String asCallback, called when subject is done playing. Syntax: void Func(const tString&in asScene, const tString&in asSubject)
-	 * @param int alPrio, The priority of the voice, if higher than the currently playing, the current gets stopped and replaced, else this voice is not played.
-	**/
-	void Voice_Handler(const tString&in asSubject, const tString &in asEntity = "", int alSpecificLineIdx = -1, const tString&in asCallback = "", int alPrio = 0)
-	{
-		Voice_Play(asSubject, alSpecificLineIdx, asCallback, alPrio);
-	}
+	
 	
 	//-------------------------------------------------------
 	
@@ -312,7 +300,41 @@ class cScrMap : iScrMap
 	
 	//-------------------------------------------------------
 	
+	bool EnableDeepForestRandSounds_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
+	{
+		if (alState == 1)
+		{
+			Map_AddTimer("rand_sounds_OnTimer", 0.f, "RandSounds_OnTimer");
+			return true;
+		}
+		else
+		{
+			Map_RemoveTimer("rand_sounds_OnTimer");
+			return true;
+		}
+	}
 	
+	//-------------------------------------------------------
+	
+	void RandSounds_OnTimer(const tString &in asTimer)
+	{
+		if (!Map_TimerExists("rand_sounds_OnTimer"))
+		{
+			array<tString> mvRandSounds = {"level_amb_shared/amb/sweeteners/01_02_caves/entrance_skylight_animal"};
+			int mlRandSoundIndex = cMath_RandRectl(0, mvRandSounds.length()-1);
+			
+			array<iLuxEntity@> mvRandSoundEntityArray;
+			Map_GetEntityArray("RandSound_*", mvRandSoundEntityArray);
+			tString msRandSoundEntity = "RandSound_" + cString_ToString(cMath_RandRectl(1, mvRandSoundEntityArray.length()), 0);
+			
+			Sound_CreateAtEntity("rand_sound", mvRandSounds[mlRandSoundIndex], msRandSoundEntity);
+			
+			float mfRandSoundTime = cMath_RandRectf(10.f, 20.f);
+			Map_RestartCurrentTimer(mfRandSoundTime);
+			
+			cLux_AddDebugMessage("Entity: " + msRandSoundEntity + ", Time: " + Map_GetTimerTime(asTimer));
+		}
+	}
 	
 	//-------------------------------------------------------
 	

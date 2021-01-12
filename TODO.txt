@@ -33,4 +33,3 @@ MAPS:
 			 * Add events/sound effects that play throughout the forest (bushes moving, branches snapping, animal sounds).
 			  * level_amb_shared/amb/sweeteners/02_06_oasis/amb_sweet_birds (loop, play level_amb_shared/amb/sweeteners/01_02_caves/entrance_skylight_insects in disturbance scene)
 			  * level_amb_shared/amb/sweeteners/01_02_caves/cave_bird_tweet (loop, plays for a certain amount of times then remove sound)
-			  * level_amb_shared/amb/sweeteners/01_02_caves/entrance_skylight_animal (oneshot)
