@@ -40,6 +40,8 @@
         <Objects />
     </Section>
     <Section Name="570198258105585246">
-        <Objects />
+        <Objects>
+            <SpotLight ID="301990592" Name="camp_fire_light_7" CreStamp="1610665788" ModStamp="1610665842" WorldPos="62.026 21.75 104.277" Rotation="-2.20234e-07 -1.04719 1.67726e-07" Scale="1 1 1" CastShadows="true" ShadowResolution="High" ShadowsAffectStatic="true" ShadowsAffectDynamic="true" Radius="12" Gobo="" GoboType="Diffuse" GoboAnimMode="None" GoboAnimFrameTime="1" GoboAnimStartTime="0" DiffuseColor="1 0.615686 0.352941 0.533333" FlickerActive="true" FlickerOnMinLength="0" FlickerOnMaxLength="0" FlickerOnPS="" FlickerOnSound="" FlickerOffMinLength="0" FlickerOffMaxLength="0" FlickerOffPS="" FlickerOffSound="" FlickerOffColor="0.803922 0.509804 0.286275 0.486275" FlickerOffRadius="9.5" FlickerFade="true" FlickerOnFadeMinLength="0.2" FlickerOnFadeMaxLength="0.7" FlickerOffFadeMinLength="0.1" FlickerOffFadeMaxLength="0.3" CastDiffuseLight="true" CastSpecularLight="true" Brightness="0.25" Static="false" CulledByDistance="true" CulledByFog="true" FalloffPow="1" FOV="2.0944" Aspect="1" NearClipPlane="0.1" SpotFalloffPow="1" ShadowFadeRange="-1" ShadowCasterDistance="-1" ShadowUpdatePriority="10" ConnectedLightMaskID="4294967295" UID="18 1884 301990592" />
+        </Objects>
     </Section>
 </HPLMapTrack_Light>

@@ -25,6 +25,8 @@
         <Objects />
     </Section>
     <Section Name="570198258105585246">
-        <Objects />
+        <Objects>
+            <ParticleSystem ID="301990585" Name="PS_3" CreStamp="1610664136" ModStamp="1610664256" WorldPos="75.8032 21.382 107.613" Rotation="0 0 0" Scale="1 1 1" File="C:/Program Files (x86)/Steam/steamapps/common/Amnesia Rebirth/particles/organic/flies_buzzing.ps" Color="1 1 1 1" Brightness="1" FadeAtDistance="false" MinFadeDistanceStart="2" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MaxFadeDistanceEnd="110" Static="false" CulledByDistance="true" CulledByFog="true" ConnectLight="" UID="18 8175 301990585" />
+        </Objects>
     </Section>
 </HPLMapTrack_ParticleSystem>

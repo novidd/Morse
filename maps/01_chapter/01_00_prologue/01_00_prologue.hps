@@ -106,6 +106,9 @@ class cScrMap : iScrMap
 		cScript_SetGlobalVarBool("IsBatteryDead", false);
 		cScript_SetGlobalVarBool("IsInFire", false);
 		
+		// Sounds
+		Sound_CreateAtEntity("", "morse_level_shared/amb/sweetener/animal/flies_loop", "FliesSound", 0, false, .5f);
+		
 		// Entity
 		Entity_AddForce("roman_personal_dice_*", cVector3f(-5.f, 50.f, -5.f), false, true); // Add force to dice blocks
 		
@@ -117,11 +120,6 @@ class cScrMap : iScrMap
 		if(cLux_ScriptDebugOn())
 		{
 			mbStartIntro = false;
-			
-			if (!mbStartIntro)
-			{
-				//Sound_CreateAtEntity("", "level_amb_shared/amb/sweeteners/02_06_oasis/amb_sweet_birds", "player", 0, false, .25f);
-			}
 			
 			if (ItemType_GetCountInInventory("Lantern") < 1)
 			{

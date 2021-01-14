@@ -53,7 +53,7 @@
 <pitch_randmethod>1</pitch_randmethod>
 <pitch_random_min>0</pitch_random_min>
 <pitch_random_max>0</pitch_random_max>
-<pitch_randomization>0</pitch_randomization>
+<pitch_randomization>0.333333</pitch_randomization>
 <pitch_recalculate>0</pitch_recalculate>
 <volume_db>0</volume_db>
 <volume_randmethod>1</volume_randmethod>
@@ -527,7 +527,7 @@
 <car_rpmsmooth>0.075</car_rpmsmooth>
 <car_loadsmooth>0.05</car_loadsmooth>
 <car_loadscale>6</car_loadscale>
-<volume_db>0</volume_db>
+<volume_db>-5.94</volume_db>
 <pitch>0</pitch>
 <pitch_units>Octaves</pitch_units>
 <pitch_randomization>0</pitch_randomization>
@@ -539,9 +539,9 @@
 <stealpriority>10000</stealpriority>
 <mode>x_3d</mode>
 <ignoregeometry>No</ignoregeometry>
-<rolloff>Logarithmic</rolloff>
-<mindistance>1</mindistance>
-<maxdistance>3</maxdistance>
+<rolloff>Linear</rolloff>
+<mindistance>0.5</mindistance>
+<maxdistance>10</maxdistance>
 <auto_distance_filtering>Off</auto_distance_filtering>
 <distance_filter_centre_freq>1500</distance_filter_centre_freq>
 <headrelative>World_relative</headrelative>
@@ -1999,7 +1999,7 @@
 <_BB10_forcesoftware>0</_BB10_forcesoftware>
 <_BB10_maxstreams>10</_BB10_maxstreams>
 <_lang_default_filename_prefix></_lang_default_filename_prefix>
-<_lang_default_rebuild>0</_lang_default_rebuild>
+<_lang_default_rebuild>1</_lang_default_rebuild>
 </soundbank>
 <notes></notes>
 <currentplatform>PC</currentplatform>

@@ -527,7 +527,7 @@
 <car_rpmsmooth>0.075</car_rpmsmooth>
 <car_loadsmooth>0.05</car_loadsmooth>
 <car_loadscale>6</car_loadscale>
-<volume_db>0</volume_db>
+<volume_db>-5.94</volume_db>
 <pitch>0</pitch>
 <pitch_units>Octaves</pitch_units>
 <pitch_randomization>0</pitch_randomization>
@@ -539,9 +539,9 @@
 <stealpriority>10000</stealpriority>
 <mode>x_3d</mode>
 <ignoregeometry>No</ignoregeometry>
-<rolloff>Logarithmic</rolloff>
-<mindistance>1</mindistance>
-<maxdistance>3</maxdistance>
+<rolloff>Linear</rolloff>
+<mindistance>0.5</mindistance>
+<maxdistance>5</maxdistance>
 <auto_distance_filtering>Off</auto_distance_filtering>
 <distance_filter_centre_freq>1500</distance_filter_centre_freq>
 <headrelative>World_relative</headrelative>
