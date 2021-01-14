@@ -87,6 +87,7 @@ class cScrMap : iScrMap
 		// Preload sounds
 		Sound_PreloadGroup("morse_entity", true);
 		Sound_PreloadGroup("morse_events", true);
+		Sound_PreloadGroup("morse_level_shared", true);
 		//Sound_PreloadGroup("morse_player", true);
 		
 		//Sound_PreloadGroup("01_prologue", true);
@@ -116,6 +117,11 @@ class cScrMap : iScrMap
 		if(cLux_ScriptDebugOn())
 		{
 			mbStartIntro = false;
+			
+			if (!mbStartIntro)
+			{
+				//Sound_CreateAtEntity("", "level_amb_shared/amb/sweeteners/02_06_oasis/amb_sweet_birds", "player", 0, false, .25f);
+			}
 			
 			if (ItemType_GetCountInInventory("Lantern") < 1)
 			{
@@ -237,6 +243,8 @@ class cScrMap : iScrMap
 		{
 			cLux_AddDebugMessage("DEBUG: On scroll up...");
 			Lantern_SetAmount(10);
+			
+			//Sound_CreateAtEntity("", "", "player", 0, false, 1.f);
 		}
 		
 		if (alAction == eAction_ScrollDown)
@@ -304,12 +312,14 @@ class cScrMap : iScrMap
 	{
 		if (alState == 1)
 		{
-			Map_AddTimer("rand_sounds_OnTimer", 0.f, "RandSounds_OnTimer");
+			Map_AddTimer("rand_sounds_OnTimer", 2.f, "RandSounds_OnTimer");
+			Map_AddTimer("flies", 5.f, "FliesSound_OnTimer");
 			return true;
 		}
 		else
 		{
 			Map_RemoveTimer("rand_sounds_OnTimer");
+			Map_RemoveTimer("flies");
 			return true;
 		}
 	}
@@ -320,7 +330,7 @@ class cScrMap : iScrMap
 	{
 		if (!Map_TimerExists(asTimer))
 		{
-			array<tString> mvRandSounds = {"level_amb_shared/amb/sweeteners/01_02_caves/entrance_skylight_animal"};
+			array<tString> mvRandSounds = {"morse_events/forest/plants/movement/plants_low_movement", "morse_events/forest/plants/movement/plants_high_movement"};
 			int mlRandSoundIndex = cMath_RandRectl(0, mvRandSounds.length()-1);
 			
 			array<iLuxEntity@> mvRandSoundEntityArray;
@@ -329,11 +339,21 @@ class cScrMap : iScrMap
 			
 			Sound_CreateAtEntity("rand_sound", mvRandSounds[mlRandSoundIndex], msRandSoundEntity);
 			
-			float mfRandSoundTime = cMath_RandRectf(10.f, 20.f);
+			float mfRandSoundTime = cMath_RandRectf(20.f, 30.f);
 			Map_RestartCurrentTimer(mfRandSoundTime);
 			
 			cLux_AddDebugMessage("Entity: " + msRandSoundEntity + ", Time: " + Map_GetTimerTime(asTimer));
 		}
+	}
+	
+	//-------------------------------------------------------
+	
+	void FliesSound_OnTimer(const tString &in asTimer)
+	{
+		Sound_CreateAtEntity("", "morse_level_shared/amb/sweetener/animal/flies", "player", 0, false, .15f);
+		
+		float mfRandSoundTime = cMath_RandRectf(20.f, 45.f);
+		Map_RestartCurrentTimer(mfRandSoundTime);
 	}
 	
 	//-------------------------------------------------------

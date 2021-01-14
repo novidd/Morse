@@ -18,6 +18,7 @@ MAPS:
 			 * Add grass undergrowth in the forest trail (cant do this, level editor bugged).
 			 * Add stones/debris around the forest trail.
 			 * Create an outhouse.
+			 * Fix (change) the barbed wire fences.
 			 
 		SCRIPTS:
 			TODO:
@@ -28,8 +29,3 @@ MAPS:
 			 * Add vo throughout the level.
 			 * (NOT NECESSARY) Create a fire damage module, that checks if the player is inside of a trigger area ("FirePlayerDamage_X") use Entity_GetCollide(), 
 			   to get all the trigger areas use Map_GetEntityArray().
-			   
-			   
-			 * Add events/sound effects that play throughout the forest (bushes moving, branches snapping, animal sounds).
-			  * level_amb_shared/amb/sweeteners/02_06_oasis/amb_sweet_birds (loop, play level_amb_shared/amb/sweeteners/01_02_caves/entrance_skylight_insects in disturbance scene)
-			  * level_amb_shared/amb/sweeteners/01_02_caves/cave_bird_tweet (loop, plays for a certain amount of times then remove sound)

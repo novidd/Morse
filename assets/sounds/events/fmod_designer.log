@@ -1,0 +1,128 @@
+Warning: libpng warning: Interlace handling should be turned on when using png_read_image
+Warning: libpng warning: Interlace handling should be turned on when using png_read_image
+Warning: libpng warning: Interlace handling should be turned on when using png_read_image
+Warning: libpng warning: Interlace handling should be turned on when using png_read_image
+Warning: libpng warning: Interlace handling should be turned on when using png_read_image
+Warning: QPainter::begin: Paint device returned engine == 0, type: 1
+Warning: QPainter::setPen: Painter not active
+Warning: QPainter::setBrush: Painter not active
+Warning: QPainter::setRenderHint: Painter must be active to set rendering hints
+Warning: QPainter::setPen: Painter not active
+Warning: libpng warning: Interlace handling should be turned on when using png_read_image
+Debug: "15:18:21 c:\jk\workspace\build__4.44__designer_win\fmod4\tools\fmod_designer\src\builddialog.ui.h:274 AG: Find Missing Sound Files" 
+Debug: Error : Build failed : Couldn't cache details for 'src_sounds\forest\plants_branch_break_movement.ogg'.
+Debug: 
+Building project 'morse_events'...
+Debug: Building project C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\morse_events.fev...
+Debug: Unique sound defs 1/9
+Debug: Retrieving sound file info...
+Debug: Retrieving reverb info...
+Debug: FEV file written ok
+Debug: Unique Envelope Points: 0 of 0
+Debug: Unique Strings: 666 characters of 667
+Debug: Caching sound file details for ''...
+Debug: src_sounds\forest\plants_branch_snap.ogg
+Debug: src_sounds\forest\plants_bush_hit.ogg
+Debug: src_sounds\forest\plants_high_movement_1.ogg
+Debug: src_sounds\forest\plants_high_movement_2.ogg
+Debug: src_sounds\forest\plants_high_movement_3.ogg
+Debug: src_sounds\forest\plants_high_movement_4.ogg
+Debug: src_sounds\forest\plants_high_movement_full.ogg
+Debug: src_sounds\forest\plants_low_movement.ogg
+Debug: src_sounds\forest\plants_twigs_snap_movement.ogg
+Debug: src_sounds\native\native_weapon_whoosh_1.ogg
+Debug: src_sounds\native\native_weapon_whoosh_2.ogg
+Debug: src_sounds\native\native_weapon_whoosh_3.ogg
+Debug: src_sounds\native\native_weapon_whoosh_4.ogg
+Debug: src_sounds\radio\radio_morse_sos.ogg
+Debug: src_sounds\whisper\whoosh_whisper_1.ogg
+Debug: src_sounds\whisper\whoosh_whisper_2.ogg
+Debug: src_sounds\whisper\whoosh_whisper_3.ogg
+Debug: src_sounds\whisper\whoosh_whisper_4.ogg
+Debug: Building 'morse_events_bank03.fsb'
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_bush_hit.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_branch_snap.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_high_movement_1.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_high_movement_2.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_high_movement_4.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_high_movement_3.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_high_movement_full.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_low_movement.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\native\native_weapon_whoosh_1.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_twigs_snap_movement.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\native\native_weapon_whoosh_2.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\native\native_weapon_whoosh_3.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\native\native_weapon_whoosh_4.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\radio\radio_morse_sos.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\whisper\whoosh_whisper_2.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\whisper\whoosh_whisper_1.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\whisper\whoosh_whisper_3.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\whisper\whoosh_whisper_4.ogg
+Debug: Writing FSB...
+Debug: Finished building FSB
+Debug: 
+The following errors and warnings were detected:
+Error : Build failed : Couldn't cache details for 'src_sounds\forest\plants_branch_break_movement.ogg'.
+Debug: 
+Summary of build:
+SUCCESS: C:/Program Files (x86)/Steam/steamapps/common/Amnesia Rebirth/mods/Morse/assets/sounds/events/morse_events.fev
+SUCCESS: morse_events_bank03.fsb
+Debug: "15:19:45 ..\..\src\propertyeditor.cpp:2619 EO: Set x 3D Min Distance" 
+Debug: "15:19:48 ..\..\src\propertyeditor.cpp:2619 EO: Set x 3D Min Distance" 
+Debug: "15:19:52 ..\..\src\propertyeditor.cpp:2619 EO: Set x 3D Min Distance" 
+Debug: "15:19:59 ..\..\src\propertyeditor.cpp:2619 EO: Set x 3D Min Distance" 
+Debug: "15:20:01 ..\..\src\propertyeditor.cpp:2619 EO: Set x 3D Min Distance" 
+Debug: 
+Building project 'morse_events'...
+Debug: Building project C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\morse_events.fev...
+Debug: Unique sound defs 1/9
+Debug: Retrieving sound file info...
+Debug: Retrieving reverb info...
+Debug: FEV file written ok
+Debug: Unique Envelope Points: 0 of 0
+Debug: Unique Strings: 666 characters of 667
+Debug: Caching sound file details for ''...
+Debug: src_sounds\forest\plants_branch_snap.ogg
+Debug: src_sounds\forest\plants_bush_hit.ogg
+Debug: src_sounds\forest\plants_high_movement_1.ogg
+Debug: src_sounds\forest\plants_high_movement_2.ogg
+Debug: src_sounds\forest\plants_high_movement_3.ogg
+Debug: src_sounds\forest\plants_high_movement_4.ogg
+Debug: src_sounds\forest\plants_high_movement_full.ogg
+Debug: src_sounds\forest\plants_low_movement.ogg
+Debug: src_sounds\forest\plants_twigs_snap_movement.ogg
+Debug: src_sounds\native\native_weapon_whoosh_1.ogg
+Debug: src_sounds\native\native_weapon_whoosh_2.ogg
+Debug: src_sounds\native\native_weapon_whoosh_3.ogg
+Debug: src_sounds\native\native_weapon_whoosh_4.ogg
+Debug: src_sounds\radio\radio_morse_sos.ogg
+Debug: src_sounds\whisper\whoosh_whisper_1.ogg
+Debug: src_sounds\whisper\whoosh_whisper_2.ogg
+Debug: src_sounds\whisper\whoosh_whisper_3.ogg
+Debug: src_sounds\whisper\whoosh_whisper_4.ogg
+Debug: Building 'morse_events_bank03.fsb'
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_branch_snap.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_bush_hit.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_high_movement_2.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_high_movement_1.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_high_movement_3.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_high_movement_4.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_high_movement_full.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_low_movement.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\native\native_weapon_whoosh_1.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\forest\plants_twigs_snap_movement.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\native\native_weapon_whoosh_2.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\native\native_weapon_whoosh_3.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\native\native_weapon_whoosh_4.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\radio\radio_morse_sos.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\whisper\whoosh_whisper_1.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\whisper\whoosh_whisper_2.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\whisper\whoosh_whisper_3.ogg
+Debug: Encoded C:\Program Files (x86)\Steam\steamapps\common\Amnesia Rebirth\mods\Morse\assets\sounds\events\src_sounds\whisper\whoosh_whisper_4.ogg
+Debug: Writing FSB...
+Debug: Finished building FSB
+Debug: 
+Debug: 
+Summary of build:
+SUCCESS: C:/Program Files (x86)/Steam/steamapps/common/Amnesia Rebirth/mods/Morse/assets/sounds/events/morse_events.fev
+SUCCESS: morse_events_bank03.fsb

@@ -82,7 +82,7 @@
                     <Var ObjectId="268435459" Name="DeactivateOnInteract" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435460" Name="Lake_Soundscape" CreStamp="1605725446" ModStamp="1605731383" WorldPos="-13.75 21.25 15.5" Rotation="0 0 0" Scale="100.25 48.8605 99.75" Active="true" Mesh="" UID="16 1355 268435460" AreaType="Soundscape">
+            <Area ID="268435460" Name="Lake_Soundscape" CreStamp="1605725446" ModStamp="1610635038" WorldPos="-13.75 21.25 15.5" Rotation="0 0 0" Scale="87 50 99.75" Active="true" Mesh="" UID="16 1355 268435460" AreaType="Soundscape">
                 <UserVariables>
                     <Var ObjectId="268435460" Name="Note" Value="" />
                     <Var ObjectId="268435460" Name="UseReverb" Value="true" />
@@ -93,7 +93,7 @@
                     <Var ObjectId="268435460" Name="Prio" Value="0" />
                     <Var ObjectId="268435460" Name="Level" Value="1: Area" />
                     <Var ObjectId="268435460" Name="BG_Sound" Value="level_amb_shared/amb/background/02_05_cistern/flow_connection" />
-                    <Var ObjectId="268435460" Name="BG_Volume" Value="0.3" />
+                    <Var ObjectId="268435460" Name="BG_Volume" Value="0.15" />
                     <Var ObjectId="268435460" Name="BG_FadeInTime" Value="1.5" />
                     <Var ObjectId="268435460" Name="BG_FadeOutTime" Value="1.5" />
                     <Var ObjectId="268435460" Name="BG_FadeTransitionSpeed" Value="1" />
@@ -109,7 +109,7 @@
                     <Var ObjectId="268435460" Name="ParentAttachBody" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435461" Name="Outdoor_Soundscape" CreStamp="1605726214" ModStamp="1610294304" WorldPos="-0.75 50 54" Rotation="0 0 0" Scale="172.75 100 165" Active="true" Mesh="" UID="16 1304 268435461" AreaType="Soundscape">
+            <Area ID="268435461" Name="Outdoor_Soundscape_1" CreStamp="1605726214" ModStamp="1610635174" WorldPos="-0.75 50 54" Rotation="0 0 0" Scale="172.75 100 165" Active="true" Mesh="" UID="16 1304 268435461" AreaType="Soundscape">
                 <UserVariables>
                     <Var ObjectId="268435461" Name="Note" Value="" />
                     <Var ObjectId="268435461" Name="UseReverb" Value="true" />
@@ -119,8 +119,8 @@
                     <Var ObjectId="268435461" Name="ReverbFadeTime" Value="1" />
                     <Var ObjectId="268435461" Name="Prio" Value="1" />
                     <Var ObjectId="268435461" Name="Level" Value="0: Global" />
-                    <Var ObjectId="268435461" Name="BG_Sound" Value="level_amb_shared/amb/background/level_dreams/park_birds" />
-                    <Var ObjectId="268435461" Name="BG_Volume" Value="0.1" />
+                    <Var ObjectId="268435461" Name="BG_Sound" Value="level_amb_shared/amb/sweeteners/02_06_oasis/amb_sweet_birds" />
+                    <Var ObjectId="268435461" Name="BG_Volume" Value="0.2" />
                     <Var ObjectId="268435461" Name="BG_FadeInTime" Value="1" />
                     <Var ObjectId="268435461" Name="BG_FadeOutTime" Value="1" />
                     <Var ObjectId="268435461" Name="BG_FadeTransitionSpeed" Value="1" />
@@ -502,25 +502,7 @@
                     <Var ObjectId="268435476" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435477" Name="Start_Deep_Forest_Entrance" CreStamp="1609867677" ModStamp="1609867716" WorldPos="122.72 9.14026 91.9816" Rotation="0 -0.0462743 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 6303 268435477" AreaType="PlayerStart">
-                <UserVariables>
-                    <Var ObjectId="268435477" Name="Note" Value="" />
-                    <Var ObjectId="268435477" Name="Crouching" Value="false" />
-                </UserVariables>
-            </Area>
-            <Area ID="268435478" Name="Start_Deep_Forest_Bridge" CreStamp="1609889624" ModStamp="1609971764" WorldPos="113.75 7.89863 130.029" Rotation="0 0.739941 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 7604 268435478" AreaType="PlayerStart">
-                <UserVariables>
-                    <Var ObjectId="268435478" Name="Note" Value="" />
-                    <Var ObjectId="268435478" Name="Crouching" Value="false" />
-                </UserVariables>
-            </Area>
-            <Area ID="268435479" Name="Start_Deep_Forest_Bridge_Below" CreStamp="1609957546" ModStamp="1610208390" WorldPos="123.373 1.75 132.538" Rotation="0 -0.754877 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 6956 268435479" AreaType="PlayerStart">
-                <UserVariables>
-                    <Var ObjectId="268435479" Name="Note" Value="" />
-                    <Var ObjectId="268435479" Name="Crouching" Value="false" />
-                </UserVariables>
-            </Area>
-            <Area ID="268435480" Name="Start_Deep_Forest_Fence" CreStamp="1610125949" ModStamp="1610214286" WorldPos="128.284 9.25592 172.281" Rotation="0 0.92966 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 6081 268435480" AreaType="PlayerStart">
+            <Area ID="268435480" Name="Start_Mine_Entrance" CreStamp="1610125949" ModStamp="1610632370" WorldPos="128.284 9.25592 172.281" Rotation="0 0.92966 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 6081 268435480" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268435480" Name="Note" Value="" />
                     <Var ObjectId="268435480" Name="Crouching" Value="false" />
@@ -869,7 +851,7 @@
                     <Var ObjectId="301990342" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="301990343" Name="RandSound_7" CreStamp="1610475235" ModStamp="1610475427" WorldPos="86.75 22.75 101.25" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="18 7569 301990343" AreaType="Trigger">
+            <Area ID="301990343" Name="RandSound_7" CreStamp="1610475235" ModStamp="1610646513" WorldPos="85.0013 22.75 103.758" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="18 7569 301990343" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="301990343" Name="Note" Value="" />
                     <Var ObjectId="301990343" Name="BlocksLineOfSight" Value="false" />
@@ -1065,7 +1047,7 @@
                     <Var ObjectId="301990363" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="301990364" Name="RustlingSound" CreStamp="1610546591" ModStamp="1610546618" WorldPos="58.25 22.5 68.75" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="18 7546 301990364" AreaType="Trigger">
+            <Area ID="301990364" Name="RustlingSound" CreStamp="1610546591" ModStamp="1610639180" WorldPos="60.75 21.5 69.25" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="18 7546 301990364" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="301990364" Name="Note" Value="" />
                     <Var ObjectId="301990364" Name="BlocksLineOfSight" Value="false" />
@@ -1091,6 +1073,39 @@
                     <Var ObjectId="301990364" Name="CanInteractWithoutCallback" Value="false" />
                     <Var ObjectId="301990364" Name="MaxFocusDistance" Value="-1" />
                     <Var ObjectId="301990364" Name="CustomInteractIcon" Value="Default" />
+                </UserVariables>
+            </Area>
+            <Area ID="301990366" Name="Start_Forest_Entrance" CreStamp="1610632138" ModStamp="1610632237" WorldPos="33.25 22.5 48.75" Rotation="0 1.05078 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="18 1679 301990366" AreaType="PlayerStart">
+                <UserVariables>
+                    <Var ObjectId="301990366" Name="Note" Value="" />
+                    <Var ObjectId="301990366" Name="Crouching" Value="false" />
+                </UserVariables>
+            </Area>
+            <Area ID="301990381" Name="Outdoor_Soundscape_2" CreStamp="1610635052" ModStamp="1610635171" WorldPos="-0.75 50 54" Rotation="0 0 0" Scale="172.75 100 165" Active="false" Mesh="" UID="18 1304 301990381" AreaType="Soundscape">
+                <UserVariables>
+                    <Var ObjectId="301990381" Name="Note" Value="" />
+                    <Var ObjectId="301990381" Name="UseReverb" Value="true" />
+                    <Var ObjectId="301990381" Name="ReverbType" Value="Forest" />
+                    <Var ObjectId="301990381" Name="ReverbPrio" Value="100" />
+                    <Var ObjectId="301990381" Name="ReverbAmount" Value="0.75" />
+                    <Var ObjectId="301990381" Name="ReverbFadeTime" Value="1" />
+                    <Var ObjectId="301990381" Name="Prio" Value="1" />
+                    <Var ObjectId="301990381" Name="Level" Value="0: Global" />
+                    <Var ObjectId="301990381" Name="BG_Sound" Value="level_amb_shared/amb/sweeteners/01_02_caves/entrance_skylight_insects" />
+                    <Var ObjectId="301990381" Name="BG_Volume" Value="0.8" />
+                    <Var ObjectId="301990381" Name="BG_FadeInTime" Value="1" />
+                    <Var ObjectId="301990381" Name="BG_FadeOutTime" Value="1" />
+                    <Var ObjectId="301990381" Name="BG_FadeTransitionSpeed" Value="1" />
+                    <Var ObjectId="301990381" Name="BG_ParentVolMul" Value="1" />
+                    <Var ObjectId="301990381" Name="SoundEnt_InNames" Value="" />
+                    <Var ObjectId="301990381" Name="SoundEnt_OutNames" Value="" />
+                    <Var ObjectId="301990381" Name="SoundEnt_FadeInTime" Value="1" />
+                    <Var ObjectId="301990381" Name="SoundEnt_FadeOutTime" Value="1" />
+                    <Var ObjectId="301990381" Name="SoundPrefixPrio" Value="0" />
+                    <Var ObjectId="301990381" Name="SoundPrefix" Value="[None]" />
+                    <Var ObjectId="301990381" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="301990381" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="301990381" Name="ParentAttachBody" Value="" />
                 </UserVariables>
             </Area>
         </Objects>
