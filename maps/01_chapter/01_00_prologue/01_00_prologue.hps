@@ -318,7 +318,7 @@ class cScrMap : iScrMap
 	
 	void RandSounds_OnTimer(const tString &in asTimer)
 	{
-		if (!Map_TimerExists("rand_sounds_OnTimer"))
+		if (!Map_TimerExists(asTimer))
 		{
 			array<tString> mvRandSounds = {"level_amb_shared/amb/sweeteners/01_02_caves/entrance_skylight_animal"};
 			int mlRandSoundIndex = cMath_RandRectl(0, mvRandSounds.length()-1);
