@@ -108,11 +108,11 @@ shared enum eLanternOilType
 	 * (If uservar = 3, then the player can get oil 2 times, etc)
 	 * 
 	 * @param String asEntity, the entity/trigger area interacted with to get the uservar from, and the source to play the extract_oil sound. 
-	 * @param String asOilType, the type of oil to give the player, must either be "ModernOil" (small) / "HerbertOil" (medium) / "AlchemistOil" (large).  
+	 * @param eLanternOilType alOilType, the type of oil to give the player, must either be eOil[Type].  
 	**/
 	void ExtractOil(const tString &in asEntity, eLanternOilType alOilType)
 	{
-		if (Entity_GetVarInt(asEntity, "") <= 0) // Checks if uservar is a valid integer
+		if (Entity_GetVarInt(asEntity, "") <= 0) // Checks if uservar in asEntity is a valid integer
 		{
 			Error("The user var for " + asEntity + " is not valid, it must be an integer >= 1.");
 			return;

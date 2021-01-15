@@ -36,7 +36,7 @@ const tString msRadioElectricity = "radio_electrcity";
 const float mfHighlightingTime = 1.f;
 
 const float mfGlobalMusicVolume = 0.15f;
- 
+
 //--------------------------------------------------
  
 class cScrMap : iScrMap
@@ -60,6 +60,9 @@ class cScrMap : iScrMap
 		Player_SetVertigoActive(false);
 		Player_SetMaxHealth(100.f);
 		Player_SetHealth(100.f);
+		
+		// Map
+		Map_SetSkyboxRotation(cVector3f(0, 0.f, 0));
 		
 		//Stamina_SetStaminaSystemActive(true);
 		
@@ -105,6 +108,7 @@ class cScrMap : iScrMap
 		cScript_SetGlobalVarBool("IsCampfireLit", true);
 		cScript_SetGlobalVarBool("IsBatteryDead", false);
 		cScript_SetGlobalVarBool("IsInFire", false);
+		cScript_SetGlobalVarInt("DisturbanceEvent", 0);
 		
 		// Sounds
 		Sound_CreateAtEntity("", "morse_level_shared/amb/sweetener/animal/flies_loop", "FliesSound", 0, false, .5f);
@@ -114,6 +118,9 @@ class cScrMap : iScrMap
 		
 		// Lights
 		Light_FadeBrightnessTo("radio_transmitter_button_light", 0.f, .1f);
+		
+		// Particles
+		ParticleSystem_CreateAtEntityExt("camp_fire_smoke", "smoke_fireplace_plume_continous.ps", "CampFireSmoke", true, cColor(0.107,0.102,0.097,0.392), .5f, false);
 		
 		/////////////////////////
 		// Debug
@@ -166,6 +173,11 @@ class cScrMap : iScrMap
 		{
 			Player_GiveDamageAndSound(2.f, 10.f, 1, "FirePlayerDamage", "fire_playerdamage", true, ePlayerDamageMedium);
 			Map_AddTimer("negate_damage", .75f, "NegateDamage_OnTimer");
+		}
+		
+		if (cScript_GetGlobalVarInt("DisturbanceEvent") >= 2)
+		{
+			Map_GetEntity("InteractSleep").SetInteractionDisabled(true);
 		}
 	}
 
@@ -226,15 +238,16 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test1)
 		{
-			/*
-			 * Run this animation on wake up for the camp disturbance events
-			 * Hide pillow to avoid player head clipping, enable after
-			 * Reset pillow position the starting position get var on map start (global const var outside cScrMap)
-			 */
-			PlayerBody_PlayCutsceneAtEntity("wake_up_from_death_2", "SleepPos", false, 0.3f, "");
-			Entity_SetActive("pillow", false);
-			PlayerBody_SetCutsceneMaxPitch(2.5f);
-			PlayerBody_SetCutsceneMaxYaw(2.5f);
+			Map_SetSkyboxRotation(cVector3f(0, 360.f, 0));
+			
+			Map_GetEntity("moon").SetPosition(cVector3f(425.75f, 167.783f, 325.75f));
+		}
+		
+		if (alAction == eAction_Test2)
+		{
+			Map_SetSkyboxRotation(cVector3f(0, 330.f, 0));
+			
+			Map_GetEntity("moon").SetPosition(cVector3f(335.75f, 167.783f, -175.75f));
 		}
 		
 		if(alAction == eAction_ScrollUp)
@@ -356,6 +369,14 @@ class cScrMap : iScrMap
 	
 	//-------------------------------------------------------
 	
+	bool Rustling_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
+	{
+		Sound_CreateAtEntity("", "morse_events/forest/plants/movement/plants_high_movement", "RustlingSound", 0, false, 1.f);
+		return false;
+	}
+	
+	//-------------------------------------------------------
+	
 	//} END AMBIENCE/SWEETENERS
  
 	//} END MAIN FUNCTIONS
@@ -398,7 +419,7 @@ class cScrMap : iScrMap
 		void Seq_Intro(const tString &in asName)
 		{
 			Sequence_Begin("Seq_Intro", mSeqIntro);
-			if(Sequence_DoStepAndWait(1.f))
+			if (Sequence_DoStepAndWait(1.f))
 			{
 				cLux_AddDebugMessage("Intro Sequence starting...");
 				
@@ -693,7 +714,7 @@ class cScrMap : iScrMap
 		//} END General	
 	 
 		/////////////////////////////////////////
-		// Event A *PLAYER EXTINGUISHES THE CAMPFIRE*
+		// Event A *PLAYER GOES TO SLEEP*
 		//{//////////////////////////////////////
 
 		//-------------------------------------------------------
@@ -704,9 +725,162 @@ class cScrMap : iScrMap
 
 		/*Put any functions that are only used in Scene 3, Event A here.*/
 		
+		void Sleep_OnPlayerInteract(const tString &in asEntity)
+		{
+			Seq_Disturbance("");
+		}
+		
 		//-------------------------------------------------------
 
-		//} END Event *PLAYER EXTINGUISHES THE CAMPFIRE*
+		//} END Event *PLAYER GOES TO SLEEP*
+		
+		/////////////////////////////////////////
+		// Event B *DISTURBANCE SEQUENCE*
+		//{//////////////////////////////////////
+
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 3, Event A here.*/
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 3, Event A here.*/
+		
+		/*
+		 * Run this animation on wake up for the camp disturbance events
+		 * Hide pillow to avoid player head clipping, enable after
+		 * Reset pillow position the starting position get var on map start (global const var outside cScrMap)
+		*/
+		
+		cSequenceStatesData mSeqDisturbance;
+		void Seq_Disturbance(const tString &in asName)
+		{
+			Sequence_Begin("Seq_Disturbance", mSeqDisturbance);
+			if (Sequence_DoStepAndWait(3.5f))
+			{
+				cLux_AddDebugMessage("Disturbance Sequence starting. Iteration: " + cString_ToString(cScript_GetGlobalVarInt("DisturbanceEvent")+1, 0));
+				
+				Effect_Fade_Out(3.f);
+				Sound_FadeGlobalVolume(0.f, 3.f, eSoundEntryType_World);
+				Player_SetActive(false);
+				
+				Map_RemoveTimer("rand_sounds_OnTimer");
+			}
+			else if (Sequence_DoStepAndWait(8.f))
+			{
+				DisableLampsAndLights();
+				
+				UpdateWorld();
+				
+				IncDisturbanceGlobalVar();
+				cScript_SetGlobalVarBool("IsCampfireLit", false);
+				
+				Entity_SetActive("Outdoor_Soundscape_1", false);
+				Entity_SetActive("Outdoor_Soundscape_2", true);
+				
+				Player_Teleport("Start_Bed");
+			}
+			else if (Sequence_DoStepAndWait(5.f)) // The disturbance sounds
+			{
+				cLux_AddDebugMessage("Spooky noises...");
+				PlayDisturbanceSound();
+			}
+			else if (Sequence_DoStepAndWait(1.f)) // Player wakes up for the first time
+			{
+				Effect_Fade_In(3.f);
+				Sound_FadeGlobalVolume(1.f, 3.f, eSoundEntryType_World);
+				Player_SetActive(true);
+				
+				PlayerBody_PlayCutsceneAtEntity("wake_up_from_death_2", "SleepPos", false, .3f, "WakeUpAnimDone", 1.25f);
+				Player_StartLookAt("Bonk", 1.f, 2.f, 10.f);
+				PlayerBody_SetCutsceneMaxPitch(2.5f);
+				PlayerBody_SetCutsceneMaxYaw(2.5f);
+				
+				Entity_SetActive("pillow", false);
+			}
+			Sequence_End();
+		}
+		
+		//-------------------------------------------------------
+		
+		bool Bonk_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			cLux_AddDebugMessage("Get bonked in the head.");
+			return false;
+		}
+		
+		//-------------------------------------------------------
+		
+		void WakeUpAnimDone(const tString &in asAnimName)
+		{
+			Entity_SetActive("pillow", true);
+			Map_AddTimer("stop_look_at", 1.5f, "StopPlayerLookAt_OnTimer");
+			
+			// Run vo here
+		}
+		
+		//-------------------------------------------------------
+		
+		void StopPlayerLookAt_OnTimer(const tString &in asTimer)
+		{
+			Player_StopLookAt(1.0f);
+		}
+		
+		//-------------------------------------------------------
+		
+		void DisableLampsAndLights()
+		{
+			Lamp_SetLit("camp_fire", false, true);
+			Light_SetVisible("camp_fire_light_*", false);
+			ParticleSystem_SetVisible("camp_fire_smoke", false);
+			ParticleSystem_CreateAtEntityExt("camp_fire_unlit", "campfire_caves.ps", "CampFireSmoke", true, cColor(0.674,0.674,0.674,1), .5f, false);
+			
+			Lamp_SetLit("camp_lamp_1", false, true);
+			Lamp_SetLit("camp_lamp_2", false, true);
+		}
+		
+		//-------------------------------------------------------
+		
+		void IncDisturbanceGlobalVar()
+		{
+			cScript_SetGlobalVarInt("DisturbanceEvent", cScript_GetGlobalVarInt("DisturbanceEvent")+1);
+		}
+		
+		//-------------------------------------------------------
+		
+		void PlayDisturbanceSound()
+		{
+			if (cScript_GetGlobalVarInt("DisturbanceEvent") == 1)
+				Sound_CreateAtEntity("", "morse_events/forest/plants/movement/plants_twigs_snap_movement", "DisturbanceSound", 0, false, .075f);
+			else if (cScript_GetGlobalVarInt("DisturbanceEvent") == 2)
+				Sound_CreateAtEntity("", "sound", "DisturbanceSound", 0, false, .075f);
+		}
+		
+		//-------------------------------------------------------
+		
+		void UpdateWorld()
+		{
+			cVector3f mvSkyboxRotation;
+			cVector3f mvMoonPosition;
+			
+			if (cScript_GetGlobalVarInt("DisturbanceEvent") == 1)
+			{
+				mvSkyboxRotation = cVector3f(0, 360.f, 0);
+				mvMoonPosition = cVector3f(425.75f, 167.783f, 325.75f);
+			}
+			else if (cScript_GetGlobalVarInt("DisturbanceEvent") == 2)
+			{
+				mvSkyboxRotation = cVector3f(0, 330.f, 0);
+				mvMoonPosition = cVector3f(335.75f, 167.783f, -175.75f);
+			}
+			
+			Map_SetSkyboxRotation(mvSkyboxRotation);
+			Map_GetEntity("moon").SetPosition(mvMoonPosition);
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *DISTURBANCE SEQUENCE*
 	 
 	//} END SCENE 3
 }
