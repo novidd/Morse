@@ -7,7 +7,7 @@
                     <Var ObjectId="268435456" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435457" Name="Start_Cave" CreStamp="1610756222" ModStamp="1610756233" WorldPos="0 1.177 0" Rotation="0 -1.5708 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 45 268435457" AreaType="PlayerStart">
+            <Area ID="268435457" Name="Start_Native" CreStamp="1610756222" ModStamp="1610817644" WorldPos="3.65177 14.2683 -1.52158" Rotation="-0 4.56651 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 151 268435457" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268435457" Name="Note" Value="" />
                     <Var ObjectId="268435457" Name="Crouching" Value="false" />
@@ -41,7 +41,7 @@
                     <Var ObjectId="268435458" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435459" Name="Fear_1" CreStamp="1610757654" ModStamp="1610797629" WorldPos="0 10 0" Rotation="0 0 0" Scale="150 150 150" Active="false" Mesh="" UID="16 75 268435459" AreaType="Fear">
+            <Area ID="268435459" Name="Fear_1" CreStamp="1610757654" ModStamp="1610812930" WorldPos="0 10 0" Rotation="0 0 0" Scale="150 150 150" Active="false" Mesh="" UID="16 75 268435459" AreaType="Fear">
                 <UserVariables>
                     <Var ObjectId="268435459" Name="Priority" Value="0" />
                     <Var ObjectId="268435459" Name="Safe" Value="false" />
@@ -57,6 +57,83 @@
                     <Var ObjectId="268435459" Name="NonAgentRateCap" Value="0.8" />
                     <Var ObjectId="268435459" Name="CC_Entities" Value="" />
                     <Var ObjectId="268435459" Name="CC_Funcs" Value="" />
+                </UserVariables>
+            </Area>
+            <Area ID="268435460" Name="FearScaryObject_1" CreStamp="1610812014" ModStamp="1610812863" WorldPos="-2.47755 0.624296 -0.480291" Rotation="-0.186815 -0.103616 1.07011" Scale="0.75 1.8 0.75" Active="true" Mesh="" UID="16 95 268435460" AreaType="FearScaryObject">
+                <UserVariables>
+                    <Var ObjectId="268435460" Name="ScaryObject_BaseFearRate" Value="0.3" />
+                    <Var ObjectId="268435460" Name="ScaryObject_SurpriseFactor" Value="0.2" />
+                    <Var ObjectId="268435460" Name="ScaryObject_LookAtFactor" Value="0.2" />
+                    <Var ObjectId="268435460" Name="ScaryObject_ActivationDelay" Value="0.2" />
+                    <Var ObjectId="268435460" Name="ScaryObject_ActivationLightLevel" Value="0.1" />
+                    <Var ObjectId="268435460" Name="ScaryObject_ActivationDistance" Value="3.5" />
+                    <Var ObjectId="268435460" Name="ScaryObject_DeactivationDistance" Value="3.5" />
+                    <Var ObjectId="268435460" Name="ScaryObject_InteractFactor" Value="-1.0" />
+                    <Var ObjectId="268435460" Name="ScaryObject_ActivationCallback" Value="" />
+                    <Var ObjectId="268435460" Name="LookAtDetectWholeArea" Value="false" />
+                    <Var ObjectId="268435460" Name="AdditionalActivationTriggers" Value="" />
+                </UserVariables>
+            </Area>
+            <Area ID="268435461" Name="Start_Cave" CreStamp="1610817621" ModStamp="1610817632" WorldPos="-0.326302 1.28088 -0.734666" Rotation="-0 4.62036 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 45 268435461" AreaType="PlayerStart">
+                <UserVariables>
+                    <Var ObjectId="268435461" Name="Note" Value="" />
+                    <Var ObjectId="268435461" Name="Crouching" Value="false" />
+                </UserVariables>
+            </Area>
+            <Area ID="268435594" Name="NativePlayerFall" CreStamp="1610818205" ModStamp="1610821845" WorldPos="-0.380916 13.8343 -2.31881" Rotation="0 1.28539 0" Scale="1 1 1" Active="true" Mesh="" UID="16 166 268435594" AreaType="Trigger">
+                <UserVariables>
+                    <Var ObjectId="268435594" Name="Note" Value="" />
+                    <Var ObjectId="268435594" Name="BlocksLineOfSight" Value="false" />
+                    <Var ObjectId="268435594" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268435594" Name="UserVar" Value="" />
+                    <Var ObjectId="268435594" Name="Static" Value="false" />
+                    <Var ObjectId="268435594" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268435594" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268435594" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268435594" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268435594" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268435594" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268435594" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268435594" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="268435594" Name="PlayerLookAtCallback" Value="" />
+                    <Var ObjectId="268435594" Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                    <Var ObjectId="268435594" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
+                    <Var ObjectId="268435594" Name="PlayerLookAtCheckRayIntersection" Value="true" />
+                    <Var ObjectId="268435594" Name="PlayerLookAtMaxDistance" Value="-1" />
+                    <Var ObjectId="268435594" Name="PlayerLookAtCallbackDelay" Value="0" />
+                    <Var ObjectId="268435594" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268435594" Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268435594" Name="CanInteractWithoutCallback" Value="false" />
+                    <Var ObjectId="268435594" Name="MaxFocusDistance" Value="-1" />
+                    <Var ObjectId="268435594" Name="CustomInteractIcon" Value="Default" />
+                </UserVariables>
+            </Area>
+            <Area ID="268435631" Name="NativeFadeToBlack" CreStamp="1610822943" ModStamp="1610822983" WorldPos="-1.11965 0.223355 -0.752197" Rotation="0 -0.156191 0" Scale="1 1 1" Active="true" Mesh="" UID="16 159 268435631" AreaType="Trigger">
+                <UserVariables>
+                    <Var ObjectId="268435631" Name="Note" Value="" />
+                    <Var ObjectId="268435631" Name="BlocksLineOfSight" Value="false" />
+                    <Var ObjectId="268435631" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268435631" Name="UserVar" Value="" />
+                    <Var ObjectId="268435631" Name="Static" Value="false" />
+                    <Var ObjectId="268435631" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268435631" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268435631" Name="CC_Entities" Value="player" />
+                    <Var ObjectId="268435631" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268435631" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268435631" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268435631" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268435631" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="268435631" Name="PlayerLookAtCallback" Value="" />
+                    <Var ObjectId="268435631" Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                    <Var ObjectId="268435631" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
+                    <Var ObjectId="268435631" Name="PlayerLookAtCheckRayIntersection" Value="true" />
+                    <Var ObjectId="268435631" Name="PlayerLookAtMaxDistance" Value="-1" />
+                    <Var ObjectId="268435631" Name="PlayerLookAtCallbackDelay" Value="0" />
+                    <Var ObjectId="268435631" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268435631" Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268435631" Name="CanInteractWithoutCallback" Value="false" />
+                    <Var ObjectId="268435631" Name="MaxFocusDistance" Value="-1" />
+                    <Var ObjectId="268435631" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
         </Objects>

@@ -1,7 +1,7 @@
 <HPLMap ID="90B03D7E743088C36434920FD17634B8C43332FB" MajorVersion="1" MinorVersion="1">
     <GlobalSettings>
         <Fog Active="false" Culling="true" Color="1 1 1 1" Brightness="1" FadeStart="0" FadeEnd="20" FalloffExp="1" Underwater="false" Lighten="false" UseSkybox="false" NoiseStrength="0" NoiseSize="8" NoiseTurbulence="0.5 0.5 0.5" ApplyAfterFogAreas="true" HeightBased="false" Exponential="false" Density="0.01" HeightDensity="0.01" HeightHorizon="5" SecondaryActive="false" SecondaryColor="1 1 1 1" SecondaryFadeStart="0" SecondaryFadeEnd="20" SecondaryFalloffExp="1" SecondaryDensity="0.01" SecondaryHeightDensity="0.25" SecondaryHeightHorizon="5" />
-        <SkyBox Active="true" Color="1 1 1 1" Texture="skybox_moonlight.dds" Brightness="0.75" />
+        <SkyBox Active="true" Color="0.763672 0.641962 0.548889 1" Texture="skybox_courtyard.dds" Brightness="0.75" />
         <DirLight Active="false" ShadowCasterDist="35" ShadowDistance="-1" DiffuseColor="1 1 1 1" Brightness="1 1 1 1" Gobo="" GoboAnimMode="None" GoboAnimStartTime="0" GoboAnimFrameTime="0" GoboScale="1 1" Direction="0.57735 -0.57735 0.57735" CastShadows="false" SkyCol="1 1 1 1" GroundCol="1 1 1 1" ShadowMapBiasMul="3" ShadowMapSlopeScaleBiasMul="2.5" AutoShadowSliceSettings="true" AutoShadowSliceLogTerm="0.9" />
         <SSAO NormalMap="false" NumOfDirections="0" NumOfSteps="0" AngleBias="0" Power="4.4" Radius="2" BufferSizeDiv="2" />
         <EnvParticles Active="false">

@@ -105,7 +105,7 @@ class cScrMap : iScrMap
 		// Debug
 		if(cLux_ScriptDebugOn())
 		{
-			mbStartIntro = false;
+			mbStartIntro = true;
 			
 			if (ItemType_GetCountInInventory("Lantern") < 1)
 			{
@@ -115,7 +115,11 @@ class cScrMap : iScrMap
 			}
 		}
 		// Initiate the intro
-		if (mbStartIntro) { Seq_Intro(""); }
+		if (mbStartIntro) 
+		{ 
+			//Seq_Intro("");
+			Seq_Intro_Native("");
+		}
 	}
 
 	//-------------------------------------------------------
@@ -312,6 +316,9 @@ class cScrMap : iScrMap
 			{
 				cLux_AddDebugMessage("Intro Sequence starting...");
 				
+				Map_SetSkyBoxTexture("skybox_moonlight.dds");
+				Map_SetSkyBoxColor(cColor(1,1,1,1));
+				
 				Effect_Fade_Out(0.f);
 				Player_SetActive(false);
 				
@@ -339,16 +346,32 @@ class cScrMap : iScrMap
 			{
 				Player_FadeFOVToDefault(100.f);
 				
-				//Player_Teleport("Start_Cave");
+				Map_SetSkyBoxTexture("skybox_courtyard.dds");
+				Map_SetSkyBoxColor(cColor(0.764,0.642,0.549,1));
+
+				Player_Teleport("Start_Native");
 			}
 			else if (Sequence_DoStepAndWait(0.f))
 			{
 				Player_StopLookAt(0);
-				Player_SetActive(true);
+			}
+			Sequence_End();
+		}
+		//-------------------------------------------------------
+		
+		cSequenceStatesData mSeqIntroNative;
+		void Seq_Intro_Native(const tString &in asName)
+		{
+			Sequence_Begin("Seq_Intro_Native", mSeqIntroNative);
+			if (Sequence_DoStepAndWait(1.f))
+			{
+				//Sound_FadeGlobalVolume(1.f, 3.f);
+				Effect_Fade_In(0.f);
+				PlayerBody_PlayCutsceneAtEntity("fall_from_collapsed_plankbridge", "NativePlayerFall", false, 1, "", 1);
+			}
+			else if (Sequence_DoStepAndWait(3.f))
+			{
 				
-				Effect_Fade_In(3.0f);
-				
-				Sound_FadeGlobalVolume(1.f, 3.f);
 			}
 			Sequence_End();
 		}
