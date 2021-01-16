@@ -1,7 +1,18 @@
+STORY:
+	LOCATION: Arizona. Native american groups: Apache, Navajo, Pueblo.
+	YEAR: ~1910-1930.
+	PROTAGONIST: Arthur.
+	
+	Arthur has been kidnapped by native americans and, is naturally disoriented. 
+	He finds himself within a ravine in Arizona, he attempts to send a transmission -- to find help. S.O.S he calls out,
+	but can anyone hear him at his most desperate hour?
+	
+	These caves hold ruins of an ancient civilzation called [REDACTED]. There is a creature roaming, the ghûl. 
+
 GENERAL:
 
 	TODO:
-	 * In the loading screens ask the player personal questions (refer to them as "you"): "Why should you care?".
+	 * In the loading screens ask the player personal questions (refer to them as "you").
 	 * Have miscellaneous stats in the credits at end of mod.
 	 * Add a pointlight on important entities.
 	  * notes
@@ -14,10 +25,10 @@ MAPS:
 
 		LEVEL:
 			TODO:
-
 			 
 		SCRIPTS:
 			TODO:
 			 * Add vo throughout the level.
 			 * (NOT NECESSARY) Create a fire damage module, that checks if the player is inside of a trigger area ("FirePlayerDamage_X") use Entity_GetCollide(), 
 			   to get all the trigger areas use Map_GetEntityArray().
+			 * The player gets kidnapped and dragged into the mines by native americans. play new_sounds/capture/player_body/player_body_01 when native americans throw player in nest.

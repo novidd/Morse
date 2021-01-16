@@ -41,6 +41,24 @@
                     <Var ObjectId="268435466" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
+            <Area ID="268435467" Name="Fear_1" CreStamp="1610757654" ModStamp="1610757680" WorldPos="0 10 0" Rotation="0 0 0" Scale="150 150 150" Active="true" Mesh="" UID="16 75 268435467" AreaType="Fear">
+                <UserVariables>
+                    <Var ObjectId="268435467" Name="Priority" Value="0" />
+                    <Var ObjectId="268435467" Name="Safe" Value="false" />
+                    <Var ObjectId="268435467" Name="NoFear" Value="false" />
+                    <Var ObjectId="268435467" Name="DarknessFear" Value="true" />
+                    <Var ObjectId="268435467" Name="BabyKickRateMultiplier" Value="1" />
+                    <Var ObjectId="268435467" Name="Locked" Value="false" />
+                    <Var ObjectId="268435467" Name="AllowProgressWithToken" Value="true" />
+                    <Var ObjectId="268435467" Name="AllowProgressWithoutToken" Value="false" />
+                    <Var ObjectId="268435467" Name="MaxProgressCount" Value="1" />
+                    <Var ObjectId="268435467" Name="ProgressAmount" Value="1" />
+                    <Var ObjectId="268435467" Name="SafeMusic" Value="fear_system_safe_01" />
+                    <Var ObjectId="268435467" Name="NonAgentRateCap" Value="0.8" />
+                    <Var ObjectId="268435467" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268435467" Name="CC_Funcs" Value="" />
+                </UserVariables>
+            </Area>
         </Objects>
     </Section>
 </HPLMapTrack_Area>
