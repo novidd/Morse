@@ -55,6 +55,7 @@ class cScrMap : iScrMap
 		Player_SetVertigoActive(false);
 		Player_SetMaxHealth(100.f);
 		Player_SetHealth(100.f);
+		Player_SetNightVisionEnabled(false);
 		
 		// Map
 		Map_SetSkyboxRotation(cVector3f(0, 0.f, 0));
@@ -104,7 +105,7 @@ class cScrMap : iScrMap
 		// Debug
 		if(cLux_ScriptDebugOn())
 		{
-			mbStartIntro = true;
+			mbStartIntro = false;
 			
 			if (ItemType_GetCountInInventory("Lantern") < 1)
 			{
