@@ -30,11 +30,6 @@
 /*This is also the place for enums and classes, but these should be avoided whenever possible*/
 
 // Variables
-const tString msRadioTransmissionMorse = "radio_transmission_morse";
-const tString msRadioElectricity = "radio_electrcity";
-
-const float mfHighlightingTime = 1.f;
-
 const float mfGlobalMusicVolume = 0.15f;
 
 //--------------------------------------------------
@@ -101,32 +96,15 @@ class cScrMap : iScrMap
 	////////////////////////////
 	// Run first time starting map
 	void OnStart()
-	{	// Old skybox hex color: 43AFE1FF
-		
+	{
 		// Variables
 		bool mbStartIntro = true;
-		cScript_SetGlobalVarBool("IsCampfireLit", true);
-		cScript_SetGlobalVarBool("IsBatteryDead", false);
-		cScript_SetGlobalVarBool("IsInFire", false);
-		cScript_SetGlobalVarInt("DisturbanceEvent", 0);
-		
-		// Sounds
-		Sound_CreateAtEntity("", "morse_level_shared/amb/sweetener/animal/flies_loop", "FliesSound", 0, false, .5f);
-		
-		// Entity
-		Entity_AddForce("roman_personal_dice_*", cVector3f(-5.f, 50.f, -5.f), false, true); // Add force to dice blocks
-		
-		// Lights
-		Light_FadeBrightnessTo("radio_transmitter_button_light", 0.f, .1f);
-		
-		// Particles
-		ParticleSystem_CreateAtEntityExt("camp_fire_smoke", "smoke_fireplace_plume_continous.ps", "CampFireSmoke", true, cColor(0.107,0.102,0.097,0.392), .5f, false);
 		
 		/////////////////////////
 		// Debug
 		if(cLux_ScriptDebugOn())
 		{
-			mbStartIntro = false;
+			mbStartIntro = true;
 			
 			if (ItemType_GetCountInInventory("Lantern") < 1)
 			{
@@ -149,8 +127,6 @@ class cScrMap : iScrMap
 		
 		//Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
 		Item_RemoveFromInventory(ItemType_GetFirstInInventory("CurseMedallion"));
-		
-		Light_FadeBrightnessTo("shed_desk_highlight_*", 0.f, .1f);
 	}
 
 	//-------------------------------------------------------
@@ -168,22 +144,7 @@ class cScrMap : iScrMap
 	// Runs on every frame
 	void Update(float afTimeStep)
 	{
-		// Give player damage while standing in the camp fire
-		if(!Map_TimerExists("negate_damage") && cScript_GetGlobalVarBool("IsInFire") && cScript_GetGlobalVarBool("IsCampfireLit"))
-		{
-			Player_GiveDamageAndSound(2.f, 10.f, 1, "FirePlayerDamage", "fire_playerdamage", true, ePlayerDamageMedium);
-			Map_AddTimer("negate_damage", .75f, "NegateDamage_OnTimer");
-		}
-		
-		if (cScript_GetGlobalVarInt("DisturbanceEvent") >= 2)
-		{
-			Map_GetEntity("InteractSleep").SetInteractionDisabled(true);
-		}
-	}
 
-	void NegateDamage_OnTimer(const tString &in asTimer)
-	{
-		return;
 	}
 
 	//-------------------------------------------------------
@@ -231,31 +192,20 @@ class cScrMap : iScrMap
 	{
 		if(abPressed==false) return;
 		
-		if (alAction == eAction_Test0) // Numpad 0
+		if (alAction == eAction_Test0)
 		{
 			cLux_AddDebugMessage("Running intro...");
 		}
 		
 		if (alAction == eAction_Test1)
 		{
-			Map_SetSkyboxRotation(cVector3f(0, 360.f, 0));
 			
-			Map_GetEntity("moon").SetPosition(cVector3f(425.75f, 167.783f, 325.75f));
-		}
-		
-		if (alAction == eAction_Test2)
-		{
-			Map_SetSkyboxRotation(cVector3f(0, 330.f, 0));
-			
-			Map_GetEntity("moon").SetPosition(cVector3f(335.75f, 167.783f, -175.75f));
 		}
 		
 		if(alAction == eAction_ScrollUp)
 		{
 			cLux_AddDebugMessage("DEBUG: On scroll up...");
 			Lantern_SetAmount(10);
-			
-			//Sound_CreateAtEntity("", "", "player", 0, false, 1.f);
 		}
 		
 		if (alAction == eAction_ScrollDown)
@@ -307,73 +257,11 @@ class cScrMap : iScrMap
 	
 	//-------------------------------------------------------
 	
-	
-	
-	//-------------------------------------------------------
-	
 	//} END VO EVENTS
 	
 	/////////////////////////////////////////
 	// AMBIENCE/SWEETENERS
 	//{//////////////////////////////////////
-	
-	//-------------------------------------------------------
-	
-	bool EnableDeepForestRandSounds_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
-	{
-		if (alState == 1)
-		{
-			Map_AddTimer("rand_sounds_OnTimer", 2.f, "RandSounds_OnTimer");
-			Map_AddTimer("flies", 5.f, "FliesSound_OnTimer");
-			return true;
-		}
-		else
-		{
-			Map_RemoveTimer("rand_sounds_OnTimer");
-			Map_RemoveTimer("flies");
-			return true;
-		}
-	}
-	
-	//-------------------------------------------------------
-	
-	void RandSounds_OnTimer(const tString &in asTimer)
-	{
-		if (!Map_TimerExists(asTimer))
-		{
-			array<tString> mvRandSounds = {"morse_events/forest/plants/movement/plants_low_movement", "morse_events/forest/plants/movement/plants_high_movement"};
-			int mlRandSoundIndex = cMath_RandRectl(0, mvRandSounds.length()-1);
-			
-			array<iLuxEntity@> mvRandSoundEntityArray;
-			Map_GetEntityArray("RandSound_*", mvRandSoundEntityArray);
-			tString msRandSoundEntity = "RandSound_" + cString_ToString(cMath_RandRectl(1, mvRandSoundEntityArray.length()), 0);
-			
-			Sound_CreateAtEntity("rand_sound", mvRandSounds[mlRandSoundIndex], msRandSoundEntity);
-			
-			float mfRandSoundTime = cMath_RandRectf(20.f, 30.f);
-			Map_RestartCurrentTimer(mfRandSoundTime);
-			
-			cLux_AddDebugMessage("Entity: " + msRandSoundEntity + ", Time: " + Map_GetTimerTime(asTimer));
-		}
-	}
-	
-	//-------------------------------------------------------
-	
-	void FliesSound_OnTimer(const tString &in asTimer)
-	{
-		Sound_CreateAtEntity("", "morse_level_shared/amb/sweetener/animal/flies", "player", 0, false, .15f);
-		
-		float mfRandSoundTime = cMath_RandRectf(20.f, 45.f);
-		Map_RestartCurrentTimer(mfRandSoundTime);
-	}
-	
-	//-------------------------------------------------------
-	
-	bool Rustling_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
-	{
-		Sound_CreateAtEntity("", "morse_events/forest/plants/movement/plants_high_movement", "RustlingSound", 0, false, 1.f);
-		return false;
-	}
 	
 	//-------------------------------------------------------
 	
@@ -448,12 +336,11 @@ class cScrMap : iScrMap
 			}
 			else if (Sequence_DoStepAndWait(2.f))
 			{
-				Player_StartLookAt("LookIntro_2", 3.f, 50.f, 100.f);
 				Player_FadeFOVToDefault(100.f);
 				
-				Player_Teleport("Start_Shed");
+				//Player_Teleport("Start_Cave");
 			}
-			else if (Sequence_DoStepAndWait(8.f))
+			else if (Sequence_DoStepAndWait(0.f))
 			{
 				Player_StopLookAt(0);
 				Player_SetActive(true);
@@ -461,23 +348,18 @@ class cScrMap : iScrMap
 				Effect_Fade_In(3.0f);
 				
 				Sound_FadeGlobalVolume(1.f, 3.f);
-				Music_Stop(10.f, eMusicPrio_SceneAmb);
-			}
-			else if (Sequence_DoStepAndWait(0.f))
-			{
-				Voice_Play("Dialogue_CheckRadio");
 			}
 			Sequence_End();
 		}
 		//-------------------------------------------------------
 
-		//} END Event *CAVE SEQUENCE*
+		//} END Event *INTRO SEQUENCE*
 	 
 	//} END SCENE 1
  
 	/////////////////////////////////////////////////////////////////////////////////////////
 	// ==============
-	// SCENE 2 *SHED*
+	// SCENE 2 *CAVE*
 	// ==============
 	//{//////////////////////////////////////////////////////////////////////////////////////
  
@@ -493,31 +375,12 @@ class cScrMap : iScrMap
 	 
 		/*Put any functions that are used in more than one event in Scene 2 here.*/
 		
-		void OnConnectionStateChange_ShedLock(const tString &in asEntity, int alState)
-		{
-			tString sDoor = "ShedMain_" + Entity_GetVarString(asEntity, "");
-			bool bLocked = alState == 1;
-		
-			cLux_AddDebugMessage("Shed door is locked: " + bLocked);
-			SwingDoor_SetLocked(sDoor, bLocked, true);
-			SwingDoor_SetBlocked(sDoor, bLocked, true);
-			return;
-		}
-		
-		bool ShedHighlighting_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			bool mbEnableHighlighting = alState == 1;
-			
-			Light_FadeBrightnessToBool("shed_desk_highlight_*", 1.f, 0.f, mfHighlightingTime, mbEnableHighlighting);
-			return true;
-		}
-		
 		//-------------------------------------------------------
 		
 		//} END General
 	 
 		/////////////////////////////////////////
-		// Event A *PLAYER INTERACTS WITH RADIO*
+		// Event A *X*
 		//{//////////////////////////////////////
 
 		//-------------------------------------------------------
@@ -528,359 +391,7 @@ class cScrMap : iScrMap
 
 		/*Put any functions that are only used in Scene 2, Event A here.*/
 		
-		void RadioButton_OnPlayerInteract(const tString &in asEntity)
-		{
-			Entity_SetVarBool(asEntity, "", !Entity_GetVarBool(asEntity, ""));
-			
-			//Light_SetVisible(asEntity + "_light", Entity_GetVarBool(asEntity, ""));
-			Light_FadeBrightnessToBool(asEntity + "_light", 1.f, 0.f, 0.f, Entity_GetVarBool(asEntity, ""));
-			
-			Sound_CreateAtEntity("", "morse_entity/interact/button/button_interact", asEntity, .0f, false, .35f);
-			Sound_CreateAtEntity("radio_crackling", "02_04_living_quarters/radio/doctor_talk_end_world", "radio_transmitter", .0f, false, 2.f);
-			
-			// If radio is off
-			if (!Entity_GetVarBool(asEntity, ""))
-			{
-				//Sound_Fade(msRadioTransmissionMorse, .0f, 0.1f);
-				Sound_Stop(msRadioTransmissionMorse, .1f);
-				
-				Sound_Stop(msRadioElectricity, .1f);
-				Sound_Stop("Sound_Radio_Static", .1f);
-			}
-			else // If radio is on
-			{
-				//Sound_Fade(msRadioTransmissionMorse, .1f, 2.0f);
-				Sound_CreateAtEntity(msRadioTransmissionMorse, "morse_events/radio/radio_transmission", "radio_transmitter_transmission", 0.f, false, .1f);
-				
-				Sound_CreateAtEntity(msRadioElectricity, "02_04_living_quarters/scare_events/light_scare/spark_on", "radio_transmitter", .0f, false, .05f);
-				Sound_Play("Sound_Radio_Static", .1f);
-			}
-		}
-		
-		bool RadioSetUserVar_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			Entity_SetVarBool(asChild, "", !Entity_GetVarBool(asChild, ""));
-			
-			if (Entity_GetVarBool("radio_transmitter_button", ""))
-			{
-				Light_SetVisible(asChild + "_button_light", !Entity_GetVarBool(asChild, ""));
-				return true;
-			}
-			return true;
-		}
-		
 		//-------------------------------------------------------
 
-		//} END Event *PLAYER INTERACTS WITH RADIO*
-		
-		/////////////////////////////////////////
-		// Event B *PLAYER INTERACTS WITH TELEGRAPH KEY*
-		//{//////////////////////////////////////
-		
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 2, Event B here.*/
-
-		//-------------------------------------------------------
-
-		/*Put any functions that are only used in Scene 2, Event B here.*/
-		
-		void TelegraphKey_OnConnectionStateChange(const tString &in asEntity, int alState)
-		{
-			if (alState == -1)
-			{
-				Sound_Play("Sound_Telegraph_Key_1", .0f);
-				
-				if (!cScript_GetGlobalVarBool("IsBatteryDead"))
-				{
-					cScript_SetGlobalVarBool("IsBatteryDead", true);
-					
-					Sound_Play("Sound_Telegraph_Key_Battery_Spark", 0.f);
-					
-					Light_SetBrightness("telegraph_key_battery_light_*", 1.f);
-					Light_SetFlickerActive("telegraph_key_battery_light_1", true);
-					Map_AddTimer("telegraph_key_battery_light_", .25f, "DisableSparkLight_OnTimer");
-					
-					ParticleSystem_CreateAtEntity("", "sparks_tiny.ps", "telegraph_key_battery_spark", true);
-					//ParticleSystem_CreateAtEntityExt("", "smoke_steam_oneshot_tiny.ps", "telegraph_key_battery_smoke", true, cColor(0, 0, 0, 0));
-				}
-				
-			}
-		}
-		
-		void DisableSparkLight_OnTimer(const tString &in asTimer)
-		{
-			Light_SetBrightness(asTimer + "*", 0.f);
-			Light_SetFlickerActive(asTimer + "1", false);
-		}
-		
-		//-------------------------------------------------------
-
-		//} END Event *PLAYER INTERACTS WITH TELEGRAPH KEY*
-		
-		/////////////////////////////////////////
-		// Event C *PLAYER PICKS UP LANTERN*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 2, Event C here.*/
-
-		//-------------------------------------------------------
-
-		/*Put any functions that are only used in Scene 2, Event C here.*/
-		
-		void PickUpLantern_OnPlayerInteract(const tString &in asEntity)
-		{
-			// Run a timer because Lantern_SetAmount() cannot set oil amount on a lantern that does not yet exist
-			Map_AddTimer("", .05f, "SetLanternAmount_OnTimer");
-			
-			Light_FadeBrightnessTo("shed_lantern_highlight_1", 0.f, 5.f);
-			
-			// Play oneshot music
-			return;
-		}
-		
-		//-------------------------------------------------------
-		
-		void SetLanternAmount_OnTimer(const tString &in asTimer)
-		{
-			Lantern_SetAmount(3);
-			return;
-		}
-		
-		//-------------------------------------------------------
-
-		//} END Event *PLAYER PICKS UP LANTERN*
-		
-		/////////////////////////////////////////
-		// Event D *PLAYER PICKS UP NOTE*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 2, Event D here.*/
-
-		//-------------------------------------------------------
-
-		/*Put any functions that are only used in Scene 2, Event D here.*/
-		
-		//Music_Play("01_00_awaken", .15f, true, eMusicPrio_SceneAmb);
-		
-		//-------------------------------------------------------
-
-		//} END Event *PLAYER PICKS UP NOTE*
-	 
-	//} END SCENE 2
-	
-	/////////////////////////////////////////////////////////////////////////////////////////
-	// ==============
-	// SCENE 3 *CAMP*
-	// ==============
-	//{//////////////////////////////////////////////////////////////////////////////////////
- 
-		/////////////////////////////////////////
-		// General
-		//{//////////////////////////////////////
-		 
-		//-------------------------------------------------------
-	 
-		/*Put any variables that are used by many events in Scene 3 here.*/
-		
-		//-------------------------------------------------------
-	 
-		/*Put any functions that are used in more than one event in Scene 3 here.*/
-		
-		void ExtractOil_OnPlayerInteract(const tString &in asEntity)
-		{
-			ExtractOil(asEntity, eOilSmall);
-			return;
-		}
-		
-		//-------------------------------------------------------
-		
-		bool FirePlayerDamage_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			if (alState == 1)
-				cScript_SetGlobalVarBool("IsInFire", true);
-			else
-				cScript_SetGlobalVarBool("IsInFire", false);
-			return true;
-		}
-		
-		//-------------------------------------------------------
-		
-		//} END General	
-	 
-		/////////////////////////////////////////
-		// Event A *PLAYER GOES TO SLEEP*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 3, Event A here.*/
-
-		//-------------------------------------------------------
-
-		/*Put any functions that are only used in Scene 3, Event A here.*/
-		
-		void Sleep_OnPlayerInteract(const tString &in asEntity)
-		{
-			Seq_Disturbance("");
-		}
-		
-		//-------------------------------------------------------
-
-		//} END Event *PLAYER GOES TO SLEEP*
-		
-		/////////////////////////////////////////
-		// Event B *DISTURBANCE SEQUENCE*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 3, Event A here.*/
-
-		//-------------------------------------------------------
-
-		/*Put any functions that are only used in Scene 3, Event A here.*/
-		
-		/*
-		 * Run this animation on wake up for the camp disturbance events
-		 * Hide pillow to avoid player head clipping, enable after
-		 * Reset pillow position the starting position get var on map start (global const var outside cScrMap)
-		*/
-		
-		cSequenceStatesData mSeqDisturbance;
-		void Seq_Disturbance(const tString &in asName)
-		{
-			Sequence_Begin("Seq_Disturbance", mSeqDisturbance);
-			if (Sequence_DoStepAndWait(3.5f))
-			{
-				cLux_AddDebugMessage("Disturbance Sequence starting. Iteration: " + cString_ToString(cScript_GetGlobalVarInt("DisturbanceEvent")+1, 0));
-				
-				Effect_Fade_Out(3.f);
-				Sound_FadeGlobalVolume(0.f, 3.f, eSoundEntryType_World);
-				Player_SetActive(false);
-				
-				Map_RemoveTimer("rand_sounds_OnTimer");
-			}
-			else if (Sequence_DoStepAndWait(8.f))
-			{
-				DisableLampsAndLights();
-				
-				UpdateWorld();
-				
-				IncDisturbanceGlobalVar();
-				cScript_SetGlobalVarBool("IsCampfireLit", false);
-				
-				Entity_SetActive("Outdoor_Soundscape_1", false);
-				Entity_SetActive("Outdoor_Soundscape_2", true);
-				
-				Player_Teleport("Start_Bed");
-			}
-			else if (Sequence_DoStepAndWait(5.f)) // The disturbance sounds
-			{
-				cLux_AddDebugMessage("Spooky noises...");
-				PlayDisturbanceSound();
-			}
-			else if (Sequence_DoStepAndWait(1.f)) // Player wakes up for the first time
-			{
-				Effect_Fade_In(3.f);
-				Sound_FadeGlobalVolume(1.f, 3.f, eSoundEntryType_World);
-				Player_SetActive(true);
-				
-				PlayerBody_PlayCutsceneAtEntity("wake_up_from_death_2", "SleepPos", false, .3f, "WakeUpAnimDone", 1.25f);
-				Player_StartLookAt("Bonk", 1.f, 2.f, 10.f);
-				PlayerBody_SetCutsceneMaxPitch(2.5f);
-				PlayerBody_SetCutsceneMaxYaw(2.5f);
-				
-				Entity_SetActive("pillow", false);
-			}
-			Sequence_End();
-		}
-		
-		//-------------------------------------------------------
-		
-		bool Bonk_OnTrigger(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			cLux_AddDebugMessage("Get bonked in the head.");
-			return false;
-		}
-		
-		//-------------------------------------------------------
-		
-		void WakeUpAnimDone(const tString &in asAnimName)
-		{
-			Entity_SetActive("pillow", true);
-			Map_AddTimer("stop_look_at", 1.5f, "StopPlayerLookAt_OnTimer");
-			
-			// Run vo here
-		}
-		
-		//-------------------------------------------------------
-		
-		void StopPlayerLookAt_OnTimer(const tString &in asTimer)
-		{
-			Player_StopLookAt(1.0f);
-		}
-		
-		//-------------------------------------------------------
-		
-		void DisableLampsAndLights()
-		{
-			Lamp_SetLit("camp_fire", false, true);
-			Light_SetVisible("camp_fire_light_*", false);
-			ParticleSystem_SetVisible("camp_fire_smoke", false);
-			ParticleSystem_CreateAtEntityExt("camp_fire_unlit", "campfire_caves.ps", "CampFireSmoke", true, cColor(0.674,0.674,0.674,1), .5f, false);
-			
-			Lamp_SetLit("camp_lamp_1", false, true);
-			Lamp_SetLit("camp_lamp_2", false, true);
-		}
-		
-		//-------------------------------------------------------
-		
-		void IncDisturbanceGlobalVar()
-		{
-			cScript_SetGlobalVarInt("DisturbanceEvent", cScript_GetGlobalVarInt("DisturbanceEvent")+1);
-		}
-		
-		//-------------------------------------------------------
-		
-		void PlayDisturbanceSound()
-		{
-			if (cScript_GetGlobalVarInt("DisturbanceEvent") == 1)
-				Sound_CreateAtEntity("", "morse_events/forest/plants/movement/plants_twigs_snap_movement", "DisturbanceSound", 0, false, .075f);
-			else if (cScript_GetGlobalVarInt("DisturbanceEvent") == 2)
-				Sound_CreateAtEntity("", "sound", "DisturbanceSound", 0, false, .075f);
-		}
-		
-		//-------------------------------------------------------
-		
-		void UpdateWorld()
-		{
-			cVector3f mvSkyboxRotation;
-			cVector3f mvMoonPosition;
-			
-			if (cScript_GetGlobalVarInt("DisturbanceEvent") == 1)
-			{
-				mvSkyboxRotation = cVector3f(0, 360.f, 0);
-				mvMoonPosition = cVector3f(425.75f, 167.783f, 325.75f);
-			}
-			else if (cScript_GetGlobalVarInt("DisturbanceEvent") == 2)
-			{
-				mvSkyboxRotation = cVector3f(0, 330.f, 0);
-				mvMoonPosition = cVector3f(335.75f, 167.783f, -175.75f);
-			}
-			
-			Map_SetSkyboxRotation(mvSkyboxRotation);
-			Map_GetEntity("moon").SetPosition(mvMoonPosition);
-		}
-		
-		//-------------------------------------------------------
-
-		//} END Event *DISTURBANCE SEQUENCE*
-	 
-	//} END SCENE 3
+		//} END Event *X*
 }

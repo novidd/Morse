@@ -22,24 +22,15 @@
     <Sound Text="...heat, sound... light." FileName="intro_dialogue_intro_002_introarthur_001" Timestamp="2021-01-12 01:47" />
    </Line>
    <Line CharacterId="1" Prio="0" TextStatus="ToTranslators" PlayOnce="True">
-    <Sound Text="I've heard my call, a transmission." FileName="intro_dialogue_intro_003_introarthur_001" Timestamp="2021-01-12 01:47" />
-   </Line>
-   <Line CharacterId="1" Prio="0" TextStatus="ToTranslators" PlayOnce="True">
-    <Sound Text="S..." FileName="intro_dialogue_intro_004_introarthur_001" Timestamp="2021-01-12 01:47" />
-   </Line>
-   <Line CharacterId="1" Prio="0" TextStatus="ToTranslators" PlayOnce="True">
-    <Sound Text="...O..." FileName="intro_dialogue_intro_005_introarthur_001" Timestamp="2021-01-12 01:47" />
-   </Line>
-   <Line CharacterId="1" Prio="0" TextStatus="ToTranslators" PlayOnce="True">
-    <Sound Text="...S." FileName="intro_dialogue_intro_006_introarthur_001" Timestamp="2021-01-12 01:47" />
-   </Line>
-   <Line CharacterId="1" Prio="0" TextStatus="ToTranslators" PlayOnce="True">
-    <Sound Text="It's time to go." FileName="intro_dialogue_intro_007_introarthur_001" Timestamp="2021-01-12 01:47" />
+    <Sound Text="Have they heard my call?" FileName="intro_dialogue_intro_003_introarthur_001" Timestamp="2021-01-16 12:20" />
    </Line>
   </Subject>
   <Subject Desc="Arthur says he should check the radio" Name="Dialogue_CheckRadio" UseSingleRandomLine="False" ShowSubtitlesIfMissing="False" SceneId="0" EffectId="-1" Section="Main">
    <Line CharacterId="0" Prio="0" TextStatus="ToTranslators" PlayOnce="True">
-    <Sound Text="Maybe the transmission is still running, I should check." FileName="shed_dialogue_checkradio_001_player_001" Timestamp="2021-01-10 10:45" />
+    <Sound Text="Is the transmission is still running?" FileName="shed_dialogue_checkradio_001_player_001" Timestamp="2021-01-16 12:20" />
+   </Line>
+   <Line CharacterId="0" Prio="0" TextStatus="ToTranslators" PlayOnce="True">
+    <Sound Text="&lt;&lt;sigh&gt;&gt; Good, good." Timestamp="2021-01-16 12:20" />
    </Line>
   </Subject>
  </Subjects>

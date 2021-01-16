@@ -4,7 +4,6 @@ GENERAL:
 	 * In the loading screens ask the player personal questions (refer to them as "you"): "Why should you care?".
 	 * Have miscellaneous stats in the credits at end of mod.
 	 * Add a pointlight on important entities.
-	  * oil barrel(s)
 	  * notes
 	  * items
 	  * interactable entities
@@ -15,15 +14,10 @@ MAPS:
 
 		LEVEL:
 			TODO:
-			 * Add grass undergrowth in the forest trail (cant do this, level editor bugged).
+
 			 
 		SCRIPTS:
 			TODO:
 			 * Add vo throughout the level.
-			 * When player interact with cross initiate a flashback?
-			 * Add interactability to empty water kegs/barrels?
-			 * Later in the camp it starts raining and later add thunder (the campfire becomes unlit)?
 			 * (NOT NECESSARY) Create a fire damage module, that checks if the player is inside of a trigger area ("FirePlayerDamage_X") use Entity_GetCollide(), 
 			   to get all the trigger areas use Map_GetEntityArray().
-			 * The player gets kidnapped and dragged into the mines by native americans. play new_sounds/capture/player_body/player_body_01 when native americans throw player in nest.
-			 * play 01_00_disturbancedrone (layered) and 01_00_disturbance (main) when the player wakes up from scary noises.
