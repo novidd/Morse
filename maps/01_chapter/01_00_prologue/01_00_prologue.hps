@@ -55,7 +55,9 @@ class cScrMap : iScrMap
 		Player_SetVertigoActive(false);
 		Player_SetMaxHealth(100.f);
 		Player_SetHealth(100.f);
-		Player_SetNightVisionEnabled(false);
+		
+		//Player_SetNightVisionEnabled(false);
+		Player_SetNightVisionBrightness(.75f);
 		
 		// Map
 		Map_SetSkyboxRotation(cVector3f(0, 0.f, 0));
@@ -330,7 +332,7 @@ class cScrMap : iScrMap
 				Player_StartLookAt("LookIntro_1", 3.f, 50.f, 100.f);
 				Player_FadeFOVTo(.75f, .015f);
 				
-				Sound_FadeGlobalVolume(0.f, 0.f);
+				Sound_FadeGlobalVolume(0.f, 0.f, eSoundEntryType_World);
 				
 				Music_Play("01_00_cosmos", mfGlobalMusicVolume, false, eMusicPrio_SceneAmb);
 			}
@@ -350,31 +352,65 @@ class cScrMap : iScrMap
 				Map_SetSkyBoxColor(cColor(0.764,0.642,0.549,1));
 
 				Player_Teleport("Start_Native");
-			}
-			else if (Sequence_DoStepAndWait(0.f))
-			{
 				Player_StopLookAt(0);
 			}
 			Sequence_End();
 		}
+		
 		//-------------------------------------------------------
 		
 		cSequenceStatesData mSeqIntroNative;
 		void Seq_Intro_Native(const tString &in asName)
 		{
 			Sequence_Begin("Seq_Intro_Native", mSeqIntroNative);
-			if (Sequence_DoStepAndWait(1.f))
+			if (Sequence_DoStepAndWait(2.f))
 			{
-				//Sound_FadeGlobalVolume(1.f, 3.f);
-				Effect_Fade_In(0.f);
-				PlayerBody_PlayCutsceneAtEntity("fall_from_collapsed_plankbridge", "NativePlayerFall", false, 1, "", 1);
+				Player_Teleport("Start_Native");
+				Effect_Fade_Out(.1f);
 			}
-			else if (Sequence_DoStepAndWait(3.f))
+			else if (Sequence_DoStepAndWait(1.f))
 			{
+				Sound_CreateAtEntity("sound_player_fall", "01_02_caves/scare_events/tasi_cave_fall", "player");
+				Sound_Fade("sound_player_fall", 0, 0);
 				
+				PlayerBody_PlayCutsceneAtEntity("fall_from_collapsed_plankbridge", "PosArea_FallAnim", false, .1f, "", 1.f);
+				PlayerBody_SetCutsceneMaxPitch(5.f);
+				PlayerBody_SetCutsceneMaxYaw(5.f);
+
+				Map_AddTimer("Timer_HitGround", 11.3f ,"OnTimer_HitGround");
+			}
+			else if (Sequence_DoStepAndWait(1.f))
+			{
+				Effect_Fade_In(.1f);
+				Sound_Fade("sound_player_fall", 1, .1f);
 			}
 			Sequence_End();
 		}
+		
+		//-------------------------------------------------------
+		
+		void OnTimer_HitGround(const tString &in asTimer)
+		{
+			Effect_Fade_Out(.1f);
+			Map_AddTimer("Timer_WakeUp", 4.f, "OnTimer_WakeUp"); // 8.f
+			Map_AddTimer("Timer_SetEffects", 1.f, "OnTimer_SetEffects");
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnTimer_SetEffects(const tString &in asTimer)
+		{
+			Player_SetNightVisionBrightness(.25f);
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnTimer_WakeUp(const tString &in asTimer)
+		{
+			Effect_Fade_In(.1f);
+			PlayerBody_PlayCutsceneAtEntity("get_up_after_fall_from_plankbridge", "PosArea_WakeUpAnim", false, .1f, "", 1.f);
+		}
+		
 		//-------------------------------------------------------
 
 		//} END Event *INTRO SEQUENCE*

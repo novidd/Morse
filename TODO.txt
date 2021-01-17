@@ -31,7 +31,5 @@ MAPS:
 			 * Add vo throughout the level.
 			 * (NOT NECESSARY) Create a fire damage module, that checks if the player is inside of a trigger area ("FirePlayerDamage_X") use Entity_GetCollide(), 
 			   to get all the trigger areas use Map_GetEntityArray().
-			 * The player gets kidnapped and dragged into the mines by native americans.
-				* new_sounds/capture/player_body/player_body_01 when player is getting thrown down hole
-				* player/foley/damage/player_fall_damage when player lands on ground
-				* wake_up_from_death_4 anim when player wakes up 
+			 * Write the script for when player gets dragged to the hole.
+			 * Active fear object FearScaryObject_Soldier when player lights match.
