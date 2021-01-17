@@ -7,14 +7,14 @@ STORY:
 	He finds himself within a ravine in Arizona, he attempts to send a transmission -- to find help. S.O.S he calls out,
 	but can anyone hear him at his most desperate hour?
 	
-	These caves hold ruins of an ancient civilzation called [REDACTED]. There is a creature roaming, the ghûl. 
+	These caves hold ruins of an ancient civilzation called [REDACTED]. There is a creature roaming, the ghûl.
 
 GENERAL:
 
 	TODO:
 	 * In the loading screens ask the player personal questions (refer to them as "you").
 	 * Have miscellaneous stats in the credits at end of mod.
-	 * Add a pointlight on important entities.
+	 * Add highlighting on important entities.
 	  * notes
 	  * items
 	  * interactable entities
@@ -25,7 +25,7 @@ MAPS:
 
 		LEVEL:
 			TODO:
-			 * In the first chasm have a hole in the ceiling where sunlight shines through. Highlight the ladder with the light.
+			 * In the first chasm have a hole in the ceiling where sunlight shines through and, highlights the ladder.
 			 
 		SCRIPTS:
 			TODO:
@@ -33,4 +33,5 @@ MAPS:
 			 * (NOT NECESSARY) Create a fire damage module, that checks if the player is inside of a trigger area ("FirePlayerDamage_X") use Entity_GetCollide(), 
 			   to get all the trigger areas use Map_GetEntityArray().
 			 * Write the script for when player gets dragged to the hole.
+			 * Play music when player spots ladder (on look).
 			 * Active fear object FearScaryObject_Soldier when player lights match.

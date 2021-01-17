@@ -163,6 +163,34 @@
                     <Var ObjectId="268435464" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
+            <Area ID="268435840" Name="Table" CreStamp="1610900424" ModStamp="1610900437" WorldPos="-15.1115 9.41967 -5.3641" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 298 268435840" AreaType="Trigger">
+                <UserVariables>
+                    <Var ObjectId="268435840" Name="Note" Value="" />
+                    <Var ObjectId="268435840" Name="BlocksLineOfSight" Value="false" />
+                    <Var ObjectId="268435840" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268435840" Name="UserVar" Value="" />
+                    <Var ObjectId="268435840" Name="Static" Value="false" />
+                    <Var ObjectId="268435840" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268435840" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268435840" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268435840" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268435840" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268435840" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268435840" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268435840" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="268435840" Name="PlayerLookAtCallback" Value="" />
+                    <Var ObjectId="268435840" Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                    <Var ObjectId="268435840" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
+                    <Var ObjectId="268435840" Name="PlayerLookAtCheckRayIntersection" Value="true" />
+                    <Var ObjectId="268435840" Name="PlayerLookAtMaxDistance" Value="-1" />
+                    <Var ObjectId="268435840" Name="PlayerLookAtCallbackDelay" Value="0" />
+                    <Var ObjectId="268435840" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268435840" Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268435840" Name="CanInteractWithoutCallback" Value="false" />
+                    <Var ObjectId="268435840" Name="MaxFocusDistance" Value="-1" />
+                    <Var ObjectId="268435840" Name="CustomInteractIcon" Value="Default" />
+                </UserVariables>
+            </Area>
         </Objects>
     </Section>
 </HPLMapTrack_Area>
