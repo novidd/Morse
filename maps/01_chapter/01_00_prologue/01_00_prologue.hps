@@ -56,11 +56,10 @@ class cScrMap : iScrMap
 		Player_SetMaxHealth(100.f);
 		Player_SetHealth(100.f);
 		
-		//Player_SetNightVisionEnabled(false);
 		Player_SetNightVisionBrightness(.75f);
 		
 		// Map
-		Map_SetSkyboxRotation(cVector3f(0, 0.f, 0));
+		Map_SetSkyboxRotation(cVector3f(0, 0, 0));
 		
 		//Stamina_SetStaminaSystemActive(true);
 		
@@ -103,11 +102,16 @@ class cScrMap : iScrMap
 		// Variables
 		bool mbStartIntro = true;
 		
+		cScript_SetGlobalVarBool("IntroDone", false);
+		
+		// Inventory
+		Item_AddToInventory("Matchbook");
+		
 		/////////////////////////
 		// Debug
 		if(cLux_ScriptDebugOn())
 		{
-			mbStartIntro = true;
+			mbStartIntro = false;
 			
 			if (ItemType_GetCountInInventory("Lantern") < 1)
 			{
@@ -151,7 +155,10 @@ class cScrMap : iScrMap
 	// Runs on every frame
 	void Update(float afTimeStep)
 	{
-
+		if (cScript_GetGlobalVarBool("IntroDone"))
+		{
+			// Disable lights and brazier fire
+		}
 	}
 
 	//-------------------------------------------------------
@@ -206,7 +213,12 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test1)
 		{
-			
+			Seq_Intro_WakeUp("");
+		}
+		
+		if (alAction == eAction_Test3)
+		{
+			cScript_SetGlobalVarBool("IntroDone", true);
 		}
 		
 		if(alAction == eAction_ScrollUp)
@@ -363,10 +375,22 @@ class cScrMap : iScrMap
 		void Seq_Intro_Native(const tString &in asName)
 		{
 			Sequence_Begin("Seq_Intro_Native", mSeqIntroNative);
-			if (Sequence_DoStepAndWait(2.f))
+			if (Sequence_DoStepAndWait(1.f))
 			{
 				Player_Teleport("Start_Native");
 				Effect_Fade_Out(.1f);
+				Sound_FadeGlobalVolume(0.f, 0.f, eSoundEntryType_World);
+			}
+			else if (Sequence_DoStepAndWait(2.f))
+			{
+				Sound_FadeGlobalVolume(1.f, 3.f, eSoundEntryType_World);
+				Sound_CreateAtEntity("sound_player_drag", "new_sounds/capture/player_body/player_body_03", "player", 3.f);
+			}
+			else if (Sequence_DoStepAndWait(3.f))
+			{
+				Sound_CreateAtEntity("sound_player_drag", "new_sounds/capture/player_body/player_body_01", "player");
+				
+				// Play vo
 			}
 			else if (Sequence_DoStepAndWait(1.f))
 			{
@@ -407,8 +431,45 @@ class cScrMap : iScrMap
 		
 		void OnTimer_WakeUp(const tString &in asTimer)
 		{
-			Effect_Fade_In(.1f);
-			PlayerBody_PlayCutsceneAtEntity("get_up_after_fall_from_plankbridge", "PosArea_WakeUpAnim", false, .1f, "", 1.f);
+			Seq_Intro_WakeUp("");
+		}
+		
+		//-------------------------------------------------------
+		
+		cSequenceStatesData mSeqIntroWakeUp;
+		void Seq_Intro_WakeUp(const tString &in asName)
+		{
+			Sequence_Begin("Seq_Intro_WakeUp", mSeqIntroWakeUp);
+			if (Sequence_DoStepAndWait(.5f))
+			{
+				//PlayerBody_PlayCutsceneAtEntity("get_up_after_fall_from_plankbridge", "PosArea_WakeUpAnim", false, .1f, "", 1.f);
+				PlayerBody_PlayCutsceneAtEntity("wake_up_from_death_2", "PosArea_WakeUpAnim", false, .1f, "OnAnimEnd_RunShowMatchHintTimer", 1.f);
+				PlayerBody_SetCutsceneMaxPitch(5.f);
+				PlayerBody_SetCutsceneMaxYaw(5.f);
+				
+				Player_SetNightVisionBrightness(.25f);
+			}
+			else if (Sequence_DoStepAndWait(2.f))
+			{
+				Effect_Fade_In(.1f);
+				cScript_SetGlobalVarBool("IntroDone", true);
+			}
+			Sequence_End();
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnAnimEnd_RunShowMatchHintTimer(const tString &in asAnimName)
+		{
+			Map_AddTimer("Timer_ShowMatchHint", 2.5f, "OnTimer_ShowMatchHint");
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnTimer_ShowMatchHint(const tString &in asTimer)
+		{
+			Hint_StopHint();
+			Hint_ShowHint_Hold("Hints", "HintMatchEquip", true, 1.5f, false, 10);
 		}
 		
 		//-------------------------------------------------------

@@ -108,7 +108,7 @@
                     <Var ObjectId="268435462" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435463" Name="Soundscape_1" CreStamp="1610835093" ModStamp="1610835229" WorldPos="-3.18695 1.88122 -2.27928" Rotation="0 0 0" Scale="25 50 25" Active="true" Mesh="" UID="16 156 268435463" AreaType="Soundscape">
+            <Area ID="268435463" Name="Soundscape_1" CreStamp="1610835093" ModStamp="1610888257" WorldPos="-3.18695 1.88122 -2.27928" Rotation="0 0 0" Scale="100 100 100" Active="true" Mesh="" UID="16 156 268435463" AreaType="Soundscape">
                 <UserVariables>
                     <Var ObjectId="268435463" Name="Note" Value="" />
                     <Var ObjectId="268435463" Name="UseReverb" Value="true" />
@@ -135,7 +135,7 @@
                     <Var ObjectId="268435463" Name="ParentAttachBody" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435464" Name="PosArea_WakeUpAnim" CreStamp="1610836639" ModStamp="1610837240" WorldPos="-0.449931 0.286273 -0.866994" Rotation="-0 4.62642 -0" Scale="1 1 1" Active="true" Mesh="" UID="16 159 268435464" AreaType="Trigger">
+            <Area ID="268435464" Name="PosArea_WakeUpAnim" CreStamp="1610836639" ModStamp="1610885268" WorldPos="-0.722674 0.327919 -0.986314" Rotation="-0 3.3164 -0" Scale="1 1 1" Active="true" Mesh="" UID="16 159 268435464" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435464" Name="Note" Value="" />
                     <Var ObjectId="268435464" Name="BlocksLineOfSight" Value="false" />
