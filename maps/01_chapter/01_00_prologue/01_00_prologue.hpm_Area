@@ -191,7 +191,7 @@
                     <Var ObjectId="268435465" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435466" Name="Ladder_Chasm" CreStamp="1610901276" ModStamp="1610901642" WorldPos="-14.9714 6.37703 -14.5" Rotation="0 1.5708 0" Scale="0.45 3.48011 0.3" Active="true" Mesh="" UID="16 299 268435466" AreaType="Ladder">
+            <Area ID="268435466" Name="Ladder_Chasm" CreStamp="1610901276" ModStamp="1611005759" WorldPos="-14.9714 6.37703 -14.4956" Rotation="0 1.5708 0" Scale="0.481479 3.48011 0.3" Active="true" Mesh="" UID="16 299 268435466" AreaType="Ladder">
                 <UserVariables>
                     <Var ObjectId="268435466" Name="Note" Value="" />
                     <Var ObjectId="268435466" Name="Material" Value="wood" />
@@ -206,7 +206,7 @@
                     <Var ObjectId="268435466" Name="ExitCallback" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435467" Name="Ladder_Chasm_Bottom" CreStamp="1610901546" ModStamp="1610901731" WorldPos="-14.5968 4.3413 -14.5" Rotation="0 0 0" Scale="0.25 0.25 0.25" Active="true" Mesh="" UID="16 296 268435467" AreaType="Trigger">
+            <Area ID="268435467" Name="Ladder_Chasm_Bottom" CreStamp="1610901546" ModStamp="1611005750" WorldPos="-14.5968 4.3413 -14.4956" Rotation="0 0 0" Scale="0.25 0.25 0.25" Active="true" Mesh="" UID="16 296 268435467" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435467" Name="Note" Value="" />
                     <Var ObjectId="268435467" Name="BlocksLineOfSight" Value="false" />
@@ -234,7 +234,7 @@
                     <Var ObjectId="268435467" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435468" Name="Ladder_Chasm_Top" CreStamp="1610901633" ModStamp="1610901668" WorldPos="-15.2622 8.19438 -14.5" Rotation="0 0 0" Scale="0.25 0.25 0.25" Active="true" Mesh="" UID="16 295 268435468" AreaType="Trigger">
+            <Area ID="268435468" Name="Ladder_Chasm_Top" CreStamp="1610901633" ModStamp="1611005750" WorldPos="-15.2622 8.19438 -14.4956" Rotation="0 0 0" Scale="0.25 0.25 0.25" Active="true" Mesh="" UID="16 295 268435468" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435468" Name="Note" Value="" />
                     <Var ObjectId="268435468" Name="BlocksLineOfSight" Value="false" />
@@ -262,7 +262,7 @@
                     <Var ObjectId="268435468" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435469" Name="Ladder_Chasm_InteractAux" CreStamp="1610901813" ModStamp="1610901900" WorldPos="-14.971 8.194 -14.5" Rotation="0 0 0" Scale="0.25 0.25 0.65" Active="true" Mesh="" UID="16 294 268435469" AreaType="InteractAux">
+            <Area ID="268435469" Name="Ladder_Chasm_InteractAux" CreStamp="1610901813" ModStamp="1611005750" WorldPos="-14.971 8.194 -14.4956" Rotation="0 0 0" Scale="0.25 0.25 0.65" Active="true" Mesh="" UID="16 294 268435469" AreaType="InteractAux">
                 <UserVariables>
                     <Var ObjectId="268435469" Name="Note" Value="" />
                     <Var ObjectId="268435469" Name="InteractParent" Value="Ladder_Chasm" />
