@@ -21,10 +21,11 @@ GENERAL:
  
 MAPS:
 
-	01_00_prologue:
+	01_00_prologue: Look for a good microphone, stand, and popfilter.
 
 		LEVEL:
 			TODO:
+			 * Add floor bumps along the caves.
 			 * In the chasm add billboards for the skylight.
 			 
 		SCRIPTS:

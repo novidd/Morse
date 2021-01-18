@@ -74,7 +74,7 @@
                     <Var ObjectId="268435460" Name="AdditionalActivationTriggers" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435461" Name="Start_Cave" CreStamp="1610817621" ModStamp="1610834730" WorldPos="-0.326302 1.36952 -0.734666" Rotation="-0 4.62036 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 45 268435461" AreaType="PlayerStart">
+            <Area ID="268435461" Name="Start_WakeUp" CreStamp="1610817621" ModStamp="1610988740" WorldPos="-0.326302 1.36952 -0.734666" Rotation="-0 4.62036 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 45 268435461" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268435461" Name="Note" Value="" />
                     <Var ObjectId="268435461" Name="Crouching" Value="false" />
