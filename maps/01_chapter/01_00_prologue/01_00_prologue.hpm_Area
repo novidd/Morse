@@ -313,6 +313,37 @@
                     <Var ObjectId="268435922" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
+            <Area ID="268435977" Name="Zoom_1" CreStamp="1611011999" ModStamp="1611012083" WorldPos="-3.45065 1.3164 -1.58903" Rotation="-0.0636035 -0.200766 0.297993" Scale="0.164613 1 1" Active="true" Mesh="" UID="16 452 268435977" AreaType="Zoom">
+                <UserVariables>
+                    <Var ObjectId="268435977" Name="Note" Value="" />
+                    <Var ObjectId="268435977" Name="BlocksLineOfSight" Value="false" />
+                    <Var ObjectId="268435977" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268435977" Name="UserVar" Value="" />
+                    <Var ObjectId="268435977" Name="Static" Value="false" />
+                    <Var ObjectId="268435977" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268435977" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268435977" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268435977" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268435977" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268435977" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268435977" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268435977" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="268435977" Name="PlayerLookAtCallback" Value="" />
+                    <Var ObjectId="268435977" Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                    <Var ObjectId="268435977" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
+                    <Var ObjectId="268435977" Name="PlayerLookAtCheckRayIntersection" Value="true" />
+                    <Var ObjectId="268435977" Name="PlayerLookAtMaxDistance" Value="-1" />
+                    <Var ObjectId="268435977" Name="PlayerLookAtCallbackDelay" Value="0" />
+                    <Var ObjectId="268435977" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268435977" Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268435977" Name="TextCategory" Value="" />
+                    <Var ObjectId="268435977" Name="TextEntry" Value="" />
+                    <Var ObjectId="268435977" Name="ZoomDistance" Value="0" />
+                    <Var ObjectId="268435977" Name="OnGuiFunction" Value="" />
+                    <Var ObjectId="268435977" Name="ZoomedInCallback" Value="" />
+                    <Var ObjectId="268435977" Name="VerticalFOV" Value="70" />
+                </UserVariables>
+            </Area>
         </Objects>
     </Section>
 </HPLMapTrack_Area>

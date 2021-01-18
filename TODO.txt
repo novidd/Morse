@@ -25,7 +25,10 @@ MAPS:
 
 		LEVEL:
 			TODO:
+			 * Add fog for the open outdoor areas. Use fog areas?
+			 * Add critters throughout the level.
 			 * Add floor bumps along the caves.
+
 			 
 		SCRIPTS:
 			TODO:
@@ -35,3 +38,4 @@ MAPS:
 			 * Write the script for when player gets dragged to the hole.
 			 * Play music when player spots ladder (on look).
 			 * Active fear object FearScaryObject_Soldier when player lights match.
+			 * Script the lizard event. Use run_to_hole, start_idle, hole_idle
