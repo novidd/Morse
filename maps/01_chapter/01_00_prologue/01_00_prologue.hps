@@ -107,6 +107,9 @@ class cScrMap : iScrMap
 		// Inventory
 		Item_AddToInventory("Matchbook");
 		
+		// Entity
+		Entity_PlayAnimation("lizard_run_1", "start_idle", 0.f, true);	
+		
 		/////////////////////////
 		// Debug
 		if(cLux_ScriptDebugOn())
@@ -208,12 +211,14 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test0)
 		{
-			cLux_AddDebugMessage("Running intro...");
+			// 02_05_cistern/lizard/lizard_croak
+			Entity_PlayAnimation("lizard_run_1", "run_to_hole", 0.f, true);
+			Sound_CreateAtEntity("sound_lizard_run", "02_05_cistern/lizard/lizard_run_1", "LizardSounds", 0.f, false, .25f);
 		}
 		
 		if (alAction == eAction_Test1)
 		{
-			Seq_Intro_WakeUp("");
+			Entity_PlayAnimation("lizard_run_1", "start_idle", 0.f, true);
 		}
 		
 		if (alAction == eAction_Test3)
