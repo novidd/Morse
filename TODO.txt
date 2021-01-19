@@ -18,6 +18,9 @@ GENERAL:
 	  * notes
 	  * items
 	  * interactable entities
+	  
+		Map_GetEntity("Entity").GetMeshEntity().GetAnimationStateFromName("AnimationName").SetSpeed(0.f);
+		Map_GetEntity("Entity").GetMeshEntity().GetAnimationStateFromName("AnimationName").SetRelativeTimePosition(0.001f);
  
 MAPS:
 
