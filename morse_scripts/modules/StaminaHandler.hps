@@ -110,8 +110,6 @@ class cScrStaminaHandler : iScrUserModule, iScrUserModule_Interface
 	
 	/**
 	 * Runs the handlers for managing the players stamina, runs at every frame.
-	 * This must be called inside the Update function within the cScrMap class in the [map].hps file!
-	 * //
 	 * The player has at default limited stamina to run. The stamina's value is at a range of 0 - 100.
 	 * 
 	 * @param float afTimeStep, the time between each step (1s/60fps = 0.01667s/fps)
@@ -158,7 +156,7 @@ class cScrStaminaHandler : iScrUserModule, iScrUserModule_Interface
 	/**
 	 * A handler for incrementing the players stamina while idle/walking, runs at every frame.
 	 * Lowers running speed when mfStaminaTotal < mfStaminaMax/2.0f.
-	 * Resets running speed when mfStaminaTotal > mfStaminaMax/2.0f.
+	 * Resets running speed to default when mfStaminaTotal > mfStaminaMax/2.0f.
 	**/
 	void PlayerRunningSpeedHandler()
 	{

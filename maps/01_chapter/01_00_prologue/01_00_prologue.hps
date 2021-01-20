@@ -21,8 +21,9 @@
 #include "custom/helpers/helper_props_custom.hps"
 
 // Morse helpers
-#include "morse_scripts/helpers/helper_general.hps"
-#include "morse_scripts/helpers/helper_stamina.hps"
+#include "morse_scripts/helpers/morse_helper_general.hps"
+#include "morse_scripts/helpers/morse_helper_player.hps"
+#include "morse_scripts/helpers/morse_helper_stamina.hps"
 
 //--------------------------------------------------
  
@@ -103,6 +104,7 @@ class cScrMap : iScrMap
 		bool mbStartIntro = true;
 		
 		cScript_SetGlobalVarBool("IntroDone", false);
+		cScript_SetGlobalVarBool("LizardScared", false);
 		
 		// Inventory
 		Item_AddToInventory("Matchbook");
@@ -158,12 +160,20 @@ class cScrMap : iScrMap
 	// Runs on every frame
 	void Update(float afTimeStep)
 	{
-		if (cScript_GetGlobalVarBool("IntroDone"))
+		if (cScript_GetGlobalVarBool("IntroDone")) // Disable lights and brazier fire
 		{
-			// Disable lights and brazier fire
+			
+		}
+		
+		if (!cScript_GetGlobalVarBool("LizardScared") && Player_IsInEntityRadius("LizardCroakSound", 5.f))
+		{
+			cScript_SetGlobalVarBool("LizardScared", true);
+			
+			Entity_PlayAnimation("lizard_run_1", "run_to_hole", 0.f, true);
+			Sound_CreateAtEntity("sound_lizard_run", "02_05_cistern/lizard/lizard_run_1", "LizardRunSound", 0.f, false, .25f);
 		}
 	}
-
+	
 	//-------------------------------------------------------
 
 	////////////////////////////
@@ -211,19 +221,22 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test0)
 		{
-			// 02_05_cistern/lizard/lizard_croak
-			Entity_PlayAnimation("lizard_run_1", "run_to_hole", 0.f, true);
-			Sound_CreateAtEntity("sound_lizard_run", "02_05_cistern/lizard/lizard_run_1", "LizardSounds", 0.f, false, .25f);
+
 		}
 		
 		if (alAction == eAction_Test1)
 		{
-			Entity_PlayAnimation("lizard_run_1", "start_idle", 0.f, true);
+		
 		}
 		
 		if (alAction == eAction_Test3)
 		{
 			cScript_SetGlobalVarBool("IntroDone", true);
+		}
+		
+		if (alAction == eAction_Test4)
+		{
+
 		}
 		
 		if(alAction == eAction_ScrollUp)
@@ -482,10 +495,10 @@ class cScrMap : iScrMap
 		//} END Event *INTRO SEQUENCE*
 	 
 	//} END SCENE 1
- 
+
 	/////////////////////////////////////////////////////////////////////////////////////////
 	// ==============
-	// SCENE 2 *CAVE*
+	// SCENE 2 *CHASM*
 	// ==============
 	//{//////////////////////////////////////////////////////////////////////////////////////
  
@@ -506,7 +519,7 @@ class cScrMap : iScrMap
 		//} END General
 	 
 		/////////////////////////////////////////
-		// Event A *X*
+		// Event A *LIZARD SPOTS PLAYER*
 		//{//////////////////////////////////////
 
 		//-------------------------------------------------------
@@ -517,7 +530,28 @@ class cScrMap : iScrMap
 
 		/*Put any functions that are only used in Scene 2, Event A here.*/
 		
+		bool OnTrigger_LizardCroak(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			Map_AddTimer("Timer_LizardCroak", 2.f, "OnTimer_LizardCroak");
+			return false;
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnTimer_LizardCroak(const tString &in asTimer)
+		{
+			Sound_CreateAtEntity("sound_lizard_croak", "02_05_cistern/lizard/lizard_croak", "LizardCroakSound", 0.f, false, .05f);
+			Map_RestartCurrentTimer(cMath_RandRectl(6.f, 10.0f));
+		}
+		
+		//-------------------------------------------------------
+		
+		void LizardRun()
+		{
+			
+		}
+		
 		//-------------------------------------------------------
 
-		//} END Event *X*
+		//} END Event *LIZARD*
 }

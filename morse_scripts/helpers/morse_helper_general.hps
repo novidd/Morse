@@ -1,0 +1,223 @@
+#include "interfaces/Map_Interface.hps"
+#include "base/Inputhandler_Types.hps"
+
+#include "helpers/helper_map.hps"
+#include "helpers/helper_props.hps"
+#include "helpers/helper_effects.hps"
+#include "helpers/helper_audio.hps"
+#include "helpers/helper_imgui.hps"
+#include "helpers/helper_sequences.hps"
+#include "helpers/helper_game.hps"
+#include "helpers/helper_modules.hps"
+#include "helpers/helper_ai.hps"
+#include "helpers/helper_player.hps"
+
+#include "helpers/helper_items.hps"
+#include "helpers/helper_areas.hps"
+#include "helpers/helper_agent.hps"
+#include "custom/helpers/helper_areas_custom.hps"
+#include "custom/helpers/helper_player_custom.hps"
+#include "custom/helpers/helper_modules_custom.hps"
+#include "custom/helpers/helper_props_custom.hps"
+
+shared enum ePlayerDamageType
+{
+	ePlayerDamageSmall, // 0
+	ePlayerDamageMedium, // 1
+	ePlayerDamageLarge // 2
+}
+
+shared enum eLanternOilType
+{
+	eOilSmall,
+	eOilMedium,
+	eOilLarge
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// ==============
+// MAIN FUNCTIONS
+// ==============
+//{///////////////////////////////////////////////////////////////////////////////////////
+
+	/////////////////////////////////////////
+	// LIGHTS
+	//{//////////////////////////////////////
+	
+	/**
+	 * Fades a light's brightness to min or max value which is determined with a bool.
+	 * 
+	 * @param String asLightName, the light to change brightness with. Can contain wildcards.
+	 * @param float afMax, the brightness the light will be set to, takes effect when abIncrease = true.
+	 * @param float afMin, the brightness the light will be set to, takes effect when abIncrease = false.
+	 * @param float afTime, the time to fade the light in or out.
+	 * @param bool abIncrease, whether to set increase or decrease the brightness.
+	**/
+	void Light_FadeBrightnessToBool(const tString &in asLightName, float afMax, float afMin, float afTime, bool abIncrease)
+	{
+		if (abIncrease) // If brightness should increase
+		{
+			Light_FadeBrightnessTo(asLightName, afMax, afTime);
+		}
+		else // If brightness should decrease
+		{
+			Light_FadeBrightnessTo(asLightName, afMin, afTime);
+		}
+	}
+	
+	//-------------------------------------------------------
+	
+	//} END LIGHTS
+	
+	/////////////////////////////////////////
+	// GAMEPLAY
+	//{//////////////////////////////////////
+	
+	//-------------------------------------------------------
+	/**
+	 * Makes the player take damage and plays a reaction scream sound effect.
+	 * 
+	 * @param float afAmount, how much damage to do to the player.
+	 * @param float afMaxFear, max fear level the damage can cause.
+	 * @param int alEffectType, the type of damage, which damage effect should be applied to the screen.
+	 * @param String asSource, the name of the entity doing the damage.
+	 * @param String asSoundname, the internal name of the sound (can later be used to stop the sound, etc).
+	 * @param bool abPlaySound, if the damage sound should be played.
+	 * @param ePlayerDamageType alType, the type of reaction scream sound to play, must be ePlayerDamage[Type].
+	**/
+	void Player_GiveDamageAndSound(float afAmount, float afMaxFear, int alEffectType, const tString &in asSource,
+									const tString &in asSoundName, bool abPlaySound, ePlayerDamageType alDamageType)
+	{
+		const array<tString> mvSoundFiles = {"player/emotes/pain_small", "player/emotes/pain_med", "player/emotes/pain_large"};
+		
+		Player_GiveDamage(afAmount, afMaxFear, alEffectType, asSource);
+		
+		if (!Sound_Exists(asSoundName) && abPlaySound)
+		{
+			Sound_CreateAtEntity(asSoundName, mvSoundFiles[alDamageType], "player");
+		}
+	}
+	
+	//-------------------------------------------------------
+
+	/**
+	 * Adds oil to the player inventory while interacting with an entity/trigger area.
+	 * There has to be a defined uservar integer >= 1 (integer = 1 barrel is empty, integer > 1 the barrel has Entity_GetVarInt(asEntity, "") - 1 uses left) for the selected entity/trigger area in the level editor.
+	 * (If uservar = 3, then the player can get oil 2 times, etc)
+	 * 
+	 * @param String asEntity, the entity/trigger area interacted with to get the uservar from, and the source to play the extract_oil sound. 
+	 * @param eLanternOilType alOilType, the type of oil to give the player, must either be eOil[Type].  
+	**/
+	void ExtractOil(const tString &in asEntity, eLanternOilType alOilType)
+	{
+		if (Entity_GetVarInt(asEntity, "") <= 0) // Checks if uservar in asEntity is a valid integer
+		{
+			Error("The user var for " + asEntity + " is not valid, it must be an integer >= 1.");
+			return;
+		}
+		
+		const array<tString> msOilTypes = {"ModernOil", "HerbertOil", "AlchemistOil"};
+		
+		if (Entity_GetVarInt(asEntity, "") == 1) // Checks if uservar = 1, if true, the oil barrel is empty
+		{
+			Sound_CreateAtEntity("extract_oil", "morse_entity/interact/extract_oil/extract_oil_empty", asEntity, .1f, false, .5f);
+			return;
+		}
+		else if (Entity_GetVarInt(asEntity, "") > 1) // Checks if uservar > 1, if true, the oil barrel is not empty and the player gets some oil
+		{
+			Entity_SetVarInt(asEntity, "", Entity_GetVarInt(asEntity, "") - 1);
+			Item_AddToInventory(msOilTypes[alOilType], true);
+			Sound_CreateAtEntity("extract_oil", "morse_entity/interact/extract_oil/extract_oil_fill", asEntity, .1f, false, .5f);
+			return;
+		}
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Set a certian amount of matches in the player inventory.
+	 * (Sometimes plays an annoying sound effect, so avoid using this function)
+	 * 
+	 * @param int alAmount, the amount of matches to set to.  
+	**/
+	void Match_Set(int alAmount)
+	{
+		Item_AddToInventory("Matchbook", false);
+		Item_SetContent(ItemType_GetFirstInInventory("Matchbook"), "Matches", alAmount);
+		return;
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Add a certian amount of matches to the player inventory.
+	 * (Sometimes plays an annoying sound effect, so avoid using this function)
+	 * 
+	 * @param int alAmount, the amount of matches to add.  
+	**/
+	void Match_Add(int alAmount)
+	{
+		const int mlMatchesCount = Matches_GetCount();
+		const int mlMatchesSum = mlMatchesCount + alAmount;
+		
+		if (alAmount <= 0)
+		{
+			Error("To add matches the amount must be > 0, " + alAmount + " is <= 0.");
+			return;
+		}
+		else
+		{
+			if (mlMatchesSum > 10)
+			{
+				Error("Setting total matches to 10, " 
+				+ cString_ToString(Matches_GetCount(), 1) + "+" + cString_ToString(alAmount, 1) + " exceeds the max of 10 matches.");
+				
+				Item_SetContent(ItemType_GetFirstInInventory("Matchbook"), "Matches", 10);
+				return;
+			}
+			
+			Item_AddToInventory("Matchbook", false);
+			Item_SetContent(ItemType_GetFirstInInventory("Matchbook"), "Matches", mlMatchesCount + alAmount);
+			return;
+		}
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Makes screen either fade in or out that simultaneously plays a microflash sound effect at player
+	 * 
+	 * @param asEffect, either "In" or "Out". 
+	**/
+	void FadeInOutMicroFlash(const tString &in asEffect)
+	{
+		Sound_CreateAtEntity("", "player/UI/fear_system/microflash", "player", 0.1f, false, 0.3f);
+		if (asEffect == "In")
+		{
+			Effect_Fade_In(0.1f);
+		}
+		else if (asEffect == "Out")
+		{
+			Effect_Fade_Out(0.1f);
+		}
+	}
+	
+	//-------------------------------------------------------
+	
+	/**
+	 * Handles how the vo should be played.
+	 * 
+	 * @param String asSubject, the name of the subject to play.
+	 * @param String asEntity, entity interacted/collided with to trigger vo (used to store uservars = subject name).
+	 * @param int alSpecificLineIdx, if 0 or higher then a specific line index will be played. Set as -1 to play as stated in the data.
+	 * @param String asCallback, called when subject is done playing. Syntax: void Func(const tString&in asScene, const tString&in asSubject)
+	 * @param int alPrio, The priority of the voice, if higher than the currently playing, the current gets stopped and replaced, else this voice is not played.
+	**/
+	void Voice_Handler(const tString&in asSubject, const tString &in asEntity = "", int alSpecificLineIdx = -1, const tString&in asCallback = "", int alPrio = 0)
+	{
+		Voice_Play(asSubject, alSpecificLineIdx, asCallback, alPrio);
+	}
+	
+	//-------------------------------------------------------
+	
+	//} END GAMEPLAY
