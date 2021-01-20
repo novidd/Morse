@@ -26,36 +26,5 @@
 // ==============
 //{///////////////////////////////////////////////////////////////////////////////////////
 
-/**
- * Gets if an entity is within a specific distance/radius of the player.
- * 
- * @param tString asEntity, name of the entity to calculate from.
- * @param float afRadius, the distance/radius the player has to be to return true.
- * 
- * @return bool, if the entity is within the distance/radius.
- **/
-bool Player_IsInEntityRadius(const tString &in asEntity, float afRadius)
-{
-	iLuxEntity@ pEntity =  cLux_GetCurrentMap().GetEntityByName(asEntity, eLuxEntityType_LastEnum, "");
-	
-	if (pEntity is null)
-	{
-		Error("Could not find any entities with name '"+asEntity+"' for Player_IsEntityInRadius");
-		return false;
-	}
-	
-	// Distance = sqrt(x^2 + y^2 + z^2)
-	float mfDistance = Player_GetDistanceToEntity(asEntity);
-	
-	if (mfDistance <= afRadius)
-	{
-		cLux_AddDebugMessage("YAY! Entity within radius");
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}
 
 //-------------------------------------------------------

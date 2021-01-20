@@ -1,6 +1,6 @@
 <HPLMapTrack_Entity ID="90B03D7E743088C36434920FD17634B8C43332FB" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
-        <FileIndex_Entities NumOfFiles="77">
+        <FileIndex_Entities NumOfFiles="252">
             <File Id="0" Path="entities/nonexclusive/organic/bones/bone_ribcage_fractured.ent" />
             <File Id="1" Path="entities/nonexclusive/organic/bones/bone_hipbone_fractured.ent" />
             <File Id="2" Path="entities/nonexclusive/organic/bones/bone_skull_fractured_02_simplecoll.ent" />
@@ -78,6 +78,181 @@
             <File Id="74" Path="entities/technical/block_box/block_box.ent" />
             <File Id="75" Path="entities/technical/block_box/block_box_cylinder_char.ent" />
             <File Id="76" Path="entities/technical/block_box/block_box_capsule_static.ent" />
+            <File Id="77" Path="entities/bedouin/beduin_carpet/beduin_carpet_hanging_softbody.ent" />
+            <File Id="78" Path="entities/bedouin/beduin_carpet/beduin_carpet_tent_door.ent" />
+            <File Id="79" Path="entities/bedouin/beduin_carpet/beduin_carpet_tent_door_rigid.ent" />
+            <File Id="80" Path="entities/bedouin/furniture/beduin_bed/beduin_bed_01.ent" />
+            <File Id="81" Path="entities/bedouin/furniture/beduin_dryingrack/beduin_dryingrack_01.ent" />
+            <File Id="82" Path="entities/bedouin/ornaments/bedouin_basket_wicker/bedouin_basket_wicker.ent" />
+            <File Id="83" Path="entities/bedouin/ornaments/bedouin_camel_saddle/bedouin_camel_saddle.ent" />
+            <File Id="84" Path="entities/bedouin/ornaments/bedouin_firewood_bundle/bedouin_firewood_bundle.ent" />
+            <File Id="85" Path="entities/bedouin/ornaments/bedouin_shisha/bedouin_shisha.ent" />
+            <File Id="86" Path="entities/bedouin/ornaments/bedoun_saltslab/bedoun_saltslab.ent" />
+            <File Id="87" Path="entities/bedouin/ornaments/carpet_tent/carpet03.ent" />
+            <File Id="88" Path="entities/bedouin/ornaments/carpet_tent/carpet01.ent" />
+            <File Id="89" Path="entities/bedouin/special/french_gate_rock_wall/french_gate_rock_wall.ent" />
+            <File Id="90" Path="entities/bedouin/special/town_jaw_trap/trap_sand.ent" />
+            <File Id="91" Path="entities/cave/lamp/fire_pit/fire_pit.ent" />
+            <File Id="92" Path="entities/cave/organic/flora_fungi_mold/flora_fungi_mold.ent" />
+            <File Id="93" Path="entities/cave/organic/flora_fungi_poreconch_02/flora_fungi_poreconch_02.ent" />
+            <File Id="94" Path="entities/cave/organic/flora_fungi_poreconch_01/flora_fungi_poreconch_01.ent" />
+            <File Id="95" Path="entities/cave/organic/flora_fungi_olearius_03/flora_fungi_olearius_03.ent" />
+            <File Id="96" Path="entities/cave/organic/cave_sulfur_fumarole/cave_sulfur_fumarole.ent" />
+            <File Id="97" Path="entities/cave/ornaments/ghoul_nest_altar/ghoul_nest_altar.ent" />
+            <File Id="98" Path="entities/cave/ornaments/ghoul_nest_pinnacle/ghoul_nest_pinnacle.ent" />
+            <File Id="99" Path="entities/cave/ornaments/girl_doll/girl_doll.ent" />
+            <File Id="100" Path="entities/cave/ornaments/statue_pilgrim_tin_hinan/statue_pilgrim_tin_hinan.ent" />
+            <File Id="101" Path="entities/cave/ornaments/stonecut_head/stonecut_head.ent" />
+            <File Id="102" Path="entities/cave/ornaments/stonecut_sitting/stonecut_sitting.ent" />
+            <File Id="103" Path="entities/cave/ornaments/stonecut_sitting/stonecut_sitting_broken.ent" />
+            <File Id="104" Path="entities/cave/ornaments/stonecut_spiral/stonecut_spiral.ent" />
+            <File Id="105" Path="entities/cave/ornaments/toy_car/toy_car.ent" />
+            <File Id="106" Path="entities/cave/special/bridge_plank/bridge_plank_rope_only.ent" />
+            <File Id="107" Path="entities/cave/special/bridge_plank/bridge_plank_rope_single.ent" />
+            <File Id="108" Path="entities/cistern/ornaments/ottoman_toy_tree/ottoman_toy_tree.ent" />
+            <File Id="109" Path="entities/cistern/ornaments/wheel_burned_02/wheel_burned_02_detailed.ent" />
+            <File Id="110" Path="entities/cistern/ornaments/wheel_burned_01/wheel_burned_push.ent" />
+            <File Id="111" Path="entities/cistern/ornaments/wheel_burned_02/wheel_burned_02.ent" />
+            <File Id="112" Path="entities/cistern/special/water_tank_arm.ent" />
+            <File Id="113" Path="entities/cistern/special/cistern_notes/bookofgoetia_note.ent" />
+            <File Id="114" Path="entities/cistern/storage/tank_water_hanging/tank_water_static.ent" />
+            <File Id="115" Path="entities/cistern/storage/tank_water_hanging/tank_water_hanging.ent" />
+            <File Id="116" Path="entities/courtyard/gameplay/arsenal_entrance_key/courtyard_arsenal_key_rigid.ent" />
+            <File Id="117" Path="entities/darkworld/alchemists_lab/dwf_diorama_cubes/dwf_diorama_cubes.ent" />
+            <File Id="118" Path="entities/darkworld/alchemists_lab/dwf_metal_shutters/dwf_metal_shutters.ent" />
+            <File Id="119" Path="entities/darkworld/special/dwf_a_museum_slabs/dwf_a_museum_slabs_3.ent" />
+            <File Id="120" Path="entities/darkworld/special/dwf_a_museum_slabs/dwf_a_museum_slabs_5.ent" />
+            <File Id="121" Path="entities/darkworld/special/dwf_a_museum_slabs/dwf_a_museum_slabs_4.ent" />
+            <File Id="122" Path="entities/darkworld/special/dwf_a_museum_slabs/dwf_a_museum_slabs_1.ent" />
+            <File Id="123" Path="entities/darkworld/special/dwf_a_museum_slabs/dwf_a_museum_slabs_2.ent" />
+            <File Id="124" Path="entities/darkworld/special/dwf_d_explosion_corpse/dwf_d_explosion_corpse.ent" />
+            <File Id="125" Path="entities/darkworld/special/dwl_rift/dwl_rift_plane_engine.ent" />
+            <File Id="126" Path="entities/darkworld/special/herberts_camp_curtain/herberts_camp_curtain.ent" />
+            <File Id="127" Path="entities/darkworld/special/undercity_root_wall/undercity_root_small_1_rigid.ent" />
+            <File Id="128" Path="entities/darkworld/special/undercity_root_wall/undercity_root_small_3.ent" />
+            <File Id="129" Path="entities/darkworld/special/undercity_root_wall/undercity_root_wall_doorblocker.ent" />
+            <File Id="130" Path="entities/darkworld/special/undercity_root_wall/undercity_root_wall_rigid_lowquality.ent" />
+            <File Id="131" Path="entities/desert/organic/tree_palm_date/tree_palm_date.ent" />
+            <File Id="132" Path="entities/desert/organic/tree_doum/tree_doum_sway.ent" />
+            <File Id="133" Path="entities/desert/organic/tree_date/tree_date.ent" />
+            <File Id="134" Path="entities/desert/organic/tree_cypress/tree_cypress_storm.ent" />
+            <File Id="135" Path="entities/desert/organic/tree_cypress/tree_cypress.ent" />
+            <File Id="136" Path="entities/desert/organic/tree_cypress/tree_cypress_storm_rigid.ent" />
+            <File Id="137" Path="entities/desert/special/04_02_tasi_birth_restraint/tasi_birth_restraint.ent" />
+            <File Id="138" Path="entities/desert/special/04_02_tasi_birth_restraint/tasi_birth_stretcher.ent" />
+            <File Id="139" Path="entities/desert/special/02_06_oasis/oasis_water_stream/oasis_water_stream_wave_02.ent" />
+            <File Id="140" Path="entities/desert/special/02_06_oasis/oasis_water_stream/oasis_water_stream_wave_03.ent" />
+            <File Id="141" Path="entities/desert/special/02_06_oasis/oasis_water_stream/oasis_water_stream_wave_01.ent" />
+            <File Id="142" Path="entities/desert/special/02_06_oasis/oasis_water_stream/oasis_water_stream_wave_04.ent" />
+            <File Id="143" Path="entities/desert/special/02_06_oasis/oasis_water_stream/oasis_water_stream_wave.ent" />
+            <File Id="144" Path="entities/desert/special/02_06_oasis/oasis_water_stream/oasis_water_stream_02.ent" />
+            <File Id="145" Path="entities/desert/special/02_06_oasis/readable_oasis_note/readable_oasis_note.ent" />
+            <File Id="146" Path="entities/nonexclusive/gameplay/match_lit/match_lit.ent" />
+            <File Id="147" Path="entities/nonexclusive/gameplay/medkit/medkit.ent" />
+            <File Id="148" Path="entities/nonexclusive/gameplay/meat_chunks/meat_chunk_02_inventory.ent" />
+            <File Id="149" Path="entities/nonexclusive/gameplay/meat_chunks/meat_chunk_01_inventory.ent" />
+            <File Id="150" Path="entities/nonexclusive/gameplay/meat_chunks/meat_chunk_01.ent" />
+            <File Id="151" Path="entities/nonexclusive/gameplay/medkit/medkit_hand.ent" />
+            <File Id="152" Path="entities/nonexclusive/gameplay/pf_baby/pf_baby_6_month.ent" />
+            <File Id="153" Path="entities/nonexclusive/gameplay/pf_baby/pf_baby_unknown.ent" />
+            <File Id="154" Path="entities/nonexclusive/gameplay/pf_baby/pf_baby_4_month.ent" />
+            <File Id="155" Path="entities/roman/gameplay/chase_tunnel_collapse_debris/chase_tunnel_collapse_wall_broken.ent" />
+            <File Id="156" Path="entities/roman/gameplay/portal_corridor_collapse/portal_corridor_collapse_whole.ent" />
+            <File Id="157" Path="entities/roman/gameplay/roman_stone_slab_door/roman_stone_slab_door.ent" />
+            <File Id="158" Path="entities/roman/gameplay/roman_stone_slab_door/roman_stone_slab_door_ropes.ent" />
+            <File Id="159" Path="entities/roman/gate/courtyard_gate_smash.ent" />
+            <File Id="160" Path="entities/roman/ornament/roman_light_torchholder/roman_light_torchholder.ent" />
+            <File Id="161" Path="entities/roman/ornament/roman_light_torchholder/roman_light_torchholder_lamp.ent" />
+            <File Id="162" Path="entities/roman/ornament/roman_statue_aristocrat/roman_statue_aristocrat.ent" />
+            <File Id="163" Path="entities/roman/ornament/statue_mercury/Statue_Mercury.ent" />
+            <File Id="164" Path="entities/roman/ornament/statue_guardian/statue_guardian.ent" />
+            <File Id="165" Path="entities/roman/storage/roman_storage_chest_fancy/roman_storage_chest_fancy.ent" />
+            <File Id="166" Path="entities/ruins/occult_objects/occult_salt_cone/occult_salt_cone.ent" />
+            <File Id="167" Path="entities/ruins/occult_objects/occult_statue_fertility/occult_statue_fertility.ent" />
+            <File Id="168" Path="entities/ruins/occult_objects/occult_wall_hollowface/occult_wall_hollowface.ent" />
+            <File Id="169" Path="entities/ruins/ornaments/old_artifact01/old_artifact01.ent" />
+            <File Id="170" Path="entities/ruins/ornaments/old_artifact02/old_artifact02.ent" />
+            <File Id="171" Path="entities/ruins/ornaments/old_artifact03/old_artifact03.ent" />
+            <File Id="172" Path="entities/ruins/ornaments/ruin_brazier/ruin_brazier.ent" />
+            <File Id="173" Path="entities/ruins/ornaments/tin_hinan_sarcophagus/tin_hinan_sarcophagus.ent" />
+            <File Id="174" Path="entities/ruins/ornaments/tomb_slab_taureg/tomb_slab_taureg.ent" />
+            <File Id="175" Path="entities/ruins/storage/stone_box_simple/stone_box_movable.ent" />
+            <File Id="176" Path="entities/survivors/furniture/bed_medical_transport_make_shift/bed_medical_transport_make_shift.ent" />
+            <File Id="177" Path="entities/survivors/furniture/fireplace_messy/fireplace_messy.ent" />
+            <File Id="178" Path="entities/survivors/plane/plane_wreckage_radio.ent" />
+            <File Id="179" Path="entities/survivors/plane/plane_wreckage_radio_button.ent" />
+            <File Id="180" Path="entities/survivors/tech/theodolite/theodolite.ent" />
+            <File Id="181" Path="entities/survivors/tech/camera_fin/camera_fin.ent" />
+            <File Id="182" Path="entities/tin_hinan/ornament/alien_meat_stone/alien_meat_stone.ent" />
+            <File Id="183" Path="entities/tin_hinan/ornament/alien_stone_01/alien_stone_01.ent" />
+            <File Id="184" Path="entities/tin_hinan/ornament/alien_stone_02/alien_stone_02.ent" />
+            <File Id="185" Path="entities/tin_hinan/ornament/statue_alchemist/statue_alchemist_baseless.ent" />
+            <File Id="186" Path="entities/tin_hinan/ornament/statue_alchemist/statue_alchemist.ent" />
+            <File Id="187" Path="entities/tin_hinan/ornament/statue_ghoul_hunting/statue_ghoul_hunting.ent" />
+            <File Id="188" Path="entities/tin_hinan/ornament/statue_human_enslaved/statue_human_enslaved.ent" />
+            <File Id="189" Path="entities/tin_hinan/ornament/statue_worshipper_tin_hinan_male/statue_worshipper_tin_hinan_male.ent" />
+            <File Id="190" Path="entities/tin_hinan/ornament/tin_hinan_pillow/tin_hinan_pillow.ent" />
+            <File Id="191" Path="entities/tin_hinan/ornament/worm_canister/worm_canister.ent" />
+            <File Id="192" Path="entities/tin_hinan/special/cave_reflection_test.ent" />
+            <File Id="193" Path="entities/tin_hinan/special/darkworld_tower_circle_base.ent" />
+            <File Id="194" Path="entities/tin_hinan/special/tth_metal_hatch.ent" />
+            <File Id="195" Path="entities/tin_hinan/special/pillar_room_notes/herbert_alchemist_note02.ent" />
+            <File Id="196" Path="entities/tin_hinan/special/pillar_room_pillars/pillar_room_dirtysymbols.ent" />
+            <File Id="197" Path="entities/tin_hinan/special/pillar_room_pillars/pillar_room_pillar_west.ent" />
+            <File Id="198" Path="entities/tin_hinan/special/vitae_station_body_crusher/vitae_station_body_crusher.ent" />
+            <File Id="199" Path="entities/tin_hinan/special/vitae_station_milkmachine_notes/vitae_station_milkmachine_analysis_1.ent" />
+            <File Id="200" Path="entities/tin_hinan/special/vitae_station_milkmachine_notes/vitae_station_milkmachine_diagram.ent" />
+            <File Id="201" Path="entities/tin_hinan/special/vitae_station_milkmachine_notes/vitae_station_milkmachine_analysis_2.ent" />
+            <File Id="202" Path="entities/tin_hinan/special/vitae_station_pool_roots/pool_root_long_rigged.ent" />
+            <File Id="203" Path="entities/tribal/door/door_town_01/door_town_01.ent" />
+            <File Id="204" Path="entities/tribal/door/door_town_02/door_town_02.ent" />
+            <File Id="205" Path="entities/tribal/door/door_town_02/door_town_02_handle.ent" />
+            <File Id="206" Path="entities/tribal/door/door_town_02/door_town_02_handle_static.ent" />
+            <File Id="207" Path="entities/tribal/furniture/cot_baby/cot_baby.ent" />
+            <File Id="208" Path="entities/tribal/furniture/bedouin_simple_table/bedouin_simple_table.ent" />
+            <File Id="209" Path="entities/tribal/door/door_town_03/door_town_03.ent" />
+            <File Id="210" Path="entities/tribal/lamp/chandelier_tribe/chandelier_tribe.ent" />
+            <File Id="211" Path="entities/tribal/ornaments/arabic_wall_art_01/arabic_wall_art_01.ent" />
+            <File Id="212" Path="entities/tribal/ornaments/arabic_wall_art_02/arabic_wall_art_02.ent" />
+            <File Id="213" Path="entities/tribal/ornaments/tribal_mortar_cup.ent" />
+            <File Id="214" Path="entities/tribal/ornaments/pilgrim_incense/pilgrim_incense.ent" />
+            <File Id="215" Path="entities/tribal/ornaments/record_vinyl_cover/record_vinyl_cover_04.ent" />
+            <File Id="216" Path="entities/tribal/ornaments/record_vinyl/record_vinyl_01.ent" />
+            <File Id="217" Path="entities/tribal/ornaments/totem/totem_large.ent" />
+            <File Id="218" Path="entities/tribal/ornaments/totem/totem_decorations_05.ent" />
+            <File Id="219" Path="entities/tribal/ornaments/tribal_big_mortar_cup/tribal_big_mortar_cup.ent" />
+            <File Id="220" Path="entities/tribal/ornaments/tribal_brass_tray/tribal_brass_tray.ent" />
+            <File Id="221" Path="entities/tribal/ornaments/tribal_iron_mortar_cup/tribal_iron_mortar_cup.ent" />
+            <File Id="222" Path="entities/tribal/ornaments/tribal_food_bowl_02/tribal_food_bowl_02.ent" />
+            <File Id="223" Path="entities/tribal/storage/arabic_bookcase/arabic_bookcase.ent" />
+            <File Id="224" Path="entities/tribal/storage/tribal_wicker_box_02/tribal_wicker_box_02.ent" />
+            <File Id="225" Path="entities/ruins/storage/stone_box_simple/stone_box_simple.ent" />
+            <File Id="226" Path="entities/ruins/storage/stone_box_simple/stone_box_simple_lid.ent" />
+            <File Id="227" Path="entities/french_colonization/barricades/improvised_barricade_4/barricade_4.ent" />
+            <File Id="228" Path="entities/french_colonization/barricades/improvised_barricade_3/barricade_3.ent" />
+            <File Id="229" Path="entities/french_colonization/barricades/improvised_barricade_1/barricade_1.ent" />
+            <File Id="230" Path="entities/french_colonization/barricades/improvised_barricade_2/barricade_2.ent" />
+            <File Id="231" Path="entities/french_colonization/ornaments/flowerpot_dried_leaves/flowerpot_dried_leaves.ent" />
+            <File Id="232" Path="entities/french_colonization/ornaments/french_tent_semi_collapsed/french_tent_semi-collapsed_sway.ent" />
+            <File Id="233" Path="entities/french_colonization/ornaments/french_tent_collapsed/french_tent_collapsed.ent" />
+            <File Id="234" Path="entities/french_colonization/ornaments/french_tent_semi_collapsed/french_tent_semi-collapsed.ent" />
+            <File Id="235" Path="entities/french_colonization/tools/rack_tanning/rack_tanning.ent" />
+            <File Id="236" Path="entities/french_colonization/tools/workshop_foot_powered_saw/workshop_foot_powered_saw.ent" />
+            <File Id="237" Path="entities/french_colonization/torture/torture_rack/torture_rack.ent" />
+            <File Id="238" Path="entities/french_colonization/wreck/wreck_douglas_wing/wreck_douglas_wing.ent" />
+            <File Id="239" Path="entities/french_colonization/wreck/wreck_blimp_segment/wreck_blimp_segment.ent" />
+            <File Id="240" Path="entities/french_colonization/wreck/wreck_nuiport_tail/wreck_nieuport_tail.ent" />
+            <File Id="241" Path="entities/cistern/gameplay/slide_bucket_soldier/slide_bucket_soldier.ent" />
+            <File Id="242" Path="entities/cave/debris/bloody_bandage/bloody_bandage_01.ent" />
+            <File Id="243" Path="entities/cave/debris/bloody_bandage/bloody_bandage_02.ent" />
+            <File Id="244" Path="entities/bedouin/special/town_jaw_trap/town_jaw_trap.ent" />
+            <File Id="245" Path="entities/bedouin/ornaments/bedouin_shisha/bedouin_shisha_broken.ent" />
+            <File Id="246" Path="entities/bedouin/ornaments/bedouin_saddlebag_simple/bedouin_saddlebag_simple.ent" />
+            <File Id="247" Path="entities/archaeology/scaffolding/scaffolding_arch_push.ent" />
+            <File Id="248" Path="entities/critters/critter_spider/critter_spider.ent" />
+            <File Id="249" Path="entities/critters/critter_scorpion/critter_scorpion_scare.ent" />
+            <File Id="250" Path="entities/critters/critter_scorpion/critter_scorpion_no_ray_col.ent" />
+            <File Id="251" Path="entities/critters/critter_scorpion/critter_scorpion_scare_fake.ent" />
         </FileIndex_Entities>
         <Objects>
             <Entity ID="268435477" Name="corpse_eaten_static_2" CreStamp="1610806095" ModStamp="1610808887" WorldPos="-2.32757 -0.74412 -0.301788" Rotation="2.109 1.74186 2.48784" Scale="1 1 1" FileIndex="15" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 2 268435477">
@@ -1213,6 +1388,114 @@
                     <Var ObjectId="268435501" Name="Threat_BaseFearRateMultiplier" Value="1.0" />
                     <Var ObjectId="268435501" Name="Threat_ActivationCallback" Value="" />
                     <Var ObjectId="268435501" Name="Threat_DeactivationCallback" Value="" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268436095" Name="bridge_plank_rope_single_1" CreStamp="1611180091" ModStamp="1611180310" WorldPos="-14.832 8.15 -13.271" Rotation="0.0216544 3.12185 2.30198e-09" Scale="1 1 1" FileIndex="107" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 665 268436095">
+                <UserVariables>
+                    <Var ObjectId="268436095" Name="Note" Value="" />
+                    <Var ObjectId="268436095" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436095" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268436095" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436095" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268436095" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436095" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436095" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436095" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436095" Name="RenderLayer" Value="0" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268436260" Name="stone_box_simple_1" CreStamp="1611181960" ModStamp="1611182042" WorldPos="-15.5987 9.28749 -4.60407" Rotation="0.0693359 0.290447 0.143687" Scale="0.25 0.25 0.25" FileIndex="225" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 664 268436260">
+                <UserVariables>
+                    <Var ObjectId="268436260" Name="Note" Value="" />
+                    <Var ObjectId="268436260" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436260" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268436260" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436260" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268436260" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436260" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436260" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436260" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436260" Name="RenderLayer" Value="0" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268436261" Name="stone_box_simple_lid_1" CreStamp="1611182009" ModStamp="1611182042" WorldPos="-15.6535 9.49382 -4.54216" Rotation="-0.0297883 3.38251 0.00710913" Scale="0.25 0.25 0.25" FileIndex="226" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 663 268436261">
+                <UserVariables>
+                    <Var ObjectId="268436261" Name="Note" Value="" />
+                    <Var ObjectId="268436261" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268436261" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436261" Name="UserVar" Value="" />
+                    <Var ObjectId="268436261" Name="DisableBreakable" Value="false" />
+                    <Var ObjectId="268436261" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268436261" Name="StaticPhysics" Value="false" />
+                    <Var ObjectId="268436261" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268436261" Name="EffectsActive" Value="true" />
+                    <Var ObjectId="268436261" Name="InteractionDisabled" Value="false" />
+                    <Var ObjectId="268436261" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436261" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436261" Name="EffectColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436261" Name="EffectBrightnessMul" Value="1" />
+                    <Var ObjectId="268436261" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436261" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436261" Name="IsAffectedByDecal" Value="false" />
+                    <Var ObjectId="268436261" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436261" Name="UpdateBonesWhenCulled" Value="false" />
+                    <Var ObjectId="268436261" Name="OnBreakCallbackFunc" Value="" />
+                    <Var ObjectId="268436261" Name="ConnectionStateChangeCallback" Value="" />
+                    <Var ObjectId="268436261" Name="PlayerLookAtCallback" Value="" />
+                    <Var ObjectId="268436261" Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268436261" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
+                    <Var ObjectId="268436261" Name="PlayerLookAtCheckRayIntersection" Value="true" />
+                    <Var ObjectId="268436261" Name="PlayerLookAtMaxDistance" Value="-1" />
+                    <Var ObjectId="268436261" Name="PlayerLookAtCallbackDelay" Value="0" />
+                    <Var ObjectId="268436261" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268436261" Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268436261" Name="PlayerInteractLeaveCallback" Value="" />
+                    <Var ObjectId="268436261" Name="PlayerInteractLeaveCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268436261" Name="RecieveMessageCallback" Value="" />
+                    <Var ObjectId="268436261" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268436261" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268436261" Name="ConnectedEntity" Value="" />
+                    <Var ObjectId="268436261" Name="ConnectedEntityInvertState" Value="false" />
+                    <Var ObjectId="268436261" Name="ConnectedEntityStatesUsed" Value="0" />
+                    <Var ObjectId="268436261" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268436261" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268436261" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268436261" Name="ParentAttachSocket" Value="" />
+                    <Var ObjectId="268436261" Name="ParentAttachSnap" Value="false" />
+                    <Var ObjectId="268436261" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="268436261" Name="ConnectedLight" Value="" />
+                    <Var ObjectId="268436261" Name="ConnectionLightAmount" Value="1" />
+                    <Var ObjectId="268436261" Name="ConnectionLightUseOnColor" Value="true" />
+                    <Var ObjectId="268436261" Name="ConnectionLightUseSpec" Value="false" />
+                    <Var ObjectId="268436261" Name="ConnectionLightType" Value="Mul" />
+                    <Var ObjectId="268436261" Name="ExtraConnectedLight" Value="" />
+                    <Var ObjectId="268436261" Name="ExtraConnectionLightAmount" Value="1" />
+                    <Var ObjectId="268436261" Name="ExtraConnectionLightUseOnColor" Value="true" />
+                    <Var ObjectId="268436261" Name="ExtraConnectionLightUseSpec" Value="false" />
+                    <Var ObjectId="268436261" Name="ExtraConnectionLightType" Value="Mul" />
+                    <Var ObjectId="268436261" Name="InteractDisablesStaticPhysics" Value="false" />
+                    <Var ObjectId="268436261" Name="ScaryObject_Enabled" Value="false" />
+                    <Var ObjectId="268436261" Name="ScaryObject_BaseFearRateMultiplier" Value="1.0" />
+                    <Var ObjectId="268436261" Name="ScaryObject_ActivationCallback" Value="" />
+                    <Var ObjectId="268436261" Name="ScaryObject_DeactivationCallback" Value="" />
+                    <Var ObjectId="268436261" Name="Threat_Enabled" Value="false" />
+                    <Var ObjectId="268436261" Name="Threat_BaseFearRateMultiplier" Value="1.0" />
+                    <Var ObjectId="268436261" Name="Threat_ActivationCallback" Value="" />
+                    <Var ObjectId="268436261" Name="Threat_DeactivationCallback" Value="" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268436286" Name="bloody_bandage_01_1" CreStamp="1611182765" ModStamp="1611182867" WorldPos="-2.63705 0.629903 -0.853293" Rotation="3.09929 -0.00625173 -3.13578" Scale="1 1 1" FileIndex="242" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 661 268436286">
+                <UserVariables>
+                    <Var ObjectId="268436286" Name="Note" Value="" />
+                    <Var ObjectId="268436286" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436286" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268436286" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436286" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268436286" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436286" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436286" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436286" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436286" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
         </Objects>

@@ -164,14 +164,6 @@ class cScrMap : iScrMap
 		{
 			
 		}
-		
-		if (!cScript_GetGlobalVarBool("LizardScared") && Player_IsInEntityRadius("LizardCroakSound", 5.f))
-		{
-			cScript_SetGlobalVarBool("LizardScared", true);
-			
-			Entity_PlayAnimation("lizard_run_1", "run_to_hole", 0.f, true);
-			Sound_CreateAtEntity("sound_lizard_run", "02_05_cistern/lizard/lizard_run_1", "LizardRunSound", 0.f, false, .25f);
-		}
 	}
 	
 	//-------------------------------------------------------
@@ -221,12 +213,12 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test0)
 		{
-
+			
 		}
 		
 		if (alAction == eAction_Test1)
 		{
-		
+			
 		}
 		
 		if (alAction == eAction_Test3)
@@ -236,7 +228,7 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test4)
 		{
-
+			
 		}
 		
 		if(alAction == eAction_ScrollUp)
@@ -495,11 +487,11 @@ class cScrMap : iScrMap
 		//} END Event *INTRO SEQUENCE*
 	 
 	//} END SCENE 1
-
+	
 	/////////////////////////////////////////////////////////////////////////////////////////
-	// ==============
-	// SCENE 2 *CHASM*
-	// ==============
+	// ====================
+	// SCENE 2 *SPAWN ROOM*
+	// ====================
 	//{//////////////////////////////////////////////////////////////////////////////////////
  
 		/////////////////////////////////////////
@@ -519,7 +511,7 @@ class cScrMap : iScrMap
 		//} END General
 	 
 		/////////////////////////////////////////
-		// Event A *LIZARD SPOTS PLAYER*
+		// Event A *X*
 		//{//////////////////////////////////////
 
 		//-------------------------------------------------------
@@ -528,7 +520,43 @@ class cScrMap : iScrMap
 
 		//-------------------------------------------------------
 
-		/*Put any functions that are only used in Scene 2, Event A here.*/
+		//} END Event *X*
+		
+	//} END SCENE 2
+
+	/////////////////////////////////////////////////////////////////////////////////////////
+	// ===============
+	// SCENE 3 *CHASM*
+	// ===============
+	//{//////////////////////////////////////////////////////////////////////////////////////
+ 
+		/////////////////////////////////////////
+		// General
+		//{//////////////////////////////////////
+		 
+		//-------------------------------------------------------
+	 
+		/*Put any variables that are used by many events in Scene 3 here.*/
+		
+		//-------------------------------------------------------
+	 
+		/*Put any functions that are used in more than one event in Scene 3 here.*/
+		
+		//-------------------------------------------------------
+		
+		//} END General
+	 
+		/////////////////////////////////////////
+		// Event A *LIZARD SPOTS PLAYER*
+		//{//////////////////////////////////////
+
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 3, Event A here.*/
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 3, Event A here.*/
 		
 		bool OnTrigger_LizardCroak(const tString &in asParent, const tString &in asChild, int alState)
 		{
@@ -546,12 +574,47 @@ class cScrMap : iScrMap
 		
 		//-------------------------------------------------------
 		
-		void LizardRun()
+		bool OnTrigger_LizardRun(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			Sound_Stop("sound_lizard_croak", .1f);
+			Map_RemoveTimer("Timer_LizardCroak");
+			
+			Entity_PlayAnimation("lizard_run_1", "run_to_hole", 0.f, true, false, "OnAnimEnd_DisableLizard");
+			Sound_CreateAtEntity("sound_lizard_run", "02_05_cistern/lizard/lizard_run_1", "LizardRunSound", 0.f, false, .25f);
+			return false;
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnAnimEnd_DisableLizard(const tString &in asEntityName, const tString &in asAnimName)
+		{
+			Entity_SetActive(asEntityName, false);
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *LIZARD SPOTS PLAYER*
+		
+		/////////////////////////////////////////
+		// Event B *PLAYER LOOKS AT LADDER*
+		//{//////////////////////////////////////
+
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 3, Event B here.*/
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 3, Event B here.*/
+		
+		void OnPlayerLookAt_PlayLadderMusic(const tString &in asEntity, int alState)
 		{
 			
 		}
 		
 		//-------------------------------------------------------
 
-		//} END Event *LIZARD*
+		//} END Event *PLAYER LOOKS AT LADDER*
+		
+	//} END SCENE 3
 }
