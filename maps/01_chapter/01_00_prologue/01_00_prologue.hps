@@ -489,9 +489,9 @@ class cScrMap : iScrMap
 	//} END SCENE 1
 	
 	/////////////////////////////////////////////////////////////////////////////////////////
-	// ====================
-	// SCENE 2 *SPAWN ROOM*
-	// ====================
+	// =========================
+	// SCENE 2 *PLAYER WAKES UP*
+	// =========================
 	//{//////////////////////////////////////////////////////////////////////////////////////
  
 		/////////////////////////////////////////
@@ -541,6 +541,16 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 	 
 		/*Put any functions that are used in more than one event in Scene 3 here.*/
+		
+		bool OnTrigger_ScaffoldCreak(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			if (alState == 1 && !Sound_Exists("sound_scaffold_creak"))
+			{
+				Sound_CreateAtEntity("sound_scaffold_creak", "02_04_living_quarters/scare_events/ceiling_creak", asParent, 0.f, false, 1.5f);
+				return true;
+			}
+			return true;
+		}
 		
 		//-------------------------------------------------------
 		
