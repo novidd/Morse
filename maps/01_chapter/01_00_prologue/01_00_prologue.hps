@@ -576,7 +576,11 @@ class cScrMap : iScrMap
 		
 		bool OnTrigger_LizardRun(const tString &in asParent, const tString &in asChild, int alState)
 		{
-			Sound_Stop("sound_lizard_croak", .1f);
+			if (Sound_Exists("sound_lizard_croak"))
+			{
+				Sound_Stop("sound_lizard_croak", .1f);
+			}
+			
 			Map_RemoveTimer("Timer_LizardCroak");
 			
 			Entity_PlayAnimation("lizard_run_1", "run_to_hole", 0.f, true, false, "OnAnimEnd_DisableLizard");

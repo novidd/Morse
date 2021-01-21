@@ -1,23 +1,23 @@
 <HPLMapTrack_Compound ID="90B03D7E743088C36434920FD17634B8C43332FB" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
         <Objects>
-            <Compound ID="268436048" Name="Compound_1" CreStamp="0" ModStamp="1610833076" WorldPos="1.01902 6.71372 -1.56656" Rotation="0.135899 0.0196767 0.295393" Scale="1 1 1" UID="16 175 268436048">
-                <Component ID="268435578" />
-                <Component ID="268435579" />
+            <Compound ID="268436065" Name="Compound_1" CreStamp="0" ModStamp="1610833076" WorldPos="1.01902 6.71372 -1.56656" Rotation="0.135899 0.0196767 0.295393" Scale="1 1 1" UID="16 175 268436065">
+                <Component ID="268435594" />
+                <Component ID="268435595" />
             </Compound>
-            <Compound ID="268436049" Name="Compound_2" CreStamp="0" ModStamp="1610900711" WorldPos="-16.0719 3.6675 -8.90341" Rotation="0.000962016 0.0474832 0.00944168" Scale="1 1 1" UID="16 309 268436049">
-                <Component ID="268435677" />
-                <Component ID="268435676" />
+            <Compound ID="268436066" Name="Compound_2" CreStamp="0" ModStamp="1610900711" WorldPos="-16.0719 3.6675 -8.90341" Rotation="0.000962016 0.0474832 0.00944168" Scale="1 1 1" UID="16 309 268436066">
+                <Component ID="268435693" />
+                <Component ID="268435692" />
             </Compound>
-            <Compound ID="268436050" Name="Compound_3" CreStamp="0" ModStamp="1610920312" WorldPos="359.802 6.25 36.0526" Rotation="-0 2.26896 -0" Scale="1 1 1" UID="16 370 268436050">
-                <Component ID="268435771" />
-                <Component ID="268435772" />
-                <Component ID="268435769" />
-                <Component ID="268435770" />
+            <Compound ID="268436067" Name="Compound_3" CreStamp="0" ModStamp="1610920312" WorldPos="359.802 6.25 36.0526" Rotation="-0 2.26896 -0" Scale="1 1 1" UID="16 370 268436067">
+                <Component ID="268435787" />
+                <Component ID="268435788" />
+                <Component ID="268435785" />
+                <Component ID="268435786" />
             </Compound>
-            <Compound ID="268436262" Name="Compound_4" CreStamp="0" ModStamp="1611182058" WorldPos="-15.6261 9.39066 -4.57311" Rotation="0.0289277 -0 0" Scale="1 1 1" UID="16 662 268436262">
-                <Component ID="268436260" />
-                <Component ID="268436261" />
+            <Compound ID="268436068" Name="Compound_4" CreStamp="0" ModStamp="1611182058" WorldPos="-15.6261 9.39066 -4.57312" Rotation="0.0289277 -0 0" Scale="1 1 1" UID="16 662 268436068">
+                <Component ID="268435503" />
+                <Component ID="268435504" />
             </Compound>
         </Objects>
     </Section>
