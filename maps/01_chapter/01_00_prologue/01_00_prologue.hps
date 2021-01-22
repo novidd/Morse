@@ -31,7 +31,7 @@
 /*This is also the place for enums and classes, but these should be avoided whenever possible*/
 
 // Variables
-const float mfGlobalMusicVolume = 0.15f;
+const float mfGlobalMusicVolume = 0.1f;
 
 //--------------------------------------------------
  
@@ -213,7 +213,7 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test0)
 		{
-			
+			OnTimer_HitGround("");
 		}
 		
 		if (alAction == eAction_Test1)
@@ -426,21 +426,6 @@ class cScrMap : iScrMap
 		void OnTimer_HitGround(const tString &in asTimer)
 		{
 			Effect_Fade_Out(.1f);
-			Map_AddTimer("Timer_WakeUp", 4.f, "OnTimer_WakeUp"); // 8.f
-			Map_AddTimer("Timer_SetEffects", 1.f, "OnTimer_SetEffects");
-		}
-		
-		//-------------------------------------------------------
-		
-		void OnTimer_SetEffects(const tString &in asTimer)
-		{
-			Player_SetNightVisionBrightness(.25f);
-		}
-		
-		//-------------------------------------------------------
-		
-		void OnTimer_WakeUp(const tString &in asTimer)
-		{
 			Seq_Intro_WakeUp("");
 		}
 		
@@ -450,7 +435,12 @@ class cScrMap : iScrMap
 		void Seq_Intro_WakeUp(const tString &in asName)
 		{
 			Sequence_Begin("Seq_Intro_WakeUp", mSeqIntroWakeUp);
-			if (Sequence_DoStepAndWait(.5f))
+			if (Sequence_DoStepAndWait(1.f)) //8.f
+			{
+				//Player_FadeNightVisionStrength(1.5f, 0.f);
+				Player_SetNightVisionRadius(1.f);
+			}
+			else if (Sequence_DoStepAndWait(.5f))
 			{
 				//PlayerBody_PlayCutsceneAtEntity("get_up_after_fall_from_plankbridge", "PosArea_WakeUpAnim", false, .1f, "", 1.f);
 				PlayerBody_PlayCutsceneAtEntity("wake_up_from_death_2", "PosArea_WakeUpAnim", false, .1f, "OnAnimEnd_RunShowMatchHintTimer", 1.f);
@@ -462,6 +452,7 @@ class cScrMap : iScrMap
 			else if (Sequence_DoStepAndWait(2.f))
 			{
 				Effect_Fade_In(.1f);
+				Hint_Block("Hints", "HintMatchUse");
 				cScript_SetGlobalVarBool("IntroDone", true);
 			}
 			Sequence_End();
@@ -471,7 +462,7 @@ class cScrMap : iScrMap
 		
 		void OnAnimEnd_RunShowMatchHintTimer(const tString &in asAnimName)
 		{
-			Map_AddTimer("Timer_ShowMatchHint", 2.5f, "OnTimer_ShowMatchHint");
+			Map_AddTimer("Timer_ShowMatchHint", 3.5f, "OnTimer_ShowMatchHint");
 		}
 		
 		//-------------------------------------------------------
@@ -623,7 +614,18 @@ class cScrMap : iScrMap
 		
 		void OnPlayerLookAt_PlayLadderMusic(const tString &in asEntity, int alState)
 		{
-			
+			Music_PlayExt("01_00_awaken", false, mfGlobalMusicVolume, 1, 2.f, 0, eMusicPrio_BgAmb, false);
+		}
+		
+		//-------------------------------------------------------
+		
+		bool OnTrigger_StopLadderMusic(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			if (Music_IsSongPlaying("01_00_awaken"))
+			{
+				Music_Stop(2.f, eMusicPrio_SceneAmb);
+			}
+			return false;
 		}
 		
 		//-------------------------------------------------------
