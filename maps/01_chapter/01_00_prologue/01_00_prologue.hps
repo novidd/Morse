@@ -116,6 +116,12 @@ class cScrMap : iScrMap
 		{
 			mbStartIntro = false;
 			
+			if (!mbStartIntro)
+			{
+				Light_SetVisible("Light_Intro_*", false);
+				Lamp_SetLit("brazier_intro_1", false, false);
+			}
+			
 			if (ItemType_GetCountInInventory("Lantern") < 1)
 			{
 				Item_AddToInventory("Lantern");
@@ -422,6 +428,9 @@ class cScrMap : iScrMap
 		void OnTimer_HitGround(const tString &in asTimer)
 		{
 			Effect_Fade_Out(.1f);
+			Light_SetVisible("Light_Intro_*", false);
+			Lamp_SetLit("brazier_intro_1", false, false);
+			
 			Seq_Intro_WakeUp("");
 		}
 		
@@ -448,8 +457,6 @@ class cScrMap : iScrMap
 			else if (Sequence_DoStepAndWait(2.f))
 			{
 				Effect_Fade_In(.1f);
-				
-				Hint_Block("Hints", "HintMatchUse");
 			}
 			Sequence_End();
 		}
@@ -458,15 +465,8 @@ class cScrMap : iScrMap
 		
 		void OnAnimEnd_RunShowMatchHintTimer(const tString &in asAnimName)
 		{
-			Map_AddTimer("Timer_ShowMatchHint", 3.5f, "OnTimer_ShowMatchHint");
-		}
-		
-		//-------------------------------------------------------
-		
-		void OnTimer_ShowMatchHint(const tString &in asTimer)
-		{
 			Hint_StopHint();
-			Hint_ShowHint_Hold("Hints", "HintMatchEquip", true, 1.5f, false, 10);
+			Hint_Block("Hints", "HintMatchUse");
 		}
 		
 		//-------------------------------------------------------
@@ -565,6 +565,13 @@ class cScrMap : iScrMap
 
 		//} END Event *PLAYER SPOTS UNION SOLDIER*
 		
+		
+		bool OnCollide_GiveMatchHint(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			Hint_StopHint();
+			Hint_ShowHint_Hold("Hints", "HintMatchEquip", true, 1.5f, false, 10);
+			return false;
+		}
 	//} END SCENE 2
 
 	/////////////////////////////////////////////////////////////////////////////////////////
