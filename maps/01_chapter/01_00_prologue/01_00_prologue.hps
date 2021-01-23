@@ -103,9 +103,6 @@ class cScrMap : iScrMap
 		// Variables
 		bool mbStartIntro = true;
 		
-		cScript_SetGlobalVarBool("IntroDone", false);
-		cScript_SetGlobalVarBool("LizardScared", false);
-		
 		// Inventory
 		Item_AddToInventory("Matchbook");
 		
@@ -125,6 +122,7 @@ class cScrMap : iScrMap
 				Lantern_SetAmount(10);
 			}
 		}
+		
 		// Initiate the intro
 		if (mbStartIntro) 
 		{ 
@@ -143,6 +141,11 @@ class cScrMap : iScrMap
 		
 		//Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
 		Item_RemoveFromInventory(ItemType_GetFirstInInventory("CurseMedallion"));
+		
+		cScript_SetGlobalVarBool("PlayerIsInScareArea", false);
+		cScript_SetGlobalVarBool("PlayerIsLookingAtUnionSoldier", false);
+		cScript_SetGlobalVarBool("PlayerIsInFrontOfUnionSoldier", false);
+		cScript_SetGlobalVarBool("UnionSoldierScareHasRun", false);
 	}
 
 	//-------------------------------------------------------
@@ -160,10 +163,8 @@ class cScrMap : iScrMap
 	// Runs on every frame
 	void Update(float afTimeStep)
 	{
-		if (cScript_GetGlobalVarBool("IntroDone")) // Disable lights and brazier fire
-		{
-			
-		}
+		// Union soldier scare
+		ScaryEvent_UnionSoldier();
 	}
 	
 	//-------------------------------------------------------
@@ -218,12 +219,12 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test1)
 		{
-			
+			Player_SetNightVisionRadius(3.f);
 		}
 		
 		if (alAction == eAction_Test3)
 		{
-			cScript_SetGlobalVarBool("IntroDone", true);
+			
 		}
 		
 		if (alAction == eAction_Test4)
@@ -233,13 +234,7 @@ class cScrMap : iScrMap
 		
 		if(alAction == eAction_ScrollUp)
 		{
-			cLux_AddDebugMessage("DEBUG: On scroll up...");
 			Lantern_SetAmount(10);
-		}
-		
-		if (alAction == eAction_ScrollDown)
-		{
-			cLux_AddDebugMessage("DEBUG: On scroll down...");
 		}
 	}
 	
@@ -438,7 +433,7 @@ class cScrMap : iScrMap
 			if (Sequence_DoStepAndWait(1.f)) //8.f
 			{
 				//Player_FadeNightVisionStrength(1.5f, 0.f);
-				Player_SetNightVisionRadius(1.f);
+				Player_SetNightVisionRadius(3.f);
 			}
 			else if (Sequence_DoStepAndWait(.5f))
 			{
@@ -452,8 +447,8 @@ class cScrMap : iScrMap
 			else if (Sequence_DoStepAndWait(2.f))
 			{
 				Effect_Fade_In(.1f);
+				
 				Hint_Block("Hints", "HintMatchUse");
-				cScript_SetGlobalVarBool("IntroDone", true);
 			}
 			Sequence_End();
 		}
@@ -480,9 +475,9 @@ class cScrMap : iScrMap
 	//} END SCENE 1
 	
 	/////////////////////////////////////////////////////////////////////////////////////////
-	// =========================
-	// SCENE 2 *PLAYER WAKES UP*
-	// =========================
+	// =============================
+	// SCENE 2 *PLAYER HAS WOKEN UP*
+	// =============================
 	//{//////////////////////////////////////////////////////////////////////////////////////
  
 		/////////////////////////////////////////
@@ -502,7 +497,7 @@ class cScrMap : iScrMap
 		//} END General
 	 
 		/////////////////////////////////////////
-		// Event A *X*
+		// Event A *PLAYER SPOTS UNION SOLDIER*
 		//{//////////////////////////////////////
 
 		//-------------------------------------------------------
@@ -510,8 +505,64 @@ class cScrMap : iScrMap
 		/*Put any variables that are only used in Scene 2, Event A here.*/
 
 		//-------------------------------------------------------
+		
+		/*Put any functions that are only used in Scene 2, Event A here.*/
+		
+		bool OnCollide_PlayerIsInScareArea(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			bool mbPlayerIsInScareArea = alState == 1;
+			cScript_SetGlobalVarBool("PlayerIsInScareArea", mbPlayerIsInScareArea);
+			return true;
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnPlayerLookAt_PlayerIsLookingAtUnionSoldier(const tString &in asEntity, int alState)
+		{
+			bool mbPlayerIsLookingAtUnionSoldier = alState == 1;
+			cScript_SetGlobalVarBool("PlayerIsLookingAtUnionSoldier", mbPlayerIsLookingAtUnionSoldier);
+		}
+		
+		//-------------------------------------------------------
+		
+		bool OnCollide_PlayerIsInFrontOfUnionSoldier(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			bool mbPlayerIsInFrontOfUnionSoldier = alState == 1;
+			cScript_SetGlobalVarBool("PlayerIsInFrontOfUnionSoldier", mbPlayerIsInFrontOfUnionSoldier);
+			return true;
+		}
+		
+		//-------------------------------------------------------
+		
+		void ScaryEvent_UnionSoldier()
+		{
+			if (cScript_GetGlobalVarBool("PlayerIsInScareArea") && cScript_GetGlobalVarBool("PlayerIsLookingAtUnionSoldier"))
+			{
+				if (cScript_GetGlobalVarBool("PlayerIsInFrontOfUnionSoldier") && !cScript_GetGlobalVarBool("UnionSoldierScareHasRun"))
+				{
+					RunScaryEvent_UnionSoldier();
+				}
+				else if (Match_IsHeldAndBurning() && !cScript_GetGlobalVarBool("UnionSoldierScareHasRun"))
+				{
+					RunScaryEvent_UnionSoldier();
+				}
+			}
+		}
+		
+		//-------------------------------------------------------
+		
+		void RunScaryEvent_UnionSoldier()
+		{
+			cLux_AddDebugMessage("Run scary event!");
+			
+			cScript_SetGlobalVarBool("UnionSoldierScareHasRun", true);
+				
+			Entity_SetActive("FearScaryObject_UnionSoldier", true);
+		}
+		
+		//-------------------------------------------------------
 
-		//} END Event *X*
+		//} END Event *PLAYER SPOTS UNION SOLDIER*
 		
 	//} END SCENE 2
 
