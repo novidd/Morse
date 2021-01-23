@@ -1536,7 +1536,7 @@
                     <Var ObjectId="268435511" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435512" Name="bloody_bandage_01_1" CreStamp="1611182765" ModStamp="1611182867" WorldPos="-2.63705 0.629903 -0.853293" Rotation="3.09929 -0.00625173 -3.13578" Scale="1 1 1" FileIndex="242" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 661 268435512">
+            <Entity ID="268435512" Name="bloody_bandage_01_1" CreStamp="1611182765" ModStamp="1611361965" WorldPos="-2.63705 0.629903 -0.86078" Rotation="3.09929 -0.00625173 -3.13578" Scale="1 1 1" FileIndex="242" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 661 268435512">
                 <UserVariables>
                     <Var ObjectId="268435512" Name="Note" Value="" />
                     <Var ObjectId="268435512" Name="CastShadows" Value="true" />
