@@ -58,6 +58,7 @@ class cScrMap : iScrMap
 		Player_SetHealth(100.f);
 		
 		Player_SetNightVisionBrightness(.75f);
+		Player_SetNightVisionRadius(3.f);
 		
 		// Map
 		Map_SetSkyboxRotation(cVector3f(0, 0, 0));
@@ -219,7 +220,7 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test1)
 		{
-			Player_SetNightVisionRadius(3.f);
+			
 		}
 		
 		if (alAction == eAction_Test3)
