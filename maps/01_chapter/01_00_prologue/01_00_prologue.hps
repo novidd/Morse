@@ -565,6 +565,17 @@ class cScrMap : iScrMap
 
 		//} END Event *PLAYER SPOTS UNION SOLDIER*
 		
+		/////////////////////////////////////////
+		// Event B *PLAYER ENTERS DARKNESS*
+		//{//////////////////////////////////////
+
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 2, Event A here.*/
+
+		//-------------------------------------------------------
+		
+		/*Put any functions that are only used in Scene 2, Event A here.*/
 		
 		bool OnCollide_GiveMatchHint(const tString &in asParent, const tString &in asChild, int alState)
 		{
@@ -572,6 +583,11 @@ class cScrMap : iScrMap
 			Hint_ShowHint_Hold("Hints", "HintMatchEquip", true, 1.5f, false, 10);
 			return false;
 		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER ENTERS DARKNESS*
+		
 	//} END SCENE 2
 
 	/////////////////////////////////////////////////////////////////////////////////////////
