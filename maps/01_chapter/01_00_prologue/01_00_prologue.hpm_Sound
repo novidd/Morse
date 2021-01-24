@@ -1,9 +1,9 @@
 <HPLMapTrack_Sound ID="90B03D7E743088C36434920FD17634B8C43332FB" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
         <Objects>
-            <Sound ID="268436079" Name="Sound_1" CreStamp="1610910644" ModStamp="1610910880" WorldPos="-10.8784 14.2521 -13.5602" Rotation="-0.116328 -0.56484 -0.184063" Scale="0.5 0.5 0.5" SoundEntityFile="level_amb_shared/amb/sweeteners/01_02_caves/wind_roof" MinDistance="1" MaxDistance="20" Volume="1" Active="true" UseCustomProperties="false" UID="16 128 268436079" />
-            <Sound ID="268436080" Name="Sound_2" CreStamp="1610910897" ModStamp="1610910901" WorldPos="-10.7459 14.2528 -13.2248" Rotation="-0.116328 -0.56484 -0.184063" Scale="0.5 0.5 0.5" SoundEntityFile="level_amb_shared/amb/sweeteners/01_02_caves/cave_bird_tweet" MinDistance="1" MaxDistance="15" Volume="1" Active="true" UseCustomProperties="false" UID="16 377 268436080" />
-            <Sound ID="268436081" Name="Sound_3" CreStamp="1611416820" ModStamp="1611417567" WorldPos="-8.8848 2.55105 3.64361" Rotation="-0.116328 -0.56484 -0.184063" Scale="0.5 0.5 0.5" SoundEntityFile="level_amb_shared/amb/sweeteners/01_02_caves/wind_roof_b_twigs" MinDistance="1" MaxDistance="10" Volume="0.5" Active="true" UseCustomProperties="true" UID="16 376 268436081" />
+            <Sound ID="268436144" Name="Sound_1" CreStamp="1610910644" ModStamp="1610910880" WorldPos="-10.8784 14.2521 -13.5602" Rotation="-0.116328 -0.56484 -0.184063" Scale="0.5 0.5 0.5" SoundEntityFile="level_amb_shared/amb/sweeteners/01_02_caves/wind_roof" MinDistance="1" MaxDistance="20" Volume="1" Active="true" UseCustomProperties="false" UID="16 128 268436144" />
+            <Sound ID="268436145" Name="Sound_2" CreStamp="1610910897" ModStamp="1610910901" WorldPos="-10.7459 14.2528 -13.2248" Rotation="-0.116328 -0.56484 -0.184063" Scale="0.5 0.5 0.5" SoundEntityFile="level_amb_shared/amb/sweeteners/01_02_caves/cave_bird_tweet" MinDistance="1" MaxDistance="15" Volume="1" Active="true" UseCustomProperties="false" UID="16 377 268436145" />
+            <Sound ID="268436146" Name="Sound_3" CreStamp="1611416820" ModStamp="1611417567" WorldPos="-8.8848 2.55105 3.64361" Rotation="-0.116328 -0.56484 -0.184063" Scale="0.5 0.5 0.5" SoundEntityFile="level_amb_shared/amb/sweeteners/01_02_caves/wind_roof_b_twigs" MinDistance="1" MaxDistance="10" Volume="0.5" Active="true" UseCustomProperties="true" UID="16 376 268436146" />
         </Objects>
     </Section>
 </HPLMapTrack_Sound>

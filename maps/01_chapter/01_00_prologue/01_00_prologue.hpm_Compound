@@ -1,23 +1,33 @@
 <HPLMapTrack_Compound ID="90B03D7E743088C36434920FD17634B8C43332FB" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
         <Objects>
-            <Compound ID="268436158" Name="Compound_1" CreStamp="0" ModStamp="1610833076" WorldPos="-4.15538 4.75371 -2.06568" Rotation="0.135899 0.0196767 0.295393" Scale="1 1 1" UID="16 175 268436158">
-                <Component ID="268435611" />
+            <Compound ID="268436222" Name="Compound_1" CreStamp="0" ModStamp="1610833076" WorldPos="-3.70536 0.136678 -1.03793" Rotation="0.135899 0.0196767 0.295393" Scale="1 1 1" UID="16 175 268436222">
                 <Component ID="268435612" />
+                <Component ID="268435613" />
             </Compound>
-            <Compound ID="268436159" Name="Compound_2" CreStamp="0" ModStamp="1610900711" WorldPos="-14.5056 3.32187 -17.0207" Rotation="0.000962016 0.0474832 0.00944168" Scale="1 1 1" UID="16 309 268436159">
+            <Compound ID="268436223" Name="Compound_2" CreStamp="0" ModStamp="1610900711" WorldPos="-12.5895 2.36701 -17.8516" Rotation="0.000962016 0.0474832 0.00944168" Scale="1 1 1" UID="16 309 268436223">
+                <Component ID="268435707" />
                 <Component ID="268435706" />
-                <Component ID="268435705" />
             </Compound>
-            <Compound ID="268436160" Name="Compound_3" CreStamp="0" ModStamp="1610920312" WorldPos="-4.79787 8.78999 -14.3271" Rotation="-0 2.26896 -0" Scale="1 1 1" UID="16 370 268436160">
-                <Component ID="268435800" />
+            <Compound ID="268436224" Name="Compound_3" CreStamp="0" ModStamp="1610920312" WorldPos="-9.00807 4.3025 -14.5041" Rotation="-0 2.26896 -0" Scale="1 1 1" UID="16 370 268436224">
                 <Component ID="268435801" />
-                <Component ID="268435798" />
+                <Component ID="268435802" />
                 <Component ID="268435799" />
+                <Component ID="268435800" />
             </Compound>
-            <Compound ID="268436161" Name="Compound_4" CreStamp="0" ModStamp="1611182058" WorldPos="-14.5407 5.78855 -12.8365" Rotation="0.0289277 -0 0" Scale="1 1 1" UID="16 662 268436161">
-                <Component ID="268435511" />
-                <Component ID="268435512" />
+            <Compound ID="268436225" Name="Compound_4" CreStamp="0" ModStamp="1611182058" WorldPos="-14.5407 5.78855 -12.8365" Rotation="0.0289277 -0 0" Scale="1 1 1" UID="16 662 268436225">
+                <Component ID="268435514" />
+                <Component ID="268435515" />
+            </Compound>
+            <Compound ID="268436230" Name="Compound_6" CreStamp="0" ModStamp="1611497651" WorldPos="14.1059 3.68085 -6.32883" Rotation="0 0.0199774 0" Scale="1 1 1" UID="16 878 268436230">
+                <Component ID="268436097" />
+                <Component ID="268436098" />
+                <Component ID="268436099" />
+            </Compound>
+            <Compound ID="268436234" Name="Compound_7" CreStamp="1611497248" ModStamp="11" WorldPos="17.6568 5.89536 -8.91063" Rotation="0.0620821 -0.29154 -0.0715317" Scale="1 1 1" UID="16 863 268436234">
+                <Component ID="268436231" />
+                <Component ID="268436232" />
+                <Component ID="268436233" />
             </Compound>
         </Objects>
     </Section>
