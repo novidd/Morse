@@ -753,7 +753,7 @@
                     <Var ObjectId="268435490" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268436296" Name="Trigger_1" CreStamp="1611514938" ModStamp="1611514941" WorldPos="25.794 10.9668 -12.8662" Rotation="0 -0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 806 268436296" AreaType="Trigger">
+            <Area ID="268436296" Name="PlayStairMovement" CreStamp="1611514938" ModStamp="1611515079" WorldPos="26.3091 11.2552 -13.2095" Rotation="0 0.478939 0" Scale="1 1 1" Active="true" Mesh="" UID="16 806 268436296" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268436296" Name="Note" Value="" />
                     <Var ObjectId="268436296" Name="BlocksLineOfSight" Value="false" />
@@ -762,8 +762,8 @@
                     <Var ObjectId="268436296" Name="Static" Value="false" />
                     <Var ObjectId="268436296" Name="QuickSave" Value="false" />
                     <Var ObjectId="268436296" Name="FullGameSave" Value="false" />
-                    <Var ObjectId="268436296" Name="CC_Entities" Value="" />
-                    <Var ObjectId="268436296" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268436296" Name="CC_Entities" Value="player" />
+                    <Var ObjectId="268436296" Name="CC_Funcs" Value="OnCollide_PlayStairMovement" />
                     <Var ObjectId="268436296" Name="ParentAttachEntity" Value="" />
                     <Var ObjectId="268436296" Name="ParentAttachUseRotation" Value="true" />
                     <Var ObjectId="268436296" Name="ParentAttachBody" Value="" />
