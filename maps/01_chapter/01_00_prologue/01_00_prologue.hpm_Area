@@ -734,6 +734,21 @@
                     <Var ObjectId="268436162" Name="AllowJumpAfterExit" Value="true" />
                 </UserVariables>
             </Area>
+            <Area ID="268436276" Name="FearScaryObject_UnionSoldier_2" CreStamp="1611451746" ModStamp="1611451842" WorldPos="12.7796 2.37767 -0.918793" Rotation="5.2999e-08 0.810952 7.8171e-10" Scale="1 0.5 0.75" Active="false" Mesh="" UID="16 711 268436276" AreaType="FearScaryObject">
+                <UserVariables>
+                    <Var ObjectId="268436276" Name="ScaryObject_BaseFearRate" Value="0.1" />
+                    <Var ObjectId="268436276" Name="ScaryObject_SurpriseFactor" Value="0.1" />
+                    <Var ObjectId="268436276" Name="ScaryObject_LookAtFactor" Value="0.1" />
+                    <Var ObjectId="268436276" Name="ScaryObject_ActivationDelay" Value="0.2" />
+                    <Var ObjectId="268436276" Name="ScaryObject_ActivationLightLevel" Value="0.1" />
+                    <Var ObjectId="268436276" Name="ScaryObject_ActivationDistance" Value="3.5" />
+                    <Var ObjectId="268436276" Name="ScaryObject_DeactivationDistance" Value="3.5" />
+                    <Var ObjectId="268436276" Name="ScaryObject_InteractFactor" Value="-1.0" />
+                    <Var ObjectId="268436276" Name="ScaryObject_ActivationCallback" Value="" />
+                    <Var ObjectId="268436276" Name="LookAtDetectWholeArea" Value="false" />
+                    <Var ObjectId="268436276" Name="AdditionalActivationTriggers" Value="" />
+                </UserVariables>
+            </Area>
         </Objects>
     </Section>
 </HPLMapTrack_Area>
