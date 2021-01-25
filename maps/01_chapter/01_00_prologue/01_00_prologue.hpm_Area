@@ -781,7 +781,7 @@
                     <Var ObjectId="268435491" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268436346" Name="PlayOminousMusic" CreStamp="1611600824" ModStamp="1611600932" WorldPos="15.5517 6.34047 -7.48265" Rotation="0 0.694136 0" Scale="1 5 5" Active="true" Mesh="" UID="16 891 268436346" AreaType="Trigger">
+            <Area ID="268436346" Name="PlayOminousMusic" CreStamp="1611600824" ModStamp="1611609889" WorldPos="23.5439 10.9416 -11.6886" Rotation="0 0.550957 0" Scale="1 5 5" Active="true" Mesh="" UID="16 891 268436346" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268436346" Name="Note" Value="" />
                     <Var ObjectId="268436346" Name="BlocksLineOfSight" Value="false" />
