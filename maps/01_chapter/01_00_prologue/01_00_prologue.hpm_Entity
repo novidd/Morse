@@ -3872,6 +3872,16 @@
                     <Var ObjectId="268436333" Name="FlickerOffAlpha" Value="0" />
                 </UserVariables>
             </Entity>
+            <Entity ID="268436342" Name="block_box_static_6" CreStamp="1611600414" ModStamp="1611600643" WorldPos="24.8942 9.5524 -12.3826" Rotation="1.52719 2.02502 -0.107514" Scale="1.483 1 1" FileIndex="36" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 892 268436342">
+                <UserVariables>
+                    <Var ObjectId="268436342" Name="Note" Value="" />
+                    <Var ObjectId="268436342" Name="PhysicsMaterial" Value="Default" />
+                    <Var ObjectId="268436342" Name="CollideCharacter" Value="true" />
+                    <Var ObjectId="268436342" Name="CollideNonCharacter" Value="false" />
+                    <Var ObjectId="268436342" Name="BlocksLightAndLOS" Value="false" />
+                    <Var ObjectId="268436342" Name="CollideGroup" Value="" />
+                </UserVariables>
+            </Entity>
         </Objects>
     </Section>
 </HPLMapTrack_Entity>
