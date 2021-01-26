@@ -753,7 +753,7 @@
                     <Var ObjectId="268435490" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435491" Name="PlayStairMovement" CreStamp="1611514938" ModStamp="1611515079" WorldPos="26.3091 11.2552 -13.2095" Rotation="0 0.478939 0" Scale="1 1 1" Active="true" Mesh="" UID="16 806 268435491" AreaType="Trigger">
+            <Area ID="268435491" Name="PlayStairMovement" CreStamp="1611514938" ModStamp="1611677642" WorldPos="26.9708 12 -13.6702" Rotation="0 0.245007 0" Scale="1 5 12" Active="true" Mesh="" UID="16 806 268435491" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435491" Name="Note" Value="" />
                     <Var ObjectId="268435491" Name="BlocksLineOfSight" Value="false" />
@@ -807,6 +807,14 @@
                     <Var ObjectId="268436346" Name="CanInteractWithoutCallback" Value="false" />
                     <Var ObjectId="268436346" Name="MaxFocusDistance" Value="-1" />
                     <Var ObjectId="268436346" Name="CustomInteractIcon" Value="Default" />
+                </UserVariables>
+            </Area>
+            <Area ID="268436376" Name="Crawl_1" CreStamp="1611676877" ModStamp="1611684507" WorldPos="36.8573 11.1924 -12.857" Rotation="0 0.123067 0" Scale="1 1 2.4372" Active="true" Mesh="" UID="16 812 268436376" AreaType="Crawl">
+                <UserVariables>
+                    <Var ObjectId="268436376" Name="Note" Value="" />
+                    <Var ObjectId="268436376" Name="Crouch" Value="true" />
+                    <Var ObjectId="268436376" Name="AllowJump" Value="false" />
+                    <Var ObjectId="268436376" Name="AllowJumpAfterExit" Value="true" />
                 </UserVariables>
             </Area>
         </Objects>

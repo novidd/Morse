@@ -3801,7 +3801,7 @@
                     <Var ObjectId="268436328" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436333" Name="brazier_1" CreStamp="1611527827" ModStamp="1611528940" WorldPos="18.5566 6.45901 -10.5337" Rotation="-3.12209 2.03469 -3.12081" Scale="1 1 1" FileIndex="42" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 896 268436333">
+            <Entity ID="268436333" Name="brazier_1" CreStamp="1611527827" ModStamp="1611678427" WorldPos="18.5566 6.45901 -10.5337" Rotation="-3.12209 2.03469 -3.12081" Scale="1 1 1" FileIndex="42" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 896 268436333">
                 <UserVariables>
                     <Var ObjectId="268436333" Name="Note" Value="" />
                     <Var ObjectId="268436333" Name="EventInstanceTag" Value="" />
@@ -3856,7 +3856,7 @@
                     <Var ObjectId="268436333" Name="ExtraConnectionLightUseOnColor" Value="true" />
                     <Var ObjectId="268436333" Name="ExtraConnectionLightUseSpec" Value="false" />
                     <Var ObjectId="268436333" Name="ExtraConnectionLightType" Value="Mul" />
-                    <Var ObjectId="268436333" Name="Lit" Value="false" />
+                    <Var ObjectId="268436333" Name="Lit" Value="true" />
                     <Var ObjectId="268436333" Name="ConnectionDelay" Value="true" />
                     <Var ObjectId="268436333" Name="FlickerActive" Value="false" />
                     <Var ObjectId="268436333" Name="UseCustomFlickerSettings" Value="false" />
