@@ -41,7 +41,7 @@
                     <Var ObjectId="268435458" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435459" Name="Fear_Wake_Up" CreStamp="1610757654" ModStamp="1611417014" WorldPos="-1.75 2 -2.5" Rotation="0 0.523599 0" Scale="6.25 5 11.75" Active="false" Mesh="" UID="16 623 268435459" AreaType="Fear">
+            <Area ID="268435459" Name="Fear_Wake_Up" CreStamp="1610757654" ModStamp="1611771808" WorldPos="17.0666 7.23185 -3.98866" Rotation="0 0.523599 0" Scale="75 25 25" Active="true" Mesh="" UID="16 623 268435459" AreaType="Fear">
                 <UserVariables>
                     <Var ObjectId="268435459" Name="Priority" Value="0" />
                     <Var ObjectId="268435459" Name="Safe" Value="false" />
@@ -596,7 +596,7 @@
                     <Var ObjectId="268435482" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435483" Name="Fear_Chasm" CreStamp="1611342593" ModStamp="1611344067" WorldPos="-10.7461 6.74102 -12.9743" Rotation="0 -1.04939 0" Scale="15.7279 15 18.2375" Active="true" Mesh="" UID="16 75 268435483" AreaType="Fear">
+            <Area ID="268435483" Name="Fear_Chasm" CreStamp="1611342593" ModStamp="1611771834" WorldPos="-10.7461 6.74102 -12.9743" Rotation="0 -1.04939 0" Scale="18.6216 15 18.2375" Active="true" Mesh="" UID="16 75 268435483" AreaType="Fear">
                 <UserVariables>
                     <Var ObjectId="268435483" Name="Priority" Value="1" />
                     <Var ObjectId="268435483" Name="Safe" Value="false" />
