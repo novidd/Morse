@@ -809,7 +809,7 @@
                     <Var ObjectId="268435492" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435493" Name="Crawl_1" CreStamp="1611676877" ModStamp="1611861516" WorldPos="36.9423 11.2834 -12.8444" Rotation="0 0.123082 0" Scale="1 1 2.4372" Active="true" Mesh="" UID="16 812 268435493" AreaType="Crawl">
+            <Area ID="268435493" Name="Crawl_1" CreStamp="1611676877" ModStamp="1611861516" WorldPos="36.9423 11.2834 -12.8444" Rotation="0 0.123082 0" Scale="1 1 2.4372" Active="true" Mesh="" UID="16 1002 268435493" AreaType="Crawl">
                 <UserVariables>
                     <Var ObjectId="268435493" Name="Note" Value="" />
                     <Var ObjectId="268435493" Name="Crouch" Value="true" />
@@ -817,7 +817,7 @@
                     <Var ObjectId="268435493" Name="AllowJumpAfterExit" Value="true" />
                 </UserVariables>
             </Area>
-            <Area ID="268435494" Name="KnockOverWineBottle" CreStamp="1611783567" ModStamp="1611783594" WorldPos="35.0828 11.0882 -7.61223" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 972 268435494" AreaType="Trigger">
+            <Area ID="268435494" Name="KnockOverWineBottle" CreStamp="1611783567" ModStamp="1611868369" WorldPos="35.0828 11.0882 -7.37016" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 972 268435494" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435494" Name="Note" Value="" />
                     <Var ObjectId="268435494" Name="BlocksLineOfSight" Value="false" />
@@ -843,6 +843,14 @@
                     <Var ObjectId="268435494" Name="CanInteractWithoutCallback" Value="false" />
                     <Var ObjectId="268435494" Name="MaxFocusDistance" Value="-1" />
                     <Var ObjectId="268435494" Name="CustomInteractIcon" Value="Default" />
+                </UserVariables>
+            </Area>
+            <Area ID="268436442" Name="Crawl_2" CreStamp="1611870625" ModStamp="1611870896" WorldPos="34.4837 13.1617 -19.4853" Rotation="0 0.267319 0" Scale="1 1 1.25" Active="true" Mesh="" UID="16 812 268436442" AreaType="Crawl">
+                <UserVariables>
+                    <Var ObjectId="268436442" Name="Note" Value="" />
+                    <Var ObjectId="268436442" Name="Crouch" Value="true" />
+                    <Var ObjectId="268436442" Name="AllowJump" Value="false" />
+                    <Var ObjectId="268436442" Name="AllowJumpAfterExit" Value="true" />
                 </UserVariables>
             </Area>
         </Objects>
