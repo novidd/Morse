@@ -753,7 +753,7 @@
                     <Var ObjectId="268435490" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435491" Name="PlayStairMovement" CreStamp="1611514938" ModStamp="1611677642" WorldPos="26.9708 12 -13.6702" Rotation="0 0.245007 0" Scale="1 5 12" Active="true" Mesh="" UID="16 806 268435491" AreaType="Trigger">
+            <Area ID="268435491" Name="PlayStairMovement" CreStamp="1611514938" ModStamp="1611946630" WorldPos="32.4332 12 -9.99159" Rotation="0 0.523599 0" Scale="1 5 2.5" Active="true" Mesh="" UID="16 806 268435491" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435491" Name="Note" Value="" />
                     <Var ObjectId="268435491" Name="BlocksLineOfSight" Value="false" />
@@ -781,7 +781,7 @@
                     <Var ObjectId="268435491" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435492" Name="PlayOminousMusic" CreStamp="1611600824" ModStamp="1611696569" WorldPos="21.144 9.75 -10.647" Rotation="0 0.483031 0" Scale="1 5 5" Active="true" Mesh="" UID="16 891 268435492" AreaType="Trigger">
+            <Area ID="268435492" Name="PlayRumble" CreStamp="1611600824" ModStamp="1611945250" WorldPos="14.618 6 -7" Rotation="0 0.785398 0" Scale="1 5 5" Active="true" Mesh="" UID="16 891 268435492" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435492" Name="Note" Value="" />
                     <Var ObjectId="268435492" Name="BlocksLineOfSight" Value="false" />
@@ -790,13 +790,13 @@
                     <Var ObjectId="268435492" Name="Static" Value="false" />
                     <Var ObjectId="268435492" Name="QuickSave" Value="false" />
                     <Var ObjectId="268435492" Name="FullGameSave" Value="false" />
-                    <Var ObjectId="268435492" Name="CC_Entities" Value="" />
-                    <Var ObjectId="268435492" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268435492" Name="CC_Entities" Value="player" />
+                    <Var ObjectId="268435492" Name="CC_Funcs" Value="OnCollide_PlayRumble" />
                     <Var ObjectId="268435492" Name="ParentAttachEntity" Value="" />
                     <Var ObjectId="268435492" Name="ParentAttachUseRotation" Value="true" />
                     <Var ObjectId="268435492" Name="ParentAttachBody" Value="" />
                     <Var ObjectId="268435492" Name="ParentAttachLocked" Value="false" />
-                    <Var ObjectId="268435492" Name="PlayerLookAtCallback" Value="OnLookAt_PlayOminousMusic" />
+                    <Var ObjectId="268435492" Name="PlayerLookAtCallback" Value="" />
                     <Var ObjectId="268435492" Name="PlayerLookAtCallbackAutoRemove" Value="true" />
                     <Var ObjectId="268435492" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
                     <Var ObjectId="268435492" Name="PlayerLookAtCheckRayIntersection" Value="true" />
@@ -809,7 +809,7 @@
                     <Var ObjectId="268435492" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435493" Name="Crawl_1" CreStamp="1611676877" ModStamp="1611861516" WorldPos="36.9423 11.2834 -12.8444" Rotation="0 0.123082 0" Scale="1 1 2.4372" Active="true" Mesh="" UID="16 1002 268435493" AreaType="Crawl">
+            <Area ID="268435493" Name="Crawl_1" CreStamp="1611676877" ModStamp="1611946979" WorldPos="36.9423 11.2834 -12.8444" Rotation="0 0.123082 0" Scale="1 1 3" Active="true" Mesh="" UID="16 1002 268435493" AreaType="Crawl">
                 <UserVariables>
                     <Var ObjectId="268435493" Name="Note" Value="" />
                     <Var ObjectId="268435493" Name="Crouch" Value="true" />
@@ -817,7 +817,7 @@
                     <Var ObjectId="268435493" Name="AllowJumpAfterExit" Value="true" />
                 </UserVariables>
             </Area>
-            <Area ID="268435494" Name="KnockOverWineBottle" CreStamp="1611783567" ModStamp="1611868369" WorldPos="35.0828 11.0882 -7.37016" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 972 268435494" AreaType="Trigger">
+            <Area ID="268435494" Name="KnockOverWineBottle" CreStamp="1611783567" ModStamp="1611947355" WorldPos="35.0828 11.0882 -7.37016" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 972 268435494" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435494" Name="Note" Value="" />
                     <Var ObjectId="268435494" Name="BlocksLineOfSight" Value="false" />
@@ -826,8 +826,8 @@
                     <Var ObjectId="268435494" Name="Static" Value="false" />
                     <Var ObjectId="268435494" Name="QuickSave" Value="false" />
                     <Var ObjectId="268435494" Name="FullGameSave" Value="false" />
-                    <Var ObjectId="268435494" Name="CC_Entities" Value="" />
-                    <Var ObjectId="268435494" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268435494" Name="CC_Entities" Value="player" />
+                    <Var ObjectId="268435494" Name="CC_Funcs" Value="OnCollide_KnockOverWineBottle" />
                     <Var ObjectId="268435494" Name="ParentAttachEntity" Value="" />
                     <Var ObjectId="268435494" Name="ParentAttachUseRotation" Value="true" />
                     <Var ObjectId="268435494" Name="ParentAttachBody" Value="" />
@@ -845,7 +845,7 @@
                     <Var ObjectId="268435494" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268436442" Name="Crawl_2" CreStamp="1611870625" ModStamp="1611870896" WorldPos="34.4837 13.1617 -19.4853" Rotation="0 0.267319 0" Scale="1 1 1.25" Active="true" Mesh="" UID="16 812 268436442" AreaType="Crawl">
+            <Area ID="268436442" Name="Crawl_2" CreStamp="1611870625" ModStamp="1611946987" WorldPos="34.4837 13.1617 -19.4853" Rotation="0 0.267319 0" Scale="1 1 2" Active="true" Mesh="" UID="16 812 268436442" AreaType="Crawl">
                 <UserVariables>
                     <Var ObjectId="268436442" Name="Note" Value="" />
                     <Var ObjectId="268436442" Name="Crouch" Value="true" />

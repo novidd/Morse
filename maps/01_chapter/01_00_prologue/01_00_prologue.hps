@@ -224,9 +224,9 @@ class cScrMap : iScrMap
 			OnTimer_HitGround("");
 		}
 		
-		if (alAction == eAction_Test1)
+		if (alAction == eAction_Test1) // Start area amb
 		{
-			
+			Music_PlayExt("A2_1_1_Crash_Wake", true, mfGlobalMusicVolume, 1, 4.f, 0, eMusicPrio_BgAmb, false);
 		}
 		
 		if (alAction == eAction_Test3)
@@ -457,6 +457,7 @@ class cScrMap : iScrMap
 			else if (Sequence_DoStepAndWait(2.f))
 			{
 				Effect_Fade_In(.1f);
+				Music_PlayExt("A2_1_1_Crash_Wake", true, mfGlobalMusicVolume, 1, 4.f, 0, eMusicPrio_BgAmb, false);
 			}
 			Sequence_End();
 		}
@@ -477,7 +478,7 @@ class cScrMap : iScrMap
 	
 	/////////////////////////////////////////////////////////////////////////////////////////
 	// =============================
-	// SCENE 2 *PLAYER HAS WOKEN UP*
+	// SCENE 2 *LOWER LEVEL/STAIRCASE*
 	// =============================
 	//{//////////////////////////////////////////////////////////////////////////////////////
  
@@ -588,7 +589,97 @@ class cScrMap : iScrMap
 
 		//} END Event *PLAYER ENTERS DARKNESS*
 		
+		/////////////////////////////////////////
+		// Event C *PLAYER ENTERS STAIRCASE*
+		//{//////////////////////////////////////
+
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 2, Event C here.*/
+
+		//-------------------------------------------------------
+		
+		/*Put any functions that are only used in Scene 2, Event C here.*/
+		
+		bool OnCollide_PlayRumble(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			Sound_Play("Sound_Rumble", 0.f);
+			return false;
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER ENTERS STAIRCASE*
+		
 	//} END SCENE 2
+
+	/////////////////////////////////////////////////////////////////////////////////////////
+	// =================================
+	// SCENE 3 *UPPER LEVEL*
+	// =================================
+	//{//////////////////////////////////////////////////////////////////////////////////////
+ 
+		/////////////////////////////////////////
+		// General
+		//{//////////////////////////////////////
+		 
+		//-------------------------------------------------------
+	 
+		/*Put any variables that are used by many events in Scene 3 here.*/
+		
+		//-------------------------------------------------------
+	 
+		/*Put any functions that are used in more than one event in Scene 3 here.*/
+		
+		//-------------------------------------------------------
+		
+		//} END General
+	 
+		/////////////////////////////////////////
+		// Event A *PLAYER ENTERS HOLDOUT*
+		//{//////////////////////////////////////
+
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 3, Event A here.*/
+
+		//-------------------------------------------------------
+		
+		/*Put any functions that are only used in Scene 3, Event A here.*/
+		
+		bool OnCollide_PlayStairMovement(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			Sound_Play("Sound_StairMovement", 0.f);
+			return false;
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER ENTERS HOLDOUT*
+		
+		/////////////////////////////////////////
+		// Event B *PLAYER KNOCKS OVER BOTTLE*
+		//{//////////////////////////////////////
+
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 3, Event B here.*/
+
+		//-------------------------------------------------------
+		
+		/*Put any functions that are only used in Scene 3, Event B here.*/
+		
+		bool OnCollide_KnockOverWineBottle(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			cLux_AddDebugMessage("Knocking over bottle...");
+			return false;
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER KNOCKS OVER BOTTLE*
+		
+	//} END SCENE 3
 
 	/////////////////////////////////////////////////////////////////////////////////////////
 	// ===============
