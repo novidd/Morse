@@ -671,8 +671,38 @@ class cScrMap : iScrMap
 		
 		bool OnCollide_KnockOverWineBottle(const tString &in asParent, const tString &in asChild, int alState)
 		{
-			cLux_AddDebugMessage("Knocking over bottle...");
-			return false;
+			tString msWineBottleArea = Entity_GetVarString(asParent, "");
+			if (Entity_GetVarBool(msWineBottleArea, ""))
+			{
+				cLux_AddDebugMessage("Knocking over bottle...");
+				
+				Entity_AddForce("wine_bottle", cVector3f(20.f, 0.f, 0.f), false, true);
+				Map_AddTimer("Timer_KillMatch", 0.f, "OnTimer_KillMatch");
+				return false;
+			}
+			return true;
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnTimer_KillMatch(const tString &in asTimer)
+		{
+			if (Match_IsHeldAndBurning())
+			{
+				Match_IncreaseBurnTime();
+				Map_RestartCurrentTimer(.005f);
+				return;
+			}
+			return;
+		}
+		
+		//-------------------------------------------------------
+		
+		bool OnCollide_WineBottleIsInPushArea(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			bool mbWineBottleIsInPushArea = alState == 1; 
+			Entity_SetVarBool(asParent, "", mbWineBottleIsInPushArea);
+			return true;
 		}
 		
 		//-------------------------------------------------------

@@ -817,12 +817,12 @@
                     <Var ObjectId="268435493" Name="AllowJumpAfterExit" Value="true" />
                 </UserVariables>
             </Area>
-            <Area ID="268435494" Name="KnockOverWineBottle" CreStamp="1611783567" ModStamp="1611947355" WorldPos="35.0828 11.0882 -7.37016" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 972 268435494" AreaType="Trigger">
+            <Area ID="268435494" Name="KnockOverWineBottle" CreStamp="1611783567" ModStamp="1611956754" WorldPos="35.0828 11.0882 -7.37016" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 972 268435494" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435494" Name="Note" Value="" />
                     <Var ObjectId="268435494" Name="BlocksLineOfSight" Value="false" />
                     <Var ObjectId="268435494" Name="EventInstanceTag" Value="" />
-                    <Var ObjectId="268435494" Name="UserVar" Value="" />
+                    <Var ObjectId="268435494" Name="UserVar" Value="WineBottleIsInPushArea" />
                     <Var ObjectId="268435494" Name="Static" Value="false" />
                     <Var ObjectId="268435494" Name="QuickSave" Value="false" />
                     <Var ObjectId="268435494" Name="FullGameSave" Value="false" />
@@ -851,6 +851,34 @@
                     <Var ObjectId="268436442" Name="Crouch" Value="true" />
                     <Var ObjectId="268436442" Name="AllowJump" Value="false" />
                     <Var ObjectId="268436442" Name="AllowJumpAfterExit" Value="true" />
+                </UserVariables>
+            </Area>
+            <Area ID="268436491" Name="WineBottleIsInPushArea" CreStamp="1611956280" ModStamp="1611956494" WorldPos="35.4498 11.1672 -8.02359" Rotation="0 -0.0596709 0" Scale="0.5 0.5 1" Active="true" Mesh="" UID="16 1090 268436491" AreaType="Trigger">
+                <UserVariables>
+                    <Var ObjectId="268436491" Name="Note" Value="" />
+                    <Var ObjectId="268436491" Name="BlocksLineOfSight" Value="false" />
+                    <Var ObjectId="268436491" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268436491" Name="UserVar" Value="1" />
+                    <Var ObjectId="268436491" Name="Static" Value="false" />
+                    <Var ObjectId="268436491" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268436491" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268436491" Name="CC_Entities" Value="wine_bottle" />
+                    <Var ObjectId="268436491" Name="CC_Funcs" Value="OnCollide_WineBottleIsInPushArea" />
+                    <Var ObjectId="268436491" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268436491" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268436491" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268436491" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="268436491" Name="PlayerLookAtCallback" Value="" />
+                    <Var ObjectId="268436491" Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                    <Var ObjectId="268436491" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
+                    <Var ObjectId="268436491" Name="PlayerLookAtCheckRayIntersection" Value="true" />
+                    <Var ObjectId="268436491" Name="PlayerLookAtMaxDistance" Value="-1" />
+                    <Var ObjectId="268436491" Name="PlayerLookAtCallbackDelay" Value="0" />
+                    <Var ObjectId="268436491" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268436491" Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268436491" Name="CanInteractWithoutCallback" Value="false" />
+                    <Var ObjectId="268436491" Name="MaxFocusDistance" Value="-1" />
+                    <Var ObjectId="268436491" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
         </Objects>
