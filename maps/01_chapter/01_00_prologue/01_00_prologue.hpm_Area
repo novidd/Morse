@@ -726,9 +726,9 @@
                     <Var ObjectId="268435487" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435488" Name="FearScaryObject_UnionSoldier_2" CreStamp="1611451746" ModStamp="1611493200" WorldPos="12.7556 2.37767 -0.910504" Rotation="9.89098e-08 1.19277 5.42867e-08" Scale="1 0.5 0.75" Active="false" Mesh="" UID="16 711 268435488" AreaType="FearScaryObject">
+            <Area ID="268435488" Name="FearScaryObject_UnionSoldier_2" CreStamp="1611451746" ModStamp="1612019277" WorldPos="12.7556 2.37767 -0.910504" Rotation="9.89098e-08 1.19277 5.42867e-08" Scale="1 0.5 0.75" Active="true" Mesh="" UID="16 1089 268435488" AreaType="FearScaryObject">
                 <UserVariables>
-                    <Var ObjectId="268435488" Name="ScaryObject_BaseFearRate" Value="0.1" />
+                    <Var ObjectId="268435488" Name="ScaryObject_BaseFearRate" Value="0.3" />
                     <Var ObjectId="268435488" Name="ScaryObject_SurpriseFactor" Value="0.1" />
                     <Var ObjectId="268435488" Name="ScaryObject_LookAtFactor" Value="0.1" />
                     <Var ObjectId="268435488" Name="ScaryObject_ActivationDelay" Value="0.2" />
@@ -753,7 +753,7 @@
                     <Var ObjectId="268435490" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435491" Name="PlayStairMovement" CreStamp="1611514938" ModStamp="1611946630" WorldPos="32.4332 12 -9.99159" Rotation="0 0.523599 0" Scale="1 5 2.5" Active="true" Mesh="" UID="16 806 268435491" AreaType="Trigger">
+            <Area ID="268435491" Name="PlayStairMovement" CreStamp="1611514938" ModStamp="1612024025" WorldPos="32.3878 12 -10.1603" Rotation="0 0.523599 0" Scale="1 5 3" Active="true" Mesh="" UID="16 806 268435491" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435491" Name="Note" Value="" />
                     <Var ObjectId="268435491" Name="BlocksLineOfSight" Value="false" />
@@ -845,40 +845,55 @@
                     <Var ObjectId="268435494" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268436442" Name="Crawl_2" CreStamp="1611870625" ModStamp="1611946987" WorldPos="34.4837 13.1617 -19.4853" Rotation="0 0.267319 0" Scale="1 1 2" Active="true" Mesh="" UID="16 812 268436442" AreaType="Crawl">
+            <Area ID="268435495" Name="Crawl_2" CreStamp="1611870625" ModStamp="1611946987" WorldPos="34.4837 13.1617 -19.4853" Rotation="0 0.396745 0" Scale="1 1 2" Active="true" Mesh="" UID="16 812 268435495" AreaType="Crawl">
                 <UserVariables>
-                    <Var ObjectId="268436442" Name="Note" Value="" />
-                    <Var ObjectId="268436442" Name="Crouch" Value="true" />
-                    <Var ObjectId="268436442" Name="AllowJump" Value="false" />
-                    <Var ObjectId="268436442" Name="AllowJumpAfterExit" Value="true" />
+                    <Var ObjectId="268435495" Name="Note" Value="" />
+                    <Var ObjectId="268435495" Name="Crouch" Value="true" />
+                    <Var ObjectId="268435495" Name="AllowJump" Value="false" />
+                    <Var ObjectId="268435495" Name="AllowJumpAfterExit" Value="true" />
                 </UserVariables>
             </Area>
-            <Area ID="268436491" Name="WineBottleIsInPushArea" CreStamp="1611956280" ModStamp="1611956494" WorldPos="35.4498 11.1672 -8.02359" Rotation="0 -0.0596709 0" Scale="0.5 0.5 1" Active="true" Mesh="" UID="16 1090 268436491" AreaType="Trigger">
+            <Area ID="268435496" Name="WineBottleIsInPushArea" CreStamp="1611956280" ModStamp="1611956494" WorldPos="35.4498 11.1672 -8.02359" Rotation="0 -0.0596709 0" Scale="0.5 0.5 1" Active="true" Mesh="" UID="16 1090 268435496" AreaType="Trigger">
                 <UserVariables>
-                    <Var ObjectId="268436491" Name="Note" Value="" />
-                    <Var ObjectId="268436491" Name="BlocksLineOfSight" Value="false" />
-                    <Var ObjectId="268436491" Name="EventInstanceTag" Value="" />
-                    <Var ObjectId="268436491" Name="UserVar" Value="1" />
-                    <Var ObjectId="268436491" Name="Static" Value="false" />
-                    <Var ObjectId="268436491" Name="QuickSave" Value="false" />
-                    <Var ObjectId="268436491" Name="FullGameSave" Value="false" />
-                    <Var ObjectId="268436491" Name="CC_Entities" Value="wine_bottle" />
-                    <Var ObjectId="268436491" Name="CC_Funcs" Value="OnCollide_WineBottleIsInPushArea" />
-                    <Var ObjectId="268436491" Name="ParentAttachEntity" Value="" />
-                    <Var ObjectId="268436491" Name="ParentAttachUseRotation" Value="true" />
-                    <Var ObjectId="268436491" Name="ParentAttachBody" Value="" />
-                    <Var ObjectId="268436491" Name="ParentAttachLocked" Value="false" />
-                    <Var ObjectId="268436491" Name="PlayerLookAtCallback" Value="" />
-                    <Var ObjectId="268436491" Name="PlayerLookAtCallbackAutoRemove" Value="true" />
-                    <Var ObjectId="268436491" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
-                    <Var ObjectId="268436491" Name="PlayerLookAtCheckRayIntersection" Value="true" />
-                    <Var ObjectId="268436491" Name="PlayerLookAtMaxDistance" Value="-1" />
-                    <Var ObjectId="268436491" Name="PlayerLookAtCallbackDelay" Value="0" />
-                    <Var ObjectId="268436491" Name="PlayerInteractCallback" Value="" />
-                    <Var ObjectId="268436491" Name="PlayerInteractCallbackAutoRemove" Value="false" />
-                    <Var ObjectId="268436491" Name="CanInteractWithoutCallback" Value="false" />
-                    <Var ObjectId="268436491" Name="MaxFocusDistance" Value="-1" />
-                    <Var ObjectId="268436491" Name="CustomInteractIcon" Value="Default" />
+                    <Var ObjectId="268435496" Name="Note" Value="" />
+                    <Var ObjectId="268435496" Name="BlocksLineOfSight" Value="false" />
+                    <Var ObjectId="268435496" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268435496" Name="UserVar" Value="1" />
+                    <Var ObjectId="268435496" Name="Static" Value="false" />
+                    <Var ObjectId="268435496" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268435496" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268435496" Name="CC_Entities" Value="wine_bottle" />
+                    <Var ObjectId="268435496" Name="CC_Funcs" Value="OnCollide_WineBottleIsInPushArea" />
+                    <Var ObjectId="268435496" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268435496" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268435496" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268435496" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="268435496" Name="PlayerLookAtCallback" Value="" />
+                    <Var ObjectId="268435496" Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                    <Var ObjectId="268435496" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
+                    <Var ObjectId="268435496" Name="PlayerLookAtCheckRayIntersection" Value="true" />
+                    <Var ObjectId="268435496" Name="PlayerLookAtMaxDistance" Value="-1" />
+                    <Var ObjectId="268435496" Name="PlayerLookAtCallbackDelay" Value="0" />
+                    <Var ObjectId="268435496" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268435496" Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268435496" Name="CanInteractWithoutCallback" Value="false" />
+                    <Var ObjectId="268435496" Name="MaxFocusDistance" Value="-1" />
+                    <Var ObjectId="268435496" Name="CustomInteractIcon" Value="Default" />
+                </UserVariables>
+            </Area>
+            <Area ID="268435497" Name="FearScaryObject_UnionSoldier_3" CreStamp="1612018982" ModStamp="1612019255" WorldPos="32.2496 11.0103 -8.2883" Rotation="-0.0629802 -0.100139 0.56277" Scale="2.25 0.75 1" Active="true" Mesh="" UID="16 711 268435497" AreaType="FearScaryObject">
+                <UserVariables>
+                    <Var ObjectId="268435497" Name="ScaryObject_BaseFearRate" Value="0.3" />
+                    <Var ObjectId="268435497" Name="ScaryObject_SurpriseFactor" Value="0.1" />
+                    <Var ObjectId="268435497" Name="ScaryObject_LookAtFactor" Value="0.1" />
+                    <Var ObjectId="268435497" Name="ScaryObject_ActivationDelay" Value="0.2" />
+                    <Var ObjectId="268435497" Name="ScaryObject_ActivationLightLevel" Value="0.1" />
+                    <Var ObjectId="268435497" Name="ScaryObject_ActivationDistance" Value="3.5" />
+                    <Var ObjectId="268435497" Name="ScaryObject_DeactivationDistance" Value="3.5" />
+                    <Var ObjectId="268435497" Name="ScaryObject_InteractFactor" Value="-1.0" />
+                    <Var ObjectId="268435497" Name="ScaryObject_ActivationCallback" Value="" />
+                    <Var ObjectId="268435497" Name="LookAtDetectWholeArea" Value="false" />
+                    <Var ObjectId="268435497" Name="AdditionalActivationTriggers" Value="" />
                 </UserVariables>
             </Area>
         </Objects>
