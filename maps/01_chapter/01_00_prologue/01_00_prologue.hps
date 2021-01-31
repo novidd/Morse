@@ -109,6 +109,7 @@ class cScrMap : iScrMap
 		
 		// Entity
 		Entity_PlayAnimation("lizard_run_1", "start_idle", 0.f, true);
+		Entity_AddForce("door_barricade_1", cVector3f(100.f, 0.f, 0.f), true, true);
 		
 		Player_SetVertigoActive(false);
 		
@@ -229,6 +230,11 @@ class cScrMap : iScrMap
 		if (alAction == eAction_Test1) // Start area amb
 		{
 			Music_PlayExt("A2_1_1_Crash_Wake", true, mfGlobalMusicVolume, 1, 4.f, 0, eMusicPrio_BgAmb, false);
+		}
+		
+		if (alAction == eAction_Test2)
+		{
+
 		}
 		
 		if (alAction == eAction_Test3)
@@ -479,9 +485,9 @@ class cScrMap : iScrMap
 	//} END SCENE 1
 	
 	/////////////////////////////////////////////////////////////////////////////////////////
-	// =============================
+	// ===============================
 	// SCENE 2 *LOWER LEVEL/STAIRCASE*
-	// =============================
+	// ===============================
 	//{//////////////////////////////////////////////////////////////////////////////////////
  
 		/////////////////////////////////////////
@@ -616,9 +622,9 @@ class cScrMap : iScrMap
 	//} END SCENE 2
 
 	/////////////////////////////////////////////////////////////////////////////////////////
-	// =================================
+	// =====================
 	// SCENE 3 *UPPER LEVEL*
-	// =================================
+	// =====================
 	//{//////////////////////////////////////////////////////////////////////////////////////
  
 		/////////////////////////////////////////
@@ -734,7 +740,47 @@ class cScrMap : iScrMap
 		//} END Event *PLAYER IS BY THE WELL*
 		
 	//} END SCENE 3
+	
+	/////////////////////////////////////////////////////////////////////////////////////////
+	// ==============
+	// SCENE 4 *WELL*
+	// ==============
+	//{//////////////////////////////////////////////////////////////////////////////////////
+ 
+		/////////////////////////////////////////
+		// General
+		//{//////////////////////////////////////
+		 
+		//-------------------------------------------------------
+	 
+		/*Put any variables that are used by many events in Scene 4 here.*/
+		
+		//-------------------------------------------------------
+	 
+		/*Put any functions that are used in more than one event in Scene 4 here.*/
+		
+		//-------------------------------------------------------
+		
+		//} END General
+	 
+		/////////////////////////////////////////
+		// Event A *PLAYER SEES CORPSES*
+		//{//////////////////////////////////////
 
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 4, Event A here.*/
+
+		//-------------------------------------------------------
+		
+		/*Put any functions that are only used in Scene 4, Event A here.*/
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER SEES CORPSES*
+		
+	//} END SCENE 4
+	
 	/////////////////////////////////////////////////////////////////////////////////////////
 	// ===============
 	// SCENE X *CHASM*
@@ -773,11 +819,11 @@ class cScrMap : iScrMap
 
 		//-------------------------------------------------------
 
-		/*Put any variables that are only used in Scene 3, Event A here.*/
+		/*Put any variables that are only used in Scene X, Event A here.*/
 
 		//-------------------------------------------------------
 
-		/*Put any functions that are only used in Scene 3, Event A here.*/
+		/*Put any functions that are only used in Scene X, Event A here.*/
 		
 		bool OnTrigger_LizardCroak(const tString &in asParent, const tString &in asChild, int alState)
 		{
@@ -826,11 +872,11 @@ class cScrMap : iScrMap
 
 		//-------------------------------------------------------
 
-		/*Put any variables that are only used in Scene 3, Event B here.*/
+		/*Put any variables that are only used in Scene X, Event B here.*/
 
 		//-------------------------------------------------------
 
-		/*Put any functions that are only used in Scene 3, Event B here.*/
+		/*Put any functions that are only used in Scene X, Event B here.*/
 		
 		void OnPlayerLookAt_PlayLadderMusic(const tString &in asEntity, int alState)
 		{
@@ -852,5 +898,5 @@ class cScrMap : iScrMap
 
 		//} END Event *PLAYER LOOKS AT LADDER*
 		
-	//} END SCENE 3
+	//} END SCENE X
 }
