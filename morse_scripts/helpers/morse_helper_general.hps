@@ -51,18 +51,12 @@ shared enum eLanternOilType
 	 * @param float afMax, the brightness the light will be set to, takes effect when abIncrease = true.
 	 * @param float afMin, the brightness the light will be set to, takes effect when abIncrease = false.
 	 * @param float afTime, the time to fade the light in or out.
-	 * @param bool abIncrease, whether to set increase or decrease the brightness.
+	 * @param bool abIncrease, whether to increase or decrease the brightness.
 	**/
 	void Light_FadeBrightnessToBool(const tString &in asLightName, float afMax, float afMin, float afTime, bool abIncrease)
 	{
-		if (abIncrease) // If brightness should increase
-		{
-			Light_FadeBrightnessTo(asLightName, afMax, afTime);
-		}
-		else // If brightness should decrease
-		{
-			Light_FadeBrightnessTo(asLightName, afMin, afTime);
-		}
+		float mfLightBrightness = abIncrease ? afMax : afMin;
+		Light_FadeBrightnessTo(asLightName, mfLightBrightness, afTime);
 	}
 	
 	//-------------------------------------------------------

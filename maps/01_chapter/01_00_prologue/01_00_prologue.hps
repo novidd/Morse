@@ -105,10 +105,12 @@ class cScrMap : iScrMap
 		bool mbStartIntro = true;
 		
 		// Inventory
-		Item_AddToInventory("Matchbook");
+		Item_AddManyToInventory("Matchbook", 10);
 		
 		// Entity
-		Entity_PlayAnimation("lizard_run_1", "start_idle", 0.f, true);	
+		Entity_PlayAnimation("lizard_run_1", "start_idle", 0.f, true);
+		
+		Player_SetVertigoActive(false);
 		
 		/////////////////////////
 		// Debug
@@ -708,6 +710,28 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 
 		//} END Event *PLAYER KNOCKS OVER BOTTLE*
+		
+		/////////////////////////////////////////
+		// Event C *PLAYER IS BY THE WELL*
+		//{//////////////////////////////////////
+
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 3, Event C here.*/
+
+		//-------------------------------------------------------
+		
+		/*Put any functions that are only used in Scene 3, Event C here.*/
+		
+		void OnPlayerLookAt_WellVertigo(const tString &in asEntity, int alState)
+		{
+			array<float> mvFearRateValues = {alState == 1 ? 0.3f : 0.f, alState == 1 ? 30.f : 1.f};
+			FearHandler_SetForcedAddFearRate(mvFearRateValues[0], mvFearRateValues[1], false);
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER IS BY THE WELL*
 		
 	//} END SCENE 3
 

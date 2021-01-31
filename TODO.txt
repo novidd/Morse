@@ -47,3 +47,4 @@ MAPS:
 			 * Use 01_02_caves/sweeteners/far/critters for creepy noises in the distance.
 			 * Add breathing/whisper sounds coming from the union soldier.
 			 * When player looks at an oil lamp thats empty with match in hand, play vo acknowledging it.
+			 * When player falls down hole use Player_SetCanUseLightSource(false) and 
