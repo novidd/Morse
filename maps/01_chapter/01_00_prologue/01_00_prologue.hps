@@ -109,7 +109,7 @@ class cScrMap : iScrMap
 		
 		// Entity
 		Entity_PlayAnimation("lizard_run_1", "start_idle", 0.f, true);
-		Entity_AddForce("door_barricade_1", cVector3f(100.f, 0.f, 0.f), true, true);
+		Entity_AddForce("door_barricade_1", cVector3f(1000.f, 0.f, 0.f), true, true);
 		
 		Player_SetVertigoActive(false);
 		
@@ -718,7 +718,7 @@ class cScrMap : iScrMap
 		//} END Event *PLAYER KNOCKS OVER BOTTLE*
 		
 		/////////////////////////////////////////
-		// Event C *PLAYER IS BY THE WELL*
+		// Event C *PLAYER ABOVE THE WELL*
 		//{//////////////////////////////////////
 
 		//-------------------------------------------------------
@@ -731,20 +731,23 @@ class cScrMap : iScrMap
 		
 		void OnPlayerLookAt_WellVertigo(const tString &in asEntity, int alState)
 		{
-			array<float> mvFearRateValues = {alState == 1 ? 0.3f : 0.f, alState == 1 ? 30.f : 1.f};
-			FearHandler_SetForcedAddFearRate(mvFearRateValues[0], mvFearRateValues[1], false);
+			if (Entity_GetVarBool(asEntity, ""))
+			{
+				array<float> mvFearRateValues = {alState == 1 ? 0.3f : 0.f, alState == 1 ? 30.f : 1.f};
+				FearHandler_SetForcedAddFearRate(mvFearRateValues[0], mvFearRateValues[1], false);
+			}
 		}
 		
 		//-------------------------------------------------------
 
-		//} END Event *PLAYER IS BY THE WELL*
+		//} END Event *PLAYER ABOVE THE WELL*
 		
 	//} END SCENE 3
 	
 	/////////////////////////////////////////////////////////////////////////////////////////
-	// ==============
-	// SCENE 4 *WELL*
-	// ==============
+	// ====================
+	// SCENE 4 *SMALL TOWN*
+	// ====================
 	//{//////////////////////////////////////////////////////////////////////////////////////
  
 		/////////////////////////////////////////
@@ -764,7 +767,7 @@ class cScrMap : iScrMap
 		//} END General
 	 
 		/////////////////////////////////////////
-		// Event A *PLAYER SEES CORPSES*
+		// Event A *PLAYER FELL INTO WELL*
 		//{//////////////////////////////////////
 
 		//-------------------------------------------------------
@@ -775,9 +778,15 @@ class cScrMap : iScrMap
 		
 		/*Put any functions that are only used in Scene 4, Event A here.*/
 		
+		bool OnCollide_DisableWellVertigo(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			Entity_SetVarInt(Entity_GetVarString(asParent, ""), "", 0);
+			return false;
+		}
+		
 		//-------------------------------------------------------
 
-		//} END Event *PLAYER SEES CORPSES*
+		//} END Event *PLAYER FELL INTO WELL*
 		
 	//} END SCENE 4
 	
