@@ -6642,7 +6642,7 @@
                     <Var ObjectId="268435652" Name="OpenableByAgent" Value="true" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435653" Name="door_barricade_1" CreStamp="1612108620" ModStamp="1612110234" WorldPos="-0.536932 0.984661 -6.89838" Rotation="-0 2.12994 -0" Scale="0.7 0.7 0.7" FileIndex="519" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1175 268435653">
+            <Entity ID="268435653" Name="door_barricade_1" CreStamp="1612108620" ModStamp="1612110234" WorldPos="2.82499 0.984661 -8.79608" Rotation="-0 2.09192 -0" Scale="0.7 0.7 0.7" FileIndex="519" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1175 268435653">
                 <UserVariables>
                     <Var ObjectId="268435653" Name="Note" Value="" />
                     <Var ObjectId="268435653" Name="EventInstanceTag" Value="" />
@@ -7189,7 +7189,7 @@
                     <Var ObjectId="268435662" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435663" Name="wooden_door_rickety_2" CreStamp="1612118295" ModStamp="1612110234" WorldPos="-0.391282 0.508114 -7.04992" Rotation="-0 2.14939 -0" Scale="1.494 1.339 1.494" FileIndex="505" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1228 268435663">
+            <Entity ID="268435663" Name="wooden_door_rickety_2" CreStamp="1612118295" ModStamp="1612110234" WorldPos="2.97459 0.508114 -8.94372" Rotation="-0 2.11137 -0" Scale="1.494 1.339 1.494" FileIndex="505" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1228 268435663">
                 <UserVariables>
                     <Var ObjectId="268435663" Name="Note" Value="" />
                     <Var ObjectId="268435663" Name="EventInstanceTag" Value="" />
