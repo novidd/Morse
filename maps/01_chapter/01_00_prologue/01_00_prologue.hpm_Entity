@@ -3688,7 +3688,7 @@
                     <Var ObjectId="268435578" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435579" Name="block_box_static_2" CreStamp="1611503560" ModStamp="1611503629" WorldPos="13.4822 3.02315 -5.74096" Rotation="1.06684 2.36795 1.45923e-07" Scale="1.46595 4.2914 1" FileIndex="36" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 834 268435579">
+            <Entity ID="268435579" Name="block_box_static_2" CreStamp="1611503560" ModStamp="1611503629" WorldPos="13.4822 3.02315 -5.74096" Rotation="1.06684 2.36795 1.45923e-07" Scale="1.46595 4.2914 1" FileIndex="36" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1309 268435579">
                 <UserVariables>
                     <Var ObjectId="268435579" Name="Note" Value="" />
                     <Var ObjectId="268435579" Name="PhysicsMaterial" Value="Default" />
@@ -7252,6 +7252,26 @@
                     <Var ObjectId="268435663" Name="JointResetFix" Value="false" />
                     <Var ObjectId="268435663" Name="BreakChildEntity" Value="" />
                     <Var ObjectId="268435663" Name="OpenableByAgent" Value="true" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268436779" Name="block_box_static_7" CreStamp="1612462764" ModStamp="1612464361" WorldPos="2.4803 1.30872 -18.8398" Rotation="-1.13412 0.760063 -0.0361532" Scale="1.46595 6.1819 1" FileIndex="36" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 834 268436779">
+                <UserVariables>
+                    <Var ObjectId="268436779" Name="Note" Value="" />
+                    <Var ObjectId="268436779" Name="PhysicsMaterial" Value="Default" />
+                    <Var ObjectId="268436779" Name="CollideCharacter" Value="true" />
+                    <Var ObjectId="268436779" Name="CollideNonCharacter" Value="false" />
+                    <Var ObjectId="268436779" Name="BlocksLightAndLOS" Value="false" />
+                    <Var ObjectId="268436779" Name="CollideGroup" Value="" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268436781" Name="block_box_static_8" CreStamp="1612462994" ModStamp="1612464397" WorldPos="0.462561 2.59726 -21.011" Rotation="-1.67079 0.760056 -0.0361455" Scale="1.46595 0.928589 1" FileIndex="36" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1344 268436781">
+                <UserVariables>
+                    <Var ObjectId="268436781" Name="Note" Value="" />
+                    <Var ObjectId="268436781" Name="PhysicsMaterial" Value="Default" />
+                    <Var ObjectId="268436781" Name="CollideCharacter" Value="true" />
+                    <Var ObjectId="268436781" Name="CollideNonCharacter" Value="false" />
+                    <Var ObjectId="268436781" Name="BlocksLightAndLOS" Value="false" />
+                    <Var ObjectId="268436781" Name="CollideGroup" Value="" />
                 </UserVariables>
             </Entity>
         </Objects>
