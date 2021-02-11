@@ -979,6 +979,11 @@
                     <Var ObjectId="268435502" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
+            <Area ID="268436770" Name="GhoulHole_1" CreStamp="1613070049" ModStamp="1613070089" WorldPos="-4.25 2.8 -20.25" Rotation="-0 2.0944 -0" Scale="1 2 1" Active="true" Mesh="" UID="16 1352 268436770" AreaType="GhoulHole">
+                <UserVariables>
+                    <Var ObjectId="268436770" Name="Animation" Value="Low" />
+                </UserVariables>
+            </Area>
         </Objects>
     </Section>
 </HPLMapTrack_Area>

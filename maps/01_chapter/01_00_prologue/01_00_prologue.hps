@@ -110,6 +110,7 @@ class cScrMap : iScrMap
 		// Entity
 		Entity_PlayAnimation("lizard_run_1", "start_idle", 0.f, true);
 		Entity_AddForce("door_barricade_1", cVector3f(1000.f, 0.f, 0.f), true, true);
+		Entity_AddForce("door_barricade_2", cVector3f(1000.f, 0.f, 0.f), true, true);
 		
 		Player_SetVertigoActive(false);
 		
@@ -297,14 +298,6 @@ class cScrMap : iScrMap
 	//-------------------------------------------------------
 	
 	//} END VO EVENTS
-	
-	/////////////////////////////////////////
-	// AMBIENCE/SWEETENERS
-	//{//////////////////////////////////////
-	
-	//-------------------------------------------------------
-	
-	//} END AMBIENCE/SWEETENERS
  
 	//} END MAIN FUNCTIONS
  
