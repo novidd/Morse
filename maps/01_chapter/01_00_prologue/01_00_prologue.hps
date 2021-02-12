@@ -109,7 +109,6 @@ class cScrMap : iScrMap
 		
 		// Entity
 		Entity_PlayAnimation("lizard_run_1", "start_idle", 0.f, true);
-		Entity_AddForce("door_barricade_1", cVector3f(1000.f, 0.f, 0.f), true, true);
 		Entity_AddForce("door_barricade_2", cVector3f(1000.f, 0.f, 0.f), true, true);
 		
 		Player_SetVertigoActive(false);
@@ -344,7 +343,7 @@ class cScrMap : iScrMap
 				cLux_AddDebugMessage("Intro Sequence starting...");
 				
 				Map_SetSkyBoxTexture("skybox_moonlight.dds");
-				Map_SetSkyBoxColor(cColor(1,1,1,1));
+//				Map_SetSkyBoxColor(cColor(1,1,1,1));
 				
 				Effect_Fade_Out(0.f);
 				Player_SetActive(false);
@@ -373,8 +372,8 @@ class cScrMap : iScrMap
 			{
 				Player_FadeFOVToDefault(100.f);
 				
-				Map_SetSkyBoxTexture("skybox_courtyard.dds");
-				Map_SetSkyBoxColor(cColor(0.764,0.642,0.549,1));
+//				Map_SetSkyBoxTexture("skybox_courtyard.dds");
+//				Map_SetSkyBoxColor(cColor(0.764,0.642,0.549,1));
 
 				Player_Teleport("Start_Native");
 				Player_StopLookAt(0);

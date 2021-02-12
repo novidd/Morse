@@ -979,9 +979,43 @@
                     <Var ObjectId="268435502" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268436770" Name="GhoulHole_1" CreStamp="1613070049" ModStamp="1613070089" WorldPos="-4.25 2.8 -20.25" Rotation="-0 2.0944 -0" Scale="1 2 1" Active="true" Mesh="" UID="16 1352 268436770" AreaType="GhoulHole">
+            <Area ID="268436770" Name="GhoulHole_1" CreStamp="1613070049" ModStamp="1613153964" WorldPos="-3.47498 2.75975 -21.175" Rotation="-0 1.82645 -0" Scale="1 2 1" Active="true" Mesh="" UID="16 1352 268436770" AreaType="GhoulHole">
                 <UserVariables>
                     <Var ObjectId="268436770" Name="Animation" Value="Low" />
+                </UserVariables>
+            </Area>
+            <Area ID="268436826" Name="outside" CreStamp="1613156122" ModStamp="1613156128" WorldPos="0.44899 5.16248 -32.6812" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 1363 268436826" AreaType="Trigger">
+                <UserVariables>
+                    <Var ObjectId="268436826" Name="Note" Value="" />
+                    <Var ObjectId="268436826" Name="BlocksLineOfSight" Value="false" />
+                    <Var ObjectId="268436826" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268436826" Name="UserVar" Value="" />
+                    <Var ObjectId="268436826" Name="Static" Value="false" />
+                    <Var ObjectId="268436826" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268436826" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268436826" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268436826" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268436826" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268436826" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268436826" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268436826" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="268436826" Name="PlayerLookAtCallback" Value="" />
+                    <Var ObjectId="268436826" Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                    <Var ObjectId="268436826" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
+                    <Var ObjectId="268436826" Name="PlayerLookAtCheckRayIntersection" Value="true" />
+                    <Var ObjectId="268436826" Name="PlayerLookAtMaxDistance" Value="-1" />
+                    <Var ObjectId="268436826" Name="PlayerLookAtCallbackDelay" Value="0" />
+                    <Var ObjectId="268436826" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268436826" Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268436826" Name="CanInteractWithoutCallback" Value="false" />
+                    <Var ObjectId="268436826" Name="MaxFocusDistance" Value="-1" />
+                    <Var ObjectId="268436826" Name="CustomInteractIcon" Value="Default" />
+                </UserVariables>
+            </Area>
+            <Area ID="268436828" Name="Start_Ghoul" CreStamp="1613157260" ModStamp="1613157450" WorldPos="9.68157 1.40596 -16.764" Rotation="0 -1.27179 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 1377 268436828" AreaType="PlayerStart">
+                <UserVariables>
+                    <Var ObjectId="268436828" Name="Note" Value="" />
+                    <Var ObjectId="268436828" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
         </Objects>
