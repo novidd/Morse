@@ -234,23 +234,12 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test2)
 		{
-			Entity_SetActive("ghoul_scare", true);
-			Sound_Play("Sound_Ghoul_Notice", 0.f);
-			Ghoul_CommandGoToSpecificHole_Execute("ghoul_scare", "GhoulHole_Scare", true, false, true, eGhoulSpeed_Run, "OnEnterHole_GhoulHole_Scare");
+
 		}
 		
 		if (alAction == eAction_Test3)
 		{
-			Entity_SetActive("ghoul_scare", true);
-			Ghoul_SetCanBeAttracted("ghoul_scare", false);					
-			Agent_SetSensesActive("ghoul_scare", false);		
-			Sound_Play("Sound_GhoulCorpseDismember_1", 0.f);
-			Ghoul_ModeGuard_Setup("ghoul_scare", "BlockerGhoulLookAtArea_1", "BlockerGhoulEatArea_1", "eat_ground_close_sound", "Sound_GhoulCorpseDismember_1", "eat_ground_react_to_sound");
-			Ghoul_Mode_Set("ghoul_scare", eGhoulMode_Guard, true);
 			
-			FearHandler_SetCanGasp(false);
-			
-			Map_AddTimer("Timer_GhoulSounds", 0.f, "OnTimer_GhoulSounds");
 		}
 		
 		if (alAction == eAction_Test4)
@@ -748,9 +737,9 @@ class cScrMap : iScrMap
 	//} END SCENE 3
 	
 	/////////////////////////////////////////////////////////////////////////////////////////
-	// =========================
-	// SCENE 4 *PATH TO CANYON*
-	// =========================
+	// ====================
+	// SCENE 4 *SMALL TOWN*
+	// ====================
 	//{//////////////////////////////////////////////////////////////////////////////////////
  
 		/////////////////////////////////////////
@@ -784,7 +773,6 @@ class cScrMap : iScrMap
 		bool OnCollide_DisableWellVertigo(const tString &in asParent, const tString &in asChild, int alState)
 		{
 			Entity_SetVarInt(Entity_GetVarString(asParent, ""), "", 0);
-			Music_StopAll(1.f);
 			return false;
 		}
 		
@@ -792,120 +780,11 @@ class cScrMap : iScrMap
 
 		//} END Event *PLAYER FELL INTO WELL*
 		
-		/////////////////////////////////////////
-		// Event B *PLAYER FALLS INTO HOLE*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 4, Event B here.*/
-
-		//-------------------------------------------------------
-		
-		/*Put any functions that are only used in Scene 4, Event B here.*/
-		
-		//-------------------------------------------------------
-
-		//} END Event *PLAYER FALLS INTO HOLE*
-		
-		/////////////////////////////////////////
-		// Event C *GHOUL SCARE*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 4, Event C here.*/
-
-		//-------------------------------------------------------
-		
-		/*Put any functions that are only used in Scene 4, Event C here.*/
-		
-		bool OnCollide_SetupGhoul(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			Entity_SetActive("ghoul_scare", true);
-			Ghoul_SetCanBeAttracted("ghoul_scare", false);					
-			Agent_SetSensesActive("ghoul_scare", false);		
-			Sound_Play("Sound_GhoulCorpseDismember_1", 0.f);
-			Ghoul_ModeGuard_Setup("ghoul_scare", "BlockerGhoulLookAtArea_1", "BlockerGhoulEatArea_1", "eat_ground_close_sound", "Sound_GhoulCorpseDismember_1", "eat_ground_react_to_sound");
-			Ghoul_Mode_Set("ghoul_scare", eGhoulMode_Guard, true);
-			
-			FearHandler_SetCanGasp(false);
-			
-			Map_AddTimer("Timer_GhoulSounds", 3.f, "OnTimer_GhoulSounds");
-			return false;
-		}
-		
-		//-------------------------------------------------------
-		
-		void OnTimer_GhoulSounds(const tString &in asTimer)
-		{
-			Sound_Play("Sound_GhoulSounds", 0.f);
-			Map_RestartCurrentTimer(cMath_RandRectf(8.f, 12.f));
-		}
-		
-		//-------------------------------------------------------
-		
-		bool OnCollide_GhoulScare(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			Map_RemoveTimer("Timer_GhoulSounds");
-			Sound_Stop("Sound_GhoulSounds", 0.f);
-			
-			Sound_Play("Sound_Ghoul_Notice", 0.f);
-			Ghoul_CommandGoToSpecificHole_Execute("ghoul_scare", "GhoulHole_Scare", true, false, true, eGhoulSpeed_Run, "OnEnterHole_GhoulHole_Scare");
-			return false;
-		}
-		
-		//-------------------------------------------------------
-		
-		void OnEnterHole_GhoulHole_Scare(const tString &in asEntity)
-		{
-			FearHandler_SetCanGasp(true);
-			Entity_SetActive("FearRate_1", false);
-		}
-		
-		//-------------------------------------------------------
-
-		//} END Event *GHOUL SCARE*
-		
-		/////////////////////////////////////////
-		// Event D *AFTER GHOUL SCARE*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 4, Event D here.*/
-
-		//-------------------------------------------------------
-		
-		/*Put any functions that are only used in Scene 4, Event D here.*/
-		
-//		Sound_Play("Sound_Animals", 0.f);
-		
-		//-------------------------------------------------------
-
-		//} END Event *AFTER GHOUL SCARE*
-		
-		/////////////////////////////////////////
-		// Event E *PLAYER ENTERS CANYON*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 4, Event E here.*/
-
-		//-------------------------------------------------------
-		
-		/*Put any functions that are only used in Scene 4, Event E here.*/
-		
-		//-------------------------------------------------------
-
-		//} END Event *PLAYER ENTERS CANYON*
-		
 	//} END SCENE 4
 	
 	/////////////////////////////////////////////////////////////////////////////////////////
 	// ===============
-	// SCENE 5 *CHASM*
+	// SCENE X *CHASM*
 	// ===============
 	//{//////////////////////////////////////////////////////////////////////////////////////
  
