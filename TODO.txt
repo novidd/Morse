@@ -47,7 +47,6 @@ MAPS:
 			 * Use 01_02_caves/sweeteners/far/critters for creepy noises in the distance.
 			 * Add breathing/whisper sounds coming from the union soldier.
 			 * When player looks at an oil lamp thats empty with match in hand, play vo acknowledging it.
-			 * When player falls down well use Player_SetCanUseLightSource(false) and
 			 * Stop scary music when player has fallen into the well.
 			 * When player is about to walk in front of the staircase to the ghoul room, make a ghoul walk in front of a
 			   spotlight that casts shadows. (spotlight is there because there is a source of light in the room). 
