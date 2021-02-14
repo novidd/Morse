@@ -207,7 +207,7 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test0)
 		{
-			
+			Entity_AddForce("rock_fall_1", cVector3f(0, -15.f, 0), false, true);
 		}
 		
 		if (alAction == eAction_Test1) // Start area amb
