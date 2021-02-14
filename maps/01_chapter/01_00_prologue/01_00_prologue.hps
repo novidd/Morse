@@ -108,22 +108,12 @@ class cScrMap : iScrMap
 		Item_AddManyToInventory("Matchbook", 10);
 		
 		// Entity
-		Entity_PlayAnimation("lizard_run_1", "start_idle", 0.f, true);
-		Entity_AddForce("door_barricade_2", cVector3f(1000.f, 0.f, 0.f), true, true);
-		
-		Player_SetVertigoActive(false);
 		
 		/////////////////////////
 		// Debug
 		if(cLux_ScriptDebugOn())
 		{
 			mbStartIntro = false;
-			
-			if (!mbStartIntro)
-			{
-				Light_SetVisible("Light_Intro_*", false);
-				Lamp_SetLit("brazier_intro_1", false, false);
-			}
 			
 			if (ItemType_GetCountInInventory("Lantern") < 1)
 			{
@@ -136,8 +126,7 @@ class cScrMap : iScrMap
 		// Initiate the intro
 		if (mbStartIntro) 
 		{ 
-			//Seq_Intro("");
-			Seq_Intro_Native("");
+			Seq_Intro("");
 		}
 	}
 
@@ -151,11 +140,6 @@ class cScrMap : iScrMap
 		
 		//Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
 		Item_RemoveFromInventory(ItemType_GetFirstInInventory("CurseMedallion"));
-		
-		cScript_SetGlobalVarBool("PlayerIsInScareArea", false);
-		cScript_SetGlobalVarBool("PlayerIsLookingAtUnionSoldier", false);
-		cScript_SetGlobalVarBool("PlayerIsInFrontOfUnionSoldier", false);
-		cScript_SetGlobalVarBool("UnionSoldierScareHasRun", false);
 	}
 
 	//-------------------------------------------------------
@@ -173,8 +157,7 @@ class cScrMap : iScrMap
 	// Runs on every frame
 	void Update(float afTimeStep)
 	{
-		// Union soldier scare
-		ScaryEvent_UnionSoldier();
+		
 	}
 	
 	//-------------------------------------------------------
@@ -224,7 +207,7 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test0)
 		{
-			OnTimer_HitGround("");
+			
 		}
 		
 		if (alAction == eAction_Test1) // Start area amb
@@ -234,23 +217,23 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test2)
 		{
-			Entity_SetActive("ghoul_scare", true);
-			Sound_Play("Sound_Ghoul_Notice", 0.f);
-			Ghoul_CommandGoToSpecificHole_Execute("ghoul_scare", "GhoulHole_Scare", true, false, true, eGhoulSpeed_Run, "OnEnterHole_GhoulHole_Scare");
+//			Entity_SetActive("ghoul_scare", true);
+//			Sound_Play("Sound_Ghoul_Notice", 0.f);
+//			Ghoul_CommandGoToSpecificHole_Execute("ghoul_scare", "GhoulHole_Scare", true, false, true, eGhoulSpeed_Run, "OnEnterHole_GhoulHole_Scare");
 		}
 		
 		if (alAction == eAction_Test3)
 		{
-			Entity_SetActive("ghoul_scare", true);
-			Ghoul_SetCanBeAttracted("ghoul_scare", false);					
-			Agent_SetSensesActive("ghoul_scare", false);		
-			Sound_Play("Sound_GhoulCorpseDismember_1", 0.f);
-			Ghoul_ModeGuard_Setup("ghoul_scare", "BlockerGhoulLookAtArea_1", "BlockerGhoulEatArea_1", "eat_ground_close_sound", "Sound_GhoulCorpseDismember_1", "eat_ground_react_to_sound");
-			Ghoul_Mode_Set("ghoul_scare", eGhoulMode_Guard, true);
-			
-			FearHandler_SetCanGasp(false);
-			
-			Map_AddTimer("Timer_GhoulSounds", 0.f, "OnTimer_GhoulSounds");
+//			Entity_SetActive("ghoul_scare", true);
+//			Ghoul_SetCanBeAttracted("ghoul_scare", false);					
+//			Agent_SetSensesActive("ghoul_scare", false);		
+//			Sound_Play("Sound_GhoulCorpseDismember_1", 0.f);
+//			Ghoul_ModeGuard_Setup("ghoul_scare", "BlockerGhoulLookAtArea_1", "BlockerGhoulEatArea_1", "eat_ground_close_sound", "Sound_GhoulCorpseDismember_1", "eat_ground_react_to_sound");
+//			Ghoul_Mode_Set("ghoul_scare", eGhoulMode_Guard, true);
+//			
+//			FearHandler_SetCanGasp(false);
+//			
+//			Map_AddTimer("Timer_GhoulSounds", 0.f, "OnTimer_GhoulSounds");
 		}
 		
 		if (alAction == eAction_Test4)
@@ -354,11 +337,10 @@ class cScrMap : iScrMap
 				cLux_AddDebugMessage("Intro Sequence starting...");
 				
 				Map_SetSkyBoxTexture("skybox_moonlight.dds");
-//				Map_SetSkyBoxColor(cColor(1,1,1,1));
+				Map_SetSkyBoxColor(cColor(1,1,1,1));
 				
 				Effect_Fade_Out(0.f);
 				Player_SetActive(false);
-				
 			}
 			else if (Sequence_DoStepAndWait(3.f))
 			{
@@ -383,65 +365,21 @@ class cScrMap : iScrMap
 			{
 				Player_FadeFOVToDefault(100.f);
 				
-//				Map_SetSkyBoxTexture("skybox_courtyard.dds");
+				Map_SetSkyBoxTexture("skybox_courtyard.dds");
 //				Map_SetSkyBoxColor(cColor(0.764,0.642,0.549,1));
 
-				Player_Teleport("Start_Native");
+				Player_Teleport("Start_WakeUp");
 				Player_StopLookAt(0);
+				Map_AddTimer("Timer_WakeUp", 1.f ,"OnTimer_WakeUp");
 			}
 			Sequence_End();
 		}
 		
 		//-------------------------------------------------------
 		
-		cSequenceStatesData mSeqIntroNative;
-		void Seq_Intro_Native(const tString &in asName)
-		{
-			Sequence_Begin("Seq_Intro_Native", mSeqIntroNative);
-			if (Sequence_DoStepAndWait(1.f))
-			{
-				Player_Teleport("Start_Native");
-				Effect_Fade_Out(.1f);
-				Sound_FadeGlobalVolume(0.f, 0.f, eSoundEntryType_World);
-			}
-			else if (Sequence_DoStepAndWait(2.f))
-			{
-				Sound_FadeGlobalVolume(1.f, 3.f, eSoundEntryType_World);
-				Sound_CreateAtEntity("sound_player_drag", "new_sounds/capture/player_body/player_body_03", "player", 3.f);
-			}
-			else if (Sequence_DoStepAndWait(3.f))
-			{
-				Sound_CreateAtEntity("sound_player_drag", "new_sounds/capture/player_body/player_body_01", "player");
-				
-				// Play vo
-			}
-			else if (Sequence_DoStepAndWait(1.f))
-			{
-				Sound_CreateAtEntity("sound_player_fall", "01_02_caves/scare_events/tasi_cave_fall", "player");
-				Sound_Fade("sound_player_fall", 0, 0);
-				
-				PlayerBody_PlayCutsceneAtEntity("fall_from_collapsed_plankbridge", "PosArea_FallAnim", false, .1f, "", 1.f);
-				PlayerBody_SetCutsceneMaxPitch(5.f);
-				PlayerBody_SetCutsceneMaxYaw(5.f);
-
-				Map_AddTimer("Timer_HitGround", 11.3f ,"OnTimer_HitGround");
-			}
-			else if (Sequence_DoStepAndWait(1.f))
-			{
-				Effect_Fade_In(.1f);
-				Sound_Fade("sound_player_fall", 1, .1f);
-			}
-			Sequence_End();
-		}
-		
-		//-------------------------------------------------------
-		
-		void OnTimer_HitGround(const tString &in asTimer)
+		void OnTimer_WakeUp(const tString &in asTimer)
 		{
 			Effect_Fade_Out(.1f);
-			Light_SetVisible("Light_Intro_*", false);
-			Lamp_SetLit("brazier_intro_1", false, false);
-			
 			Seq_Intro_WakeUp("");
 		}
 		
@@ -451,24 +389,26 @@ class cScrMap : iScrMap
 		void Seq_Intro_WakeUp(const tString &in asName)
 		{
 			Sequence_Begin("Seq_Intro_WakeUp", mSeqIntroWakeUp);
-			if (Sequence_DoStepAndWait(1.f)) //8.f
+			if (Sequence_DoStepAndWait(8.f)) //8.f
 			{
-				//Player_FadeNightVisionStrength(1.5f, 0.f);
 				Player_SetNightVisionRadius(3.f);
 			}
 			else if (Sequence_DoStepAndWait(.5f))
 			{
-				//PlayerBody_PlayCutsceneAtEntity("get_up_after_fall_from_plankbridge", "PosArea_WakeUpAnim", false, .1f, "", 1.f);
-				PlayerBody_PlayCutsceneAtEntity("wake_up_from_death_2", "PosArea_WakeUpAnim", false, .1f, "OnAnimEnd_RunShowMatchHintTimer", 1.f);
-				PlayerBody_SetCutsceneMaxPitch(5.f);
-				PlayerBody_SetCutsceneMaxYaw(5.f);
+//				PlayerBody_PlayCutsceneAtEntity("wake_up_from_death_2", "PosArea_WakeUpAnim", false, .1f, "OnAnimEnd_RunShowMatchHintTimer", 1.f);
+//				PlayerBody_SetCutsceneMaxPitch(5.f);
+//				PlayerBody_SetCutsceneMaxYaw(5.f);
 				
 				Player_SetNightVisionBrightness(.25f);
 			}
 			else if (Sequence_DoStepAndWait(2.f))
 			{
 				Effect_Fade_In(.1f);
-				Music_PlayExt("A2_1_1_Crash_Wake", true, mfGlobalMusicVolume, 1, 4.f, 0, eMusicPrio_BgAmb, false);
+				Player_SetActive(true);
+				Sound_FadeGlobalVolume(1.f, 3.f, eSoundEntryType_World);
+				
+				Music_Stop(1.f, eMusicPrio_SceneAmb);
+//				Music_PlayExt("A2_1_1_Crash_Wake", true, mfGlobalMusicVolume, 1, 4.f, 0, eMusicPrio_BgAmb, false);
 			}
 			Sequence_End();
 		}
@@ -477,8 +417,7 @@ class cScrMap : iScrMap
 		
 		void OnAnimEnd_RunShowMatchHintTimer(const tString &in asAnimName)
 		{
-			Hint_StopHint();
-			Hint_Block("Hints", "HintMatchUse");
+			cLux_AddDebugMessage("Player has woken up... accessing player controls.");
 		}
 		
 		//-------------------------------------------------------
@@ -487,427 +426,6 @@ class cScrMap : iScrMap
 	 
 	//} END SCENE 1
 	
-	/////////////////////////////////////////////////////////////////////////////////////////
-	// ===============================
-	// SCENE 2 *LOWER LEVEL/STAIRCASE*
-	// ===============================
-	//{//////////////////////////////////////////////////////////////////////////////////////
- 
-		/////////////////////////////////////////
-		// General
-		//{//////////////////////////////////////
-		 
-		//-------------------------------------------------------
-	 
-		/*Put any variables that are used by many events in Scene 2 here.*/
-		
-		//-------------------------------------------------------
-	 
-		/*Put any functions that are used in more than one event in Scene 2 here.*/
-		
-		//-------------------------------------------------------
-		
-		//} END General
-	 
-		/////////////////////////////////////////
-		// Event A *PLAYER SPOTS UNION SOLDIER*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 2, Event A here.*/
-
-		//-------------------------------------------------------
-		
-		/*Put any functions that are only used in Scene 2, Event A here.*/
-		
-		bool OnCollide_PlayerIsInScareArea(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			bool mbPlayerIsInScareArea = alState == 1;
-			cScript_SetGlobalVarBool("PlayerIsInScareArea", mbPlayerIsInScareArea);
-			return true;
-		}
-		
-		//-------------------------------------------------------
-		
-		void OnPlayerLookAt_PlayerIsLookingAtUnionSoldier(const tString &in asEntity, int alState)
-		{
-			bool mbPlayerIsLookingAtUnionSoldier = alState == 1;
-			cScript_SetGlobalVarBool("PlayerIsLookingAtUnionSoldier", mbPlayerIsLookingAtUnionSoldier);
-		}
-		
-		//-------------------------------------------------------
-		
-		bool OnCollide_PlayerIsInFrontOfUnionSoldier(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			bool mbPlayerIsInFrontOfUnionSoldier = alState == 1;
-			cScript_SetGlobalVarBool("PlayerIsInFrontOfUnionSoldier", mbPlayerIsInFrontOfUnionSoldier);
-			return true;
-		}
-		
-		//-------------------------------------------------------
-		
-		void ScaryEvent_UnionSoldier()
-		{
-			if (cScript_GetGlobalVarBool("PlayerIsInScareArea") && cScript_GetGlobalVarBool("PlayerIsLookingAtUnionSoldier"))
-			{
-				if (cScript_GetGlobalVarBool("PlayerIsInFrontOfUnionSoldier") && !cScript_GetGlobalVarBool("UnionSoldierScareHasRun"))
-				{
-					RunScaryEvent_UnionSoldier();
-				}
-				else if (Match_IsHeldAndBurning() && !cScript_GetGlobalVarBool("UnionSoldierScareHasRun"))
-				{
-					RunScaryEvent_UnionSoldier();
-				}
-			}
-		}
-		
-		//-------------------------------------------------------
-		
-		void RunScaryEvent_UnionSoldier()
-		{
-			cLux_AddDebugMessage("Run scary event!");
-			
-			cScript_SetGlobalVarBool("UnionSoldierScareHasRun", true);
-				
-			Entity_SetActive("FearScaryObject_UnionSoldier", true);
-		}
-		
-		//-------------------------------------------------------
-
-		//} END Event *PLAYER SPOTS UNION SOLDIER*
-		
-		/////////////////////////////////////////
-		// Event B *PLAYER ENTERS DARKNESS*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 2, Event A here.*/
-
-		//-------------------------------------------------------
-		
-		/*Put any functions that are only used in Scene 2, Event A here.*/
-		
-		bool OnCollide_GiveMatchHint(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			Hint_StopHint();
-			Hint_ShowHint_Hold("Hints", "HintMatchEquip", true, 1.5f, false, 10);
-			return false;
-		}
-		
-		//-------------------------------------------------------
-
-		//} END Event *PLAYER ENTERS DARKNESS*
-		
-		/////////////////////////////////////////
-		// Event C *PLAYER ENTERS STAIRCASE*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 2, Event C here.*/
-
-		//-------------------------------------------------------
-		
-		/*Put any functions that are only used in Scene 2, Event C here.*/
-		
-		bool OnCollide_PlayRumble(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			Sound_Play("Sound_Rumble", 0.f);
-			return false;
-		}
-		
-		//-------------------------------------------------------
-
-		//} END Event *PLAYER ENTERS STAIRCASE*
-		
-	//} END SCENE 2
-
-	/////////////////////////////////////////////////////////////////////////////////////////
-	// =====================
-	// SCENE 3 *UPPER LEVEL*
-	// =====================
-	//{//////////////////////////////////////////////////////////////////////////////////////
- 
-		/////////////////////////////////////////
-		// General
-		//{//////////////////////////////////////
-		 
-		//-------------------------------------------------------
-	 
-		/*Put any variables that are used by many events in Scene 3 here.*/
-		
-		//-------------------------------------------------------
-	 
-		/*Put any functions that are used in more than one event in Scene 3 here.*/
-		
-		//-------------------------------------------------------
-		
-		//} END General
-	 
-		/////////////////////////////////////////
-		// Event A *PLAYER ENTERS HOLDOUT*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 3, Event A here.*/
-
-		//-------------------------------------------------------
-		
-		/*Put any functions that are only used in Scene 3, Event A here.*/
-		
-		bool OnCollide_PlayStairMovement(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			Sound_Play("Sound_StairMovement", 0.f);
-			return false;
-		}
-		
-		//-------------------------------------------------------
-
-		//} END Event *PLAYER ENTERS HOLDOUT*
-		
-		/////////////////////////////////////////
-		// Event B *PLAYER KNOCKS OVER BOTTLE*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 3, Event B here.*/
-
-		//-------------------------------------------------------
-		
-		/*Put any functions that are only used in Scene 3, Event B here.*/
-		
-		bool OnCollide_KnockOverWineBottle(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			tString msWineBottleArea = Entity_GetVarString(asParent, "");
-			if (Entity_GetVarBool(msWineBottleArea, ""))
-			{
-				cLux_AddDebugMessage("Knocking over bottle...");
-				
-				Entity_AddForce("wine_bottle", cVector3f(20.f, 0.f, 0.f), false, true);
-				Map_AddTimer("Timer_KillMatch", 0.f, "OnTimer_KillMatch");
-				return false;
-			}
-			return true;
-		}
-		
-		//-------------------------------------------------------
-		
-		void OnTimer_KillMatch(const tString &in asTimer)
-		{
-			if (Match_IsHeldAndBurning())
-			{
-				Match_IncreaseBurnTime();
-				Map_RestartCurrentTimer(.005f);
-				return;
-			}
-			return;
-		}
-		
-		//-------------------------------------------------------
-		
-		bool OnCollide_WineBottleIsInPushArea(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			bool mbWineBottleIsInPushArea = alState == 1; 
-			Entity_SetVarBool(asParent, "", mbWineBottleIsInPushArea);
-			return true;
-		}
-		
-		//-------------------------------------------------------
-
-		//} END Event *PLAYER KNOCKS OVER BOTTLE*
-		
-		/////////////////////////////////////////
-		// Event C *PLAYER ABOVE THE WELL*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 3, Event C here.*/
-
-		//-------------------------------------------------------
-		
-		/*Put any functions that are only used in Scene 3, Event C here.*/
-		
-		void OnPlayerLookAt_WellVertigo(const tString &in asEntity, int alState)
-		{
-			if (Entity_GetVarBool(asEntity, ""))
-			{
-				array<float> mvFearRateValues = {alState == 1 ? 0.3f : 0.f, alState == 1 ? 30.f : 1.f};
-				FearHandler_SetForcedAddFearRate(mvFearRateValues[0], mvFearRateValues[1], false);
-			}
-		}
-		
-		//-------------------------------------------------------
-
-		//} END Event *PLAYER ABOVE THE WELL*
-		
-	//} END SCENE 3
-	
-	/////////////////////////////////////////////////////////////////////////////////////////
-	// =========================
-	// SCENE 4 *PATH TO CANYON*
-	// =========================
-	//{//////////////////////////////////////////////////////////////////////////////////////
- 
-		/////////////////////////////////////////
-		// General
-		//{//////////////////////////////////////
-		 
-		//-------------------------------------------------------
-	 
-		/*Put any variables that are used by many events in Scene 4 here.*/
-		
-		//-------------------------------------------------------
-	 
-		/*Put any functions that are used in more than one event in Scene 4 here.*/
-		
-		//-------------------------------------------------------
-		
-		//} END General
-	 
-		/////////////////////////////////////////
-		// Event A *PLAYER FELL INTO WELL*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 4, Event A here.*/
-
-		//-------------------------------------------------------
-		
-		/*Put any functions that are only used in Scene 4, Event A here.*/
-		
-		bool OnCollide_DisableWellVertigo(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			Entity_SetVarInt(Entity_GetVarString(asParent, ""), "", 0);
-			Music_StopAll(1.f);
-			return false;
-		}
-		
-		//-------------------------------------------------------
-
-		//} END Event *PLAYER FELL INTO WELL*
-		
-		/////////////////////////////////////////
-		// Event B *PLAYER FALLS INTO HOLE*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 4, Event B here.*/
-
-		//-------------------------------------------------------
-		
-		/*Put any functions that are only used in Scene 4, Event B here.*/
-		
-		//-------------------------------------------------------
-
-		//} END Event *PLAYER FALLS INTO HOLE*
-		
-		/////////////////////////////////////////
-		// Event C *GHOUL SCARE*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 4, Event C here.*/
-
-		//-------------------------------------------------------
-		
-		/*Put any functions that are only used in Scene 4, Event C here.*/
-		
-		bool OnCollide_SetupGhoul(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			Entity_SetActive("ghoul_scare", true);
-			Ghoul_SetCanBeAttracted("ghoul_scare", false);					
-			Agent_SetSensesActive("ghoul_scare", false);		
-			Sound_Play("Sound_GhoulCorpseDismember_1", 0.f);
-			Ghoul_ModeGuard_Setup("ghoul_scare", "BlockerGhoulLookAtArea_1", "BlockerGhoulEatArea_1", "eat_ground_close_sound", "Sound_GhoulCorpseDismember_1", "eat_ground_react_to_sound");
-			Ghoul_Mode_Set("ghoul_scare", eGhoulMode_Guard, true);
-			
-			FearHandler_SetCanGasp(false);
-			
-			Map_AddTimer("Timer_GhoulSounds", 3.f, "OnTimer_GhoulSounds");
-			return false;
-		}
-		
-		//-------------------------------------------------------
-		
-		void OnTimer_GhoulSounds(const tString &in asTimer)
-		{
-			Sound_Play("Sound_GhoulSounds", 0.f);
-			Map_RestartCurrentTimer(cMath_RandRectf(8.f, 12.f));
-		}
-		
-		//-------------------------------------------------------
-		
-		bool OnCollide_GhoulScare(const tString &in asParent, const tString &in asChild, int alState)
-		{
-			Map_RemoveTimer("Timer_GhoulSounds");
-			Sound_Stop("Sound_GhoulSounds", 0.f);
-			
-			Sound_Play("Sound_Ghoul_Notice", 0.f);
-			Ghoul_CommandGoToSpecificHole_Execute("ghoul_scare", "GhoulHole_Scare", true, false, true, eGhoulSpeed_Run, "OnEnterHole_GhoulHole_Scare");
-			return false;
-		}
-		
-		//-------------------------------------------------------
-		
-		void OnEnterHole_GhoulHole_Scare(const tString &in asEntity)
-		{
-			FearHandler_SetCanGasp(true);
-			Entity_SetActive("FearRate_1", false);
-		}
-		
-		//-------------------------------------------------------
-
-		//} END Event *GHOUL SCARE*
-		
-		/////////////////////////////////////////
-		// Event D *AFTER GHOUL SCARE*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 4, Event D here.*/
-
-		//-------------------------------------------------------
-		
-		/*Put any functions that are only used in Scene 4, Event D here.*/
-		
-//		Sound_Play("Sound_Animals", 0.f);
-		
-		//-------------------------------------------------------
-
-		//} END Event *AFTER GHOUL SCARE*
-		
-		/////////////////////////////////////////
-		// Event E *PLAYER ENTERS CANYON*
-		//{//////////////////////////////////////
-
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 4, Event E here.*/
-
-		//-------------------------------------------------------
-		
-		/*Put any functions that are only used in Scene 4, Event E here.*/
-		
-		//-------------------------------------------------------
-
-		//} END Event *PLAYER ENTERS CANYON*
-		
-	//} END SCENE 4
-	
-	/////////////////////////////////////////////////////////////////////////////////////////
-	// ===============
-	// SCENE 5 *CHASM*
-	// ===============
-	//{//////////////////////////////////////////////////////////////////////////////////////
  
 		/////////////////////////////////////////
 		// General
