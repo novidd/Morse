@@ -31,7 +31,7 @@
 /*This is also the place for enums and classes, but these should be avoided whenever possible*/
 
 // Variables
-const float mfGlobalMusicVolume = 0.1f;
+const float mfGlobalMusicVolume = 0.15f;
 
 //--------------------------------------------------
  
@@ -212,7 +212,7 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test1) // Start area amb
 		{
-			Music_PlayExt("A2_1_1_Crash_Wake", true, mfGlobalMusicVolume, 1, 4.f, 0, eMusicPrio_BgAmb, false);
+			Music_Play("A2_04_01_Town_Enter", mfGlobalMusicVolume, false, eMusicPrio_BgAmb);
 		}
 		
 		if (alAction == eAction_Test2)
@@ -425,6 +425,60 @@ class cScrMap : iScrMap
 		//} END Event *INTRO SEQUENCE*
 	 
 	//} END SCENE 1
+	
+	/////////////////////////////////////////////////////////////////////////////////////////
+	// ==============
+	// SCENE 2 *CANYON*
+	// ==============
+	//{//////////////////////////////////////////////////////////////////////////////////////
+ 
+		/////////////////////////////////////////
+		// General
+		//{//////////////////////////////////////
+		 
+		//-------------------------------------------------------
+	 
+		/*Put any variables that are used by many events in Scene 2 here.*/
+		
+		//-------------------------------------------------------
+	 
+		/*Put any functions that are used in more than one event in Scene 2 here.*/
+		
+		//-------------------------------------------------------
+		
+		//} END General
+	 
+		/////////////////////////////////////////
+		// Event A *PLAYER INTERACTS WITH PLAGUE HOUSE NOTE*
+		//{//////////////////////////////////////
+		
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 2, Event A here.*/
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 2, Event A here.*/
+		
+		//play A2_2_1_Wake_Amb
+
+		//} END Event *PLAYER INTERACTS WITH HOUSE NOTE*
+		
+		/////////////////////////////////////////
+		// Event B *PLAYER INTERACTS WITH PLAGUE HOUSE DOOR*
+		//{//////////////////////////////////////
+		
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 2, Event B here.*/
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 2, Event B here.*/
+
+		//} END Event *PLAYER INTERACTS WITH PLAGUE HOUSE DOOR*
+	 
+	//} END SCENE 2
 	
  
 		/////////////////////////////////////////

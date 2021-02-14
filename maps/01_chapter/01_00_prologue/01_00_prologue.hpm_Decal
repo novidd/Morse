@@ -1,6 +1,8 @@
 <HPLMapTrack_Decal ID="2AA9DCBFF955507F91E452D835F6BCF1C5288D5" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
-        <FileIndex_Decals NumOfFiles="0" />
+        <FileIndex_Decals NumOfFiles="1">
+            <File Id="0" Path="textures/decals/dreams/dream_park_path.mat" />
+        </FileIndex_Decals>
         <Objects />
     </Section>
 </HPLMapTrack_Decal>
