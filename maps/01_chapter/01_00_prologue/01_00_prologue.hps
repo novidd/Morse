@@ -30,6 +30,11 @@
 /*Place any global values here. These must be const variables as they will not be saved*/
 /*This is also the place for enums and classes, but these should be avoided whenever possible*/
 
+enum eProloguePermaFail
+{
+	eProloguePermaFail_PlagueHouse
+};
+
 // Variables
 const float mfGlobalMusicVolume = 0.15f;
 
@@ -109,11 +114,18 @@ class cScrMap : iScrMap
 		
 		// Entity
 		
+		mlPermaFailStage = eProloguePermaFail_PlagueHouse;
+		
 		/////////////////////////
 		// Debug
 		if(cLux_ScriptDebugOn())
 		{
 			mbStartIntro = false;
+			
+			if (!mbStartIntro)
+			{
+				Music_PlayExt("01_00_cosmos", true, mfGlobalMusicVolume, 1, 3.f, 0, eMusicPrio_BgAmb, true);
+			}
 			
 			if (ItemType_GetCountInInventory("Lantern") < 1)
 			{
@@ -166,36 +178,44 @@ class cScrMap : iScrMap
 	// The player has died.
 	void OnPlayerKilled(int alRecentDeaths, const tString&in asSource)
 	{
-		
+		Debug_Log("PLAYER KILLED BY "+asSource);
 	}
 	
 	//-------------------------------------------------------
 	
-	////////////////////////////////////
-	// Called when player HP reaches 0
-	bool OnDeath(const tString &in asSource)
+	/////////////////////////////////////////
+	// PERMAFAIL
+	//{//////////////////////////////////////
+	
+	int mlPermaFailStage = eProloguePermaFail_PlagueHouse;
+	
+	bool OnCollide_Player_SetPermaFail(const tString &in asParent, const tString &in asChild, int alState)
 	{
-		cLux_AddTodoMessage("DEAD : SOURCE = " + asSource);
+		if (alState != 1) return true;
 		
-		if (asSource == "SomeReason")
+//		if (asParent == "Trigger_SetPermaFail_X")			mlPermaFailStage = eProloguePermaFail_X;
+//		else if (asParent == "Trigger_SetPermaFail_X") 		mlPermaFailStage = eProloguePermaFail_X;
+	
+		return true;
+	}
+	
+	bool OnPermaFail()
+	{	
+		switch (mlPermaFailStage)
 		{
-			Effect_Fade_Out(1.0f);
-			return true; // return true to completely override base behaviour
+			case eProloguePermaFail_PlagueHouse:		PermaFail_Default("PlagueHouse_*"); 	return true;
+//			case eProloguePermaFail_X:			PermaFail_Default("Storage_*"); 		return true;
 		}
-		
-		// return false for default behaviour
-		return false;
+
+		return true;
 	}
 	
-	//-------------------------------------------------------
-	
-	////////////////////////////////////
-	// Called when player should respawn (after death)
-	bool OnRespawn(const tString &in asSource)
-	{		
-		// return false for default behaviour (fadeout and death area)
-		return false;
+	void PermaFail_Default(const tString &in asArea)
+	{
+		FearHandler_SetPermaFailRespawnArea("PermaFail_"+asArea);
 	}
+	
+	//} END PERMAFAIL
 
 	//-------------------------------------------------------
 
@@ -212,7 +232,7 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test1) // Start area amb
 		{
-			Music_Play("A2_04_01_Town_Enter", mfGlobalMusicVolume, false, eMusicPrio_BgAmb);
+			
 		}
 		
 		if (alAction == eAction_Test2)
@@ -351,7 +371,7 @@ class cScrMap : iScrMap
 				
 				Sound_FadeGlobalVolume(0.f, 0.f, eSoundEntryType_World);
 				
-				Music_Play("01_00_cosmos", mfGlobalMusicVolume, false, eMusicPrio_SceneAmb);
+				Music_PlayExt("01_00_cosmos", true, mfGlobalMusicVolume, 1, 3.f, 0, eMusicPrio_BgAmb, true);
 			}
 			else if (Sequence_DoStepAndWait(47.f))
 			{
@@ -444,6 +464,47 @@ class cScrMap : iScrMap
 	 
 		/*Put any functions that are used in more than one event in Scene 2 here.*/
 		
+		bool OnCollide_FallingDeath(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			if (alState != 1) return true;
+			if (FearHandler_GetIsPermaFailing()) return true;
+			
+			if (asChild == "Player")
+			{
+				Voice_StopAll();
+				Debug_Log("FALL");
+				Effect_Fade_Out(0.1f);
+				Map_AddTimer("Timer_FallImpact", 1.f, "OnTimer_FallImpact");
+				Map_SetTimerUserVarString("Timer_FallImpact", asChild);
+			}
+			else
+			{
+				Map_AddTimer("Timer_DeactivateFallingEntity", 5.f, "OnTimer_DeactivateFallingEntity");	
+				Map_SetTimerUserVarString("Timer_DeactivateFallingEntity", asChild);
+			}			
+			return true;
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnTimer_FallImpact(const tString &in asTimer)
+		{
+			Debug_Log("TRIGGER DEATH");
+			mlPermaFailStage = eProloguePermaFail_PlagueHouse;
+			FearHandler_TriggerPermaFail_Fall();
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnTimer_DeactivateFallingEntity(const tString &in asTimer)
+		{
+			tString sEnt = Map_GetTimerUserVarString(asTimer);
+			if (!Entity_Exists(sEnt)) return;
+
+			Debug_Log(sEnt+" deactivated after falling");
+			Entity_SetActive(sEnt,false);
+		}
+		
 		//-------------------------------------------------------
 		
 		//} END General
@@ -460,7 +521,19 @@ class cScrMap : iScrMap
 
 		/*Put any functions that are only used in Scene 2, Event A here.*/
 		
-		//play A2_2_1_Wake_Amb
+		void OnPlayerInteract_NotePlagueHouse(const tString &in asEntity)
+		{
+			Music_PlayExt("A2_2_1_Wake_Amb", true, mfGlobalMusicVolume, 1, 3.f, 0, eMusicPrio_SceneAmb, false);
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnClose_Note(const tString &in asEntity)
+		{
+			Music_Stop(3.f, eMusicPrio_SceneAmb);
+		}
+		
+		//-------------------------------------------------------
 
 		//} END Event *PLAYER INTERACTS WITH HOUSE NOTE*
 		
@@ -475,9 +548,32 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 
 		/*Put any functions that are only used in Scene 2, Event B here.*/
-
+		
+		void OnPlayerInteract_PlagueDoor(const tString &in asEntity)
+		{
+			
+		}
+		
+		//-------------------------------------------------------
+		
 		//} END Event *PLAYER INTERACTS WITH PLAGUE HOUSE DOOR*
-	 
+		
+		/////////////////////////////////////////
+		// Event C *SANDSTORM*
+		//{//////////////////////////////////////
+		
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 2, Event B here.*/
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 2, Event B here.*/
+		
+		//-------------------------------------------------------
+		
+		//} END Event *SANDSTORM*
+		
 	//} END SCENE 2
 	
  
