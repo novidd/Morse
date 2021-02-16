@@ -45,4 +45,7 @@ MAPS:
 			 * Add vo throughout the level.
 			 * Use 01_02_caves/sweeteners/far/critters for creepy noises in the distance.
 			 * When player is about to walk in front of the staircase to the ghoul room, make a ghoul walk in front of a
-			   spotlight that casts shadows. (spotlight is there because there is a source of light in the room). 
+			   spotlight that casts shadows. (spotlight is there because there is a source of light in the room).
+			   
+				// Use this function to set color grading when player enters/leaves the sandstorm
+				//Effect_ToneMapping_FadeWorldGrading("grading_default", 0.0f);
