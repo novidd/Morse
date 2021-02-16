@@ -7,7 +7,7 @@
             <Sound ID="268435636" Name="Sound_Tree_3" CreStamp="1613314775" ModStamp="1613322694" WorldPos="-6.95644 150.715 3.23182" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="02_06_oasis/enviroment/reeds" MinDistance="1" MaxDistance="10" Volume="0.8" Active="true" UseCustomProperties="true" UID="16 61 268435636" />
             <Sound ID="268435637" Name="Sound_Grass_1" CreStamp="1613322592" ModStamp="1613322672" WorldPos="-16.6767 148.491 0.19741" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="02_06_oasis/enviroment/reeds" MinDistance="1" MaxDistance="6" Volume="0.3" Active="true" UseCustomProperties="true" UID="16 138 268435637" />
             <Sound ID="268435638" Name="Sound_Grass_2" CreStamp="1613322700" ModStamp="1613322712" WorldPos="-6.40234 145.155 1.53273" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="02_06_oasis/enviroment/reeds" MinDistance="1" MaxDistance="6" Volume="0.3" Active="true" UseCustomProperties="true" UID="16 140 268435638" />
-            <Sound ID="268435639" Name="Sound_VultureFly" CreStamp="1613473675" ModStamp="1613480231" WorldPos="29.2551 145.712 7.13922" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="01_01_wreckage/events/vulture/vulture_fly" MinDistance="1" MaxDistance="25" Volume="1" Active="false" UseCustomProperties="true" UID="16 71 268435639" />
+            <Sound ID="268435639" Name="Sound_VultureFly" CreStamp="1613473675" ModStamp="1613510544" WorldPos="29.2551 145.712 7.13922" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="01_01_wreckage/events/vulture/vulture_fly" MinDistance="1" MaxDistance="50" Volume="1" Active="false" UseCustomProperties="true" UID="16 71 268435639" />
         </Objects>
     </Section>
 </HPLMapTrack_Sound>
