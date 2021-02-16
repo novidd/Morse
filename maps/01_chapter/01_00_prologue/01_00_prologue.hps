@@ -113,6 +113,7 @@ class cScrMap : iScrMap
 		Item_AddManyToInventory("Matchbook", 10);
 		
 		// Entity
+		Entity_PlayAnimation("Vulture", "eating_idle", .1f, true, true, "", false, false);
 		
 		mlPermaFailStage = eProloguePermaFail_PlagueHouse;
 		
@@ -169,7 +170,7 @@ class cScrMap : iScrMap
 	// Runs on every frame
 	void Update(float afTimeStep)
 	{
-		
+		UpdateSandstorm();
 	}
 	
 	//-------------------------------------------------------
@@ -501,8 +502,8 @@ class cScrMap : iScrMap
 			tString sEnt = Map_GetTimerUserVarString(asTimer);
 			if (!Entity_Exists(sEnt)) return;
 
-			Debug_Log(sEnt+" deactivated after falling");
-			Entity_SetActive(sEnt,false);
+			Debug_Log(sEnt + " deactivated after falling");
+			Entity_SetActive(sEnt, false);
 		}
 		
 		//-------------------------------------------------------
@@ -569,6 +570,44 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 
 		/*Put any functions that are only used in Scene 2, Event B here.*/
+		
+		bool OnCollide_StartSandstorm(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			cLux_AddDebugMessage("Vulture flies away...");
+			
+			Entity_PlayAnimation("Vulture", "grave_fly_away", 1.f, false, true, "OnAnimEnd_DisableVulture", false, false);
+			Sound_Play("Sound_VultureFly", 0.f);
+			
+			Map_AddTimer("Timer_StartSandstorm", 6.f, "OnTimer_StartSandstorm");
+			Map_SetTimerUserVarString("Timer_StartSandstorm", asParent);
+			return false;
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnTimer_StartSandstorm(const tString &in asTimer)
+		{
+			cLux_AddDebugMessage("Sandstorm starting...");
+			tString sCollideArea = Map_GetTimerUserVarString(asTimer);
+			Entity_SetVarBool(sCollideArea, "", true);
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnAnimEnd_DisableVulture(const tString &in asEntityName, const tString &in asAnimName)
+		{
+			Entity_SetActive(asEntityName, false);
+		}
+		
+		//-------------------------------------------------------
+		//Map_SetSkyBoxTexture("skybox_town.dds");
+		void UpdateSandstorm()
+		{
+			if (Entity_GetVarBool("Trigger_StartSandstorm", ""))
+			{
+				cLux_AddDebugMessage("updating sandstorm...");
+			}
+		}
 		
 		//-------------------------------------------------------
 		
