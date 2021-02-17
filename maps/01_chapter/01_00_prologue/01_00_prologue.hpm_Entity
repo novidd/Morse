@@ -1324,7 +1324,7 @@
                     <Var ObjectId="268435494" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435495" Name="scatter_rock02_shatter_1" CreStamp="1613480689" ModStamp="1613481128" WorldPos="-19.239 148.369 -6.10635" Rotation="0 0.87737 0" Scale="0.75 0.75 0.75" FileIndex="38" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 70 268435495">
+            <Entity ID="268435495" Name="rock_2" CreStamp="1613480689" ModStamp="1613519208" WorldPos="-19.239 148.369 -6.10635" Rotation="0 0.87737 0" Scale="0.75 0.75 0.75" FileIndex="38" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 70 268435495">
                 <UserVariables>
                     <Var ObjectId="268435495" Name="Note" Value="" />
                     <Var ObjectId="268435495" Name="EventInstanceTag" Value="" />
@@ -1390,7 +1390,7 @@
                     <Var ObjectId="268435495" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435496" Name="scatter_rock04_1" CreStamp="1613480697" ModStamp="1613481128" WorldPos="-19.0419 148.35 -5.93879" Rotation="-0 3.84687 -0" Scale="0.5 0.5 0.5" FileIndex="102" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 66 268435496">
+            <Entity ID="268435496" Name="rock_3" CreStamp="1613480697" ModStamp="1613519211" WorldPos="-19.0419 148.35 -5.93879" Rotation="-0 3.84687 -0" Scale="0.5 0.5 0.5" FileIndex="102" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 66 268435496">
                 <UserVariables>
                     <Var ObjectId="268435496" Name="Note" Value="" />
                     <Var ObjectId="268435496" Name="EventInstanceTag" Value="" />
@@ -1456,7 +1456,7 @@
                     <Var ObjectId="268435496" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435497" Name="scatter_rock01_1" CreStamp="1613480756" ModStamp="1613481128" WorldPos="-18.9439 148.466 -6.32099" Rotation="1.61781 -0.643659 0.0110187" Scale="0.5 0.5 0.5" FileIndex="37" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 68 268435497">
+            <Entity ID="268435497" Name="rock_6" CreStamp="1613480756" ModStamp="1613519240" WorldPos="-18.9439 148.466 -6.32099" Rotation="1.61781 -0.643659 0.0110187" Scale="0.5 0.5 0.5" FileIndex="37" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 68 268435497">
                 <UserVariables>
                     <Var ObjectId="268435497" Name="Note" Value="" />
                     <Var ObjectId="268435497" Name="EventInstanceTag" Value="" />
@@ -1522,7 +1522,7 @@
                     <Var ObjectId="268435497" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435498" Name="scatter_rock02_2" CreStamp="1613480831" ModStamp="1613481128" WorldPos="-19.0709 148.713 -5.98264" Rotation="-3.07564 -0.783217 -0.0933413" Scale="0.5 0.5 0.5" FileIndex="38" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 67 268435498">
+            <Entity ID="268435498" Name="rock_4" CreStamp="1613480831" ModStamp="1613519215" WorldPos="-19.0709 148.713 -5.98264" Rotation="-3.07564 -0.783217 -0.0933413" Scale="0.5 0.5 0.5" FileIndex="38" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 67 268435498">
                 <UserVariables>
                     <Var ObjectId="268435498" Name="Note" Value="" />
                     <Var ObjectId="268435498" Name="EventInstanceTag" Value="" />
@@ -1588,7 +1588,7 @@
                     <Var ObjectId="268435498" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435499" Name="scatter_rock04_2" CreStamp="1613480867" ModStamp="1613481128" WorldPos="-19.2562 148.583 -6.16146" Rotation="0.963434 0.784119 0.0712909" Scale="0.35 0.35 0.35" FileIndex="102" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 69 268435499">
+            <Entity ID="268435499" Name="rock_1" CreStamp="1613480867" ModStamp="1613519204" WorldPos="-19.2562 148.583 -6.16146" Rotation="0.963434 0.784119 0.0712909" Scale="0.35 0.35 0.35" FileIndex="102" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 69 268435499">
                 <UserVariables>
                     <Var ObjectId="268435499" Name="Note" Value="" />
                     <Var ObjectId="268435499" Name="EventInstanceTag" Value="" />
@@ -1654,7 +1654,7 @@
                     <Var ObjectId="268435499" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435500" Name="scatter_rock02_3" CreStamp="1613480913" ModStamp="1613481128" WorldPos="-19.152 148.794 -6.05694" Rotation="3.13538 2.8869 0.10908" Scale="0.3 0.3 0.3" FileIndex="38" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 65 268435500">
+            <Entity ID="268435500" Name="rock_5" CreStamp="1613480913" ModStamp="1613519220" WorldPos="-19.152 148.794 -6.05694" Rotation="3.13538 2.8869 0.10908" Scale="0.3 0.3 0.3" FileIndex="38" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 65 268435500">
                 <UserVariables>
                     <Var ObjectId="268435500" Name="Note" Value="" />
                     <Var ObjectId="268435500" Name="EventInstanceTag" Value="" />

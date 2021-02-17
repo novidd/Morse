@@ -103,7 +103,7 @@
                     <Var ObjectId="268435461" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435462" Name="Trigger_FallingDeath" CreStamp="1613408911" ModStamp="1613495562" WorldPos="25.594 130 18.609" Rotation="0 -0.261799 0" Scale="125 1 125" Active="true" Mesh="" UID="16 101 268435462" AreaType="Trigger">
+            <Area ID="268435462" Name="Trigger_FallingDeath" CreStamp="1613408911" ModStamp="1613519280" WorldPos="25.594 130 18.609" Rotation="0 -0.261799 0" Scale="125 1 125" Active="true" Mesh="" UID="16 101 268435462" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435462" Name="Note" Value="" />
                     <Var ObjectId="268435462" Name="BlocksLineOfSight" Value="false" />
@@ -112,7 +112,7 @@
                     <Var ObjectId="268435462" Name="Static" Value="false" />
                     <Var ObjectId="268435462" Name="QuickSave" Value="false" />
                     <Var ObjectId="268435462" Name="FullGameSave" Value="false" />
-                    <Var ObjectId="268435462" Name="CC_Entities" Value="player" />
+                    <Var ObjectId="268435462" Name="CC_Entities" Value="player rock_*" />
                     <Var ObjectId="268435462" Name="CC_Funcs" Value="OnCollide_FallingDeath" />
                     <Var ObjectId="268435462" Name="ParentAttachEntity" Value="" />
                     <Var ObjectId="268435462" Name="ParentAttachUseRotation" Value="true" />
@@ -159,7 +159,7 @@
                     <Var ObjectId="268435463" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435464" Name="interactdoorafterstorm" CreStamp="1613431041" ModStamp="1613431061" WorldPos="-4.25868 146.172 -2.13783" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 88 268435464" AreaType="Trigger">
+            <Area ID="268435464" Name="interactdoorplaguenotice" CreStamp="1613431041" ModStamp="1613518668" WorldPos="-4.25868 146.172 -2.13783" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 88 268435464" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435464" Name="Note" Value="" />
                     <Var ObjectId="268435464" Name="BlocksLineOfSight" Value="false" />
@@ -185,6 +185,41 @@
                     <Var ObjectId="268435464" Name="CanInteractWithoutCallback" Value="false" />
                     <Var ObjectId="268435464" Name="MaxFocusDistance" Value="-1" />
                     <Var ObjectId="268435464" Name="CustomInteractIcon" Value="Default" />
+                </UserVariables>
+            </Area>
+            <Area ID="268435692" Name="maxshadowdistance" CreStamp="1613518407" ModStamp="1613518477" WorldPos="42.5743 140 -61.669" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 211 268435692" AreaType="Trigger">
+                <UserVariables>
+                    <Var ObjectId="268435692" Name="Note" Value="" />
+                    <Var ObjectId="268435692" Name="BlocksLineOfSight" Value="false" />
+                    <Var ObjectId="268435692" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268435692" Name="UserVar" Value="" />
+                    <Var ObjectId="268435692" Name="Static" Value="false" />
+                    <Var ObjectId="268435692" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268435692" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268435692" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268435692" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268435692" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268435692" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268435692" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268435692" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="268435692" Name="PlayerLookAtCallback" Value="" />
+                    <Var ObjectId="268435692" Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                    <Var ObjectId="268435692" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
+                    <Var ObjectId="268435692" Name="PlayerLookAtCheckRayIntersection" Value="true" />
+                    <Var ObjectId="268435692" Name="PlayerLookAtMaxDistance" Value="-1" />
+                    <Var ObjectId="268435692" Name="PlayerLookAtCallbackDelay" Value="0" />
+                    <Var ObjectId="268435692" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268435692" Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268435692" Name="CanInteractWithoutCallback" Value="false" />
+                    <Var ObjectId="268435692" Name="MaxFocusDistance" Value="-1" />
+                    <Var ObjectId="268435692" Name="CustomInteractIcon" Value="Default" />
+                </UserVariables>
+            </Area>
+            <Area ID="268435693" Name="PermaFail_PlagueHouse_2" CreStamp="1613518620" ModStamp="1613518632" WorldPos="5.52618 145.652 4.82404" Rotation="-0 2.39972 -0" Scale="0.5 1.5 0.5" Active="true" Mesh="" UID="16 243 268435693" AreaType="PermaFail">
+                <UserVariables>
+                    <Var ObjectId="268435693" Name="Note" Value="" />
+                    <Var ObjectId="268435693" Name="Crouch" Value="false" />
+                    <Var ObjectId="268435693" Name="WakeUpAnim" Value="wake_up_from_permafail_var2" />
                 </UserVariables>
             </Area>
         </Objects>

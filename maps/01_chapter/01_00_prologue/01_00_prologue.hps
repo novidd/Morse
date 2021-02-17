@@ -355,7 +355,7 @@ class cScrMap : iScrMap
 			Sequence_Begin("Seq_Intro", mSeqIntro);
 			if (Sequence_DoStepAndWait(1.f))
 			{
-				cLux_AddDebugMessage("Intro Sequence starting...");
+				Debug_Log("Intro Sequence starting...");
 				
 				Map_SetSkyBoxTexture("skybox_moonlight.dds");
 				Map_SetSkyBoxColor(cColor(1,1,1,1));
@@ -386,8 +386,7 @@ class cScrMap : iScrMap
 			{
 				Player_FadeFOVToDefault(100.f);
 				
-				Map_SetSkyBoxTexture("skybox_courtyard.dds");
-//				Map_SetSkyBoxColor(cColor(0.764,0.642,0.549,1));
+				Map_SetSkyBoxTexture("skybox_town.dds");
 
 				Player_Teleport("Start_WakeUp");
 				Player_StopLookAt(0);
@@ -416,10 +415,6 @@ class cScrMap : iScrMap
 			}
 			else if (Sequence_DoStepAndWait(.5f))
 			{
-//				PlayerBody_PlayCutsceneAtEntity("wake_up_from_death_2", "PosArea_WakeUpAnim", false, .1f, "OnAnimEnd_RunShowMatchHintTimer", 1.f);
-//				PlayerBody_SetCutsceneMaxPitch(5.f);
-//				PlayerBody_SetCutsceneMaxYaw(5.f);
-				
 				Player_SetNightVisionBrightness(.25f);
 			}
 			else if (Sequence_DoStepAndWait(2.f))
@@ -552,7 +547,7 @@ class cScrMap : iScrMap
 		
 		void OnPlayerInteract_PlagueDoor(const tString &in asEntity)
 		{
-			
+			Debug_Log("Player interacted with plague house door... playing vo...");
 		}
 		
 		//-------------------------------------------------------
@@ -573,7 +568,7 @@ class cScrMap : iScrMap
 		
 		bool OnCollide_VultureFly(const tString &in asParent, const tString &in asChild, int alState)
 		{
-			cLux_AddDebugMessage("Vulture flies away...");
+			Debug_Log("Vulture flies away...");
 			
 			Entity_PlayAnimation("Vulture", "grave_fly_away", 1.f, false, true, "OnAnimEnd_DisableVulture", false, false);
 			Sound_Play("Sound_VultureFly", 0.f);

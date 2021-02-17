@@ -10,9 +10,7 @@ STORY:
 	These caves hold ruins of an ancient civilzation called [REDACTED]. There is a creature roaming, the ghûl.
 
 GENERAL:
-	
-	Sand hex color: 987E5CFF;
-	
+
 	TODO:
 	 * In the loading screens ask the player personal questions (refer to them as "you").
 	 * Have miscellaneous stats in the credits at end of mod.
@@ -20,15 +18,10 @@ GENERAL:
 	  * notes
 	  * items
 	  * interactable entities
-	  
-		Map_GetEntity("Entity").GetMeshEntity().GetAnimationStateFromName("AnimationName").SetSpeed(0.f);
-		Map_GetEntity("Entity").GetMeshEntity().GetAnimationStateFromName("AnimationName").SetRelativeTimePosition(0.001f);
 		
 	MODULES:
 	 * (NOT NECESSARY) Create a fire damage module, that checks if the player is inside of a trigger area ("FirePlayerDamage_X") use Entity_GetCollide(), 
 	   to get all the trigger areas use Map_GetEntityArray().
-	 * (NOT NECESSARY) Create a "weight grab module", that changes player movement speed depending on entity that is in players hands.
-	   Use Map_GetEntity("Entity").GetBody().GetMass() to get entities mass? Use PlayerHands_GetEntityName(); to get entity in players hand?
  
 MAPS:
 
@@ -36,16 +29,11 @@ MAPS:
 
 		LEVEL:
 			TODO:
-			 * Add fog for the open outdoor areas. Use fog areas?
-			 * Add critters throughout the level.
-			 * Add floor bumps along the caves.
+
 			 
 		SCRIPTS:
 			TODO:
 			 * Add vo throughout the level.
-			 * Use 01_02_caves/sweeteners/far/critters for creepy noises in the distance.
-			 * When player is about to walk in front of the staircase to the ghoul room, make a ghoul walk in front of a
-			   spotlight that casts shadows. (spotlight is there because there is a source of light in the room).
 			   
 				// Use this function to set color grading when player enters/leaves the sandstorm
 				//Effect_ToneMapping_FadeWorldGrading("grading_default", 0.0f);
