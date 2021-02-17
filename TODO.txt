@@ -18,6 +18,7 @@ GENERAL:
 	  * notes
 	  * items
 	  * interactable entities
+	 * Maybe have a sand monster in a later level? Like the Half Life 2 sequence but more linear.
 		
 	MODULES:
 	 * (NOT NECESSARY) Create a fire damage module, that checks if the player is inside of a trigger area ("FirePlayerDamage_X") use Entity_GetCollide(), 
@@ -29,7 +30,7 @@ MAPS:
 
 		LEVEL:
 			TODO:
-
+				* Old canyon wall y pos: 145.026
 			 
 		SCRIPTS:
 			TODO:

@@ -11,7 +11,7 @@
 void Stamina_SetStaminaSystemActive(bool abActive = true)
 {
 	cScript_SetGlobalArgBool(0, abActive);
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_SetStaminaSystemActive");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_SetStaminaSystemActive");
 }
 	
 //-------------------------------------------------------
@@ -23,7 +23,7 @@ void Stamina_SetStaminaSystemActive(bool abActive = true)
 **/
 bool Stamina_GetStaminaSystemActive()
 {
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_GetStaminaSystemActive");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_GetStaminaSystemActive");
 	return cScript_GetGlobalReturnBool();
 }
 
@@ -37,7 +37,7 @@ bool Stamina_GetStaminaSystemActive()
 void Stamina_SetMaxStamina(float afX = 100.0f)
 {
 	cScript_SetGlobalArgFloat(0, afX);
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_SetMaxStamina");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_SetMaxStamina");
 }
 
 //-------------------------------------------------------
@@ -50,7 +50,7 @@ void Stamina_SetMaxStamina(float afX = 100.0f)
 
 float Stamina_GetMaxStamina()
 {
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_GetMaxStamina");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_GetMaxStamina");
 	return cScript_GetGlobalReturnFloat();
 }
 
@@ -64,7 +64,7 @@ float Stamina_GetMaxStamina()
 void Stamina_SetStamina(float afX = 100.0f)
 {
 	cScript_SetGlobalArgFloat(0, afX);
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_SetStamina");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_SetStamina");
 }
 
 //-------------------------------------------------------
@@ -76,7 +76,7 @@ void Stamina_SetStamina(float afX = 100.0f)
 **/
 float Stamina_GetStamina()
 {
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_GetStamina");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_GetStamina");
 	return cScript_GetGlobalReturnFloat();
 }
 
@@ -90,7 +90,7 @@ float Stamina_GetStamina()
 void Stamina_SetStaminaUsageMul(float afX = 1.0f)
 {
 	cScript_SetGlobalArgFloat(0, afX);
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_SetStaminaUsageMul");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_SetStaminaUsageMul");
 }
 
 //-------------------------------------------------------
@@ -102,7 +102,7 @@ void Stamina_SetStaminaUsageMul(float afX = 1.0f)
 **/
 float Stamina_GetStaminaUsageMul()
 {
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_GetStaminaUsageMul");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_GetStaminaUsageMul");
 	return cScript_GetGlobalReturnFloat();
 }
 
@@ -116,7 +116,7 @@ float Stamina_GetStaminaUsageMul()
 void Stamina_SetStaminaRegainMul(float afX = 0.25f)
 {
 	cScript_SetGlobalArgFloat(0, afX);
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_SetStaminaRegainMul");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_SetStaminaRegainMul");
 }
 
 //-------------------------------------------------------
@@ -128,7 +128,7 @@ void Stamina_SetStaminaRegainMul(float afX = 0.25f)
 **/
 float Stamina_GetStaminaRegainMul()
 {
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_GetStaminaRegainMul");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_GetStaminaRegainMul");
 	return cScript_GetGlobalReturnFloat();
 }
 
@@ -142,7 +142,7 @@ float Stamina_GetStaminaRegainMul()
 void Stamina_SetStaminaAffectRunSpeed(bool abActive = true)
 {
 	cScript_SetGlobalArgBool(0, abActive);
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_SetStaminaAffectRunSpeed");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_SetStaminaAffectRunSpeed");
 }
 
 //-------------------------------------------------------
@@ -154,7 +154,7 @@ void Stamina_SetStaminaAffectRunSpeed(bool abActive = true)
 **/
 bool Stamina_GetStaminaAffectRunSpeed()
 {
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_GetStaminaAffectRunSpeed");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_GetStaminaAffectRunSpeed");
 	return cScript_GetGlobalReturnBool();
 }
 
@@ -168,7 +168,7 @@ bool Stamina_GetStaminaAffectRunSpeed()
 void Stamina_SetRunningAffectStamina(bool abActive = true)
 {
 	cScript_SetGlobalArgBool(0, abActive);
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_SetRunningAffectStamina");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_SetRunningAffectStamina");
 }
 
 //-------------------------------------------------------
@@ -180,7 +180,7 @@ void Stamina_SetRunningAffectStamina(bool abActive = true)
 **/
 bool Stamina_GetRunningAffectStamina()
 {
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_GetRunningAffectStamina");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_GetRunningAffectStamina");
 	return cScript_GetGlobalReturnBool();
 }
 
@@ -194,7 +194,7 @@ bool Stamina_GetRunningAffectStamina()
 void Stamina_SetStaminaRegain(bool abActive = true)
 {
 	cScript_SetGlobalArgBool(0, abActive);
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_SetStaminaRegain");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_SetStaminaRegain");
 }
 
 //-------------------------------------------------------
@@ -206,7 +206,7 @@ void Stamina_SetStaminaRegain(bool abActive = true)
 **/
 bool Stamina_GetStaminaRegain()
 {
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_GetStaminaRegain");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_GetStaminaRegain");
 	return cScript_GetGlobalReturnBool();
 }
 
@@ -220,7 +220,7 @@ bool Stamina_GetStaminaRegain()
 void Stamina_SetStaminaDrain(bool abActive)
 {
 	cScript_SetGlobalArgBool(0, abActive);
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_SetStaminaDrain");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_SetStaminaDrain");
 }
 
 //-------------------------------------------------------
@@ -232,7 +232,7 @@ void Stamina_SetStaminaDrain(bool abActive)
 **/
 bool Stamina_GetStaminaDrain()
 {
-	cScript_RunGlobalFunc("StaminaHandler", "cScrStaminaHandler", "_Global_GetStaminaDrain");
+	cScript_RunGlobalFunc("MorseStaminaHandler", "cScrStaminaHandler", "_Global_GetStaminaDrain");
 	return cScript_GetGlobalReturnBool();
 }
 

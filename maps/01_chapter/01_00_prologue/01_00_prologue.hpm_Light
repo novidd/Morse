@@ -1,8 +1,15 @@
 <HPLMapTrack_Light ID="2AA9DCBFF955507F91E452D835F6BCF1C5288D5" MajorVersion="1" MinorVersion="1">
     <IrradianceSets>
         <Set Name="Default" Priority="0" LightBoost="1" MaxDistance="2000" BounceNum="3" Quality="Normal" UseFog="false" UseDepthOfField="true" UseSkybox="true" Preview="true" />
+        <Set Name="canyon" Priority="0" LightBoost="1" MaxDistance="2000" BounceNum="3" Quality="Normal" UseFog="false" UseDepthOfField="true" UseSkybox="true" Preview="true" />
     </IrradianceSets>
     <Section Name="570198258105585246">
-        <Objects />
+        <Objects>
+            <BoxLight ID="268435855" Name="Light_Box_1" CreStamp="1613588110" ModStamp="1613588261" WorldPos="9.637 142.6 -17.657" Rotation="0 0 0" Scale="1 1 1" CastShadows="false" ShadowResolution="High" ShadowsAffectStatic="true" ShadowsAffectDynamic="true" Radius="1" Gobo="" GoboType="Diffuse" GoboAnimMode="None" GoboAnimFrameTime="1" GoboAnimStartTime="0" DiffuseColor="1 1 1 1" FlickerActive="false" FlickerOnMinLength="0" FlickerOnMaxLength="0" FlickerOnPS="" FlickerOnSound="" FlickerOffMinLength="0" FlickerOffMaxLength="0" FlickerOffPS="" FlickerOffSound="" FlickerOffColor="0 0 0 1" FlickerOffRadius="0" FlickerFade="false" FlickerOnFadeMinLength="0" FlickerOnFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffFadeMaxLength="0" CastDiffuseLight="true" CastSpecularLight="true" Brightness="10" Static="false" CulledByDistance="true" CulledByFog="true" BlendFunc="2" Size="6.5 6 6" GroundColor="1 1 1 0" SkyColor="1 1 1 0" Weight="1" Bevel="0.5" FalloffPow="0.5" UseSphericalHarmonics="true" ProbeOffset="0 0 0" ConnectedLightMaskID="4294967295" UID="16 333 268435855">
+                <Irradiance>
+                    <Set SetName="canyon">0.085516 0.030974 0.010345 -0.002096 -0.000882 -0.000519 -0.003354 -0.000742 -0.000122 -0.002904 -0.000282 0.000114 -0.001169 -0.000341 -0.000111 -0.000236 -0.000101 -0.000038 0.000882 0.000158 0.00001 -0.0021 -0.000261 0.000044 -0.000317 -0.000038 -0.000015</Set>
+                </Irradiance>
+            </BoxLight>
+        </Objects>
     </Section>
 </HPLMapTrack_Light>

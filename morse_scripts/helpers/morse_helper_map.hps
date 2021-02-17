@@ -27,3 +27,15 @@ tString Map_GetSkyboxTextureToString()
 //		iTexture@ pSkybox = cResources_CreateTextureCubeMap("environment_sandstorm.dds",true);
 //        cLux_GetCurrentMap().GetWorld().SetFogSkyboxTexture(pSkybox);
 }
+
+//void ExampleSetterFunc()
+//{
+//	cScript_SetGlobalArgBool(0, abActive);
+//	cScript_RunGlobalFunc("MorseMapHandler", "cScrMapHandler", "GLOBAL_SETTER_FUNC");
+//}
+
+//[type] ExampleGetterFunc()
+//{
+//	cScript_RunGlobalFunc("MorseMapHandler", "cScrMapHandler", "GLOBAL_GETTER_FUNC");
+//	return cScript_GetGlobalReturn[type]();
+//}
