@@ -584,7 +584,23 @@ class cScrMap : iScrMap
 
 		//-------------------------------------------------------
 		
-		//} END Event *SANDSTORM*
+		//} END Event *PLAYER MAKES VULTURE FLY AWAY*
+		
+		/////////////////////////////////////////
+		// Event D *PLAYER IS IN ALTAR ROOM*
+		//{//////////////////////////////////////
+		
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 2, Event D here.*/
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 2, Event D here.*/
+
+		//-------------------------------------------------------
+		
+		//} END Event *PLAYER ENTERS ALTAR ROOM*
 		
 	//} END SCENE 2
 }

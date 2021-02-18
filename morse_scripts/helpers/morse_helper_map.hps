@@ -20,13 +20,13 @@
 #include "custom/helpers/helper_modules_custom.hps"
 #include "custom/helpers/helper_props_custom.hps"
 
-tString Map_GetSkyboxTextureToString()
-{
+//tString Map_GetSkyboxTextureToString()
+//{
 //	cWorld@ pWorld = mBaseObj.GetWorld();
 //	pWorld.GetSkyBoxTexture();
 //		iTexture@ pSkybox = cResources_CreateTextureCubeMap("environment_sandstorm.dds",true);
 //        cLux_GetCurrentMap().GetWorld().SetFogSkyboxTexture(pSkybox);
-}
+//}
 
 //void ExampleSetterFunc()
 //{

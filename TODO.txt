@@ -35,6 +35,8 @@ MAPS:
 		SCRIPTS:
 			TODO:
 			 * Add vo throughout the level.
+			 * Use the entity corpse_sandmummy.ent (scale: 1.5) and place his head right above the sand and make its body rotate and look at player
+			   when player looks away or update its rotation constantly.
 			   
 				// Use this function to set color grading when player enters/leaves the sandstorm
 				//Effect_ToneMapping_FadeWorldGrading("grading_default", 0.0f);
