@@ -40,3 +40,5 @@ MAPS:
 			   
 				// Use this function to set color grading when player enters/leaves the sandstorm
 				//Effect_ToneMapping_FadeWorldGrading("grading_default", 0.0f);
+				
+				Old directional light: 0 -0.255 -0.946
