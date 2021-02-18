@@ -1,6 +1,6 @@
 <HPLMapTrack_Entity ID="2AA9DCBFF955507F91E452D835F6BCF1C5288D5" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
-        <FileIndex_Entities NumOfFiles="123">
+        <FileIndex_Entities NumOfFiles="128">
             <File Id="0" Path="entities/french_colonization/ornaments/french_tent/french_tent_sway.ent" />
             <File Id="1" Path="entities/french_colonization/ornaments/french_tent_semi_collapsed/french_tent_semi-collapsed.ent" />
             <File Id="2" Path="entities/french_colonization/ornaments/french_tent_collapsed/french_tent_collapsed.ent" />
@@ -124,6 +124,11 @@
             <File Id="120" Path="entities/nonexclusive/organic/bones/bone_thigh.ent" />
             <File Id="121" Path="entities/nonexclusive/organic/bones/bone_skull_fractured_01.ent" />
             <File Id="122" Path="entities/nonexclusive/organic/corpses/corpse_sandmummy.ent" />
+            <File Id="123" Path="entities/nonexclusive/organic/bones/bone_skull_fractured_02.ent" />
+            <File Id="124" Path="entities/nonexclusive/organic/bones/bone_ribcage_fractured_static.ent" />
+            <File Id="125" Path="entities/nonexclusive/organic/bones/bone_skull_fractured_01_rigid.ent" />
+            <File Id="126" Path="entities/nonexclusive/organic/bones/bone_thigh_rigid.ent" />
+            <File Id="127" Path="entities/nonexclusive/organic/bones/bone_ribcage_fractured_rigid.ent" />
         </FileIndex_Entities>
         <Objects>
             <Entity ID="268435468" Name="french_tent_sway_2" CreStamp="1613311746" ModStamp="1613312697" WorldPos="-6.05685 146.651 4.31551" Rotation="0.0523216 0.42643 3.11529" Scale="1 1 1" FileIndex="3" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 41 268435468">
@@ -1753,7 +1758,7 @@
                     <Var ObjectId="268435766" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435769" Name="statue_pilgrim_tin_hinan_1" CreStamp="1613661972" ModStamp="1613666114" WorldPos="8.80603 141.795 -17.8488" Rotation="-0.0203961 1.13759 -0.0213353" Scale="1.5 1.5 1.5" FileIndex="28" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 353 268435769">
+            <Entity ID="268435769" Name="statue_pilgrim_tin_hinan_1" CreStamp="1613661972" ModStamp="1613668792" WorldPos="8.80603 141.795 -17.8488" Rotation="-0.0192267 1.10928 -0.0200385" Scale="1.5 1.5 1.5" FileIndex="28" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 353 268435769">
                 <UserVariables>
                     <Var ObjectId="268435769" Name="Note" Value="" />
                     <Var ObjectId="268435769" Name="EventInstanceTag" Value="" />
@@ -2279,7 +2284,7 @@
                     <Var ObjectId="268435818" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435819" Name="matchbook_1" CreStamp="1613666946" ModStamp="1613666946" WorldPos="9.74324 141.125 -17.0742" Rotation="0 -5.23599 0" Scale="1 1 1" FileIndex="119" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 375 268435819">
+            <Entity ID="268435819" Name="matchbook_1" CreStamp="1613666946" ModStamp="1613668297" WorldPos="8.666 141.856 -17.4555" Rotation="-2.5442 1.58164 -1.07718" Scale="1 1 1" FileIndex="119" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 375 268435819">
                 <UserVariables>
                     <Var ObjectId="268435819" Name="Note" Value="" />
                     <Var ObjectId="268435819" Name="EventInstanceTag" Value="" />
@@ -2340,11 +2345,11 @@
                     <Var ObjectId="268435819" Name="Highlight" Value="true" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435820" Name="bone_thigh_1" CreStamp="1613666979" ModStamp="1613666979" WorldPos="9.84263 141.125 -17.5298" Rotation="0 -5.23599 0" Scale="1 1 1" FileIndex="120" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 376 268435820">
+            <Entity ID="268435820" Name="bone_thigh_1" CreStamp="1613666979" ModStamp="1613668547" WorldPos="9.84263 140.927 -18.5595" Rotation="1.39536 0.891309 0.0581994" Scale="1 1 1" FileIndex="126" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 376 268435820">
                 <UserVariables>
                     <Var ObjectId="268435820" Name="Note" Value="" />
                     <Var ObjectId="268435820" Name="EventInstanceTag" Value="" />
-                    <Var ObjectId="268435820" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268435820" Name="CollideGroup" Value="-player" />
                     <Var ObjectId="268435820" Name="UserVar" Value="" />
                     <Var ObjectId="268435820" Name="DisableBreakable" Value="false" />
                     <Var ObjectId="268435820" Name="FullGameSave" Value="false" />
@@ -2395,7 +2400,8 @@
                     <Var ObjectId="268435820" Name="ExtraConnectionLightUseOnColor" Value="true" />
                     <Var ObjectId="268435820" Name="ExtraConnectionLightUseSpec" Value="false" />
                     <Var ObjectId="268435820" Name="ExtraConnectionLightType" Value="Mul" />
-                    <Var ObjectId="268435820" Name="InteractDisablesStaticPhysics" Value="false" />
+                    <Var ObjectId="268435820" Name="CanInteractWithoutCallback" Value="false" />
+                    <Var ObjectId="268435820" Name="CustomInteractIcon" Value="PushButton" />
                     <Var ObjectId="268435820" Name="ScaryObject_Enabled" Value="false" />
                     <Var ObjectId="268435820" Name="ScaryObject_BaseFearRateMultiplier" Value="1.0" />
                     <Var ObjectId="268435820" Name="ScaryObject_ActivationCallback" Value="" />
@@ -2406,7 +2412,7 @@
                     <Var ObjectId="268435820" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435824" Name="bone_skull_fractured_01_1" CreStamp="1613666990" ModStamp="1613666990" WorldPos="9.89056 141.125 -17.7715" Rotation="0 -5.23599 0" Scale="1 1 1" FileIndex="121" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 374 268435824">
+            <Entity ID="268435824" Name="bone_skull_fractured_01_1" CreStamp="1613666990" ModStamp="1613668596" WorldPos="9.75629 140.968 -18.4526" Rotation="-0.920252 0.683365 0.444773" Scale="1 1 1" FileIndex="125" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 374 268435824">
                 <UserVariables>
                     <Var ObjectId="268435824" Name="Note" Value="" />
                     <Var ObjectId="268435824" Name="EventInstanceTag" Value="" />
@@ -2461,7 +2467,8 @@
                     <Var ObjectId="268435824" Name="ExtraConnectionLightUseOnColor" Value="true" />
                     <Var ObjectId="268435824" Name="ExtraConnectionLightUseSpec" Value="false" />
                     <Var ObjectId="268435824" Name="ExtraConnectionLightType" Value="Mul" />
-                    <Var ObjectId="268435824" Name="InteractDisablesStaticPhysics" Value="false" />
+                    <Var ObjectId="268435824" Name="CanInteractWithoutCallback" Value="false" />
+                    <Var ObjectId="268435824" Name="CustomInteractIcon" Value="PushButton" />
                     <Var ObjectId="268435824" Name="ScaryObject_Enabled" Value="false" />
                     <Var ObjectId="268435824" Name="ScaryObject_BaseFearRateMultiplier" Value="1.0" />
                     <Var ObjectId="268435824" Name="ScaryObject_ActivationCallback" Value="" />
@@ -2470,6 +2477,73 @@
                     <Var ObjectId="268435824" Name="Threat_BaseFearRateMultiplier" Value="1.0" />
                     <Var ObjectId="268435824" Name="Threat_ActivationCallback" Value="" />
                     <Var ObjectId="268435824" Name="Threat_DeactivationCallback" Value="" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268435829" Name="bone_ribcage_fractured_static_1" CreStamp="1613668363" ModStamp="1613668494" WorldPos="10.2825 140.882 -18.2889" Rotation="-0.769602 1.1302 0.506238" Scale="1 1 1" FileIndex="127" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 388 268435829">
+                <UserVariables>
+                    <Var ObjectId="268435829" Name="Note" Value="" />
+                    <Var ObjectId="268435829" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268435829" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268435829" Name="UserVar" Value="" />
+                    <Var ObjectId="268435829" Name="DisableBreakable" Value="false" />
+                    <Var ObjectId="268435829" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268435829" Name="StaticPhysics" Value="false" />
+                    <Var ObjectId="268435829" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268435829" Name="EffectsActive" Value="true" />
+                    <Var ObjectId="268435829" Name="InteractionDisabled" Value="false" />
+                    <Var ObjectId="268435829" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268435829" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268435829" Name="EffectColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268435829" Name="EffectBrightnessMul" Value="1" />
+                    <Var ObjectId="268435829" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268435829" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268435829" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268435829" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268435829" Name="UpdateBonesWhenCulled" Value="false" />
+                    <Var ObjectId="268435829" Name="OnBreakCallbackFunc" Value="" />
+                    <Var ObjectId="268435829" Name="ConnectionStateChangeCallback" Value="" />
+                    <Var ObjectId="268435829" Name="PlayerLookAtCallback" Value="" />
+                    <Var ObjectId="268435829" Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268435829" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
+                    <Var ObjectId="268435829" Name="PlayerLookAtCheckRayIntersection" Value="true" />
+                    <Var ObjectId="268435829" Name="PlayerLookAtMaxDistance" Value="-1" />
+                    <Var ObjectId="268435829" Name="PlayerLookAtCallbackDelay" Value="0" />
+                    <Var ObjectId="268435829" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268435829" Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268435829" Name="PlayerInteractLeaveCallback" Value="" />
+                    <Var ObjectId="268435829" Name="PlayerInteractLeaveCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268435829" Name="RecieveMessageCallback" Value="" />
+                    <Var ObjectId="268435829" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268435829" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268435829" Name="ConnectedEntity" Value="" />
+                    <Var ObjectId="268435829" Name="ConnectedEntityInvertState" Value="false" />
+                    <Var ObjectId="268435829" Name="ConnectedEntityStatesUsed" Value="0" />
+                    <Var ObjectId="268435829" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268435829" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268435829" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268435829" Name="ParentAttachSocket" Value="" />
+                    <Var ObjectId="268435829" Name="ParentAttachSnap" Value="false" />
+                    <Var ObjectId="268435829" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="268435829" Name="ConnectedLight" Value="" />
+                    <Var ObjectId="268435829" Name="ConnectionLightAmount" Value="1" />
+                    <Var ObjectId="268435829" Name="ConnectionLightUseOnColor" Value="true" />
+                    <Var ObjectId="268435829" Name="ConnectionLightUseSpec" Value="false" />
+                    <Var ObjectId="268435829" Name="ConnectionLightType" Value="Mul" />
+                    <Var ObjectId="268435829" Name="ExtraConnectedLight" Value="" />
+                    <Var ObjectId="268435829" Name="ExtraConnectionLightAmount" Value="1" />
+                    <Var ObjectId="268435829" Name="ExtraConnectionLightUseOnColor" Value="true" />
+                    <Var ObjectId="268435829" Name="ExtraConnectionLightUseSpec" Value="false" />
+                    <Var ObjectId="268435829" Name="ExtraConnectionLightType" Value="Mul" />
+                    <Var ObjectId="268435829" Name="CanInteractWithoutCallback" Value="false" />
+                    <Var ObjectId="268435829" Name="CustomInteractIcon" Value="PushButton" />
+                    <Var ObjectId="268435829" Name="ScaryObject_Enabled" Value="false" />
+                    <Var ObjectId="268435829" Name="ScaryObject_BaseFearRateMultiplier" Value="1.0" />
+                    <Var ObjectId="268435829" Name="ScaryObject_ActivationCallback" Value="" />
+                    <Var ObjectId="268435829" Name="ScaryObject_DeactivationCallback" Value="" />
+                    <Var ObjectId="268435829" Name="Threat_Enabled" Value="false" />
+                    <Var ObjectId="268435829" Name="Threat_BaseFearRateMultiplier" Value="1.0" />
+                    <Var ObjectId="268435829" Name="Threat_ActivationCallback" Value="" />
+                    <Var ObjectId="268435829" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
         </Objects>

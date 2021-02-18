@@ -126,6 +126,7 @@ class cScrMap : iScrMap
 			if (!mbStartIntro)
 			{
 				Music_PlayExt("01_00_cosmos", true, mfGlobalMusicVolume, 1, 3.f, 0, eMusicPrio_BgAmb, true);
+				Map_AddTimer("Timer_PlayVultureEatingSound", 1.f, "OnTimer_PlayVultureEatingSound");
 			}
 			
 			if (ItemType_GetCountInInventory("Lantern") < 1)
@@ -422,6 +423,7 @@ class cScrMap : iScrMap
 				Effect_Fade_In(.1f);
 				Player_SetActive(true);
 				Sound_FadeGlobalVolume(1.f, 3.f, eSoundEntryType_World);
+				Map_AddTimer("Timer_PlayVultureEatingSound", 0.f, "OnTimer_PlayVultureEatingSound");
 				
 				Music_Stop(1.f, eMusicPrio_SceneAmb);
 //				Music_PlayExt("A2_1_1_Crash_Wake", true, mfGlobalMusicVolume, 1, 4.f, 0, eMusicPrio_BgAmb, false);
@@ -555,7 +557,7 @@ class cScrMap : iScrMap
 		//} END Event *PLAYER INTERACTS WITH PLAGUE HOUSE DOOR*
 		
 		/////////////////////////////////////////
-		// Event C *PLAYER MAKES VULTURE FLY AWAY*
+		// Event C *VULTURE FLIES AWAY*
 		//{//////////////////////////////////////
 		
 		//-------------------------------------------------------
@@ -572,6 +574,8 @@ class cScrMap : iScrMap
 			
 			Entity_PlayAnimation("Vulture", "grave_fly_away", 1.f, false, true, "OnAnimEnd_DisableVulture", false, false);
 			Sound_Play("Sound_VultureFly", 0.f);
+			Sound_Stop("Sound_VultureEat", 0.f);
+			Map_RemoveTimer("Timer_PlayVultureEatingSound");
 			return false;
 		}
 		
@@ -584,6 +588,14 @@ class cScrMap : iScrMap
 
 		//-------------------------------------------------------
 		
+		void OnTimer_PlayVultureEatingSound(const tString &in asTimer)
+		{
+			Sound_Play("Sound_VultureEat", 0.f);
+			Map_RestartCurrentTimer(14.5f);
+		}
+		
+		//-------------------------------------------------------
+		
 		//} END Event *PLAYER MAKES VULTURE FLY AWAY*
 		
 		/////////////////////////////////////////
@@ -593,11 +605,11 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 
 		/*Put any variables that are only used in Scene 2, Event D here.*/
-
+		
 		//-------------------------------------------------------
 
 		/*Put any functions that are only used in Scene 2, Event D here.*/
-
+		
 		//-------------------------------------------------------
 		
 		//} END Event *PLAYER ENTERS ALTAR ROOM*
