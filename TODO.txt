@@ -28,15 +28,16 @@ MAPS:
 
 	01_00_prologue: Look for a good microphone, stand, and popfilter.
 
-		LEVEL:
+		LEVEL: Old canyon wall y pos: 145.026
 			TODO:
-				* Old canyon wall y pos: 145.026
+				* Place meat and blood on the rock on the vultures position.
 			 
 		SCRIPTS:
 			TODO:
 			 * Add vo throughout the level.
 			 * Use the entity corpse_sandmummy.ent (scale: 1.5) and place his head right above the sand and make its body rotate and look at player
 			   when player looks away or update its rotation constantly.
+			 * When the vulture flies away, attach meat hanging in its mouth and make it drop to the ground.
 			   
 				// Use this function to set color grading when player enters/leaves the sandstorm
 				//Effect_ToneMapping_FadeWorldGrading("grading_default", 0.0f);

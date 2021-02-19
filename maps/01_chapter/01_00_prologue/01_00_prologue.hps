@@ -125,7 +125,7 @@ class cScrMap : iScrMap
 			
 			if (!mbStartIntro)
 			{
-				Music_PlayExt("01_00_cosmos", true, mfGlobalMusicVolume, 1, 3.f, 0, eMusicPrio_BgAmb, true);
+				Music_PlayExt("A2_2_1_Wake_Amb", true, mfGlobalMusicVolume, 1, 3.f, 0, eMusicPrio_BgAmb, true);
 				Map_AddTimer("Timer_PlayVultureEatingSound", 1.f, "OnTimer_PlayVultureEatingSound");
 			}
 			
@@ -232,7 +232,7 @@ class cScrMap : iScrMap
 			Entity_AddForce("rock_fall_1", cVector3f(0, -15.f, 0), false, true);
 		}
 		
-		if (alAction == eAction_Test1) // Start area amb
+		if (alAction == eAction_Test1)
 		{
 			
 		}
@@ -426,7 +426,7 @@ class cScrMap : iScrMap
 				Map_AddTimer("Timer_PlayVultureEatingSound", 0.f, "OnTimer_PlayVultureEatingSound");
 				
 				Music_Stop(1.f, eMusicPrio_SceneAmb);
-//				Music_PlayExt("A2_1_1_Crash_Wake", true, mfGlobalMusicVolume, 1, 4.f, 0, eMusicPrio_BgAmb, false);
+				Music_PlayExt("A2_2_1_Wake_Amb", true, mfGlobalMusicVolume, 1, 4.f, 0, eMusicPrio_BgAmb, false);
 			}
 			Sequence_End();
 		}
@@ -609,6 +609,13 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 
 		/*Put any functions that are only used in Scene 2, Event D here.*/
+		
+		bool OnCollide_AltarMusic(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			Music_PlayOverlay("A2_2_6_Oasis_Start", mfGlobalMusicVolume+.05f);
+			//play vo - Has someone been here?
+			return false;
+		}
 		
 		//-------------------------------------------------------
 		
