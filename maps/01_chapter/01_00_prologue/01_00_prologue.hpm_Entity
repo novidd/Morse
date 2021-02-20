@@ -3666,7 +3666,7 @@
                     <Var ObjectId="268436127" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436230" Name="french_tent_sway_12" CreStamp="1613837681" ModStamp="1613841663" WorldPos="40.7072 141.412 -44.0952" Rotation="0.0138022 0.0710836 3.10861" Scale="1 1 1" FileIndex="3" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 516 268436230">
+            <Entity ID="268436230" Name="french_tent_sway_12" CreStamp="1613837681" ModStamp="1613844684" WorldPos="39.5005 141.083 -47.319" Rotation="-0.0583219 0.035223 3.10811" Scale="1 1 1" FileIndex="3" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 516 268436230">
                 <UserVariables>
                     <Var ObjectId="268436230" Name="Note" Value="" />
                     <Var ObjectId="268436230" Name="CastShadows" Value="true" />
@@ -3692,6 +3692,20 @@
                     <Var ObjectId="268436232" Name="IsOccluder" Value="false" />
                     <Var ObjectId="268436232" Name="CollideGroup" Value="" />
                     <Var ObjectId="268436232" Name="RenderLayer" Value="0" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268436266" Name="tree_doum_sway_1" CreStamp="1613844569" ModStamp="1613844600" WorldPos="25.699 141.116 -54.3262" Rotation="0 0.0921955 0" Scale="0.5 0.5 0.5" FileIndex="7" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 777 268436266">
+                <UserVariables>
+                    <Var ObjectId="268436266" Name="Note" Value="" />
+                    <Var ObjectId="268436266" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436266" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268436266" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436266" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268436266" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436266" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436266" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436266" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436266" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
         </Objects>
