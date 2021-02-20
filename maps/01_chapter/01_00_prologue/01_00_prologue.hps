@@ -32,7 +32,11 @@
 
 enum eProloguePermaFail
 {
-	eProloguePermaFail_PlagueHouse
+	eProloguePermaFail_PlagueHouse,
+	eProloguePermaFail_AfterPlagueHouse,
+	eProloguePermaFail_Altar,
+	eProloguePermaFail_Bridge_Start,
+	eProloguePermaFail_Bridge_End,
 };
 
 // Variables
@@ -195,9 +199,11 @@ class cScrMap : iScrMap
 	{
 		if (alState != 1) return true;
 		
-//		if (asParent == "Trigger_SetPermaFail_X")			mlPermaFailStage = eProloguePermaFail_X;
-//		else if (asParent == "Trigger_SetPermaFail_X") 		mlPermaFailStage = eProloguePermaFail_X;
-	
+		if (asParent == "Trigger_SetPermaFail_AfterPlagueHouse")		mlPermaFailStage = eProloguePermaFail_AfterPlagueHouse;
+		else if (asParent == "Trigger_SetPermaFail_Altar") 				mlPermaFailStage = eProloguePermaFail_Altar;
+		else if (asParent == "Trigger_SetPermaFail_Bridge_Start") 				mlPermaFailStage = eProloguePermaFail_Bridge_Start;
+		else if (asParent == "Trigger_SetPermaFail_Bridge_End") 				mlPermaFailStage = eProloguePermaFail_Bridge_End;
+		
 		return true;
 	}
 	
@@ -205,8 +211,11 @@ class cScrMap : iScrMap
 	{	
 		switch (mlPermaFailStage)
 		{
-			case eProloguePermaFail_PlagueHouse:		PermaFail_Default("PlagueHouse_*"); 	return true;
-//			case eProloguePermaFail_X:			PermaFail_Default("Storage_*"); 		return true;
+			case eProloguePermaFail_PlagueHouse:		PermaFail_Default("PlagueHouse_1");		return true;
+			case eProloguePermaFail_AfterPlagueHouse:	PermaFail_Default("AfterPlagueHouse_1");	return true;
+			case eProloguePermaFail_Altar:				PermaFail_Default("Altar_1");				return true;
+			case eProloguePermaFail_Bridge_Start:				PermaFail_Default("Bridge_Start");				return true;
+			case eProloguePermaFail_Bridge_End:				PermaFail_Default("Bridge_End");				return true;
 		}
 
 		return true;
@@ -234,7 +243,7 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test1)
 		{
-			
+			cLux_AddDebugMessage(FearHandler_GetPermFailRespawnArea());
 		}
 		
 		if (alAction == eAction_Test2)
@@ -488,7 +497,6 @@ class cScrMap : iScrMap
 		void OnTimer_FallImpact(const tString &in asTimer)
 		{
 			Debug_Log("TRIGGER DEATH");
-			mlPermaFailStage = eProloguePermaFail_PlagueHouse;
 			FearHandler_TriggerPermaFail_Fall();
 		}
 		
