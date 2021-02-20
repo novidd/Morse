@@ -159,7 +159,7 @@
             <File Id="155" Path="entities/survivors/plane/plane_wreckage_minibar.ent" />
         </FileIndex_Entities>
         <Objects>
-            <Entity ID="268435483" Name="french_tent_sway_2" CreStamp="1613311746" ModStamp="1613312697" WorldPos="-6.05685 146.651 4.31551" Rotation="0.0523216 0.42643 3.11529" Scale="1 1 1" FileIndex="3" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 516 268435483">
+            <Entity ID="268435483" Name="french_tent_sway_2" CreStamp="1613311746" ModStamp="1613312697" WorldPos="-6.05685 146.651 4.31551" Rotation="0.0523216 0.42643 3.11529" Scale="1 1 1" FileIndex="3" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 790 268435483">
                 <UserVariables>
                     <Var ObjectId="268435483" Name="Note" Value="" />
                     <Var ObjectId="268435483" Name="CastShadows" Value="true" />
@@ -173,7 +173,7 @@
                     <Var ObjectId="268435483" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435484" Name="tree_cypress_1" CreStamp="1613313642" ModStamp="1613314022" WorldPos="-7.41248 144.922 1.85516" Rotation="-0 2.48852 -0" Scale="1 1 1" FileIndex="10" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 4 268435484">
+            <Entity ID="268435484" Name="tree_cypress_1" CreStamp="1613313642" ModStamp="1613314022" WorldPos="-7.41248 144.922 1.85516" Rotation="-0 2.48852 -0" Scale="1 1 1" FileIndex="10" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 804 268435484">
                 <UserVariables>
                     <Var ObjectId="268435484" Name="Note" Value="" />
                     <Var ObjectId="268435484" Name="CastShadows" Value="true" />
@@ -3664,6 +3664,34 @@
                     <Var ObjectId="268436127" Name="Threat_BaseFearRateMultiplier" Value="1.0" />
                     <Var ObjectId="268436127" Name="Threat_ActivationCallback" Value="" />
                     <Var ObjectId="268436127" Name="Threat_DeactivationCallback" Value="" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268436230" Name="french_tent_sway_12" CreStamp="1613837681" ModStamp="1613841663" WorldPos="40.7072 141.412 -44.0952" Rotation="0.0138022 0.0710836 3.10861" Scale="1 1 1" FileIndex="3" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 516 268436230">
+                <UserVariables>
+                    <Var ObjectId="268436230" Name="Note" Value="" />
+                    <Var ObjectId="268436230" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436230" Name="IsAffectedByDecal" Value="false" />
+                    <Var ObjectId="268436230" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436230" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268436230" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436230" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436230" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436230" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436230" Name="RenderLayer" Value="0" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268436232" Name="tree_cypress_2" CreStamp="1613838976" ModStamp="1613314022" WorldPos="44.9127 144.319 -50.0305" Rotation="0.103271 -0.979625 -0.0558074" Scale="1 1 1" FileIndex="10" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 4 268436232">
+                <UserVariables>
+                    <Var ObjectId="268436232" Name="Note" Value="" />
+                    <Var ObjectId="268436232" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436232" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268436232" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436232" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268436232" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436232" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436232" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436232" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436232" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
         </Objects>
