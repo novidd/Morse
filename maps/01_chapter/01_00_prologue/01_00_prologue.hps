@@ -24,6 +24,7 @@
 #include "morse_scripts/helpers/morse_helper_general.hps"
 #include "morse_scripts/helpers/morse_helper_player.hps"
 #include "morse_scripts/helpers/morse_helper_stamina.hps"
+#include "morse_scripts/helpers/morse_helper_map.hps"
 
 //--------------------------------------------------
  
@@ -156,6 +157,8 @@ class cScrMap : iScrMap
 	{	
 		Game_AutoSave();
 		
+//		FogArea_SetPosition("FogArea_Sandstorm", cVector3f(0, 150, 0));
+		
 		//Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
 		Item_RemoveFromInventory(ItemType_GetFirstInInventory("CurseMedallion"));
 	}
@@ -243,7 +246,14 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test1)
 		{
-			cLux_AddDebugMessage(FearHandler_GetPermFailRespawnArea());
+			if (FogArea_GetPosition("FogArea_Sandstorm") == cVector3f(0, 0, 0))
+			{
+				FogArea_SetPosition("FogArea_Sandstorm", cVector3f(0, 150, 0));
+			}
+			else
+			{
+				FogArea_SetPosition("FogArea_Sandstorm", cVector3f(0, 0, 0));
+			}
 		}
 		
 		if (alAction == eAction_Test2)
