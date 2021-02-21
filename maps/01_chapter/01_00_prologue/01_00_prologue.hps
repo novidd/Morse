@@ -114,13 +114,12 @@ class cScrMap : iScrMap
 		// Variables
 		bool mbStartIntro = true;
 		
-		// Inventory
-		Item_AddManyToInventory("Matchbook", 10);
-		
 		// Entity
 		Entity_PlayAnimation("Vulture", "eating_idle", .1f, true, true, "", false, false);
 		
 		mlPermaFailStage = eProloguePermaFail_PlagueHouse;
+		
+		Billboard_SetBrightness("Billboard_Fence_*", .025f);
 		
 		/////////////////////////
 		// Debug
@@ -137,7 +136,8 @@ class cScrMap : iScrMap
 			if (ItemType_GetCountInInventory("Lantern") < 1)
 			{
 				Item_AddToInventory("Lantern");
-
+				Item_AddManyToInventory("Matchbook", 10);
+				
 				Lantern_SetAmount(10);
 			}
 		}
@@ -465,7 +465,7 @@ class cScrMap : iScrMap
 	
 	/////////////////////////////////////////////////////////////////////////////////////////
 	// ==============
-	// SCENE 2 *CANYON*
+	// SCENE 2 *OUTER CANYON*
 	// ==============
 	//{//////////////////////////////////////////////////////////////////////////////////////
  
@@ -617,7 +617,7 @@ class cScrMap : iScrMap
 		//} END Event *PLAYER MAKES VULTURE FLY AWAY*
 		
 		/////////////////////////////////////////
-		// Event D *PLAYER IS IN ALTAR ROOM*
+		// Event D *PLAYER IS IN THE ALTAR ROOM*
 		//{//////////////////////////////////////
 		
 		//-------------------------------------------------------
@@ -637,7 +637,37 @@ class cScrMap : iScrMap
 		
 		//-------------------------------------------------------
 		
-		//} END Event *PLAYER ENTERS ALTAR ROOM*
+		//} END Event *PLAYER IS IN THE ALTAR ROOM*
+		
+		/////////////////////////////////////////
+		// Event E *PLAYER CROSSES THE BROKEN BRIDGE*
+		//{//////////////////////////////////////
+		
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 2, Event E here.*/
+		
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 2, Event E here.*/
+		
+		bool OnCollide_BridgeCreak(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			if (alState == 1 && !Sound_Exists("sound_scaffold_creak"))
+			{
+				Sound_CreateAtEntity("sound_scaffold_creak", "02_04_living_quarters/scare_events/ceiling_creak", asParent, 0.f, false, 5.f);
+				return true;
+			}
+			return true;
+		}
+		
+		//-------------------------------------------------------
+		// 04_01_town/level/roof_break 04_01_town/level/roof_debris
+		
+		//41.831
+		//-------------------------------------------------------
+		
+		//} END Event *PLAYER CROSSES THE BROKEN BRIDGE*
 		
 	//} END SCENE 2
 }
