@@ -246,13 +246,13 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test1)
 		{
-			if (FogArea_GetPosition("FogArea_Sandstorm") == cVector3f(0, 0, 0))
+			if (FogArea_GetPosition("FogArea_Sandstorm") == cVector3f(0, 50, 0))
 			{
-				FogArea_SetPosition("FogArea_Sandstorm", cVector3f(0, 150, 0));
+				FogArea_SetPosition("FogArea_Sandstorm", cVector3f(0, -150, 0));
 			}
 			else
 			{
-				FogArea_SetPosition("FogArea_Sandstorm", cVector3f(0, 0, 0));
+				FogArea_SetPosition("FogArea_Sandstorm", cVector3f(0, 50, 0));
 			}
 		}
 		
@@ -491,7 +491,7 @@ class cScrMap : iScrMap
 				Voice_StopAll();
 				Debug_Log("FALL");
 				Effect_Fade_Out(0.1f);
-				Map_AddTimer("Timer_FallImpact", 1.f, "OnTimer_FallImpact");
+				Map_AddTimer("Timer_FallImpact", .25f, "OnTimer_FallImpact");
 				Map_SetTimerUserVarString("Timer_FallImpact", asChild);
 			}
 			else

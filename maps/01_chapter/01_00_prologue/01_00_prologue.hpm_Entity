@@ -159,7 +159,7 @@
             <File Id="155" Path="entities/survivors/plane/plane_wreckage_minibar.ent" />
         </FileIndex_Entities>
         <Objects>
-            <Entity ID="268435483" Name="french_tent_sway_2" CreStamp="1613311746" ModStamp="1613312697" WorldPos="-6.05685 146.651 4.31551" Rotation="0.0523216 0.42643 3.11529" Scale="1 1 1" FileIndex="3" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 790 268435483">
+            <Entity ID="268435483" Name="french_tent_sway_2" CreStamp="1613311746" ModStamp="1613864107" WorldPos="-6.05685 42.3793 4.31551" Rotation="0.0523216 0.42643 3.11529" Scale="1 1 1" FileIndex="3" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 790 268435483">
                 <UserVariables>
                     <Var ObjectId="268435483" Name="Note" Value="" />
                     <Var ObjectId="268435483" Name="CastShadows" Value="true" />
@@ -173,7 +173,7 @@
                     <Var ObjectId="268435483" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435484" Name="tree_cypress_1" CreStamp="1613313642" ModStamp="1613314022" WorldPos="-7.41248 144.922 1.85516" Rotation="-0 2.48852 -0" Scale="1 1 1" FileIndex="10" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 804 268435484">
+            <Entity ID="268435484" Name="tree_cypress_1" CreStamp="1613313642" ModStamp="1613864107" WorldPos="-7.41248 40.6503 1.85516" Rotation="-0 2.48852 -0" Scale="1 1 1" FileIndex="10" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 804 268435484">
                 <UserVariables>
                     <Var ObjectId="268435484" Name="Note" Value="" />
                     <Var ObjectId="268435484" Name="CastShadows" Value="true" />
@@ -187,7 +187,7 @@
                     <Var ObjectId="268435484" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435485" Name="sun_1" CreStamp="1613314145" ModStamp="1613314145" WorldPos="-9.03695 145 1.6848" Rotation="0 2.35619 0" Scale="1 1 1" FileIndex="12" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1 268435485">
+            <Entity ID="268435485" Name="sun_1" CreStamp="1613314145" ModStamp="1613864107" WorldPos="-9.03695 40.7283 1.6848" Rotation="0 2.35619 0" Scale="1 1 1" FileIndex="12" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1 268435485">
                 <UserVariables>
                     <Var ObjectId="268435485" Name="Note" Value="" />
                     <Var ObjectId="268435485" Name="EventInstanceTag" Value="" />
@@ -254,7 +254,7 @@
                     <Var ObjectId="268435485" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435486" Name="sun_outpost_1" CreStamp="1613314152" ModStamp="1613502914" WorldPos="0 25 115" Rotation="0 2.35619 0" Scale="1 1 1" FileIndex="14" Active="false" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 2 268435486">
+            <Entity ID="268435486" Name="sun_outpost_1" CreStamp="1613314152" ModStamp="1613864071" WorldPos="0 -63.7512 115" Rotation="0 2.35619 0" Scale="1 1 1" FileIndex="14" Active="false" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 2 268435486">
                 <UserVariables>
                     <Var ObjectId="268435486" Name="Note" Value="" />
                     <Var ObjectId="268435486" Name="EventInstanceTag" Value="" />
@@ -321,7 +321,7 @@
                     <Var ObjectId="268435486" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435487" Name="grass_dead_highwind_desert_1" CreStamp="1613316116" ModStamp="1613316127" WorldPos="-6.29269 144.885 2.08063" Rotation="3.02238 0.954713 3.11308" Scale="2 2 2" FileIndex="15" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 144 268435487">
+            <Entity ID="268435487" Name="grass_dead_highwind_desert_1" CreStamp="1613316116" ModStamp="1613864107" WorldPos="-6.29269 40.6133 2.08063" Rotation="3.02238 0.954713 3.11308" Scale="2 2 2" FileIndex="15" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 144 268435487">
                 <UserVariables>
                     <Var ObjectId="268435487" Name="Note" Value="" />
                     <Var ObjectId="268435487" Name="CastShadows" Value="true" />
@@ -335,7 +335,7 @@
                     <Var ObjectId="268435487" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435488" Name="french_tent_sway_3" CreStamp="1613318882" ModStamp="1613323964" WorldPos="-13.2946 148.009 1.43152" Rotation="0.176338 1.16273 0.247812" Scale="1 1 1" FileIndex="20" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 166 268435488">
+            <Entity ID="268435488" Name="french_tent_sway_3" CreStamp="1613318882" ModStamp="1613864107" WorldPos="-13.2946 43.7373 1.43152" Rotation="0.176338 1.16273 0.247812" Scale="1 1 1" FileIndex="20" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 166 268435488">
                 <UserVariables>
                     <Var ObjectId="268435488" Name="Note" Value="" />
                     <Var ObjectId="268435488" Name="CastShadows" Value="true" />
@@ -349,7 +349,7 @@
                     <Var ObjectId="268435488" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435489" Name="french_tent_sway_4" CreStamp="1613318896" ModStamp="1613330725" WorldPos="-13.4251 149.604 1.54466" Rotation="-0 4.09609 -0" Scale="0.524 0.524 0.524" FileIndex="21" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 11 268435489">
+            <Entity ID="268435489" Name="french_tent_sway_4" CreStamp="1613318896" ModStamp="1613864107" WorldPos="-13.4251 45.3323 1.54466" Rotation="-0 4.09609 -0" Scale="0.524 0.524 0.524" FileIndex="21" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 11 268435489">
                 <UserVariables>
                     <Var ObjectId="268435489" Name="Note" Value="" />
                     <Var ObjectId="268435489" Name="CastShadows" Value="true" />
@@ -363,7 +363,7 @@
                     <Var ObjectId="268435489" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435490" Name="grass_dead_highwind_desert_2" CreStamp="1613322319" ModStamp="1613322359" WorldPos="-6.29269 144.885 2.08063" Rotation="-1.07344 -0.816686 -0.00446248" Scale="2 2 2" FileIndex="15" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 143 268435490">
+            <Entity ID="268435490" Name="grass_dead_highwind_desert_2" CreStamp="1613322319" ModStamp="1613864107" WorldPos="-6.29269 40.6133 2.08063" Rotation="-1.07344 -0.816686 -0.00446248" Scale="2 2 2" FileIndex="15" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 143 268435490">
                 <UserVariables>
                     <Var ObjectId="268435490" Name="Note" Value="" />
                     <Var ObjectId="268435490" Name="CastShadows" Value="true" />
@@ -377,7 +377,7 @@
                     <Var ObjectId="268435490" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435491" Name="grass_dead_highwind_desert_3" CreStamp="1613322325" ModStamp="1613322366" WorldPos="-6.70146 144.885 1.19598" Rotation="1.97529 0.664662 -3.08912" Scale="2 2 2" FileIndex="15" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 164 268435491">
+            <Entity ID="268435491" Name="grass_dead_highwind_desert_3" CreStamp="1613322325" ModStamp="1613864107" WorldPos="-6.70146 40.6133 1.19598" Rotation="1.97529 0.664662 -3.08912" Scale="2 2 2" FileIndex="15" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 164 268435491">
                 <UserVariables>
                     <Var ObjectId="268435491" Name="Note" Value="" />
                     <Var ObjectId="268435491" Name="CastShadows" Value="true" />
@@ -391,7 +391,7 @@
                     <Var ObjectId="268435491" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435492" Name="grass_dead_highwind_desert_4" CreStamp="1613322372" ModStamp="1613322423" WorldPos="-16.7142 148.307 0.041333" Rotation="-1.65397 2.81905 0.0880325" Scale="2 2 2" FileIndex="15" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 141 268435492">
+            <Entity ID="268435492" Name="grass_dead_highwind_desert_4" CreStamp="1613322372" ModStamp="1613864107" WorldPos="-16.7142 44.0353 0.0413332" Rotation="-1.65397 2.81905 0.0880325" Scale="2 2 2" FileIndex="15" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 141 268435492">
                 <UserVariables>
                     <Var ObjectId="268435492" Name="Note" Value="" />
                     <Var ObjectId="268435492" Name="CastShadows" Value="true" />
@@ -405,7 +405,7 @@
                     <Var ObjectId="268435492" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435493" Name="grass_dead_highwind_desert_5" CreStamp="1613322430" ModStamp="1613322468" WorldPos="-16.4423 148.317 0.451131" Rotation="-1.14124 0.297185 -0.603443" Scale="1 1 1" FileIndex="15" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 142 268435493">
+            <Entity ID="268435493" Name="grass_dead_highwind_desert_5" CreStamp="1613322430" ModStamp="1613864107" WorldPos="-16.4423 44.0453 0.451131" Rotation="-1.14124 0.297185 -0.603443" Scale="1 1 1" FileIndex="15" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 142 268435493">
                 <UserVariables>
                     <Var ObjectId="268435493" Name="Note" Value="" />
                     <Var ObjectId="268435493" Name="CastShadows" Value="true" />
@@ -419,7 +419,7 @@
                     <Var ObjectId="268435493" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435494" Name="brazier_stone_1" CreStamp="1613324991" ModStamp="1613325341" WorldPos="-13.3427 148.891 -1.58849" Rotation="1.82871 1.52487 -1.30851" Scale="0.95 1 1" FileIndex="25" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 135 268435494">
+            <Entity ID="268435494" Name="brazier_stone_1" CreStamp="1613324991" ModStamp="1613864107" WorldPos="-13.3427 44.6193 -1.58849" Rotation="1.82871 1.52487 -1.30851" Scale="0.95 1 1" FileIndex="25" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 135 268435494">
                 <UserVariables>
                     <Var ObjectId="268435494" Name="Note" Value="" />
                     <Var ObjectId="268435494" Name="CastShadows" Value="true" />
@@ -433,7 +433,7 @@
                     <Var ObjectId="268435494" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435495" Name="stonecut_spiral_piece_01_1" CreStamp="1613325195" ModStamp="1613325253" WorldPos="-13.3449 148.374 -1.63569" Rotation="-1.48819 1.42947 -1.48781" Scale="1 1 1" FileIndex="35" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 133 268435495">
+            <Entity ID="268435495" Name="stonecut_spiral_piece_01_1" CreStamp="1613325195" ModStamp="1613864107" WorldPos="-13.3449 44.1023 -1.63569" Rotation="-1.48819 1.42947 -1.48781" Scale="1 1 1" FileIndex="35" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 133 268435495">
                 <UserVariables>
                     <Var ObjectId="268435495" Name="Note" Value="" />
                     <Var ObjectId="268435495" Name="CastShadows" Value="true" />
@@ -447,7 +447,7 @@
                     <Var ObjectId="268435495" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435496" Name="NotePlagueHouse" CreStamp="1613325371" ModStamp="1613425899" WorldPos="-13.5236 148.915 -1.3746" Rotation="0.106498 -1.33031 -0.0689711" Scale="1 1 1" FileIndex="36" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 132 268435496">
+            <Entity ID="268435496" Name="NotePlagueHouse" CreStamp="1613325371" ModStamp="1613864107" WorldPos="-13.5236 44.6433 -1.3746" Rotation="0.106498 -1.33031 -0.0689711" Scale="1 1 1" FileIndex="36" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 132 268435496">
                 <UserVariables>
                     <Var ObjectId="268435496" Name="Note" Value="" />
                     <Var ObjectId="268435496" Name="EventInstanceTag" Value="" />
@@ -510,7 +510,7 @@
                     <Var ObjectId="268435496" Name="PopUpYOffset" Value="0.0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435497" Name="scatter_rock02_1" CreStamp="1613325423" ModStamp="1613425899" WorldPos="-13.5363 148.913 -1.39704" Rotation="2.75817 -1.29335 -2.47835" Scale="0.25 0.25 0.25" FileIndex="38" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 131 268435497">
+            <Entity ID="268435497" Name="scatter_rock02_1" CreStamp="1613325423" ModStamp="1613864107" WorldPos="-13.5363 44.6413 -1.39704" Rotation="2.75817 -1.29335 -2.47835" Scale="0.25 0.25 0.25" FileIndex="38" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 131 268435497">
                 <UserVariables>
                     <Var ObjectId="268435497" Name="Note" Value="" />
                     <Var ObjectId="268435497" Name="EventInstanceTag" Value="" />
@@ -576,7 +576,7 @@
                     <Var ObjectId="268435497" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435498" Name="totem_decorations_05_1" CreStamp="1613327879" ModStamp="1613327937" WorldPos="-13.2823 148.774 -1.29775" Rotation="-0 2.3706 -0" Scale="1 1 1" FileIndex="62" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 130 268435498">
+            <Entity ID="268435498" Name="totem_decorations_05_1" CreStamp="1613327879" ModStamp="1613864107" WorldPos="-13.2823 44.5023 -1.29775" Rotation="-0 2.3706 -0" Scale="1 1 1" FileIndex="62" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 130 268435498">
                 <UserVariables>
                     <Var ObjectId="268435498" Name="Note" Value="" />
                     <Var ObjectId="268435498" Name="CastShadows" Value="true" />
@@ -791,7 +791,7 @@
                     <Var ObjectId="268435501" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435502" Name="rock_fall_1" CreStamp="1613329642" ModStamp="1613329871" WorldPos="-0.486741 160.696 3.26518" Rotation="2.0333 -0.123338 -9.62861e-12" Scale="1 1 1" FileIndex="66" Active="false" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 126 268435502">
+            <Entity ID="268435502" Name="rock_fall_1" CreStamp="1613329642" ModStamp="1613864107" WorldPos="-0.48674 56.4243 3.26518" Rotation="2.0333 -0.123338 -9.62861e-12" Scale="1 1 1" FileIndex="66" Active="false" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 126 268435502">
                 <UserVariables>
                     <Var ObjectId="268435502" Name="Note" Value="" />
                     <Var ObjectId="268435502" Name="EventInstanceTag" Value="" />
@@ -857,7 +857,7 @@
                     <Var ObjectId="268435502" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435503" Name="critter_scorpion_no_ray_col_1" CreStamp="1613330599" ModStamp="1613330683" WorldPos="-18.7296 148.385 -4.55018" Rotation="0 18.326 0" Scale="1 1 1" FileIndex="70" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 125 268435503">
+            <Entity ID="268435503" Name="critter_scorpion_no_ray_col_1" CreStamp="1613330599" ModStamp="1613864107" WorldPos="-18.7296 44.1133 -4.55018" Rotation="0 18.326 0" Scale="1 1 1" FileIndex="70" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 125 268435503">
                 <UserVariables>
                     <Var ObjectId="268435503" Name="Note" Value="" />
                     <Var ObjectId="268435503" Name="EventInstanceTag" Value="" />
@@ -886,7 +886,7 @@
                     <Var ObjectId="268435503" Name="ConnectedEntityStatesUsed" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435504" Name="PlagueDoor" CreStamp="1613338862" ModStamp="1613416875" WorldPos="-4.33659 146.088 -2.11087" Rotation="0 1.29188 0" Scale="1 0.9 0.95" FileIndex="75" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 170 268435504">
+            <Entity ID="268435504" Name="PlagueDoor" CreStamp="1613338862" ModStamp="1613864107" WorldPos="-4.33659 41.8163 -2.11087" Rotation="0 1.29188 0" Scale="1 0.9 0.95" FileIndex="75" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 170 268435504">
                 <UserVariables>
                     <Var ObjectId="268435504" Name="Note" Value="" />
                     <Var ObjectId="268435504" Name="EventInstanceTag" Value="" />
@@ -951,7 +951,7 @@
                     <Var ObjectId="268435504" Name="OpenableByAgent" Value="true" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435505" Name="door_town_02_2" CreStamp="1613340213" ModStamp="1613340440" WorldPos="-2.1257 147.027 -1.73562" Rotation="0 17.017 0" Scale="1 0.68 1.15" FileIndex="74" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 109 268435505">
+            <Entity ID="268435505" Name="door_town_02_2" CreStamp="1613340213" ModStamp="1613864107" WorldPos="-2.1257 42.7553 -1.73562" Rotation="0 17.017 0" Scale="1 0.68 1.15" FileIndex="74" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 109 268435505">
                 <UserVariables>
                     <Var ObjectId="268435505" Name="Note" Value="" />
                     <Var ObjectId="268435505" Name="EventInstanceTag" Value="" />
@@ -1016,7 +1016,7 @@
                     <Var ObjectId="268435505" Name="OpenableByAgent" Value="true" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435506" Name="door_town_02_3" CreStamp="1613340312" ModStamp="1613340439" WorldPos="0.434527 147.193 -1.05848" Rotation="-3.13061 4.45059 -1.60383e-09" Scale="1 0.65 1.15" FileIndex="74" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 110 268435506">
+            <Entity ID="268435506" Name="door_town_02_3" CreStamp="1613340312" ModStamp="1613864107" WorldPos="0.434526 42.9213 -1.05848" Rotation="-3.13061 4.45059 -1.60383e-09" Scale="1 0.65 1.15" FileIndex="74" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 110 268435506">
                 <UserVariables>
                     <Var ObjectId="268435506" Name="Note" Value="" />
                     <Var ObjectId="268435506" Name="EventInstanceTag" Value="" />
@@ -1081,7 +1081,7 @@
                     <Var ObjectId="268435506" Name="OpenableByAgent" Value="true" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435507" Name="beduin_carpet_tent_door_1" CreStamp="1613341083" ModStamp="1613341263" WorldPos="-2.86386 146.217 -3.77561" Rotation="-0 2.96706 -0" Scale="1 1 1" FileIndex="77" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 108 268435507">
+            <Entity ID="268435507" Name="beduin_carpet_tent_door_1" CreStamp="1613341083" ModStamp="1613864107" WorldPos="-2.86386 41.9453 -3.77561" Rotation="-0 2.96706 -0" Scale="1 1 1" FileIndex="77" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 108 268435507">
                 <UserVariables>
                     <Var ObjectId="268435507" Name="Note" Value="" />
                     <Var ObjectId="268435507" Name="CastShadows" Value="true" />
@@ -1095,7 +1095,7 @@
                     <Var ObjectId="268435507" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435508" Name="bedouin_basket_wicker_1" CreStamp="1613341582" ModStamp="1613587636" WorldPos="0.268399 144.93 -2.87812" Rotation="0 12.8282 0" Scale="1 1 1" FileIndex="79" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 107 268435508">
+            <Entity ID="268435508" Name="bedouin_basket_wicker_1" CreStamp="1613341582" ModStamp="1613864107" WorldPos="0.268398 40.6583 -2.87812" Rotation="0 12.8282 0" Scale="1 1 1" FileIndex="79" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 107 268435508">
                 <UserVariables>
                     <Var ObjectId="268435508" Name="Note" Value="" />
                     <Var ObjectId="268435508" Name="EventInstanceTag" Value="" />
@@ -1161,7 +1161,7 @@
                     <Var ObjectId="268435508" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435509" Name="beduin_bed_01_1" CreStamp="1613341596" ModStamp="1613587629" WorldPos="-0.700213 144.93 -3.98474" Rotation="0 13.8754 0" Scale="1 1 1" FileIndex="78" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 106 268435509">
+            <Entity ID="268435509" Name="beduin_bed_01_1" CreStamp="1613341596" ModStamp="1613864107" WorldPos="-0.700212 40.6583 -3.98474" Rotation="0 13.8754 0" Scale="1 1 1" FileIndex="78" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 106 268435509">
                 <UserVariables>
                     <Var ObjectId="268435509" Name="Note" Value="" />
                     <Var ObjectId="268435509" Name="CastShadows" Value="true" />
@@ -1175,7 +1175,7 @@
                     <Var ObjectId="268435509" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435510" Name="bedouin_shisha_1" CreStamp="1613341624" ModStamp="1613587636" WorldPos="-0.243951 144.93 -2.99997" Rotation="0 13.09 0" Scale="1 1 1" FileIndex="81" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 103 268435510">
+            <Entity ID="268435510" Name="bedouin_shisha_1" CreStamp="1613341624" ModStamp="1613864107" WorldPos="-0.243952 40.6583 -2.99997" Rotation="0 13.09 0" Scale="1 1 1" FileIndex="81" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 103 268435510">
                 <UserVariables>
                     <Var ObjectId="268435510" Name="Note" Value="" />
                     <Var ObjectId="268435510" Name="EventInstanceTag" Value="" />
@@ -1241,7 +1241,7 @@
                     <Var ObjectId="268435510" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435511" Name="victim_man_1" CreStamp="1613341649" ModStamp="1613587629" WorldPos="-1.60481 145.14 -4.25549" Rotation="-1.58232 4.43066 -0.00088716" Scale="1 1 1" FileIndex="84" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 102 268435511">
+            <Entity ID="268435511" Name="victim_man_1" CreStamp="1613341649" ModStamp="1613864107" WorldPos="-1.60481 40.8683 -4.25549" Rotation="-1.58232 4.43066 -0.00088716" Scale="1 1 1" FileIndex="84" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 102 268435511">
                 <UserVariables>
                     <Var ObjectId="268435511" Name="Note" Value="" />
                     <Var ObjectId="268435511" Name="EventInstanceTag" Value="" />
@@ -1309,7 +1309,7 @@
                 </UserVariables>
                 <Pose Hash="3593612663">1 -0 -0 -0 0 0 0 0.5 -0.5 -0.5 0.5 0 100.198044 8.061874 0.040167 -0.035206 -0.705965 0.70623 -5.659363 0 -16.034912 1 -0 0.000005 -0 37.321583 -0.000004 0.000001 0.989115 -0.137105 -0.053279 -0.003834 46.825584 -0.000003 -0 0.707107 -0 -0.707107 -0 8.530783 0.000001 15.015249 1 -0 -0 -0 7.814116 0 -4.121502 0.705196 -0.05195 -0.05195 0.705196 14.776516 0.15955 19.707712 0.705196 -0.05195 -0.05195 0.705196 33.574059 1.068007 22.541817 0.522583 -0.522583 0.476348 0.476348 16.470119 13.654781 2.423056 0.522758 -0.522757 0.476156 0.476156 34.822289 15.012491 5.276948 0.036969 -0.70614 0.70614 -0.036969 18.069698 -3.882227 -11.141821 0.036969 -0.70614 0.70614 -0.036969 36.47155 -3.572142 -9.908036 0.70623 -0.705965 0.035206 -0.040167 -5.659363 -0.000002 16.034912 1 -0 0.000005 -0 -37.321583 0.000003 -0.000001 0.989115 -0.137105 -0.053279 -0.003834 -46.825584 0.000003 0.000001 0.707107 -0 -0.707107 -0 -8.530783 -0.000001 -15.015249 1 -0 -0 -0 -7.814116 0 4.121502 0.705196 -0.05195 -0.05195 0.705196 -14.332283 0.87035 -18.068434 0.705196 -0.05195 -0.05195 0.705196 -33.790817 0.104138 -20.022774 0.522583 -0.522583 0.476348 0.476348 -14.499298 -12.439163 -6.868916 0.522758 -0.522757 0.476156 0.476156 -33.741959 -14.665581 -8.75046 0.036969 -0.70614 0.70614 -0.036969 -17.946896 5.566998 10.35276 0.036969 -0.70614 0.70614 -0.036969 -35.686485 5.662139 10.086473 1 -0 -0 -0 10.759903 -0.000001 -0 1 -0 -0 -0 10.759911 -0.000001 -0 1 -0 -0 -0 10.759895 -0.000001 -0 1 -0 -0 -0 10.759918 -0.000001 -0 0.5 0.5 0.5 -0.5 12.487961 2.523757 -5.476469 0.864156 -0.012631 0.076592 -0.4972 16.491974 -4.063416 -1.746094 0.980226 0.017734 -0.103734 -0.167578 29.838623 0.000244 0.001953 0.988232 0.141077 0.02277 -0.054552 26.84943 -0.000008 -0.000008 0.891434 0.172752 -0.416504 -0.045018 3.083126 -0.333641 2.423193 0.873784 0.450092 0.172986 -0.063199 5.375065 0.000008 0.000004 0.986661 -0.053942 0.008385 0.153366 2.233116 -0.000015 0.000008 0.997715 0.006813 -0.064903 0.01749 11.727043 0.885635 3.560344 0.994814 -0.022079 0.019264 -0.097397 3.578972 0.000008 -0.000008 0.999661 -0.006983 0.014383 -0.020541 2.658043 0 0.000002 0.992595 -0.065383 -0.004692 -0.102261 12.099239 0.518761 0.743755 0.998942 0.000386 0.008543 -0.045187 3.511459 0 0 0.999561 0.000437 -0.021978 -0.019861 3.395622 -0.000008 0 0.985891 -0.127986 0.076417 -0.076158 11.844234 -0.063225 -1.594575 0.995965 0.011169 0.003515 -0.088971 3.262192 0 0.000002 0.998301 -0.000537 -0.009328 -0.057518 3.326782 -0.000008 0.000002 0.933723 -0.250543 0.184067 -0.177509 10.976318 -0.705795 -4.176116 0.995887 0.003398 -0.039521 -0.081459 2.818253 0.000004 -0.000002 0.998118 0.001226 -0.021284 -0.05749 2.242256 0 0.000002 1 -0 -0 -0 13.424805 0 0 0.5 -0.5 0.5 0.5 12.487961 2.523756 5.476468 0.799778 0.010198 0.076433 -0.595323 -16.492004 4.063416 1.744141 0.994447 -0 -0.10524 -0 -29.838943 0 0 0.988232 0.141078 0.02277 -0.054552 -26.849438 0.000015 0 0.891434 0.172752 -0.416504 -0.045018 -3.083141 0.333641 -2.423195 0.873784 0.450092 0.172986 -0.063199 -5.375065 0 0 0.986661 -0.053942 0.008385 0.153366 -2.233116 0.000015 0 0.997715 0.006813 -0.064903 0.01749 -11.727058 -0.885635 -3.560345 0.994814 -0.022079 0.019264 -0.097397 -3.578964 0 0.000006 0.999661 -0.006983 0.014383 -0.020541 -2.658035 0 -0.000002 0.992595 -0.065384 -0.004692 -0.102261 -12.099255 -0.518753 -0.743759 0.998942 0.000386 0.008543 -0.045187 -3.511467 0 0 0.999561 0.000437 -0.021978 -0.019861 -3.395622 -0.000008 0.000004 0.98589 -0.127987 0.076417 -0.076158 -11.844254 0.063217 1.594574 0.995965 0.011169 0.003515 -0.088971 -3.262192 0 -0.000002 0.998301 -0.000537 -0.009328 -0.057518 -3.326782 0 -0.000002 0.933723 -0.250543 0.184067 -0.177509 -10.97633 0.705795 4.176113 0.995887 0.003398 -0.039521 -0.081459 -2.818253 -0.000008 -0.000002 0.998118 0.001226 -0.021284 -0.05749 -2.242256 0 -0.000002 1 0 0 -0 -13.424713 0.000008 -0.000004 0.5 0.5 0.5 -0.5 24.838608 -1.7379 -0.000001 1 -0 -0 -0 -0 8.625702 0.568859 0.972528 0.232787 0 -0 -0 0.524353 3.136497 0.932466 -0.149823 0.313953 -0.097434 3.090381 0.363419 8.541328 0.149823 0.932466 0.097434 0.313953 -3.090381 0.363419 8.541328 0.980406 -0.196988 -0 -0 0.046276 0.689301 10.550968 0.911671 -0.167079 0.374322 -0.028709 1.868459 0.742828 9.784645 0.167079 0.911671 0.028709 0.374322 -1.868459 0.742828 9.784645 0.707107 -0 -0.707107 -0 3.626939 5.418869 9.767621 0.707107 -0 -0.707107 -0 -3.626939 5.418869 9.767621 1 -0 -0 -0 1.998259 -0.036972 12.969905 0 -1 -0 -0 -1.998259 -0.036972 12.969905 1 -0 -0 -0 0.046276 -2.924561 13.260201 0.940077 -0 0.340962 -0 1.904409 -2.797623 12.399451 0 -0.940077 -0 -0.340962 -1.904409 -2.797623 12.399451 0.8384 0.150924 0.520298 0.059975 5.504031 -1.284653 7.65948 0.150924 -0.8384 0.059975 -0.520298 -5.504031 -1.284653 7.65948 1 -0 -0 -0 2.080712 7.301788 12.792342 0 -1 -0 -0 -2.080712 7.301788 12.792342 0.960827 -0.009396 0.271843 -0.053145 4.547199 7.660095 12.016917 0.009396 0.960827 0.053145 0.271843 -4.547199 7.660095 12.016917 0.840655 -0.071292 0.504961 -0.182295 6.291175 6.973862 10.138074 0.071292 0.840655 0.182295 0.504961 -6.291175 6.973862 10.138074 0.991974 -0 0.126444 -0 3.626939 5.418869 9.767621 0 -0.991974 -0 -0.126444 -3.626939 5.418869 9.767621 0.018624 0.125334 -0.210541 0.969338 3.626939 5.418869 9.767621 0.125334 -0.018624 0.969338 0.210541 -3.626939 5.418869 9.767621 0.409999 0.680758 0.548271 -0.260516 6.746376 6.099129 -20.686815 0.972951 0.083428 -0.138197 -0.165248 0.918003 -7.156487 -0.000002 0.162941 0.688574 0.687634 -0.162713 6.650269 -7.348663 -20.653131 0.408426 0.542673 0.607263 -0.412221 7.706245 -14.785728 -12.674365 0.491861 0.456985 0.502698 -0.544547 9.821129 -17.035091 3.953076 0.665476 0.155434 0.16336 -0.711545 11.508904 -9.621465 17.83424 0.702519 -0.255998 -0.231032 -0.622541 11.575294 7.595606 17.706892 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0 1 -0 -0 -0 0 0 0</Pose>
             </Entity>
-            <Entity ID="268435512" Name="Vulture" CreStamp="1613471118" ModStamp="1613480231" WorldPos="29.2449 144.857 7.125" Rotation="0.0156849 2.74449 -0.0189909" Scale="1 1 1" FileIndex="99" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 85 268435512">
+            <Entity ID="268435512" Name="Vulture" CreStamp="1613471118" ModStamp="1613864107" WorldPos="29.2449 40.5853 7.125" Rotation="0.0156849 2.74449 -0.0189909" Scale="1 1 1" FileIndex="99" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 85 268435512">
                 <UserVariables>
                     <Var ObjectId="268435512" Name="Note" Value="" />
                     <Var ObjectId="268435512" Name="EventInstanceTag" Value="" />
@@ -1376,7 +1376,7 @@
                     <Var ObjectId="268435512" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435513" Name="rock_2" CreStamp="1613480689" ModStamp="1613519208" WorldPos="-19.239 148.369 -6.10635" Rotation="0 0.87737 0" Scale="0.75 0.75 0.75" FileIndex="38" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 70 268435513">
+            <Entity ID="268435513" Name="rock_2" CreStamp="1613480689" ModStamp="1613864107" WorldPos="-19.239 44.0973 -6.10635" Rotation="0 0.87737 0" Scale="0.75 0.75 0.75" FileIndex="38" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 70 268435513">
                 <UserVariables>
                     <Var ObjectId="268435513" Name="Note" Value="" />
                     <Var ObjectId="268435513" Name="EventInstanceTag" Value="" />
@@ -1442,7 +1442,7 @@
                     <Var ObjectId="268435513" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435514" Name="rock_3" CreStamp="1613480697" ModStamp="1613519211" WorldPos="-19.0419 148.35 -5.93879" Rotation="-0 3.84687 -0" Scale="0.5 0.5 0.5" FileIndex="102" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 66 268435514">
+            <Entity ID="268435514" Name="rock_3" CreStamp="1613480697" ModStamp="1613864107" WorldPos="-19.0419 44.0783 -5.93879" Rotation="-0 3.84687 -0" Scale="0.5 0.5 0.5" FileIndex="102" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 66 268435514">
                 <UserVariables>
                     <Var ObjectId="268435514" Name="Note" Value="" />
                     <Var ObjectId="268435514" Name="EventInstanceTag" Value="" />
@@ -1508,7 +1508,7 @@
                     <Var ObjectId="268435514" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435515" Name="rock_6" CreStamp="1613480756" ModStamp="1613519240" WorldPos="-18.9439 148.466 -6.32099" Rotation="1.61781 -0.643659 0.0110187" Scale="0.5 0.5 0.5" FileIndex="37" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 68 268435515">
+            <Entity ID="268435515" Name="rock_6" CreStamp="1613480756" ModStamp="1613864107" WorldPos="-18.9439 44.1943 -6.32099" Rotation="1.61781 -0.643659 0.0110187" Scale="0.5 0.5 0.5" FileIndex="37" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 68 268435515">
                 <UserVariables>
                     <Var ObjectId="268435515" Name="Note" Value="" />
                     <Var ObjectId="268435515" Name="EventInstanceTag" Value="" />
@@ -1574,7 +1574,7 @@
                     <Var ObjectId="268435515" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435516" Name="rock_4" CreStamp="1613480831" ModStamp="1613519215" WorldPos="-19.0709 148.713 -5.98264" Rotation="-3.07564 -0.783217 -0.0933413" Scale="0.5 0.5 0.5" FileIndex="38" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 67 268435516">
+            <Entity ID="268435516" Name="rock_4" CreStamp="1613480831" ModStamp="1613864107" WorldPos="-19.0709 44.4413 -5.98264" Rotation="-3.07564 -0.783217 -0.0933413" Scale="0.5 0.5 0.5" FileIndex="38" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 67 268435516">
                 <UserVariables>
                     <Var ObjectId="268435516" Name="Note" Value="" />
                     <Var ObjectId="268435516" Name="EventInstanceTag" Value="" />
@@ -1640,7 +1640,7 @@
                     <Var ObjectId="268435516" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435517" Name="rock_1" CreStamp="1613480867" ModStamp="1613519204" WorldPos="-19.2562 148.583 -6.16146" Rotation="0.963434 0.784119 0.0712909" Scale="0.35 0.35 0.35" FileIndex="102" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 69 268435517">
+            <Entity ID="268435517" Name="rock_1" CreStamp="1613480867" ModStamp="1613864107" WorldPos="-19.2562 44.3113 -6.16146" Rotation="0.963434 0.784119 0.0712909" Scale="0.35 0.35 0.35" FileIndex="102" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 69 268435517">
                 <UserVariables>
                     <Var ObjectId="268435517" Name="Note" Value="" />
                     <Var ObjectId="268435517" Name="EventInstanceTag" Value="" />
@@ -1706,7 +1706,7 @@
                     <Var ObjectId="268435517" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435518" Name="rock_5" CreStamp="1613480913" ModStamp="1613519220" WorldPos="-19.152 148.794 -6.05694" Rotation="3.13538 2.8869 0.10908" Scale="0.3 0.3 0.3" FileIndex="38" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 65 268435518">
+            <Entity ID="268435518" Name="rock_5" CreStamp="1613480913" ModStamp="1613864107" WorldPos="-19.152 44.5223 -6.05694" Rotation="3.13538 2.8869 0.10908" Scale="0.3 0.3 0.3" FileIndex="38" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 65 268435518">
                 <UserVariables>
                     <Var ObjectId="268435518" Name="Note" Value="" />
                     <Var ObjectId="268435518" Name="EventInstanceTag" Value="" />
@@ -1772,7 +1772,7 @@
                     <Var ObjectId="268435518" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435519" Name="beduin_carpet_tent_door_2" CreStamp="1613661523" ModStamp="1613661591" WorldPos="9.00644 141.749 -18.7808" Rotation="-0 2.46101 -0" Scale="0.75 0.75 0.75" FileIndex="77" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 355 268435519">
+            <Entity ID="268435519" Name="beduin_carpet_tent_door_2" CreStamp="1613661523" ModStamp="1613864107" WorldPos="9.00644 37.4773 -18.7808" Rotation="-0 2.46101 -0" Scale="0.75 0.75 0.75" FileIndex="77" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 355 268435519">
                 <UserVariables>
                     <Var ObjectId="268435519" Name="Note" Value="" />
                     <Var ObjectId="268435519" Name="CastShadows" Value="true" />
@@ -1786,7 +1786,7 @@
                     <Var ObjectId="268435519" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435520" Name="statue_pilgrim_tin_hinan_1" CreStamp="1613661972" ModStamp="1613668792" WorldPos="8.80603 141.795 -17.8488" Rotation="-0.0192267 1.10928 -0.0200385" Scale="1.5 1.5 1.5" FileIndex="28" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 353 268435520">
+            <Entity ID="268435520" Name="statue_pilgrim_tin_hinan_1" CreStamp="1613661972" ModStamp="1613864107" WorldPos="8.80603 37.5233 -17.8488" Rotation="-0.0192267 1.10928 -0.0200385" Scale="1.5 1.5 1.5" FileIndex="28" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 353 268435520">
                 <UserVariables>
                     <Var ObjectId="268435520" Name="Note" Value="" />
                     <Var ObjectId="268435520" Name="EventInstanceTag" Value="" />
@@ -1853,7 +1853,7 @@
                     <Var ObjectId="268435520" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435521" Name="torch_pilgrim_wood_1" CreStamp="1613664026" ModStamp="1613664814" WorldPos="9.2995 141.218 -16.6274" Rotation="0 1.37852 0" Scale="1 1 1" FileIndex="104" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 351 268435521">
+            <Entity ID="268435521" Name="torch_pilgrim_wood_1" CreStamp="1613664026" ModStamp="1613864107" WorldPos="9.2995 36.9463 -16.6274" Rotation="0 1.37852 0" Scale="1 1 1" FileIndex="104" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 351 268435521">
                 <UserVariables>
                     <Var ObjectId="268435521" Name="Note" Value="" />
                     <Var ObjectId="268435521" Name="EventInstanceTag" Value="" />
@@ -1924,7 +1924,7 @@
                     <Var ObjectId="268435521" Name="FlickerOffAlpha" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435522" Name="totem_medium_1" CreStamp="1613664084" ModStamp="1613666214" WorldPos="13.5664 140.973 -16.6674" Rotation="3.07788 2.64255 -3.12606" Scale="1 1 1" FileIndex="105" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 349 268435522">
+            <Entity ID="268435522" Name="totem_medium_1" CreStamp="1613664084" ModStamp="1613864107" WorldPos="13.5664 36.7013 -16.6674" Rotation="3.07788 2.64255 -3.12606" Scale="1 1 1" FileIndex="105" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 349 268435522">
                 <UserVariables>
                     <Var ObjectId="268435522" Name="Note" Value="" />
                     <Var ObjectId="268435522" Name="CastShadows" Value="true" />
@@ -1938,7 +1938,7 @@
                     <Var ObjectId="268435522" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435523" Name="totem_medium_2" CreStamp="1613664203" ModStamp="1613664349" WorldPos="12.5949 141.059 -14.8325" Rotation="-0.184301 -1.39971 0.258685" Scale="1 1 1" FileIndex="107" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 348 268435523">
+            <Entity ID="268435523" Name="totem_medium_2" CreStamp="1613664203" ModStamp="1613864107" WorldPos="12.5949 36.7873 -14.8325" Rotation="-0.184301 -1.39971 0.258685" Scale="1 1 1" FileIndex="107" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 348 268435523">
                 <UserVariables>
                     <Var ObjectId="268435523" Name="Note" Value="" />
                     <Var ObjectId="268435523" Name="CastShadows" Value="true" />
@@ -1952,7 +1952,7 @@
                     <Var ObjectId="268435523" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435524" Name="tribal_iron_mortar_cup_1" CreStamp="1613664372" ModStamp="1613665910" WorldPos="8.74501 141.795 -18.2914" Rotation="0.00525907 0.520395 -0.0514154" Scale="1 1 1" FileIndex="108" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 350 268435524">
+            <Entity ID="268435524" Name="tribal_iron_mortar_cup_1" CreStamp="1613664372" ModStamp="1613864107" WorldPos="8.74501 37.5233 -18.2914" Rotation="0.00525907 0.520395 -0.0514154" Scale="1 1 1" FileIndex="108" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 350 268435524">
                 <UserVariables>
                     <Var ObjectId="268435524" Name="Note" Value="" />
                     <Var ObjectId="268435524" Name="EventInstanceTag" Value="" />
@@ -2019,7 +2019,7 @@
                     <Var ObjectId="268435524" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435525" Name="tribal_jar_1" CreStamp="1613664407" ModStamp="1613665880" WorldPos="9.02966 141.785 -18.4459" Rotation="1.69071 1.5696 1.57079" Scale="1 1 1" FileIndex="109" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 345 268435525">
+            <Entity ID="268435525" Name="tribal_jar_1" CreStamp="1613664407" ModStamp="1613864107" WorldPos="9.02966 37.5133 -18.4459" Rotation="1.69071 1.5696 1.57079" Scale="1 1 1" FileIndex="109" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 345 268435525">
                 <UserVariables>
                     <Var ObjectId="268435525" Name="Note" Value="" />
                     <Var ObjectId="268435525" Name="EventInstanceTag" Value="" />
@@ -2085,7 +2085,7 @@
                     <Var ObjectId="268435525" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435526" Name="tribal_spice_box_1" CreStamp="1613664478" ModStamp="1613664541" WorldPos="8.31953 141.825 -17.8463" Rotation="-0.0225336 1.45897 4.81404e-08" Scale="0.35 0.35 0.35" FileIndex="112" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 344 268435526">
+            <Entity ID="268435526" Name="tribal_spice_box_1" CreStamp="1613664478" ModStamp="1613864107" WorldPos="8.31953 37.5533 -17.8463" Rotation="-0.0225336 1.45897 4.81404e-08" Scale="0.35 0.35 0.35" FileIndex="112" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 344 268435526">
                 <UserVariables>
                     <Var ObjectId="268435526" Name="Note" Value="" />
                     <Var ObjectId="268435526" Name="EventInstanceTag" Value="" />
@@ -2151,7 +2151,7 @@
                     <Var ObjectId="268435526" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435527" Name="tribal_wicker_box_02_1" CreStamp="1613664565" ModStamp="1613665679" WorldPos="8.66254 141.84 -17.4442" Rotation="-0.0190199 3.32239 -0.099586" Scale="0.5 0.5 0.5" FileIndex="69" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 343 268435527">
+            <Entity ID="268435527" Name="tribal_wicker_box_02_1" CreStamp="1613664565" ModStamp="1613864107" WorldPos="8.66254 37.5683 -17.4442" Rotation="-0.0190199 3.32239 -0.099586" Scale="0.5 0.5 0.5" FileIndex="69" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 343 268435527">
                 <UserVariables>
                     <Var ObjectId="268435527" Name="Note" Value="" />
                     <Var ObjectId="268435527" Name="EventInstanceTag" Value="" />
@@ -2217,7 +2217,7 @@
                     <Var ObjectId="268435527" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435528" Name="scatter_rock_torchholder_1" CreStamp="1613664764" ModStamp="1613664814" WorldPos="9.29376 141.05 -16.6418" Rotation="0 1.5708 -6.28221" Scale="1 1 1" FileIndex="103" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 342 268435528">
+            <Entity ID="268435528" Name="scatter_rock_torchholder_1" CreStamp="1613664764" ModStamp="1613864107" WorldPos="9.29376 36.7783 -16.6418" Rotation="0 1.5708 -6.28221" Scale="1 1 1" FileIndex="103" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 342 268435528">
                 <UserVariables>
                     <Var ObjectId="268435528" Name="Note" Value="" />
                     <Var ObjectId="268435528" Name="CastShadows" Value="true" />
@@ -2298,7 +2298,7 @@
                     <Var ObjectId="268435529" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435530" Name="sheet_messy_waving_soft_1" CreStamp="1613666620" ModStamp="1613666849" WorldPos="13.0242 143.014 -16.5325" Rotation="-0 3.31391 -0" Scale="1 1 1" FileIndex="118" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 377 268435530">
+            <Entity ID="268435530" Name="sheet_messy_waving_soft_1" CreStamp="1613666620" ModStamp="1613864107" WorldPos="13.0242 38.7423 -16.5325" Rotation="-0 3.31391 -0" Scale="1 1 1" FileIndex="118" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 377 268435530">
                 <UserVariables>
                     <Var ObjectId="268435530" Name="Note" Value="" />
                     <Var ObjectId="268435530" Name="CastShadows" Value="true" />
@@ -2312,7 +2312,7 @@
                     <Var ObjectId="268435530" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435531" Name="matchbook_1" CreStamp="1613666946" ModStamp="1613668297" WorldPos="8.666 141.856 -17.4555" Rotation="-2.5442 1.58164 -1.07718" Scale="1 1 1" FileIndex="119" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 375 268435531">
+            <Entity ID="268435531" Name="matchbook_1" CreStamp="1613666946" ModStamp="1613864107" WorldPos="8.666 37.5843 -17.4555" Rotation="-2.5442 1.58164 -1.07718" Scale="1 1 1" FileIndex="119" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 375 268435531">
                 <UserVariables>
                     <Var ObjectId="268435531" Name="Note" Value="" />
                     <Var ObjectId="268435531" Name="EventInstanceTag" Value="" />
@@ -2373,7 +2373,7 @@
                     <Var ObjectId="268435531" Name="Highlight" Value="true" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435532" Name="bone_thigh_1" CreStamp="1613666979" ModStamp="1613668547" WorldPos="9.84263 140.927 -18.5595" Rotation="1.39536 0.891309 0.0581994" Scale="1 1 1" FileIndex="126" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 376 268435532">
+            <Entity ID="268435532" Name="bone_thigh_1" CreStamp="1613666979" ModStamp="1613864107" WorldPos="9.84263 36.6553 -18.5595" Rotation="1.39536 0.891309 0.0581994" Scale="1 1 1" FileIndex="126" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 376 268435532">
                 <UserVariables>
                     <Var ObjectId="268435532" Name="Note" Value="" />
                     <Var ObjectId="268435532" Name="EventInstanceTag" Value="" />
@@ -2440,7 +2440,7 @@
                     <Var ObjectId="268435532" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435533" Name="bone_skull_fractured_01_1" CreStamp="1613666990" ModStamp="1613668596" WorldPos="9.75629 140.968 -18.4526" Rotation="-0.920252 0.683365 0.444773" Scale="1 1 1" FileIndex="125" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 374 268435533">
+            <Entity ID="268435533" Name="bone_skull_fractured_01_1" CreStamp="1613666990" ModStamp="1613864107" WorldPos="9.75629 36.6963 -18.4526" Rotation="-0.920252 0.683365 0.444773" Scale="1 1 1" FileIndex="125" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 374 268435533">
                 <UserVariables>
                     <Var ObjectId="268435533" Name="Note" Value="" />
                     <Var ObjectId="268435533" Name="EventInstanceTag" Value="" />
@@ -2507,7 +2507,7 @@
                     <Var ObjectId="268435533" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435534" Name="bone_ribcage_fractured_static_1" CreStamp="1613668363" ModStamp="1613748288" WorldPos="10.2825 140.882 -18.2889" Rotation="-0.769602 1.1302 0.506238" Scale="1 1 1" FileIndex="127" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 388 268435534">
+            <Entity ID="268435534" Name="bone_ribcage_fractured_static_1" CreStamp="1613668363" ModStamp="1613864107" WorldPos="10.2825 36.6103 -18.2889" Rotation="-0.769602 1.1302 0.506238" Scale="1 1 1" FileIndex="127" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 388 268435534">
                 <UserVariables>
                     <Var ObjectId="268435534" Name="Note" Value="" />
                     <Var ObjectId="268435534" Name="EventInstanceTag" Value="" />
@@ -2574,7 +2574,7 @@
                     <Var ObjectId="268435534" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435535" Name="corpse_fennec_1" CreStamp="1613735664" ModStamp="1613735824" WorldPos="29.5596 144.845 6.7194" Rotation="-0.1003 -0.35638 0.0340686" Scale="1.5 1.5 1.5" FileIndex="128" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 458 268435535">
+            <Entity ID="268435535" Name="corpse_fennec_1" CreStamp="1613735664" ModStamp="1613864107" WorldPos="29.5596 40.5733 6.7194" Rotation="-0.1003 -0.35638 0.0340686" Scale="1.5 1.5 1.5" FileIndex="128" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 458 268435535">
                 <UserVariables>
                     <Var ObjectId="268435535" Name="Note" Value="" />
                     <Var ObjectId="268435535" Name="EventInstanceTag" Value="" />
@@ -2641,7 +2641,7 @@
                     <Var ObjectId="268435535" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435536" Name="stone_box_simple_1" CreStamp="1613748930" ModStamp="1613748956" WorldPos="13.1086 140.945 -13.9056" Rotation="0.0485216 0.241215 -0.0677207" Scale="0.75 0.75 0.75" FileIndex="63" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 339 268435536">
+            <Entity ID="268435536" Name="stone_box_simple_1" CreStamp="1613748930" ModStamp="1613864107" WorldPos="13.1086 36.6733 -13.9056" Rotation="0.0485216 0.241215 -0.0677207" Scale="0.75 0.75 0.75" FileIndex="63" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 339 268435536">
                 <UserVariables>
                     <Var ObjectId="268435536" Name="Note" Value="" />
                     <Var ObjectId="268435536" Name="CastShadows" Value="true" />
@@ -2655,7 +2655,7 @@
                     <Var ObjectId="268435536" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435537" Name="stone_box_simple_lid_1" CreStamp="1613748940" ModStamp="1613749030" WorldPos="13.1794 141.544 -13.874" Rotation="0.0474301 0.115163 -0.0738661" Scale="0.75 0.75 0.75" FileIndex="64" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 503 268435537">
+            <Entity ID="268435537" Name="stone_box_simple_lid_1" CreStamp="1613748940" ModStamp="1613864107" WorldPos="13.1794 37.2723 -13.874" Rotation="0.0474301 0.115163 -0.0738661" Scale="0.75 0.75 0.75" FileIndex="64" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 503 268435537">
                 <UserVariables>
                     <Var ObjectId="268435537" Name="Note" Value="" />
                     <Var ObjectId="268435537" Name="EventInstanceTag" Value="" />
@@ -2721,7 +2721,7 @@
                     <Var ObjectId="268435537" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435538" Name="french_tent_sway_5" CreStamp="1613751761" ModStamp="1613778729" WorldPos="21.4345 140.286 -32.6986" Rotation="-2.83866 1.48348 -1.32163" Scale="0.4 0.5 0.5" FileIndex="3" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 524 268435538">
+            <Entity ID="268435538" Name="french_tent_sway_5" CreStamp="1613751761" ModStamp="1613864107" WorldPos="21.4345 36.0143 -32.6986" Rotation="-2.83866 1.48348 -1.32163" Scale="0.4 0.5 0.5" FileIndex="3" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 524 268435538">
                 <UserVariables>
                     <Var ObjectId="268435538" Name="Note" Value="" />
                     <Var ObjectId="268435538" Name="CastShadows" Value="true" />
@@ -2735,7 +2735,7 @@
                     <Var ObjectId="268435538" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435539" Name="french_tent_sway_6" CreStamp="1613751911" ModStamp="1613778814" WorldPos="21.4903 140.135 -34.4176" Rotation="3.10176 1.2921 -1.48559" Scale="0.5 0.5 0.5" FileIndex="135" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 523 268435539">
+            <Entity ID="268435539" Name="french_tent_sway_6" CreStamp="1613751911" ModStamp="1613864107" WorldPos="21.4903 35.8633 -34.4176" Rotation="3.10176 1.2921 -1.48559" Scale="0.5 0.5 0.5" FileIndex="135" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 523 268435539">
                 <UserVariables>
                     <Var ObjectId="268435539" Name="Note" Value="" />
                     <Var ObjectId="268435539" Name="EventInstanceTag" Value="" />
@@ -2800,7 +2800,7 @@
                     <Var ObjectId="268435539" Name="OpenableByAgent" Value="true" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435540" Name="french_tent_sway_8" CreStamp="1613753112" ModStamp="1613778850" WorldPos="21.9906 140.117 -39.2254" Rotation="-1.38611 1.2967 0.162304" Scale="0.5 0.5 0.5" FileIndex="135" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 559 268435540">
+            <Entity ID="268435540" Name="french_tent_sway_8" CreStamp="1613753112" ModStamp="1613864107" WorldPos="21.9906 35.8453 -39.2254" Rotation="-1.38611 1.2967 0.162304" Scale="0.5 0.5 0.5" FileIndex="135" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 559 268435540">
                 <UserVariables>
                     <Var ObjectId="268435540" Name="Note" Value="" />
                     <Var ObjectId="268435540" Name="EventInstanceTag" Value="" />
@@ -2865,7 +2865,7 @@
                     <Var ObjectId="268435540" Name="OpenableByAgent" Value="true" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435541" Name="french_tent_sway_9" CreStamp="1613753904" ModStamp="1613778819" WorldPos="21.3467 140.411 -30.9945" Rotation="0.801776 1.46453 2.30021" Scale="0.5 0.5 0.5" FileIndex="135" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 558 268435541">
+            <Entity ID="268435541" Name="french_tent_sway_9" CreStamp="1613753904" ModStamp="1613864107" WorldPos="21.3467 36.1393 -30.9945" Rotation="0.801776 1.46453 2.30021" Scale="0.5 0.5 0.5" FileIndex="135" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 558 268435541">
                 <UserVariables>
                     <Var ObjectId="268435541" Name="Note" Value="" />
                     <Var ObjectId="268435541" Name="EventInstanceTag" Value="" />
@@ -2930,7 +2930,7 @@
                     <Var ObjectId="268435541" Name="OpenableByAgent" Value="true" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435542" Name="french_tent_sway_7" CreStamp="1613759771" ModStamp="1613778794" WorldPos="25.6626 120.954 -36.0889" Rotation="1.07823 1.87046 2.60643" Scale="0.5 0.5 0.5" FileIndex="3" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 531 268435542">
+            <Entity ID="268435542" Name="french_tent_sway_7" CreStamp="1613759771" ModStamp="1613864875" WorldPos="24.3284 28.7843 -36.1699" Rotation="1.28791 1.84494 -3.01785" Scale="0.5 0.5 0.5" FileIndex="3" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 531 268435542">
                 <UserVariables>
                     <Var ObjectId="268435542" Name="Note" Value="" />
                     <Var ObjectId="268435542" Name="CastShadows" Value="true" />
@@ -2944,7 +2944,7 @@
                     <Var ObjectId="268435542" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435543" Name="french_tent_sway_10" CreStamp="1613779506" ModStamp="1613779982" WorldPos="21.555 141.3 -31.754" Rotation="-0.796957 1.71713 2.20784" Scale="1 1 1" FileIndex="135" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 513 268435543">
+            <Entity ID="268435543" Name="french_tent_sway_10" CreStamp="1613779506" ModStamp="1613864107" WorldPos="21.555 37.0283 -31.754" Rotation="-0.796957 1.71713 2.20784" Scale="1 1 1" FileIndex="135" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 513 268435543">
                 <UserVariables>
                     <Var ObjectId="268435543" Name="Note" Value="" />
                     <Var ObjectId="268435543" Name="EventInstanceTag" Value="" />
@@ -3009,7 +3009,7 @@
                     <Var ObjectId="268435543" Name="OpenableByAgent" Value="true" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435544" Name="plank_3" CreStamp="1613779698" ModStamp="1613780198" WorldPos="21.3647 140.37 -30.7949" Rotation="0.00268322 3.05173 -0.143302" Scale="1 0.9 1" FileIndex="136" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 521 268435544">
+            <Entity ID="268435544" Name="plank_3" CreStamp="1613779698" ModStamp="1613864107" WorldPos="21.3647 36.0983 -30.7949" Rotation="0.00268322 3.05173 -0.143302" Scale="1 0.9 1" FileIndex="136" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 521 268435544">
                 <UserVariables>
                     <Var ObjectId="268435544" Name="Note" Value="" />
                     <Var ObjectId="268435544" Name="EventInstanceTag" Value="" />
@@ -3075,7 +3075,7 @@
                     <Var ObjectId="268435544" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435545" Name="plank_2" CreStamp="1613780022" ModStamp="1613780195" WorldPos="21.5688 140.685 -32.6114" Rotation="0.0658915 3.31033 1.37455" Scale="0.287 0.616 0.390886" FileIndex="137" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 522 268435545">
+            <Entity ID="268435545" Name="plank_2" CreStamp="1613780022" ModStamp="1613864107" WorldPos="21.5688 36.4133 -32.6114" Rotation="0.0658915 3.31033 1.37455" Scale="0.287 0.616 0.390886" FileIndex="137" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 522 268435545">
                 <UserVariables>
                     <Var ObjectId="268435545" Name="Note" Value="" />
                     <Var ObjectId="268435545" Name="EventInstanceTag" Value="" />
@@ -3142,7 +3142,7 @@
                     <Var ObjectId="268435545" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435546" Name="bridge_plank_rope_only_1" CreStamp="1613780470" ModStamp="1613780595" WorldPos="20.4502 140.286 -39.9988" Rotation="-0.0689405 3.04696 -0.722409" Scale="1 1 1" FileIndex="143" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 566 268435546">
+            <Entity ID="268435546" Name="bridge_plank_rope_only_1" CreStamp="1613780470" ModStamp="1613864107" WorldPos="20.4502 36.0143 -39.9988" Rotation="-0.0689405 3.04696 -0.722409" Scale="1 1 1" FileIndex="143" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 566 268435546">
                 <UserVariables>
                     <Var ObjectId="268435546" Name="Note" Value="" />
                     <Var ObjectId="268435546" Name="CastShadows" Value="true" />
@@ -3156,7 +3156,7 @@
                     <Var ObjectId="268435546" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435547" Name="bridge_plank_stick_only_1" CreStamp="1613780632" ModStamp="1613780731" WorldPos="21.4539 140.177 -32.4632" Rotation="0.125189 2.86889 -0.0825293" Scale="1 1 1" FileIndex="142" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 520 268435547">
+            <Entity ID="268435547" Name="bridge_plank_stick_only_1" CreStamp="1613780632" ModStamp="1613864107" WorldPos="21.4539 35.9053 -32.4632" Rotation="0.125189 2.86889 -0.0825293" Scale="1 1 1" FileIndex="142" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 520 268435547">
                 <UserVariables>
                     <Var ObjectId="268435547" Name="Note" Value="" />
                     <Var ObjectId="268435547" Name="CastShadows" Value="true" />
@@ -3170,7 +3170,7 @@
                     <Var ObjectId="268435547" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435548" Name="bridge_plank_stick_only_2" CreStamp="1613780641" ModStamp="1613780783" WorldPos="22.2365 139.913 -39.152" Rotation="0.123107 2.86796 -0.0902459" Scale="1 1 1" FileIndex="142" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 519 268435548">
+            <Entity ID="268435548" Name="bridge_plank_stick_only_2" CreStamp="1613780641" ModStamp="1613864107" WorldPos="22.2365 35.6413 -39.152" Rotation="0.123107 2.86796 -0.0902459" Scale="1 1 1" FileIndex="142" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 519 268435548">
                 <UserVariables>
                     <Var ObjectId="268435548" Name="Note" Value="" />
                     <Var ObjectId="268435548" Name="CastShadows" Value="true" />
@@ -3184,7 +3184,7 @@
                     <Var ObjectId="268435548" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435549" Name="french_tent_sway_11" CreStamp="1613781295" ModStamp="1613781311" WorldPos="20.8126 140.268 -33.3176" Rotation="0.119221 1.71064 2.65166" Scale="1 1 1" FileIndex="135" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 546 268435549">
+            <Entity ID="268435549" Name="french_tent_sway_11" CreStamp="1613781295" ModStamp="1613864107" WorldPos="20.8126 35.9963 -33.3176" Rotation="0.119221 1.71064 2.65166" Scale="1 1 1" FileIndex="135" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 546 268435549">
                 <UserVariables>
                     <Var ObjectId="268435549" Name="Note" Value="" />
                     <Var ObjectId="268435549" Name="EventInstanceTag" Value="" />
@@ -3249,7 +3249,7 @@
                     <Var ObjectId="268435549" Name="OpenableByAgent" Value="true" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435550" Name="wind_turbine_animated_1" CreStamp="1613824233" ModStamp="1613824320" WorldPos="0.675188 167.037 -65.5132" Rotation="0 -0.82066 0" Scale="5 5 5" FileIndex="145" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 502 268435550">
+            <Entity ID="268435550" Name="wind_turbine_animated_1" CreStamp="1613824233" ModStamp="1613864107" WorldPos="0.675188 62.7653 -65.5132" Rotation="0 -0.82066 0" Scale="5 5 5" FileIndex="145" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 502 268435550">
                 <UserVariables>
                     <Var ObjectId="268435550" Name="Note" Value="" />
                     <Var ObjectId="268435550" Name="EventInstanceTag" Value="" />
@@ -3316,7 +3316,7 @@
                     <Var ObjectId="268435550" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435551" Name="plane_wreckage_outside_windows_1" CreStamp="1613825167" ModStamp="1613829090" WorldPos="-9.82167 96.301 73.2025" Rotation="-1.67424 4.54568 1.741" Scale="1 0.919 1" FileIndex="151" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 41 268435551">
+            <Entity ID="268435551" Name="plane_wreckage_outside_windows_1" CreStamp="1613825167" ModStamp="1613829090" WorldPos="-239.254 4.42729 73.2025" Rotation="-1.67424 4.54568 1.741" Scale="1 0.919 1" FileIndex="151" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 41 268435551">
                 <UserVariables>
                     <Var ObjectId="268435551" Name="Note" Value="" />
                     <Var ObjectId="268435551" Name="EventInstanceTag" Value="" />
@@ -3383,7 +3383,7 @@
                     <Var ObjectId="268435551" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435552" Name="plane_wreckage_outside_windows_2" CreStamp="1613825971" ModStamp="1613825998" WorldPos="-11.7097 94.683 71.2545" Rotation="1.48793 -1.37382 -1.40347" Scale="1.005 1.005 1.005" FileIndex="152" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 588 268435552">
+            <Entity ID="268435552" Name="plane_wreckage_outside_windows_2" CreStamp="1613825971" ModStamp="1613825998" WorldPos="-241.142 2.8093 71.2545" Rotation="1.48793 -1.37382 -1.40347" Scale="1.005 1.005 1.005" FileIndex="152" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 588 268435552">
                 <UserVariables>
                     <Var ObjectId="268435552" Name="Note" Value="" />
                     <Var ObjectId="268435552" Name="EventInstanceTag" Value="" />
@@ -3448,7 +3448,7 @@
                     <Var ObjectId="268435552" Name="OpenableByAgent" Value="true" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435553" Name="plane_wreckage_outside_windows_3" CreStamp="1613826003" ModStamp="1613826033" WorldPos="-10.9927 95.761 71.2895" Rotation="0.174603 4.44204 1.46997" Scale="1 1 1" FileIndex="153" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 582 268435553">
+            <Entity ID="268435553" Name="plane_wreckage_outside_windows_3" CreStamp="1613826003" ModStamp="1613826033" WorldPos="-240.425 3.88729 71.2895" Rotation="0.174603 4.44204 1.46997" Scale="1 1 1" FileIndex="153" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 582 268435553">
                 <UserVariables>
                     <Var ObjectId="268435553" Name="Note" Value="" />
                     <Var ObjectId="268435553" Name="EventInstanceTag" Value="" />
@@ -3515,7 +3515,7 @@
                     <Var ObjectId="268435553" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436028" Name="plane_wreckage_outside_windows_4" CreStamp="1613826318" ModStamp="1613826337" WorldPos="-28.1767 93.572 70.1455" Rotation="2.63829 0.895581 2.53717" Scale="1 1 1" FileIndex="154" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 494 268436028">
+            <Entity ID="268436028" Name="plane_wreckage_outside_windows_4" CreStamp="1613826318" ModStamp="1613826337" WorldPos="-257.609 1.6983 70.1455" Rotation="2.63829 0.895581 2.53717" Scale="1 1 1" FileIndex="154" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 494 268436028">
                 <UserVariables>
                     <Var ObjectId="268436028" Name="Note" Value="" />
                     <Var ObjectId="268436028" Name="CastShadows" Value="true" />
@@ -3529,7 +3529,7 @@
                     <Var ObjectId="268436028" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436030" Name="plane_wreckage_outside_windows_5" CreStamp="1613826669" ModStamp="1613826684" WorldPos="-32.6927 91.681 62.8775" Rotation="3.01164 3.42006 -2.83841" Scale="1.134 1.134 1.134" FileIndex="154" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 615 268436030">
+            <Entity ID="268436030" Name="plane_wreckage_outside_windows_5" CreStamp="1613826669" ModStamp="1613826684" WorldPos="-262.125 -0.192703 62.8775" Rotation="3.01164 3.42006 -2.83841" Scale="1.134 1.134 1.134" FileIndex="154" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 615 268436030">
                 <UserVariables>
                     <Var ObjectId="268436030" Name="Note" Value="" />
                     <Var ObjectId="268436030" Name="CastShadows" Value="true" />
@@ -3543,7 +3543,7 @@
                     <Var ObjectId="268436030" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436031" Name="plane_wreckage_outside_windows_6" CreStamp="1613826693" ModStamp="1613826708" WorldPos="-36.4387 91.184 68.1665" Rotation="-2.9698 0.754034 -2.7561" Scale="1.134 1.134 1.134" FileIndex="154" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 617 268436031">
+            <Entity ID="268436031" Name="plane_wreckage_outside_windows_6" CreStamp="1613826693" ModStamp="1613826708" WorldPos="-265.871 -0.689705 68.1665" Rotation="-2.9698 0.754034 -2.7561" Scale="1.134 1.134 1.134" FileIndex="154" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 617 268436031">
                 <UserVariables>
                     <Var ObjectId="268436031" Name="Note" Value="" />
                     <Var ObjectId="268436031" Name="CastShadows" Value="true" />
@@ -3557,7 +3557,7 @@
                     <Var ObjectId="268436031" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436034" Name="plane_wreckage_outside_windows_7" CreStamp="1613826750" ModStamp="1613826756" WorldPos="-40.8977 90.681 63.1855" Rotation="-2.88709 2.64248 -2.81082" Scale="1.134 1.134 1.134" FileIndex="154" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 602 268436034">
+            <Entity ID="268436034" Name="plane_wreckage_outside_windows_7" CreStamp="1613826750" ModStamp="1613826756" WorldPos="-270.33 -1.1927 63.1855" Rotation="-2.88709 2.64248 -2.81082" Scale="1.134 1.134 1.134" FileIndex="154" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 602 268436034">
                 <UserVariables>
                     <Var ObjectId="268436034" Name="Note" Value="" />
                     <Var ObjectId="268436034" Name="CastShadows" Value="true" />
@@ -3571,7 +3571,7 @@
                     <Var ObjectId="268436034" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436039" Name="plane_wreckage_outside_windows_8" CreStamp="1613826964" ModStamp="1613826973" WorldPos="-47.8627 88.786 83.4425" Rotation="-2.8216 2.60349 -3.03195" Scale="1.134 1.134 1.134" FileIndex="154" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 605 268436039">
+            <Entity ID="268436039" Name="plane_wreckage_outside_windows_8" CreStamp="1613826964" ModStamp="1613826973" WorldPos="-277.295 -3.08771 83.4425" Rotation="-2.8216 2.60349 -3.03195" Scale="1.134 1.134 1.134" FileIndex="154" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 605 268436039">
                 <UserVariables>
                     <Var ObjectId="268436039" Name="Note" Value="" />
                     <Var ObjectId="268436039" Name="CastShadows" Value="true" />
@@ -3585,7 +3585,7 @@
                     <Var ObjectId="268436039" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436055" Name="plane_wreckage_outside_windows_9" CreStamp="1613827317" ModStamp="1613827332" WorldPos="-18.0397 93.543 79.0585" Rotation="2.90274 0.581125 3.093" Scale="1.836 0.895 1.836" FileIndex="154" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 581 268436055">
+            <Entity ID="268436055" Name="plane_wreckage_outside_windows_9" CreStamp="1613827317" ModStamp="1613827332" WorldPos="-247.472 1.6693 79.0585" Rotation="2.90274 0.581125 3.093" Scale="1.836 0.895 1.836" FileIndex="154" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 581 268436055">
                 <UserVariables>
                     <Var ObjectId="268436055" Name="Note" Value="" />
                     <Var ObjectId="268436055" Name="CastShadows" Value="true" />
@@ -3599,7 +3599,7 @@
                     <Var ObjectId="268436055" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436127" Name="plane_wreckage_outside_windows_10" CreStamp="1613830609" ModStamp="1613830620" WorldPos="-15.5827 94.704 73.1015" Rotation="1.48793 -1.37382 -1.40347" Scale="1 1 1" FileIndex="155" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 716 268436127">
+            <Entity ID="268436127" Name="plane_wreckage_outside_windows_10" CreStamp="1613830609" ModStamp="1613830620" WorldPos="-245.015 2.83029 73.1015" Rotation="1.48793 -1.37382 -1.40347" Scale="1 1 1" FileIndex="155" Active="true" Important="false" Static="true" CulledByDistance="true" CulledByFog="true" UID="16 716 268436127">
                 <UserVariables>
                     <Var ObjectId="268436127" Name="Note" Value="" />
                     <Var ObjectId="268436127" Name="EventInstanceTag" Value="" />
@@ -3666,7 +3666,7 @@
                     <Var ObjectId="268436127" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436230" Name="french_tent_sway_12" CreStamp="1613837681" ModStamp="1613844684" WorldPos="39.5005 141.083 -47.319" Rotation="-0.0583219 0.035223 3.10811" Scale="1 1 1" FileIndex="3" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 516 268436230">
+            <Entity ID="268436230" Name="french_tent_sway_12" CreStamp="1613837681" ModStamp="1613864107" WorldPos="39.5005 36.8117 -47.319" Rotation="-0.0583219 0.035223 3.10811" Scale="1 1 1" FileIndex="3" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 516 268436230">
                 <UserVariables>
                     <Var ObjectId="268436230" Name="Note" Value="" />
                     <Var ObjectId="268436230" Name="CastShadows" Value="true" />
@@ -3680,7 +3680,7 @@
                     <Var ObjectId="268436230" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436232" Name="tree_cypress_2" CreStamp="1613838976" ModStamp="1613314022" WorldPos="44.9127 144.319 -50.0305" Rotation="0.103271 -0.979625 -0.0558074" Scale="1 1 1" FileIndex="10" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 4 268436232">
+            <Entity ID="268436232" Name="tree_cypress_2" CreStamp="1613838976" ModStamp="1613314022" WorldPos="44.9127 40.0476 -50.0305" Rotation="0.103271 -0.979625 -0.0558074" Scale="1 1 1" FileIndex="10" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 4 268436232">
                 <UserVariables>
                     <Var ObjectId="268436232" Name="Note" Value="" />
                     <Var ObjectId="268436232" Name="CastShadows" Value="true" />
@@ -3694,7 +3694,7 @@
                     <Var ObjectId="268436232" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436266" Name="tree_doum_sway_1" CreStamp="1613844569" ModStamp="1613849998" WorldPos="25.9243 140.049 -53.7746" Rotation="-0 2.51078 -0" Scale="0.5 0.5 0.5" FileIndex="7" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 777 268436266">
+            <Entity ID="268436266" Name="tree_doum_sway_1" CreStamp="1613844569" ModStamp="1613864107" WorldPos="25.9243 35.7777 -53.7746" Rotation="-0 2.51078 -0" Scale="0.5 0.5 0.5" FileIndex="7" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 777 268436266">
                 <UserVariables>
                     <Var ObjectId="268436266" Name="Note" Value="" />
                     <Var ObjectId="268436266" Name="CastShadows" Value="true" />

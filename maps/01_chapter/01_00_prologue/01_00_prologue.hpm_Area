@@ -1,13 +1,13 @@
 <HPLMapTrack_Area ID="2AA9DCBFF955507F91E452D835F6BCF1C5288D5" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
         <Objects>
-            <Area ID="268435456" Name="Start_Begin" CreStamp="1613304876" ModStamp="1613307888" WorldPos="0 170 0" Rotation="0 0 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 15 268435456" AreaType="PlayerStart">
+            <Area ID="268435456" Name="Start_Begin" CreStamp="1613304876" ModStamp="1613864107" WorldPos="0 65.7283 0" Rotation="0 0 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 15 268435456" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268435456" Name="Note" Value="" />
                     <Var ObjectId="268435456" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435457" Name="LookIntro_1" CreStamp="1613305128" ModStamp="1613307888" WorldPos="-0.75 175.5 2.75" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 30 268435457" AreaType="Trigger">
+            <Area ID="268435457" Name="LookIntro_1" CreStamp="1613305128" ModStamp="1613864107" WorldPos="-0.75 71.2283 2.75" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 30 268435457" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435457" Name="Note" Value="" />
                     <Var ObjectId="268435457" Name="BlocksLineOfSight" Value="false" />
@@ -35,13 +35,13 @@
                     <Var ObjectId="268435457" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435458" Name="Start_WakeUp" CreStamp="1613305200" ModStamp="1613321238" WorldPos="-21.2316 149.387 -5.23035" Rotation="0 0.889215 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 44 268435458" AreaType="PlayerStart">
+            <Area ID="268435458" Name="Start_WakeUp" CreStamp="1613305200" ModStamp="1613864107" WorldPos="-21.2316 45.1153 -5.23035" Rotation="0 0.889215 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 44 268435458" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268435458" Name="Note" Value="" />
                     <Var ObjectId="268435458" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435459" Name="Soundscape_Outside" CreStamp="1613310971" ModStamp="1613311066" WorldPos="0 165 0" Rotation="0 0 0" Scale="200 200 200" Active="true" Mesh="" UID="16 25 268435459" AreaType="Soundscape">
+            <Area ID="268435459" Name="Soundscape_Outside" CreStamp="1613310971" ModStamp="1613864107" WorldPos="0 60.7283 0" Rotation="0 0 0" Scale="200 200 200" Active="true" Mesh="" UID="16 25 268435459" AreaType="Soundscape">
                 <UserVariables>
                     <Var ObjectId="268435459" Name="Note" Value="" />
                     <Var ObjectId="268435459" Name="UseReverb" Value="true" />
@@ -68,14 +68,14 @@
                     <Var ObjectId="268435459" Name="ParentAttachBody" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435460" Name="PermaFail_PlagueHouse_1" CreStamp="1613316365" ModStamp="1613823034" WorldPos="-20.25 149.14 -3.25" Rotation="0 1.17268 0" Scale="0.5 1.5 0.5" Active="true" Mesh="" UID="16 176 268435460" AreaType="PermaFail">
+            <Area ID="268435460" Name="PermaFail_PlagueHouse_1" CreStamp="1613316365" ModStamp="1613864107" WorldPos="-20.25 44.8683 -3.25" Rotation="0 1.17268 0" Scale="0.5 1.5 0.5" Active="true" Mesh="" UID="16 176 268435460" AreaType="PermaFail">
                 <UserVariables>
                     <Var ObjectId="268435460" Name="Note" Value="" />
                     <Var ObjectId="268435460" Name="Crouch" Value="false" />
                     <Var ObjectId="268435460" Name="WakeUpAnim" Value="wake_up_from_permafail_var2" />
                 </UserVariables>
             </Area>
-            <Area ID="268435461" Name="Critter_Magnet_1" CreStamp="1613330638" ModStamp="1613330665" WorldPos="-18.8223 148.374 -4.23637" Rotation="0 -0.373575 0" Scale="1 1 1" Active="true" Mesh="" UID="16 124 268435461" AreaType="Trigger">
+            <Area ID="268435461" Name="Critter_Magnet_1" CreStamp="1613330638" ModStamp="1613864107" WorldPos="-18.8223 44.1023 -4.23637" Rotation="0 -0.373575 0" Scale="1 1 1" Active="true" Mesh="" UID="16 124 268435461" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435461" Name="Note" Value="" />
                     <Var ObjectId="268435461" Name="BlocksLineOfSight" Value="false" />
@@ -103,7 +103,7 @@
                     <Var ObjectId="268435461" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435462" Name="Trigger_FallingDeath" CreStamp="1613408911" ModStamp="1613832777" WorldPos="25.594 130 18.609" Rotation="0 -0.261799 0" Scale="150 1 150" Active="true" Mesh="" UID="16 707 268435462" AreaType="Trigger">
+            <Area ID="268435462" Name="Trigger_FallingDeath" CreStamp="1613408911" ModStamp="1613864166" WorldPos="25.594 32.5 18.609" Rotation="0 -0.261799 0" Scale="150 1 150" Active="true" Mesh="" UID="16 707 268435462" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435462" Name="Note" Value="" />
                     <Var ObjectId="268435462" Name="BlocksLineOfSight" Value="false" />
@@ -131,7 +131,7 @@
                     <Var ObjectId="268435462" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435463" Name="Trigger_VultureFly" CreStamp="1613429206" ModStamp="1613503647" WorldPos="2 146.5 4.75" Rotation="0 -0.174532 0" Scale="1 5 8" Active="true" Mesh="" UID="16 91 268435463" AreaType="Trigger">
+            <Area ID="268435463" Name="Trigger_VultureFly" CreStamp="1613429206" ModStamp="1613864107" WorldPos="2 42.2283 4.75" Rotation="0 -0.174532 0" Scale="1 5 8" Active="true" Mesh="" UID="16 91 268435463" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435463" Name="Note" Value="" />
                     <Var ObjectId="268435463" Name="BlocksLineOfSight" Value="false" />
@@ -159,7 +159,7 @@
                     <Var ObjectId="268435463" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435464" Name="interactdoorplaguenotice" CreStamp="1613431041" ModStamp="1613518668" WorldPos="-4.25868 146.172 -2.13783" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 88 268435464" AreaType="Trigger">
+            <Area ID="268435464" Name="interactdoorplaguenotice" CreStamp="1613431041" ModStamp="1613864107" WorldPos="-4.25868 41.9003 -2.13783" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 88 268435464" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435464" Name="Note" Value="" />
                     <Var ObjectId="268435464" Name="BlocksLineOfSight" Value="false" />
@@ -187,14 +187,14 @@
                     <Var ObjectId="268435464" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435466" Name="PermaFail_AfterPlagueHouse_1" CreStamp="1613518620" ModStamp="1613823029" WorldPos="5.52618 145.568 4.82404" Rotation="-0 2.39972 -0" Scale="0.5 1.5 0.5" Active="true" Mesh="" UID="16 243 268435466" AreaType="PermaFail">
+            <Area ID="268435466" Name="PermaFail_AfterPlagueHouse_1" CreStamp="1613518620" ModStamp="1613864107" WorldPos="5.52618 41.2963 4.82404" Rotation="-0 2.39972 -0" Scale="0.5 1.5 0.5" Active="true" Mesh="" UID="16 243 268435466" AreaType="PermaFail">
                 <UserVariables>
                     <Var ObjectId="268435466" Name="Note" Value="" />
                     <Var ObjectId="268435466" Name="Crouch" Value="false" />
                     <Var ObjectId="268435466" Name="WakeUpAnim" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435467" Name="Soundscape_Indoor" CreStamp="1613586787" ModStamp="1613587202" WorldPos="9.637 142.5 -17.657" Rotation="0 -0.456274 0" Scale="5.5 5 5" Active="true" Mesh="" UID="16 319 268435467" AreaType="Soundscape">
+            <Area ID="268435467" Name="Soundscape_Indoor" CreStamp="1613586787" ModStamp="1613864107" WorldPos="9.637 38.2283 -17.657" Rotation="0 -0.456274 0" Scale="5.5 5 5" Active="true" Mesh="" UID="16 319 268435467" AreaType="Soundscape">
                 <UserVariables>
                     <Var ObjectId="268435467" Name="Note" Value="" />
                     <Var ObjectId="268435467" Name="UseReverb" Value="true" />
@@ -221,31 +221,31 @@
                     <Var ObjectId="268435467" Name="ParentAttachBody" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435468" Name="Start_PathToBridge_Top" CreStamp="1613659503" ModStamp="1613659534" WorldPos="7.04926 145.847 4.55787" Rotation="-0 2.56238 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 362 268435468" AreaType="PlayerStart">
+            <Area ID="268435468" Name="Start_PathToBridge_Top" CreStamp="1613659503" ModStamp="1613864107" WorldPos="7.04926 41.5753 4.55787" Rotation="-0 2.56238 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 362 268435468" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268435468" Name="Note" Value="" />
                     <Var ObjectId="268435468" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435469" Name="Start_Altar" CreStamp="1613659535" ModStamp="1613752977" WorldPos="14.2647 142.1 -14.3674" Rotation="-0 4.18647 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 332 268435469" AreaType="PlayerStart">
+            <Area ID="268435469" Name="Start_Altar" CreStamp="1613659535" ModStamp="1613864107" WorldPos="14.2647 37.8283 -14.3674" Rotation="-0 4.18647 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 332 268435469" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268435469" Name="Note" Value="" />
                     <Var ObjectId="268435469" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435470" Name="Start_Bridge_Start" CreStamp="1613659552" ModStamp="1613752954" WorldPos="21.8958 141.446 -29.5762" Rotation="-0 3.08445 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 544 268435470" AreaType="PlayerStart">
+            <Area ID="268435470" Name="Start_Bridge_Start" CreStamp="1613659552" ModStamp="1613864107" WorldPos="21.8958 37.1743 -29.5762" Rotation="-0 3.08445 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 544 268435470" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268435470" Name="Note" Value="" />
                     <Var ObjectId="268435470" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435471" Name="Start_PlagueHouse" CreStamp="1613659571" ModStamp="1613659589" WorldPos="-4.38989 145.927 2.25202" Rotation="-0 3.1519 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 347 268435471" AreaType="PlayerStart">
+            <Area ID="268435471" Name="Start_PlagueHouse" CreStamp="1613659571" ModStamp="1613864107" WorldPos="-4.38989 41.6553 2.25202" Rotation="-0 3.1519 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 347 268435471" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268435471" Name="Note" Value="" />
                     <Var ObjectId="268435471" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435473" Name="Trigger_AltarMusic" CreStamp="1613737240" ModStamp="1613737809" WorldPos="11.3103 142.5 -16.6819" Rotation="0 -0.471238 0" Scale="1 4 4" Active="true" Mesh="" UID="16 472 268435473" AreaType="Trigger">
+            <Area ID="268435473" Name="Trigger_AltarMusic" CreStamp="1613737240" ModStamp="1613864107" WorldPos="11.3103 38.2283 -16.6819" Rotation="0 -0.471238 0" Scale="1 4 4" Active="true" Mesh="" UID="16 472 268435473" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435473" Name="Note" Value="" />
                     <Var ObjectId="268435473" Name="BlocksLineOfSight" Value="false" />
@@ -273,13 +273,13 @@
                     <Var ObjectId="268435473" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435474" Name="Start_Bridge_End" CreStamp="1613752955" ModStamp="1613753186" WorldPos="22.261 141.162 -39.8398" Rotation="-0 2.99618 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 346 268435474" AreaType="PlayerStart">
+            <Area ID="268435474" Name="Start_Bridge_End" CreStamp="1613752955" ModStamp="1613864107" WorldPos="22.261 36.8903 -39.8398" Rotation="-0 2.99618 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 346 268435474" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268435474" Name="Note" Value="" />
                     <Var ObjectId="268435474" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435475" Name="Trigger_SuccesfulJumpMusic" CreStamp="1613759123" ModStamp="1613759252" WorldPos="22.2385 142 -40.3438" Rotation="-0 2.89893 -0" Scale="3 4 1" Active="true" Mesh="" UID="16 551 268435475" AreaType="Trigger">
+            <Area ID="268435475" Name="Trigger_SuccesfulJumpMusic" CreStamp="1613759123" ModStamp="1613864107" WorldPos="23.194 37.7283 -40.7398" Rotation="-0 3.13083 -0" Scale="4 4 1" Active="true" Mesh="" UID="16 551 268435475" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435475" Name="Note" Value="" />
                     <Var ObjectId="268435475" Name="BlocksLineOfSight" Value="false" />
@@ -307,7 +307,7 @@
                     <Var ObjectId="268435475" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435476" Name="Trigger_SetPermaFail_AfterPlagueHouse" CreStamp="1613821455" ModStamp="1613821892" WorldPos="3.18504 146.5 4.86804" Rotation="-0 4.66603 -0" Scale="8 5 1" Active="true" Mesh="" UID="16 510 268435476" AreaType="Trigger">
+            <Area ID="268435476" Name="Trigger_SetPermaFail_AfterPlagueHouse" CreStamp="1613821455" ModStamp="1613864107" WorldPos="3.18504 42.2283 4.86804" Rotation="-0 4.66603 -0" Scale="8 5 1" Active="true" Mesh="" UID="16 510 268435476" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435476" Name="Note" Value="" />
                     <Var ObjectId="268435476" Name="BlocksLineOfSight" Value="false" />
@@ -335,7 +335,7 @@
                     <Var ObjectId="268435476" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435477" Name="Trigger_SetPermaFail_Altar" CreStamp="1613821597" ModStamp="1613821630" WorldPos="16.25 143 -11.5" Rotation="0 -0.436332 0" Scale="7 4 1" Active="true" Mesh="" UID="16 505 268435477" AreaType="Trigger">
+            <Area ID="268435477" Name="Trigger_SetPermaFail_Altar" CreStamp="1613821597" ModStamp="1613864107" WorldPos="16.25 38.7283 -11.5" Rotation="0 -0.436332 0" Scale="7 4 1" Active="true" Mesh="" UID="16 505 268435477" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435477" Name="Note" Value="" />
                     <Var ObjectId="268435477" Name="BlocksLineOfSight" Value="false" />
@@ -363,28 +363,28 @@
                     <Var ObjectId="268435477" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435478" Name="PermaFail_Altar_1" CreStamp="1613821672" ModStamp="1613823040" WorldPos="10.6885 141.869 -17.0059" Rotation="-0 4.33089 -0" Scale="0.5 1.5 0.5" Active="true" Mesh="" UID="16 507 268435478" AreaType="PermaFail">
+            <Area ID="268435478" Name="PermaFail_Altar_1" CreStamp="1613821672" ModStamp="1613864107" WorldPos="10.6885 37.5973 -17.0059" Rotation="-0 4.33089 -0" Scale="0.5 1.5 0.5" Active="true" Mesh="" UID="16 507 268435478" AreaType="PermaFail">
                 <UserVariables>
                     <Var ObjectId="268435478" Name="Note" Value="" />
                     <Var ObjectId="268435478" Name="Crouch" Value="false" />
                     <Var ObjectId="268435478" Name="WakeUpAnim" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435479" Name="PermaFail_Bridge_Start" CreStamp="1613823749" ModStamp="1613823843" WorldPos="22.3643 141.286 -27.0861" Rotation="-0 3.41034 -0" Scale="0.5 1.5 0.5" Active="true" Mesh="" UID="16 508 268435479" AreaType="PermaFail">
+            <Area ID="268435479" Name="PermaFail_Bridge_Start" CreStamp="1613823749" ModStamp="1613864107" WorldPos="22.3643 37.0143 -27.0861" Rotation="-0 3.41034 -0" Scale="0.5 1.5 0.5" Active="true" Mesh="" UID="16 508 268435479" AreaType="PermaFail">
                 <UserVariables>
                     <Var ObjectId="268435479" Name="Note" Value="" />
                     <Var ObjectId="268435479" Name="Crouch" Value="false" />
                     <Var ObjectId="268435479" Name="WakeUpAnim" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435480" Name="PermaFail_Bridge_End" CreStamp="1613823787" ModStamp="1613823848" WorldPos="22.3872 140.968 -40.9841" Rotation="-0 2.71369 -0" Scale="0.5 1.5 0.5" Active="true" Mesh="" UID="16 506 268435480" AreaType="PermaFail">
+            <Area ID="268435480" Name="PermaFail_Bridge_End" CreStamp="1613823787" ModStamp="1613864107" WorldPos="22.3872 36.6963 -40.9841" Rotation="-0 2.71369 -0" Scale="0.5 1.5 0.5" Active="true" Mesh="" UID="16 506 268435480" AreaType="PermaFail">
                 <UserVariables>
                     <Var ObjectId="268435480" Name="Note" Value="" />
                     <Var ObjectId="268435480" Name="Crouch" Value="false" />
                     <Var ObjectId="268435480" Name="WakeUpAnim" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435481" Name="Trigger_SetPermaFail_Bridge_Start" CreStamp="1613823824" ModStamp="1613823885" WorldPos="22.5 142.25 -28.456" Rotation="0 0 0" Scale="7 4 1" Active="true" Mesh="" UID="16 504 268435481" AreaType="Trigger">
+            <Area ID="268435481" Name="Trigger_SetPermaFail_Bridge_Start" CreStamp="1613823824" ModStamp="1613864107" WorldPos="22.5 37.9783 -28.456" Rotation="0 0 0" Scale="7 4 1" Active="true" Mesh="" UID="16 504 268435481" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435481" Name="Note" Value="" />
                     <Var ObjectId="268435481" Name="BlocksLineOfSight" Value="false" />
@@ -412,7 +412,7 @@
                     <Var ObjectId="268435481" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435482" Name="Trigger_SetPermaFail_Bridge_End" CreStamp="1613823942" ModStamp="1613824014" WorldPos="22.5 141.75 -40.165" Rotation="0 0 0" Scale="3 4 1" Active="true" Mesh="" UID="16 509 268435482" AreaType="Trigger">
+            <Area ID="268435482" Name="Trigger_SetPermaFail_Bridge_End" CreStamp="1613823942" ModStamp="1613864107" WorldPos="22.801 37.7283 -40.136" Rotation="0 -0.260566 0" Scale="4 4 1" Active="true" Mesh="" UID="16 509 268435482" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435482" Name="Note" Value="" />
                     <Var ObjectId="268435482" Name="BlocksLineOfSight" Value="false" />
@@ -438,6 +438,62 @@
                     <Var ObjectId="268435482" Name="CanInteractWithoutCallback" Value="false" />
                     <Var ObjectId="268435482" Name="MaxFocusDistance" Value="-1" />
                     <Var ObjectId="268435482" Name="CustomInteractIcon" Value="Default" />
+                </UserVariables>
+            </Area>
+            <Area ID="268436317" Name="wall" CreStamp="1613861233" ModStamp="1613865613" WorldPos="64.9267 34.7257 -39.3083" Rotation="6.15242e-07 3.97548 4.75385e-08" Scale="25 15 1" Active="true" Mesh="" UID="16 736 268436317" AreaType="Trigger">
+                <UserVariables>
+                    <Var ObjectId="268436317" Name="Note" Value="" />
+                    <Var ObjectId="268436317" Name="BlocksLineOfSight" Value="false" />
+                    <Var ObjectId="268436317" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268436317" Name="UserVar" Value="" />
+                    <Var ObjectId="268436317" Name="Static" Value="false" />
+                    <Var ObjectId="268436317" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268436317" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268436317" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268436317" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268436317" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268436317" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268436317" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268436317" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="268436317" Name="PlayerLookAtCallback" Value="" />
+                    <Var ObjectId="268436317" Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                    <Var ObjectId="268436317" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
+                    <Var ObjectId="268436317" Name="PlayerLookAtCheckRayIntersection" Value="true" />
+                    <Var ObjectId="268436317" Name="PlayerLookAtMaxDistance" Value="-1" />
+                    <Var ObjectId="268436317" Name="PlayerLookAtCallbackDelay" Value="0" />
+                    <Var ObjectId="268436317" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268436317" Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268436317" Name="CanInteractWithoutCallback" Value="false" />
+                    <Var ObjectId="268436317" Name="MaxFocusDistance" Value="-1" />
+                    <Var ObjectId="268436317" Name="CustomInteractIcon" Value="Default" />
+                </UserVariables>
+            </Area>
+            <Area ID="268436318" Name="wall_1" CreStamp="1613861300" ModStamp="1613865619" WorldPos="59.3821 32.1473 -23.6715" Rotation="-9.48949e-07 -1.12 1.35731e-06" Scale="15 7.5 1" Active="true" Mesh="" UID="16 735 268436318" AreaType="Trigger">
+                <UserVariables>
+                    <Var ObjectId="268436318" Name="Note" Value="" />
+                    <Var ObjectId="268436318" Name="BlocksLineOfSight" Value="false" />
+                    <Var ObjectId="268436318" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268436318" Name="UserVar" Value="" />
+                    <Var ObjectId="268436318" Name="Static" Value="false" />
+                    <Var ObjectId="268436318" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268436318" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268436318" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268436318" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268436318" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268436318" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268436318" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268436318" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="268436318" Name="PlayerLookAtCallback" Value="" />
+                    <Var ObjectId="268436318" Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                    <Var ObjectId="268436318" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
+                    <Var ObjectId="268436318" Name="PlayerLookAtCheckRayIntersection" Value="true" />
+                    <Var ObjectId="268436318" Name="PlayerLookAtMaxDistance" Value="-1" />
+                    <Var ObjectId="268436318" Name="PlayerLookAtCallbackDelay" Value="0" />
+                    <Var ObjectId="268436318" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268436318" Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268436318" Name="CanInteractWithoutCallback" Value="false" />
+                    <Var ObjectId="268436318" Name="MaxFocusDistance" Value="-1" />
+                    <Var ObjectId="268436318" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
         </Objects>

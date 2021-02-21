@@ -1,7 +1,7 @@
 <HPLMapTrack_Compound ID="2AA9DCBFF955507F91E452D835F6BCF1C5288D5" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
         <Objects>
-            <Compound ID="268436141" Name="Plane" CreStamp="0" ModStamp="1613831510" WorldPos="-27.8862 88.0135 76.2315" Rotation="0 0 0" Scale="1 1 1" UID="16 723 268436141">
+            <Compound ID="268436141" Name="Plane" CreStamp="0" ModStamp="1613864057" WorldPos="-257.319 -3.86021 76.2315" Rotation="0 0 0" Scale="1 1 1" UID="16 723 268436141">
                 <Component ID="268436030" />
                 <Component ID="268436029" />
                 <Component ID="268436123" />
@@ -142,7 +142,7 @@
                 <Component ID="268436038" />
                 <Component ID="268436040" />
             </Compound>
-            <Compound ID="268436239" Name="Compound_1" CreStamp="0" ModStamp="1613841655" WorldPos="44.6229 147.403 -49.9652" Rotation="-0.0607365 2.81313 0.0104179" Scale="1 1 1" UID="16 805 268436239">
+            <Compound ID="268436239" Name="Compound_1" CreStamp="0" ModStamp="1613864107" WorldPos="44.6229 43.1311 -49.9652" Rotation="-0.0607365 2.81313 0.0104179" Scale="1 1 1" UID="16 805 268436239">
                 <Component ID="268436231" />
                 <Component ID="268436232" />
                 <Component ID="268436233" />
@@ -151,6 +151,17 @@
                 <Component ID="268436236" />
                 <Component ID="268436237" />
                 <Component ID="268436238" />
+            </Compound>
+            <Compound ID="268436344" Name="Compound_2" CreStamp="0" ModStamp="1613865425" WorldPos="24.4287 28.6582 -35.857" Rotation="0 0 0" Scale="1 1 1" UID="16 810 268436344">
+                <Component ID="268435910" />
+                <Component ID="268435912" />
+                <Component ID="268435909" />
+                <Component ID="268435911" />
+                <Component ID="268435906" />
+                <Component ID="268435913" />
+                <Component ID="268435908" />
+                <Component ID="268435907" />
+                <Component ID="268435542" />
             </Compound>
         </Objects>
     </Section>
