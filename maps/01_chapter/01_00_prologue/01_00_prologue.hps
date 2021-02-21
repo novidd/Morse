@@ -119,8 +119,6 @@ class cScrMap : iScrMap
 		
 		mlPermaFailStage = eProloguePermaFail_PlagueHouse;
 		
-		Billboard_SetBrightness("Billboard_Fence_*", .025f);
-		
 		/////////////////////////
 		// Debug
 		if(cLux_ScriptDebugOn())
@@ -158,7 +156,7 @@ class cScrMap : iScrMap
 		Game_AutoSave();
 		
 //		FogArea_SetPosition("FogArea_Sandstorm", cVector3f(0, 150, 0));
-		
+		Billboard_SetBrightness("Billboard_Fence_*", .015f);
 		//Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
 		Item_RemoveFromInventory(ItemType_GetFirstInInventory("CurseMedallion"));
 	}
@@ -662,9 +660,9 @@ class cScrMap : iScrMap
 		}
 		
 		//-------------------------------------------------------
-		// 04_01_town/level/roof_break 04_01_town/level/roof_debris
 		
-		//41.831
+		
+		
 		//-------------------------------------------------------
 		
 		//} END Event *PLAYER CROSSES THE BROKEN BRIDGE*
