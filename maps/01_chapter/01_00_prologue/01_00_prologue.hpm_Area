@@ -1,13 +1,13 @@
 <HPLMapTrack_Area ID="2AA9DCBFF955507F91E452D835F6BCF1C5288D5" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
         <Objects>
-            <Area ID="268435456" Name="Start_Begin" CreStamp="1613304876" ModStamp="1613864107" WorldPos="0 65.7283 0" Rotation="0 0 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 15 268435456" AreaType="PlayerStart">
+            <Area ID="268435456" Name="Start_Begin" CreStamp="1613304876" ModStamp="1613908330" WorldPos="0 88.8157 0" Rotation="0 0 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 15 268435456" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268435456" Name="Note" Value="" />
                     <Var ObjectId="268435456" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435457" Name="LookIntro_1" CreStamp="1613305128" ModStamp="1613864107" WorldPos="-0.75 71.2283 2.75" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 30 268435457" AreaType="Trigger">
+            <Area ID="268435457" Name="LookIntro_1" CreStamp="1613305128" ModStamp="1613908330" WorldPos="-0.75 94.3157 2.75" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 30 268435457" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435457" Name="Note" Value="" />
                     <Var ObjectId="268435457" Name="BlocksLineOfSight" Value="false" />
@@ -41,7 +41,7 @@
                     <Var ObjectId="268435458" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268435459" Name="Soundscape_Outside" CreStamp="1613310971" ModStamp="1613864107" WorldPos="0 60.7283 0" Rotation="0 0 0" Scale="200 200 200" Active="true" Mesh="" UID="16 25 268435459" AreaType="Soundscape">
+            <Area ID="268435459" Name="Soundscape_Outside" CreStamp="1613310971" ModStamp="1613908313" WorldPos="0 50 5" Rotation="0 0 0" Scale="125 50 150" Active="true" Mesh="" UID="16 25 268435459" AreaType="Soundscape">
                 <UserVariables>
                     <Var ObjectId="268435459" Name="Note" Value="" />
                     <Var ObjectId="268435459" Name="UseReverb" Value="true" />
@@ -221,7 +221,7 @@
                     <Var ObjectId="268435467" Name="ParentAttachBody" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435468" Name="Start_PathToBridge_Top" CreStamp="1613659503" ModStamp="1613864107" WorldPos="7.04926 41.5753 4.55787" Rotation="-0 2.56238 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 362 268435468" AreaType="PlayerStart">
+            <Area ID="268435468" Name="Start_PathToBridge_Top" CreStamp="1613659503" ModStamp="1613911374" WorldPos="7.04926 41.3566 4.55787" Rotation="-0 2.56238 -0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 362 268435468" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268435468" Name="Note" Value="" />
                     <Var ObjectId="268435468" Name="Crouching" Value="false" />
