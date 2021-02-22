@@ -953,6 +953,11 @@
                     <Set SetName="canyon">0.234579 0.097247 0.035273 0.213111 0.096574 0.038005 -0.039239 -0.02367 -0.011765 -0.012437 -0.007286 -0.003336 0.011971 0.003151 0.000624 -0.044387 -0.024296 -0.012171 -0.011917 -0.005315 -0.002016 0.01554 0.008502 0.004119 -0.038445 -0.018831 -0.008266</Set>
                 </Irradiance>
             </BoxLight>
+            <BoxLight ID="268436693" Name="Light_Box_204" CreStamp="1614018723" ModStamp="1614018732" WorldPos="26.0708 39.2543 -74.4166" Rotation="0 0 0" Scale="1 1 1" CastShadows="false" ShadowResolution="High" ShadowsAffectStatic="true" ShadowsAffectDynamic="true" Radius="1" Gobo="" GoboType="Diffuse" GoboAnimMode="None" GoboAnimFrameTime="1" GoboAnimStartTime="0" DiffuseColor="1 1 1 1" FlickerActive="false" FlickerOnMinLength="0" FlickerOnMaxLength="0" FlickerOnPS="" FlickerOnSound="" FlickerOffMinLength="0" FlickerOffMaxLength="0" FlickerOffPS="" FlickerOffSound="" FlickerOffColor="0 0 0 1" FlickerOffRadius="0" FlickerFade="false" FlickerOnFadeMinLength="0" FlickerOnFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffFadeMaxLength="0" CastDiffuseLight="true" CastSpecularLight="true" Brightness="5" Static="false" CulledByDistance="true" CulledByFog="true" BlendFunc="2" Size="100 100 100" GroundColor="1 1 1 0" SkyColor="1 1 1 0" Weight="1" Bevel="0.8" FalloffPow="0.8" UseSphericalHarmonics="true" ProbeOffset="0 0 0" ConnectedLightMaskID="4294967295" UID="16 1006 268436693">
+                <Irradiance>
+                    <Set SetName="canyon">0.22634 0.092395 0.033348 0.180896 0.084251 0.034018 -0.032981 -0.020129 -0.010233 0.031812 0.011474 0.003215 0.034576 0.013294 0.004248 -0.033528 -0.020146 -0.010745 -0.009451 -0.003958 -0.001484 0.003032 0.002571 0.001752 -0.043846 -0.021281 -0.009148</Set>
+                </Irradiance>
+            </BoxLight>
         </Objects>
     </Section>
 </HPLMapTrack_Light>
