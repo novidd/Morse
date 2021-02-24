@@ -159,6 +159,9 @@ class cScrMap : iScrMap
 		Billboard_SetBrightness("Billboard_Fence_*", .015f);
 		//Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
 		Item_RemoveFromInventory(ItemType_GetFirstInInventory("CurseMedallion"));
+		
+		// Check if player has entered the fort
+		// If true, start the sandstorm
 	}
 
 	//-------------------------------------------------------
