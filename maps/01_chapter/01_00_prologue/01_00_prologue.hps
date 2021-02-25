@@ -671,4 +671,49 @@ class cScrMap : iScrMap
 		//} END Event *PLAYER CROSSES THE BROKEN BRIDGE*
 		
 	//} END SCENE 2
+	
+	/////////////////////////////////////////////////////////////////////////////////////////
+	// ==============
+	// SCENE 3 *CANYON*
+	// ==============
+	//{//////////////////////////////////////////////////////////////////////////////////////
+	
+		/////////////////////////////////////////
+		// General
+		//{//////////////////////////////////////
+		 
+		//-------------------------------------------------------
+	 
+		/*Put any variables that are used by many events in Scene 3 here.*/
+		
+		//-------------------------------------------------------
+	 
+		/*Put any functions that are used in more than one event in Scene 3 here.*/
+		
+		//-------------------------------------------------------
+		
+		//} END General
+	 
+		/////////////////////////////////////////
+		// Event A *GHOUL SCARE*
+		//{//////////////////////////////////////
+		
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 3, Event A here.*/
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 3, Event A here.*/
+		
+		bool OnCollide_GhoulScare(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			return true;
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *GHOUL SCARE*
+	 
+	//} END SCENE 1
 }

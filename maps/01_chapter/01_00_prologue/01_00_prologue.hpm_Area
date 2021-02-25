@@ -468,7 +468,7 @@
                     <Var ObjectId="268436178" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268436709" Name="AddNoteThatReferencesTheOldFortEntrance" CreStamp="1614027746" ModStamp="1614270925" WorldPos="32.5293 45.5868 -81.8274" Rotation="0 -0.579113 0" Scale="1 1 1" Active="true" Mesh="" UID="16 1018 268436709" AreaType="Trigger">
+            <Area ID="268436709" Name="NoteThatReferencesTheExcavationMural" CreStamp="1614027746" ModStamp="1614281009" WorldPos="36.1324 36.3836 -67.8097" Rotation="0 -0.579113 0" Scale="1 1 1" Active="true" Mesh="" UID="16 1018 268436709" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268436709" Name="Note" Value="" />
                     <Var ObjectId="268436709" Name="BlocksLineOfSight" Value="false" />
@@ -524,7 +524,7 @@
                     <Var ObjectId="268436711" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268436780" Name="Trigger_GhoulScare" CreStamp="1614191012" ModStamp="1614269174" WorldPos="24.75 39 -71" Rotation="0 0.268191 0" Scale="6 5 1" Active="true" Mesh="" UID="16 1081 268436780" AreaType="Trigger">
+            <Area ID="268436780" Name="Trigger_GhoulScare" CreStamp="1614191012" ModStamp="1614281179" WorldPos="25.5449 39 -68.9837" Rotation="0 0.349066 0" Scale="6 5 1" Active="true" Mesh="" UID="16 1081 268436780" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268436780" Name="Note" Value="" />
                     <Var ObjectId="268436780" Name="BlocksLineOfSight" Value="false" />
@@ -533,8 +533,8 @@
                     <Var ObjectId="268436780" Name="Static" Value="false" />
                     <Var ObjectId="268436780" Name="QuickSave" Value="false" />
                     <Var ObjectId="268436780" Name="FullGameSave" Value="false" />
-                    <Var ObjectId="268436780" Name="CC_Entities" Value="" />
-                    <Var ObjectId="268436780" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268436780" Name="CC_Entities" Value="player" />
+                    <Var ObjectId="268436780" Name="CC_Funcs" Value="OnCollide_GhoulScare" />
                     <Var ObjectId="268436780" Name="ParentAttachEntity" Value="" />
                     <Var ObjectId="268436780" Name="ParentAttachUseRotation" Value="true" />
                     <Var ObjectId="268436780" Name="ParentAttachBody" Value="" />
