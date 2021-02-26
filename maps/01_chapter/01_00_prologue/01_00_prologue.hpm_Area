@@ -630,7 +630,7 @@
                     <Var ObjectId="268437071" Name="ParentAttachBody" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268437077" Name="PS_GhoulScare" CreStamp="1614352392" ModStamp="1614352425" WorldPos="25.1405 49.9501 -72.2851" Rotation="0 -0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 1138 268437077" AreaType="Trigger">
+            <Area ID="268437077" Name="PS_GhoulScare" CreStamp="1614352392" ModStamp="1614364629" WorldPos="25.1197 49.9501 -72.416" Rotation="0 -0 0" Scale="0.5 0.5 0.5" Active="true" Mesh="" UID="16 1138 268437077" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268437077" Name="Note" Value="" />
                     <Var ObjectId="268437077" Name="BlocksLineOfSight" Value="false" />

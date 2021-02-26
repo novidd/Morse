@@ -5236,7 +5236,7 @@
                     <Var ObjectId="268437080" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268437106" Name="tree_acacia_dry_lowwind_1" CreStamp="1614357307" ModStamp="1614357321" WorldPos="15.4012 47.3309 -71.0214" Rotation="-0.0684661 -0.783675 0.0468307" Scale="1 1 1" FileIndex="196" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1144 268437106">
+            <Entity ID="268437106" Name="tree_acacia_dry_lowwind_1" CreStamp="1614357307" ModStamp="1614364753" WorldPos="15.5985 47.7434 -73.1539" Rotation="-0.0684661 -0.783675 0.0468307" Scale="1 1 1" FileIndex="195" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1144 268437106">
                 <UserVariables>
                     <Var ObjectId="268437106" Name="Note" Value="" />
                     <Var ObjectId="268437106" Name="CastShadows" Value="true" />
@@ -5468,6 +5468,34 @@
                     <Var ObjectId="268437143" Name="IsOccluder" Value="false" />
                     <Var ObjectId="268437143" Name="CollideGroup" Value="" />
                     <Var ObjectId="268437143" Name="RenderLayer" Value="0" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268437174" Name="tree_doum_sway_3" CreStamp="1614363502" ModStamp="1614363562" WorldPos="33.151 36.7641 -82.5419" Rotation="-0 4.62856 -0" Scale="0.25 0.25 0.25" FileIndex="7" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1107 268437174">
+                <UserVariables>
+                    <Var ObjectId="268437174" Name="Note" Value="" />
+                    <Var ObjectId="268437174" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268437174" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268437174" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268437174" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268437174" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268437174" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268437174" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268437174" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268437174" Name="RenderLayer" Value="0" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268437175" Name="tree_doum_sway_4" CreStamp="1614363568" ModStamp="1614363678" WorldPos="33.1704 35.4444 -82.477" Rotation="-0.0695992 4.59395 0.0698037" Scale="0.2 0.2 0.2" FileIndex="7" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1106 268437175">
+                <UserVariables>
+                    <Var ObjectId="268437175" Name="Note" Value="" />
+                    <Var ObjectId="268437175" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268437175" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268437175" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268437175" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268437175" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268437175" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268437175" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268437175" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268437175" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
         </Objects>
