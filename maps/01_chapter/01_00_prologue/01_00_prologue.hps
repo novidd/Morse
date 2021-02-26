@@ -701,7 +701,7 @@ class cScrMap : iScrMap
 		//} END General
 	 
 		/////////////////////////////////////////
-		// Event A *GHOUL SCARE*
+		// Event A *GHOUL SCARES*
 		//{//////////////////////////////////////
 		
 		//-------------------------------------------------------
@@ -721,6 +721,10 @@ class cScrMap : iScrMap
 			Music_PlayOverlay("Hank_Stinger", mfGlobalMusicVolume);
 			return false;
 		}
+		
+		//-------------------------------------------------------
+		
+		
 		
 		//-------------------------------------------------------
 

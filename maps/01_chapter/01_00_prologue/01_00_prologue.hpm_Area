@@ -536,7 +536,7 @@
                     <Var ObjectId="268436865" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268436888" Name="Trigger_GhoulScreamScare" CreStamp="1614207875" ModStamp="1614276959" WorldPos="19.258 39 -90.7704" Rotation="0 -0.119749 0" Scale="6 5 1" Active="true" Mesh="" UID="16 1033 268436888" AreaType="Trigger">
+            <Area ID="268436888" Name="Trigger_GhoulScreamScare" CreStamp="1614207875" ModStamp="1614381301" WorldPos="19.258 39 -90.7704" Rotation="0 -0.119749 0" Scale="6 5 1" Active="true" Mesh="" UID="16 1033 268436888" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268436888" Name="Note" Value="" />
                     <Var ObjectId="268436888" Name="BlocksLineOfSight" Value="false" />
@@ -545,8 +545,8 @@
                     <Var ObjectId="268436888" Name="Static" Value="false" />
                     <Var ObjectId="268436888" Name="QuickSave" Value="false" />
                     <Var ObjectId="268436888" Name="FullGameSave" Value="false" />
-                    <Var ObjectId="268436888" Name="CC_Entities" Value="" />
-                    <Var ObjectId="268436888" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268436888" Name="CC_Entities" Value="player" />
+                    <Var ObjectId="268436888" Name="CC_Funcs" Value="OnCollide_GhoulScreamScare" />
                     <Var ObjectId="268436888" Name="ParentAttachEntity" Value="" />
                     <Var ObjectId="268436888" Name="ParentAttachUseRotation" Value="true" />
                     <Var ObjectId="268436888" Name="ParentAttachBody" Value="" />

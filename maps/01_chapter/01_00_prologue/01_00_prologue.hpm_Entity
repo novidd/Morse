@@ -3227,7 +3227,7 @@
                     <Var ObjectId="268435549" Name="OpenableByAgent" Value="true" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435550" Name="wind_turbine_animated_1" CreStamp="1613824233" ModStamp="1613864107" WorldPos="0.675188 62.7653 -65.5132" Rotation="0 -0.82066 0" Scale="5 5 5" FileIndex="145" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 502 268435550">
+            <Entity ID="268435550" Name="wind_turbine_animated_1" CreStamp="1613824233" ModStamp="1614379586" WorldPos="18.784 74.0358 -138.666" Rotation="0 -0.153797 0" Scale="5 5 5" FileIndex="145" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 502 268435550">
                 <UserVariables>
                     <Var ObjectId="268435550" Name="Note" Value="" />
                     <Var ObjectId="268435550" Name="EventInstanceTag" Value="" />
@@ -4195,7 +4195,7 @@
                     <Var ObjectId="268436964" Name="CollideGroup" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436967" Name="cave_leveldoor_1" CreStamp="1614278150" ModStamp="1614278662" WorldPos="-0.124999 36.509 44" Rotation="0 1.309 0" Scale="0.65 1 1" FileIndex="162" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 943 268436967">
+            <Entity ID="268436967" Name="cave_leveldoor_1" CreStamp="1614278150" ModStamp="1614278662" WorldPos="-0.124998 36.509 44" Rotation="0 1.309 0" Scale="0.65 1 1" FileIndex="162" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 943 268436967">
                 <UserVariables>
                     <Var ObjectId="268436967" Name="Note" Value="" />
                     <Var ObjectId="268436967" Name="CastShadows" Value="true" />
