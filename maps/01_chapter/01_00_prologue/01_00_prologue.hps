@@ -690,6 +690,12 @@ class cScrMap : iScrMap
 	 
 		/*Put any functions that are used in more than one event in Scene 3 here.*/
 		
+		bool OnCollide_GiveMatchHint(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			Hint_ShowHint("Hints", "HintMatchUse");
+			return true;
+		}
+		
 		//-------------------------------------------------------
 		
 		//} END General
@@ -708,7 +714,12 @@ class cScrMap : iScrMap
 		
 		bool OnCollide_GhoulScare(const tString &in asParent, const tString &in asChild, int alState)
 		{
-			return true;
+			Sound_Play("Sound_GhoulScare_*", 0, false);
+			Entity_SetActive("rock_ghoulcscare_*", true);
+			ParticleSystem_CreateAtEntityExt("PS_GhoulScare", "sand_falling_stream_small_oneshot_instant.ps", "PS_GhoulScare", false, cColor(0.725,0.484,0.345,1), 15.f, false);
+		
+			Music_PlayOverlay("Hank_Stinger", mfGlobalMusicVolume);
+			return false;
 		}
 		
 		//-------------------------------------------------------
