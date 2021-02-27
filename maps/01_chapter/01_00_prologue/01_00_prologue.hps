@@ -182,7 +182,10 @@ class cScrMap : iScrMap
 	// Runs on every frame
 	void Update(float afTimeStep)
 	{
-		
+		// Update fort spotlight highlight
+		// Place volumetric light billboard over fort (sunlight volumetric)?
+		Map_GetLight("Fort_Spotlight").GetWorldPosition();
+//		if ()
 	}
 	
 	//-------------------------------------------------------
@@ -697,8 +700,6 @@ class cScrMap : iScrMap
 		
 		//-------------------------------------------------------
 		
-		// Fort compound global pos: (x: 14.849, y: 63.164, z: -123.027)
-	 
 		/*Put any functions that are used in more than one event in Scene 3 here.*/
 		
 		bool OnCollide_GiveMatchHint(const tString &in asParent, const tString &in asChild, int alState)
