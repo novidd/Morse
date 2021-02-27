@@ -26,5 +26,21 @@
 // ==============
 //{///////////////////////////////////////////////////////////////////////////////////////
 
+/**
+ * @param asLight, The light name
+ * 
+ * @return float, The distance the light is from the player.
+ **/ 
+ 
+float Player_GetDistanceToLight(const tString &in asLight)
+{
+	iLight@ pLight = Map_GetLight(asLight);
+	if (pLight is null)
+	{
+		Error("Could not find any lights with name '"+asLight+"' for Player_GetDistanceToLight");
+		return 0;
+	}
+	return (pLight.GetWorldPosition()-Player_GetPosition()).Length();
+}
 
 //-------------------------------------------------------
