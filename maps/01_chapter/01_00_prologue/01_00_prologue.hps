@@ -38,6 +38,9 @@ enum eProloguePermaFail
 	eProloguePermaFail_Altar,
 	eProloguePermaFail_Bridge_Start,
 	eProloguePermaFail_Bridge_End,
+	eProloguePermaFail_Canyon_Start,
+	eProloguePermaFail_Canyon_Intersection,
+	eProloguePermaFail_Canyon_End
 };
 
 // Variables
@@ -156,7 +159,7 @@ class cScrMap : iScrMap
 		Game_AutoSave();
 		
 //		FogArea_SetPosition("FogArea_Sandstorm", cVector3f(0, 150, 0));
-		Billboard_SetBrightness("Billboard_Fence_*", .015f);
+		Billboard_SetBrightness("Billboard_Fence_*", .010f);
 		//Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
 		Item_RemoveFromInventory(ItemType_GetFirstInInventory("CurseMedallion"));
 		
@@ -203,10 +206,13 @@ class cScrMap : iScrMap
 	{
 		if (alState != 1) return true;
 		
-		if (asParent == "Trigger_SetPermaFail_AfterPlagueHouse")		mlPermaFailStage = eProloguePermaFail_AfterPlagueHouse;
-		else if (asParent == "Trigger_SetPermaFail_Altar") 				mlPermaFailStage = eProloguePermaFail_Altar;
-		else if (asParent == "Trigger_SetPermaFail_Bridge_Start") 				mlPermaFailStage = eProloguePermaFail_Bridge_Start;
-		else if (asParent == "Trigger_SetPermaFail_Bridge_End") 				mlPermaFailStage = eProloguePermaFail_Bridge_End;
+		if (asParent == "Trigger_SetPermaFail_AfterPlagueHouse")			mlPermaFailStage = eProloguePermaFail_AfterPlagueHouse;
+		else if (asParent == "Trigger_SetPermaFail_Altar")					mlPermaFailStage = eProloguePermaFail_Altar;
+		else if (asParent == "Trigger_SetPermaFail_Bridge_Start")			mlPermaFailStage = eProloguePermaFail_Bridge_Start;
+		else if (asParent == "Trigger_SetPermaFail_Bridge_End") 			mlPermaFailStage = eProloguePermaFail_Bridge_End;
+		else if (asParent == "Trigger_SetPermaFail_Canyon_Start")			mlPermaFailStage = eProloguePermaFail_Canyon_Start;
+		else if (asParent == "Trigger_SetPermaFail_Canyon_Intersection")	mlPermaFailStage = eProloguePermaFail_Canyon_Intersection;
+		else if (asParent == "Trigger_SetPermaFail_Canyon_End")				mlPermaFailStage = eProloguePermaFail_Canyon_End;
 		
 		return true;
 	}
@@ -215,11 +221,14 @@ class cScrMap : iScrMap
 	{	
 		switch (mlPermaFailStage)
 		{
-			case eProloguePermaFail_PlagueHouse:		PermaFail_Default("PlagueHouse_1");		return true;
-			case eProloguePermaFail_AfterPlagueHouse:	PermaFail_Default("AfterPlagueHouse_1");	return true;
-			case eProloguePermaFail_Altar:				PermaFail_Default("Altar_1");				return true;
-			case eProloguePermaFail_Bridge_Start:				PermaFail_Default("Bridge_Start");				return true;
-			case eProloguePermaFail_Bridge_End:				PermaFail_Default("Bridge_End");				return true;
+			case eProloguePermaFail_PlagueHouse:			PermaFail_Default("PlagueHouse_1");			return true;
+			case eProloguePermaFail_AfterPlagueHouse:		PermaFail_Default("AfterPlagueHouse_1");	return true;
+			case eProloguePermaFail_Altar:					PermaFail_Default("Altar_1");				return true;
+			case eProloguePermaFail_Bridge_Start:			PermaFail_Default("Bridge_Start");			return true;
+			case eProloguePermaFail_Bridge_End:				PermaFail_Default("Bridge_End");			return true;
+			case eProloguePermaFail_Canyon_Start:			PermaFail_Default("Canyon_Start");			return true;
+			case eProloguePermaFail_Canyon_Intersection:			PermaFail_Default("Canyon_Intersection");			return true;
+			case eProloguePermaFail_Canyon_End:			PermaFail_Default("Canyon_End");			return true;
 		}
 
 		return true;
@@ -693,7 +702,23 @@ class cScrMap : iScrMap
 		bool OnCollide_GiveMatchHint(const tString &in asParent, const tString &in asChild, int alState)
 		{
 			Hint_ShowHint("Hints", "HintMatchUse");
-			return true;
+			return false;
+		}
+		
+		//-------------------------------------------------------
+		
+		bool OnCollide_DistantSounds(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			Sound_Play("Sound_DistantVulture", 0);
+			Map_AddTimer("Timer_DistantSounds", 15.f, "OnTimer_DistantSounds");
+			return false;
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnTimer_DistantSounds(const tString &in asTimer)
+		{
+			Sound_Play("Sound_DistantHyrax", 0);
 		}
 		
 		//-------------------------------------------------------
@@ -714,7 +739,7 @@ class cScrMap : iScrMap
 		
 		bool OnCollide_GhoulScare(const tString &in asParent, const tString &in asChild, int alState)
 		{
-			Sound_Play("Sound_GhoulScare_*", 0, false);
+			Sound_Play("Sound_GhoulScare_*", 0);
 			Entity_SetActive("rock_ghoulcscare_*", true);
 			ParticleSystem_CreateAtEntityExt("PS_GhoulScare", "sand_falling_stream_small_oneshot_instant.ps", "PS_GhoulScare", false, cColor(0.725,0.484,0.345,1), 15.f, false);
 		
@@ -724,11 +749,15 @@ class cScrMap : iScrMap
 		
 		//-------------------------------------------------------
 		
-		
+		bool OnCollide_GhoulScreamScare(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			Sound_Play("Sound_GhoulScreamScare", 0);
+			return false;
+		}
 		
 		//-------------------------------------------------------
 
 		//} END Event *GHOUL SCARE*
-	 
+		
 	//} END SCENE 1
 }
