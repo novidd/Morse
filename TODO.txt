@@ -1,15 +1,18 @@
 STORY:
-	LOCATION: Arizona. Native american groups: Apache, Navajo, Pueblo.
+	LOCATION: Africa.
 	YEAR: ~1910-1930.
 	PROTAGONIST: Arthur.
 	
-	Arthur has been kidnapped by native americans and, is naturally disoriented. 
-	He finds himself within a ravine in Arizona, he attempts to send a transmission -- to find help. S.O.S he calls out,
-	but can anyone hear him at his most desperate hour?
+	Dr. Arthur - an epidemiologist - has been assigned to investigate an outbreak of an
+	unidentified disease thats been spreading in local populations in northern Africa.
+	Arthur has recieved a letter from the local village pastor of the possible location
+	of the epidemic - an abandoned fort in the mountains.
 	
-	These caves hold ruins of an ancient civilzation called [REDACTED]. There is a creature roaming, the ghûl.
+	These catacombs holds an artifact that lets one traverse to the 
+	ruins of an ancient civilzation called [REDACTED]. There is a terrible creature roaming - the ghûl.
 
-GENERAL:
+GENERAL: CHANGE 01_00_prologue to 01_01_path_to_fort.hpm and make a new prologue map where the player spawns in a tent where the 
+	player can read the note that the pastor has written.
 
 	TODO:
 	 * In the loading screens ask the player personal questions (refer to them as "you").
@@ -28,18 +31,14 @@ MAPS:
 
 	01_00_prologue: Look for a good microphone, stand, and popfilter.
 
-		LEVEL: Old canyon wall y pos: 145.026
+		LEVEL:
 			TODO:
-				* Place meat and blood on the rock on the vultures position.
 			 
 		SCRIPTS:
 			TODO:
 			 * Add vo throughout the level.
 			 * Use the entity corpse_sandmummy.ent (scale: 1.5) and place his head right above the sand and make its body rotate and look at player
 			   when player looks away or update its rotation constantly.
-			 * When the vulture flies away, attach meat hanging in its mouth and make it drop to the ground.
 			   
 				// Use this function to set color grading when player enters/leaves the sandstorm
 				//Effect_ToneMapping_FadeWorldGrading("grading_default", 0.0f);
-				
-				Old directional light: 0 -0.255 -0.946
