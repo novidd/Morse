@@ -1,6 +1,6 @@
 <HPLMapTrack_Entity ID="442E5FED85DE959ABC4602132A7D037365B73EF0" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
-        <FileIndex_Entities NumOfFiles="32">
+        <FileIndex_Entities NumOfFiles="33">
             <File Id="0" Path="entities/arsenal/gameplay/temp_sulfur_solid.ent" />
             <File Id="1" Path="entities/french_colonization/ornaments/french_tent/french_tent_sway.ent" />
             <File Id="2" Path="entities/cave/special/cave_leveldoor/cave_leveldoor_centered.ent" />
@@ -33,6 +33,7 @@
             <File Id="29" Path="entities/nonexclusive/organic/moss_floating/moss_float05.ent" />
             <File Id="30" Path="entities/archaeology/furniture/table_homemade_02/table_homemade_02.ent" />
             <File Id="31" Path="entities/tribal/door/door_town_03/door_town_03.ent" />
+            <File Id="32" Path="entities/desert/organic/tree_acacia_dry/tree_acacia_dry.ent" />
         </FileIndex_Entities>
         <Objects>
             <Entity ID="268435476" Name="sun_1" CreStamp="1614517036" ModStamp="1614518559" WorldPos="-1 12 50" Rotation="0 0 0" Scale="1 1 1" FileIndex="4" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 30 268435476">
@@ -1199,6 +1200,20 @@
                     <Var ObjectId="268435916" Name="JointResetFix" Value="false" />
                     <Var ObjectId="268435916" Name="BreakChildEntity" Value="" />
                     <Var ObjectId="268435916" Name="OpenableByAgent" Value="true" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268436037" Name="tree_acacia_dry_1" CreStamp="1614637805" ModStamp="1614637889" WorldPos="20.9233 28.9209 3.08329" Rotation="-0 3.27317 -0" Scale="0.376 0.368 0.351" FileIndex="32" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 591 268436037">
+                <UserVariables>
+                    <Var ObjectId="268436037" Name="Note" Value="" />
+                    <Var ObjectId="268436037" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436037" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268436037" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436037" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268436037" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436037" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436037" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436037" Name="CollideGroup" Value="-player" />
+                    <Var ObjectId="268436037" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
         </Objects>

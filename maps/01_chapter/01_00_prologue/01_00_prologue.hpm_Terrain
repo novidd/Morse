@@ -1,5 +1,5 @@
 <HPLMapTrack_Terrain ID="442E5FED85DE959ABC4602132A7D037365B73EF0" MajorVersion="1" MinorVersion="1">
-    <Terrain Active="true" GeometryPatchSize="128" TexturePatchSize="128" HeightMapSize="1024" MaxHeight="50" UnitSize="1" UndergrowthGridSize="10" UndergrowthFadeStart="18" UndergrowthFadeEnd="20" BaseMaterialFile="textures/terrain/sand/sand_desert_smooth_orange.mat" BaseMaterialTileAmount="0.15" BaseMaterialStartFadeValue="0" BaseMaterialDetailTextureAmount="0.1 0 0" BaseMaterialHeightMapScale="0" MaterialSpecularPower="0.1" MaterialTextureLayerNum="8" MaterialTextureFalloff="3" CliffTextureDiffuse="" CliffTextureNMap="" CliffTextureSize="1" CliffTextureFadeAngleMul="1">
+    <Terrain Active="true" GeometryPatchSize="128" TexturePatchSize="128" HeightMapSize="1024" MaxHeight="50" UnitSize="1" UndergrowthGridSize="10" UndergrowthFadeStart="18" UndergrowthFadeEnd="20" BaseMaterialFile="textures/terrain/sand/sand_desert_smooth_orange_darker.mat" BaseMaterialTileAmount="0.15" BaseMaterialStartFadeValue="0" BaseMaterialDetailTextureAmount="0.1 0.1 0.1" BaseMaterialHeightMapScale="0" MaterialSpecularPower="0.1" MaterialTextureLayerNum="8" MaterialTextureFalloff="3" CliffTextureDiffuse="" CliffTextureNMap="" CliffTextureSize="1" CliffTextureFadeAngleMul="1">
         <DetailTextures DetailFadeStart="10" DetailFadeEnd="20">
             <DetailTexture ID="0" File="" Scale="1" />
             <DetailTexture ID="1" File="" Scale="1" />
@@ -8,9 +8,15 @@
         <BlendLayers>
             <BlendLayer ID="0">
                 <Material File="textures/terrain/sand/sand_desert_smooth_orange_wavy.mat" TileAmount="0.2" StartFadeValue="0" DetailTextureAmount="0.25 0 0" HeightMapScale="0" />
-                <Material File="textures/terrain/sand/sand_desert_blend_rough_orange.mat" TileAmount="0.25" StartFadeValue="0" DetailTextureAmount="1 0 0" HeightMapScale="0" />
-                <Material File="textures/terrain/sand/sand_desert_blend_rocky_orange.mat" TileAmount="0.5" StartFadeValue="0" DetailTextureAmount="1 0 0" HeightMapScale="0" />
-                <Material File="core/textures/terrain_hole.mat" TileAmount="0.25" StartFadeValue="0" DetailTextureAmount="1 0 0" HeightMapScale="0" />
+                <Material File="textures/terrain/sand/sand_desert_blend_rough_orange.mat" TileAmount="0.25" StartFadeValue="0" DetailTextureAmount="0.1 0.1 0.1" HeightMapScale="0" />
+                <Material File="textures/terrain/sand/sand_desert_blend_rocky_orange.mat" TileAmount="0.25" StartFadeValue="0" DetailTextureAmount="0.1 0.1 0.1" HeightMapScale="0" />
+                <Material File="textures/terrain/sand/sand_desert_smooth_orange_footsteps.mat" TileAmount="0.25" StartFadeValue="0" DetailTextureAmount="0.1 0 0" HeightMapScale="0" />
+            </BlendLayer>
+            <BlendLayer ID="1">
+                <Material File="" TileAmount="0.25" StartFadeValue="0" DetailTextureAmount="1 0 0" HeightMapScale="0" />
+                <Material File="" TileAmount="0.25" StartFadeValue="0" DetailTextureAmount="1 0 0" HeightMapScale="0" />
+                <Material File="" TileAmount="0.25" StartFadeValue="0" DetailTextureAmount="1 0 0" HeightMapScale="0" />
+                <Material File="textures/terrain/sand/sand_desert_blend_rough_very_dark.mat" TileAmount="0.25" StartFadeValue="0" DetailTextureAmount="1 0 0" HeightMapScale="0" />
             </BlendLayer>
         </BlendLayers>
         <Sections>
