@@ -1,7 +1,9 @@
 <HPLMapTrack_Sound ID="442E5FED85DE959ABC4602132A7D037365B73EF0" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
         <Objects>
-            <Sound ID="268435765" Name="Sound_WaterWell" CreStamp="1614531908" ModStamp="1614537285" WorldPos="15.9153 28.9588 -0.75" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="level_amb_shared/amb/sweeteners/02_05_cistern/tank_water" MinDistance="1" MaxDistance="4" Volume="1" Active="true" UseCustomProperties="false" UID="16 202 268435765" />
+            <Sound ID="268435869" Name="Sound_WaterWell" CreStamp="1614531908" ModStamp="1614617001" WorldPos="15.9153 28.9588 -0.999999" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="level_amb_shared/amb/sweeteners/02_05_cistern/tank_water" MinDistance="1" MaxDistance="4" Volume="1" Active="true" UseCustomProperties="false" UID="16 202 268435869" />
+            <Sound ID="268435870" Name="Sound_Tree" CreStamp="1614554079" ModStamp="1614614904" WorldPos="17 35.75 -1.36" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="02_06_oasis/enviroment/reeds" MinDistance="1" MaxDistance="15" Volume="1" Active="true" UseCustomProperties="true" UID="16 410 268435870" />
+            <Sound ID="268435871" Name="Sound_Tree_3" CreStamp="1614554121" ModStamp="1614614907" WorldPos="20.25 34.75 -1.25" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="02_06_oasis/enviroment/reeds" MinDistance="1" MaxDistance="15" Volume="1" Active="true" UseCustomProperties="true" UID="16 407 268435871" />
         </Objects>
     </Section>
 </HPLMapTrack_Sound>

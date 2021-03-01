@@ -7,7 +7,7 @@
         </DetailTextures>
         <BlendLayers>
             <BlendLayer ID="0">
-                <Material File="textures/terrain/sand/sand_desert_blend_hillside_orange.mat" TileAmount="0.4" StartFadeValue="0" DetailTextureAmount="1 0 0" HeightMapScale="0.12" />
+                <Material File="textures/terrain/sand/sand_desert_smooth_orange_wavy.mat" TileAmount="0.2" StartFadeValue="0" DetailTextureAmount="0.25 0 0" HeightMapScale="0" />
                 <Material File="textures/terrain/sand/sand_desert_blend_rough_orange.mat" TileAmount="0.25" StartFadeValue="0" DetailTextureAmount="1 0 0" HeightMapScale="0" />
                 <Material File="textures/terrain/sand/sand_desert_blend_rocky_orange.mat" TileAmount="0.5" StartFadeValue="0" DetailTextureAmount="1 0 0" HeightMapScale="0" />
                 <Material File="core/textures/terrain_hole.mat" TileAmount="0.25" StartFadeValue="0" DetailTextureAmount="1 0 0" HeightMapScale="0" />
