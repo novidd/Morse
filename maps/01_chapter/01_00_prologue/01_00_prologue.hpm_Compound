@@ -71,7 +71,7 @@
                 <Component ID="268436144" />
                 <Component ID="268436143" />
             </Compound>
-            <Compound ID="268436249" Name="Compound_4" CreStamp="0" ModStamp="1614625395" WorldPos="30.0646 31.4155 -4.34386" Rotation="0 -1.56484 0" Scale="1 1 1" UID="16 530 268436249">
+            <Compound ID="268436249" Name="Compound_4" CreStamp="0" ModStamp="1614723402" WorldPos="30.0646 31.2699 -4.34386" Rotation="0 -1.56484 0" Scale="1 1 1" UID="16 530 268436249">
                 <Component ID="268435910" />
                 <Component ID="268435911" />
                 <Component ID="268435912" />
@@ -94,6 +94,16 @@
                 <Component ID="268435958" />
                 <Component ID="268435959" />
                 <Component ID="268435960" />
+            </Compound>
+            <Compound ID="268436300" Name="Compound_5" CreStamp="0" ModStamp="1614720385" WorldPos="18.7614 30.557 -11.8258" Rotation="0 0 0" Scale="1 1 1" UID="16 818 268436300">
+                <Component ID="268436297" />
+                <Component ID="268436298" />
+                <Component ID="268436299" />
+            </Compound>
+            <Compound ID="268436312" Name="Compound_8" CreStamp="1614720561" ModStamp="1614720568" WorldPos="30.1151 30.557 -3.05133" Rotation="0 0 0" Scale="1 1 1" UID="16 810 268436312">
+                <Component ID="268436309" />
+                <Component ID="268436310" />
+                <Component ID="268436311" />
             </Compound>
         </Objects>
     </Section>
