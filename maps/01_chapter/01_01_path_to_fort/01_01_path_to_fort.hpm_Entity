@@ -1,6 +1,6 @@
 <HPLMapTrack_Entity ID="2AA9DCBFF955507F91E452D835F6BCF1C5288D5" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
-        <FileIndex_Entities NumOfFiles="212">
+        <FileIndex_Entities NumOfFiles="213">
             <File Id="0" Path="entities/french_colonization/ornaments/french_tent/french_tent_sway.ent" />
             <File Id="1" Path="entities/french_colonization/ornaments/french_tent_semi_collapsed/french_tent_semi-collapsed.ent" />
             <File Id="2" Path="entities/french_colonization/ornaments/french_tent_collapsed/french_tent_collapsed.ent" />
@@ -213,6 +213,7 @@
             <File Id="209" Path="entities/french_colonization/storage/crate_fancy/crate_fancy.ent" />
             <File Id="210" Path="entities/french_colonization/storage/storage_sack_millet/storage_sack_millet_ragdoll.ent" />
             <File Id="211" Path="entities/technical/block_box/block_box_capsule_static.ent" />
+            <File Id="212" Path="entities/cave/special/plane_part_door/plane_part_door.ent" />
         </FileIndex_Entities>
         <Objects>
             <Entity ID="268435498" Name="french_tent_sway_2" CreStamp="1613311746" ModStamp="1613864107" WorldPos="-6.05685 42.3793 4.31551" Rotation="0.0523216 0.42643 3.11529" Scale="1 1 1" FileIndex="3" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 790 268435498">
@@ -3870,7 +3871,7 @@
                     <Var ObjectId="268435579" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435580" Name="LevelDoor_Caves" CreStamp="1614278443" ModStamp="1614478893" WorldPos="24.688 31.7118 -102.017" Rotation="-0 1.88552 -0" Scale="0.65 1 1" FileIndex="163" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 942 268435580">
+            <Entity ID="268435580" Name="LevelDoor_Caves" CreStamp="1614278443" ModStamp="1614714210" WorldPos="24.688 31.7118 -102.017" Rotation="-0 1.88552 -0" Scale="0.65 1 1" FileIndex="163" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 942 268435580">
                 <UserVariables>
                     <Var ObjectId="268435580" Name="Note" Value="" />
                     <Var ObjectId="268435580" Name="EventInstanceTag" Value="" />
@@ -3927,7 +3928,7 @@
                     <Var ObjectId="268435580" Name="ExtraConnectionLightType" Value="Mul" />
                     <Var ObjectId="268435580" Name="MapFile" Value="01_03_cistern.hpm" />
                     <Var ObjectId="268435580" Name="StartPos" Value="Start_Begin" />
-                    <Var ObjectId="268435580" Name="Locked" Value="true" />
+                    <Var ObjectId="268435580" Name="Locked" Value="false" />
                     <Var ObjectId="268435580" Name="LockedSound" Value="" />
                     <Var ObjectId="268435580" Name="LockedTextCat" Value="" />
                     <Var ObjectId="268435580" Name="LockedTextEntry" Value="" />
