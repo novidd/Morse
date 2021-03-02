@@ -74,7 +74,7 @@ class cScrMap : iScrMap
 		Player_SetNightVisionRadius(3.f);
 		
 		// Map
-		Map_SetSkyboxRotation(cVector3f(0, 0, 0));
+		Map_SetSkyboxRotation(cVector3f(0, -.26, 0));
 		
 		//Stamina_SetStaminaSystemActive(true);
 		

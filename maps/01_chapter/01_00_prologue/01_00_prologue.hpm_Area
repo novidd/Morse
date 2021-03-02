@@ -784,7 +784,7 @@
                     <Var ObjectId="268435474" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435475" Name="Trigger_BellToll" CreStamp="1614553798" ModStamp="1614632402" WorldPos="12.4424 30.8795 -1.03177" Rotation="0 0 0" Scale="1 5 10" Active="true" Mesh="" UID="16 411 268435475" AreaType="Trigger">
+            <Area ID="268435475" Name="Trigger_BellToll" CreStamp="1614553798" ModStamp="1614703877" WorldPos="12.5 31 -1" Rotation="0 0 0" Scale="1 5 10" Active="true" Mesh="" UID="16 411 268435475" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435475" Name="Note" Value="" />
                     <Var ObjectId="268435475" Name="BlocksLineOfSight" Value="false" />
