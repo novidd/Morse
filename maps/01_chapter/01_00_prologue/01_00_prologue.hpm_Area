@@ -812,15 +812,15 @@
                     <Var ObjectId="268435475" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268436271" Name="InteractAux_1" CreStamp="1614714305" ModStamp="1614719847" WorldPos="21.75 30.25 -11.8248" Rotation="0 0 0" Scale="1.25 2.5 0.5" Active="true" Mesh="" UID="16 845 268436271" AreaType="InteractAux">
+            <Area ID="268435476" Name="InteractAux_1" CreStamp="1614714305" ModStamp="1614719847" WorldPos="21.75 30.25 -11.8248" Rotation="0 0 0" Scale="1.25 2.5 0.5" Active="true" Mesh="" UID="16 845 268435476" AreaType="InteractAux">
                 <UserVariables>
-                    <Var ObjectId="268436271" Name="Note" Value="" />
-                    <Var ObjectId="268436271" Name="InteractParent" Value="LevelDoor" />
-                    <Var ObjectId="268436271" Name="UseParentMainBody" Value="true" />
-                    <Var ObjectId="268436271" Name="OverrideParentMainBody" Value="false" />
-                    <Var ObjectId="268436271" Name="MaxFocusDistance" Value="-1" />
-                    <Var ObjectId="268436271" Name="CustomInteractIcon" Value="Default" />
-                    <Var ObjectId="268436271" Name="DeactivateOnInteract" Value="false" />
+                    <Var ObjectId="268435476" Name="Note" Value="" />
+                    <Var ObjectId="268435476" Name="InteractParent" Value="LevelDoor" />
+                    <Var ObjectId="268435476" Name="UseParentMainBody" Value="true" />
+                    <Var ObjectId="268435476" Name="OverrideParentMainBody" Value="false" />
+                    <Var ObjectId="268435476" Name="MaxFocusDistance" Value="-1" />
+                    <Var ObjectId="268435476" Name="CustomInteractIcon" Value="Default" />
+                    <Var ObjectId="268435476" Name="DeactivateOnInteract" Value="false" />
                 </UserVariables>
             </Area>
         </Objects>

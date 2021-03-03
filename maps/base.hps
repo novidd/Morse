@@ -149,7 +149,8 @@ class cScrMap : iScrMap
 	void OnEnter()
 	{	
 		Game_AutoSave();
-		Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
+//		Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
+		Item_RemoveFromInventory(ItemType_GetFirstInInventory("CurseMedallion"));
 	}
 
 	//-------------------------------------------------------
