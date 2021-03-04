@@ -168,7 +168,7 @@ class cScrMap : iScrMap
 	// Runs on every frame
 	void Update(float afTimeStep)
 	{
-		
+		UpdateAltarSpotlight();
 	}
 	
 	//-------------------------------------------------------
@@ -439,5 +439,37 @@ class cScrMap : iScrMap
 
 		//} END Event *THE CHURCHBELL TOLLS*
 	 
+		/////////////////////////////////////////
+		// Event B *PLAYER FINDS THE ALTAR*
+		//{//////////////////////////////////////
+		
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 3, Event B here.*/
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 3, Event B here.*/
+		
+		void UpdateAltarSpotlight()
+		{
+			if (Lamp_GetLit("candle_altar_1") && Lamp_GetLit("candle_altar_2"))
+			{
+				Light_FadeBrightnessTo("candle_altar_spotlight", 2.f, .5f);
+			}
+			else if (Lamp_GetLit("candle_altar_1") && !Lamp_GetLit("candle_altar_2")
+					|| !Lamp_GetLit("candle_altar_1") && Lamp_GetLit("candle_altar_2"))
+			{
+				Light_FadeBrightnessTo("candle_altar_spotlight", 1.f, .5f);
+			}
+			else if (!Lamp_GetLit("candle_altar_1") && !Lamp_GetLit("candle_altar_2"))
+			{
+				Light_FadeBrightnessTo("candle_altar_spotlight", 0.f, .5f);
+			}
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER FINDS THE ALTAR*
 	//} END SCENE 3
 }
