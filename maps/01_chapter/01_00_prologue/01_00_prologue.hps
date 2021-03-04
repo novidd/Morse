@@ -373,6 +373,11 @@ class cScrMap : iScrMap
 	 
 		/*Put any functions that are used in more than one event in Scene 1 here.*/
 		
+		bool OnCollide_IsinLivingQuarters(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			return true;
+		}
+		
 		//-------------------------------------------------------
 		
 		//} END General
@@ -418,7 +423,7 @@ class cScrMap : iScrMap
 		//} END General
 	 
 		/////////////////////////////////////////
-		// Event A *THE CHURCHBELL TOLLS*
+		// Event A *THE MINARETBELL TOLLS*
 		//{//////////////////////////////////////
 		
 		//-------------------------------------------------------
@@ -437,7 +442,7 @@ class cScrMap : iScrMap
 		
 		//-------------------------------------------------------
 
-		//} END Event *THE CHURCHBELL TOLLS*
+		//} END Event *THE MINARETBELL TOLLS*
 	 
 		/////////////////////////////////////////
 		// Event B *PLAYER FINDS THE ALTAR*

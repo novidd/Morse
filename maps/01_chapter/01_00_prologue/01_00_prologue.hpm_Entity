@@ -1,6 +1,6 @@
 <HPLMapTrack_Entity ID="442E5FED85DE959ABC4602132A7D037365B73EF0" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
-        <FileIndex_Entities NumOfFiles="163">
+        <FileIndex_Entities NumOfFiles="165">
             <File Id="0" Path="entities/arsenal/gameplay/temp_sulfur_solid.ent" />
             <File Id="1" Path="entities/french_colonization/ornaments/french_tent/french_tent_sway.ent" />
             <File Id="2" Path="entities/cave/special/cave_leveldoor/cave_leveldoor_centered.ent" />
@@ -164,6 +164,8 @@
             <File Id="160" Path="entities/tribal/ornaments/stick_pilgrim/stick_pilgrim.ent" />
             <File Id="161" Path="entities/nonexclusive/gameplay/matchbook/matchbook.ent" />
             <File Id="162" Path="entities/technical/block_box/block_box_static.ent" />
+            <File Id="163" Path="entities/technical/box_illum.ent" />
+            <File Id="164" Path="entities/technical/blockout/blockout_box_illum.ent" />
         </FileIndex_Entities>
         <Objects>
             <Entity ID="268436802" Name="sun_1" CreStamp="1614517036" ModStamp="1614701364" WorldPos="-14 12 50" Rotation="0 0 0" Scale="1 1 1" FileIndex="4" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 30 268436802">
