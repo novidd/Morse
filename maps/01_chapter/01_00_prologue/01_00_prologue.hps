@@ -375,6 +375,10 @@ class cScrMap : iScrMap
 		
 		bool OnCollide_IsinLivingQuarters(const tString &in asParent, const tString &in asChild, int alState)
 		{
+			bool mbEnableFX = alState == 1;
+			Light_SetVisible("Light_Point_LivingQuarters_*", mbEnableFX);
+			Light_SetVisible("Light_Spot_LivingQuarters_*", mbEnableFX);
+			Billboard_SetVisible("Billboard_LivingQuarters_*", mbEnableFX);
 			return true;
 		}
 		
