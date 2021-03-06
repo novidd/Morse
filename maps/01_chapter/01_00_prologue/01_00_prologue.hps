@@ -25,6 +25,7 @@
 #include "morse_scripts/helpers/morse_helper_player.hps"
 #include "morse_scripts/helpers/morse_helper_stamina.hps"
 #include "morse_scripts/helpers/morse_helper_map.hps"
+#include "morse_scripts/helpers/morse_helper_math.hps"
 
 //--------------------------------------------------
  
@@ -237,12 +238,12 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test0)
 		{
-			
+			Prop_RotateToSpeed("gramophone_vinyl", 1.f, 3.f, cVector3f(0, 1, 0), false, "");
 		}
 		
 		if (alAction == eAction_Test1)
 		{
-			
+			Prop_RotateToSpeed("gramophone_vinyl", -1.f, 0.f, cVector3f(0, 1, 0), true, "");
 		}
 		
 		if (alAction == eAction_Test2)

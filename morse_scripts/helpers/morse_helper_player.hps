@@ -27,11 +27,12 @@
 //{///////////////////////////////////////////////////////////////////////////////////////
 
 /**
+ * Calculates the distance between the player and the specified light.
+ * 
  * @param asLight, The light name
  * 
  * @return float, The distance the light is from the player.
- **/ 
- 
+ **/
 float Player_GetDistanceToLight(const tString &in asLight)
 {
 	iLight@ pLight = Map_GetLight(asLight);
