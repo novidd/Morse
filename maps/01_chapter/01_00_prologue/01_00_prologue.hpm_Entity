@@ -2514,7 +2514,7 @@
                     <Var ObjectId="268436847" Name="InteractDisablesStaticPhysics" Value="false" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436848" Name="lantern_new_1" CreStamp="1614784835" ModStamp="1614883794" WorldPos="8 29.25 0.25" Rotation="0 0 0" Scale="1 1 1" FileIndex="47" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1121 268436848">
+            <Entity ID="268436848" Name="lantern_new_1" CreStamp="1614784835" ModStamp="1615031945" WorldPos="6.91696 30.5 0.25" Rotation="0 0 0" Scale="1 1 1" FileIndex="47" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1121 268436848">
                 <UserVariables>
                     <Var ObjectId="268436848" Name="Note" Value="" />
                     <Var ObjectId="268436848" Name="EventInstanceTag" Value="" />
@@ -4440,7 +4440,7 @@
                     <Var ObjectId="268436885" Name="FlickerOffAlpha" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436886" Name="french_desk_lamp_covered_1" CreStamp="1614810113" ModStamp="1614988133" WorldPos="6.05418 34.196 -3.02792" Rotation="0 -18.0642 0" Scale="1 1 1" FileIndex="142" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1301 268436886">
+            <Entity ID="268436886" Name="french_desk_lamp_covered_1" CreStamp="1614810113" ModStamp="1615031761" WorldPos="6.05418 34.1948 -3.02792" Rotation="0 -18.0642 0" Scale="1 1 1" FileIndex="142" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1301 268436886">
                 <UserVariables>
                     <Var ObjectId="268436886" Name="Note" Value="" />
                     <Var ObjectId="268436886" Name="EventInstanceTag" Value="" />
@@ -6937,7 +6937,7 @@
                     <Var ObjectId="268436948" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436949" Name="tree_palm_date_poseable_1" CreStamp="1614973144" ModStamp="1614973144" WorldPos="0.465077 33.13 -7.13319" Rotation="0 -6.28319 0" Scale="1 1 1" FileIndex="300" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1454 268436949">
+            <Entity ID="268436949" Name="tree_palm_date_poseable_1" CreStamp="1614973144" ModStamp="1614999311" WorldPos="9.53187 33.13 -26.0728" Rotation="0 -6.28319 0" Scale="1 1 1" FileIndex="300" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1454 268436949">
                 <UserVariables>
                     <Var ObjectId="268436949" Name="Note" Value="" />
                     <Var ObjectId="268436949" Name="EventInstanceTag" Value="" />
@@ -7071,7 +7071,7 @@
                     <Var ObjectId="268436950" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268438264" Name="diary_captain_1" CreStamp="1614987809" ModStamp="1614988167" WorldPos="6.05699 34.1732 -3.03247" Rotation="-0.0329788 -1.49972 0.0386463" Scale="1 1 1" FileIndex="318" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1506 268438264">
+            <Entity ID="268438264" Name="diary_captain_1" CreStamp="1614987809" ModStamp="1615031747" WorldPos="6.05699 34.1674 -3.03247" Rotation="-0.0329788 -1.49972 0.0386463" Scale="1.25 1.25 1.25" FileIndex="318" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1506 268438264">
                 <UserVariables>
                     <Var ObjectId="268438264" Name="Note" Value="" />
                     <Var ObjectId="268438264" Name="CastShadows" Value="true" />
@@ -7223,7 +7223,7 @@
                     <Var ObjectId="268438270" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268438274" Name="mug_airplane_1" CreStamp="1614989075" ModStamp="1614989078" WorldPos="6.16859 34.1676 -2.76941" Rotation="1.58218e-05 4.48155 -1.54022e-05" Scale="1 1 1" FileIndex="321" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1560 268438274">
+            <Entity ID="268438274" Name="mug_airplane_1" CreStamp="1614989075" ModStamp="1615031738" WorldPos="6.16859 34.1676 -2.74061" Rotation="1.58218e-05 4.48155 -1.54022e-05" Scale="1 1 1" FileIndex="321" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1560 268438274">
                 <UserVariables>
                     <Var ObjectId="268438274" Name="Note" Value="" />
                     <Var ObjectId="268438274" Name="EventInstanceTag" Value="" />
@@ -7355,7 +7355,7 @@
                     <Var ObjectId="268438276" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268438280" Name="archaeology_diggers_sintir2_1" CreStamp="1614989207" ModStamp="1614989215" WorldPos="9.74311 29.1601 -6.50081" Rotation="0.784048 0.0519313 1.51879" Scale="1 1 1" FileIndex="323" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1558 268438280">
+            <Entity ID="268438280" Name="archaeology_diggers_sintir2_1" CreStamp="1614989207" ModStamp="1614999244" WorldPos="9.8685 28.9089 -6.78636" Rotation="0.413837 0.137685 1.42523" Scale="1 1 1" FileIndex="323" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1558 268438280">
                 <UserVariables>
                     <Var ObjectId="268438280" Name="Note" Value="" />
                     <Var ObjectId="268438280" Name="EventInstanceTag" Value="" />

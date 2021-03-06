@@ -2,20 +2,20 @@
     <Section Name="570198258105585246">
         <Objects>
             <Compound ID="268436713" Name="Compound_4" CreStamp="0" ModStamp="1613920106" WorldPos="-19.1 44.3003 -6.12989" Rotation="0 0 0" Scale="1 1 1" UID="16 671 268436713">
-                <Component ID="268435527" />
-                <Component ID="268435531" />
-                <Component ID="268435532" />
-                <Component ID="268435529" />
-                <Component ID="268435530" />
                 <Component ID="268435528" />
+                <Component ID="268435532" />
+                <Component ID="268435533" />
+                <Component ID="268435530" />
+                <Component ID="268435531" />
+                <Component ID="268435529" />
             </Compound>
             <Compound ID="268436714" Name="Compound_5" CreStamp="1613920108" ModStamp="1613920135" WorldPos="8.55516 40.3844 4.686" Rotation="-0 4.58284 -0" Scale="1 1 1" UID="16 670 268436714">
-                <Component ID="268435571" />
                 <Component ID="268435572" />
                 <Component ID="268435573" />
                 <Component ID="268435574" />
                 <Component ID="268435575" />
                 <Component ID="268435576" />
+                <Component ID="268435577" />
             </Compound>
         </Objects>
     </Section>

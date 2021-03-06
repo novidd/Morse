@@ -1,6 +1,6 @@
 <HPLMapTrack_StaticObject ID="442E5FED85DE959ABC4602132A7D037365B73EF0" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
-        <FileIndex_StaticObjects NumOfFiles="80">
+        <FileIndex_StaticObjects NumOfFiles="84">
             <File Id="0" Path="static_objects/beduin/bedouin_town_buildings/bedouin_town_arch_01.dae" />
             <File Id="1" Path="static_objects/arabic_fort/exterior/walls/wall_window01_roof_no_support.dae" />
             <File Id="2" Path="static_objects/beduin/bedouin_town_buildings/bedouin_town_building_02.dae" />
@@ -81,6 +81,10 @@
             <File Id="77" Path="static_objects/arabic_fort/nonexclusive/sand_piles/ab_sand_piles_alpha_04.dae" />
             <File Id="78" Path="static_objects/arabic_fort/interior/tower/ab_interior_tower_support_rope_straight.dae" />
             <File Id="79" Path="static_objects/arabic_fort/interior/debris/ab_broken_stick03.dae" />
+            <File Id="80" Path="static_objects/arabic_fort/interior/debris/ab_barricade_plank_4.dae" />
+            <File Id="81" Path="static_objects/arabic_fort/nonexclusive/rope/fort_rope_hanging_2.dae" />
+            <File Id="82" Path="static_objects/arabic_fort/nonexclusive/rope/fort_rope_hanging_1.dae" />
+            <File Id="83" Path="static_objects/arabic_fort/nonexclusive/rope/fort_rope_hanging_3.dae" />
         </FileIndex_StaticObjects>
         <Objects>
             <StaticObject ID="268436951" Name="beduin_bedouin_town_buildings_bedouin_town_arch_01_1" CreStamp="1614519906" ModStamp="1614522228" WorldPos="8.21561 31 -2.94976" Rotation="0 -1.57031 0" Scale="0.744 0.744 0.744" FileIndex="0" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 856 268436951" />
@@ -1109,6 +1113,7 @@
             <StaticObject ID="268438302" Name="archaeology_scaffolding_scaffolding_part_beam_medium_29" CreStamp="1614990748" ModStamp="1614990877" WorldPos="7.19892 34.1591 -3.15008" Rotation="1.1848 4.58137 -2.68488" Scale="0.1 0.1 0.1" FileIndex="79" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="0.180392 0.180392 0.180392 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 1563 268438302" />
             <StaticObject ID="268438304" Name="archaeology_scaffolding_scaffolding_part_beam_medium_30" CreStamp="1614990781" ModStamp="1614990871" WorldPos="7.16071 34.1777 -2.55339" Rotation="0.721743 4.53262 -2.31811" Scale="0.25 0.25 0.01" FileIndex="79" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="0.181641 0.181641 0.181641 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 1562 268438304" />
             <StaticObject ID="268438305" Name="archaeology_scaffolding_scaffolding_part_beam_medium_31" CreStamp="1614990748" ModStamp="1614990877" WorldPos="7.15963 34.1591 -2.55169" Rotation="0.721739 4.53262 -2.31811" Scale="0.1 0.1 0.1" FileIndex="79" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="0.180392 0.180392 0.180392 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 1569 268438305" />
+            <StaticObject ID="268438312" Name="arabic_fort_nonexclusive_rope_fort_rope_hanging_3_1" CreStamp="1615030086" ModStamp="1615030143" WorldPos="4.16523 36.2181 -2.86051" Rotation="0 0 0" Scale="1 1 1" FileIndex="83" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 1553 268438312" />
         </Objects>
     </Section>
 </HPLMapTrack_StaticObject>

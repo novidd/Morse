@@ -115,10 +115,10 @@ class cScrMap : iScrMap
 	void OnStart()
 	{
 		// Variables
-		bool mbStartIntro = true;
 		
 		// Entity
 		Entity_PlayAnimation("Vulture", "eating_idle", .1f, true, true, "", false, false);
+		Map_AddTimer("Timer_PlayVultureEatingSound", 1.f, "OnTimer_PlayVultureEatingSound");
 		
 		mlPermaFailStage = ePathToFortPermaFail_PlagueHouse;
 		
@@ -126,14 +126,6 @@ class cScrMap : iScrMap
 		// Debug
 		if(cLux_ScriptDebugOn())
 		{
-			mbStartIntro = false;
-			
-			if (!mbStartIntro)
-			{
-				Music_PlayExt("A2_2_1_Wake_Amb", true, mfGlobalMusicVolume, 1, 3.f, 0, eMusicPrio_BgAmb, true);
-				Map_AddTimer("Timer_PlayVultureEatingSound", 1.f, "OnTimer_PlayVultureEatingSound");
-			}
-			
 			if (ItemType_GetCountInInventory("Lantern") < 1)
 			{
 				Item_AddToInventory("Lantern");
@@ -141,12 +133,6 @@ class cScrMap : iScrMap
 				
 				Lantern_SetAmount(10);
 			}
-		}
-		
-		// Initiate the intro
-		if (mbStartIntro) 
-		{ 
-			Seq_Intro("");
 		}
 	}
 
@@ -157,9 +143,10 @@ class cScrMap : iScrMap
 	void OnEnter()
 	{	
 		Game_AutoSave();
+		Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
 		
 		Billboard_SetBrightness("Billboard_Fence_*", .010f);
-		Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
+		Music_PlayExt("A2_2_1_Wake_Amb", true, mfGlobalMusicVolume, 1, 3.f, 0, eMusicPrio_BgAmb, true);
 		
 		// Check if player has entered the fort
 		// If true, start the sandstorm
@@ -358,10 +345,10 @@ class cScrMap : iScrMap
 	//} END VO EVENTS
  
 	//} END MAIN FUNCTIONS
- 
+	
 	/////////////////////////////////////////////////////////////////////////////////////////
 	// ==============
-	// SCENE 1 *INTRO*
+	// SCENE 1 *OUTER CANYON*
 	// ==============
 	//{//////////////////////////////////////////////////////////////////////////////////////
  
@@ -376,134 +363,6 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 	 
 		/*Put any functions that are used in more than one event in Scene 1 here.*/
-		
-		//-------------------------------------------------------
-		
-		//} END General
-	 
-		/////////////////////////////////////////
-		// Event A *INTRO SEQUENCE*
-		//{//////////////////////////////////////
-		
-		//-------------------------------------------------------
-
-		/*Put any variables that are only used in Scene 1, Event A here.*/
-
-		//-------------------------------------------------------
-
-		/*Put any functions that are only used in Scene 1, Event A here.*/
-		
-		cSequenceStatesData mSeqIntro;
-		void Seq_Intro(const tString &in asName)
-		{
-			Sequence_Begin("Seq_Intro", mSeqIntro);
-			if (Sequence_DoStepAndWait(1.f))
-			{
-				Debug_Log("Intro Sequence starting...");
-				
-				Map_SetSkyBoxTexture("skybox_moonlight.dds");
-				Map_SetSkyBoxColor(cColor(1,1,1,1));
-				
-				Effect_Fade_Out(0.f);
-				Player_SetActive(false);
-			}
-			else if (Sequence_DoStepAndWait(3.f))
-			{
-				Player_Teleport("Start_Begin");
-				
-				Player_StartLookAt("LookIntro_1", 3.f, 50.f, 100.f);
-				Player_FadeFOVTo(.75f, .015f);
-				
-				Sound_FadeGlobalVolume(0.f, 0.f, eSoundEntryType_World);
-				
-				Music_PlayExt("01_00_cosmos", true, mfGlobalMusicVolume, 1, 3.f, 0, eMusicPrio_BgAmb, true);
-			}
-			else if (Sequence_DoStepAndWait(47.f))
-			{
-				Effect_Fade_In(3.f);
-			}
-			else if (Sequence_DoStepAndWait(4.f))
-			{
-				Effect_Fade_Out(3.f);
-			}
-			else if (Sequence_DoStepAndWait(2.f))
-			{
-				Player_FadeFOVToDefault(100.f);
-				
-				Map_SetSkyBoxTexture("skybox_town.dds");
-
-				Player_Teleport("Start_WakeUp");
-				Player_StopLookAt(0);
-				Map_AddTimer("Timer_WakeUp", 1.f ,"OnTimer_WakeUp");
-			}
-			Sequence_End();
-		}
-		
-		//-------------------------------------------------------
-		
-		void OnTimer_WakeUp(const tString &in asTimer)
-		{
-			Effect_Fade_Out(.1f);
-			Seq_Intro_WakeUp("");
-		}
-		
-		//-------------------------------------------------------
-		
-		cSequenceStatesData mSeqIntroWakeUp;
-		void Seq_Intro_WakeUp(const tString &in asName)
-		{
-			Sequence_Begin("Seq_Intro_WakeUp", mSeqIntroWakeUp);
-			if (Sequence_DoStepAndWait(8.f)) //8.f
-			{
-				Player_SetNightVisionRadius(3.f);
-			}
-			else if (Sequence_DoStepAndWait(.5f))
-			{
-				Player_SetNightVisionBrightness(.25f);
-			}
-			else if (Sequence_DoStepAndWait(2.f))
-			{
-				Effect_Fade_In(.1f);
-				Player_SetActive(true);
-				Sound_FadeGlobalVolume(1.f, 3.f, eSoundEntryType_World);
-				Map_AddTimer("Timer_PlayVultureEatingSound", 0.f, "OnTimer_PlayVultureEatingSound");
-				
-				Music_Stop(1.f, eMusicPrio_SceneAmb);
-				Music_PlayExt("A2_2_1_Wake_Amb", true, mfGlobalMusicVolume, 1, 4.f, 0, eMusicPrio_BgAmb, false);
-			}
-			Sequence_End();
-		}
-		
-		//-------------------------------------------------------
-		
-		void OnAnimEnd_RunShowMatchHintTimer(const tString &in asAnimName)
-		{
-			cLux_AddDebugMessage("Player has woken up... accessing player controls.");
-		}
-		
-		//-------------------------------------------------------
-
-		//} END Event *INTRO SEQUENCE*
-	 
-	//} END SCENE 1
-	
-	/////////////////////////////////////////////////////////////////////////////////////////
-	// ==============
-	// SCENE 2 *OUTER CANYON*
-	// ==============
-	//{//////////////////////////////////////////////////////////////////////////////////////
- 
-		/////////////////////////////////////////
-		// General
-		//{//////////////////////////////////////
-		 
-		//-------------------------------------------------------
-	 
-		/*Put any variables that are used by many events in Scene 2 here.*/
-		
-		//-------------------------------------------------------
-	 
-		/*Put any functions that are used in more than one event in Scene 2 here.*/
 		
 		bool OnCollide_FallingDeath(const tString &in asParent, const tString &in asChild, int alState)
 		{
@@ -555,11 +414,11 @@ class cScrMap : iScrMap
 		
 		//-------------------------------------------------------
 
-		/*Put any variables that are only used in Scene 2, Event A here.*/
+		/*Put any variables that are only used in Scene 1, Event A here.*/
 
 		//-------------------------------------------------------
 
-		/*Put any functions that are only used in Scene 2, Event A here.*/
+		/*Put any functions that are only used in Scene 1, Event A here.*/
 		
 		void OnPlayerInteract_NotePlagueHouse(const tString &in asEntity)
 		{
@@ -583,11 +442,11 @@ class cScrMap : iScrMap
 		
 		//-------------------------------------------------------
 
-		/*Put any variables that are only used in Scene 2, Event B here.*/
+		/*Put any variables that are only used in Scene 1, Event B here.*/
 
 		//-------------------------------------------------------
 
-		/*Put any functions that are only used in Scene 2, Event B here.*/
+		/*Put any functions that are only used in Scene 1, Event B here.*/
 		
 		void OnPlayerInteract_PlagueDoor(const tString &in asEntity)
 		{
@@ -604,11 +463,11 @@ class cScrMap : iScrMap
 		
 		//-------------------------------------------------------
 
-		/*Put any variables that are only used in Scene 2, Event C here.*/
+		/*Put any variables that are only used in Scene 1, Event C here.*/
 
 		//-------------------------------------------------------
 
-		/*Put any functions that are only used in Scene 2, Event C here.*/
+		/*Put any functions that are only used in Scene 1, Event C here.*/
 		
 		bool OnCollide_VultureFly(const tString &in asParent, const tString &in asChild, int alState)
 		{
@@ -646,11 +505,11 @@ class cScrMap : iScrMap
 		
 		//-------------------------------------------------------
 
-		/*Put any variables that are only used in Scene 2, Event D here.*/
+		/*Put any variables that are only used in Scene 1, Event D here.*/
 		
 		//-------------------------------------------------------
 
-		/*Put any functions that are only used in Scene 2, Event D here.*/
+		/*Put any functions that are only used in Scene 1, Event D here.*/
 		
 		bool OnCollide_AltarMusic(const tString &in asParent, const tString &in asChild, int alState)
 		{
@@ -669,11 +528,11 @@ class cScrMap : iScrMap
 		
 		//-------------------------------------------------------
 
-		/*Put any variables that are only used in Scene 2, Event E here.*/
+		/*Put any variables that are only used in Scene 1, Event E here.*/
 		
 		//-------------------------------------------------------
 
-		/*Put any functions that are only used in Scene 2, Event E here.*/
+		/*Put any functions that are only used in Scene 1, Event E here.*/
 		
 		bool OnCollide_BridgeCreak(const tString &in asParent, const tString &in asChild, int alState)
 		{
@@ -693,11 +552,11 @@ class cScrMap : iScrMap
 		
 		//} END Event *PLAYER CROSSES THE BROKEN BRIDGE*
 		
-	//} END SCENE 2
+	//} END SCENE 1
 	
 	/////////////////////////////////////////////////////////////////////////////////////////
 	// ==============
-	// SCENE 3 *CANYON*
+	// SCENE 2 *CANYON*
 	// ==============
 	//{//////////////////////////////////////////////////////////////////////////////////////
 	
@@ -707,11 +566,11 @@ class cScrMap : iScrMap
 		 
 		//-------------------------------------------------------
 	 
-		/*Put any variables that are used by many events in Scene 3 here.*/
+		/*Put any variables that are used by many events in Scene 2 here.*/
 		
 		//-------------------------------------------------------
 		
-		/*Put any functions that are used in more than one event in Scene 3 here.*/
+		/*Put any functions that are used in more than one event in Scene 2 here.*/
 		
 		bool OnCollide_GiveMatchHint(const tString &in asParent, const tString &in asChild, int alState)
 		{
@@ -745,11 +604,11 @@ class cScrMap : iScrMap
 		
 		//-------------------------------------------------------
 
-		/*Put any variables that are only used in Scene 3, Event A here.*/
+		/*Put any variables that are only used in Scene 2, Event A here.*/
 
 		//-------------------------------------------------------
 
-		/*Put any functions that are only used in Scene 3, Event A here.*/
+		/*Put any functions that are only used in Scene 2, Event A here.*/
 		
 		bool OnCollide_GhoulScare(const tString &in asParent, const tString &in asChild, int alState)
 		{
@@ -773,5 +632,5 @@ class cScrMap : iScrMap
 
 		//} END Event *GHOUL SCARE*
 		
-	//} END SCENE 3
+	//} END SCENE 2
 }
