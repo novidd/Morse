@@ -390,6 +390,7 @@ class cScrMap : iScrMap
 			else if (Sequence_DoStepAndWait(4.f))
 			{
 				Effect_Fade_Out(3.f);
+				GramophoneHandler("Trigger_Gramophone");
 			}
 			else if (Sequence_DoStepAndWait(2.f))
 			{
@@ -460,7 +461,15 @@ class cScrMap : iScrMap
 			bool mbEnableFX = alState == 1;
 			Light_SetVisible("Light_Point_LivingQuarters_*", mbEnableFX);
 			Light_SetVisible("Light_Spot_LivingQuarters_*", mbEnableFX);
-			Billboard_SetVisible("Billboard_LivingQuarters_*", mbEnableFX);
+			return true;
+		}
+		
+		//-------------------------------------------------------
+		
+		bool OnCollide_UpdateQuartersBillboards(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			bool mbEnableBillboards = alState == 1;
+			Billboard_SetVisible("Billboard_LivingQuarters_*", mbEnableBillboards);
 			return true;
 		}
 		
@@ -477,14 +486,17 @@ class cScrMap : iScrMap
 		{
 			Entity_SetVarBool(asEntity, "", !Entity_GetVarBool(asEntity, ""));
 			bool mbPlayGramophone = Entity_GetVarBool(asEntity, "");
+			Sound_CreateAtEntity("gramophone_button", "morse_entity/interact/button/button_interact", "Trigger_Gramophone_Sound", 0, false, .25f);
 			
 			if (mbPlayGramophone)
 			{
-				Prop_RotateToSpeed("gramophone_vinyl", 3.f, 3.f, cVector3f(0, 1, 0), false, "");
+				Prop_RotateToSpeed("gramophone_vinyl", 3.f, 2.f, cVector3f(0, 1, 0), false, "");
+				Sound_CreateAtEntity("gramophone_track", "morse_events/gramophone/gramophone_track_1", "Trigger_Gramophone_Sound");
 			}
 			else
 			{
-				Prop_RotateToSpeed("gramophone_vinyl", -1.f, 0.f, cVector3f(0, 1, 0), true, "");
+				Prop_RotateToSpeed("gramophone_vinyl", -1.f, 0, cVector3f(0, 1, 0), true, "");
+				Sound_Stop("gramophone_track", .1f);
 			}
 		}
 		
@@ -546,8 +558,16 @@ class cScrMap : iScrMap
 		
 		bool OnCollide_BellToll(const tString &in asParent, const tString &in asChild, int alState)
 		{
-//			Sound_Play("Sound_BellToll", 0);
-			return true;
+			Sound_CreateAtEntity("minaret_bell", "morse_events/church_bell/church_bell", "Trigger_BellToll_Sound");
+			Map_AddTimer("Timer_ExtendBellToll", 18.f, "OnTimer_ExtendBellToll");
+			return false;
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnTimer_ExtendBellToll(const tString &in asTimer)
+		{
+			Sound_CreateAtEntity("minaret_bell", "morse_events/church_bell/church_bell", "Trigger_BellToll_Sound");
 		}
 		
 		//-------------------------------------------------------
@@ -586,5 +606,6 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 
 		//} END Event *PLAYER FINDS THE ALTAR*
+		
 	//} END SCENE 3
 }
