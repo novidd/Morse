@@ -45,3 +45,16 @@ float Player_GetDistanceToLight(const tString &in asLight)
 }
 
 //-------------------------------------------------------
+
+/**
+ * Gets the player cameras current FOV.
+ * !Keep in mind if this is called during the player cameras FOV is changing you wont get an accurate value!
+ * 
+ * @return float, The distance the light is from the player.
+ **/
+ float Player_GetFOV()
+ {
+	 return cLux_GetCurrentMap().GetPlayerEntity().GetMainBody().GetCharacterBody().GetCamera().GetFOV();
+ }
+
+//-------------------------------------------------------

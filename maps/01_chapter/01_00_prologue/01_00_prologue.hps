@@ -175,6 +175,7 @@ class cScrMap : iScrMap
 	// Runs on every frame
 	void Update(float afTimeStep)
 	{
+		UpdateEnterCourtyard(afTimeStep);
 		UpdateAltarSpotlight();
 	}
 	
@@ -456,9 +457,10 @@ class cScrMap : iScrMap
 	 
 		/*Put any functions that are used in more than one event in Scene 1 here.*/
 		
-		bool OnCollide_IsinLivingQuarters(const tString &in asParent, const tString &in asChild, int alState)
+		bool OnCollide_IsInLivingQuarters(const tString &in asParent, const tString &in asChild, int alState)
 		{
 			bool mbEnableFX = alState == 1;
+			Entity_SetVarBool(asParent, "", mbEnableFX);
 			Light_SetVisible("Light_Point_LivingQuarters_*", mbEnableFX);
 			Light_SetVisible("Light_Spot_LivingQuarters_*", mbEnableFX);
 			return true;
@@ -499,6 +501,10 @@ class cScrMap : iScrMap
 				Sound_Stop("gramophone_track", .1f);
 			}
 		}
+		
+		//-------------------------------------------------------
+		
+		// Randomized sound source beam creaking 
 		
 		//-------------------------------------------------------
 		
@@ -543,18 +549,67 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 		
 		//} END General
-	 
+		
 		/////////////////////////////////////////
-		// Event A *THE MINARETBELL TOLLS*
+		// Event A *PLAYER ENTERS THE COURTYARD*
 		//{//////////////////////////////////////
 		
 		//-------------------------------------------------------
 
 		/*Put any variables that are only used in Scene 3, Event A here.*/
-
+		
+		float mfPlayerPrevFOV;
+		float mfFovMul = 1.05f;
+		
 		//-------------------------------------------------------
 
 		/*Put any functions that are only used in Scene 3, Event A here.*/
+		
+		void OnLookAt_Courtyard(const tString &in asEntity, int alState)
+		{
+			bool mbLookingAtArea = alState == 1;
+			Entity_SetVarBool(asEntity, "", mbLookingAtArea);
+		}
+		
+		//-------------------------------------------------------
+		
+		void UpdateEnterCourtyard(float afTimeStep)
+		{
+			if (Player_GetFOV() == mfPlayerPrevFOV * mfFovMul)
+			{
+				Player_FadeFOVMulTo(1.f, 0.25f);
+				Effect_ToneMapping_FadeExposure(0.f, 5.f);
+			}
+			
+			if (Entity_GetVarBool("Trigger_EnteredCourtyard", "")) return;
+			
+			//-- CODE BELOW RUNS ONLY ONCE --//
+			
+			if (!Entity_GetVarBool("Trigger_IsInLivingQuarters", "") && Entity_GetVarBool("Trigger_LookAtCourtyard", ""))
+			{
+				Entity_SetVarBool("Trigger_EnteredCourtyard", "", true);
+				
+				mfPlayerPrevFOV = Player_GetFOV();
+				Player_FadeFOVMulTo(mfFovMul, 3.f);
+				Effect_ToneMapping_FadeExposure(.75f, 1.5f);
+			}
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER ENTERS THE COURTYARD*
+		
+		/////////////////////////////////////////
+		// Event B *THE MINARETBELL TOLLS*
+		//{//////////////////////////////////////
+		
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 3, Event B here.*/
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 3, Event B here.*/
 		
 		bool OnCollide_BellToll(const tString &in asParent, const tString &in asChild, int alState)
 		{
@@ -575,16 +630,16 @@ class cScrMap : iScrMap
 		//} END Event *THE MINARETBELL TOLLS*
 	 
 		/////////////////////////////////////////
-		// Event B *PLAYER FINDS THE ALTAR*
+		// Event C *PLAYER FINDS THE ALTAR*
 		//{//////////////////////////////////////
 		
 		//-------------------------------------------------------
 
-		/*Put any variables that are only used in Scene 3, Event B here.*/
+		/*Put any variables that are only used in Scene 3, Event C here.*/
 
 		//-------------------------------------------------------
 
-		/*Put any functions that are only used in Scene 3, Event B here.*/
+		/*Put any functions that are only used in Scene 3, Event C here.*/
 		
 		void UpdateAltarSpotlight()
 		{
