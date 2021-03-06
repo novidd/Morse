@@ -1,5 +1,14 @@
 <HPLMapTrack_Compound ID="442E5FED85DE959ABC4602132A7D037365B73EF0" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
-        <Objects />
+        <Objects>
+            <Compound ID="268438389" Name="Compound_1" CreStamp="0" ModStamp="1615056488" WorldPos="6.20419 30.3525 1.3232" Rotation="0 0 0" Scale="1 1 1" UID="16 1395 268438389">
+                <Component ID="268438385" />
+                <Component ID="268438386" />
+            </Compound>
+            <Compound ID="268438404" Name="Compound_2" CreStamp="1615056475" ModStamp="1615056490" WorldPos="5.78985 30.3525 1.2694" Rotation="-0 2.56127 -0" Scale="1 1 1" UID="16 1520 268438404">
+                <Component ID="268438402" />
+                <Component ID="268438403" />
+            </Compound>
+        </Objects>
     </Section>
 </HPLMapTrack_Compound>
