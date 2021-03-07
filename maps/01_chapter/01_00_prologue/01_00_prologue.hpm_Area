@@ -866,7 +866,7 @@
                     <Var ObjectId="268436806" Name="Crouching" Value="false" />
                 </UserVariables>
             </Area>
-            <Area ID="268436807" Name="Trigger_BellToll_Sound" CreStamp="1615037599" ModStamp="1615039723" WorldPos="37.0092 41.1212 -60.3906" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 1590 268436807" AreaType="Trigger">
+            <Area ID="268436807" Name="Trigger_BellToll_Sound" CreStamp="1615037599" ModStamp="1615143601" WorldPos="49.5 57.5 -44.25" Rotation="0 0 0" Scale="2 2 2" Active="true" Mesh="" UID="16 1590 268436807" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268436807" Name="Note" Value="" />
                     <Var ObjectId="268436807" Name="BlocksLineOfSight" Value="false" />
