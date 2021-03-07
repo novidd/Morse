@@ -158,6 +158,8 @@ class cScrMap : iScrMap
 		Game_AutoSave();
 //		Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
 		Item_RemoveFromInventory(ItemType_GetFirstInInventory("CurseMedallion"));
+		
+		StartRandomSounds(1.f);
 	}
 
 	//-------------------------------------------------------
@@ -310,6 +312,19 @@ class cScrMap : iScrMap
 	//-------------------------------------------------------
  
 	/*Put any functions that are used in more than one scene here.*/
+	
+	void StartRandomSounds(float afDefaultTime)
+	{
+		Map_AddTimer("Timer_SoundBeamCreak", afDefaultTime, "OnTimer_SoundBeamCreak");
+	}
+	
+	//-------------------------------------------------------
+	
+	void OnTimer_SoundBeamCreak(const tString &in asTimer)
+	{
+		Sound_Play("Sound_Creak_"+cMath_RandRectl(1, 3), 0);
+		Map_RestartCurrentTimer(cMath_RandRectf(10.f, 15.f));
+	}
 	
 	//-------------------------------------------------------
 	
@@ -504,7 +519,7 @@ class cScrMap : iScrMap
 		
 		//-------------------------------------------------------
 		
-		// Randomized sound source beam creaking 
+		// Randomized sound source beam creaking
 		
 		//-------------------------------------------------------
 		
