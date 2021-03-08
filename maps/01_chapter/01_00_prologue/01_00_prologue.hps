@@ -127,11 +127,12 @@ class cScrMap : iScrMap
 		// Debug
 		if(cLux_ScriptDebugOn())
 		{
-			mbStartIntro = false;
+			mbStartIntro = true;
 			
 			if (!mbStartIntro)
 			{
-
+				Sound_CreateAtEntity("market_sound", "morse_level_shared/amb/sweetener/market/market", "Trigger_Market_Sound");
+				Sound_Play("Sound_WindAmbSmall_1", 0);
 			}
 			
 			if (ItemType_GetCountInInventory("Lantern") < 1)
@@ -248,7 +249,7 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test0)
 		{
-			Voice_Play("MorseIntro");
+			Voice_Play("Intro");
 		}
 		
 		if (alAction == eAction_Test1)
@@ -317,7 +318,6 @@ class cScrMap : iScrMap
 	void StartRandomSounds(float afDefaultTime)
 	{
 		Map_AddTimer("Timer_SoundBeamCreak", afDefaultTime, "OnTimer_SoundBeamCreak");
-		Sound_CreateAtEntity("market_sound", "morse_level_shared/amb/sweetener/market/market", "Trigger_Market_Sound");
 	}
 	
 	//-------------------------------------------------------
@@ -380,11 +380,12 @@ class cScrMap : iScrMap
 		void Seq_Intro(const tString &in asName)
 		{
 			Sequence_Begin("Seq_Intro", mSeqIntro);
-			if (Sequence_DoStepAndWait(4.f))
+			if (Sequence_DoStepAndWait(5.f))
 			{
 				Debug_Log("Intro Sequence starting...");
 				
 				Map_SetSkyBoxTexture("skybox_moonlight.dds");
+				GetBase().GetWorld().SetSkyBoxBrightness(2.f);
 				Map_SetSkyBoxColor(cColor(1,1,1,1));
 				
 				Effect_Fade_Out(0.f);
@@ -392,7 +393,7 @@ class cScrMap : iScrMap
 				
 				Music_PlayExt("01_00_cosmos", true, mfGlobalMusicVolume, 1, 3.f, 0, eMusicPrio_BgAmb, true);
 			}
-			else if (Sequence_DoStepAndWait(10.f))
+			else if (Sequence_DoStepAndWait(9.f))
 			{
 				Player_Teleport("Start_Begin");
 				
@@ -401,7 +402,7 @@ class cScrMap : iScrMap
 				
 				Sound_FadeGlobalVolume(0.f, 0.f, eSoundEntryType_World);
 			
-				Voice_Play("SUBJECT");
+				Voice_Play("Intro");
 			}
 			else if (Sequence_DoStepAndWait(39.f))
 			{
@@ -418,6 +419,7 @@ class cScrMap : iScrMap
 				
 				Map_SetSkyBoxTexture("skybox_courtyard_extraclouds.dds");
 				Map_SetSkyBoxColor(cColor(0.671,0.537,0.435,1));
+				GetBase().GetWorld().SetSkyBoxBrightness(5.f);
 
 				Player_Teleport("Start_Begin_1");
 				Player_StartLookAt("Trigger_IntroLook_2", 3.f, 50.f, 100.f);
@@ -445,6 +447,8 @@ class cScrMap : iScrMap
 				Player_StopLookAt(1.f);
 				Player_SetActive(true);
 				Sound_FadeGlobalVolume(1.f, 3.f, eSoundEntryType_World);
+				Sound_Play("Sound_WindAmbSmall_1", 0);
+				Sound_CreateAtEntity("market_sound", "morse_level_shared/amb/sweetener/market/market", "Trigger_Market_Sound");
 				
 				Music_Stop(1.f, eMusicPrio_BgAmb);
 //				Music_PlayExt("A2_2_1_Wake_Amb", true, mfGlobalMusicVolume, 1, 4.f, 0, eMusicPrio_BgAmb, false);

@@ -1,7 +1,7 @@
 <HPLMapTrack_Area ID="442E5FED85DE959ABC4602132A7D037365B73EF0" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
         <Objects>
-            <Area ID="268436783" Name="Start_Begin" CreStamp="1614514437" ModStamp="1615032227" WorldPos="0 89 0" Rotation="0 1.19209e-07 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 1598 268436783" AreaType="PlayerStart">
+            <Area ID="268436783" Name="Start_Begin" CreStamp="1614514437" ModStamp="1615241690" WorldPos="0 119.092 0" Rotation="0 1.19209e-07 0" Scale="0.7 1.9 0.7" Active="true" Mesh="" UID="16 1598 268436783" AreaType="PlayerStart">
                 <UserVariables>
                     <Var ObjectId="268436783" Name="Note" Value="" />
                     <Var ObjectId="268436783" Name="Crouching" Value="false" />
@@ -832,7 +832,7 @@
                     <Var ObjectId="268436804" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268436805" Name="Trigger_IntroLook_1" CreStamp="1615032247" ModStamp="1615032303" WorldPos="-0.75 94.316 2.75" Rotation="0 1.19209e-07 0" Scale="1 1 1" Active="true" Mesh="" UID="16 1392 268436805" AreaType="Trigger">
+            <Area ID="268436805" Name="Trigger_IntroLook_1" CreStamp="1615032247" ModStamp="1615241690" WorldPos="-0.75 124.408 2.75" Rotation="0 1.19209e-07 0" Scale="1 1 1" Active="true" Mesh="" UID="16 1392 268436805" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268436805" Name="Note" Value="" />
                     <Var ObjectId="268436805" Name="BlocksLineOfSight" Value="false" />

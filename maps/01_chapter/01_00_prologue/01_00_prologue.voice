@@ -13,9 +13,12 @@
   <Section Name="Opening" />
  </Sections>
  <Subjects>
-  <Subject Name="MorseIntro" UseSingleRandomLine="False" SceneId="0" EffectId="-1" Section="Opening">
+  <Subject Name="Intro" UseSingleRandomLine="False" SceneId="0" EffectId="-1" Section="Opening">
    <Line CharacterId="1" Prio="0" TextStatus="Placeholder" PlayOnce="True">
-    <Sound Text="This is a temporary voice file." FileName="intro_morseintro_001_intro_arthur_001" Timestamp="2021-03-08 06:42" />
+    <Sound Text="In northern Africa, a disease is spreading." EndPadding="-4" FileName="intro_intro_001_intro_arthur_001" Timestamp="2021-03-08 11:09" />
+   </Line>
+   <Line CharacterId="1" Prio="0" TextStatus="Placeholder" PlayOnce="True">
+    <Sound Text="What could be its purpose?" EndPadding="-2" FileName="intro_intro_002_intro_arthur_001" Timestamp="2021-03-08 11:09" />
    </Line>
   </Subject>
  </Subjects>
