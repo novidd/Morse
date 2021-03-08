@@ -6519,7 +6519,7 @@
                     <Var ObjectId="268436945" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268436946" Name="NotePastor" CreStamp="1614988054" ModStamp="1615064968" WorldPos="5.03099 33.7646 -1.61684" Rotation="-0.364748 1.37237 -0.41509" Scale="1 1 1" FileIndex="319" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1547 268436946">
+            <Entity ID="268436946" Name="NotePastor" CreStamp="1614988054" ModStamp="1615227382" WorldPos="5.03099 33.7646 -1.61684" Rotation="-0.364748 1.37237 -0.41509" Scale="1 1 1" FileIndex="319" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 1547 268436946">
                 <UserVariables>
                     <Var ObjectId="268436946" Name="Note" Value="" />
                     <Var ObjectId="268436946" Name="EventInstanceTag" Value="" />
@@ -6574,7 +6574,7 @@
                     <Var ObjectId="268436946" Name="ExtraConnectionLightUseOnColor" Value="true" />
                     <Var ObjectId="268436946" Name="ExtraConnectionLightUseSpec" Value="false" />
                     <Var ObjectId="268436946" Name="ExtraConnectionLightType" Value="Mul" />
-                    <Var ObjectId="268436946" Name="ID" Value="" />
+                    <Var ObjectId="268436946" Name="ID" Value="NotePastor" />
                     <Var ObjectId="268436946" Name="OpenEntityFile" Value="" />
                     <Var ObjectId="268436946" Name="CloseCallback" Value="" />
                     <Var ObjectId="268436946" Name="VerticalFOV" Value="70" />

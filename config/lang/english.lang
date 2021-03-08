@@ -6,31 +6,50 @@
 		
 	</CATEGORY>
 	<!-- END HINTS -->
-	
 	<!-- LEVEL -->
-	<CATEGORY Name="01_01_path_to_fort">
 	
-		<Entry Name="01-01-path-to-fort">The Path To The Fort</Entry>
+		<!-- PROLOGUE -->
+		<CATEGORY Name="01_00_prologue">
 		
-		<Entry Name="NotePlagueHouse_FrontEntry">My first readable</Entry>
-		<Entry Name="NotePlagueHouse_BackEntry">First readable's backside</Entry>
-		<Entry Name="NotePlagueHouse_FrontEntry_Name">Title in sketchbook</Entry>
-	
-		<Entry Name="Zoom_Welcome">Welcome to the end of the world</Entry>
+			<Entry Name="01-00-prologue">Prologue</Entry>
+			
+			<Entry Name="NotePastor_FrontEntry">This is the pastors letter</Entry>
+			<Entry Name="NotePastor_BackEntry">The pastors backside</Entry>
+			<Entry Name="NotePastor_FrontEntry_Name">Pastor title</Entry>
 		
-	</CATEGORY>
-	
-	<CATEGORY Name="Levels">
-	
-		<Entry Name="01_01_path_to_fort_sketchbook_category">The Path To The Fort</Entry>
+		</CATEGORY>
 		
-	</CATEGORY>
+		<CATEGORY Name="Voices_01_00_prologue">
+		
+			<Entry Name="intro_morseintro_001_intro_arthur_001">This is a temporary voice file.</Entry>
+			
+		</CATEGORY>
+		<!-- END PROLOGUE -->
+		
+		<!-- PATH TO FORT -->
+		<CATEGORY Name="01_01_path_to_fort">
+		
+			<Entry Name="01-01-path-to-fort">The Path To The Fort</Entry>
+			
+			<Entry Name="NotePlagueHouse_FrontEntry">My first readable</Entry>
+			<Entry Name="NotePlagueHouse_BackEntry">First readable's backside</Entry>
+			<Entry Name="NotePlagueHouse_FrontEntry_Name">Title in sketchbook</Entry>
+			
+		</CATEGORY>
+		<!-- END PATH TO FORT -->
+		
+		<CATEGORY Name="Levels">
+
+			<Entry Name="01_00_prologue_sketchbook_category">Prologue</Entry>
+			<Entry Name="01_01_path_to_fort_sketchbook_category">The Path To The Fort</Entry>
+			
+		</CATEGORY>
 	<!-- END LEVEL -->
 	
 	<CATEGORY Name="SubtitleCharNames">
 	
 		<Entry Name="Player">Arthur</Entry>
-		<Entry Name="IntroArthur">Arthur</Entry>
+		<Entry Name="Intro_Arthur">Arthur</Entry>
 		
 	</CATEGORY>
 </LANGUAGE>

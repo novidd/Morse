@@ -80,7 +80,7 @@ class cScrMap : iScrMap
 		//Stamina_SetStaminaSystemActive(true);
 		
 		// Put display name entry in english.lang / Levels
-//		GetBase().SetDisplayNameEntry("01-00-prologue");
+		GetBase().SetDisplayNameEntry("01-00-prologue");
 	}
 	
 	//-------------------------------------------------------
@@ -248,7 +248,7 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test0)
 		{
-			
+			Voice_Play("MorseIntro");
 		}
 		
 		if (alAction == eAction_Test1)
@@ -380,7 +380,7 @@ class cScrMap : iScrMap
 		void Seq_Intro(const tString &in asName)
 		{
 			Sequence_Begin("Seq_Intro", mSeqIntro);
-			if (Sequence_DoStepAndWait(1.f))
+			if (Sequence_DoStepAndWait(4.f))
 			{
 				Debug_Log("Intro Sequence starting...");
 				
@@ -389,8 +389,10 @@ class cScrMap : iScrMap
 				
 				Effect_Fade_Out(0.f);
 				Player_SetActive(false);
+				
+				Music_PlayExt("01_00_cosmos", true, mfGlobalMusicVolume, 1, 3.f, 0, eMusicPrio_BgAmb, true);
 			}
-			else if (Sequence_DoStepAndWait(3.f))
+			else if (Sequence_DoStepAndWait(10.f))
 			{
 				Player_Teleport("Start_Begin");
 				
@@ -398,10 +400,10 @@ class cScrMap : iScrMap
 				Player_FadeFOVTo(.75f, .015f);
 				
 				Sound_FadeGlobalVolume(0.f, 0.f, eSoundEntryType_World);
-				
-				Music_PlayExt("01_00_cosmos", true, mfGlobalMusicVolume, 1, 3.f, 0, eMusicPrio_BgAmb, true);
+			
+				Voice_Play("SUBJECT");
 			}
-			else if (Sequence_DoStepAndWait(47.f))
+			else if (Sequence_DoStepAndWait(39.f))
 			{
 				Effect_Fade_In(3.f);
 			}
