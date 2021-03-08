@@ -119,6 +119,7 @@ class cScrMap : iScrMap
 		bool mbStartIntro = true;
 		
 		// Entity
+		Entity_PlayAnimation("Vulture", "eating_idle", .1f, true, true, "", false, false);
 		
 //		mlPermaFailStage = ePathToFortPermaFail_PlagueHouse;
 		
@@ -316,6 +317,7 @@ class cScrMap : iScrMap
 	void StartRandomSounds(float afDefaultTime)
 	{
 		Map_AddTimer("Timer_SoundBeamCreak", afDefaultTime, "OnTimer_SoundBeamCreak");
+		Sound_CreateAtEntity("market_sound", "morse_level_shared/amb/sweetener/market/market", "Trigger_Market_Sound");
 	}
 	
 	//-------------------------------------------------------
@@ -630,7 +632,16 @@ class cScrMap : iScrMap
 		{
 			Sound_CreateAtEntity("minaret_bell", "morse_events/church_bell/church_bell", "Trigger_BellToll_Sound");
 			Map_AddTimer("Timer_ExtendBellToll", 18.f, "OnTimer_ExtendBellToll");
+			
+			Entity_PlayAnimation("Vulture", "circle_and_fly_way", 1.f, false, true, "OnAnimEnd_DisableVulture", false, false);
 			return false;
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnAnimEnd_DisableVulture(const tString &in asEntityName, const tString &in asAnimName)
+		{
+			Entity_SetActive(asEntityName, false);
 		}
 		
 		//-------------------------------------------------------

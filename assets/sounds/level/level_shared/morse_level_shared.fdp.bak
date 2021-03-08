@@ -541,7 +541,7 @@
 <ignoregeometry>No</ignoregeometry>
 <rolloff>Linear</rolloff>
 <mindistance>0.5</mindistance>
-<maxdistance>10</maxdistance>
+<maxdistance>5</maxdistance>
 <auto_distance_filtering>Off</auto_distance_filtering>
 <distance_filter_centre_freq>1500</distance_filter_centre_freq>
 <headrelative>World_relative</headrelative>
