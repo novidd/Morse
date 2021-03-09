@@ -127,7 +127,7 @@ class cScrMap : iScrMap
 		// Debug
 		if(cLux_ScriptDebugOn())
 		{
-			mbStartIntro = true;
+			mbStartIntro = false;
 			
 			if (!mbStartIntro)
 			{
@@ -400,20 +400,25 @@ class cScrMap : iScrMap
 				Player_StartLookAt("Trigger_IntroLook_1", 3.f, 50.f, 100.f);
 				Player_FadeFOVTo(.75f, .015f);
 				
-				Sound_FadeGlobalVolume(0.f, 0.f, eSoundEntryType_World);
+				Sound_FadeGlobalVolume(0.f, 0.f, eSoundEntryType_GuiWorld);
 			
 				Voice_Play("Intro");
 			}
-			else if (Sequence_DoStepAndWait(39.f))
+			else if (Sequence_DoStepAndWait(30.f))
 			{
 				Effect_Fade_In(3.f);
 			}
-			else if (Sequence_DoStepAndWait(4.f))
+			else if (Sequence_DoStepAndWait(6.f))
 			{
 				Effect_Fade_Out(3.f);
+				Music_Stop(3.f, eMusicPrio_BgAmb);
+			}
+			else if (Sequence_DoStepAndWait(8.f))
+			{
+				Player_Teleport("Start_Begin_1");
 				GramophoneHandler("Trigger_Gramophone");
 			}
-			else if (Sequence_DoStepAndWait(2.f))
+			else if (Sequence_DoStepAndContinue())
 			{
 				Player_FadeFOVToDefault(100.f);
 				
@@ -421,7 +426,6 @@ class cScrMap : iScrMap
 				Map_SetSkyBoxColor(cColor(0.671,0.537,0.435,1));
 				GetBase().GetWorld().SetSkyBoxBrightness(5.f);
 
-				Player_Teleport("Start_Begin_1");
 				Player_StartLookAt("Trigger_IntroLook_2", 3.f, 50.f, 100.f);
 				Seq_Intro_WakeUp("");
 			}
@@ -436,22 +440,17 @@ class cScrMap : iScrMap
 			if (Sequence_DoStepAndWait(8.f)) //8.f
 			{
 				Player_SetNightVisionRadius(3.f);
-			}
-			else if (Sequence_DoStepAndWait(.5f))
-			{
 				Player_SetNightVisionBrightness(.25f);
 			}
-			else if (Sequence_DoStepAndWait(2.f))
+			else if (Sequence_DoStepAndContinue())
 			{
 				Effect_Fade_In(3.f);
 				Player_StopLookAt(1.f);
 				Player_SetActive(true);
-				Sound_FadeGlobalVolume(1.f, 3.f, eSoundEntryType_World);
+				
+				Sound_FadeGlobalVolume(1.f, 3.f, eSoundEntryType_GuiWorld);
 				Sound_Play("Sound_WindAmbSmall_1", 0);
 				Sound_CreateAtEntity("market_sound", "morse_level_shared/amb/sweetener/market/market", "Trigger_Market_Sound");
-				
-				Music_Stop(1.f, eMusicPrio_BgAmb);
-//				Music_PlayExt("A2_2_1_Wake_Amb", true, mfGlobalMusicVolume, 1, 4.f, 0, eMusicPrio_BgAmb, false);
 			}
 			Sequence_End();
 		}
@@ -688,6 +687,48 @@ class cScrMap : iScrMap
 			{
 				Light_FadeBrightnessTo("candle_altar_spotlight", 0.f, .5f);
 			}
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER FINDS THE ALTAR*
+		
+		/////////////////////////////////////////
+		// Event D *PLAYER LEAVES THE COURTYARD*
+		//{//////////////////////////////////////
+		
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 3, Event D here.*/
+		
+		cSequenceStatesData mSeqOutro;
+
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 3, Event D here.*/
+		
+		void OnInteract_LeaveMap(const tString &in asEntity)
+		{
+			Seq_Outro("");
+		}
+		
+		//-------------------------------------------------------
+//		Map_ChangeMap("01_01_cave_town.hpm", "Start_Begin", "", "", true);
+// new_sounds/animations/tank_window_enter
+		void Seq_Outro(const tString &in asName)
+		{
+			Sequence_Begin("Seq_Outro", mSeqOutro);
+			if (Sequence_DoStepAndWait(3.f))
+			{
+				Effect_Fade_Out(3.f);
+				Player_SetActive(false);
+				Sound_Play("Sound_LeaveMap", 0);
+			}
+			else if (Sequence_DoStepAndWait(0.f))
+			{
+				
+			}
+			Sequence_End();
 		}
 		
 		//-------------------------------------------------------

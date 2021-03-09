@@ -48,9 +48,9 @@ float Player_GetDistanceToLight(const tString &in asLight)
 
 /**
  * Gets the player cameras current FOV.
- * !Keep in mind if this is called during the player cameras FOV is changing you wont get an accurate value!
+ * !Keep in mind if this is called while the player camera FOV is changing you wont get an accurate value!
  * 
- * @return float, The distance the light is from the player.
+ * @return float, the players current FOV.
  **/
  float Player_GetFOV()
  {

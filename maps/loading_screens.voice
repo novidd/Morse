@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<VoiceData>
+ <Characters>
+  <Character ID="0" Name="Loading_Arthur" DisplayName="Arthur" Actor="Lucas" AutoGenVoice="False" AutoGenVoiceFile="" AutoGenVoiceSoundFreq="1" WorldSpace="False" AffectedByReverb="False" TextToSpeechVoice="Default" DefaultCriteria="" EntryType="GUI" Volume="1" ReverbVolume="1" SpeakerSpread="40" EntitySource="" MinDist="0" MaxDist="0" MinFreq="22000" MaxFreq="22000" MaxListeningDist="-1" FrequencyFilter="None" />
+ </Characters>
+ <Effects />
+ <Scenes>
+  <Scene ID="0" Name="Loading" FocusPrio="0" ForceMaxVolume="False" DefaultCriteria="" Volume="1" ReverbVolume="1" />
+ </Scenes>
+ <Sections>
+  <Section Name="Loading Screens" />
+ </Sections>
+ <Subjects>
+  <Subject Desc="Salim with swaddled baby in arms, rocking child." Name="Loading_1B" UseSingleRandomLine="False" ShowSubtitlesIfMissing="False" SceneId="0" EffectId="-1" Section="Loading Screens">
+   <Line CharacterId="0" Prio="0" TextStatus="ToTranslators" AudioStatus="Final">
+    <Sound Text="Oh, Tasi! Look at her hands... such tiny, perfect fingers." FileName="1b_1" Timestamp="2020-02-17 02:28" />
+   </Line>
+   <Line CharacterId="0" Direction="Exhausted" Context="Can't help smiling at the expression on his face." Prio="0" TextStatus="ToTranslators">
+    <Sound Text="*laughs*" FileName="1b_2" Timestamp="2020-02-17 02:28" />
+   </Line>
+   <Line CharacterId="0" Prio="0" TextStatus="ToTranslators">
+    <Sound Text="Hello, hello, my little one." FileName="1b_3" Timestamp="2020-02-17 02:28" />
+   </Line>
+  </Subject>
+ </Subjects>
+</VoiceData>
