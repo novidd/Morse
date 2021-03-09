@@ -15,6 +15,8 @@
             <Sound ID="268438656" Name="Sound_3" CreStamp="1615134504" ModStamp="1615143781" WorldPos="16 45.75 -33.2101" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="02_02_courtyard/windmill/loop" MinDistance="1" MaxDistance="60" Volume="1" Active="true" UseCustomProperties="false" UID="16 2311 268438656" />
             <Sound ID="268438657" Name="Sound_4" CreStamp="1615143889" ModStamp="1615143896" WorldPos="8.25 34.75 -9.25" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="02_06_oasis/enviroment/palm_tree" MinDistance="1" MaxDistance="15" Volume="1" Active="true" UseCustomProperties="true" UID="16 2368 268438657" />
             <Sound ID="268439032" Name="Sound_LeaveMap" CreStamp="1615313665" ModStamp="1615313877" WorldPos="21.75 30.25 -11.75" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="level_entity_shared/level_doors/wood" MinDistance="1" MaxDistance="5" Volume="1" Active="false" UseCustomProperties="false" UID="16 2419 268439032" />
+            <Sound ID="268439040" Name="Sound_Tree_Outro" CreStamp="1615316953" ModStamp="1615317167" WorldPos="24.5 34.75 28" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="02_06_oasis/enviroment/reeds" MinDistance="1" MaxDistance="15" Volume="0.5" Active="true" UseCustomProperties="true" UID="16 2241 268439040" />
+            <Sound ID="268439041" Name="Sound_5" CreStamp="1615316971" ModStamp="1615317165" WorldPos="34.75 33.75 24" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="02_06_oasis/enviroment/palm_tree" MinDistance="1" MaxDistance="15" Volume="1" Active="true" UseCustomProperties="true" UID="16 2238 268439041" />
         </Objects>
     </Section>
 </HPLMapTrack_Sound>

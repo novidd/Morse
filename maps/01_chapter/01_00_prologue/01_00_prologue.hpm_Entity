@@ -10849,6 +10849,36 @@
                     <Var ObjectId="268437021" Name="OpenableByAgent" Value="true" />
                 </UserVariables>
             </Entity>
+            <Entity ID="268439043" Name="block_box_static_13" CreStamp="1615318353" ModStamp="1615318383" WorldPos="30 31.25 32.75" Rotation="-2.53879 4.71239 -0.602803" Scale="0.5 5 11.25" FileIndex="162" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 2231 268439043">
+                <UserVariables>
+                    <Var ObjectId="268439043" Name="Note" Value="" />
+                    <Var ObjectId="268439043" Name="PhysicsMaterial" Value="Default" />
+                    <Var ObjectId="268439043" Name="CollideCharacter" Value="true" />
+                    <Var ObjectId="268439043" Name="CollideNonCharacter" Value="false" />
+                    <Var ObjectId="268439043" Name="BlocksLightAndLOS" Value="false" />
+                    <Var ObjectId="268439043" Name="CollideGroup" Value="" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268439044" Name="block_box_static_14" CreStamp="1615318385" ModStamp="1615318388" WorldPos="30 31.25 30.75" Rotation="-2.53879 4.71239 -0.602803" Scale="0.5 5 11.25" FileIndex="162" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 2233 268439044">
+                <UserVariables>
+                    <Var ObjectId="268439044" Name="Note" Value="" />
+                    <Var ObjectId="268439044" Name="PhysicsMaterial" Value="Default" />
+                    <Var ObjectId="268439044" Name="CollideCharacter" Value="true" />
+                    <Var ObjectId="268439044" Name="CollideNonCharacter" Value="false" />
+                    <Var ObjectId="268439044" Name="BlocksLightAndLOS" Value="false" />
+                    <Var ObjectId="268439044" Name="CollideGroup" Value="" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268439045" Name="block_box_static_15" CreStamp="1615318392" ModStamp="1615318408" WorldPos="35.75 31.25 31.75" Rotation="-3.14159 5.35345e-08 -3.8445e-06" Scale="0.5 5 4" FileIndex="162" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 2225 268439045">
+                <UserVariables>
+                    <Var ObjectId="268439045" Name="Note" Value="" />
+                    <Var ObjectId="268439045" Name="PhysicsMaterial" Value="Default" />
+                    <Var ObjectId="268439045" Name="CollideCharacter" Value="true" />
+                    <Var ObjectId="268439045" Name="CollideNonCharacter" Value="false" />
+                    <Var ObjectId="268439045" Name="BlocksLightAndLOS" Value="false" />
+                    <Var ObjectId="268439045" Name="CollideGroup" Value="" />
+                </UserVariables>
+            </Entity>
         </Objects>
     </Section>
 </HPLMapTrack_Entity>

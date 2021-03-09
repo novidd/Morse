@@ -181,6 +181,7 @@ class cScrMap : iScrMap
 	{
 		UpdateEnterCourtyard(afTimeStep);
 		UpdateAltarSpotlight();
+		UpdateMovePlayerToCar();
 	}
 	
 	//-------------------------------------------------------
@@ -249,7 +250,7 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test0)
 		{
-			Voice_Play("Intro");
+			
 		}
 		
 		if (alAction == eAction_Test1)
@@ -329,14 +330,6 @@ class cScrMap : iScrMap
 	}
 	
 	//-------------------------------------------------------
-	
-	/////////////////////////////////////////
-	// VO EVENTS 
-	//{//////////////////////////////////////
-	
-	//-------------------------------------------------------
-	
-	//} END VO EVENTS
  
 	//} END MAIN FUNCTIONS
  
@@ -702,6 +695,7 @@ class cScrMap : iScrMap
 		/*Put any variables that are only used in Scene 3, Event D here.*/
 		
 		cSequenceStatesData mSeqOutro;
+		bool mbMovePlayer = false;
 
 		//-------------------------------------------------------
 
@@ -720,15 +714,39 @@ class cScrMap : iScrMap
 			Sequence_Begin("Seq_Outro", mSeqOutro);
 			if (Sequence_DoStepAndWait(3.f))
 			{
-				Effect_Fade_Out(3.f);
+//				Effect_Fade_Out(3.f);
 				Player_SetActive(false);
 				Sound_Play("Sound_LeaveMap", 0);
-			}
-			else if (Sequence_DoStepAndWait(0.f))
-			{
 				
+				Sound_CreateAtEntity("car_engine", "morse_events/car/car_on", "Trigger_CarEngine_Sound", 0, false, 1.f);
+			}
+			else if (Sequence_DoStepAndWait(3.f))
+			{
+				Player_Teleport("Start_Outro_Car");
+			}
+			else if (Sequence_DoStepAndWait(3.f))
+			{
+				mbMovePlayer = true;
 			}
 			Sequence_End();
+		}
+		
+		//-------------------------------------------------------
+		
+		void UpdateMovePlayerToCar()
+		{
+			if (mbMovePlayer)
+			{
+				Player_MoveForward(2.f);
+			}
+		}
+		
+		//-------------------------------------------------------
+		
+		bool OnCollide_StopPlayerMovement(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			mbMovePlayer = false;
+			return false;
 		}
 		
 		//-------------------------------------------------------
