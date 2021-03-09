@@ -701,14 +701,13 @@ class cScrMap : iScrMap
 
 		/*Put any functions that are only used in Scene 3, Event D here.*/
 		
-		void OnInteract_LeaveMap(const tString &in asEntity)
+		void OnInteract_StartOutro(const tString &in asEntity)
 		{
 			Seq_Outro("");
 		}
 		
 		//-------------------------------------------------------
-//		Map_ChangeMap("01_01_cave_town.hpm", "Start_Begin", "", "", true);
-// new_sounds/animations/tank_window_enter
+
 		void Seq_Outro(const tString &in asName)
 		{
 			Sequence_Begin("Seq_Outro", mSeqOutro);
@@ -718,13 +717,13 @@ class cScrMap : iScrMap
 				Player_SetActive(false);
 				Sound_Play("Sound_LeaveMap", 0);
 				
-				Sound_CreateAtEntity("car_engine", "morse_events/car/car_on", "Trigger_CarEngine_Sound", 0, false, 1.f);
+				Sound_CreateAtEntity("car_engine", "morse_events/car/car_on", "Car_Engine_Sound", 0, false, 1.f);
 			}
 			else if (Sequence_DoStepAndWait(3.f))
 			{
 				Player_Teleport("Start_Outro_Car");
 			}
-			else if (Sequence_DoStepAndWait(3.f))
+			else if (Sequence_DoStepAndContinue())
 			{
 				mbMovePlayer = true;
 			}
@@ -746,7 +745,25 @@ class cScrMap : iScrMap
 		bool OnCollide_StopPlayerMovement(const tString &in asParent, const tString &in asChild, int alState)
 		{
 			mbMovePlayer = false;
-			return false;
+			Sound_CreateAtEntity("car_enter", "new_sounds/animations/tank_window_enter", "Car_Enter_Sound", 0, false, 1.f);
+			Map_AddTimer("car_moving", 4.f, "OnTimer_LeaveMap");
+			return true;
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnTimer_LeaveMap(const tString &in asTimer)
+		{
+			if (asTimer == "car_moving")
+			{
+				Sound_CreateAtEntity(asTimer, "morse_events/car/car_moving", "Car_Moving_Sound", 0, false, 3.f);
+				Map_AddTimer("leave_map", 6.f, "OnTimer_LeaveMap");
+			}
+			else if (asTimer == "leave_map")
+			{
+				cLux_AddDebugMessage("LEAVING MAP...");
+				//Map_ChangeMap("01_01_cave_town.hpm", "Start_Begin", "", "", true);
+			}
 		}
 		
 		//-------------------------------------------------------

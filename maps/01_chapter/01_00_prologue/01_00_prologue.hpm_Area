@@ -1023,7 +1023,7 @@
                     <Var ObjectId="268436812" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268439029" Name="Trigger_LeaveMap" CreStamp="1615313143" ModStamp="1615313204" WorldPos="21.75 30.25 -11.825" Rotation="0 0 0" Scale="1.25 2.5 0.5" Active="true" Mesh="" UID="16 2421 268439029" AreaType="Trigger">
+            <Area ID="268439029" Name="Trigger_StartOutro" CreStamp="1615313143" ModStamp="1615327600" WorldPos="21.75 30.25 -11.825" Rotation="0 0 0" Scale="1.25 2.5 0.5" Active="true" Mesh="" UID="16 2421 268439029" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268439029" Name="Note" Value="" />
                     <Var ObjectId="268439029" Name="BlocksLineOfSight" Value="false" />
@@ -1044,7 +1044,7 @@
                     <Var ObjectId="268439029" Name="PlayerLookAtCheckRayIntersection" Value="true" />
                     <Var ObjectId="268439029" Name="PlayerLookAtMaxDistance" Value="-1" />
                     <Var ObjectId="268439029" Name="PlayerLookAtCallbackDelay" Value="0" />
-                    <Var ObjectId="268439029" Name="PlayerInteractCallback" Value="OnInteract_LeaveMap" />
+                    <Var ObjectId="268439029" Name="PlayerInteractCallback" Value="OnInteract_StartOutro" />
                     <Var ObjectId="268439029" Name="PlayerInteractCallbackAutoRemove" Value="true" />
                     <Var ObjectId="268439029" Name="CanInteractWithoutCallback" Value="false" />
                     <Var ObjectId="268439029" Name="MaxFocusDistance" Value="-1" />
