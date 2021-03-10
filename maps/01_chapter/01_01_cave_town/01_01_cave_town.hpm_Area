@@ -119,7 +119,7 @@
                     <Var ObjectId="268435462" Name="CustomInteractIcon" Value="Default" />
                 </UserVariables>
             </Area>
-            <Area ID="268435463" Name="Soundscape_1" CreStamp="1615386842" ModStamp="1615388901" WorldPos="0 25 0" Rotation="0 -0 0" Scale="50 50 50" Active="true" Mesh="" UID="16 72 268435463" AreaType="Soundscape">
+            <Area ID="268435463" Name="Soundscape_1" CreStamp="1615386842" ModStamp="1615409995" WorldPos="0 25 0" Rotation="0 -0.785398 0" Scale="75 50 75" Active="true" Mesh="" UID="16 72 268435463" AreaType="Soundscape">
                 <UserVariables>
                     <Var ObjectId="268435463" Name="Note" Value="" />
                     <Var ObjectId="268435463" Name="UseReverb" Value="true" />
