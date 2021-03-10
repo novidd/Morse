@@ -170,7 +170,8 @@ class cScrMap : iScrMap
 	// Run when leaving map
 	void OnLeave()
 	{
-		
+		Sound_Stop("car_engine", 3.f);
+		Sound_Stop("car_moving", 3.f);
 	}
 
 	//-------------------------------------------------------
@@ -747,7 +748,7 @@ class cScrMap : iScrMap
 			mbMovePlayer = false;
 			Sound_CreateAtEntity("car_enter", "new_sounds/animations/tank_window_enter", "Car_Enter_Sound", 0, false, 1.f);
 			Map_AddTimer("car_moving", 4.f, "OnTimer_LeaveMap");
-			return true;
+			return false;
 		}
 		
 		//-------------------------------------------------------
@@ -762,13 +763,13 @@ class cScrMap : iScrMap
 			else if (asTimer == "leave_map")
 			{
 				cLux_AddDebugMessage("LEAVING MAP...");
-				//Map_ChangeMap("01_01_cave_town.hpm", "Start_Begin", "", "", true);
+				Map_ChangeMap("01_01_cave_town.hpm", "Start_Begin", "", "", true);
 			}
 		}
 		
 		//-------------------------------------------------------
 
-		//} END Event *PLAYER FINDS THE ALTAR*
+		//} END Event *PLAYER LEAVES THE COURTYARD*
 		
 	//} END SCENE 3
 }

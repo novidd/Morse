@@ -115,8 +115,7 @@ class cScrMap : iScrMap
 	void OnStart()
 	{
 		// Variables
-		bool mbStartIntro = true;
-		
+
 		// Entity
 		
 //		mlPermaFailStage = ePathToFortPermaFail_PlagueHouse;
@@ -125,13 +124,6 @@ class cScrMap : iScrMap
 		// Debug
 		if(cLux_ScriptDebugOn())
 		{
-			mbStartIntro = false;
-			
-			if (!mbStartIntro)
-			{
-
-			}
-			
 			if (ItemType_GetCountInInventory("Lantern") < 1)
 			{
 				Item_AddToInventory("Lantern");
@@ -304,14 +296,6 @@ class cScrMap : iScrMap
 	/*Put any functions that are used in more than one scene here.*/
 	
 	//-------------------------------------------------------
-	
-	/////////////////////////////////////////
-	// VO EVENTS 
-	//{//////////////////////////////////////
-	
-	//-------------------------------------------------------
-	
-	//} END VO EVENTS
  
 	//} END MAIN FUNCTIONS
  
