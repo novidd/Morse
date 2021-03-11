@@ -1,7 +1,0 @@
-<HPLMapTrack_ParticleSystem ID="E07586C7D0EE4C91D174DBDCD6965FEE6A3DB46C" MajorVersion="1" MinorVersion="1">
-    <Section Name="570198258105585246">
-        <Objects>
-            <ParticleSystem ID="268435465" Name="PS_1" CreStamp="1615389205" ModStamp="1615389510" WorldPos="22.75 33 -32.75" Rotation="0 4.71239 0" Scale="1 1 1" File="sandstorm_small.ps" Color="1 1 1 0.419608" Brightness="2" FadeAtDistance="true" MinFadeDistanceStart="2" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MaxFadeDistanceEnd="110" Static="false" CulledByDistance="true" CulledByFog="true" ConnectLight="" UID="16 70 268435465" />
-        </Objects>
-    </Section>
-</HPLMapTrack_ParticleSystem>

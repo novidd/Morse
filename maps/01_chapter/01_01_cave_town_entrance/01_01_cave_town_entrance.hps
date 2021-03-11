@@ -1,0 +1,428 @@
+#include "interfaces/Map_Interface.hps"
+#include "base/Inputhandler_Types.hps"
+
+#include "helpers/helper_map.hps"
+#include "helpers/helper_props.hps"
+#include "helpers/helper_effects.hps"
+#include "helpers/helper_audio.hps"
+#include "helpers/helper_imgui.hps"
+#include "helpers/helper_sequences.hps"
+#include "helpers/helper_game.hps"
+#include "helpers/helper_modules.hps"
+#include "helpers/helper_ai.hps"
+#include "helpers/helper_player.hps"
+
+#include "helpers/helper_items.hps"
+#include "helpers/helper_areas.hps"
+#include "helpers/helper_agent.hps"
+#include "custom/helpers/helper_areas_custom.hps"
+#include "custom/helpers/helper_player_custom.hps"
+#include "custom/helpers/helper_modules_custom.hps"
+#include "custom/helpers/helper_props_custom.hps"
+
+// Morse helpers
+#include "morse_scripts/helpers/morse_helper_general.hps"
+#include "morse_scripts/helpers/morse_helper_player.hps"
+#include "morse_scripts/helpers/morse_helper_stamina.hps"
+#include "morse_scripts/helpers/morse_helper_map.hps"
+
+//--------------------------------------------------
+ 
+/*Place any global values here. These must be const variables as they will not be saved*/
+/*This is also the place for enums and classes, but these should be avoided whenever possible*/
+
+//enum ePathToFortPermaFail
+//{
+//	ePathToFortPermaFail_PlagueHouse,
+//	ePathToFortPermaFail_AfterPlagueHouse,
+//	ePathToFortPermaFail_Altar,
+//	ePathToFortPermaFail_Bridge_Start,
+//	ePathToFortPermaFail_Bridge_End,
+//	ePathToFortPermaFail_Canyon_Start,
+//	ePathToFortPermaFail_Canyon_Intersection,
+//	ePathToFortPermaFail_Canyon_End
+//};
+
+// Variables
+const float mfGlobalMusicVolume = 0.15f;
+
+//--------------------------------------------------
+ 
+class cScrMap : iScrMap
+{
+	//--------------------------------------------
+	
+	//////////////////////////////////////////////////////////////////////////////////////////
+	// ==============
+	// MAIN CALLBACKS
+	// ==============
+	//{///////////////////////////////////////////////////////////////////////////////////////
+ 
+	//-------------------------------------------------------
+ 
+	////////////////////////////
+	// Set up map environment
+	void Setup()
+	{
+		// Player settings
+		PlayerBody_SetActive(true);
+		Player_SetVertigoActive(false);
+		Player_SetMaxHealth(100.f);
+		Player_SetHealth(100.f);
+		
+		Player_SetNightVisionBrightness(.75f);
+		Player_SetNightVisionRadius(3.f);
+		
+		// Map
+		Map_SetSkyboxRotation(cVector3f(0, 0, 0));
+		
+		//Stamina_SetStaminaSystemActive(true);
+		
+		// Put display name entry in english.lang / Levels
+		GetBase().SetDisplayNameEntry("01-01-cave-town");
+	}
+	
+	//-------------------------------------------------------
+		
+	void PreloadData()
+	{
+		/////////////////
+		// Preload gui
+		//ImGui_PreloadImage("some_image");
+
+		///////////////
+		// Preload particles
+		//ParticleSystem_Preload("some_particle.ps");
+
+		//////////////
+		// Preload screen effects
+		//Material_Preload("some_material.mat");
+		
+		//////////////
+		// Preload sounds
+		Sound_PreloadGroup("morse_entity", true);
+		Sound_PreloadGroup("morse_events", true);
+		Sound_PreloadGroup("morse_level_shared", true);
+		//Sound_PreloadGroup("morse_player", true);
+		
+		//Sound_PreloadGroup("01_prologue", true);
+	}
+	
+	//-------------------------------------------------------
+
+	////////////////////////////
+	// Run first time starting map
+	void OnStart()
+	{
+		// Variables
+		bool mbStartIntro = true;
+		
+		// Entity
+		
+//		mlPermaFailStage = ePathToFortPermaFail_PlagueHouse;
+		
+		/////////////////////////
+		// Debug
+		if(cLux_ScriptDebugOn())
+		{
+			mbStartIntro = false;
+			
+			if (!mbStartIntro)
+			{
+				
+			}
+			
+			if (ItemType_GetCountInInventory("Lantern") < 1)
+			{
+				Item_AddToInventory("Lantern");
+				Item_AddManyToInventory("Matchbook", 10);
+				
+				Lantern_SetAmount(10);
+			}
+		}
+		
+		if (mbStartIntro)
+		{
+			Seq_Intro("");
+		}
+	}
+
+	//-------------------------------------------------------
+
+	////////////////////////////
+	// Run when entering map
+	void OnEnter()
+	{	
+		Game_AutoSave();
+//		Item_SetHidden(ItemType_GetFirstInInventory("CurseMedallion"), true);
+		Item_RemoveFromInventory(ItemType_GetFirstInInventory("CurseMedallion"));
+	}
+
+	//-------------------------------------------------------
+
+	////////////////////////////
+	// Run when leaving map
+	void OnLeave()
+	{
+		
+	}
+
+	//-------------------------------------------------------
+
+	////////////////////////////
+	// Runs on every frame
+	void Update(float afTimeStep)
+	{
+		UpdateMoveCar("Car_*", afTimeStep);
+	}
+	
+	//-------------------------------------------------------
+
+	////////////////////////////
+	// The player has died.
+	void OnPlayerKilled(int alRecentDeaths, const tString&in asSource)
+	{
+		Debug_Log("PLAYER KILLED BY "+asSource);
+	}
+	
+	//-------------------------------------------------------
+	
+	/////////////////////////////////////////
+	// PERMAFAIL
+	//{//////////////////////////////////////
+	
+//	int mlPermaFailStage = ePathToFortPermaFail_PlagueHouse;
+//	
+//	bool OnCollide_Player_SetPermaFail(const tString &in asParent, const tString &in asChild, int alState)
+//	{
+//		if (alState != 1) return true;
+//		
+//		if (asParent == "Trigger_SetPermaFail_AfterPlagueHouse")			mlPermaFailStage = ePathToFortPermaFail_AfterPlagueHouse;
+//		else if (asParent == "Trigger_SetPermaFail_Altar")					mlPermaFailStage = ePathToFortPermaFail_Altar;
+//		else if (asParent == "Trigger_SetPermaFail_Bridge_Start")			mlPermaFailStage = ePathToFortPermaFail_Bridge_Start;
+//		else if (asParent == "Trigger_SetPermaFail_Bridge_End") 			mlPermaFailStage = ePathToFortPermaFail_Bridge_End;
+//		else if (asParent == "Trigger_SetPermaFail_Canyon_Start")			mlPermaFailStage = ePathToFortPermaFail_Canyon_Start;
+//		else if (asParent == "Trigger_SetPermaFail_Canyon_Intersection")	mlPermaFailStage = ePathToFortPermaFail_Canyon_Intersection;
+//		else if (asParent == "Trigger_SetPermaFail_Canyon_End")				mlPermaFailStage = ePathToFortPermaFail_Canyon_End;
+//		
+//		return true;
+//	}
+//	
+//	bool OnPermaFail()
+//	{	
+//		switch (mlPermaFailStage)
+//		{
+//			case ePathToFortPermaFail_PlagueHouse:			PermaFail_Default("PlagueHouse_1");			return true;
+//			case ePathToFortPermaFail_AfterPlagueHouse:		PermaFail_Default("AfterPlagueHouse_1");	return true;
+//			case ePathToFortPermaFail_Altar:					PermaFail_Default("Altar_1");				return true;
+//			case ePathToFortPermaFail_Bridge_Start:			PermaFail_Default("Bridge_Start");			return true;
+//			case ePathToFortPermaFail_Bridge_End:				PermaFail_Default("Bridge_End");			return true;
+//			case ePathToFortPermaFail_Canyon_Start:			PermaFail_Default("Canyon_Start");			return true;
+//			case ePathToFortPermaFail_Canyon_Intersection:			PermaFail_Default("Canyon_Intersection");			return true;
+//			case ePathToFortPermaFail_Canyon_End:			PermaFail_Default("Canyon_End");			return true;
+//		}
+//
+//		return true;
+//	}
+//	
+//	void PermaFail_Default(const tString &in asArea)
+//	{
+//		FearHandler_SetPermaFailRespawnArea("PermaFail_"+asArea);
+//	}
+	
+	//} END PERMAFAIL
+
+	//-------------------------------------------------------
+
+	////////////////////////////
+	// To get when player makes input (mostly used for debug)
+	void OnAction(int alAction, bool abPressed) 
+	{
+		if(abPressed==false) return;
+		
+		if (alAction == eAction_Test0)
+		{
+			
+		}
+		
+		if (alAction == eAction_Test1)
+		{
+			
+		}
+		
+		if (alAction == eAction_Test2)
+		{
+			
+		}
+		
+		if (alAction == eAction_Test3)
+		{
+			
+		}
+		
+		if (alAction == eAction_Test4)
+		{
+			
+		}
+		
+		if(alAction == eAction_ScrollUp)
+		{
+			Lantern_SetAmount(10);
+		}
+	}
+	
+	//-------------------------------------------------------
+
+	////////////////////////////
+	// Draw gui elements
+	void OnGui(float afTimeStep)
+	{
+		
+	}
+	
+	//-------------------------------------------------------
+
+	////////////////////////////
+	// This only used for pure debug purposes when info needs to printed.
+	float DrawDebugOutput(cGuiSet @apSet,iFontData @apFont,float afY)
+	{
+		//afY = cLux_DrawDebugText("My Debug value:"+..., afY);
+		return afY;
+	}
+ 
+	//-------------------------------------------------------
+ 
+	//} END MAIN CALLBACKS
+ 
+	//////////////////////////////////////////////////////////////////////////////////////////
+	// ==============
+	// MAIN FUNCTIONS
+	// ==============
+	//{///////////////////////////////////////////////////////////////////////////////////////
+ 
+	//-------------------------------------------------------
+ 
+	/*Put any variables that are used in more than one scene here.*/
+ 
+	//-------------------------------------------------------
+ 
+	/*Put any functions that are used in more than one scene here.*/
+	
+	//-------------------------------------------------------
+ 
+	//} END MAIN FUNCTIONS
+ 
+	/////////////////////////////////////////////////////////////////////////////////////////
+	// ==============
+	// SCENE 1 *OUTSIDE CAVE*
+	// ==============
+	//{//////////////////////////////////////////////////////////////////////////////////////
+ 
+		/////////////////////////////////////////
+		// General
+		//{//////////////////////////////////////
+		 
+		//-------------------------------------------------------
+	 
+		/*Put any variables that are used by many events in Scene 1 here.*/
+		
+		//-------------------------------------------------------
+	 
+		/*Put any functions that are used in more than one event in Scene 1 here.*/
+		
+		//-------------------------------------------------------
+		
+		//} END General
+	 
+		/////////////////////////////////////////
+		// Event A *PLAYER ARRIVES IN CAR*
+		//{//////////////////////////////////////
+		
+		//-------------------------------------------------------
+
+		/*Put any variables that are only used in Scene 1, Event A here.*/
+		
+		cSequenceStatesData mSeqIntro;
+		bool mbMoveCar = false;
+		
+		//-------------------------------------------------------
+
+		/*Put any functions that are only used in Scene 1, Event A here.*/
+		
+		void Seq_Intro(const tString &in asName)
+		{
+			Sequence_Begin("Seq_Intro", mSeqIntro);
+			if (Sequence_DoStepAndWait(1.f)) // 15.f
+			{
+				Debug_Log("Intro Sequence starting...");
+				Player_SetActive(false);
+				Player_Teleport("Start_Begin");
+				Effect_Fade_Out(.1f);
+				Sound_CreateAtEntity("car_engine", "morse_events/car/car_on", "Car_Engine_Sound", 0, false, .5f);
+				Sound_CreateAtEntity("car_moving", "morse_events/car/car_moving", "Car_Moving_Sound", 0, false, 3.f);
+			}
+			else if (Sequence_DoStepAndWait(5.f))
+			{
+				Sound_Stop("car_moving", 1.f);
+			}
+			else if (Sequence_DoStepAndWait(3.f))
+			{
+				Sound_CreateAtEntity("car_exit", "new_sounds/animations/tank_window_enter", "Car_Exit_Sound", 0, false, 1.f);
+				Player_StartLookAt("Trigger_LookCave", 3.f, 2.f, 10.f);
+			}
+			else if (Sequence_DoStepAndWait(3.f))
+			{
+				mbMoveCar = true;
+				Sound_CreateAtEntity("car_moving", "morse_events/car/car_moving", "Car_Moving_Sound", 1.f, false, 3.f);
+				SequenceStates_Pause("Seq_Intro");
+			}
+			else if (Sequence_DoStepAndWait(3.f))
+			{
+				cLux_AddDebugMessage("INTRO SEQUENCE RESUMING...");
+				Effect_Fade_In(3.f);
+				Player_StopLookAt(1.f);
+				Player_SetActive(true);
+			}
+			else if (Sequence_DoStepAndContinue())
+			{
+
+			}
+			Sequence_End();
+		}
+		
+		//-------------------------------------------------------
+		
+		void UpdateMoveCar(const tString &in asCarAreas, float afTimeStep)
+		{
+			if (mbMoveCar)
+			{
+				array<iLuxEntity@> mvCarAreas;
+				Map_GetEntityArray(asCarAreas, mvCarAreas);
+				
+				for(int i = 0; i < mvCarAreas.length(); i++)
+				{
+					float mfX = mvCarAreas[i].GetPosition().x;
+					float mfY = mvCarAreas[i].GetPosition().y;
+					float mfZ = mvCarAreas[i].GetPosition().z;
+					float mfUpdateRate = afTimeStep*2;
+					mvCarAreas[i].SetPosition(cVector3f(mfX-mfUpdateRate, mfY, mfZ));
+									
+					if (Player_GetDistanceToEntity("Car_Moving_Sound") >= 18.f)
+					{
+						mbMoveCar = false;
+						Sound_Stop("car_engine", 3.f);
+						Sound_Stop("car_moving", .5f);
+						Entity_SetActive(asCarAreas, false);
+						
+						SequenceStates_Resume("Seq_Intro");
+					}
+				}
+			}
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER ARRIVES IN CAR*
+	 
+	//} END SCENE 1
+}
