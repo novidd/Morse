@@ -1,7 +1,8 @@
 <HPLMapTrack_Entity ID="E07586C7D0EE4C91D174DBDCD6965FEE6A3DB46C" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
-        <FileIndex_Entities NumOfFiles="1">
+        <FileIndex_Entities NumOfFiles="2">
             <File Id="0" Path="entities/nonexclusive/environment/sun_large.ent" />
+            <File Id="1" Path="entities/cave/special/cave_leveldoor/cave_leveldoor.ent" />
         </FileIndex_Entities>
         <Objects>
             <Entity ID="268435462" Name="sun_large_1" CreStamp="1615388772" ModStamp="1615480811" WorldPos="-27 60.75 92" Rotation="6.51683e-07 0.545206 -3.46343e-05" Scale="1 1 1" FileIndex="0" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 71 268435462">
@@ -69,6 +70,20 @@
                     <Var ObjectId="268435462" Name="Threat_BaseFearRateMultiplier" Value="1.0" />
                     <Var ObjectId="268435462" Name="Threat_ActivationCallback" Value="" />
                     <Var ObjectId="268435462" Name="Threat_DeactivationCallback" Value="" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268435550" Name="cave_leveldoor_1" CreStamp="1615506358" ModStamp="1615506535" WorldPos="-40 25.25 -162" Rotation="0 -1.22173 0" Scale="1 1 1" FileIndex="1" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 26 268435550">
+                <UserVariables>
+                    <Var ObjectId="268435550" Name="Note" Value="" />
+                    <Var ObjectId="268435550" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268435550" Name="IsAffectedByDecal" Value="false" />
+                    <Var ObjectId="268435550" Name="ColorMul" Value="0.5803921818733215332 0.5803921818733215332 0.5803921818733215332 1" />
+                    <Var ObjectId="268435550" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268435550" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268435550" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268435550" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268435550" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268435550" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
         </Objects>
