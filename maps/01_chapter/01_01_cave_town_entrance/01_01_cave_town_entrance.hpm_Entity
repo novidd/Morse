@@ -1,6 +1,6 @@
 <HPLMapTrack_Entity ID="E07586C7D0EE4C91D174DBDCD6965FEE6A3DB46C" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
-        <FileIndex_Entities NumOfFiles="8">
+        <FileIndex_Entities NumOfFiles="29">
             <File Id="0" Path="entities/nonexclusive/environment/sun_large.ent" />
             <File Id="1" Path="entities/cave/special/cave_leveldoor/cave_leveldoor.ent" />
             <File Id="2" Path="entities/technical/block_box/block_box_static.ent" />
@@ -9,9 +9,30 @@
             <File Id="5" Path="entities/tribal/ornaments/totem/totem_small.ent" />
             <File Id="6" Path="entities/tribal/ornaments/totem/totem_decorations_05.ent" />
             <File Id="7" Path="entities/tribal/ornaments/tribal_jar/tribal_jar.ent" />
+            <File Id="8" Path="entities/cave/lamp/fire_pit/fire_pit.ent" />
+            <File Id="9" Path="entities/cave/lamp/brazier_stone/brazier_stone.ent" />
+            <File Id="10" Path="entities/cave/special/campfire_caves/campfire_caves.ent" />
+            <File Id="11" Path="entities/roman/door/roman_door_plaster/roman_door_plaster.ent" />
+            <File Id="12" Path="entities/roman/door/roman_gate_door/roman_gate_door.ent" />
+            <File Id="13" Path="entities/roman/door/roman_gate_door/roman_gate_level_door.ent" />
+            <File Id="14" Path="entities/roman/door/roman_level_door/roman_level_door.ent" />
+            <File Id="15" Path="entities/roman/gameplay/roman_stone_slab_door/roman_stone_slab_door.ent" />
+            <File Id="16" Path="entities/roman/gameplay/roman_stone_slab_door/roman_stone_slab_door_ropes.ent" />
+            <File Id="17" Path="entities/roman/ornament/roman_ornament_bust_gracchus/Roman_Ornament_Bust_Gracchus.ent" />
+            <File Id="18" Path="entities/roman/ornament/roman_ornament_bust_gracchus/Roman_Ornament_Bust_Gracchus2.ent" />
+            <File Id="19" Path="entities/roman/ornament/roman_light_torchholder/roman_light_torchholder_lamp.ent" />
+            <File Id="20" Path="entities/survivors/furniture/crate_simple_01/crate_simple_01.ent" />
+            <File Id="21" Path="entities/survivors/furniture/chair_airplane/chair_airplane.ent" />
+            <File Id="22" Path="entities/survivors/furniture/blanket_diy/blanket_diy.ent" />
+            <File Id="23" Path="entities/survivors/ornaments/can_food_desert/can_food_desert.ent" />
+            <File Id="24" Path="entities/survivors/ornaments/cloth_pile_dirty/cloth_pile_dirty.ent" />
+            <File Id="25" Path="entities/survivors/shelter/survivor_tent/survivor_tent_01.ent" />
+            <File Id="26" Path="entities/archaeology/furniture/table_homemade_03/table_homemade_03.ent" />
+            <File Id="27" Path="entities/archaeology/scaffolding/scaffolding_plank_grab.ent" />
+            <File Id="28" Path="entities/french_colonization/storage/military_wooden_crate/military_wooden_crate.ent" />
         </FileIndex_Entities>
         <Objects>
-            <Entity ID="268435464" Name="sun_large_1" CreStamp="1615388772" ModStamp="1615480811" WorldPos="-27 60.75 92" Rotation="6.51683e-07 0.545206 -3.46343e-05" Scale="1 1 1" FileIndex="0" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 71 268435464">
+            <Entity ID="268435464" Name="sun_large_1" CreStamp="1615388772" ModStamp="1615743230" WorldPos="-85 40.0003 25.5" Rotation="6.51683e-07 0.545206 -3.46343e-05" Scale="1 1 1" FileIndex="0" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 71 268435464">
                 <UserVariables>
                     <Var ObjectId="268435464" Name="Note" Value="" />
                     <Var ObjectId="268435464" Name="EventInstanceTag" Value="" />
@@ -25,7 +46,7 @@
                     <Var ObjectId="268435464" Name="InteractionDisabled" Value="false" />
                     <Var ObjectId="268435464" Name="CastShadows" Value="true" />
                     <Var ObjectId="268435464" Name="ColorMul" Value="1 1 1 1" />
-                    <Var ObjectId="268435464" Name="EffectColorMul" Value="0.6666666865348815918 0.6666666865348815918 0.6666666865348815918 1" />
+                    <Var ObjectId="268435464" Name="EffectColorMul" Value="0.580078125 0.580078125 0.580078125 1" />
                     <Var ObjectId="268435464" Name="EffectBrightnessMul" Value="1" />
                     <Var ObjectId="268435464" Name="IllumColor" Value="1 1 1 1" />
                     <Var ObjectId="268435464" Name="IllumBrightness" Value="1" />
@@ -78,7 +99,7 @@
                     <Var ObjectId="268435464" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435465" Name="cave_leveldoor_1" CreStamp="1615506358" ModStamp="1615506535" WorldPos="-40 25.25 -162" Rotation="0 -1.22173 0" Scale="1 1 1" FileIndex="1" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 26 268435465">
+            <Entity ID="268435465" Name="cave_leveldoor_1" CreStamp="1615506358" ModStamp="1615741067" WorldPos="-39.75 25.25 -162" Rotation="0 -1.22173 0" Scale="1 1 1" FileIndex="1" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 26 268435465">
                 <UserVariables>
                     <Var ObjectId="268435465" Name="Note" Value="" />
                     <Var ObjectId="268435465" Name="CastShadows" Value="true" />
@@ -218,6 +239,20 @@
                     <Var ObjectId="268435661" Name="Threat_BaseFearRateMultiplier" Value="1.0" />
                     <Var ObjectId="268435661" Name="Threat_ActivationCallback" Value="" />
                     <Var ObjectId="268435661" Name="Threat_DeactivationCallback" Value="" />
+                </UserVariables>
+            </Entity>
+            <Entity ID="268435710" Name="blanket_diy_1" CreStamp="1615735912" ModStamp="1615735967" WorldPos="35.2488 22.8925 34.7493" Rotation="0.0188429 2.61799 -0" Scale="1 1 1" FileIndex="22" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 77 268435710">
+                <UserVariables>
+                    <Var ObjectId="268435710" Name="Note" Value="" />
+                    <Var ObjectId="268435710" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268435710" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268435710" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268435710" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268435710" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268435710" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268435710" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268435710" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268435710" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
         </Objects>

@@ -27,7 +27,7 @@ GENERAL: CHANGE 01_00_prologue to 01_01_path_to_fort.hpm and make a new prologue
 	 * (NOT NECESSARY) Create a fire damage module, that checks if the player is inside of a trigger area ("FirePlayerDamage_X") use Entity_GetCollide(), 
 	   to get all the trigger areas use Map_GetEntityArray().
  
-MAPS:
+MAPS: use player/UI/terror_meter/UI_terror_meter for changs sequences like in ATDD
 
 	01_00_prologue: Look for a good microphone, stand, and popfilter.
 

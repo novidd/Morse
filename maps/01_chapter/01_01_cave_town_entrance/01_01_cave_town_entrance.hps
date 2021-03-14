@@ -352,7 +352,7 @@ class cScrMap : iScrMap
 		void Seq_Intro(const tString &in asName)
 		{
 			Sequence_Begin("Seq_Intro", mSeqIntro);
-			if (Sequence_DoStepAndWait(1.f)) // 15.f
+			if (Sequence_DoStepAndWait(15.f)) // 15.f
 			{
 				Debug_Log("Intro Sequence starting...");
 				Player_SetActive(false);
@@ -365,10 +365,14 @@ class cScrMap : iScrMap
 			{
 				Sound_Stop("car_moving", 1.f);
 			}
-			else if (Sequence_DoStepAndWait(3.f))
+			else if (Sequence_DoStepAndWait(1.75f))
 			{
 				Sound_CreateAtEntity("car_exit", "new_sounds/animations/tank_window_enter", "Car_Exit_Sound", 0, false, 1.f);
 				Player_StartLookAt("Trigger_LookCar", 3.f, 2.f, 10.f);
+			}
+			else if (Sequence_DoStepAndWait(2.f))
+			{
+				Sound_CreateAtEntity("car_exit_sound", "player/foley/damage/player_fall_damage", "Car_Exit_Sand_Sound", 0, false, .5f);
 			}
 			else if (Sequence_DoStepAndWait(3.f))
 			{
@@ -423,6 +427,29 @@ class cScrMap : iScrMap
 		//-------------------------------------------------------
 
 		//} END Event *PLAYER ARRIVES IN CAR*
-	 
+	
+		/////////////////////////////////////////
+		// Event A *PLAYER LOOKS AT FORT*
+		//{//////////////////////////////////////
+		
+		//-------------------------------------------------------
+		
+		/*Put any variables that are only used in Scene 1, Event A here.*/
+		
+		//-------------------------------------------------------
+		
+		/*Put any functions that are only used in Scene 1, Event A here.*/
+		
+		void OnLookAt_GiveQuest(const tString &in asEntity, int alState)
+		{
+			cLux_AddDebugMessage("Looked at fort...");
+//			Voice_Play("");
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER ARRIVES IN CAR*
+	
+		
 	//} END SCENE 1
 }
