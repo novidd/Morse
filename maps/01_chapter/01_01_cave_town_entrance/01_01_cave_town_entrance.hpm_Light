@@ -62,6 +62,7 @@
                     <Set SetName="desert">0.119689 0.158206 0.118533 0.045501 0.127953 0.116246 -0.047583 -0.035404 -0.019859 0.01723 0.000077 -0.002808 -0.007593 -0.007625 -0.005324 0.010943 0.004397 0.002208 0.003865 0.002064 0.000429 0.032501 0.049954 0.036881 0.008481 -0.002288 -0.006152</Set>
                 </Irradiance>
             </BoxLight>
+            <PointLight ID="268435872" Name="Light_Point_1" CreStamp="1615750210" ModStamp="1615750304" WorldPos="44 27.328 47.4774" Rotation="0 0 0" Scale="1 1 1" CastShadows="false" ShadowResolution="High" ShadowsAffectStatic="true" ShadowsAffectDynamic="true" Radius="2" Gobo="" GoboType="Diffuse" GoboAnimMode="None" GoboAnimFrameTime="1" GoboAnimStartTime="0" DiffuseColor="0.984314 0.929412 0.823529 1" FlickerActive="false" FlickerOnMinLength="0" FlickerOnMaxLength="0" FlickerOnPS="" FlickerOnSound="" FlickerOffMinLength="0" FlickerOffMaxLength="0" FlickerOffPS="" FlickerOffSound="" FlickerOffColor="0 0 0 1" FlickerOffRadius="0" FlickerFade="false" FlickerOnFadeMinLength="0" FlickerOnFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffFadeMaxLength="0" CastDiffuseLight="true" CastSpecularLight="true" Brightness="2" Static="false" CulledByDistance="true" CulledByFog="true" FalloffPow="1" ConnectedLightMaskID="4294967295" UID="16 309 268435872" />
         </Objects>
     </Section>
 </HPLMapTrack_Light>

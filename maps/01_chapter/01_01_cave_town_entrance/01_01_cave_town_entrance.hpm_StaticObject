@@ -1,6 +1,6 @@
 <HPLMapTrack_StaticObject ID="E07586C7D0EE4C91D174DBDCD6965FEE6A3DB46C" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
-        <FileIndex_StaticObjects NumOfFiles="53">
+        <FileIndex_StaticObjects NumOfFiles="61">
             <File Id="0" Path="static_objects/desert/sandstone/medium/rock_medium02_blocky_projected.dae" />
             <File Id="1" Path="static_objects/desert/sandstone/large/canyon_ridge01_blocky_projected.dae" />
             <File Id="2" Path="static_objects/beduin/beduin_cliff_settlement/beduin_cliff_settlement_front_02.dae" />
@@ -54,6 +54,14 @@
             <File Id="50" Path="static_objects/desert/sandstone/large/rock_pillar_large01.dae" />
             <File Id="51" Path="static_objects/desert/sandstone/medium/rock_medium01_cave.dae" />
             <File Id="52" Path="static_objects/desert/sandstone/small/rock_small08_blocky_projected.dae" />
+            <File Id="53" Path="static_objects/desert/roots_desert/roots_desert.dae" />
+            <File Id="54" Path="static_objects/desert/roots_desert/roots_trunk.dae" />
+            <File Id="55" Path="static_objects/paris_ending/paris_ceiling_crack/paris_ceiling_crack.dae" />
+            <File Id="56" Path="static_objects/roman/floor/roman_rock_marble_curved_01.dae" />
+            <File Id="57" Path="static_objects/ruins/ruins_basic/pillar/temple_pillar_01.dae" />
+            <File Id="58" Path="static_objects/ruins/ruins_basic/pillar/temple_pillar_broken_bottom_01.dae" />
+            <File Id="59" Path="static_objects/roman/roman_pillar_ionic/roman_pillar_ionic.dae" />
+            <File Id="60" Path="static_objects/roman/roman_pillar_ionic/roman_pillar_ionic_broken_bottom.dae" />
         </FileIndex_StaticObjects>
         <Objects>
             <StaticObject ID="268435468" Name="desert_sandstone_medium_rock_medium02_blocky_projected_1" CreStamp="1615479194" ModStamp="1615479466" WorldPos="27.25 28.25 46.25" Rotation="3.14159 2.35619 -3.14159" Scale="2 2 2" FileIndex="0" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 7 268435468" />
@@ -193,9 +201,9 @@
             <StaticObject ID="268435809" Name="desert_sandstone_small_rock_small08_blocky_projected_1" CreStamp="1615741882" ModStamp="1615742009" WorldPos="43.6642 25.1922 48.4217" Rotation="0.729003 4.31475 -0.879281" Scale="1 1 1" FileIndex="52" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 233 268435809" />
             <StaticObject ID="268435810" Name="desert_sandstone_small_rock_small02_blocky_projected_1" CreStamp="1615741917" ModStamp="1615742284" WorldPos="42.2157 24.0094 46.6455" Rotation="0 -0.785398 0" Scale="1 1 1" FileIndex="12" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 291 268435810" />
             <StaticObject ID="268435811" Name="desert_sandstone_small_rock_small02_blocky_projected_2" CreStamp="1615741920" ModStamp="1615742222" WorldPos="42.3552 23.5476 46.0951" Rotation="1.86264e-08 5.62276e-07 -7.45058e-08" Scale="1 1 1" FileIndex="12" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 247 268435811" />
-            <StaticObject ID="268435819" Name="desert_sandstone_medium_rock_medium_pillar01_projected_1" CreStamp="1615742059" ModStamp="1615743354" WorldPos="45.3273 25.6976 47.2425" Rotation="3.11217 1.21302 -3.14159" Scale="1 1.1 1" FileIndex="10" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 261 268435819" />
             <StaticObject ID="268435820" Name="desert_sandstone_small_rock_small_group_blocky_projected_6" CreStamp="1615742232" ModStamp="1615742253" WorldPos="42.0099 23.6531 45.6666" Rotation="3.01493 -1.46197 3.14159" Scale="0.5 0.5 0.5" FileIndex="8" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 14 268435820" />
             <StaticObject ID="268435821" Name="desert_sandstone_small_rock_small02_blocky_projected_3" CreStamp="1615742266" ModStamp="1615742290" WorldPos="41.3425 23.7373 45.5767" Rotation="0.0145367 1.0954 -0.378959" Scale="1 1 1" FileIndex="12" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="1 1 1 1" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 248 268435821" />
+            <StaticObject ID="268435851" Name="ruins_ruins_basic_pillar_temple_pillar_broken_bottom_01_1" CreStamp="1615748617" ModStamp="1615748669" WorldPos="45.3855 25.5 47.3855" Rotation="-3.14159 -0.785398 -3.14159" Scale="1 1 1" FileIndex="58" Collides="true" CastShadows="true" IsOccluder="true" ColorMul="0.447266 0.38961 0.38961 0.254902" CulledByDistance="true" CulledByFog="true" IllumColor="1 1 1 1" IllumBrightness="1" UID="16 297 268435851" />
         </Objects>
     </Section>
 </HPLMapTrack_StaticObject>
