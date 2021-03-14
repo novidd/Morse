@@ -242,12 +242,12 @@ class cScrMap : iScrMap
 		
 		if (alAction == eAction_Test0)
 		{
-			
+			Player_StartLookAt("Trigger_LookCar", 3.f, 2.f, 10.f);
 		}
 		
 		if (alAction == eAction_Test1)
 		{
-			
+			Player_StopLookAt(1.f);
 		}
 		
 		if (alAction == eAction_Test2)
@@ -368,7 +368,7 @@ class cScrMap : iScrMap
 			else if (Sequence_DoStepAndWait(3.f))
 			{
 				Sound_CreateAtEntity("car_exit", "new_sounds/animations/tank_window_enter", "Car_Exit_Sound", 0, false, 1.f);
-				Player_StartLookAt("Trigger_LookCave", 3.f, 2.f, 10.f);
+				Player_StartLookAt("Trigger_LookCar", 3.f, 2.f, 10.f);
 			}
 			else if (Sequence_DoStepAndWait(3.f))
 			{

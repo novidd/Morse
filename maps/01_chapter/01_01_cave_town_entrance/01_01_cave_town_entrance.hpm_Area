@@ -146,7 +146,7 @@
                     <Var ObjectId="268435461" Name="ParentAttachBody" Value="" />
                 </UserVariables>
             </Area>
-            <Area ID="268435462" Name="Trigger_LookCar" CreStamp="1615481826" ModStamp="1615481855" WorldPos="6.5 26 3.5" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 57 268435462" AreaType="Trigger">
+            <Area ID="268435462" Name="Trigger_LookCar" CreStamp="1615481826" ModStamp="1615724495" WorldPos="4 25.75 0" Rotation="0 0 0" Scale="1 1 1" Active="true" Mesh="" UID="16 57 268435462" AreaType="Trigger">
                 <UserVariables>
                     <Var ObjectId="268435462" Name="Note" Value="" />
                     <Var ObjectId="268435462" Name="BlocksLineOfSight" Value="false" />

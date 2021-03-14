@@ -1,5 +1,7 @@
 <HPLMapTrack_Billboard ID="E07586C7D0EE4C91D174DBDCD6965FEE6A3DB46C" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
-        <Objects />
+        <Objects>
+            <Billboard ID="268435663" Name="Billboard_1" CreStamp="1615729961" ModStamp="1615730115" WorldPos="47.5 28.25 42.5" Rotation="0 0 0" Scale="1 1 1" BillboardType="Point" MaterialFile="lampglow_large_soft.mat" IsHalo="false" BillboardSize="15 15" HaloSourceSize="0.3 0.3 0.3" BillboardOffset="8" BillboardColor="1 0.74902 0.494118 0.254902" Brightness="0.3" CulledByDistance="false" CulledByFog="true" ConnectLight="" Static="false" RangeMinStart="0" RangeMinEnd="18" RangeMaxStart="-1" RangeMaxEnd="-1" />
+        </Objects>
     </Section>
 </HPLMapTrack_Billboard>
