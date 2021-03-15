@@ -40,304 +40,251 @@
             <File Id="36" Path="entities/cave/gameplay/note_caves/note_caves_01.ent" />
         </FileIndex_Entities>
         <Objects>
-            <Entity ID="268435464" Name="sun_large_1" CreStamp="1615388772" ModStamp="1615743230" WorldPos="-85 40.0003 25.5" Rotation="6.51683e-07 0.545206 -3.46343e-05" Scale="1 1 1" FileIndex="0" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 71 268435464">
+            <Entity ID="268436141" Name="sun_large_1" CreStamp="1615388772" ModStamp="1615743230" WorldPos="-85 40.0003 25.5" Rotation="6.51683e-07 0.545206 -3.46343e-05" Scale="1 1 1" FileIndex="0" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 71 268436141">
                 <UserVariables>
-                    <Var ObjectId="268435464" Name="Note" Value="" />
-                    <Var ObjectId="268435464" Name="EventInstanceTag" Value="" />
-                    <Var ObjectId="268435464" Name="CollideGroup" Value="" />
-                    <Var ObjectId="268435464" Name="UserVar" Value="" />
-                    <Var ObjectId="268435464" Name="DisableBreakable" Value="false" />
-                    <Var ObjectId="268435464" Name="FullGameSave" Value="false" />
-                    <Var ObjectId="268435464" Name="StaticPhysics" Value="false" />
-                    <Var ObjectId="268435464" Name="QuickSave" Value="false" />
-                    <Var ObjectId="268435464" Name="EffectsActive" Value="true" />
-                    <Var ObjectId="268435464" Name="InteractionDisabled" Value="false" />
-                    <Var ObjectId="268435464" Name="CastShadows" Value="true" />
-                    <Var ObjectId="268435464" Name="ColorMul" Value="1 1 1 1" />
-                    <Var ObjectId="268435464" Name="EffectColorMul" Value="0.580078125 0.580078125 0.580078125 1" />
-                    <Var ObjectId="268435464" Name="EffectBrightnessMul" Value="1" />
-                    <Var ObjectId="268435464" Name="IllumColor" Value="1 1 1 1" />
-                    <Var ObjectId="268435464" Name="IllumBrightness" Value="1" />
-                    <Var ObjectId="268435464" Name="IsAffectedByDecal" Value="false" />
-                    <Var ObjectId="268435464" Name="IsOccluder" Value="false" />
-                    <Var ObjectId="268435464" Name="UpdateBonesWhenCulled" Value="false" />
-                    <Var ObjectId="268435464" Name="OnBreakCallbackFunc" Value="" />
-                    <Var ObjectId="268435464" Name="ConnectionStateChangeCallback" Value="" />
-                    <Var ObjectId="268435464" Name="PlayerLookAtCallback" Value="" />
-                    <Var ObjectId="268435464" Name="PlayerLookAtCallbackAutoRemove" Value="false" />
-                    <Var ObjectId="268435464" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
-                    <Var ObjectId="268435464" Name="PlayerLookAtCheckRayIntersection" Value="true" />
-                    <Var ObjectId="268435464" Name="PlayerLookAtMaxDistance" Value="-1" />
-                    <Var ObjectId="268435464" Name="PlayerLookAtCallbackDelay" Value="0" />
-                    <Var ObjectId="268435464" Name="PlayerInteractCallback" Value="" />
-                    <Var ObjectId="268435464" Name="PlayerInteractCallbackAutoRemove" Value="false" />
-                    <Var ObjectId="268435464" Name="PlayerInteractLeaveCallback" Value="" />
-                    <Var ObjectId="268435464" Name="PlayerInteractLeaveCallbackAutoRemove" Value="false" />
-                    <Var ObjectId="268435464" Name="RecieveMessageCallback" Value="" />
-                    <Var ObjectId="268435464" Name="CC_Entities" Value="" />
-                    <Var ObjectId="268435464" Name="CC_Funcs" Value="" />
-                    <Var ObjectId="268435464" Name="ConnectedEntity" Value="" />
-                    <Var ObjectId="268435464" Name="ConnectedEntityInvertState" Value="false" />
-                    <Var ObjectId="268435464" Name="ConnectedEntityStatesUsed" Value="0" />
-                    <Var ObjectId="268435464" Name="ParentAttachEntity" Value="player" />
-                    <Var ObjectId="268435464" Name="ParentAttachUseRotation" Value="false" />
-                    <Var ObjectId="268435464" Name="ParentAttachBody" Value="" />
-                    <Var ObjectId="268435464" Name="ParentAttachSocket" Value="" />
-                    <Var ObjectId="268435464" Name="ParentAttachSnap" Value="false" />
-                    <Var ObjectId="268435464" Name="ParentAttachLocked" Value="true" />
-                    <Var ObjectId="268435464" Name="ConnectedLight" Value="" />
-                    <Var ObjectId="268435464" Name="ConnectionLightAmount" Value="1" />
-                    <Var ObjectId="268435464" Name="ConnectionLightUseOnColor" Value="true" />
-                    <Var ObjectId="268435464" Name="ConnectionLightUseSpec" Value="false" />
-                    <Var ObjectId="268435464" Name="ConnectionLightType" Value="Mul" />
-                    <Var ObjectId="268435464" Name="ExtraConnectedLight" Value="" />
-                    <Var ObjectId="268435464" Name="ExtraConnectionLightAmount" Value="1" />
-                    <Var ObjectId="268435464" Name="ExtraConnectionLightUseOnColor" Value="true" />
-                    <Var ObjectId="268435464" Name="ExtraConnectionLightUseSpec" Value="false" />
-                    <Var ObjectId="268435464" Name="ExtraConnectionLightType" Value="Mul" />
-                    <Var ObjectId="268435464" Name="CanInteractWithoutCallback" Value="false" />
-                    <Var ObjectId="268435464" Name="CustomInteractIcon" Value="PushButton" />
-                    <Var ObjectId="268435464" Name="ScaryObject_Enabled" Value="false" />
-                    <Var ObjectId="268435464" Name="ScaryObject_BaseFearRateMultiplier" Value="1.0" />
-                    <Var ObjectId="268435464" Name="ScaryObject_ActivationCallback" Value="" />
-                    <Var ObjectId="268435464" Name="ScaryObject_DeactivationCallback" Value="" />
-                    <Var ObjectId="268435464" Name="Threat_Enabled" Value="false" />
-                    <Var ObjectId="268435464" Name="Threat_BaseFearRateMultiplier" Value="1.0" />
-                    <Var ObjectId="268435464" Name="Threat_ActivationCallback" Value="" />
-                    <Var ObjectId="268435464" Name="Threat_DeactivationCallback" Value="" />
+                    <Var ObjectId="268436141" Name="Note" Value="" />
+                    <Var ObjectId="268436141" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268436141" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436141" Name="UserVar" Value="" />
+                    <Var ObjectId="268436141" Name="DisableBreakable" Value="false" />
+                    <Var ObjectId="268436141" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268436141" Name="StaticPhysics" Value="false" />
+                    <Var ObjectId="268436141" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268436141" Name="EffectsActive" Value="true" />
+                    <Var ObjectId="268436141" Name="InteractionDisabled" Value="false" />
+                    <Var ObjectId="268436141" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436141" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436141" Name="EffectColorMul" Value="0.580078125 0.580078125 0.580078125 1" />
+                    <Var ObjectId="268436141" Name="EffectBrightnessMul" Value="1" />
+                    <Var ObjectId="268436141" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436141" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436141" Name="IsAffectedByDecal" Value="false" />
+                    <Var ObjectId="268436141" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436141" Name="UpdateBonesWhenCulled" Value="false" />
+                    <Var ObjectId="268436141" Name="OnBreakCallbackFunc" Value="" />
+                    <Var ObjectId="268436141" Name="ConnectionStateChangeCallback" Value="" />
+                    <Var ObjectId="268436141" Name="PlayerLookAtCallback" Value="" />
+                    <Var ObjectId="268436141" Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268436141" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
+                    <Var ObjectId="268436141" Name="PlayerLookAtCheckRayIntersection" Value="true" />
+                    <Var ObjectId="268436141" Name="PlayerLookAtMaxDistance" Value="-1" />
+                    <Var ObjectId="268436141" Name="PlayerLookAtCallbackDelay" Value="0" />
+                    <Var ObjectId="268436141" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268436141" Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268436141" Name="PlayerInteractLeaveCallback" Value="" />
+                    <Var ObjectId="268436141" Name="PlayerInteractLeaveCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268436141" Name="RecieveMessageCallback" Value="" />
+                    <Var ObjectId="268436141" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268436141" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268436141" Name="ConnectedEntity" Value="" />
+                    <Var ObjectId="268436141" Name="ConnectedEntityInvertState" Value="false" />
+                    <Var ObjectId="268436141" Name="ConnectedEntityStatesUsed" Value="0" />
+                    <Var ObjectId="268436141" Name="ParentAttachEntity" Value="player" />
+                    <Var ObjectId="268436141" Name="ParentAttachUseRotation" Value="false" />
+                    <Var ObjectId="268436141" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268436141" Name="ParentAttachSocket" Value="" />
+                    <Var ObjectId="268436141" Name="ParentAttachSnap" Value="false" />
+                    <Var ObjectId="268436141" Name="ParentAttachLocked" Value="true" />
+                    <Var ObjectId="268436141" Name="ConnectedLight" Value="" />
+                    <Var ObjectId="268436141" Name="ConnectionLightAmount" Value="1" />
+                    <Var ObjectId="268436141" Name="ConnectionLightUseOnColor" Value="true" />
+                    <Var ObjectId="268436141" Name="ConnectionLightUseSpec" Value="false" />
+                    <Var ObjectId="268436141" Name="ConnectionLightType" Value="Mul" />
+                    <Var ObjectId="268436141" Name="ExtraConnectedLight" Value="" />
+                    <Var ObjectId="268436141" Name="ExtraConnectionLightAmount" Value="1" />
+                    <Var ObjectId="268436141" Name="ExtraConnectionLightUseOnColor" Value="true" />
+                    <Var ObjectId="268436141" Name="ExtraConnectionLightUseSpec" Value="false" />
+                    <Var ObjectId="268436141" Name="ExtraConnectionLightType" Value="Mul" />
+                    <Var ObjectId="268436141" Name="CanInteractWithoutCallback" Value="false" />
+                    <Var ObjectId="268436141" Name="CustomInteractIcon" Value="PushButton" />
+                    <Var ObjectId="268436141" Name="ScaryObject_Enabled" Value="false" />
+                    <Var ObjectId="268436141" Name="ScaryObject_BaseFearRateMultiplier" Value="1.0" />
+                    <Var ObjectId="268436141" Name="ScaryObject_ActivationCallback" Value="" />
+                    <Var ObjectId="268436141" Name="ScaryObject_DeactivationCallback" Value="" />
+                    <Var ObjectId="268436141" Name="Threat_Enabled" Value="false" />
+                    <Var ObjectId="268436141" Name="Threat_BaseFearRateMultiplier" Value="1.0" />
+                    <Var ObjectId="268436141" Name="Threat_ActivationCallback" Value="" />
+                    <Var ObjectId="268436141" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435465" Name="cave_leveldoor_1" CreStamp="1615506358" ModStamp="1615741067" WorldPos="-39.75 25.25 -162" Rotation="0 -1.22173 0" Scale="1 1 1" FileIndex="1" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 26 268435465">
+            <Entity ID="268436142" Name="cave_leveldoor_1" CreStamp="1615506358" ModStamp="1615741067" WorldPos="-39.75 25.25 -162" Rotation="0 -1.22173 0" Scale="1 1 1" FileIndex="1" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 26 268436142">
                 <UserVariables>
-                    <Var ObjectId="268435465" Name="Note" Value="" />
-                    <Var ObjectId="268435465" Name="CastShadows" Value="true" />
-                    <Var ObjectId="268435465" Name="IsAffectedByDecal" Value="false" />
-                    <Var ObjectId="268435465" Name="ColorMul" Value="0.5803921818733215332 0.5803921818733215332 0.5803921818733215332 1" />
-                    <Var ObjectId="268435465" Name="ColorBrightness" Value="1" />
-                    <Var ObjectId="268435465" Name="IllumColor" Value="1 1 1 1" />
-                    <Var ObjectId="268435465" Name="IllumBrightness" Value="1" />
-                    <Var ObjectId="268435465" Name="IsOccluder" Value="false" />
-                    <Var ObjectId="268435465" Name="CollideGroup" Value="" />
-                    <Var ObjectId="268435465" Name="RenderLayer" Value="0" />
+                    <Var ObjectId="268436142" Name="Note" Value="" />
+                    <Var ObjectId="268436142" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436142" Name="IsAffectedByDecal" Value="false" />
+                    <Var ObjectId="268436142" Name="ColorMul" Value="0.5803921818733215332 0.5803921818733215332 0.5803921818733215332 1" />
+                    <Var ObjectId="268436142" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268436142" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436142" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436142" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436142" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436142" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435466" Name="block_box_static_1" CreStamp="1615725550" ModStamp="1615725632" WorldPos="-1.75 29.1461 -6.75" Rotation="0 0.872665 0" Scale="25 10 1" FileIndex="2" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 122 268435466">
+            <Entity ID="268436143" Name="block_box_static_1" CreStamp="1615725550" ModStamp="1615725632" WorldPos="-1.75 29.1461 -6.75" Rotation="0 0.872665 0" Scale="25 10 1" FileIndex="2" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 122 268436143">
                 <UserVariables>
-                    <Var ObjectId="268435466" Name="Note" Value="" />
-                    <Var ObjectId="268435466" Name="PhysicsMaterial" Value="Default" />
-                    <Var ObjectId="268435466" Name="CollideCharacter" Value="true" />
-                    <Var ObjectId="268435466" Name="CollideNonCharacter" Value="false" />
-                    <Var ObjectId="268435466" Name="BlocksLightAndLOS" Value="false" />
-                    <Var ObjectId="268435466" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436143" Name="Note" Value="" />
+                    <Var ObjectId="268436143" Name="PhysicsMaterial" Value="Default" />
+                    <Var ObjectId="268436143" Name="CollideCharacter" Value="true" />
+                    <Var ObjectId="268436143" Name="CollideNonCharacter" Value="false" />
+                    <Var ObjectId="268436143" Name="BlocksLightAndLOS" Value="false" />
+                    <Var ObjectId="268436143" Name="CollideGroup" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435467" Name="block_box_static_2" CreStamp="1615725604" ModStamp="1615725621" WorldPos="-4.25 29.1461 6.75" Rotation="-0 2.44346 -0" Scale="15 10 1" FileIndex="2" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 123 268435467">
+            <Entity ID="268436144" Name="block_box_static_2" CreStamp="1615725604" ModStamp="1615725621" WorldPos="-4.25 29.1461 6.75" Rotation="-0 2.44346 -0" Scale="15 10 1" FileIndex="2" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 123 268436144">
                 <UserVariables>
-                    <Var ObjectId="268435467" Name="Note" Value="" />
-                    <Var ObjectId="268435467" Name="PhysicsMaterial" Value="Default" />
-                    <Var ObjectId="268435467" Name="CollideCharacter" Value="true" />
-                    <Var ObjectId="268435467" Name="CollideNonCharacter" Value="false" />
-                    <Var ObjectId="268435467" Name="BlocksLightAndLOS" Value="false" />
-                    <Var ObjectId="268435467" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436144" Name="Note" Value="" />
+                    <Var ObjectId="268436144" Name="PhysicsMaterial" Value="Default" />
+                    <Var ObjectId="268436144" Name="CollideCharacter" Value="true" />
+                    <Var ObjectId="268436144" Name="CollideNonCharacter" Value="false" />
+                    <Var ObjectId="268436144" Name="BlocksLightAndLOS" Value="false" />
+                    <Var ObjectId="268436144" Name="CollideGroup" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435658" Name="beltdrive_1" CreStamp="1615729617" ModStamp="1615729764" WorldPos="13.0063 23.9442 6.78831" Rotation="0.0203422 -0.369041 -0.0563078" Scale="1 1 1" FileIndex="4" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 87 268435658">
+            <Entity ID="268436145" Name="beltdrive_1" CreStamp="1615729617" ModStamp="1615729764" WorldPos="13.0063 23.9442 6.78831" Rotation="0.0203422 -0.369041 -0.0563078" Scale="1 1 1" FileIndex="4" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 87 268436145">
                 <UserVariables>
-                    <Var ObjectId="268435658" Name="Note" Value="" />
-                    <Var ObjectId="268435658" Name="CastShadows" Value="true" />
-                    <Var ObjectId="268435658" Name="IsAffectedByDecal" Value="false" />
-                    <Var ObjectId="268435658" Name="ColorMul" Value="1 1 1 1" />
-                    <Var ObjectId="268435658" Name="ColorBrightness" Value="1" />
-                    <Var ObjectId="268435658" Name="IllumColor" Value="1 1 1 1" />
-                    <Var ObjectId="268435658" Name="IllumBrightness" Value="1" />
-                    <Var ObjectId="268435658" Name="IsOccluder" Value="false" />
-                    <Var ObjectId="268435658" Name="CollideGroup" Value="" />
-                    <Var ObjectId="268435658" Name="RenderLayer" Value="0" />
+                    <Var ObjectId="268436145" Name="Note" Value="" />
+                    <Var ObjectId="268436145" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436145" Name="IsAffectedByDecal" Value="false" />
+                    <Var ObjectId="268436145" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436145" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268436145" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436145" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436145" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436145" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436145" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435659" Name="beltdrive_2" CreStamp="1615729638" ModStamp="1615729764" WorldPos="13.0981 25.6302 6.82977" Rotation="-0 4.55118 -0" Scale="1 1 1" FileIndex="5" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 89 268435659">
+            <Entity ID="268436146" Name="beltdrive_2" CreStamp="1615729638" ModStamp="1615729764" WorldPos="13.0981 25.6302 6.82977" Rotation="-0 4.55118 -0" Scale="1 1 1" FileIndex="5" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 89 268436146">
                 <UserVariables>
-                    <Var ObjectId="268435659" Name="Note" Value="" />
-                    <Var ObjectId="268435659" Name="CastShadows" Value="true" />
-                    <Var ObjectId="268435659" Name="IsAffectedByDecal" Value="false" />
-                    <Var ObjectId="268435659" Name="ColorMul" Value="1 1 1 1" />
-                    <Var ObjectId="268435659" Name="ColorBrightness" Value="1" />
-                    <Var ObjectId="268435659" Name="IllumColor" Value="1 1 1 1" />
-                    <Var ObjectId="268435659" Name="IllumBrightness" Value="1" />
-                    <Var ObjectId="268435659" Name="IsOccluder" Value="false" />
-                    <Var ObjectId="268435659" Name="CollideGroup" Value="" />
-                    <Var ObjectId="268435659" Name="RenderLayer" Value="0" />
+                    <Var ObjectId="268436146" Name="Note" Value="" />
+                    <Var ObjectId="268436146" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436146" Name="IsAffectedByDecal" Value="false" />
+                    <Var ObjectId="268436146" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436146" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268436146" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436146" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436146" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436146" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436146" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435660" Name="beltdrive_3" CreStamp="1615729650" ModStamp="1615729657" WorldPos="227.88 2.579 -11.343" Rotation="0 -0 0" Scale="2 2 2" FileIndex="6" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 90 268435660">
+            <Entity ID="268436147" Name="beltdrive_3" CreStamp="1615729650" ModStamp="1615729657" WorldPos="227.88 2.579 -11.343" Rotation="0 0 0" Scale="2 2 2" FileIndex="6" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 90 268436147">
                 <UserVariables>
-                    <Var ObjectId="268435660" Name="Note" Value="" />
-                    <Var ObjectId="268435660" Name="CastShadows" Value="true" />
-                    <Var ObjectId="268435660" Name="IsAffectedByDecal" Value="false" />
-                    <Var ObjectId="268435660" Name="ColorMul" Value="1 1 1 1" />
-                    <Var ObjectId="268435660" Name="ColorBrightness" Value="1" />
-                    <Var ObjectId="268435660" Name="IllumColor" Value="1 1 1 1" />
-                    <Var ObjectId="268435660" Name="IllumBrightness" Value="1" />
-                    <Var ObjectId="268435660" Name="IsOccluder" Value="false" />
-                    <Var ObjectId="268435660" Name="CollideGroup" Value="" />
-                    <Var ObjectId="268435660" Name="RenderLayer" Value="0" />
+                    <Var ObjectId="268436147" Name="Note" Value="" />
+                    <Var ObjectId="268436147" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436147" Name="IsAffectedByDecal" Value="false" />
+                    <Var ObjectId="268436147" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436147" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268436147" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436147" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436147" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436147" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436147" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435661" Name="beltdrive_4" CreStamp="1615729680" ModStamp="1615729858" WorldPos="13.2993 24.2082 7.18793" Rotation="-0.0370162 4.48428 -0.0849982" Scale="1.5 1.5 1.5" FileIndex="7" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 86 268435661">
+            <Entity ID="268436148" Name="beltdrive_4" CreStamp="1615729680" ModStamp="1615729858" WorldPos="13.2993 24.2082 7.18793" Rotation="-0.0370162 4.48428 -0.0849982" Scale="1.5 1.5 1.5" FileIndex="7" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 86 268436148">
                 <UserVariables>
-                    <Var ObjectId="268435661" Name="Note" Value="" />
-                    <Var ObjectId="268435661" Name="EventInstanceTag" Value="" />
-                    <Var ObjectId="268435661" Name="CollideGroup" Value="" />
-                    <Var ObjectId="268435661" Name="UserVar" Value="" />
-                    <Var ObjectId="268435661" Name="DisableBreakable" Value="false" />
-                    <Var ObjectId="268435661" Name="FullGameSave" Value="false" />
-                    <Var ObjectId="268435661" Name="StaticPhysics" Value="false" />
-                    <Var ObjectId="268435661" Name="QuickSave" Value="false" />
-                    <Var ObjectId="268435661" Name="EffectsActive" Value="true" />
-                    <Var ObjectId="268435661" Name="InteractionDisabled" Value="false" />
-                    <Var ObjectId="268435661" Name="CastShadows" Value="true" />
-                    <Var ObjectId="268435661" Name="ColorMul" Value="1 1 1 1" />
-                    <Var ObjectId="268435661" Name="EffectColorMul" Value="1 1 1 1" />
-                    <Var ObjectId="268435661" Name="EffectBrightnessMul" Value="1" />
-                    <Var ObjectId="268435661" Name="IllumColor" Value="1 1 1 1" />
-                    <Var ObjectId="268435661" Name="IllumBrightness" Value="1" />
-                    <Var ObjectId="268435661" Name="IsAffectedByDecal" Value="false" />
-                    <Var ObjectId="268435661" Name="IsOccluder" Value="false" />
-                    <Var ObjectId="268435661" Name="UpdateBonesWhenCulled" Value="false" />
-                    <Var ObjectId="268435661" Name="OnBreakCallbackFunc" Value="" />
-                    <Var ObjectId="268435661" Name="ConnectionStateChangeCallback" Value="" />
-                    <Var ObjectId="268435661" Name="PlayerLookAtCallback" Value="" />
-                    <Var ObjectId="268435661" Name="PlayerLookAtCallbackAutoRemove" Value="false" />
-                    <Var ObjectId="268435661" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
-                    <Var ObjectId="268435661" Name="PlayerLookAtCheckRayIntersection" Value="true" />
-                    <Var ObjectId="268435661" Name="PlayerLookAtMaxDistance" Value="-1" />
-                    <Var ObjectId="268435661" Name="PlayerLookAtCallbackDelay" Value="0" />
-                    <Var ObjectId="268435661" Name="PlayerInteractCallback" Value="" />
-                    <Var ObjectId="268435661" Name="PlayerInteractCallbackAutoRemove" Value="false" />
-                    <Var ObjectId="268435661" Name="PlayerInteractLeaveCallback" Value="" />
-                    <Var ObjectId="268435661" Name="PlayerInteractLeaveCallbackAutoRemove" Value="false" />
-                    <Var ObjectId="268435661" Name="RecieveMessageCallback" Value="" />
-                    <Var ObjectId="268435661" Name="CC_Entities" Value="" />
-                    <Var ObjectId="268435661" Name="CC_Funcs" Value="" />
-                    <Var ObjectId="268435661" Name="ConnectedEntity" Value="" />
-                    <Var ObjectId="268435661" Name="ConnectedEntityInvertState" Value="false" />
-                    <Var ObjectId="268435661" Name="ConnectedEntityStatesUsed" Value="0" />
-                    <Var ObjectId="268435661" Name="ParentAttachEntity" Value="" />
-                    <Var ObjectId="268435661" Name="ParentAttachUseRotation" Value="true" />
-                    <Var ObjectId="268435661" Name="ParentAttachBody" Value="" />
-                    <Var ObjectId="268435661" Name="ParentAttachSocket" Value="" />
-                    <Var ObjectId="268435661" Name="ParentAttachSnap" Value="false" />
-                    <Var ObjectId="268435661" Name="ParentAttachLocked" Value="false" />
-                    <Var ObjectId="268435661" Name="ConnectedLight" Value="" />
-                    <Var ObjectId="268435661" Name="ConnectionLightAmount" Value="1" />
-                    <Var ObjectId="268435661" Name="ConnectionLightUseOnColor" Value="true" />
-                    <Var ObjectId="268435661" Name="ConnectionLightUseSpec" Value="false" />
-                    <Var ObjectId="268435661" Name="ConnectionLightType" Value="Mul" />
-                    <Var ObjectId="268435661" Name="ExtraConnectedLight" Value="" />
-                    <Var ObjectId="268435661" Name="ExtraConnectionLightAmount" Value="1" />
-                    <Var ObjectId="268435661" Name="ExtraConnectionLightUseOnColor" Value="true" />
-                    <Var ObjectId="268435661" Name="ExtraConnectionLightUseSpec" Value="false" />
-                    <Var ObjectId="268435661" Name="ExtraConnectionLightType" Value="Mul" />
-                    <Var ObjectId="268435661" Name="InteractDisablesStaticPhysics" Value="false" />
-                    <Var ObjectId="268435661" Name="ScaryObject_Enabled" Value="false" />
-                    <Var ObjectId="268435661" Name="ScaryObject_BaseFearRateMultiplier" Value="1.0" />
-                    <Var ObjectId="268435661" Name="ScaryObject_ActivationCallback" Value="" />
-                    <Var ObjectId="268435661" Name="ScaryObject_DeactivationCallback" Value="" />
-                    <Var ObjectId="268435661" Name="Threat_Enabled" Value="false" />
-                    <Var ObjectId="268435661" Name="Threat_BaseFearRateMultiplier" Value="1.0" />
-                    <Var ObjectId="268435661" Name="Threat_ActivationCallback" Value="" />
-                    <Var ObjectId="268435661" Name="Threat_DeactivationCallback" Value="" />
+                    <Var ObjectId="268436148" Name="Note" Value="" />
+                    <Var ObjectId="268436148" Name="EventInstanceTag" Value="" />
+                    <Var ObjectId="268436148" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436148" Name="UserVar" Value="" />
+                    <Var ObjectId="268436148" Name="DisableBreakable" Value="false" />
+                    <Var ObjectId="268436148" Name="FullGameSave" Value="false" />
+                    <Var ObjectId="268436148" Name="StaticPhysics" Value="false" />
+                    <Var ObjectId="268436148" Name="QuickSave" Value="false" />
+                    <Var ObjectId="268436148" Name="EffectsActive" Value="true" />
+                    <Var ObjectId="268436148" Name="InteractionDisabled" Value="false" />
+                    <Var ObjectId="268436148" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436148" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436148" Name="EffectColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436148" Name="EffectBrightnessMul" Value="1" />
+                    <Var ObjectId="268436148" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436148" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436148" Name="IsAffectedByDecal" Value="false" />
+                    <Var ObjectId="268436148" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436148" Name="UpdateBonesWhenCulled" Value="false" />
+                    <Var ObjectId="268436148" Name="OnBreakCallbackFunc" Value="" />
+                    <Var ObjectId="268436148" Name="ConnectionStateChangeCallback" Value="" />
+                    <Var ObjectId="268436148" Name="PlayerLookAtCallback" Value="" />
+                    <Var ObjectId="268436148" Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268436148" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
+                    <Var ObjectId="268436148" Name="PlayerLookAtCheckRayIntersection" Value="true" />
+                    <Var ObjectId="268436148" Name="PlayerLookAtMaxDistance" Value="-1" />
+                    <Var ObjectId="268436148" Name="PlayerLookAtCallbackDelay" Value="0" />
+                    <Var ObjectId="268436148" Name="PlayerInteractCallback" Value="" />
+                    <Var ObjectId="268436148" Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268436148" Name="PlayerInteractLeaveCallback" Value="" />
+                    <Var ObjectId="268436148" Name="PlayerInteractLeaveCallbackAutoRemove" Value="false" />
+                    <Var ObjectId="268436148" Name="RecieveMessageCallback" Value="" />
+                    <Var ObjectId="268436148" Name="CC_Entities" Value="" />
+                    <Var ObjectId="268436148" Name="CC_Funcs" Value="" />
+                    <Var ObjectId="268436148" Name="ConnectedEntity" Value="" />
+                    <Var ObjectId="268436148" Name="ConnectedEntityInvertState" Value="false" />
+                    <Var ObjectId="268436148" Name="ConnectedEntityStatesUsed" Value="0" />
+                    <Var ObjectId="268436148" Name="ParentAttachEntity" Value="" />
+                    <Var ObjectId="268436148" Name="ParentAttachUseRotation" Value="true" />
+                    <Var ObjectId="268436148" Name="ParentAttachBody" Value="" />
+                    <Var ObjectId="268436148" Name="ParentAttachSocket" Value="" />
+                    <Var ObjectId="268436148" Name="ParentAttachSnap" Value="false" />
+                    <Var ObjectId="268436148" Name="ParentAttachLocked" Value="false" />
+                    <Var ObjectId="268436148" Name="ConnectedLight" Value="" />
+                    <Var ObjectId="268436148" Name="ConnectionLightAmount" Value="1" />
+                    <Var ObjectId="268436148" Name="ConnectionLightUseOnColor" Value="true" />
+                    <Var ObjectId="268436148" Name="ConnectionLightUseSpec" Value="false" />
+                    <Var ObjectId="268436148" Name="ConnectionLightType" Value="Mul" />
+                    <Var ObjectId="268436148" Name="ExtraConnectedLight" Value="" />
+                    <Var ObjectId="268436148" Name="ExtraConnectionLightAmount" Value="1" />
+                    <Var ObjectId="268436148" Name="ExtraConnectionLightUseOnColor" Value="true" />
+                    <Var ObjectId="268436148" Name="ExtraConnectionLightUseSpec" Value="false" />
+                    <Var ObjectId="268436148" Name="ExtraConnectionLightType" Value="Mul" />
+                    <Var ObjectId="268436148" Name="InteractDisablesStaticPhysics" Value="false" />
+                    <Var ObjectId="268436148" Name="ScaryObject_Enabled" Value="false" />
+                    <Var ObjectId="268436148" Name="ScaryObject_BaseFearRateMultiplier" Value="1.0" />
+                    <Var ObjectId="268436148" Name="ScaryObject_ActivationCallback" Value="" />
+                    <Var ObjectId="268436148" Name="ScaryObject_DeactivationCallback" Value="" />
+                    <Var ObjectId="268436148" Name="Threat_Enabled" Value="false" />
+                    <Var ObjectId="268436148" Name="Threat_BaseFearRateMultiplier" Value="1.0" />
+                    <Var ObjectId="268436148" Name="Threat_ActivationCallback" Value="" />
+                    <Var ObjectId="268436148" Name="Threat_DeactivationCallback" Value="" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435710" Name="blanket_diy_1" CreStamp="1615735912" ModStamp="1615745361" WorldPos="50.6614 26.0168 47.2611" Rotation="0.0188465 3.42466 -0.00158738" Scale="1 1 1" FileIndex="22" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 77 268435710">
+            <Entity ID="268436149" Name="blanket_diy_1" CreStamp="1615735912" ModStamp="1615773060" WorldPos="50.8102 26.0221 47.2177" Rotation="0.0188465 3.42466 -0.00158737" Scale="1 1 1" FileIndex="22" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 77 268436149">
                 <UserVariables>
-                    <Var ObjectId="268435710" Name="Note" Value="" />
-                    <Var ObjectId="268435710" Name="CastShadows" Value="true" />
-                    <Var ObjectId="268435710" Name="IsAffectedByDecal" Value="true" />
-                    <Var ObjectId="268435710" Name="ColorMul" Value="1 1 1 1" />
-                    <Var ObjectId="268435710" Name="ColorBrightness" Value="1" />
-                    <Var ObjectId="268435710" Name="IllumColor" Value="1 1 1 1" />
-                    <Var ObjectId="268435710" Name="IllumBrightness" Value="1" />
-                    <Var ObjectId="268435710" Name="IsOccluder" Value="false" />
-                    <Var ObjectId="268435710" Name="CollideGroup" Value="" />
-                    <Var ObjectId="268435710" Name="RenderLayer" Value="0" />
+                    <Var ObjectId="268436149" Name="Note" Value="" />
+                    <Var ObjectId="268436149" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436149" Name="IsAffectedByDecal" Value="true" />
+                    <Var ObjectId="268436149" Name="ColorMul" Value="1 1 1 1" />
+                    <Var ObjectId="268436149" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268436149" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436149" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436149" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436149" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436149" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435860" Name="bloody_bandage_01_1" CreStamp="1615749423" ModStamp="1615749444" WorldPos="46.2202 25.9102 47.8482" Rotation="0.127151 -0.77953 -0.104859" Scale="1 1 1" FileIndex="32" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 295 268435860">
+            <Entity ID="268436150" Name="bloody_bandage_01_1" CreStamp="1615749423" ModStamp="1615763869" WorldPos="46.2202 25.9192 47.8482" Rotation="0.127151 -0.77953 -0.104859" Scale="1 1 1" FileIndex="32" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 295 268436150">
                 <UserVariables>
-                    <Var ObjectId="268435860" Name="Note" Value="" />
-                    <Var ObjectId="268435860" Name="CastShadows" Value="true" />
-                    <Var ObjectId="268435860" Name="IsAffectedByDecal" Value="true" />
-                    <Var ObjectId="268435860" Name="ColorMul" Value="1 1 1 1" />
-                    <Var ObjectId="268435860" Name="ColorBrightness" Value="1" />
-                    <Var ObjectId="268435860" Name="IllumColor" Value="1 1 1 1" />
-                    <Var ObjectId="268435860" Name="IllumBrightness" Value="1" />
-                    <Var ObjectId="268435860" Name="IsOccluder" Value="false" />
-                    <Var ObjectId="268435860" Name="CollideGroup" Value="" />
-                    <Var ObjectId="268435860" Name="RenderLayer" Value="0" />
+                    <Var ObjectId="268436150" Name="Note" Value="" />
+                    <Var ObjectId="268436150" Name="CastShadows" Value="true" />
+                    <Var ObjectId="268436150" Name="IsAffectedByDecal" Value="false" />
+                    <Var ObjectId="268436150" Name="ColorMul" Value="0.904296875 0.904296875 0.904296875 1" />
+                    <Var ObjectId="268436150" Name="ColorBrightness" Value="1" />
+                    <Var ObjectId="268436150" Name="IllumColor" Value="1 1 1 1" />
+                    <Var ObjectId="268436150" Name="IllumBrightness" Value="1" />
+                    <Var ObjectId="268436150" Name="IsOccluder" Value="false" />
+                    <Var ObjectId="268436150" Name="CollideGroup" Value="" />
+                    <Var ObjectId="268436150" Name="RenderLayer" Value="0" />
                 </UserVariables>
             </Entity>
-            <Entity ID="268435863" Name="NoteExcavation" CreStamp="1615749473" ModStamp="1615749646" WorldPos="45.3643 27.603 47.9171" Rotation="1.55839 0.0364488 3.07706" Scale="1 1 1" FileIndex="33" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 310 268435863">
+            <Entity ID="268436151" Name="block_box_static_3" CreStamp="1615761146" ModStamp="1615761179" WorldPos="52 28.25 47.5" Rotation="0 -0.174532 0" Scale="1 5 5" FileIndex="2" Active="true" Important="false" Static="false" CulledByDistance="true" CulledByFog="true" UID="16 308 268436151">
                 <UserVariables>
-                    <Var ObjectId="268435863" Name="Note" Value="" />
-                    <Var ObjectId="268435863" Name="EventInstanceTag" Value="" />
-                    <Var ObjectId="268435863" Name="CollideGroup" Value="" />
-                    <Var ObjectId="268435863" Name="UserVar" Value="" />
-                    <Var ObjectId="268435863" Name="DisableBreakable" Value="false" />
-                    <Var ObjectId="268435863" Name="FullGameSave" Value="false" />
-                    <Var ObjectId="268435863" Name="StaticPhysics" Value="false" />
-                    <Var ObjectId="268435863" Name="QuickSave" Value="false" />
-                    <Var ObjectId="268435863" Name="EffectsActive" Value="true" />
-                    <Var ObjectId="268435863" Name="InteractionDisabled" Value="false" />
-                    <Var ObjectId="268435863" Name="CastShadows" Value="true" />
-                    <Var ObjectId="268435863" Name="ColorMul" Value="1 1 1 1" />
-                    <Var ObjectId="268435863" Name="EffectColorMul" Value="1 1 1 1" />
-                    <Var ObjectId="268435863" Name="EffectBrightnessMul" Value="1" />
-                    <Var ObjectId="268435863" Name="IllumColor" Value="1 1 1 1" />
-                    <Var ObjectId="268435863" Name="IllumBrightness" Value="1" />
-                    <Var ObjectId="268435863" Name="IsAffectedByDecal" Value="false" />
-                    <Var ObjectId="268435863" Name="IsOccluder" Value="false" />
-                    <Var ObjectId="268435863" Name="UpdateBonesWhenCulled" Value="false" />
-                    <Var ObjectId="268435863" Name="OnBreakCallbackFunc" Value="" />
-                    <Var ObjectId="268435863" Name="ConnectionStateChangeCallback" Value="" />
-                    <Var ObjectId="268435863" Name="PlayerLookAtCallback" Value="" />
-                    <Var ObjectId="268435863" Name="PlayerLookAtCallbackAutoRemove" Value="false" />
-                    <Var ObjectId="268435863" Name="PlayerLookAtCheckCenterOfScreen" Value="true" />
-                    <Var ObjectId="268435863" Name="PlayerLookAtCheckRayIntersection" Value="true" />
-                    <Var ObjectId="268435863" Name="PlayerLookAtMaxDistance" Value="-1" />
-                    <Var ObjectId="268435863" Name="PlayerLookAtCallbackDelay" Value="0" />
-                    <Var ObjectId="268435863" Name="PlayerInteractCallback" Value="" />
-                    <Var ObjectId="268435863" Name="PlayerInteractCallbackAutoRemove" Value="false" />
-                    <Var ObjectId="268435863" Name="PlayerInteractLeaveCallback" Value="" />
-                    <Var ObjectId="268435863" Name="PlayerInteractLeaveCallbackAutoRemove" Value="false" />
-                    <Var ObjectId="268435863" Name="RecieveMessageCallback" Value="" />
-                    <Var ObjectId="268435863" Name="CC_Entities" Value="" />
-                    <Var ObjectId="268435863" Name="CC_Funcs" Value="" />
-                    <Var ObjectId="268435863" Name="ConnectedEntity" Value="" />
-                    <Var ObjectId="268435863" Name="ConnectedEntityInvertState" Value="false" />
-                    <Var ObjectId="268435863" Name="ConnectedEntityStatesUsed" Value="0" />
-                    <Var ObjectId="268435863" Name="ParentAttachEntity" Value="" />
-                    <Var ObjectId="268435863" Name="ParentAttachUseRotation" Value="true" />
-                    <Var ObjectId="268435863" Name="ParentAttachBody" Value="" />
-                    <Var ObjectId="268435863" Name="ParentAttachSocket" Value="" />
-                    <Var ObjectId="268435863" Name="ParentAttachSnap" Value="false" />
-                    <Var ObjectId="268435863" Name="ParentAttachLocked" Value="false" />
-                    <Var ObjectId="268435863" Name="ConnectedLight" Value="" />
-                    <Var ObjectId="268435863" Name="ConnectionLightAmount" Value="1" />
-                    <Var ObjectId="268435863" Name="ConnectionLightUseOnColor" Value="true" />
-                    <Var ObjectId="268435863" Name="ConnectionLightUseSpec" Value="false" />
-                    <Var ObjectId="268435863" Name="ConnectionLightType" Value="Mul" />
-                    <Var ObjectId="268435863" Name="ExtraConnectedLight" Value="" />
-                    <Var ObjectId="268435863" Name="ExtraConnectionLightAmount" Value="1" />
-                    <Var ObjectId="268435863" Name="ExtraConnectionLightUseOnColor" Value="true" />
-                    <Var ObjectId="268435863" Name="ExtraConnectionLightUseSpec" Value="false" />
-                    <Var ObjectId="268435863" Name="ExtraConnectionLightType" Value="Mul" />
-                    <Var ObjectId="268435863" Name="ID" Value="" />
-                    <Var ObjectId="268435863" Name="OpenEntityFile" Value="" />
-                    <Var ObjectId="268435863" Name="CloseCallback" Value="" />
-                    <Var ObjectId="268435863" Name="VerticalFOV" Value="70" />
-                    <Var ObjectId="268435863" Name="PopUpScale" Value="1.0" />
-                    <Var ObjectId="268435863" Name="PopUpYOffset" Value="0.0" />
+                    <Var ObjectId="268436151" Name="Note" Value="" />
+                    <Var ObjectId="268436151" Name="PhysicsMaterial" Value="Default" />
+                    <Var ObjectId="268436151" Name="CollideCharacter" Value="true" />
+                    <Var ObjectId="268436151" Name="CollideNonCharacter" Value="false" />
+                    <Var ObjectId="268436151" Name="BlocksLightAndLOS" Value="false" />
+                    <Var ObjectId="268436151" Name="CollideGroup" Value="" />
                 </UserVariables>
             </Entity>
         </Objects>

@@ -443,7 +443,9 @@ class cScrMap : iScrMap
 		void OnLookAt_GiveQuest(const tString &in asEntity, int alState)
 		{
 			cLux_AddDebugMessage("Looked at fort...");
-//			Voice_Play("");
+//			Voice_PlayDelayed("", 2.f);
+//			Sketchbook_AddIdea("reach_fort");
+//			play music
 		}
 		
 		//-------------------------------------------------------

@@ -1,9 +1,9 @@
 <HPLMapTrack_Sound ID="E07586C7D0EE4C91D174DBDCD6965FEE6A3DB46C" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
         <Objects>
-            <Sound ID="268435665" Name="Sound_WindMed_1" CreStamp="1615730484" ModStamp="1615743334" WorldPos="56 50 -11.5" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="level_amb_shared/amb/sweeteners/desert_wind/wind_med" MinDistance="150" MaxDistance="250" Volume="1" Active="true" UseCustomProperties="false" UID="16 83 268435665" />
-            <Sound ID="268435701" Name="Sound_2" CreStamp="1615734467" ModStamp="1615734467" WorldPos="-2.5 24 0.5" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="" MinDistance="1" MaxDistance="5" Volume="1" Active="true" UseCustomProperties="false" UID="16 78 268435701" />
-            <Sound ID="268435823" Name="Sound_WindMed_2" CreStamp="1615743334" ModStamp="1615743340" WorldPos="39.75 50 84.75" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="level_amb_shared/amb/sweeteners/desert_wind/wind_med" MinDistance="150" MaxDistance="250" Volume="1" Active="true" UseCustomProperties="false" UID="16 305 268435823" />
+            <Sound ID="268436306" Name="Sound_WindMed_1" CreStamp="1615730484" ModStamp="1615743334" WorldPos="56 50 -11.5" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="level_amb_shared/amb/sweeteners/desert_wind/wind_med" MinDistance="150" MaxDistance="250" Volume="1" Active="true" UseCustomProperties="false" UID="16 83 268436306" />
+            <Sound ID="268436307" Name="Sound_2" CreStamp="1615734467" ModStamp="1615734467" WorldPos="-2.5 24 0.5" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="" MinDistance="1" MaxDistance="5" Volume="1" Active="true" UseCustomProperties="false" UID="16 78 268436307" />
+            <Sound ID="268436308" Name="Sound_WindMed_2" CreStamp="1615743334" ModStamp="1615743340" WorldPos="39.75 50 84.75" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="level_amb_shared/amb/sweeteners/desert_wind/wind_med" MinDistance="150" MaxDistance="250" Volume="1" Active="true" UseCustomProperties="false" UID="16 305 268436308" />
         </Objects>
     </Section>
 </HPLMapTrack_Sound>

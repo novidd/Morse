@@ -1,8 +1,8 @@
 <HPLMapTrack_ParticleSystem ID="E07586C7D0EE4C91D174DBDCD6965FEE6A3DB46C" MajorVersion="1" MinorVersion="1">
     <Section Name="570198258105585246">
         <Objects>
-            <ParticleSystem ID="268435599" Name="PS_1" CreStamp="1615389205" ModStamp="1615743292" WorldPos="29.75 35.5 -39.75" Rotation="0 4.71239 0" Scale="1 1 1" File="sandstorm_small.ps" Color="1 1 1 0.0980392" Brightness="2" FadeAtDistance="true" MinFadeDistanceStart="2" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MaxFadeDistanceEnd="110" Static="false" CulledByDistance="true" CulledByFog="true" ConnectLight="" UID="16 84 268435599" />
-            <ParticleSystem ID="268435664" Name="PS_2" CreStamp="1615730350" ModStamp="1615743297" WorldPos="45 42 -15" Rotation="0 4.71239 0" Scale="1 1 1" File="sandstorm_small.ps" Color="1 1 1 0.0980392" Brightness="2" FadeAtDistance="true" MinFadeDistanceStart="2" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MaxFadeDistanceEnd="110" Static="false" CulledByDistance="true" CulledByFog="true" ConnectLight="" UID="16 70 268435664" />
+            <ParticleSystem ID="268436309" Name="PS_1" CreStamp="1615389205" ModStamp="1615743292" WorldPos="29.75 35.5 -39.75" Rotation="0 4.71239 0" Scale="1 1 1" File="sandstorm_small.ps" Color="1 1 1 0.0980392" Brightness="2" FadeAtDistance="true" MinFadeDistanceStart="2" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MaxFadeDistanceEnd="110" Static="false" CulledByDistance="true" CulledByFog="true" ConnectLight="" UID="16 84 268436309" />
+            <ParticleSystem ID="268436310" Name="PS_2" CreStamp="1615730350" ModStamp="1615743297" WorldPos="45 42 -15" Rotation="0 4.71239 0" Scale="1 1 1" File="sandstorm_small.ps" Color="1 1 1 0.0980392" Brightness="2" FadeAtDistance="true" MinFadeDistanceStart="2" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MaxFadeDistanceEnd="110" Static="false" CulledByDistance="true" CulledByFog="true" ConnectLight="" UID="16 70 268436310" />
         </Objects>
     </Section>
 </HPLMapTrack_ParticleSystem>
