@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<VoiceData>
+ <Characters>
+  <Character ID="0" Name="Player" DisplayName="Arthur" Actor="Lucas" AutoGenVoice="False" AutoGenVoiceFile="" AutoGenVoiceSoundFreq="1" WorldSpace="True" AffectedByReverb="True" TextToSpeechVoice="Default" DefaultCriteria="" EntryType="World" Volume="1" ReverbVolume="1.22" SpeakerSpread="40" EntitySource="" MinDist="0" MaxDist="0" MinFreq="22000" MaxFreq="22000" MaxListeningDist="-1" FrequencyFilter="None" />
+ </Characters>
+ <Effects />
+ <Scenes>
+  <Scene ID="0" Name="Comments" FocusPrio="1" ForceMaxVolume="False" DefaultCriteria="" Volume="1" ReverbVolume="0.7" />
+ </Scenes>
+ <Sections>
+  <Section Name="Outside rocky canyon" />
+  <Section Name="Inside rocky canyon" />
+ </Sections>
+ <Subjects>
+  <Subject Desc="Arthur tries to enter the desert, but there is no going back now." Name="Dialogue_EnterDesert" UseSingleRandomLine="False" ShowSubtitlesIfMissing="False" SceneId="0" EffectId="-1" Section="Outside rocky canyon">
+   <Line CharacterId="0" Prio="0" TextStatus="Placeholder" PlayOnce="True">
+    <Sound Text="There is no turning back now..." FileName="comments_dialogue_enterdesert_001_player_001" Timestamp="2021-03-15 09:29" />
+   </Line>
+  </Subject>
+  <Subject Desc="Arthur spots the fort that pastor Luis told him about." Name="Dialogue_SpotFort" UseSingleRandomLine="False" ShowSubtitlesIfMissing="False" SceneId="0" EffectId="-1" Section="Inside rocky canyon">
+   <Line CharacterId="0" Prio="0" TextStatus="Placeholder" PlayOnce="True">
+    <Sound Text="The fort - that's where I'm headed." FileName="comments_dialogue_spotfort_001_player_001" Timestamp="2021-03-15 09:29" />
+   </Line>
+  </Subject>
+  <Subject Desc="Arthur inspects the mural with the glowing material. Vitae residue? The half-life of vitae is very high." Name="Dialogue_InteractMural" UseSingleRandomLine="False" ShowSubtitlesIfMissing="False" SceneId="0" EffectId="-1" Section="Inside rocky canyon">
+   <Line CharacterId="0" Prio="0" TextStatus="Placeholder" PlayOnce="True">
+    <Sound Text="Huh... strange." FileName="comments_dialogue_interactmural_001_player_001" Timestamp="2021-03-15 09:29" />
+   </Line>
+  </Subject>
+  <Subject Desc="Arthur spots the blood by the cave entrance. Luis's men have been through here. Is it one of theirs blood?" Name="Dialogue_SpotBlood" UseSingleRandomLine="False" ShowSubtitlesIfMissing="False" SceneId="0" EffectId="-1" Section="Inside rocky canyon">
+   <Line CharacterId="0" Prio="0" TextStatus="Placeholder" PlayOnce="True">
+    <Sound Text="Luis's men went through here." EndPadding="-2" FileName="comments_dialogue_spotblood_001_player_001" Timestamp="2021-03-15 09:29" />
+   </Line>
+   <Line CharacterId="0" Prio="0" TextStatus="Placeholder" PlayOnce="True">
+    <Sound Text="Is it one of theirs blood?" FileName="comments_dialogue_spotblood_002_player_001" Timestamp="2021-03-15 09:29" />
+   </Line>
+  </Subject>
+ </Subjects>
+</VoiceData>

@@ -76,28 +76,14 @@ class cScrMap : iScrMap
 		// Map
 		Map_SetSkyboxRotation(cVector3f(0, 0, 0));
 		
-		//Stamina_SetStaminaSystemActive(true);
-		
 		// Put display name entry in english.lang / Levels
-		GetBase().SetDisplayNameEntry("01-01-cave-town");
+		GetBase().SetDisplayNameEntry("01-01-cave-town-entrance");
 	}
 	
 	//-------------------------------------------------------
 		
 	void PreloadData()
 	{
-		/////////////////
-		// Preload gui
-		//ImGui_PreloadImage("some_image");
-
-		///////////////
-		// Preload particles
-		//ParticleSystem_Preload("some_particle.ps");
-
-		//////////////
-		// Preload screen effects
-		//Material_Preload("some_material.mat");
-		
 		//////////////
 		// Preload sounds
 		Sound_PreloadGroup("morse_entity", true);
@@ -116,8 +102,6 @@ class cScrMap : iScrMap
 	{
 		// Variables
 		bool mbStartIntro = true;
-		
-		// Entity
 		
 //		mlPermaFailStage = ePathToFortPermaFail_PlagueHouse;
 		
@@ -241,26 +225,6 @@ class cScrMap : iScrMap
 		if(abPressed==false) return;
 		
 		if (alAction == eAction_Test0)
-		{
-			Player_StartLookAt("Trigger_LookCar", 3.f, 2.f, 10.f);
-		}
-		
-		if (alAction == eAction_Test1)
-		{
-			Player_StopLookAt(1.f);
-		}
-		
-		if (alAction == eAction_Test2)
-		{
-			
-		}
-		
-		if (alAction == eAction_Test3)
-		{
-			
-		}
-		
-		if (alAction == eAction_Test4)
 		{
 			
 		}
@@ -429,29 +393,123 @@ class cScrMap : iScrMap
 		//} END Event *PLAYER ARRIVES IN CAR*
 	
 		/////////////////////////////////////////
-		// Event A *PLAYER LOOKS AT FORT*
+		// Event B *PLAYER LOOKS AT FORT*
 		//{//////////////////////////////////////
 		
 		//-------------------------------------------------------
 		
-		/*Put any variables that are only used in Scene 1, Event A here.*/
+		/*Put any variables that are only used in Scene 1, Event B here.*/
 		
 		//-------------------------------------------------------
 		
-		/*Put any functions that are only used in Scene 1, Event A here.*/
+		/*Put any functions that are only used in Scene 1, Event B here.*/
 		
 		void OnLookAt_GiveQuest(const tString &in asEntity, int alState)
 		{
-			cLux_AddDebugMessage("Looked at fort...");
-//			Voice_PlayDelayed("", 2.f);
-//			Sketchbook_AddIdea("reach_fort");
-//			play music
+			Voice_Play("Dialogue_SpotFort", -1, "OnVoiceEnd_AddQuest");
+		}
+		
+		//-------------------------------------------------------
+		
+		void OnVoiceEnd_AddQuest(const tString &in asScene, const tString &in asSubject)
+		{
+			Sketchbook_AddIdea("reach_fort");
 		}
 		
 		//-------------------------------------------------------
 
 		//} END Event *PLAYER ARRIVES IN CAR*
-	
+		
+		/////////////////////////////////////////
+		// Event C *PLAYER SEES CAVE*
+		//{//////////////////////////////////////
+		
+		//-------------------------------------------------------
+		
+		/*Put any variables that are only used in Scene 1, Event C here.*/
+		
+		//-------------------------------------------------------
+		
+		/*Put any functions that are only used in Scene 1, Event C here.*/
+		
+		void TriggerOnLookAt_NoticeCave(const tString &in asEntity, int alState)
+		{
+			Music_Play("A2_1_1_Tasi_Calmed", mfGlobalMusicVolume, false, eMusicPrio_MinorEvent);
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER SEES CAVE*
+		
+		/////////////////////////////////////////
+		// Event D *PLAYER INTERACTS WITH MURAL*
+		//{//////////////////////////////////////
+		
+		//-------------------------------------------------------
+		
+		/*Put any variables that are only used in Scene 1, Event D here.*/
+		
+		//-------------------------------------------------------
+		
+		/*Put any functions that are only used in Scene 1, Event D here.*/
+		
+		void OnZoomedIn_Mural(int alState)
+		{
+			bool mbPlayedVO = Entity_GetVarBool("Zoom_Mural", "");
+			if (!mbPlayedVO && alState == 1)
+			{
+				Entity_SetVarBool("Zoom_Mural", "", true);
+				Voice_Play("Dialogue_InteractMural");
+			}
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER INTERACTS WITH MURAL*
+		
+		/////////////////////////////////////////
+		// Event E *PLAYER SPOTS BLOOD*
+		//{//////////////////////////////////////
+		
+		//-------------------------------------------------------
+		
+		/*Put any variables that are only used in Scene 1, Event E here.*/
+		
+		//-------------------------------------------------------
+		
+		/*Put any functions that are only used in Scene 1, Event E here.*/
+		
+		void TriggerOnLookAt_NoticeBlood(const tString &in asEntity, int alState)
+		{
+			Voice_Play("Dialogue_SpotBlood");
+			Music_Play("A2_1_4_Herberts_Corpse", mfGlobalMusicVolume, false, eMusicPrio_MinorEvent);
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER SPOTS BLOOD*
+		
+		/////////////////////////////////////////
+		// Event F *PLAYER TRIES TO ENTER DESERT*
+		//{//////////////////////////////////////
+		
+		//-------------------------------------------------------
+		
+		/*Put any variables that are only used in Scene 1, Event F here.*/
+		
+		//-------------------------------------------------------
+		
+		/*Put any functions that are only used in Scene 1, Event F here.*/
+		
+		bool OnCollide_EnterDesert(const tString &in asParent, const tString &in asChild, int alState)
+		{
+			Voice_Play("Dialogue_EnterDesert");
+			return false;
+		}
+		
+		//-------------------------------------------------------
+
+		//} END Event *PLAYER TRIES TO ENTER DESERT*
 		
 	//} END SCENE 1
 }

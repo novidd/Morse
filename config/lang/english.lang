@@ -1,11 +1,5 @@
 <LANGUAGE>
-	<!-- HINTS -->
-	<CATEGORY Name="Hints">
-	
-		<Entry Name="HintIntroPlayerMove">Hold $Input{Forward} to stand up.</Entry>
-		
-	</CATEGORY>
-	<!-- END HINTS -->
+
 	<!-- LEVEL -->
 	
 		<!-- PROLOGUE -->
@@ -26,6 +20,28 @@
 			
 		</CATEGORY>
 		<!-- END PROLOGUE -->
+		
+		<!-- CAVE TOWN ENTRANCE -->
+		<CATEGORY Name="01_01_cave_town_entrance">
+		
+			<Entry Name="01-01-cave-town-entrance">Cave Town Entrance</Entry>
+			
+			<!--<Entry Name="NotePastor_FrontEntry">This is the pastors letter</Entry>
+			<Entry Name="NotePastor_BackEntry">The pastors backside</Entry>
+			<Entry Name="NotePastor_FrontEntry_Name">Pastor title</Entry>
+		-->
+		</CATEGORY>
+		
+		<CATEGORY Name="Voices_01_01_cave_town_entrance">
+		
+			<Entry Name="comments_dialogue_enterdesert_001_player_001">There is no turning back now...</Entry>
+			<Entry Name="comments_dialogue_spotfort_001_player_001">The fort - that&apos;s where I&apos;m headed.</Entry>
+			<Entry Name="comments_dialogue_interactmural_001_player_001">Huh... strange.</Entry>
+			<Entry Name="comments_dialogue_spotblood_001_player_001">Luis&apos;s men went through here.</Entry>
+			<Entry Name="comments_dialogue_spotblood_002_player_001">Is it one of theirs blood?</Entry>
+			
+		</CATEGORY>
+		<!-- END CAVE TOWN ENTRANCE -->
 		
 		<!-- PATH TO FORT -->
 		<CATEGORY Name="01_01_path_to_fort">

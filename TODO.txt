@@ -26,6 +26,9 @@ GENERAL: CHANGE 01_00_prologue to 01_01_path_to_fort.hpm and make a new prologue
 	MODULES:
 	 * (NOT NECESSARY) Create a fire damage module, that checks if the player is inside of a trigger area ("FirePlayerDamage_X") use Entity_GetCollide(), 
 	   to get all the trigger areas use Map_GetEntityArray().
+	   
+	   * When player finds the archeologist and reads his note it will mention that the archeologist thinks the green substance on the
+	   pillar outside the cave is vitae residue. Mention the long half-life of vitae.
  
 MAPS: use player/UI/terror_meter/UI_terror_meter for changs sequences like in ATDD
 
